@@ -19,6 +19,7 @@
     "modernizer": "~2.8.2"
   },
   "devDependencies": {
-    "angular-bootstrap": "~0.12.1"
+    "angular-bootstrap": "~0.12.1",
+    "bootstrap-sass": "~3.3.3"
   }
 }
