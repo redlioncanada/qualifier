@@ -17,5 +17,8 @@
   "dependencies": {
     "normalize.css": "~3.0.2",
     "modernizer": "~2.8.2"
+  },
+  "devDependencies": {
+    "angular-bootstrap": "~0.12.1"
   }
 }
