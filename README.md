@@ -1,3 +1,1 @@
-# qualifier
-
-WP Qualifier Tool
+#WP Qualifier Tool

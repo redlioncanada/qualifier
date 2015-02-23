@@ -1,0 +1,96 @@
+// Gulp configuration
+
+var gulp        = require('gulp');
+var uglify      = require('gulp-uglify');
+var jshint      = require('gulp-jshint');
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
+var sass        = require('gulp-sass');
+// var sass        = require('gulp-ruby-sass');
+var jasmine     = require('gulp-jasmine');
+
+
+// var jshint 		= require('gulp-jshint');
+
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: {
+            baseDir: "build"
+        }
+    });
+});
+
+// Jasmine
+// gulp.task('default', function () {
+//     return gulp.src('test/test.js')
+//         .pipe(jasmine());
+// });
+
+// JS hint task
+gulp.task('lint', function() {
+	gulp.src('build/js/*.js')
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'));
+});
+
+// Gulp Sass task, will run when any SCSS files change & BrowserSync
+// will auto-update browsers
+gulp.task('sass', function () {
+    return gulp.src('scss/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('build/css'))
+        .pipe(reload({stream:true}));
+});
+
+// Gulp Ruby Sass
+// https://github.com/sindresorhus/gulp-ruby-sass
+// gulp.task('sass', function () {
+//     return gulp.src('scss/*.scss')
+//         // .pipe(sass({sourcemap: true, sourcemapPath: 'scss'}))
+//         .on('error', function (err) { console.log(err.message); })
+//         .pipe(gulp.dest('build/css'))
+//         .pipe(reload({stream:true}));
+// });
+
+
+// process JS files and return the stream.
+gulp.task('js', function () {
+    return gulp.src('js/*js')
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'));
+});
+
+// Views task
+gulp.task('views', function() {
+    // Get our index.html
+    gulp.src('app/index.html')
+    // And put it in the build folder
+    .pipe(gulp.dest('build/'));
+
+    // Any other view files from app/views
+    gulp.src('app/views/**/*')
+    // Will be put in the build/views folder
+    .pipe(gulp.dest('build/views/'));
+});
+
+// use default task to launch BrowserSync and watch JS files
+gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function () {
+	gulp.watch("scss/*.scss", ['sass']);
+
+    // add browserSync.reload to the tasks array to make
+    // all browsers reload after tasks are complete.
+    gulp.watch('js/*.js', ['js', browserSync.reload]);
+
+    // gulp.watch(['app/index.html', 'app/views/**/*.html', browserSync.reload]);
+});
+
+
+
+
+
+
+
+
+
+
