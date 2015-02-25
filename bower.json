@@ -31,5 +31,5 @@
     "angular-bootstrap": "~0.12.1",
     "bootstrap-sass": "~3.3.3"
   },
-  "directory": "components"
+  "directory": "app/components"
 }
