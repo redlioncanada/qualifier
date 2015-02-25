@@ -1,1 +1,16 @@
-QUESTIONS
+Question:
+<div ng-repeat="question in brandData.questions | questionFilter:order">
+	<div bo-text="brandData.apptext.previous" ng-click="previous()">
+
+	</div>
+	<div ng-bind="question.name">
+
+	</div>
+	<div bo-text="brandData.apptext.next" ng-click="next()">
+
+	</div>
+
+	<div ng-repeat="answer in question.answers">
+		<span ng-bind="answer.text"></span>
+	</div>
+</div>
