@@ -1,0 +1,45 @@
+{
+	"brand" : "Whirlpool",
+	"questions" : [
+		{
+			"name" : "What colour would you like your unit to be?",
+			"category" : "aesthetics",
+			"type" : "masonry",
+			"order" : 1,
+			"answers" : [
+				{
+					"text" : "Yellow",
+					"order" : 1
+				},
+				{
+					"text" : "Blue",
+					"order" : 2
+				},
+				{
+					"text" : "Red",
+					"order" : 3
+				}
+			]
+		},
+		{
+			"name" : "How many loads a week do you do?",
+			"category" : "aesthetics",
+			"type" : "masonry",
+			"order" : 2,
+			"answers" : [
+				{
+					"text" : "1",
+					"order" : 1
+				},
+				{
+					"text" : "2",
+					"order" : 2
+				},
+				{
+					"text" : "3",
+					"order" : 3
+				}
+			]
+		}
+	]
+}
