@@ -8,7 +8,6 @@ var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 // var sass        = require('gulp-ruby-sass');
 var jasmine     = require('gulp-jasmine');
-var notify      = require('gulp-notify');
 // var jshint 		= require('gulp-jshint');
 
 var connect = require('gulp-connect');
@@ -32,11 +31,7 @@ gulp.task('browser-sync', function() {
 // Jasmine
 gulp.task('test', function () {
   gulp.src('./tests/*.js')
-    .pipe(jasmine())
-    .on('error', notify.onError({
-      title: 'Jasmine Test Failed',
-      message: 'One or more tests failed, see the cli for details.'
-    }));
+    .pipe(jasmine());
 });
 // gulp.task('default', function () {
 //     return gulp.src('test/test.js')
