@@ -8,9 +8,17 @@ var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 // var sass        = require('gulp-ruby-sass');
 var jasmine     = require('gulp-jasmine');
-
-
+var notify      = require('gulp-notify');
 // var jshint 		= require('gulp-jshint');
+
+var connect = require('gulp-connect');
+ 
+gulp.task('webserver', function() {
+  connect.server({
+    root: 'app',
+    livereload: true
+  });
+});
 
 // Static server
 gulp.task('browser-sync', function() {
@@ -22,6 +30,14 @@ gulp.task('browser-sync', function() {
 });
 
 // Jasmine
+gulp.task('test', function () {
+  gulp.src('./tests/*.js')
+    .pipe(jasmine())
+    .on('error', notify.onError({
+      title: 'Jasmine Test Failed',
+      message: 'One or more tests failed, see the cli for details.'
+    }));
+});
 // gulp.task('default', function () {
 //     return gulp.src('test/test.js')
 //         .pipe(jasmine());
@@ -84,6 +100,7 @@ gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function (
 
     // gulp.watch(['app/index.html', 'app/views/**/*.html', browserSync.reload]);
 });
+
 
 
 
