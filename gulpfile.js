@@ -11,7 +11,7 @@ var jasmine     = require('gulp-jasmine');
 var notify      = require('gulp-notify');
 // var jshint 		= require('gulp-jshint');
 
-var connect = require('gulp-connect');
+var connect     = require('gulp-connect');
  
 gulp.task('webserver', function() {
   connect.server({
@@ -72,7 +72,7 @@ gulp.task('sass', function () {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
-    return gulp.src('js/*js')
+    return gulp.src('app/js/*js')
         .pipe(uglify())
         .pipe(gulp.dest('build/js'));
 });
@@ -96,7 +96,7 @@ gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function (
 
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
-    gulp.watch('js/*.js', ['js', browserSync.reload]);
+    gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 
     // gulp.watch(['app/index.html', 'app/views/**/*.html', browserSync.reload]);
 });
