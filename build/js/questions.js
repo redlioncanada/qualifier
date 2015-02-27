@@ -1,0 +1,1 @@
+"use strict";angular.module("App").controller("QuestionsCtrl",function(r){r.order=1,r.next=function(){r.order++},r.previous=function(){r.order--}});

@@ -48,7 +48,7 @@ gulp.task('lint', function() {
 // Gulp Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css'))
         .pipe(reload({stream:true}));
@@ -67,7 +67,7 @@ gulp.task('sass', function () {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
-    return gulp.src('js/*js')
+    return gulp.src('app/js/*js')
         .pipe(uglify())
         .pipe(gulp.dest('build/js'));
 });
@@ -87,11 +87,11 @@ gulp.task('views', function() {
 
 // use default task to launch BrowserSync and watch JS files
 gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function () {
-	gulp.watch("scss/*.scss", ['sass']);
+	gulp.watch("app/scss/*.scss", ['sass']);
 
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
-    gulp.watch('js/*.js', ['js', browserSync.reload]);
+    gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 
     // gulp.watch(['app/index.html', 'app/views/**/*.html', browserSync.reload]);
 });
