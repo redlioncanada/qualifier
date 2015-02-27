@@ -1,13 +1,21 @@
 Question:
 <div ng-repeat="question in brandData.questions | questionFilter:order">
-	<div bo-text="brandData.apptext.previous" ng-click="previous()">
+	<div class="row">
+		<div class="col-md-2">
+			<button class="btn btn-default" type="button" ng-click="previous()">
+				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+				<span bo-text="brandData.apptext.previous"></span>
+			</button>
+		</div>
+		<div class="col-md-2" ng-bind="question.name">
 
-	</div>
-	<div ng-bind="question.name">
-
-	</div>
-	<div bo-text="brandData.apptext.next" ng-click="next()">
-
+		</div>
+		<div class="col-md-2">
+			<button class="btn btn-default" type="button" ng-click="next()">
+				<span bo-text="brandData.apptext.next"></span>
+				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+			</button>
+		</div>
 	</div>
 
 	<div ng-repeat="answer in question.answers">
