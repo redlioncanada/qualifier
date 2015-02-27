@@ -8,7 +8,6 @@ var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 // var sass        = require('gulp-ruby-sass');
 var jasmine     = require('gulp-jasmine');
-var notify      = require('gulp-notify');
 // var jshint 		= require('gulp-jshint');
 
 var connect     = require('gulp-connect');
@@ -32,11 +31,7 @@ gulp.task('browser-sync', function() {
 // Jasmine
 gulp.task('test', function () {
   gulp.src('./tests/*.js')
-    .pipe(jasmine())
-    .on('error', notify.onError({
-      title: 'Jasmine Test Failed',
-      message: 'One or more tests failed, see the cli for details.'
-    }));
+    .pipe(jasmine());
 });
 // gulp.task('default', function () {
 //     return gulp.src('test/test.js')
@@ -53,7 +48,7 @@ gulp.task('lint', function() {
 // Gulp Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css'))
         .pipe(reload({stream:true}));
@@ -92,7 +87,7 @@ gulp.task('views', function() {
 
 // use default task to launch BrowserSync and watch JS files
 gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function () {
-	gulp.watch("scss/*.scss", ['sass']);
+	gulp.watch("app/scss/*.scss", ['sass']);
 
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.

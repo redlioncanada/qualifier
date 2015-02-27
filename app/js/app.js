@@ -14,6 +14,18 @@ var nglibs = [
 
 var App = angular.module('App', nglibs);
 
+App.filter('questionFilter', function () {
+    return function (list, order) {
+        for (var l in list) {
+          console.log(list[l].order);
+          if (list[l].order == order) {
+              console.log(list[l])
+              return [list[l]];
+          }
+        }
+    };
+});
+
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
     $urlRouterProvider.otherwise("/");
@@ -35,12 +47,14 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
         controller: 'ResultsCtrl'
       });
 
-  }])
-  .run(['$rootScope', '$state', function ($rootScope, $state) {
-    //$resource();
-    //$rootScope.go = "x"
-    console.log("Run");
-    $state.go('main');
+  }]);
+
+App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
+    $resource("config/brand.json").get({}, function (res, headers) {
+          $rootScope.brandData = res;
+          console.log($rootScope.brandData);
+          $state.go('main.questions');
+    });
   }]);
 
 angular.bootstrap(document, ["App"]);

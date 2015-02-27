@@ -1,5 +1,11 @@
 {
 	"brand" : "Whirlpool",
+	"apptext" :{
+		"apptitle" : "Whirlpool",
+		"appdescription" : "Whirlpool stuff is the best!!!",
+		"previous" : "Previous",
+		"next" : "Next"
+	},
 	"questions" : [
 		{
 			"name" : "What colour would you like your unit to be?",
