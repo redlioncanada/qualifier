@@ -68,14 +68,14 @@ gulp.task('sass', function () {
 // process JS files and return the stream.
 gulp.task('js', function () {
     return gulp.src('app/js/*.js')
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('build/js'));
 });
 
 // process Components JS files and return the stream.
 gulp.task('components', function () {
     return gulp.src('app/components/**/*.js')
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('build/components'));
 });
 
@@ -105,9 +105,9 @@ gulp.task('default', ['sass', 'js', 'components', 'config', 'browser-sync', 'vie
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
 
-    gulp.watch('app/scss/*.scss', ['sass', browserSync.reload]);
-    gulp.watch('app/index.html', 'app/views/**/*.html', ['views', browserSync.reload]);
-    gulp.watch('app/js/*.js', ['js', browserSync.reload]);
+    // gulp.watch('app/scss/*.scss', ['sass', browserSync.reload]);
+    // gulp.watch('app/index.html', 'app/views/**/*.html', ['views', browserSync.reload]);
+    // gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 
 });
 
