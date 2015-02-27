@@ -101,13 +101,14 @@ gulp.task('views', function() {
 
 // use default task to launch BrowserSync and watch JS files
 gulp.task('default', ['sass', 'js', 'components', 'config', 'lint', 'browser-sync', 'views'], function () {
-	gulp.watch("app/scss/*.scss", ['sass']);
-
+	
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
+    
+    gulp.watch("app/scss/*.scss", ['sass', browserSync.reload]);
+    gulp.watch('app/index.html', 'app/views/**/*.html', ['views', browserSync.reload]);
     gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 
-    // gulp.watch(['app/index.html', 'app/views/**/*.html', browserSync.reload]);
 });
 
 
