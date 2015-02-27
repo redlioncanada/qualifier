@@ -7,3 +7,4 @@ bower_components/*
 app/components/*
 build/*
 *.log
+/build
