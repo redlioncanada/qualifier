@@ -10,15 +10,6 @@ var sass        = require('gulp-sass');
 var jasmine     = require('gulp-jasmine');
 // var jshint 		= require('gulp-jshint');
 
-var connect     = require('gulp-connect');
- 
-gulp.task('webserver', function() {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
-});
-
 // Static server
 gulp.task('browser-sync', function() {
     browserSync({
@@ -74,7 +65,11 @@ gulp.task('js', function () {
 
 // process Components JS files and return the stream.
 gulp.task('components', function () {
-    return gulp.src('app/components/**/*.js')
+    gulp.src('app/components/*/*/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('build/components'));
+
+    return gulp.src('app/components/*/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('build/components'));
 });
