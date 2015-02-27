@@ -67,10 +67,24 @@ gulp.task('sass', function () {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
-    return gulp.src('app/js/*js')
+    return gulp.src('app/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('build/js'));
 });
+
+// process Components JS files and return the stream.
+gulp.task('components', function () {
+    return gulp.src('app/components/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('build/components'));
+});
+
+// process Components JS files and return the stream.
+gulp.task('config', function () {
+    return gulp.src('app/config/*.json')
+        .pipe(gulp.dest('build/config'));
+});
+
 
 // Views task
 gulp.task('views', function() {
@@ -86,7 +100,7 @@ gulp.task('views', function() {
 });
 
 // use default task to launch BrowserSync and watch JS files
-gulp.task('default', ['sass', 'js', 'lint', 'browser-sync', 'views'], function () {
+gulp.task('default', ['sass', 'js', 'components', 'config', 'lint', 'browser-sync', 'views'], function () {
 	gulp.watch("app/scss/*.scss", ['sass']);
 
     // add browserSync.reload to the tasks array to make

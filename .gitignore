@@ -5,4 +5,5 @@ node_modules/
 components/*
 bower_components/*
 app/components/*
+build/*
 *.log
