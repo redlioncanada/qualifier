@@ -7,5 +7,10 @@
 @import "setup/mixins";
 @import "setup/general";
 
+@import "brands/brands-general";
+
 @import "partials/header";
 @import "partials/footer";
+
+// Temporary for demo
+@import "views/maytag-ui";
