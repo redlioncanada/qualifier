@@ -1,0 +1,39 @@
+// Will be split up into appropriate partials after initial demo
+
+
+// Questions and Answers main content
+#app-content-main {
+	width: 100%;
+
+	.inner {
+		max-width: 933x;
+	}
+	div {
+		text-align: center;
+	}
+	img {
+
+	}
+
+	.question {
+		h3 {
+			color: #fff;
+		}
+		#app-save {
+			float: right;
+		}
+	}
+
+	color: #fff;
+
+	.app-categories {
+		text-align: center;
+		img {
+
+		}
+		.category {
+			color: #fff;
+			display: inline-block;
+		}
+	}
+}
