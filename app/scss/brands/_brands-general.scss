@@ -5,9 +5,10 @@ body.maytag {
 	color: #fff;
 }
 .bg-maytag {
-	// background-image: url('../img/bg-maytag.png') center center no-repeat;
-	// height: 100%;
-	// width: 100%;
 
-	background: #355b8d;
+	// background: #355b8d;
+
+	background: url('../img/bg-maytag.png') center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
