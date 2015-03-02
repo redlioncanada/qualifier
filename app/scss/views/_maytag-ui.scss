@@ -7,23 +7,61 @@
 	margin-right: auto;
 }
 
+#top-section {
+	padding-top: 25px;
+	.top-section-left {
+		display: inline-block;
+		// width: 50%;
+		width: 49%;
+		#wp-app-search {
+			text-transform: uppercase;
+		}
+	}
+
+	.top-section-right {
+		display: inline-block;
+		// width: 50%;
+		a {
+			// @include AGBQ-Regular;
+			font-size: 15px;
+			color: #fff;
+			margin-right: 50px;
+		}
+	}
+}
+
 // Questions and Answers main content
 #app-content-main {
 	width: 100%;
-
-	
+	padding-top: 100px;
+	padding-bottom: 100px;
 	div {
 		text-align: center;
 	}
-
+	hr {
+		border-top: 1px solid #fff;
+		opacity: 0.47;
+	}
 	.app-content-main-top {
+		.left, .right {
+			display: inline-block;
+			width: 49%;
+		}
 		h3.question {
 			color: #fff;
-			display: inline-block;
+			max-width: 425px;
+			text-align: left;
+			// @include AGBQ-Bold;
+			font-size: 38px;
+			text-transform: uppercase;
 		}
 		#app-save {
 			float: right;
-			display: inline-block;
+			text-transform: uppercase;
+			font-size: 17px;
+			color: #fff;
+			padding: 7px 17px;
+			border: 1px solid #fff;
 		}
 	}
 }
@@ -61,14 +99,18 @@
 #app-choices-bottom-section {
 	padding-top: 20px;
 	padding-bottom: 7px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 455px;
 	.product-type {
 		display: inline-block;
-		width: 20%;
+		width: 19%;
 	}
+	// Temporary
 	img {
 		margin-bottom: 9px;
 		// temporary
-		display: block;
+		display: inline-block;
 	}
 	.product-type-name {
 		// @include AGBQ-Regular;
@@ -76,5 +118,7 @@
 		font-size: 9px;
 		color: #fff;
 		text-transform: uppercase;
+		max-width: 85px;
+		display: inline-block;
 	}
 }
