@@ -1,39 +1,80 @@
 // Will be split up into appropriate partials after initial demo
 
 
+.inner {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // Questions and Answers main content
 #app-content-main {
 	width: 100%;
 
-	.inner {
-		max-width: 933x;
-	}
+	
 	div {
 		text-align: center;
 	}
-	img {
 
-	}
-
-	.question {
-		h3 {
-			color: #fff;
-		}
-		#app-save {
-			float: right;
-		}
-	}
-
-	color: #fff;
-
-	.app-categories {
-		text-align: center;
-		img {
-
-		}
-		.category {
+	.app-content-main-top {
+		h3.question {
 			color: #fff;
 			display: inline-block;
 		}
+		#app-save {
+			float: right;
+			display: inline-block;
+		}
+	}
+}
+
+#app-categories {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 80px;
+	.category {
+		color: #fff;
+		display: inline-block;
+		text-align: center;
+		img {
+			display: inline-block;
+			margin-bottom: 15px;
+		}
+		.category-name {
+			// @include Replica-Bold;
+			font-size: 18px;
+			text-transform: uppercase;
+
+
+		}
+		.category-options {
+			// @include Replica-Light;
+			font-size: 18px;
+		}
+		&:nth-child(2) {
+			margin-left: 130px;
+			margin-right: 130px;
+		}
+	}
+}	
+
+#app-choices-bottom-section {
+	padding-top: 20px;
+	padding-bottom: 7px;
+	.product-type {
+		display: inline-block;
+		width: 20%;
+	}
+	img {
+		margin-bottom: 9px;
+		// temporary
+		display: block;
+	}
+	.product-type-name {
+		// @include AGBQ-Regular;
+
+		font-size: 9px;
+		color: #fff;
+		text-transform: uppercase;
 	}
 }
