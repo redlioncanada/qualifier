@@ -18,7 +18,12 @@ Question:
 		</div>
 	</div>
 
-	<div ng-repeat="answer in question.answers">
-		<span ng-bind="answer.text"></span>
+
+	<div class="row">		
+		<div class="col-xs-6 col-md-3" class="thumbnail" ng-repeat="answer in question.answers">
+			<span ng-bind="answer.text"></span>
+		</div>
 	</div>
+
+
 </div>
