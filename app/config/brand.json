@@ -1,51 +1,1304 @@
 {
-	"brand" : "Whirlpool",
+	"brand" : "Maytag",
 	"apptext" :{
-		"apptitle" : "Whirlpool",
+		"apptitle" : "Maytag",
 		"appdescription" : "Whirlpool stuff is the best!!!",
 		"previous" : "Previous",
 		"next" : "Next"
 	},
-	"questions" : [
-		{
-			"name" : "What colour would you like your unit to be?",
+	"questions" : {
+		"Appliance" : {
+			"previous" : null,
+			"text" : [
+				{
+					"question" : "What are you looking for today?",
+					"answers" : [
+						{
+							"text" : "Stove",
+							"value" : "Stove",
+							"next" : "Cooking - Pre-Qualifier 1",
+
+							"order" : 1
+						},
+						{
+							"text" : "Fridge",
+							"value" : "Fridge",
+							"order" : 2
+						},
+						{
+							"text" : "Laundry",
+							"value" : "Laundry",
+							"order" : 3
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"	
+		},
+		"Cooking - Pre-Qualifier 1" : {
+			"previous" : "Appliance",
+			"text" : [
+				{
+					"question" : "If you're replacing a cook product or know what you're looking for, please choose one.",
+					"answers" : [
+						{
+							"text" : "free stand range",
+							"value" : "free stand range",
+							"next" : "Cooking - Pre-Qualifier - Ranges",
+							"order" : 1
+						},
+						{
+							"text" : "wall oven",
+							"value" : "wall oven",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
+							"order" : 2
+						},
+						{
+							"text" : "cooktops",
+							"value" : "cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
+							"order" : 3
+						},
+						{
+							"text" : "I haven't decided yet",
+							"value" : "undecided",
+							"next" : "Cooking - Pre-Qualifier 2",							
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "What product are you shopping for today?",
+					"answers" : [
+						{
+							"text" : "free stand range",
+							"value" : "free stand range",
+							"next" : "Pre-Qualifier - Ranges",						
+							"order" : 1
+						},
+						{
+							"text" : "wall oven",
+							"value" : "wall oven",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
+							"order" : 2
+						},
+						{
+							"text" : "cooktops",
+							"value" : "cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
+							"order" : 3
+						},
+						{
+							"text" : "I haven't decided yet",
+							"value" : "undecided",
+							"next" : "Cooking - Pre-Qualifier 2",
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Pre-Qualifier 2" : {
+			"previous" : "Cooking - Pre-Qualifier 1",
+			"text" : [
+				{
+					"question" : "If you had to choose one, what is the most important when shopping for kitchen appliances?",
+					"answers" : [
+						{
+							"text" : "Ergonomics/ease of use",
+							"value" : "wall ovens/cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",	
+							"order" : 1
+						},
+						{
+							"text" : "Clean and simple look",
+							"value" : "wall ovens/cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",	
+							"order" : 2
+						},
+						{
+							"text" : "Best value",
+							"value" : "ranges",
+							"next" : "Cooking - Pre-Qualifier - Ranges",	
+							"order" : 3
+						},
+						{
+							"text" : "easy installation",
+							"value" : "ranges",
+							"next" : "Cooking - Pre-Qualifier - Ranges",						
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "My dream kitchen is ____ (pick one)",
+					"answers" : [
+						{
+							"text" : "Easy to use",
+							"value" : "wall ovens/cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",							
+							"scoring" : {
+								"wall ovens" : "1",
+								"cooktops" : "1"
+							},
+							"order" : 1
+						},
+						{
+							"text" : "Looks clean and simple",
+							"value" : "wall ovens/cooktops",
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
+							"scoring" : {
+								"wall ovens" : "1",
+								"cooktops" : "1"
+							},								
+							"order" : 2
+						},
+						{
+							"text" : "Budget-friendly",
+							"value" : "ranges",
+							"next" : "Cooking - Pre-Qualifier - Ranges",	
+							"scoring" : {
+								"ranges" : "1"
+							},						
+							"order" : 3
+						},
+						{
+							"text" : "Easy to install",
+							"value" : "ranges",
+							"next" : "Cooking - Pre-Qualifier - Ranges",						
+							"scoring" : {
+								"ranges" : "1"
+							},									
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Pre-Qualifier - Wall Ovens/Cooktops" : {
+			"previous" : "Cooking - Pre-Qualifier 2",
+			"text" : [
+				{
+					"question" : "We think you're looking for wall ovens and cooktops, which would you like to explore first?",
+					"answers" : [
+						{
+							"text" : "wall ovens",
+							"next" : "Cooking - Wall Ovens - Size",
+							"scoring" : {
+								"wall ovens" : "1"
+							},
+							"value" : "wall ovens",
+							"order" : 1
+						},
+						{
+							"text" : "cooktops",
+							"next" : "Cooking - Wall Ovens - Size",
+							"scoring" : {
+								"cooktops" : "1"
+							},												
+							"value" : "cooktops",
+							"order" : 2
+						},
+						{
+							"text" : "I'm looking for neither",
+							"next" : "Cooking - Pre-Qualifier 1",
+							"scoring" : {
+							},
+							"value" : "any",
+							"order" : 3
+						}
+					]
+				},
+				{
+					"question" : "Thanks for the information. Looks like you're shopping for wall ovens and cooktops. Click to explore:",
+					"answers" : [
+						{
+							"text" : "wall ovens",
+							"next" : "Cooking - Wall Ovens - Size",
+							"scoring" : {
+								"wall ovens" : "1"
+							},
+							"value" : "wall ovens",
+							"order" : 1
+						},
+						{
+							"text" : "cooktops",
+							"next" : "Cooking - Wall Ovens - Size",
+							"scoring" : {
+								"cooktops" : "1"
+							},												
+							"value" : "cooktops",
+							"order" : 2
+						},
+						{
+							"text" : "I'm looking for neither",
+							"next" : "Cooking - Pre-Qualifier 1",
+							"scoring" : {
+							},
+							"value" : "any",
+							"order" : 3
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Wall Ovens - Size" : {
+			"next" : "Cooking - Wall Ovens - Cooking Style",
+			"previous" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
+			"text" : [
+				{
+					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
+					"answers" : [
+						{
+							"text" : "24\"",
+							"value" : "24",
+							"scoring" : {
+								"wall ovens" : "1"
+							},
+							"order" : 1
+						},
+						{
+							"text" : "27\"",
+							"value" : "27",
+							"order" : 2
+						},
+						{
+							"text" : "30\"",
+							"value" : "30",
+							"order" : 3
+						},
+						{
+							"text" : "36\"",
+							"value" : "36",
+							"order" : 4
+						},
+						{
+							"text" : "48\"",
+							"value" : "48",
+							"order" : 5
+						},
+						{
+							"text" : "15\" to 27\"",
+							"value" : "small",
+							"order" : 6
+						},
+						{
+							"text" : "30\" to 48\"",
+							"value" : "big",
+							"order" : 7
+						},
+						{
+							"text" : "Any size",
+							"value" : "any",
+							"order" : 8
+						}
+					]								
+				},
+				{
+					"question" : "I want a wall oven that is:",
+					"answers" : [
+						{
+							"text" : "XL",
+							"value" : "+30",
+							"order" : 1
+						},
+						{
+							"text" : "L",
+							"value" : "30",
+							"order" : 2
+						},
+						{
+							"text" : "M",
+							"value" : "27",
+							"order" : 3
+						},
+						{
+							"text" : "S",
+							"value" : "24",
+							"order" : 4
+						},
+						{
+							"text" : "No Restriction",
+							"value" : "any",
+							"order" : 5
+						}
+					]								
+				}							
+			],
 			"category" : "aesthetics",
 			"type" : "masonry",
-			"order" : 1,
-			"answers" : [
+			"notes" : [
 				{
-					"text" : "Yellow",
-					"order" : 1
+					"title" : "note",
+					"text" : "industry standard is 30"
+				}
+			],
+			"right_answers" : ["wall ovens"]
+		},
+		"Cooking - Wall Ovens - Cooking Style" : {
+			"next" : "Cooking - Wall Ovens - Design Style",
+			"previous" : "Cooking - Wall Ovens - Size",
+			"text" : [
+				{
+					"question" : "What do you consider youself?",
+					"answers" : [
+						{
+							"text" : "baker",
+							"value" : "baker",
+							"order" : 1
+						},
+						{
+							"text" : "home chef",
+							"value" : "home chef",
+							"order" : 2
+						},
+						{
+							"text" : "both",
+							"value" : "both",
+							"order" : 3
+						},
+						{
+							"text" : "neither",
+							"value" : "neither",
+							"order" : 4
+						}
+					]
 				},
 				{
-					"text" : "Blue",
-					"order" : 2
+					"question" : "My friends would call me: (choose one)",
+					"answers" : [
+						{
+							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
+							"value" : "baker",
+							"order" : 1
+						},
+						{
+							"text" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
+							"value" : "home chef",
+							"order" : 2
+						},
+						{
+							"text" : "I'm both - my friends are lucky to know me.",
+							"value" : "both",
+							"order" : 3
+						},
+						{
+							"text" : "I'm neither - I have a stack of take-out menus.",
+							"value" : "neither",
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Wall Ovens - Design Style" : {
+			"next" : "Cooking - Wall Ovens - Ranking",
+			"previous" : "Cooking - Wall Ovens - Cooking Style",
+			"text" : [
+				{
+					"question" : "How do you use your oven?",
+					"answers" : [
+						{
+							"text" : "reheat food",
+							"value" : "reheat food",
+							"order" : 1
+						},
+						{
+							"text" : "cook for family",
+							"value" : "cook for family",
+							"order" : 2
+						},
+						{
+							"text" : "cook for guests",
+							"value" : "cook for guests",
+							"order" : 3
+						}
+					]
 				},
 				{
-					"text" : "Red",
-					"order" : 3
+					"question" : "For dinner, you'll typically find me:",
+					"answers" : [
+						{
+							"text" : "Reheating leftovers",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Cooking a meal from scratch for myself or partner",
+							"value" : "single",
+							"order" : 2
+						},
+						{
+							"text" : "Cooking a meal from scratch for my family",
+							"value" : "double",
+							"order" : 3
+						},
+						{
+							"text" : "Hosting a dinner party",
+							"value" : "double",
+							"order" : 4
+						},
+						{
+							"text" : "Preparing a frozen meal",
+							"value" : "single combo",
+							"order" : 3
+						},
+						{
+							"text" : "Ordering in delivery",
+							"value" : "single",
+							"order" : 3
+						}
+
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Wall Ovens - Ranking" : {
+			"next" : null,
+			"previous" : "Cooking - Wall Ovens - Design Style",
+			"text" : [
+				{
+					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"answers" : [
+						{
+							"text" : "Capacity",
+							"value" : "Capacity",
+							"order" : 1
+						},
+						{
+							"text" : "Easy to clean",
+							"value" : "Easy to clean",
+							"order" : 2
+						},
+						{
+							"text" : "Even heat",
+							"value" : "Even heat",
+							"order" : 3
+						},
+						{
+							"text" : "Cooking multiple dishes at once",
+							"value" : "Cooking multiple dishes at once",
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "My ideal kitchen is (choose):",
+					"answers" : [
+						{
+							"text" : "Able to prepare large meals",
+							"value" : "Able to prepare large meals",
+							"order" : 1
+						},
+						{
+							"text" : "Easy to clean",
+							"value" : "Easy to clean",
+							"order" : 2
+						},
+						{
+							"text" : "Appliances that produce precise temperature",
+							"value" : "precise temperature",
+							"order" : 3
+						},
+						{
+							"text" : "Easy to use",
+							"value" : "Easy to use",
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "rank"
+		},
+		"Cooking - Cooktops - Size" : {
+			"next" : "Cooking - Cooktops - Cooking Style",
+			"previous" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
+			"text" : [
+				{
+					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
+					"answers" : [
+						{
+							"text" : "24\"",
+							"value" : "24",
+							"order" : 1
+						},
+						{
+							"text" : "27\"",
+							"value" : "27",
+							"order" : 2
+						},
+						{
+							"text" : "30\"",
+							"value" : "30",
+							"order" : 3
+						},
+						{
+							"text" : "36\"",
+							"value" : "36",
+							"order" : 4
+						},
+						{
+							"text" : "48\"",
+							"value" : "48",
+							"order" : 5
+						},
+						{
+							"text" : "15\" to 27\"",
+							"value" : "small",
+							"order" : 6
+						},
+						{
+							"text" : "30\" to 48\"",
+							"value" : "big",
+							"order" : 7
+						},
+						{
+							"text" : "Any size",
+							"value" : "any",
+							"order" : 8
+						}
+					]								
+				},
+				{
+					"question" : "I want a cooktop that is:",
+					"answers" : [
+						{
+							"text" : "24\"",
+							"value" : "24",
+							"order" : 1
+						},
+						{
+							"text" : "27\"",
+							"value" : "27",
+							"order" : 2
+						},
+						{
+							"text" : "30\"",
+							"value" : "30",
+							"order" : 3
+						},
+						{
+							"text" : "36\"",
+							"value" : "36",
+							"order" : 4
+						},
+						{
+							"text" : "48\"",
+							"value" : "48",
+							"order" : 5
+						},
+						{
+							"text" : "15\" to 27\"",
+							"value" : "small",
+							"order" : 6
+						},
+						{
+							"text" : "30\" to 48\"",
+							"value" : "big",
+							"order" : 7
+						},
+						{
+							"text" : "Any size",
+							"value" : "any",
+							"order" : 8
+						}
+					]								
+				}							
+			],
+			"category" : "aesthetics",
+			"type" : "masonry",
+			"right_answers" : ["cooktops"],
+			"notes" : [
+				{
+					"title" : "note",
+					"text" : "industry standard is 30"
 				}
 			]
 		},
-		{
-			"name" : "How many loads a week do you do?",
+		"Cooking - Cooktops - Cooking Style" : {
+			"next" : "Cooking - Cooktops - Design Style",
+			"previous" : "Cooking - Cooktops - Size",
+			"text" : [
+				{
+					"question" : "Why do you cook?",
+					"answers" : [
+						{
+							"text" : "For others/I like to entertain",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "For my family",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "For myself, because it's my passion",
+							"value" : "gas",
+							"order" : 3
+						},
+						{
+							"text" : "I cook for necessity",
+							"value" : "electric",
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "If my cooking style was a pizza, it would be:",
+					"answers" : [
+						{
+							"text" : "Delivery from my favourite spot",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Family-sized meal",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Made from scratch with all the gourmet fixings",
+							"value" : "gas",
+							"order" : 3
+						},
+						{
+							"text" : "Frozen pizza from the grocery store",
+							"value" : "electric",
+							"order" : 4
+						}
+					]
+				}											
+			],
+			"category" : "aesthetics",
+			"order" : 1,
+			"type" : "masonry"
+		},
+		"Cooking - Cooktops - Design Style" : {
+			"next" : "Cooking - Cooktops - Ranking",
+			"previous" : "Cooking - Cooktops - Cooking Style",
+			"text" : [
+				{
+					"question" : "What's your style?",
+					"answers" : [
+						{
+							"text" : "Modern",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Traditional",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Commercial",
+							"value" : "gas",
+							"order" : 3
+						}
+					]
+				},
+				{
+					"question" : "My friends would describe me as:",
+					"answers" : [
+						{
+							"text" : "Modern (I always like to be on the cutting edge of design trends)",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
+							"value" : "gas",
+							"order" : 3
+						}
+					]
+				}											
+			],
+			"category" : "aesthetics",
+			"order" : 2,
+			"type" : "masonry"
+		},
+		"Cooking - Cooktops - Ranking" : {
+			"next" : "Cooking - Cooktops - Gas",
+			"previous" : "Cooking - Cooktops - Design Style",
+			"text" : [
+				{
+					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"answers" : [
+						{
+							"text" : "energy efficiency",
+							"value" : "energy efficiency",
+							"order" : 1
+						},
+						{
+							"text" : "ease of cleaning",
+							"value" : "ease of cleaning",
+							"order" : 2
+						},
+						{
+							"text" : "precise temperature",
+							"value" : "precise temperature",
+							"order" : 3
+						},
+						{
+							"text" : "ease of use",
+							"value" : "ease of use",
+							"order" : 4
+						},
+						{
+							"text" : "professional style cooking",
+							"value" : "professional style cooking",
+							"order" : 5
+						}
+					]
+				},
+				{
+					"question" : "My ideal kitchen is (choose):",
+					"answers" : [
+						{
+							"text" : "energy efficiency",
+							"value" : "energy efficiency",
+							"order" : 1
+						},
+						{
+							"text" : "ease of cleaning",
+							"value" : "ease of cleaning",
+							"order" : 2
+						},
+						{
+							"text" : "Appliances that produce precise temperature",
+							"value" : "precise temperature",
+							"order" : 3
+						},
+						{
+							"text" : "ease of use",
+							"value" : "ease of use",
+							"order" : 4
+						},
+						{
+							"text" : "professional",
+							"value" : "professional",
+							"order" : 5
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "rank"
+		},
+		"Cooking - Cooktops - Gas" : {
+			"next" : null,
+			"previous" : "Cooking - Cooktops - Ranking",
+			"text" : [
+				{
+					"question" : "Is your kitchen equipped for gas?",
+					"answers" : [
+						{
+							"text" : "yes",
+							"value" : "yes",
+							"order" : 1
+						},
+						{
+							"text" : "no",
+							"value" : "no",
+							"order" : 2
+						}
+					]
+				},
+				{
+					"question" : "Are you able to have gas in your kitchen?",
+					"answers" : [
+						{
+							"text" : "yes",
+							"value" : "yes",
+							"order" : 1
+						},
+						{
+							"text" : "no",
+							"value" : "no",
+							"order" : 2
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Pre-Qualifier - Ranges" : {
+			"next" : "Cooking - Ranges - Cooking Style",
+			"previous" : "Cooking - Pre-Qualifier 2",
+			"text" : [
+				{
+					"question" : "We think you're looking for freestanding range",
+					"answers" : [
+						{
+							"text" : "click to explore",
+							"value" : "click to explore",
+							"order" : 1
+						},
+						{
+							"text" : "I'm looking for something else",
+							"value" : "I'm looking for something else",
+							"order" : 2
+						}
+					]
+				},
+				{
+					"question" : "Thanks for the information. Looks like you're shopping for a free standing range. Click to explore:",
+					"answers" : [
+						{
+							"text" : "click to explore",
+							"value" : "click to explore",
+							"order" : 1
+						},
+						{
+							"text" : "I'm looking for something else",
+							"value" : "I'm looking for something else",
+							"order" : 2
+						}
+					]
+				}
+			],
 			"category" : "aesthetics",
 			"type" : "masonry",
+			"right_answers" : ["ranges"]
+		},
+		"Cooking - Ranges - Cooking Style" : {
+			"next" : "Cooking - Ranges - Design Style",
+			"previous" : "Cooking - Pre-Qualifier - Ranges",
+			"text" : [
+				{
+					"question" : "Why do you cook?",
+					"answers" : [
+						{
+							"text" : "For others/I like to entertain",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "For my family",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "For myself, because it's my passion",
+							"value" : "gas",
+							"order" : 3
+						},
+						{
+							"text" : "I cook for necessity",
+							"value" : "electric",
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "If my cooking style was a pizza, it would be:",
+					"answers" : [
+						{
+							"text" : "Delivery from my favourite spot",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Family-sized meal",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Made from scratch with all the gourmet fixings",
+							"value" : "gas",
+							"order" : 3
+						},
+						{
+							"text" : "Frozen pizza from the grocery store",
+							"value" : "electric",
+							"order" : 4
+						}
+					]
+				}											
+			],
+			"category" : "aesthetics",
+			"order" : 1,
+			"type" : "masonry"
+		},
+		"Cooking - Ranges - Design Style" : {
+			"next" : "Cooking - Ranges - Ranking",
+			"previous" : "Cooking - Ranges - Cooking Style",
+			"text" : [
+				{
+					"question" : "What's your style?",
+					"answers" : [
+						{
+							"text" : "Modern",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Traditional",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Commercial",
+							"value" : "gas",
+							"order" : 3
+						}
+					]
+				},
+				{
+					"question" : "My friends would describe me as:",
+					"answers" : [
+						{
+							"text" : "Modern (I always like to be on the cutting edge of design trends)",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
+							"value" : "induction",
+							"order" : 2
+						},
+						{
+							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
+							"value" : "gas",
+							"order" : 3
+						}
+					]
+				}											
+			],
+			"category" : "aesthetics",
 			"order" : 2,
-			"answers" : [
+			"type" : "masonry"
+		},
+		"Cooking - Ranges - Ranking" : {
+			"next" : "Cooking - Ranges - Gas",
+			"previous" : "Cooking - Ranges - Design Style",
+			"text" : [
 				{
-					"text" : "1",
-					"order" : 1
+					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"answers" : [
+						{
+							"text" : "energy efficiency",
+							"value" : "energy efficiency",
+							"order" : 1
+						},
+						{
+							"text" : "ease of cleaning",
+							"value" : "ease of cleaning",
+							"order" : 2
+						},
+						{
+							"text" : "precise temperature",
+							"value" : "precise temperature",
+							"order" : 3
+						},
+						{
+							"text" : "ease of use",
+							"value" : "ease of use",
+							"order" : 4
+						},
+						{
+							"text" : "professional style cooking",
+							"value" : "professional style cooking",
+							"order" : 5
+						}
+					]
 				},
 				{
-					"text" : "2",
-					"order" : 2
-				},
-				{
-					"text" : "3",
-					"order" : 3
+					"question" : "My ideal kitchen is (choose):",
+					"answers" : [
+						{
+							"text" : "energy efficiency",
+							"value" : "energy efficiency",
+							"order" : 1
+						},
+						{
+							"text" : "ease of cleaning",
+							"value" : "ease of cleaning",
+							"order" : 2
+						},
+						{
+							"text" : "Appliances that produce precise temperature",
+							"value" : "precise temperature",
+							"order" : 3
+						},
+						{
+							"text" : "ease of use",
+							"value" : "ease of use",
+							"order" : 4
+						},
+						{
+							"text" : "professional",
+							"value" : "professional",
+							"order" : 5
+						}
+					]
 				}
-			]
+			],
+			"category" : "aesthetics",
+			"type" : "rank"
+		},
+		"Cooking - Ranges - Gas" : {
+			"next" : "Cooking - Ranges - Cooking Style 2",
+			"previous" : "Cooking - Ranges - Ranking",
+			"text" : [
+				{
+					"question" : "Is your kitchen equipped for gas?",
+					"answers" : [
+						{
+							"text" : "yes",
+							"value" : "yes",
+							"order" : 1
+						},
+						{
+							"text" : "no",
+							"value" : "no",
+							"order" : 2
+						}
+					]
+				},
+				{
+					"question" : "Are you able to have gas in your kitchen?",
+					"answers" : [
+						{
+							"text" : "yes",
+							"value" : "yes",
+							"order" : 1
+						},
+						{
+							"text" : "no",
+							"value" : "no",
+							"order" : 2
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Ranges - Cooking Style 2" : {
+			"next" : "Cooking - Ranges - Design Style 2",
+			"previous" : "Cooking - Ranges - Gas",
+			"text" : [
+				{
+					"question" : "What do you consider youself?",
+					"answers" : [
+						{
+							"text" : "baker",
+							"value" : "baker",
+							"order" : 1
+						},
+						{
+							"text" : "home chef",
+							"value" : "home chef",
+							"order" : 2
+						},
+						{
+							"text" : "both",
+							"value" : "both",
+							"order" : 3
+						},
+						{
+							"text" : "neither",
+							"value" : "neither",
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "My friends would call me: (choose one)",
+					"answers" : [
+						{
+							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
+							"value" : "baker",
+							"order" : 1
+						},
+						{
+							"text" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
+							"value" : "home chef",
+							"order" : 2
+						},
+						{
+							"text" : "I'm both - my friends are lucky to know me.",
+							"value" : "both",
+							"order" : 3
+						},
+						{
+							"text" : "I'm neither - I have a stack of take-out menus.",
+							"value" : "neither",
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Ranges - Design Style 2" : {
+			"next" : "Cooking - Ranges - Ranking 2",
+			"previous" : "Cooking - Ranges - Cooking Style 2",
+			"text" : [
+				{
+					"question" : "How do you use your oven?",
+					"answers" : [
+						{
+							"text" : "reheat food",
+							"value" : "reheat food",
+							"order" : 1
+						},
+						{
+							"text" : "cook for family",
+							"value" : "cook for family",
+							"order" : 2
+						},
+						{
+							"text" : "cook for guests",
+							"value" : "cook for guests",
+							"order" : 3
+						}
+					]
+				},
+				{
+					"question" : "For dinner, you'll typically find me:",
+					"answers" : [
+						{
+							"text" : "Reheating leftovers",
+							"value" : "any",
+							"order" : 1
+						},
+						{
+							"text" : "Cooking a meal from scratch for myself or partner",
+							"value" : "single",
+							"order" : 2
+						},
+						{
+							"text" : "Cooking a meal from scratch for my family",
+							"value" : "double",
+							"order" : 3
+						},
+						{
+							"text" : "Hosting a dinner party",
+							"value" : "double",
+							"order" : 4
+						},
+						{
+							"text" : "Preparing a frozen meal",
+							"value" : "single combo",
+							"order" : 3
+						},
+						{
+							"text" : "Ordering in delivery",
+							"value" : "single",
+							"order" : 3
+						}
+
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "masonry"
+		},
+		"Cooking - Ranges - Ranking 2" : {
+			"next" : null,
+			"previous" : "Cooking - Ranges - Design Style 2",
+			"text" : [
+				{
+					"question" : "Rank what is most important to you 1-Most important to 4-Least important",
+					"answers" : [
+						{
+							"text" : "Capacity",
+							"value" : "double",
+							"scoring" : {
+								"double" : "+1",
+								"capacity" : "+1"
+							},
+							"order" : 1
+						},
+						{
+							"text" : "Easy of cleaning",
+							"value" : "double",
+							"scoring" : {
+								"aqua_lift" : "+1"
+							},
+							"order" : 2
+						},
+						{
+							"text" : "Even heat",
+							"value" : "single combo",
+							"scoring" : {
+								"true_convection" : "+1"
+							},
+							"order" : 3
+						},
+						{
+							"text" : "Cooking flexibility",
+							"value" : "Cooking flexibility",
+							"scoring" : {
+								"double" : "+1"
+							},
+							"order" : 4
+						}
+					]
+				},
+				{
+					"question" : "My ideal kitchen is (choose):",
+					"answers" : [
+						{
+							"text" : "Able to prepare large meals",
+							"value" : "double",
+							"scoring" : {
+								"double" : "+1",
+								"capacity" : "+1"
+							},
+							"order" : 1
+						},
+						{
+							"text" : "Easy to clean",
+							"value" : "Easy to clean",
+							"scoring" : {
+								"aqua_lift" : "+1"
+							},
+							"order" : 2
+						},
+						{
+							"text" : "Appliances that produce precise temperature",
+							"value" : "Appliances that produce precise temperature",
+							"scoring" : {
+								"true_convection" : "+1"
+							},
+							"order" : 3
+						},
+						{
+							"text" : "Cooking flexibility",
+							"value" : "Cooking flexibility",
+							"scoring" : {
+								"double" : "+1"
+							},
+							"order" : 4
+						}
+					]
+				}
+			],
+			"category" : "aesthetics",
+			"type" : "rank"
 		}
-	]
+	}
 }

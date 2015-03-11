@@ -1,5 +1,5 @@
 Question:
-<div ng-repeat="question in brandData.questions | questionFilter:order">
+<div>
 	<div class="row">
 		<div class="col-md-2">
 			<button class="btn btn-default" type="button" ng-click="previous()">
@@ -7,7 +7,7 @@ Question:
 				<span bo-text="brandData.apptext.previous"></span>
 			</button>
 		</div>
-		<div class="col-md-2" ng-bind="question.name">
+		<div class="col-md-2" ng-bind="question.show.question">
 
 		</div>
 		<div class="col-md-2">
@@ -20,7 +20,7 @@ Question:
 
 
 	<div class="row">		
-		<div class="col-xs-6 col-md-3" class="thumbnail" ng-repeat="answer in question.answers">
+		<div class="col-xs-6 col-md-3" class="thumbnail" ng-repeat="answer in question.show.answers" ng-click="answer.answer=true">
 			<span ng-bind="answer.text"></span>
 		</div>
 	</div>
