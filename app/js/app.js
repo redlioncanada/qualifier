@@ -4,27 +4,14 @@ var nglibs = [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-//  'ngRoute',
-//  'xeditable',
+  'ngRoute',
   'ui.router',
-//  'ngTouch',
+  'ngTouch',
   'pasvaz.bindonce',
   'LocalStorageModule'
 ];
 
 var App = angular.module('App', nglibs);
-
-App.filter('questionFilter', function () {
-    return function (list, order) {
-        for (var l in list) {
-          console.log(list[l].order);
-          if (list[l].order == order) {
-              console.log(list[l])
-              return [list[l]];
-          }
-        }
-    };
-});
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
@@ -33,9 +20,8 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
     $stateProvider
       .state('main', {
-        templateUrl: 'views/main.html',
-        controller: "MainCtrl"
-      })
+        templateUrl: 'views/main.html'
+      }) 
       .state('main.questions', {
         url : "/questions/",
         templateUrl: 'views/questions.html',
@@ -50,6 +36,7 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
   }]);
 
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
+  console.log("Run");
     $resource("config/brand.json").get({}, function (res, headers) {
           $rootScope.brandData = res;
           console.log($rootScope.brandData);
@@ -57,4 +44,4 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
     });
   }]);
 
-angular.bootstrap(document, ["App"]);
+//angular.bootstrap(document, ["App"]);
