@@ -1,1 +1,22 @@
-Results
+<div ng-repeat="a in appliances | filter:{score : '!null'} | orderBy:'score'" >
+	<h1><span bo-text="a.name"></span> (<span bo-text="a.score"></span>)</h1>
+	<h2 bo-text="a.type"></h2>
+	<p bo-text="a.description"></p>
+	<h2>Features</h2>
+	<ul>
+		<li ng-if="!!a.induction">Induction</li>
+		<li ng-if="!!a.gas">Gas</li>
+		<li ng-if="!!a.electric">Electric</li>
+		<li ng-if="!!a.convection">Convection</li>
+		<li ng-if="!!a.trueConvection">True Convection</li>
+		<li ng-if="!!a.single">Single</li>
+		<li ng-if="!!a.double">Double</li>
+		<li ng-if="!!a.combination">Combination</li>
+		<li ng-if="!!a.capacity">Capacity</li>
+		<li ng-if="!!a.aquaLift">Aqua Lift</li>
+	</ul>
+	<h2>Specifications</h2>
+	<ul>
+		<li>Width: <span bo-text="a.width"></span>"</li>
+	</ul>
+</div>

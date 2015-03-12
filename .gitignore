@@ -8,5 +8,5 @@ app/components/*
 build/*
 *.log
 /build
-app/config/"data scraps"
+app/config/old
 

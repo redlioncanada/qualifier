@@ -16,6 +16,9 @@
 						{
 							"text" : "Stove",
 							"value" : "Stove",
+							"scoring" : {
+								"category" : "stove"
+							},
 							"next" : "Cooking - Pre-Qualifier 1",
 
 							"order" : 1
@@ -23,11 +26,17 @@
 						{
 							"text" : "Fridge",
 							"value" : "Fridge",
+							"scoring" : {
+								"category" : "fridge"
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
+							"scoring" : {
+								"category" : "laundry"
+							},
 							"order" : 3
 						}
 					]
@@ -45,18 +54,27 @@
 						{
 							"text" : "free stand range",
 							"value" : "free stand range",
+							"scoring" : {
+								"type" : "range"
+							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",
 							"order" : 1
 						},
 						{
 							"text" : "wall oven",
 							"value" : "wall oven",
+							"scoring" : {
+								"type" : "wall oven"
+							},
 							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
 							"order" : 2
 						},
 						{
 							"text" : "cooktops",
 							"value" : "cooktops",
+							"scoring" : {
+								"type" : "cooktop"
+							},
 							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
 							"order" : 3
 						},
@@ -74,19 +92,28 @@
 						{
 							"text" : "free stand range",
 							"value" : "free stand range",
+							"scoring" : {
+								"type" : "range"
+							},
 							"next" : "Pre-Qualifier - Ranges",						
 							"order" : 1
 						},
 						{
 							"text" : "wall oven",
 							"value" : "wall oven",
-							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
+							"scoring" : {
+								"type" : "wall oven"
+							},
+							"next" : "Cooking - Wall Ovens - Size",
 							"order" : 2
 						},
 						{
 							"text" : "cooktops",
 							"value" : "cooktops",
-							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
+							"scoring" : {
+								"type" : "cooktop"
+							},
+							"next" : "Cooking - Cooktops - Size",						
 							"order" : 3
 						},
 						{
@@ -122,12 +149,18 @@
 						{
 							"text" : "Best value",
 							"value" : "ranges",
+							"scoring" : {
+								"type" : "range"
+							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",	
 							"order" : 3
 						},
 						{
 							"text" : "easy installation",
 							"value" : "ranges",
+							"scoring" : {
+								"type" : "range"
+							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",						
 							"order" : 4
 						}
@@ -140,20 +173,12 @@
 							"text" : "Easy to use",
 							"value" : "wall ovens/cooktops",
 							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",							
-							"scoring" : {
-								"wall ovens" : "1",
-								"cooktops" : "1"
-							},
 							"order" : 1
 						},
 						{
 							"text" : "Looks clean and simple",
 							"value" : "wall ovens/cooktops",
-							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
-							"scoring" : {
-								"wall ovens" : "1",
-								"cooktops" : "1"
-							},								
+							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",								
 							"order" : 2
 						},
 						{
@@ -161,7 +186,7 @@
 							"value" : "ranges",
 							"next" : "Cooking - Pre-Qualifier - Ranges",	
 							"scoring" : {
-								"ranges" : "1"
+								"type" : "range"
 							},						
 							"order" : 3
 						},
@@ -170,7 +195,7 @@
 							"value" : "ranges",
 							"next" : "Cooking - Pre-Qualifier - Ranges",						
 							"scoring" : {
-								"ranges" : "1"
+								"type" : "range"
 							},									
 							"order" : 4
 						}
@@ -190,7 +215,7 @@
 							"text" : "wall ovens",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"wall ovens" : "1"
+								"type" : "wall oven"
 							},
 							"value" : "wall ovens",
 							"order" : 1
@@ -199,7 +224,7 @@
 							"text" : "cooktops",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"cooktops" : "1"
+								"type" : "cooktop"
 							},												
 							"value" : "cooktops",
 							"order" : 2
@@ -207,8 +232,6 @@
 						{
 							"text" : "I'm looking for neither",
 							"next" : "Cooking - Pre-Qualifier 1",
-							"scoring" : {
-							},
 							"value" : "any",
 							"order" : 3
 						}
@@ -221,7 +244,7 @@
 							"text" : "wall ovens",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"wall ovens" : "1"
+								"type" : "wall oven"
 							},
 							"value" : "wall ovens",
 							"order" : 1
@@ -230,7 +253,7 @@
 							"text" : "cooktops",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"cooktops" : "1"
+								"type" : "cooktop"
 							},												
 							"value" : "cooktops",
 							"order" : 2
@@ -238,8 +261,6 @@
 						{
 							"text" : "I'm looking for neither",
 							"next" : "Cooking - Pre-Qualifier 1",
-							"scoring" : {
-							},
 							"value" : "any",
 							"order" : 3
 						}
@@ -260,38 +281,56 @@
 							"text" : "24\"",
 							"value" : "24",
 							"scoring" : {
-								"wall ovens" : "1"
+								"width" : "24"
 							},
 							"order" : 1
 						},
 						{
 							"text" : "27\"",
 							"value" : "27",
+							"scoring" : {
+								"width" : "27"
+							},
 							"order" : 2
 						},
 						{
 							"text" : "30\"",
 							"value" : "30",
+							"scoring" : {
+								"width" : "30"
+							},
 							"order" : 3
 						},
 						{
 							"text" : "36\"",
 							"value" : "36",
+							"scoring" : {
+								"width" : "36"
+							},
 							"order" : 4
 						},
 						{
 							"text" : "48\"",
 							"value" : "48",
+							"scoring" : {
+								"width" : "48"
+							},
 							"order" : 5
 						},
 						{
 							"text" : "15\" to 27\"",
 							"value" : "small",
+							"scoring" : {
+								"size" : "small"
+							},
 							"order" : 6
 						},
 						{
 							"text" : "30\" to 48\"",
 							"value" : "big",
+							"scoring" : {
+								"size" : "medium"
+							},
 							"order" : 7
 						},
 						{
@@ -307,21 +346,33 @@
 						{
 							"text" : "XL",
 							"value" : "+30",
+							"scoring" : {
+								"size" : "x-large"
+							},
 							"order" : 1
 						},
 						{
 							"text" : "L",
 							"value" : "30",
+							"scoring" : {
+								"size" : "large"
+							},
 							"order" : 2
 						},
 						{
 							"text" : "M",
 							"value" : "27",
+							"scoring" : {
+								"size" : "medium"
+							},
 							"order" : 3
 						},
 						{
 							"text" : "S",
 							"value" : "24",
+							"scoring" : {
+								"size" : "small"
+							},
 							"order" : 4
 						},
 						{
@@ -352,16 +403,27 @@
 						{
 							"text" : "baker",
 							"value" : "baker",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "home chef",
 							"value" : "home chef",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "both",
 							"value" : "both",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 3
 						},
 						{
@@ -377,16 +439,27 @@
 						{
 							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
 							"value" : "baker",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
 							"value" : "home chef",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "I'm both - my friends are lucky to know me.",
 							"value" : "both",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 3
 						},
 						{
@@ -410,16 +483,27 @@
 						{
 							"text" : "reheat food",
 							"value" : "reheat food",
+							"scoring" : {
+								"single" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "cook for family",
 							"value" : "cook for family",
+							"scoring" : {
+								"combination" : 1,
+								"double" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "cook for guests",
 							"value" : "cook for guests",
+							"scoring" : {
+								"combination" : 1,
+								"double" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -435,27 +519,43 @@
 						{
 							"text" : "Cooking a meal from scratch for myself or partner",
 							"value" : "single",
+							"scoring" : {
+								"single" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Cooking a meal from scratch for my family",
 							"value" : "double",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Hosting a dinner party",
 							"value" : "double",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "Preparing a frozen meal",
 							"value" : "single combo",
-							"order" : 3
+							"scoring" : {
+								"single" : 1,
+								"combination" : 1
+							},
+							"order" : 5
 						},
 						{
 							"text" : "Ordering in delivery",
 							"value" : "single",
-							"order" : 3
+							"scoring" : {
+								"single" : 1
+							},
+							"order" : 6
 						}
 
 					]
@@ -469,26 +569,39 @@
 			"previous" : "Cooking - Wall Ovens - Design Style",
 			"text" : [
 				{
-					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"question" : "Rank what is most important to you (1-Most important to 4-Least important)",
 					"answers" : [
 						{
 							"text" : "Capacity",
 							"value" : "Capacity",
+							"scoring" : {
+								"double" : 1,
+								"capacity" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
+							"scoring" : {
+								"aquaLift" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Even heat",
 							"value" : "Even heat",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Cooking multiple dishes at once",
 							"value" : "Cooking multiple dishes at once",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -499,21 +612,34 @@
 						{
 							"text" : "Able to prepare large meals",
 							"value" : "Able to prepare large meals",
+							"scoring" : {
+								"double" : 1,
+								"capacity" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
+							"scoring" : {
+								"aquaLift" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Easy to use",
 							"value" : "Easy to use",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -532,36 +658,57 @@
 						{
 							"text" : "24\"",
 							"value" : "24",
+							"scoring" : {
+								"width" : "24"
+							},
 							"order" : 1
 						},
 						{
 							"text" : "27\"",
 							"value" : "27",
+							"scoring" : {
+								"width" : "27"
+							},
 							"order" : 2
 						},
 						{
 							"text" : "30\"",
 							"value" : "30",
+							"scoring" : {
+								"width" : "30"
+							},
 							"order" : 3
 						},
 						{
 							"text" : "36\"",
 							"value" : "36",
+							"scoring" : {
+								"width" : "36"
+							},
 							"order" : 4
 						},
 						{
 							"text" : "48\"",
 							"value" : "48",
+							"scoring" : {
+								"width" : "48"
+							},
 							"order" : 5
 						},
 						{
 							"text" : "15\" to 27\"",
 							"value" : "small",
+							"scoring" : {
+								"width" : "small"
+							},
 							"order" : 6
 						},
 						{
 							"text" : "30\" to 48\"",
 							"value" : "big",
+							"scoring" : {
+								"width" : "medium"
+							},
 							"order" : 7
 						},
 						{
@@ -577,36 +724,57 @@
 						{
 							"text" : "24\"",
 							"value" : "24",
+							"scoring" : {
+								"width" : "24"
+							},
 							"order" : 1
 						},
 						{
 							"text" : "27\"",
 							"value" : "27",
+							"scoring" : {
+								"width" : "27"
+							},
 							"order" : 2
 						},
 						{
 							"text" : "30\"",
 							"value" : "30",
+							"scoring" : {
+								"width" : "30"
+							},
 							"order" : 3
 						},
 						{
 							"text" : "36\"",
 							"value" : "36",
+							"scoring" : {
+								"width" : "36"
+							},
 							"order" : 4
 						},
 						{
 							"text" : "48\"",
 							"value" : "48",
+							"scoring" : {
+								"width" : "48"
+							},
 							"order" : 5
 						},
 						{
 							"text" : "15\" to 27\"",
 							"value" : "small",
+							"scoring" : {
+								"size" : "small"
+							},
 							"order" : 6
 						},
 						{
 							"text" : "30\" to 48\"",
 							"value" : "big",
+							"scoring" : {
+								"size" : "medium"
+							},
 							"order" : 7
 						},
 						{
@@ -642,16 +810,25 @@
 						{
 							"text" : "For my family",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "For myself, because it's my passion",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "I cook for necessity",
 							"value" : "electric",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -667,16 +844,25 @@
 						{
 							"text" : "Family-sized meal",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Made from scratch with all the gourmet fixings",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Frozen pizza from the grocery store",
 							"value" : "electric",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -701,11 +887,17 @@
 						{
 							"text" : "Traditional",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Commercial",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -721,11 +913,17 @@
 						{
 							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -745,26 +943,43 @@
 						{
 							"text" : "energy efficiency",
 							"value" : "energy efficiency",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "ease of cleaning",
 							"value" : "ease of cleaning",
+							"scoring" : {
+								"induction" : 1,
+								"electric" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "precise temperature",
 							"value" : "precise temperature",
+							"scoring" : {
+								"induction" : 1,
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "ease of use",
 							"value" : "ease of use",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "professional style cooking",
 							"value" : "professional style cooking",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 5
 						}
 					]
@@ -775,26 +990,43 @@
 						{
 							"text" : "energy efficiency",
 							"value" : "energy efficiency",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "ease of cleaning",
 							"value" : "ease of cleaning",
+							"scoring" : {
+								"induction" : 1,
+								"electric" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
+							"scoring" : {
+								"induction" : 1,
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "ease of use",
 							"value" : "ease of use",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "professional",
 							"value" : "professional",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 5
 						}
 					]
@@ -818,6 +1050,9 @@
 						{
 							"text" : "no",
 							"value" : "no",
+							"scoring" : {
+								"gas" : null
+							},
 							"order" : 2
 						}
 					]
@@ -833,6 +1068,9 @@
 						{
 							"text" : "no",
 							"value" : "no",
+							"scoring" : {
+								"gas" : null
+							},
 							"order" : 2
 						}
 					]
@@ -895,16 +1133,25 @@
 						{
 							"text" : "For my family",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "For myself, because it's my passion",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "I cook for necessity",
 							"value" : "electric",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -920,16 +1167,25 @@
 						{
 							"text" : "Family-sized meal",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Made from scratch with all the gourmet fixings",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Frozen pizza from the grocery store",
 							"value" : "electric",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						}
 					]
@@ -954,11 +1210,17 @@
 						{
 							"text" : "Traditional",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Commercial",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -974,11 +1236,17 @@
 						{
 							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
 							"value" : "induction",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
 							"value" : "gas",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -998,26 +1266,43 @@
 						{
 							"text" : "energy efficiency",
 							"value" : "energy efficiency",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "ease of cleaning",
 							"value" : "ease of cleaning",
+							"scoring" : {
+								"induction" : 1,
+								"electric" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "precise temperature",
 							"value" : "precise temperature",
+							"scoring" : {
+								"induction" : 1,
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "ease of use",
 							"value" : "ease of use",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "professional style cooking",
 							"value" : "professional style cooking",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 5
 						}
 					]
@@ -1028,26 +1313,43 @@
 						{
 							"text" : "energy efficiency",
 							"value" : "energy efficiency",
+							"scoring" : {
+								"induction" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "ease of cleaning",
 							"value" : "ease of cleaning",
+							"scoring" : {
+								"induction" : 1,
+								"electric" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
+							"scoring" : {
+								"induction" : 1,
+								"gas" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "ease of use",
 							"value" : "ease of use",
+							"scoring" : {
+								"electric" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "professional",
 							"value" : "professional",
+							"scoring" : {
+								"gas" : 1
+							},
 							"order" : 5
 						}
 					]
@@ -1071,6 +1373,9 @@
 						{
 							"text" : "no",
 							"value" : "no",
+							"scoring" : {
+								"gas" : null
+							},
 							"order" : 2
 						}
 					]
@@ -1086,6 +1391,9 @@
 						{
 							"text" : "no",
 							"value" : "no",
+							"scoring" : {
+								"gas" : null
+							},
 							"order" : 2
 						}
 					]
@@ -1104,16 +1412,27 @@
 						{
 							"text" : "baker",
 							"value" : "baker",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "home chef",
 							"value" : "home chef",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "both",
 							"value" : "both",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 3
 						},
 						{
@@ -1129,16 +1448,27 @@
 						{
 							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
 							"value" : "baker",
+							"scoring" : {
+								"trueConvection" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
 							"value" : "home chef",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "I'm both - my friends are lucky to know me.",
 							"value" : "both",
+							"scoring" : {
+								"trueConvection" : 1,
+								"convection" : 1
+							},
 							"order" : 3
 						},
 						{
@@ -1162,16 +1492,27 @@
 						{
 							"text" : "reheat food",
 							"value" : "reheat food",
+							"scoring" : {
+								"single" : 1
+							},
 							"order" : 1
 						},
 						{
 							"text" : "cook for family",
 							"value" : "cook for family",
+							"scoring" : {
+								"combination" : 1,
+								"double" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "cook for guests",
 							"value" : "cook for guests",
+							"scoring" : {
+								"combination" : 1,
+								"double" : 1
+							},
 							"order" : 3
 						}
 					]
@@ -1187,27 +1528,43 @@
 						{
 							"text" : "Cooking a meal from scratch for myself or partner",
 							"value" : "single",
+							"scoring" : {
+								"single" : 1
+							},
 							"order" : 2
 						},
 						{
 							"text" : "Cooking a meal from scratch for my family",
 							"value" : "double",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 3
 						},
 						{
 							"text" : "Hosting a dinner party",
 							"value" : "double",
+							"scoring" : {
+								"double" : 1
+							},
 							"order" : 4
 						},
 						{
 							"text" : "Preparing a frozen meal",
 							"value" : "single combo",
-							"order" : 3
+							"scoring" : {
+								"single" : 1,
+								"combination" : 1
+							},
+							"order" : 5
 						},
 						{
 							"text" : "Ordering in delivery",
 							"value" : "single",
-							"order" : 3
+							"scoring" : {
+								"single" : 1
+							},
+							"order" : 6
 						}
 
 					]
@@ -1227,8 +1584,8 @@
 							"text" : "Capacity",
 							"value" : "double",
 							"scoring" : {
-								"double" : "+1",
-								"capacity" : "+1"
+								"double" : 1,
+								"capacity" : 1
 							},
 							"order" : 1
 						},
@@ -1236,7 +1593,7 @@
 							"text" : "Easy of cleaning",
 							"value" : "double",
 							"scoring" : {
-								"aqua_lift" : "+1"
+								"aquaLift" : 1
 							},
 							"order" : 2
 						},
@@ -1244,7 +1601,7 @@
 							"text" : "Even heat",
 							"value" : "single combo",
 							"scoring" : {
-								"true_convection" : "+1"
+								"trueConvection" : 1
 							},
 							"order" : 3
 						},
@@ -1252,7 +1609,7 @@
 							"text" : "Cooking flexibility",
 							"value" : "Cooking flexibility",
 							"scoring" : {
-								"double" : "+1"
+								"double" : 1
 							},
 							"order" : 4
 						}
@@ -1265,8 +1622,8 @@
 							"text" : "Able to prepare large meals",
 							"value" : "double",
 							"scoring" : {
-								"double" : "+1",
-								"capacity" : "+1"
+								"double" : 1,
+								"capacity" : 1
 							},
 							"order" : 1
 						},
@@ -1274,7 +1631,7 @@
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
 							"scoring" : {
-								"aqua_lift" : "+1"
+								"aquaLift" : 1
 							},
 							"order" : 2
 						},
@@ -1282,7 +1639,7 @@
 							"text" : "Appliances that produce precise temperature",
 							"value" : "Appliances that produce precise temperature",
 							"scoring" : {
-								"true_convection" : "+1"
+								"trueConvection" : 1
 							},
 							"order" : 3
 						},
@@ -1290,7 +1647,7 @@
 							"text" : "Cooking flexibility",
 							"value" : "Cooking flexibility",
 							"scoring" : {
-								"double" : "+1"
+								"double" : 1
 							},
 							"order" : 4
 						}

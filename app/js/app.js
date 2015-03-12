@@ -39,8 +39,11 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
   console.log("Run");
     $resource("config/brand.json").get({}, function (res, headers) {
           $rootScope.brandData = res;
-          console.log($rootScope.brandData);
-          $state.go('main.questions');
+          $resource("config/appliances.json").get({}, function (res, headers) {
+                $rootScope.appliances = res.products;
+                console.log($rootScope.appliances);
+                $state.go('main.questions');
+          });
     });
   }]);
 
