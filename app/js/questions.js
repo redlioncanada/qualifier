@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state) {
   	$rootScope.scoringQuestions = {};
+  	$rootScope.currentCount = null;
   	$scope.filter = {	
   		cooking: {
   			"range" : 0,
@@ -35,6 +36,7 @@ angular.module('App')
 	}
 
 	$scope.recalculateResults = function () {
+		$rootScope.currentCount = 0;
 		$scope.currentScore = {	
   			"type" : false,
   			"size" : false,
@@ -90,6 +92,9 @@ angular.module('App')
 					a.score = a.score + s;
 				}
 			}
+					if (a.score != null) {
+			$rootScope.currentCount = $rootScope.currentCount +1
+		}
 		}
 		console.log($rootScope.appliances)
 	}
