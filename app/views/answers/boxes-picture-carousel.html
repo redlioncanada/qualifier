@@ -1,0 +1,67 @@
+<!-- Carousel picture boxes answers -->
+
+<!-- http://angular-ui.github.io/bootstrap/#/carousel -->
+<div class="answers-main-content row">
+	<a href="" class="answer-option answer-box col-md-4">
+		<div ng-controller="answerCarousel">
+			<div style="height: 305px">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.image}}" style="margin:auto;">
+						<div class="carousel-caption">
+							<h4>Laundry {{$index}}</h4>
+							<p>{{slide.text}}</p>
+						</div>	
+					</slide>
+				</carousel>
+			</div>
+		</div>
+	</a>
+	<a href="" class="answer-option answer-box col-md-4">
+		<div ng-controller="answerCarousel">
+			<div style="height: 305px">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.image}}" style="margin:auto;">
+						<div class="carousel-caption">
+							<h4>Cooking {{$index}}</h4>
+							<p>{{slide.text}}</p>
+						</div>	
+					</slide>
+				</carousel>
+			</div>
+		</div>
+	</a>
+	<a href="" class="answer-option answer-box col-md-4">
+		<div ng-controller="answerCarousel">
+			<div style="height: 305px">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.image}}" style="margin:auto;">
+						<div class="carousel-caption">
+							<h4>Refrigerator {{$index}}</h4>
+							<p>{{slide.text}}</p>
+						</div>	
+					</slide>
+				</carousel>
+			</div>
+		</div>
+	</a>
+	<a href="" class="answer-option answer-box col-md-4">
+		<div ng-controller="answerCarousel">
+			<div style="height: 305px">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img ng-src="{{slide.image}}" style="margin:auto;">
+						<div class="carousel-caption">
+							<h4>Dishwasher {{$index}}</h4>
+							<p>{{slide.text}}</p>
+						</div>	
+					</slide>
+				</carousel>
+			</div>
+		</div>
+	</a>
+</div>
+
+

@@ -1,0 +1,10 @@
+<!-- Rank the answers -->
+
+<!-- https://github.com/a5hik/ng-sortable -->
+<div class="answers-main-content row">
+	<ul data-as-sortable="board.dragControlListeners" data-ng-model="items">
+		<li data-ng-repeat="item in items answer-option" data-as-sortable-item>
+			<div data-as-sortable-item-handle></div>
+		</li>
+	</ul>
+</div>
