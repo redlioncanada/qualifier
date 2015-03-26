@@ -18,25 +18,25 @@
 							"text" : "Stove",
 							"value" : "Stove",
 							"scoring" : {
-								"category" : "stove"
+								"appliance" : "Stove"
 							},
 							"next" : "Cooking - Pre-Qualifier 1",
-
 							"order" : 1
 						},
 						{
 							"text" : "Fridge",
 							"value" : "Fridge",
 							"scoring" : {
-								"category" : "fridge"
+								"appliance" : "Fridge"
 							},
+							"next" : "Fridge - Purpose",
 							"order" : 2
 						},
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
 							"scoring" : {
-								"category" : "laundry"
+								"appliance" : "Laundry"
 							},
 							"order" : 3
 						}
@@ -56,7 +56,7 @@
 							"text" : "free stand range",
 							"value" : "free stand range",
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",
 							"order" : 1
@@ -65,7 +65,7 @@
 							"text" : "wall oven",
 							"value" : "wall oven",
 							"scoring" : {
-								"type" : "wall oven"
+								"type" : "Wall Ovens"
 							},
 							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
 							"order" : 2
@@ -74,7 +74,7 @@
 							"text" : "cooktops",
 							"value" : "cooktops",
 							"scoring" : {
-								"type" : "cooktop"
+								"type" : "Cooktops"
 							},
 							"next" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",						
 							"order" : 3
@@ -94,7 +94,7 @@
 							"text" : "free stand range",
 							"value" : "free stand range",
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},
 							"next" : "Pre-Qualifier - Ranges",						
 							"order" : 1
@@ -103,7 +103,7 @@
 							"text" : "wall oven",
 							"value" : "wall oven",
 							"scoring" : {
-								"type" : "wall oven"
+								"type" : "Wall Ovens"
 							},
 							"next" : "Cooking - Wall Ovens - Size",
 							"order" : 2
@@ -112,7 +112,7 @@
 							"text" : "cooktops",
 							"value" : "cooktops",
 							"scoring" : {
-								"type" : "cooktop"
+								"type" : "Cooktops"
 							},
 							"next" : "Cooking - Cooktops - Size",						
 							"order" : 3
@@ -151,7 +151,7 @@
 							"text" : "Best value",
 							"value" : "ranges",
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",	
 							"order" : 3
@@ -160,7 +160,7 @@
 							"text" : "easy installation",
 							"value" : "ranges",
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},
 							"next" : "Cooking - Pre-Qualifier - Ranges",						
 							"order" : 4
@@ -187,7 +187,7 @@
 							"value" : "ranges",
 							"next" : "Cooking - Pre-Qualifier - Ranges",	
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},						
 							"order" : 3
 						},
@@ -196,7 +196,7 @@
 							"value" : "ranges",
 							"next" : "Cooking - Pre-Qualifier - Ranges",						
 							"scoring" : {
-								"type" : "range"
+								"type" : "Ranges"
 							},									
 							"order" : 4
 						}
@@ -216,7 +216,7 @@
 							"text" : "wall ovens",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"type" : "wall oven"
+								"type" : "Wall Ovens"
 							},
 							"value" : "wall ovens",
 							"order" : 1
@@ -225,7 +225,7 @@
 							"text" : "cooktops",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"type" : "cooktop"
+								"type" : "Cooktops"
 							},												
 							"value" : "cooktops",
 							"order" : 2
@@ -245,7 +245,7 @@
 							"text" : "wall ovens",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"type" : "wall oven"
+								"type" : "Wall Ovens"
 							},
 							"value" : "wall ovens",
 							"order" : 1
@@ -254,7 +254,7 @@
 							"text" : "cooktops",
 							"next" : "Cooking - Wall Ovens - Size",
 							"scoring" : {
-								"type" : "cooktop"
+								"type" : "Cooktops"
 							},												
 							"value" : "cooktops",
 							"order" : 2

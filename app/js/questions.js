@@ -4,24 +4,6 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state) {
   	$rootScope.scoringQuestions = {};
   	$rootScope.currentCount = null;
-  	$scope.filter = {	
-  		cooking: {
-  			"range" : 0,
-  			"wall oven" : 0,
-  			"cooktop" : 0,
-			"induction" : 0,
-			"gas" : 0,
-			"electric" : 0,
-			"convection" : 0,
-			"true_convection" : 0,
-			"double" : 0,
-			"single" : 0,
-			"combination" : 0,
-			"capacity" : 0,
-			"aqua_lift" : 0  			
-  		}
-
-	}
 
 	$scope.hasAnswer = function (question) {
 		if ('answers' in question.show) {
@@ -51,7 +33,36 @@ angular.module('App')
 			"single" : 0,
 			"combination" : 0,
 			"capacity" : 0,
-			"aquaLift" : 0  			
+			"aquaLift" : 0 ,
+			"frenchDoor" : 0 ,
+			"sideBySide" : 0 ,
+			"topFreezer" : 0 ,
+			"bottomFreezer" : 0 , 
+			"filtered" : 0 ,
+			"inDoor" : 0 ,
+			"counterDepth" : 0 ,
+			"ethyleneFilter" : 0 ,
+			"decibels" : 0 ,
+			"stainlessTub" : 0 ,
+			"2Racks" : 0 ,
+			"3Racks" : 0 ,
+			"culinaryCaddy" : 0 ,
+			"proWash" : 0 ,
+			"sensorCycle" : 0 ,
+			"anyWare" : 0 ,
+			"controls" : 0 ,
+			"frontLoad" : 0 ,
+			"topLoad" : 0 ,
+			"moreCycles" : 0 ,
+			"easeOfUse" : 0 ,
+			"digitalDial" : 0 ,
+			"knobDial" : 0 ,
+			"energyEfficiency" : 0 ,
+			"quiet" : 0 ,
+			"lowVibration" : 0 ,
+			"sensorDry" : 0 ,
+			"steam" : 0 ,
+			"powerWash" : 0 			
 		}
 		for (var question in $rootScope.scoringQuestions) {
 			var q = $rootScope.scoringQuestions[question]
@@ -92,9 +103,9 @@ angular.module('App')
 					a.score = a.score + s;
 				}
 			}
-					if (a.score != null) {
-			$rootScope.currentCount = $rootScope.currentCount +1
-		}
+			if (a.score != null) {
+				$rootScope.currentCount = $rootScope.currentCount +1
+			}
 		}
 		console.log($rootScope.appliances)
 	}

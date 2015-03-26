@@ -1,5 +1,4 @@
-{
-	"products" : [
+[
     {
         "appliance": "Stove", 
         "aquaLift": false, 
@@ -1616,4 +1615,3 @@
         "url": "http://www.maytag.com/-[MBF1953DEM]-1112069/MBF1953DEM/"
     }
 ]
-}

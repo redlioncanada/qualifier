@@ -5,6 +5,7 @@ node_modules/
 components/*
 bower_components/*
 app/components/*
+documents/
 build/*
 *.log
 /build
