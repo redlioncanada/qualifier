@@ -125,11 +125,17 @@ angular.module('App')
 		}
 		$scope.question.show = $scope.question.text[ref];	 
 	}
-
+	$scope.controls = {}
+	$scope.controls.questionHasAnswer = true
   	$scope.next = function () {
   		// Make sure there is an answer
   		var hasAnswer = $scope.hasAnswer($scope.question)
+  		if (!hasAnswer) {
+  			// apply class to all answers
+  			$scope.controls.questionHasAnswer = false
+  		}
   		if (!!hasAnswer) {
+  			$scope.controls.questionHasAnswer = true
   			$rootScope.scoringQuestions[$scope.question.name] = $scope.question;
   			$scope.recalculateResults();
  

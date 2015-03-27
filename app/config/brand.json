@@ -15,13 +15,10 @@
 					"question" : "What are you looking for today?",
 					"answers" : [
 						{
-							"text" : "Stove",
+							"text" : "Cooking",
 							"value" : "Stove",
-							"images" : [
-								"http://www.maytag.com/digitalassets/MGT8820DS/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MMW7730DS/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MGC9536DS/Standalone_1175X1290.jpg"
-							],
+							"image" : "http://www.maytag.com/digitalassets/MEW9630DS/Standalone_1175X1290.jpg",
+							"hover" : "http://www.chrismaytag.com/media/members/ochr1-chrismaytag/maytagman.jpg",
 							"scoring" : {
 								"appliance" : "Stove"
 							},
@@ -29,13 +26,10 @@
 							"order" : 1
 						},
 						{
-							"text" : "Fridge",
+							"text" : "Refrigerator",
 							"value" : "Fridge",
-							"images" : [
-								"http://www.maytag.com/digitalassets/MRT519SZDM/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MRT318FZDM/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MDB7949SDM/Standalone_1175X1290.jpg"
-							],
+							"image" : "http://www.maytag.com/digitalassets/MFC2062DEM/Standalone_1175X1290.jpg",
+							"hover" : "",
 							"scoring" : {
 								"appliance" : "Fridge"
 							},
@@ -45,21 +39,40 @@
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
-							"images" : [
-								"http://www.maytag.com/digitalassets/MHW4300DW/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MHW8100DW/Standalone_1175X1290.jpg",
-								"http://www.maytag.com/digitalassets/MHW8000AW/Standalone_1175X1290.jpg"
-							],
+							"image" : "http://www.specsserver.com/CACHE/FRUYUGVKJCPO.JPG?width=300&height=300",
+							"hover" : "http://static1.squarespace.com/static/524c5e0ae4b067caf1d06007/t/54bffd7be4b0726a780744c1/1421868412853/Maytag_Man_Washer.png?format=500w",
 							"scoring" : {
 								"appliance" : "Laundry"
 							},
 							"order" : 3
+						},
+						{
+							"text" : "Dishwasher",
+							"value" : "Dishwasher",
+							"image" : "http://www.maytag.com/digitalassets/MFC2062DEM/Standalone_1175X1290.jpg",
+							"hover" : "http://static1.squarespace.com/static/524c5e0ae4b067caf1d06007/t/54bffd7be4b0726a780744c1/1421868412853/Maytag_Man_Washer.png?format=500w",
+							"scoring" : {
+								"appliance" : "Fridge"
+							},
+							"next" : "Fridge - Purpose",
+							"order" : 4
+						},
+						{
+							"text" : "Ventilation",
+							"value" : "Vents",
+							"image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK98iCJP3KbdlUlBf8Zeu8CqJeBSjpXQ3NcxvSn8qgajmRYbCirpWk8X0",
+							"hover" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK98iCJP3KbdlUlBf8Zeu8CqJeBSjpXQ3NcxvSn8qgajmRYbCirpWk8X0",
+							"scoring" : {
+								"appliance" : "Fridge"
+							},
+							"next" : "Fridge - Purpose",
+							"order" : 5
 						}
 					]
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "boxes-picture-carousel"	
+			"type" : "boxes-picture"	
 		},
 		"Cooking - Pre-Qualifier 1" : {
 			"previous" : "Appliance",

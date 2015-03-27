@@ -1,7 +1,25 @@
 <!-- Picture box answers -->
-<div class="answers-main-content row">
-	<a href="" class="answer-option answer-box col-md-3" ng-repeat="answer in question.show.answers" ng-click="answer.answer=true">
-		<img ng-src="answer.image">
+<style>
+
+.answer {
+	border: solid 0px #ff0000;
+}
+
+.selected {
+	  border: solid 4px #ffff00;
+}
+
+.noanswer {
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+	border: solid 4px #ff0000;
+}
+</style>
+<div class="answers-main-content row" ng-controller="BoxesPictureCtrl">
+	<a href="" class="answer answer-option answer-box col-md-{{boxWidth}}" ng-repeat="answer in question.show.answers" ng-click="clear(question.show.answers);answer.answer=true;controls.questionHasAnswer=true" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<img ng-if="!!answer.hover" style="width: 100%" ng-src="{{answer.activeImage}}" ng-mouseover="answer.activeImage=answer.hover" ng-mouseleave="answer.activeImage=answer.image" />
+		<img ng-if="!answer.hover" style="width: 100%" ng-src="{{answer.activeImage}}" />
 		<div ng-bind="answer.text"></div>
 	</a>
 </div>
