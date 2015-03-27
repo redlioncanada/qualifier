@@ -8,7 +8,10 @@ var nglibs = [
   'ui.router',
   'ngTouch',
   'pasvaz.bindonce',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ui.bootstrap',
+  'ui.sortable',
+  'ngSlider'
 ];
 
 var App = angular.module('App', nglibs);

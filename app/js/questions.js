@@ -17,6 +17,13 @@ angular.module('App')
 		return false;
 	}
 
+	
+
+	$scope.getPartial = function (partial) {
+		console.log('answers/'+partial+'.html');
+      return 'answers/'+partial+'.html'
+  }
+
 	$scope.recalculateResults = function () {
 		$rootScope.currentCount = 0;
 		$scope.currentScore = {	

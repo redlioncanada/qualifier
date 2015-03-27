@@ -65,6 +65,9 @@ gulp.task('js', function () {
 
 // process Components JS files and return the stream.
 gulp.task('components', function () {
+    gulp.src('app/components/*/*/*.css')
+        .pipe(gulp.dest('build/components'));
+
     gulp.src('app/components/*/*/*.js')
         .pipe(gulp.dest('build/components'));
 

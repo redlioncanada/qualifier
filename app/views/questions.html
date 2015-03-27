@@ -19,10 +19,7 @@ Question:
 	</div>
 
 
-	<div class="row">		
-		<div class="col-xs-6 col-md-3" class="thumbnail" ng-repeat="answer in question.show.answers" ng-click="answer.answer=true">
-			<span ng-bind="answer.text"></span>
-		</div>
+	<div class="row" ng-include="'views/answers/'+question.type+'.html'">
 	</div>
 
 

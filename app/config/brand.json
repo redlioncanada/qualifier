@@ -17,6 +17,11 @@
 						{
 							"text" : "Stove",
 							"value" : "Stove",
+							"images" : [
+								"http://www.maytag.com/digitalassets/MGT8820DS/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MMW7730DS/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MGC9536DS/Standalone_1175X1290.jpg"
+							],
 							"scoring" : {
 								"appliance" : "Stove"
 							},
@@ -26,6 +31,11 @@
 						{
 							"text" : "Fridge",
 							"value" : "Fridge",
+							"images" : [
+								"http://www.maytag.com/digitalassets/MRT519SZDM/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MRT318FZDM/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MDB7949SDM/Standalone_1175X1290.jpg"
+							],
 							"scoring" : {
 								"appliance" : "Fridge"
 							},
@@ -35,6 +45,11 @@
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
+							"images" : [
+								"http://www.maytag.com/digitalassets/MHW4300DW/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MHW8100DW/Standalone_1175X1290.jpg",
+								"http://www.maytag.com/digitalassets/MHW8000AW/Standalone_1175X1290.jpg"
+							],
 							"scoring" : {
 								"appliance" : "Laundry"
 							},
@@ -44,7 +59,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"	
+			"type" : "boxes-picture-carousel"	
 		},
 		"Cooking - Pre-Qualifier 1" : {
 			"previous" : "Appliance",
@@ -127,7 +142,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Pre-Qualifier 2" : {
 			"previous" : "Cooking - Pre-Qualifier 1",
@@ -204,7 +219,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Pre-Qualifier - Wall Ovens/Cooktops" : {
 			"previous" : "Cooking - Pre-Qualifier 2",
@@ -269,7 +284,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Wall Ovens - Size" : {
 			"next" : "Cooking - Wall Ovens - Cooking Style",
@@ -385,7 +400,7 @@
 				}							
 			],
 			"category" : "aesthetics",
-			"type" : "masonry",
+			"type" : "boxes",
 			"notes" : [
 				{
 					"title" : "note",
@@ -472,7 +487,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Wall Ovens - Design Style" : {
 			"next" : "Cooking - Wall Ovens - Ranking",
@@ -563,7 +578,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Wall Ovens - Ranking" : {
 			"next" : null,
@@ -787,7 +802,7 @@
 				}							
 			],
 			"category" : "aesthetics",
-			"type" : "masonry",
+			"type" : "boxes",
 			"right_answers" : ["cooktops"],
 			"notes" : [
 				{
@@ -871,7 +886,7 @@
 			],
 			"category" : "aesthetics",
 			"order" : 1,
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Cooktops - Design Style" : {
 			"next" : "Cooking - Cooktops - Ranking",
@@ -932,7 +947,7 @@
 			],
 			"category" : "aesthetics",
 			"order" : 2,
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Cooktops - Ranking" : {
 			"next" : "Cooking - Cooktops - Gas",
@@ -1078,7 +1093,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Pre-Qualifier - Ranges" : {
 			"next" : "Cooking - Ranges - Cooking Style",
@@ -1116,7 +1131,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry",
+			"type" : "boxes",
 			"right_answers" : ["ranges"]
 		},
 		"Cooking - Ranges - Cooking Style" : {
@@ -1194,7 +1209,7 @@
 			],
 			"category" : "aesthetics",
 			"order" : 1,
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Ranges - Design Style" : {
 			"next" : "Cooking - Ranges - Ranking",
@@ -1255,7 +1270,7 @@
 			],
 			"category" : "aesthetics",
 			"order" : 2,
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Ranges - Ranking" : {
 			"next" : "Cooking - Ranges - Gas",
@@ -1401,7 +1416,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Ranges - Cooking Style 2" : {
 			"next" : "Cooking - Ranges - Design Style 2",
@@ -1481,7 +1496,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Ranges - Design Style 2" : {
 			"next" : "Cooking - Ranges - Ranking 2",
@@ -1572,7 +1587,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"
+			"type" : "boxes"
 		},
 		"Cooking - Ranges - Ranking 2" : {
 			"next" : null,
@@ -1761,7 +1776,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "masonry"	
+			"type" : "boxes"	
 		},
 		"Fridge - Organization" : {
 			"previous" : "Fridge - Purpose",
@@ -1847,7 +1862,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "multi"	
+			"type" : "radio"	
 		},
 		"Fridge - Capacity" : {
 			"previous" : "Fridge - Organization",
@@ -1952,7 +1967,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "multi"	
+			"type" : "radio"	
 		},
 		"Fridge - Water" : {
 			"previous" : "Fridge - Capacity",
@@ -2044,7 +2059,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "multi"	
+			"type" : "checkbox"	
 		},
 		"Fridge - Ice" : {
 			"previous" : "Fridge - Water",
@@ -2135,8 +2150,7 @@
 
 			],
 			"category" : "aesthetics",
-			"type" : "multi slider",
-			"values" : [0,1,2]	
+			"type" : "checkbox"
 		},
 		"Fridge - Style" : {
 			"previous" : "Fridge - Ice",
@@ -2211,8 +2225,14 @@
 
 			],
 			"category" : "aesthetics",
-			"type" : "multi slider",
-			"values" : [0,1,2]	
+			"type" : "slider",
+			"options" : {       
+			    "from": 0,
+			    "to": 40,
+			    "step": 1,
+			    "dimension": " $",
+			    "scale": [0, "|", 10, "|", 20, "|" , 30, "|", 40]       
+			  }
 		},
 		"Fridge - Features" : {
 			"previous" : "Fridge - Style",
@@ -2304,8 +2324,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "multi slider",
-			"values" : [0,1,2]	
+			"type" : "checkbox"
 		},
 		"Fridge - Colour" : {
 			"previous" : "Fridge - Features",
@@ -2317,6 +2336,7 @@
 						{
 							"text" : "Stainless",
 							"value" : "Stainless",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
 							"scoring" : {
 								 "colour" : "stainless"
 							},
@@ -2325,6 +2345,7 @@
 						{
 							"text" : "White",
 							"value" : "White",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/WH-MT.png",
 							"scoring" : {
 								 "colour" : "white"
 							},
@@ -2333,6 +2354,7 @@
 						{
 							"text" : "Black",
 							"value" : "Black",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
 							"scoring" : {
 								 "colour" : "black"
 							},
@@ -2341,6 +2363,7 @@
 						{
 							"text" : "Stainless Black",
 							"value" : "Stainless Black",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
 							"scoring" : {
 								 "colour" : "stainless black"
 							},
@@ -2354,6 +2377,7 @@
 						{
 							"text" : "Stainless",
 							"value" : "Stainless",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
 							"scoring" : {
 								 "colour" : "stainless"
 							},
@@ -2362,6 +2386,7 @@
 						{
 							"text" : "White",
 							"value" : "White",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/WH-MT.png",
 							"scoring" : {
 								 "colour" : "white"
 							},
@@ -2370,6 +2395,7 @@
 						{
 							"text" : "Black",
 							"value" : "Black",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
 							"scoring" : {
 								 "colour" : "black"
 							},
@@ -2378,6 +2404,7 @@
 						{
 							"text" : "Stainless Black",
 							"value" : "Stainless Black",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
 							"scoring" : {
 								 "colour" : "stainless black"
 							},
@@ -2387,8 +2414,7 @@
 				}
 			],
 			"category" : "aesthetics",
-			"type" : "multi slider",
-			"values" : [0,1,2]	
+			"type" : "boxes-picture"
 		}
 	}
 }
