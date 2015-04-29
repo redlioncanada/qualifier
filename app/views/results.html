@@ -1,4 +1,4 @@
-<div ng-repeat="a in appliances | filter:{score : '!null'} | orderBy:'score'" style="width : 500px; clear: both">
+<div ng-repeat="a in appliances | filter:{score : '!null'} | orderBy:'score' | limitTo:3" style="width : 500px; clear: both">
 	<h1><span bo-text="a.name"></span> (<span bo-text="a.score"></span>)</h1>
 
 	<h2 bo-text="a.type"></h2>
