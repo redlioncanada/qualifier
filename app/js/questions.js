@@ -137,8 +137,8 @@ angular.module('App')
   		if (!!hasAnswer) {
   			$scope.controls.questionHasAnswer = true
   			$rootScope.scoringQuestions[$scope.question.name] = $scope.question;
+  			$rootScope.scoringQuestions[$scope.question.name].order = $rootScope.objSize($rootScope.scoringQuestions);
   			$scope.recalculateResults();
- 
 	  		if ("next" in $scope.question) {
 	  			var name = $scope.question.next
 	  			$scope.question = $scope.questions[$scope.question.next]

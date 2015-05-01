@@ -40,6 +40,9 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
+    $rootScope.objSize = function (obj) {
+      return Object.keys(obj).length;
+    }
     $resource("config/brand.json").get({}, function (res, headers) {
           $rootScope.brandData = res;
           $resource("config/appliances.json").get({}, function (res, headers) {
