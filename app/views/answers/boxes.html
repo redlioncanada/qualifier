@@ -1,6 +1,6 @@
 <!-- Box answers -->
 <div class="answers-main-content row">
-	<a href="" class="answer-option answer-box col-md-3" ng-repeat="answer in question.show.answers" ng-click="answer.answer=true">
+	<a href="" class="answer-option answer-box col-md-3" ng-repeat="answer in question.show.answers" ng-click="answer.answer=true" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div ng-bind="answer.text">Laundry</div>
 	</a>
 </div>

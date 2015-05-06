@@ -7,9 +7,11 @@ angular.module('App')
 
 	$scope.hasAnswer = function (question) {
 		if ('answers' in question.show) {
+			console.log(question.show.answers)
 			for (var a in question.show.answers) {
 				console.log(question.show.answers[a]);
 				if (question.show.answers[a].answer != null) {
+					console.log(question.show.answers[a].answer);
 					return question.show.answers[a];
 				}
 			}
@@ -132,9 +134,10 @@ angular.module('App')
   		var hasAnswer = $scope.hasAnswer($scope.question)
   		if (!hasAnswer) {
   			// apply class to all answers
-  			$scope.controls.questionHasAnswer = false
+  			$scope.controls.questionHasAnswer = false 
   		}
   		if (!!hasAnswer) {
+  			console.log($scope.question, "HAS ANSWER");
   			$scope.controls.questionHasAnswer = true
   			$rootScope.scoringQuestions[$scope.question.name] = $scope.question;
   			$rootScope.scoringQuestions[$scope.question.name].order = $rootScope.objSize($rootScope.scoringQuestions);
@@ -147,8 +150,8 @@ angular.module('App')
 	  			var name = hasAnswer.next
 	  			$scope.question = $scope.questions[hasAnswer.next]
 	  		}
-
-	  		if ($scope.question != null) {
+	  		console.log($scope.question);
+	  		if (!!$scope.question) {
 	  			$scope.question.name = name
 				$scope.show(); 	
 			} else {
