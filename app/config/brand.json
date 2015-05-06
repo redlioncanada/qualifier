@@ -14,6 +14,7 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
+					"type" : "boxes-picture",
 					"question" : "What are you looking for today?",
 					"answers" : [
 						{
@@ -78,8 +79,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes-picture"	
+			"category" : "aesthetics"	
 		},
 		"Cooking - Pre-Qualifier 1" : {
 			"previous" : "Appliance",
@@ -87,6 +87,7 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
+					"type" : "boxes-picture-carousel",
 					"question" : "If you're replacing a cook product or know what you're looking for, please choose one.",
 					"answers" : [
 						{
@@ -150,11 +151,14 @@
 					]
 				},
 				{
+					"type" : "boxes-picture",
 					"question" : "What product are you shopping for today?",
 					"answers" : [
 						{
 							"text" : "free stand range",
 							"value" : "free stand range",
+							"image" : "http://www.maytag.com/digitalassets/MGT8820DS/Standalone_1175X1290.jpg",
+							"thumbnail" : "http://www.maytag.com/digitalassets/MGT8820DS/Standalone_1175X1290.jpg",
 							"scoring" : {
 								"type" : "Ranges"
 							},
@@ -164,6 +168,8 @@
 						{
 							"text" : "wall oven",
 							"value" : "wall oven",
+							"image" : "http://www.maytag.com/digitalassets/MEW9627DS/Standalone_1175X1290.jpg",
+							"thumbnail" : "http://www.maytag.com/digitalassets/MEW9627DS/Standalone_1175X1290.jpg",
 							"scoring" : {
 								"type" : "Wall Ovens"
 							},
@@ -173,16 +179,18 @@
 						{
 							"text" : "cooktops",
 							"value" : "cooktops",
+							"images" : "http://www.maytag.com/digitalassets/MGC4436BDB/Standalone_1175X1290.jpg",
+							"thumbnail" : "http://www.maytag.com/digitalassets/MGC4436BDB/Standalone_1175X1290.jpg",
 							"scoring" : {
 								"type" : "Cooktops"
 							},
 							"next" : "Cooking - Cooktops - Size",	
-							"thumbnail" : "http://www.maytag.com/digitalassets/MGC4436BDB/Standalone_1175X1290.jpg",
 							"order" : 3
 						},
 						{
 							"text" : "Vent Hoods",
 							"value" : "hoods",
+							"images" : "http://www.maytag.com/digitalassets/UXT4030ADS/Standalone_1175X1290.jpg",
 							"thumbnail" : "http://www.maytag.com/digitalassets/UXT4030ADS/Standalone_1175X1290.jpg",
 							"scoring" : {
 								"type" : "Vents"
@@ -193,8 +201,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes-picture-carousel"
+			"category" : "aesthetics"
 		},
 		"Cooking - Wall Ovens - Size" : {
 			"next" : "Cooking - Wall Ovens - Cooking Style",
@@ -203,6 +210,7 @@
 			"thumbnail_type" : "text",
 			"text" : [
 				{
+					"type" : "boxes",
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
 					"answers" : [
 						{
@@ -278,6 +286,7 @@
 				},
 				{
 					"question" : "I want a wall oven that is:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"thumbnail" : "XL",
@@ -325,7 +334,6 @@
 				}							
 			],
 			"category" : "aesthetics",
-			"type" : "boxes",
 			"notes" : [
 				{
 					"title" : "note",
@@ -342,6 +350,7 @@
 			"text" : [
 				{
 					"question" : "What do you consider youself?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "baker",
@@ -382,6 +391,7 @@
 				},
 				{
 					"question" : "My friends would call me: (choose one)",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
@@ -421,8 +431,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Wall Ovens - Design Style" : {
 			"next" : "Cooking - Wall Ovens - Ranking",
@@ -432,6 +441,7 @@
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "reheat food",
@@ -465,6 +475,7 @@
 					]
 				},
 				{
+					"type" : "boxes",
 					"question" : "For dinner, you'll typically find me:",
 					"answers" : [
 						{
@@ -523,8 +534,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Wall Ovens - Ranking" : {
 			"next" : null,
@@ -534,6 +544,7 @@
 			"text" : [
 				{
 					"question" : "Rank what is most important to you (1-Most important to 4-Least important)",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Capacity",
@@ -576,6 +587,7 @@
 				},
 				{
 					"question" : "My ideal kitchen is (choose):",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Able to prepare large meals",
@@ -617,8 +629,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "rank"
+			"category" : "aesthetics"
 		},
 		"Cooking - Cooktops - Size" : {
 			"next" : "Cooking - Cooktops - Cooking Style",
@@ -628,6 +639,7 @@
 			"text" : [
 				{
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "24\"",
@@ -702,6 +714,7 @@
 				},
 				{
 					"question" : "I want a cooktop that is:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "24\"",
@@ -776,7 +789,6 @@
 				}							
 			],
 			"category" : "aesthetics",
-			"type" : "boxes",
 			"right_answers" : ["cooktops"],
 			"notes" : [
 				{
@@ -793,6 +805,7 @@
 			"text" : [
 				{
 					"question" : "Why do you cook?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
@@ -831,6 +844,7 @@
 				},
 				{
 					"question" : "If my cooking style was a pizza, it would be:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
@@ -869,8 +883,7 @@
 				}											
 			],
 			"category" : "aesthetics",
-			"order" : 1,
-			"type" : "boxes"
+			"order" : 1
 		},
 		"Cooking - Cooktops - Design Style" : {
 			"next" : "Cooking - Cooktops - Ranking",
@@ -880,6 +893,7 @@
 			"text" : [
 				{
 					"question" : "What's your style?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Modern",
@@ -909,6 +923,7 @@
 				},
 				{
 					"question" : "My friends would describe me as:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Modern (I always like to be on the cutting edge of design trends)",
@@ -938,8 +953,7 @@
 				}											
 			],
 			"category" : "aesthetics",
-			"order" : 2,
-			"type" : "boxes"
+			"order" : 2
 		},
 		"Cooking - Cooktops - Ranking" : {
 			"next" : "Cooking - Cooktops - Gas",
@@ -949,6 +963,7 @@
 			"text" : [
 				{
 					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "energy efficiency",
@@ -1001,6 +1016,7 @@
 				},
 				{
 					"question" : "My ideal kitchen is (choose):",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "energy efficiency",
@@ -1052,8 +1068,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "rank"
+			"category" : "aesthetics"
 		},
 		"Cooking - Cooktops - Gas" : {
 			"next" : null,
@@ -1063,6 +1078,7 @@
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "yes",
@@ -1083,6 +1099,7 @@
 				},
 				{
 					"question" : "Are you able to have gas in your kitchen?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "yes",
@@ -1102,8 +1119,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Ranges - Cooking Style" : {
 			"next" : "Cooking - Ranges - Design Style",
@@ -1113,6 +1129,7 @@
 			"text" : [
 				{
 					"question" : "Why do you cook?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
@@ -1151,6 +1168,7 @@
 				},
 				{
 					"question" : "If my cooking style was a pizza, it would be:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
@@ -1189,8 +1207,7 @@
 				}											
 			],
 			"category" : "aesthetics",
-			"order" : 1,
-			"type" : "boxes"
+			"order" : 1
 		},
 		"Cooking - Ranges - Design Style" : {
 			"next" : "Cooking - Ranges - Ranking",
@@ -1200,6 +1217,7 @@
 			"text" : [
 				{
 					"question" : "What's your style?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Modern",
@@ -1229,6 +1247,7 @@
 				},
 				{
 					"question" : "My friends would describe me as:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Modern (I always like to be on the cutting edge of design trends)",
@@ -1258,20 +1277,22 @@
 				}											
 			],
 			"category" : "aesthetics",
-			"order" : 2,
-			"type" : "boxes"
+			"order" : 2
 		},
 		"Cooking - Ranges - Ranking" : {
 			"next" : "Cooking - Ranges - Gas",
 			"previous" : "Cooking - Ranges - Design Style",
+			"thumbnail_text" : "Rank",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "energy efficiency",
 							"value" : "energy efficiency",
-
+							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1280,6 +1301,7 @@
 						{
 							"text" : "ease of cleaning",
 							"value" : "ease of cleaning",
+							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
 							"scoring" : {
 								"induction" : 1,
 								"electric" : 1
@@ -1289,6 +1311,7 @@
 						{
 							"text" : "precise temperature",
 							"value" : "precise temperature",
+							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
 							"scoring" : {
 								"induction" : 1,
 								"gas" : 1
@@ -1298,6 +1321,7 @@
 						{
 							"text" : "ease of use",
 							"value" : "ease of use",
+							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -1306,6 +1330,7 @@
 						{
 							"text" : "professional style cooking",
 							"value" : "professional style cooking",
+							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1315,6 +1340,7 @@
 				},
 				{
 					"question" : "My ideal kitchen is (choose):",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "energy efficiency",
@@ -1366,15 +1392,17 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "rank"
+			"category" : "aesthetics"
 		},
 		"Cooking - Ranges - Gas" : {
 			"next" : "Cooking - Ranges - Cooking Style 2",
 			"previous" : "Cooking - Ranges - Ranking",
+			"thumbnail_text" : "Gas",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "yes",
@@ -1395,6 +1423,7 @@
 				},
 				{
 					"question" : "Are you able to have gas in your kitchen?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "yes",
@@ -1414,15 +1443,17 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Ranges - Cooking Style 2" : {
 			"next" : "Cooking - Ranges - Design Style 2",
 			"previous" : "Cooking - Ranges - Gas",
+			"thumbnail_text" : "Style",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What do you consider youself?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "baker",
@@ -1463,6 +1494,7 @@
 				},
 				{
 					"question" : "My friends would call me: (choose one)",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
@@ -1502,15 +1534,17 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Ranges - Design Style 2" : {
 			"next" : "Cooking - Ranges - Ranking 2",
 			"previous" : "Cooking - Ranges - Cooking Style 2",
+			"thumbnail_text" : "Design",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "reheat food",
@@ -1545,6 +1579,7 @@
 				},
 				{
 					"question" : "For dinner, you'll typically find me:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Reheating leftovers",
@@ -1602,15 +1637,17 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"
+			"category" : "aesthetics"
 		},
 		"Cooking - Ranges - Ranking 2" : {
 			"next" : null,
 			"previous" : "Cooking - Ranges - Design Style 2",
+			"thumbnail_text" : "Rank",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Rank what is most important to you 1-Most important to 4-Least important",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Capacity",
@@ -1653,6 +1690,7 @@
 				},
 				{
 					"question" : "My ideal kitchen is (choose):",
+					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Able to prepare large meals",
@@ -1694,8 +1732,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "rank"
+			"category" : "aesthetics"
 		},
 
 		"Fridge - Purpose" : {
@@ -1704,6 +1741,7 @@
 			"text" : [
 				{
 					"question" : "My fridge…",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Keeps the drinks cold",
@@ -1752,6 +1790,7 @@
 				},
 				{
 					"question" : "I use my fridge to:",
+					"type" : "boxes",
 					"answers" : [
 						{
 							"text" : "Chill my drinks",
@@ -1799,8 +1838,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes"	
+			"category" : "aesthetics"	
 		},
 		"Fridge - Organization" : {
 			"previous" : "Fridge - Purpose",
@@ -1808,6 +1846,7 @@
 			"text" : [
 				{
 					"question" : "How do you keep your fridge?",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Perfectly organized",
@@ -1847,6 +1886,7 @@
 				},
 				{
 					"question" : "My friends consider me: (choose one)",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Very organized and always on time",
@@ -1885,8 +1925,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "radio"	
+			"category" : "aesthetics"	
 		},
 		"Fridge - Capacity" : {
 			"previous" : "Fridge - Organization",
@@ -1894,6 +1933,7 @@
 			"text" : [
 				{
 					"question" : "On a regular basis, my fridge feeds..",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Single",
@@ -1942,6 +1982,7 @@
 				},
 				{
 					"question" : "My fridge is full: (choose one)",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "All week, I grocery shop almost daily",
@@ -1990,8 +2031,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "radio"	
+			"category" : "aesthetics"	
 		},
 		"Fridge - Water" : {
 			"previous" : "Fridge - Capacity",
@@ -1999,6 +2039,7 @@
 			"text" : [
 				{
 					"question" : "I drink water from…",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "Bottles",
@@ -2041,6 +2082,7 @@
 				},
 				{
 					"question" : "You wake up in the middle of the night very thirsty, so you grab:",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "Bottle of water",
@@ -2082,8 +2124,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "checkbox"	
+			"category" : "aesthetics"
 		},
 		"Fridge - Ice" : {
 			"previous" : "Fridge - Water",
@@ -2091,6 +2132,7 @@
 			"text" : [
 				{
 					"question" : "I would like to use ice in…",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "Soft drinks",
@@ -2128,6 +2170,7 @@
 				},
 				{
 					"question" : "I use ice when…",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "I have a soft drink",
@@ -2173,8 +2216,7 @@
 				}
 
 			],
-			"category" : "aesthetics",
-			"type" : "checkbox"
+			"category" : "aesthetics"
 		},
 		"Fridge - Style" : {
 			"previous" : "Fridge - Ice",
@@ -2182,6 +2224,14 @@
 			"text" : [
 				{
 					"question" : "What's most important to you when choosing your appliances?",
+					"type" : "slider",
+					"options" : {       
+					    "from": 0,
+					    "to": 40,
+					    "step": 1,
+					    "dimension": " $",
+					    "scale": [0, "|", 10, "|", 20, "|" , 30, "|", 40]       
+					},
 					"answers" : [
 						{
 							"text" : "Form",
@@ -2203,6 +2253,14 @@
 				},
 				{
 					"question" : "I always choose form over function: (Choose one)",
+					"type" : "slider",
+					"options" : {       
+					    "from": 0,
+					    "to": 40,
+					    "step": 1,
+					    "dimension": " $",
+					    "scale": [0, "|", 10, "|", 20, "|" , 30, "|", 40]       
+					},
 					"answers" : [
 						{
 							"text" : "Always",
@@ -2248,15 +2306,7 @@
 				}
 
 			],
-			"category" : "aesthetics",
-			"type" : "slider",
-			"options" : {       
-			    "from": 0,
-			    "to": 40,
-			    "step": 1,
-			    "dimension": " $",
-			    "scale": [0, "|", 10, "|", 20, "|" , 30, "|", 40]       
-			  }
+			"category" : "aesthetics"
 		},
 		"Fridge - Features" : {
 			"previous" : "Fridge - Style",
@@ -2264,6 +2314,7 @@
 			"text" : [
 				{
 					"question" : "How do you shop for your groceries? (choose all that apply)",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "I go to the farmers' markets",
@@ -2306,6 +2357,7 @@
 				},
 				{
 					"question" : "When I grocery shop, I use: (choose all that apply)",
+					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "A small basket at the farmers' market",
@@ -2347,8 +2399,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "checkbox"
+			"category" : "aesthetics"
 		},
 		"Fridge - Colour" : {
 			"previous" : "Fridge - Features",
@@ -2356,6 +2407,7 @@
 			"text" : [
 				{
 					"question" : "What's your colour preference?",
+					"type" : "boxes-picture",
 					"answers" : [
 						{
 							"text" : "Stainless",
@@ -2397,6 +2449,7 @@
 				},
 				{
 					"question" : "Your dream fridge would be: (choose one with colour swatches)",
+					"type" : "boxes-picture",
 					"answers" : [
 						{
 							"text" : "Stainless",
@@ -2437,8 +2490,7 @@
 					]
 				}
 			],
-			"category" : "aesthetics",
-			"type" : "boxes-picture"
+			"category" : "aesthetics"
 		}
 	}
 }

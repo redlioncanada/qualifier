@@ -38,11 +38,27 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
   }]);
 
+App.filter('orderByOrder', function() {
+  return function(items) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      filtered[parseInt(item.order)] = item;
+    });
+    return filtered;
+  };
+});
+
+
+
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
     $rootScope.objSize = function (obj) {
       return Object.keys(obj).length;
     }
+    $rootScope.log = function (log) {
+      console.log(log);
+    }
+
     $resource("config/brand.json").get({}, function (res, headers) {
           $rootScope.brandData = res;
           $resource("config/appliances.json").get({}, function (res, headers) {
