@@ -7,11 +7,8 @@ angular.module('App')
 
 	$scope.hasAnswer = function (question) {
 		if ('answers' in question.show) {
-			console.log(question.show.answers)
 			for (var a in question.show.answers) {
-				console.log(question.show.answers[a]);
-				if (question.show.answers[a].answer != null) {
-					console.log(question.show.answers[a].answer);
+				if (!!question.show.answers[a].answer) {
 					return question.show.answers[a];
 				}
 			}
