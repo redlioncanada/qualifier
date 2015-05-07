@@ -97,14 +97,12 @@ angular.module('App')
 				}
 			}
 		}
-		console.log("CURRENT SCORE")
-		console.log($scope.currentScore);
+
 		for (var appliance in $rootScope.appliances) {
 			var a = $rootScope.appliances[appliance]
 			a.score = 0;
 			for (var score in $scope.currentScore) {
 				var s = $scope.currentScore[score]
-				//console.log("currentScore", a, score, a[score], s)
 				if (s == null || (typeof s == "string" && s != a[score])) {
 					a.score = null;
 					break;
@@ -116,7 +114,6 @@ angular.module('App')
 				$rootScope.currentCount = $rootScope.currentCount +1
 			}
 		}
-		console.log($rootScope.appliances)
 	}
 
 	$scope.show = function () {
@@ -137,7 +134,6 @@ angular.module('App')
   			$scope.controls.questionHasAnswer = false 
   		}
   		if (!!hasAnswer) {
-  			console.log($scope.question, "HAS ANSWER");
   			$scope.controls.questionHasAnswer = true
   			$rootScope.scoringQuestions[$scope.question.name] = $scope.question;
   			$rootScope.scoringQuestions[$scope.question.name].order = $rootScope.objSize($rootScope.scoringQuestions);
@@ -150,8 +146,8 @@ angular.module('App')
 	  			var name = hasAnswer.next
 	  			$scope.question = $scope.questions[hasAnswer.next]
 	  		}
-	  		console.log($scope.question);
 	  		if (!!$scope.question) {
+	  			$scope.controls.questionHasAnswer = false
 	  			$scope.question.name = name
 				$scope.show(); 	
 			} else {
