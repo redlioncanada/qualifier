@@ -1,6 +1,22 @@
 <!-- Rank the answers -->
-
 <!-- https://github.com/a5hik/ng-sortable -->
+<style>
+
+.answer {
+	border: solid 0px #ff0000;
+}
+
+.selected {
+	  border: solid 4px #ffff00;
+}
+
+.noanswer {
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+	border: solid 4px #ff0000;
+}
+</style>
 <div class="answers-main-content row" ng-controller="RankCtrl">
 	<ul data-as-sortable="sortable.dragControlListeners" data-ng-model="question.show.answers">
 		<li data-ng-repeat="item in question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
