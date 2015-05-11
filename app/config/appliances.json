@@ -1614,6 +1614,40 @@
         "topFreezer": false, 
         "type": "Bottom-Freezer", 
         "url": "http://www.maytag.com/-[MBF1953DEM]-1112069/MBF1953DEM/"
+    }, 
+    {
+        "appliance": "Laundry", 
+        "colours": [
+            "Black", 
+            "Stainless Steel", 
+            "White"
+        ], 
+        "description": "To tackle your dirtiest jobs, this front load washing machine features the PowerWash® cycle. With a combination of extra cleaning action, heated water and a thorough rinse, this large capacity washer helps remove even your toughest stains. Designed to take on your toughest loads with 4.2 cu. ft. capacity, this heavy duty washing machine is also built to last thanks to the Maytag® Commercial Technology we put under the hood. And we're so confident in the reliability of this front load washer that we back the direct drive motor and stainless steel wash basket with a 10-year limited parts warranty1.** Plus, you can take pride in buying a front load washing machine that's assembled right here in the U.S.A. in Clyde, Ohio.", 
+        "image": "/digitalassets/MHW3100DW/Standalone_1175X1290.jpg", 
+        "name": "MAXIMA FRONT LOAD WASHING MACHINE WITH LARGE CAPACITY AND POWERWASH CYCLE – 4.2 CU. FT.", 
+        "url": "http://www.maytag.com/laundry-1/laundry-appliances-2/laundry-pairs-3/-[MHW3100DW]-1112078/MHW3100DW/",
+        "type" : "combo",
+        "msrp" : 1698,
+        "model" : "MHW3100DW/YMED3100DW",
+        "capacity" : 4.8,
+        "powerwash" : true,
+        "directDrive" : true,
+        "speed" : 1200,
+        "wcycles" : 8,
+        "doption" : 4,
+        "heater" : "heater",
+        "wsteam" : false, 
+        "fanfresh" : false, 
+        "wcontrols" : "Capacitive Touch",
+        "vibration" : "Advanced Vibration Control",       
+        "capacity" : 7.3,
+        "dcycles" : 6,
+        "doption" : 4,
+        "dsteam" : false,
+        "baffles" : true,
+        "drum" : "Powder Coated",
+        "dcontrols" : "Capacitive Touch",  
+        "other" : ["Advanced Moisture Sensing"]
     }
 ]
 }

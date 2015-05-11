@@ -2,7 +2,7 @@
 	"brand" : "Maytag",
 	"apptext" :{
 		"apptitle" : "Maytag",
-		"appdescription" : "Whirlpool stuff is the best!!!",
+		"appdescription" : "Welcome to the Maytag Qualifier tool!",
 		"previous" : "Previous",
 		"next" : "Next",
 		"results" : "Results"
@@ -47,6 +47,7 @@
 							"image" : "http://www.specsserver.com/CACHE/FRUYUGVKJCPO.JPG?width=300&height=300",
 							"thumbnail" : "http://www.specsserver.com/CACHE/FRUYUGVKJCPO.JPG?width=300&height=300",							
 							"hover" : "http://static1.squarespace.com/static/524c5e0ae4b067caf1d06007/t/54bffd7be4b0726a780744c1/1421868412853/Maytag_Man_Washer.png?format=500w",
+							"next" : "Laundry - Size",
 							"scoring" : {
 								"appliance" : "Laundry"
 							},
@@ -2484,6 +2485,36 @@
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
 							"scoring" : {
 								 "colour" : "stainless black"
+							},
+							"order" : 1
+						}
+					]
+				}
+			],
+			"category" : "aesthetics"
+		},
+		"Laundry - Size" : {
+			"previous" : "Appliance",
+			"next" : null,
+			"text" : [
+				{
+					"question" : "How many people are in your household?",
+					"type" : "slider",
+					"answer" : 5,
+					"options" : {       
+					    "from": 1,
+					    "to": 6,
+					    "step": 1,
+					    "dimension": "",
+					    "scale": [1, 2, 3, 4, 5, 6]       
+					},
+					"answers" : [
+						{
+							"text" : "Stainless",
+							"value" : "Stainless",
+							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
+							"scoring" : {
+								 "colour" : "stainless"
 							},
 							"order" : 1
 						}
