@@ -41,6 +41,6 @@ div.people6 .jslider .jslider-value {
 }
 
 </style>
-<div class="answers-main-content row people{{question.show.answer}}" ng-controller="SliderCtrl" style="width: 50%; margin-left: 25%; clear: both; float: left">
-	<input ng-model="question.show.answer"  type="text" id="answerSlider" slider options="question.show.options" />
+<div class="answers-main-content row people{{question.show.answer_handle}}" ng-controller="SliderCtrl" style="width: 50%; margin-left: 25%; clear: both; float: left">
+	<input ng-model="question.show.answer_handle" ng-change="question.show.answer=question.show.answers[question.show.answer_handle]"  type="text" id="answerSlider" slider options="question.show.options" />
 </div>

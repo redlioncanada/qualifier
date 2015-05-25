@@ -38,7 +38,7 @@
 							"scoring" : {
 								"appliance" : "Fridge"
 							},
-							"next" : "Fridge - Purpose",
+							"next" : "Fridge - Size",
 							"order" : 2
 						},
 						{
@@ -1736,6 +1736,122 @@
 			"category" : "aesthetics"
 		},
 
+
+		"Fridge - Size" : {
+			"previous" : "Appliance",
+			"next" : null,
+			"thumbnail_type" : "text",
+			"text" : [
+				{
+					"question" : "Just tell us how much space you have to fill.",
+					"type" : "slider-multiple",
+					"slider_answer" : 33,
+					"options" : {       
+					    "from": 30,
+					    "to": 36,
+					    "step": 1,
+					    "dimension": " \"",
+					    "scale": [30, 31, 32, 33, 34, 35, 36]       
+					},
+					"answers" : {
+						"30" : {
+							"thumbnail" : "30\"",
+							"scoring" : {
+								 "width" : 30
+							}
+						},
+						"31" : {
+							"thumbnail" : "31\"",
+							"scoring" : {
+								 "width" : 31
+							}
+						},
+						"32" : {
+							"thumbnail" : "32\"",
+							"scoring" : {
+								 "width" : 32
+							}
+						},
+						"33" : {
+							"thumbnail" : "33\"",
+							"scoring" : {
+								 "width" : 33
+							}
+						},
+						"34" : {
+							"thumbnail" : "34\"",
+							"scoring" : {
+								 "width" : 34
+							}
+						},
+						"35" : {
+							"thumbnail" : "35\"",
+							"scoring" : {
+								 "width" : 35
+							}
+						},
+						"36" : {
+							"thumbnail" : "36\"",
+							"scoring" : {
+								 "width" : 36
+							}
+						}
+					}
+				},
+				{
+					"question" : "",
+					"type" : "slider-multiple",
+					"slider_answer" : 68,
+					"options" : {       
+					    "from": 66,
+					    "to": 71,
+					    "step": 1,
+					    "dimension": " \"",
+					    "scale": [66, 67, 68, 69, 70, 71]       
+					},
+					"answers" : {
+						"66" : {
+							"thumbnail" : "66\"",
+							"scoring" : {
+								 "width" : 66
+							}
+						},
+						"67" : {
+							"thumbnail" : "67\"",
+							"scoring" : {
+								 "width" : 67
+							}
+						},
+						"68" : {
+							"thumbnail" : "68\"",
+							"scoring" : {
+								 "width" : 68
+							}
+						},
+						"69" : {
+							"thumbnail" : "69\"",
+							"scoring" : {
+								 "width" : 69
+							}
+						},
+						"70" : {
+							"thumbnail" : "70\"",
+							"scoring" : {
+								 "width" : 70
+							}
+						},
+						"71" : {
+							"thumbnail" : "71\"",
+							"scoring" : {
+								 "width" : 71
+							}
+						}						
+					}
+				}				
+			],
+			"category" : "aesthetics"
+		},
+
 		"Fridge - Purpose" : {
 			"previous" : "Appliance",
 			"next" : "Fridge - Organization",
@@ -2499,8 +2615,8 @@
 			"text" : [
 				{
 					"question" : "How many people are in your household?",
+					"answer_handle" : 5,
 					"type" : "slider",
-					"answer" : 5,
 					"options" : {       
 					    "from": 1,
 					    "to": 6,
@@ -2508,17 +2624,42 @@
 					    "dimension": "",
 					    "scale": [1, 2, 3, 4, 5, 6]       
 					},
-					"answers" : [
-						{
-							"text" : "Stainless",
-							"value" : "Stainless",
-							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
+					"answers" : {
+						"1" : {
+							"thumbnail" : "",
 							"scoring" : {
-								 "colour" : "stainless"
+							}
+						},
+						"2" : {
+							"thumbnail" : "",
+							"scoring" : {
+							}
+						},	
+						"3" : {
+							"thumbnail" : "",
+							"scoring" : {
 							},
 							"order" : 1
-						}
-					]
+						},
+						"4" : {
+							"thumbnail" : "",
+							"scoring" : {
+							},
+							"order" : 1
+						},
+						"5" : {
+							"thumbnail" : "",
+							"scoring" : {
+							},
+							"order" : 1
+						},
+						"6" : {
+							"thumbnail" : "",
+							"scoring" : {
+							},
+							"order" : 1
+						}					
+					}
 				}
 			],
 			"category" : "aesthetics"
