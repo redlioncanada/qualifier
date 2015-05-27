@@ -25,7 +25,7 @@ angular.module('App')
 
 	$scope.recalculateResults = function () {
 		$rootScope.currentCount = 0;
-		$scope.currentScore = {	
+		$rootScope.currentScore = {	
   			"type" : false,
   			"size" : false,
   			"width" : false,
@@ -81,13 +81,12 @@ angular.module('App')
 						for (var scores in a.scoring) {
 							var s = a.scoring[scores]
 							// scores is type, s is 'range'
-							console.log(s, (s == null),  (typeof s == "string"), (!isNaN(s) && $scope.currentScore[scores] != null))
 							if (s == null) {
-								$scope.currentScore[scores] = null
+								$rootScope.currentScore[scores] = null
 							} else if (typeof s == "string") {
-								$scope.currentScore[scores] = s
-							} else if (!isNaN(s) && $scope.currentScore[scores] != null) {
-								$scope.currentScore[scores] = $scope.currentScore[scores] + s
+								$rootScope.currentScore[scores] = s
+							} else if (!isNaN(s) && $rootScope.currentScore[scores] != null) {
+								$rootScope.currentScore[scores] = $rootScope.currentScore[scores] + s
 							}
 						}
 					}
@@ -98,8 +97,8 @@ angular.module('App')
 		for (var appliance in $rootScope.appliances) {
 			var a = $rootScope.appliances[appliance]
 			a.score = 0;
-			for (var score in $scope.currentScore) {
-				var s = $scope.currentScore[score]
+			for (var score in $rootScope.currentScore) {
+				var s = $rootScope.currentScore[score]
 				if (s == null || (typeof s == "string" && s != a[score])) {
 					a.score = null;
 					break;
@@ -137,7 +136,11 @@ angular.module('App')
   			$scope.recalculateResults();
 	  		if ("next" in $scope.question) {
 	  			var name = $scope.question.next
-	  			$scope.question = $scope.questions[$scope.question.next]
+	  			if (!!name) {
+	  				$scope.question = $scope.questions[$scope.question.next]
+	  			} else {
+	  				$scope.question = null;
+	  			}
 	  		}
 	  		else if ("next" in hasAnswer) {
 	  			var name = hasAnswer.next
@@ -148,7 +151,7 @@ angular.module('App')
 	  			$scope.question.name = name
 				$scope.show(); 	
 			} else {
-				$state.go('main.results');
+				$state.go('main.results')
 			}
   		} 
   	}
