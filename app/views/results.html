@@ -1,36 +1,42 @@
-<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!!currentScore">
-	<div ng-repeat="a in appliances | filter:{score : '!null'} | orderBy:'score' | limitTo:3" style="width : 30%; clear: none; float: left">
-		<h1><span bo-text="a.name"></span> (<span bo-text="a.score"></span>)</h1>
+<div ng-controller="ResultsCtrl"> <!--   -->
+	<div class="answers-main-content row" style="width: 50%; margin-left: 25%; clear: both; float: left">
+		<input ng-model="price" type="text" id="answerSlider" slider options="resultsOptions" />
+	</div>
 
-		<h2 bo-text="a.type"></h2>
-		<p bo-text="a.description"></p>
-		<div style="float: left; clear: right; width: 250px">
-			<img src="http://maytag.com{{a.image}}" style="width: 220px">
-		</div>
-		<div style="float: left; clear: right; width: 250px">
-			<h2>Features</h2>
-			<ul>
-				<li ng-if="!!a.induction">Induction</li>
-				<li ng-if="!!a.gas">Gas</li>
-				<li ng-if="!!a.electric">Electric</li>
-				<li ng-if="!!a.convection">Convection</li>
-				<li ng-if="!!a.trueConvection">True Convection</li>
-				<li ng-if="!!a.single">Single</li>
-				<li ng-if="!!a.double">Double</li>
-				<li ng-if="!!a.combination">Combination</li>
-				<li ng-if="!!a.capacity">Capacity</li>
-				<li ng-if="!!a.aquaLift">Aqua Lift</li>
-			</ul>
-			<h2>Specifications</h2>
-			<ul>
-				<li>Width: <span bo-text="a.width"></span>"</li>
-			</ul>
+	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!!currentCount">
+		<div ng-repeat="a in appliances | filter:{score : '!null'} | orderBy:'score' | limitTo:3" style="width : 30%; clear: none; float: left">
+			<h1><span bo-text="a.name"></span> (<span bo-text="a.score"></span>)</h1>
+
+			<h2 bo-text="a.type"></h2>
+			<p bo-text="a.description"></p>
+			<div style="float: left; clear: right; width: 250px">
+				<img ng-src="http://maytag.com{{a.image}}" style="width: 220px">
+			</div>
+			<div style="float: left; clear: right; width: 250px">
+				<h2>Features</h2>
+				<ul>
+					<li ng-if="!!a.induction">Induction</li>
+					<li ng-if="!!a.gas">Gas</li>
+					<li ng-if="!!a.electric">Electric</li>
+					<li ng-if="!!a.convection">Convection</li>
+					<li ng-if="!!a.trueConvection">True Convection</li>
+					<li ng-if="!!a.single">Single</li>
+					<li ng-if="!!a.double">Double</li>
+					<li ng-if="!!a.combination">Combination</li>
+					<li ng-if="!!a.capacity">Capacity</li>
+					<li ng-if="!!a.aquaLift">Aqua Lift</li>
+				</ul>
+				<h2>Specifications</h2>
+				<ul>
+					<li>Width: <span bo-text="a.width"></span>"</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!!currentScore">
-	<h1>
-		No results!
-	</h1>
+	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!currentCount">
+		<h1>
+			No results!
+		</h1>
+	</div>
 </div>
