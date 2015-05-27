@@ -2612,10 +2612,12 @@
 		"Laundry - Size" : {
 			"previous" : "Appliance",
 			"next" : null,
+			"thumbnail_text" : "Size",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How many people are in your household?",
-					"answer_handle" : 5,
+					"answer" : 5,
 					"type" : "slider",
 					"options" : {       
 					    "from": 1,
@@ -2624,42 +2626,44 @@
 					    "dimension": "",
 					    "scale": [1, 2, 3, 4, 5, 6]       
 					},
-					"answers" : {
-						"1" : {
-							"thumbnail" : "",
+					"answers" : [
+						{
+							"value" : 1,
+							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
 							"scoring" : {
 							}
 						},
-						"2" : {
-							"thumbnail" : "",
+						{
+							"value" : 2,
+							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
 							"scoring" : {
 							}
 						},	
-						"3" : {
-							"thumbnail" : "",
+						{
+							"value" : 3,
+							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png",
 							"scoring" : {
-							},
-							"order" : 1
+							}
 						},
-						"4" : {
-							"thumbnail" : "",
+						{
+							"value" : 4,
+							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
 							"scoring" : {
-							},
-							"order" : 1
+							}
 						},
-						"5" : {
-							"thumbnail" : "",
+						{
+							"value" : 5,
+							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
 							"scoring" : {
-							},
-							"order" : 1
+							}
 						},
-						"6" : {
-							"thumbnail" : "",
+						{
+							"value" : 6,
+							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
 							"scoring" : {
-							},
-							"order" : 1
+							}
 						}					
-					}
+					]
 				}
 			],
 			"category" : "aesthetics"
