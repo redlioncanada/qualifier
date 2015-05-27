@@ -19,7 +19,7 @@ Question:
 	</div>
 
 
-	<div class="row" ng-include="'views/answers/'+question.show.type+'.html'">
+	<div ng-if="!!question.show.type" class="row" ng-include="'views/answers/'+question.show.type+'.html'">
 	</div>
 
 
