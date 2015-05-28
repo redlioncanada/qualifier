@@ -112,6 +112,10 @@ angular.module('App')
 		}
 	}
 
+	$rootScope.rcResults = function () {
+		$scope.recalculateResults()
+	}
+
 	$scope.show = function () {
 	  	if ($scope.question.text.length > 1) {
 			var ref = Math.floor((Math.random() * $scope.question.text.length))			

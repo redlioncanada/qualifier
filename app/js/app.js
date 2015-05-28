@@ -48,6 +48,19 @@ App.filter('orderByOrder', function() {
   };
 });
 
+App.filter('byPrice', function() {
+  return function(items, price) {
+    var filtered = [];
+    var range = price.split(";")
+    angular.forEach(items, function(appliance) {
+        var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
+        if (p > range[0] && p < range[1]) {
+          filtered.push(appliance)
+        }
+    });
+    return filtered;
+  };
+});
 
 
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
