@@ -1,11 +1,15 @@
+// App structure
 
-@import "brands/fonts";
-@import "brands/palette";
+@import "normalize";
 
+// Bootstrap Sass
 @import "bootstrap/bootstrap";
 
-@import "setup/mixins";
-@import "setup/general";
 
-@import "partials/header";
-@import "partials/footer";
+@import "mixins";
+
+// Main screen and general styles across screens
+@import "structure/app-main";
+
+// Specific screens
+

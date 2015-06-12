@@ -1,0 +1,125 @@
+#main {
+	background: white;
+}
+
+.app-content-main-top {
+	h2, h3 {
+		font-family: $AG-Bold-Cnd;
+	}
+	h2 {
+		color: #000000;
+	}
+	h3 {
+		opacity: 0.80; // shouldn't this simply be a grey color? ...
+		// color: #797979;
+	}
+	.app-content-main-top-left {
+
+	}
+	.app-content-main-top-right {
+		.btn {
+			font-family: $AG-Bold-Cnd;
+			font-size: 21px;
+			// Bootstrap mixin
+			@include button-variant(#ffffff, #002e58, #002e58);
+			padding: 3px 18px;
+		}
+	}
+}
+
+
+
+.app-categories {
+	.category {
+		margin-left: 10px;
+		margin-right: 10px;
+		&:hover {
+			text-decoration: none;
+			// fade in / out
+			img.reg {
+				display: none;
+			}
+			img.hover {
+				display: block;
+			}
+		}
+		// Category examples
+		&.laundry {
+			// margin-left: 0;
+			img {
+				width: 250px;
+				// height: 293px;
+			}
+		}
+		&.cooking {
+			img {
+				width: 250px;
+				// height: 315px;
+			}
+		}
+		&.fridge {
+			img {
+				width: 275px;
+				// height: 315px;
+			}
+		}
+		&.dishwasher {
+			// margin-right: 0;
+			img {
+				width: 175px;
+				// height: 315px;
+			}
+		}
+
+		// Subcategory examples
+		&.ranges {
+			img {
+				width: 250px;
+			}
+		}
+		&.cooktops {
+			img {
+				width: 200px;
+			}
+		}
+		&.wallovens {
+			img {
+				width: 200px;
+			}
+		}
+		&.venthoods {
+			img {
+				width: 200px;
+			}
+		}
+		.category-name {
+			margin-top: 25px;
+			display: block;
+			color: #000000;
+			font-size: 19px;
+			text-align: center;
+
+			font-family: $AG-Bold-Cnd;
+		}
+	}
+}
+
+.app-content-main-bottom {
+	.btn-next, .btn-prev {
+		&:hover {
+			.btn {
+				background-color: #002e58;
+			}
+		}
+	}
+	.btn {
+		font-family: $AG-Bold-Cnd;
+		font-size: 21px;
+		// Bootstrap mixin
+		@include button-variant(#ffffff, #7d7d7d, #7d7d7d);
+		padding: 3px 18px;
+	}
+	.btn-text {
+		color: #7d7d7d;
+	}
+}

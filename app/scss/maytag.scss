@@ -1,0 +1,13 @@
+// Maytag Theme
+
+// Core Bootstrap variables and mixins
+// @import "bootstrap/bootstrap/variables";
+@import "bootstrap/bootstrap/mixins";
+
+@import "brands/maytag/palette-mt";
+@import "brands/maytag/fonts-mt";
+
+@import "brands/maytag/header-mt";
+@import "brands/maytag/footer-mt";
+
+@import "brands/maytag/app-main-mt";

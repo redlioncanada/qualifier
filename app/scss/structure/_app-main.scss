@@ -1,0 +1,82 @@
+.main-content {
+	// @extend .row;
+	max-width: 1160px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	.content-inner {
+		width: 100%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+}
+
+.app-content-main-top {
+	@include make-row;
+	margin-bottom: 25px;
+	.app-content-main-top-left {
+		@include make-md-column(8);
+	}
+	.app-content-main-top-right {
+		@include make-md-column(4);
+		text-align: right;
+		.btn {
+			padding: 3px 18px;
+		}
+	}
+	// Question
+	h2 {
+		text-transform: uppercase;
+		font-size: 36px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	// Instructions
+	h3 {
+		text-transform: uppercase;
+		font-size: 23px;
+		margin-top: 0px;
+	}
+}
+
+.app-categories {
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin-bottom: 25px;
+	.category {
+		display: inline-block;
+		&:hover {
+			// Appliance img
+			img {
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+.app-content-main-bottom {
+	@include make-row;
+	margin-bottom: 25px;
+	.app-content-main-bottom-left {
+		@include make-md-column(6);
+	}
+	.app-content-main-bottom-right {
+		@include make-md-column(6);
+		text-align: right;
+		
+	}
+	.btn-next, .btn-prev {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.btn {
+		padding: 3px 18px;
+	}
+	.btn-text {
+		text-transform: uppercase;
+		font-size: 9px;
+		margin-top: 5px;
+	}
+}

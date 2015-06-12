@@ -28,8 +28,9 @@
     "angular-local-storage": "~0.1.5",
     "angular-bootstrap": "~0.12.1",
     "bootstrap-sass": "~3.3.3",
-    "ng-slider": "~2.2.3",
-    "ng-sortable": "~1.2.0"
+    "ng-sortable": "~1.2.0",
+    "underscore": "~1.8.3",
+    "ngSlider": "~1.0.0"
   },
   "devDependencies": {},
   "directory": "app/components",
