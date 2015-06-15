@@ -1,0 +1,26 @@
+Question:
+<div>
+	<div class="row">
+		<div class="col-md-2">
+			<button class="btn btn-default" type="button" ng-click="previous()">
+				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+				<span bo-text="brandData.apptext.previous"></span>
+			</button>
+		</div>
+		<div class="col-md-2" ng-bind="question.show.question">
+
+		</div>
+		<div class="col-md-2">
+			<button class="btn btn-default" type="button" ng-click="next()">
+				<span bo-text="brandData.apptext.next"></span>
+				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+			</button>
+		</div>
+	</div>
+
+
+	<div class="row" ng-include="'views/answers/'+question.type+'.html'">
+	</div>
+
+
+</div>

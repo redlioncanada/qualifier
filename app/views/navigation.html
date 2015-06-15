@@ -1,4 +1,14 @@
-<div class="row" ng-controller="NavigationCtrl" class="clear: both">
+<div class="row" ng-controller="NavigationCtrl" class="clear: both" class="app-content-main-bottom">
+
+	<div class="app-content-main-bottom-left">
+		<a href="#" class="btn-prev" ng-click="previous()" id="previous">
+			<div class="btn btn-default">
+				<span class="arrow-prev">Arrow</span>
+			</div>
+			<div class="btn-text" bo-text="brandData.apptext.previous"></div>
+		</a>
+	</div>
+
   <div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="col-xs-1" ng-if="byName(q)">
       <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1" class="thumbnail" ng-click="questionsData.question=q;navToQuestions()">
 
@@ -8,5 +18,14 @@
       	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
       </a>      
   </div>
-</div>
 
+	<div class="app-content-main-bottom-right">
+		<a href="#" class="btn-next" ng-click="next()" id="next">
+			<div class="btn btn-default">
+				<span class="arrow-prev">Arrow</span>
+			</div>
+			<div class="btn-text" bo-text="brandData.apptext.next"></div>
+		</button>
+	</div>
+
+</div>

@@ -10,6 +10,11 @@ var sass        = require('gulp-sass');
 var jasmine     = require('gulp-jasmine');
 // var jshint 		= require('gulp-jshint');
 
+
+var imagemin = require('gulp-imagemin');
+// var notify = require('gulp-notify');
+var cache = require('gulp-cache');
+
 // Static server
 gulp.task('browser-sync', function() {
     browserSync({
@@ -102,15 +107,23 @@ gulp.task('views', function() {
     .pipe(gulp.dest('build/views/'));
 });
 
+
+gulp.task('images', function() {
+  return gulp.src('app/img/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('build/img'));
+    // .pipe(notify({ message: 'Images task complete' }));
+});
+
 // use default task to launch BrowserSync and watch JS files
-gulp.task('default', ['sass', 'js', 'components', 'config', 'browser-sync', 'views'], function () {
+gulp.task('default', ['sass', 'js', 'images', 'components', 'config', 'browser-sync', 'views'], function () {
 	
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
 
-    // gulp.watch('app/scss/*.scss', ['sass', browserSync.reload]);
-    // gulp.watch('app/index.html', 'app/views/**/*.html', ['views', browserSync.reload]);
-    // gulp.watch('app/js/*.js', ['js', browserSync.reload]);
+    gulp.watch('app/scss/**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch('app/views/**/*.html', ['views', browserSync.reload]);
+    gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 
 });
 

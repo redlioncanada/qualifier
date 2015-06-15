@@ -121,7 +121,7 @@ angular.module('App')
 
 	$scope.controls = {}
 	$scope.controls.questionHasAnswer = true
-  	$scope.next = function () {
+  	$rootScope.next = function () {
   		// Make sure there is an answer
   		var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
   		if (!hasAnswer) {
@@ -163,7 +163,7 @@ angular.module('App')
 			}
   		} 
   	}
-   	$scope.previous = function () {
+   	$rootScope.previous = function () {
   		if ("previous" in $rootScope.questionsData.question) {
 	  		$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.previous]
 	  	}
