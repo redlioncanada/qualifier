@@ -29,7 +29,8 @@
     "angular-bootstrap": "~0.12.1",
     "bootstrap-sass": "~3.3.3",
     "ng-slider": "~2.2.3",
-    "ng-sortable": "~1.2.0"
+    "ng-sortable": "~1.2.0",
+    "protractor": "~2.1.0"
   },
   "devDependencies": {},
   "directory": "app/components",

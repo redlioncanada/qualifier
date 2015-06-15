@@ -2,8 +2,9 @@
 
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state) {
-  	$rootScope.scoringQuestions = {};
-  	$rootScope.currentCount = null;
+  	$rootScope.questionsData = {}
+  	$rootScope.questionsData.scoringQuestions = {};
+  	$rootScope.questionsData.currentCount = null;
 
 	$scope.hasAnswer = function (question) {
 		if ('answers' in question.show) {
@@ -16,16 +17,9 @@ angular.module('App')
 		return false;
 	}
 
-	
-
-	$scope.getPartial = function (partial) {
-		console.log('answers/'+partial+'.html');
-      return 'answers/'+partial+'.html'
-  }
-
 	$scope.recalculateResults = function () {
-		$rootScope.currentCount = 0;
-		$rootScope.currentScore = {	
+		$rootScope.questionsData.currentCount = 0;
+		$rootScope.questionsData.currentScore = {	
   			"type" : false,
   			"size" : false,
   			"width" : false,
@@ -70,8 +64,8 @@ angular.module('App')
 			"steam" : 0 ,
 			"powerWash" : 0 			
 		}
-		for (var question in $rootScope.scoringQuestions) {
-			var q = $rootScope.scoringQuestions[question]
+		for (var question in $rootScope.questionsData.scoringQuestions) {
+			var q = $rootScope.questionsData.scoringQuestions[question]
 			for (var answers in q.show.answers) {
 				var a = q.show.answers[answers]
 				// If answer isn't null, use it for scoring
@@ -82,11 +76,11 @@ angular.module('App')
 							var s = a.scoring[scores]
 							// scores is type, s is 'range'
 							if (s == null) {
-								$rootScope.currentScore[scores] = null
+								$rootScope.questionsData.currentScore[scores] = null
 							} else if (typeof s == "string") {
-								$rootScope.currentScore[scores] = s
-							} else if (!isNaN(s) && $rootScope.currentScore[scores] != null) {
-								$rootScope.currentScore[scores] = $rootScope.currentScore[scores] + s
+								$rootScope.questionsData.currentScore[scores] = s
+							} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
+								$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 							}
 						}
 					}
@@ -97,8 +91,8 @@ angular.module('App')
 		for (var appliance in $rootScope.appliances) {
 			var a = $rootScope.appliances[appliance]
 			a.score = 0;
-			for (var score in $rootScope.currentScore) {
-				var s = $rootScope.currentScore[score]
+			for (var score in $rootScope.questionsData.currentScore) {
+				var s = $rootScope.questionsData.currentScore[score]
 				if (s == null || (typeof s == "string" && s != a[score])) {
 					a.score = null;
 					break;
@@ -107,7 +101,7 @@ angular.module('App')
 				}
 			}
 			if (a.score != null) {
-				$rootScope.currentCount = $rootScope.currentCount +1
+				$rootScope.questionsData.currentCount++
 			}
 		}
 	}
@@ -117,42 +111,52 @@ angular.module('App')
 	}
 
 	$scope.show = function () {
-	  	if ($scope.question.text.length > 1) {
-			var ref = Math.floor((Math.random() * $scope.question.text.length))			
+	  	if ($rootScope.questionsData.question.text.length > 1) {
+			var ref = Math.floor((Math.random() * $rootScope.questionsData.question.text.length))			
 		} else {
 			var ref = 0;
 		}
-		$scope.question.show = $scope.question.text[ref];	 
+		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	 
 	}
+
 	$scope.controls = {}
 	$scope.controls.questionHasAnswer = true
   	$scope.next = function () {
   		// Make sure there is an answer
-  		var hasAnswer = $scope.hasAnswer($scope.question)
+  		var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
   		if (!hasAnswer) {
   			// apply class to all answers
   			$scope.controls.questionHasAnswer = false 
   		}
   		if (!!hasAnswer) {
   			$scope.controls.questionHasAnswer = true
-  			$rootScope.scoringQuestions[$scope.question.name] = $scope.question;
-  			$rootScope.scoringQuestions[$scope.question.name].order = $rootScope.objSize($rootScope.scoringQuestions);
+  			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
+	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
+	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
+  			} else {
+  				var nextOrder = $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order + 1
+  				// Check if it is the same path or not
+  				var next = $filter('filter')($rootScope.questionsData.scoringQuestions, function (item) {
+  					return item.order == nextOrder
+  				})
+  			}
+
   			$scope.recalculateResults();
-	  		if ("next" in $scope.question) {
-	  			var name = $scope.question.next
+	  		if ("next" in $rootScope.questionsData.question) {
+	  			var name = $rootScope.questionsData.question.next
 	  			if (!!name) {
-	  				$scope.question = $scope.questions[$scope.question.next]
+	  				$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.next]
 	  			} else {
-	  				$scope.question = null;
+	  				$rootScope.questionsData.question = null;
 	  			}
 	  		}
 	  		else if ("next" in hasAnswer) {
 	  			var name = hasAnswer.next
-	  			$scope.question = $scope.questions[hasAnswer.next]
+	  			$rootScope.questionsData.question = $rootScope.questionsData.questions[hasAnswer.next]
 	  		}
-	  		if (!!$scope.question) {
+	  		if (!!$rootScope.questionsData.question) {
 	  			$scope.controls.questionHasAnswer = false
-	  			$scope.question.name = name
+	  			$rootScope.questionsData.question.name = name
 				$scope.show(); 	
 			} else {
 				$state.go('main.results')
@@ -160,14 +164,15 @@ angular.module('App')
   		} 
   	}
    	$scope.previous = function () {
-  		if ("previous" in $scope.question) {
-	  		$scope.question = $scope.questions[$scope.question.previous]
+  		if ("previous" in $rootScope.questionsData.question) {
+	  		$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.previous]
 	  	}
   	}
   	//set questions to head
-  	$scope.questions = $rootScope.brandData.questions
-  	$scope.question = $scope.questions["Appliance"]
-  	$scope.question.name = "Appliance"
+  	$rootScope.questionsData.questions = $rootScope.brandData.questions
+  	console.log($rootScope.questionsData.questions)
+  	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
+  	$rootScope.questionsData.question.name = "Appliance"
   	$scope.show();
 
 });

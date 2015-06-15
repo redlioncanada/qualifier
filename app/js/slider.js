@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('App')
-  .controller('SliderCtrl', function ($scope) {
+  .controller('SliderCtrl', function ($scope, $rootScope) {
   	// jslider-value
   	$scope.setAnswer = function () {
-  		for (var i in $scope.question.show.answers) {
-  			if ($scope.question.show.answers[i].value == $scope.question.show.answer) {
-  				$scope.question.show.answers[i].answer = true
+  		for (var i in $rootScope.questionsData.show.answers) {
+  			if ($rootScope.questionsData.question.show.answers[i].value == $rootScope.questionsData.question.show.answer) {
+  				$rootScope.questionsData.question.show.answers[i].answer = true
   			} else {
-  				$scope.question.show.answers[i].answer = false
+  				$rootScope.questionsData.question.show.answers[i].answer = false
   			}
   		}
   	}

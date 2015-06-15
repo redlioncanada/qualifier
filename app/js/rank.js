@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('App')
-  .controller('RankCtrl', function ($scope) {
+  .controller('RankCtrl', function ($scope, $rootScope) {
 	$scope.sortable = {}
 	$scope.sortable.dragControlListeners = {
     	orderChanged: function(event) {
-    		for (var i in $scope.question.show.answers) {
-    			$scope.question.show.answers[i].answer = i
+    		for (var i in $rootScope.questionsData.question.show.answers) {
+    			$rootScope.questionsData.question.show.answers[i].answer = i
     		}
     	},
 	    containment: '.answers-main-content'

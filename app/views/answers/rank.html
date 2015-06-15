@@ -18,8 +18,8 @@
 }
 </style>
 <div class="answers-main-content row" ng-controller="RankCtrl">
-	<ul data-as-sortable="sortable.dragControlListeners" data-ng-model="question.show.answers">
-		<li data-ng-repeat="item in question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
+	<ul data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers">
+		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
 			<div data-as-sortable-item-handle>
 				<span ng-bind="$index+1"></span><span ng-bind="item.text"></span>
 			</div>

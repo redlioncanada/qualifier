@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('NavigationCtrl', function ($scope) {
+  .controller('NavigationCtrl', function ($scope, $state) {
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
@@ -9,7 +9,18 @@ angular.module('App')
 	  		} 
 	  		return a.thumbnail_type
 	  	}
+  	} 
+
+  	$scope.navToQuestions = function () {
+  		$state.go('main.questions')
   	}
+
+  	$scope.byName = function(q) {
+  		if (!!q) {
+	    	return 'name' in q
+		}
+		return false
+	};
 
   	$scope.setAnswer = function (q) {
   		if (!!q) {

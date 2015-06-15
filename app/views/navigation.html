@@ -1,6 +1,6 @@
 <div class="row" ng-controller="NavigationCtrl" class="clear: both">
-  <div ng-repeat="q in scoringQuestions | orderByOrder" class="col-xs-1">
-      <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a);log(a)" class="col-xs-1" href="#" class="thumbnail">
+  <div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="col-xs-1" ng-if="byName(q)">
+      <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1" class="thumbnail" ng-click="questionsData.question=q;navToQuestions()">
 
       	<img ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 30px" />
       	<span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span>

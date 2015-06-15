@@ -3,8 +3,8 @@
 		<input ng-model="price" type="text" id="answerSlider" slider options="resultsOptions" />
 	</div>
 
-	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!!currentCount">
-		<div ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3" style="width : 30%; clear: none; float: left">
+	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!!questionsData.currentCount">
+		<div ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3" style="width : 30%; clear: none; float: left" class="result">
 			<h1><span bo-text="a.name"></span> (<span bo-text="a.score"></span>)</h1>
 
 			<h2 bo-text="a.type"></h2>
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 
-	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!currentCount">
+	<div class="clear:both; float: left: width: 100%; margin: 50px" ng-if="!questionsData.currentCount">
 		<h1>
 			No results!
 		</h1>

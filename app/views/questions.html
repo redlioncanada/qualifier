@@ -2,16 +2,16 @@ Question:
 <div>
 	<div class="row">
 		<div class="col-md-2">
-			<button class="btn btn-default" type="button" ng-click="previous()">
+			<button class="btn btn-default" type="button" ng-click="previous()" id="previous">
 				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
 				<span bo-text="brandData.apptext.previous"></span>
 			</button>
 		</div>
-		<div class="col-md-2" ng-bind="question.show.question">
+		<div class="col-md-2" ng-bind="questionsData.question.show.question" id="questionText">
 
 		</div>
 		<div class="col-md-2">
-			<button class="btn btn-default" type="button" ng-click="next()">
+			<button class="btn btn-default" type="button" ng-click="next()" id="next">
 				<span bo-text="brandData.apptext.next"></span>
 				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
 			</button>
@@ -19,7 +19,7 @@ Question:
 	</div>
 
 
-	<div ng-if="!!question.show.type" class="row" ng-include="'views/answers/'+question.show.type+'.html'">
+	<div ng-if="!!questionsData.question.show.type" class="row" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
 	</div>
 
 
