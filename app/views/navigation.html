@@ -1,4 +1,4 @@
-<div class="row" ng-controller="NavigationCtrl" class="clear: both" class="app-content-main-bottom">
+<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom">
 
 	<div class="app-content-main-bottom-left">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous">
@@ -9,14 +9,16 @@
 		</a>
 	</div>
 
-  <div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="col-xs-1" ng-if="byName(q)">
-      <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1" class="thumbnail" ng-click="questionsData.question=q;navToQuestions()">
+	<div class="app-content-main-bottom-center">
+	  <div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="" ng-if="byName(q)">
+	      <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1 thumbnail" ng-click="questionsData.question=q;navToQuestions()">
 
-      	<img ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 30px" />
-      	<span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span>
-      	<span ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span>
-      	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
-      </a>      
+	      	<img ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 30px" />
+	      	<span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span>
+	      	<span ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span>
+	      	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
+	      </a>      
+	  </div>
   </div>
 
 	<div class="app-content-main-bottom-right">
