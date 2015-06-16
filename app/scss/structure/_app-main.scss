@@ -88,6 +88,10 @@
 		text-align: right;
 	}
 	.btn-next, .btn-prev {
+		svg {
+			display: block;
+			width: 28px;
+		}
 		&:hover {
 			text-decoration: none;
 		}

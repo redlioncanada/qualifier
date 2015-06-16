@@ -197,6 +197,7 @@
 			"text" : [
 				{
 					"type" : "boxes",
+					"classes" : "boxes select single",
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
 					"answers" : [
 						{
