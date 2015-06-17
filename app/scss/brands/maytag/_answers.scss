@@ -6,6 +6,18 @@
 // 	}
 // }
 
+.answer {
+	// img {
+	// 	-webkit-transition: opacity 0.5s ease-in-out;
+	//     -moz-transition: opacity 0.5s ease-in-out;
+	//     transition: opacity 0.5s ease-in-out;
+	// }
+	&.categories.selected img {
+		opacity: 0.3;
+	}
+}
+
+
 .answer-box {
 	&.col-md-6 {
 		display: block;
@@ -24,12 +36,52 @@
 }
 
 // Select answer
-.answer.select {
+.answer-box.select {
 	&.single {
 		width: 544px;
 		height: 70px;
 		background: url('../img/multi-select-bg.png');
 		display: block;
+	}
+}
+
+.answer-box.boxes-split {
+	width: 545px;
+	height: 84px;
+	background: url('../img/select-with-blue-bg.png');
+	.label-wrap {
+
+	}
+	.label-more-wrap {
+
+	}
+	.label-text-more {
+		color: #ffffff;
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+.answer-box.boxes-icon {
+	// @include make-md-column(6);
+	width: 181px;
+	height: 215px;
+	background: url('../img/icon-thumb-bg.png');
+	display: inline-block;
+	position: relative;
+	.icon-wrap {
+		img {
+			position: relative;
+			top: 25px;
+		}
+	}
+	.select-icon {
+		top: 170px;
+		left: 19px;
+	}
+	.label-wrap {
+		position: absolute;
+		bottom: 21px;
 	}
 }
 
@@ -59,7 +111,7 @@
 
 // width: 545px;
 // height: 84px;
-// background: url('../img/multi-select-with-blue-bg.png');
+// background: url('../img/select-with-blue-bg.png');
 
 // width: 33px;
 // height: 33px;

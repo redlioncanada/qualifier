@@ -1,0 +1,12 @@
+<!-- Box answers -->
+<div class="answers-main-content">
+	<a href="" class="answer-option answer-box boxes-split col-md-6" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=true" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<div class="select-icon"></div>
+		<div class="label-wrap">
+			<span class="label-text" ng-bind="answer.text"></span>
+		</div>
+		<div class="label-more-wrap">
+			<span class="label-text-more" ng-bind="answer.text_more"></span>
+		</div>
+	</a>
+</div>

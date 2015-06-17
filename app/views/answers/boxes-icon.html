@@ -17,11 +17,15 @@
 }*/
 </style>
 <div class="answers-main-content row" ng-controller="BoxesPictureCtrl">
-	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box {{answer.classes}} boxes-picture" ng-click="clear(questionsData.question.show.answers);answer.answer=true;controls.questionHasAnswer=true" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
-		<div class="img-wrap">
+	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box boxes-icon {{answer.classes}} col-md-{{boxWidth}}" ng-click="clear(questionsData.question.show.answers);answer.answer=true;controls.questionHasAnswer=true" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<div class="icon-wrap">
 			<img ng-if="!!answer.hover" ng-src="{{answer.activeImage}}" ng-mouseover="answer.activeImage=answer.hover" ng-mouseleave="answer.activeImage=answer.image" />
 			<img ng-if="!answer.hover" ng-src="{{answer.activeImage}}" />
+			<!-- <img ng-src="{{answer.image}}" /> -->
 		</div>
-		<div class="category-name" ng-bind="answer.text"></div>
+		<div class="select-icon"></div>
+		<div class="label-wrap">
+			<span class="label-text" ng-bind="answer.text"></span>
+		</div>
 	</a>
 </div>

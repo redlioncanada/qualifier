@@ -336,11 +336,11 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "What do you consider youself?",
+					"question" : "boxes-split?",
 					"type" : "boxes",
 					"answers" : [
 						{
-							"text" : "baker",
+							"text" : "Baker",
 							"value" : "baker",
 							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
 							"scoring" : {
@@ -349,7 +349,7 @@
 							"order" : 1
 						},
 						{
-							"text" : "home chef",
+							"text" : "Home Chef",
 							"value" : "home chef",
 							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
 							"scoring" : {
@@ -359,7 +359,7 @@
 							"order" : 2
 						},
 						{
-							"text" : "both",
+							"text" : "I'm Both",
 							"value" : "both",
 							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
 							"scoring" : {
@@ -369,7 +369,7 @@
 							"order" : 3
 						},
 						{
-							"text" : "neither",
+							"text" : "I'm Neither",
 							"value" : "neither",
 							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
 							"order" : 4
@@ -378,10 +378,11 @@
 				},
 				{
 					"question" : "My friends would call me: (choose one)",
-					"type" : "boxes",
+					"type" : "boxes-split",
 					"answers" : [
 						{
-							"text" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
+							"text" : "Baker",
+							"text_more" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
 							"value" : "baker",
 							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
 							"scoring" : {
@@ -390,7 +391,8 @@
 							"order" : 1
 						},
 						{
-							"text" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
+							"text" : "Home Chef",
+							"text_more" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
 							"value" : "home chef",
 							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
 							"scoring" : {
@@ -400,7 +402,8 @@
 							"order" : 2
 						},
 						{
-							"text" : "I'm both - my friends are lucky to know me.",
+							"text" : "I'm Both",
+							"text_more" : "My friends are lucky to know me.",
 							"value" : "both",
 							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
 							"scoring" : {
@@ -410,7 +413,8 @@
 							"order" : 3
 						},
 						{
-							"text" : "I'm neither - I have a stack of take-out menus.",
+							"text" : "I'm neither",
+							"text_more" : "I have a stack of take-out menus.",
 							"value" : "neither",
 							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
 							"order" : 4
@@ -1330,7 +1334,7 @@
 					"type" : "rank",
 					"answers" : [
 						{
-							"text" : "energy efficiency",
+							"text" : "Energy Efficiency",
 							"value" : "energy efficiency",
 							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
 							"scoring" : {
@@ -1339,7 +1343,7 @@
 							"order" : 1
 						},
 						{
-							"text" : "ease of cleaning",
+							"text" : "Ease of Cleaning",
 							"value" : "ease of cleaning",
 							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
 							"scoring" : {
@@ -1359,7 +1363,7 @@
 							"order" : 3
 						},
 						{
-							"text" : "ease of use",
+							"text" : "Ease of Use",
 							"value" : "ease of use",
 							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
 							"scoring" : {
@@ -1368,7 +1372,7 @@
 							"order" : 4
 						},
 						{
-							"text" : "professional",
+							"text" : "Professional",
 							"value" : "professional",
 							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
 							"scoring" : {
@@ -1389,18 +1393,20 @@
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
-					"type" : "boxes",
+					"type" : "boxes-icon",
 					"answers" : [
 						{
-							"text" : "yes",
+							"text" : "Yes",
 							"value" : "yes",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/gas-.png",
+							"image" : "../img/icon-thumb-gas.png",
+							"hover" : "../img/icon-thumb-gas-active.png",
 							"order" : 1
 						},
 						{
-							"text" : "no",
+							"text" : "No",
 							"value" : "no",
-							"thumbnail" : "https://cdn4.iconfinder.com/data/icons/electricity/500/Energy_lightning_power_electric_electricity-512.png",
+							"image" : "../img/icon-thumb-electric.png",
+							"hover" : "../img/icon-thumb-electric-active.png",
 							"scoring" : {
 								"gas" : null
 							},
@@ -1410,19 +1416,19 @@
 				},
 				{
 					"question" : "Are you able to have gas in your kitchen?",
-					"type" : "boxes",
+					"type" : "boxes-icon",
 					"answers" : [
 						{
-							"text" : "yes",
+							"text" : "Yes",
 							"value" : "yes",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/gas-.png",
-							"order" : 1
+							"image" : "../img/icon-thumb-gas.png",
+							"hover" : "../img/icon-thumb-gas-active.png",							"order" : 1
 						},
 						{
-							"text" : "no",
+							"text" : "No",
 							"value" : "no",
-							"thumbnail" : "https://cdn4.iconfinder.com/data/icons/electricity/500/Energy_lightning_power_electric_electricity-512.png",
-							"scoring" : {
+							"image" : "../img/icon-thumb-electric.png",
+							"hover" : "../img/icon-thumb-electric-active.png",							"scoring" : {
 								"gas" : null
 							},
 							"order" : 2
@@ -1443,7 +1449,7 @@
 					"type" : "boxes",
 					"answers" : [
 						{
-							"text" : "baker",
+							"text" : "Baker",
 							"value" : "baker",
 							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
 							"scoring" : {
@@ -1452,7 +1458,7 @@
 							"order" : 1
 						},
 						{
-							"text" : "home chef",
+							"text" : "Home Chef",
 							"value" : "home chef",
 							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
 							"scoring" : {
@@ -1462,7 +1468,7 @@
 							"order" : 2
 						},
 						{
-							"text" : "both",
+							"text" : "Both",
 							"value" : "both",
 							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
 							"scoring" : {
@@ -1472,7 +1478,7 @@
 							"order" : 3
 						},
 						{
-							"text" : "neither",
+							"text" : "Neither",
 							"value" : "neither",
 							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
 							"order" : 4
