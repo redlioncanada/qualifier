@@ -15,7 +15,16 @@
 		</a>
 	</div>
 
+
+
+
+
 	<div class="app-content-main-bottom-center">
+	<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="col-xs-1 thumbnail ">
+	<span bo-text="brandData.apptext.results" style="width: 30px; height: 30px"></span>
+	<span ng-bind="questionsData.currentCount"></span>
+	</a>
+
 	  <div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="" ng-if="byName(q)">
 	      <a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1 thumbnail" ng-click="questionsData.question=q;navToQuestions()">
 

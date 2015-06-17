@@ -119,17 +119,17 @@ angular.module('App')
 		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	 
 	}
 
-	$scope.controls = {}
-	$scope.controls.questionHasAnswer = true
+	$rootScope.controls = {}
+	$rootScope.controls.questionHasAnswer = true
   	$rootScope.next = function () {
   		// Make sure there is an answer
   		var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
   		if (!hasAnswer) {
   			// apply class to all answers
-  			$scope.controls.questionHasAnswer = false 
+  			$rootScope.controls.questionHasAnswer = false 
   		}
   		if (!!hasAnswer) {
-  			$scope.controls.questionHasAnswer = true
+  			$rootScope.controls.questionHasAnswer = true
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
@@ -155,7 +155,7 @@ angular.module('App')
 	  			$rootScope.questionsData.question = $rootScope.questionsData.questions[hasAnswer.next]
 	  		}
 	  		if (!!$rootScope.questionsData.question) {
-	  			$scope.controls.questionHasAnswer = false
+	  			$rootScope.controls.questionHasAnswer = false
 	  			$rootScope.questionsData.question.name = name
 				$scope.show(); 	
 			} else {
