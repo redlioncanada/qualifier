@@ -14,9 +14,9 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"type" : "categories",
 					"question" : "Welcome to My Maytag, what can we help you find?",
 					"sub_question" : "Select One",
+					"type" : "categories",
 					"answers" : [
 						{
 							"text" : "Laundry",
@@ -78,9 +78,9 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"type" : "categories",
 					"question" : "Which product would you like to explore first?",
 					"sub_question" : "Select One",
+					"type" : "categories",
 					"answers" : [
 						{
 							"text" : "Free Standing Ranges",
@@ -133,8 +133,9 @@
 					]
 				},
 				{
-					"type" : "categories",
 					"question" : "What product are you shopping for today?",
+					"sub_question" : "Select one",
+					"type" : "categories",
 					"answers" : [
 						{
 							"text" : "Free Standing Range",
@@ -196,13 +197,14 @@
 			"thumbnail_type" : "text",
 			"text" : [
 				{
-					"type" : "boxes",
-					"classes" : "boxes select single",
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
+					"sub_question" : "Select one",
+					"type" : "radio",
+					"classes" : "boxes select single",
 					"answers" : [
 						{
 							"text" : "24\"",
-							"thumbnail" : "24\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "24",
 							"scoring" : {
 								"width" : "24"
@@ -211,7 +213,7 @@
 						},
 						{
 							"text" : "27\"",
-							"thumbnail" : "27\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "27",
 							"scoring" : {
 								"width" : "27"
@@ -220,7 +222,7 @@
 						},
 						{
 							"text" : "30\"",
-							"thumbnail" : "30\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "30",
 							"scoring" : {
 								"width" : "30"
@@ -229,7 +231,7 @@
 						},
 						{
 							"text" : "36\"",
-							"thumbnail" : "36\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "36",
 							"scoring" : {
 								"width" : "36"
@@ -238,7 +240,7 @@
 						},
 						{
 							"text" : "48\"",
-							"thumbnail" : "48\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "48",
 							"scoring" : {
 								"width" : "48"
@@ -247,7 +249,7 @@
 						},
 						{
 							"text" : "15\" to 27\"",
-							"thumbnail" : "S",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "small",
 							"scoring" : {
 								"size" : "small"
@@ -256,7 +258,7 @@
 						},
 						{
 							"text" : "30\" to 48\"",
-							"thumbnail" : "L",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "big",
 							"scoring" : {
 								"size" : "medium"
@@ -264,7 +266,7 @@
 							"order" : 7
 						},
 						{
-							"thumbnail" : "ALL",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "Any size",
 							"value" : "any",
 							"order" : 8
@@ -273,10 +275,11 @@
 				},
 				{
 					"question" : "I want a wall oven that is:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
-							"thumbnail" : "XL",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "XL",
 							"value" : "+30",
 							"scoring" : {
@@ -285,7 +288,7 @@
 							"order" : 1
 						},
 						{
-							"thumbnail" : "L",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "L",
 							"value" : "30",
 							"scoring" : {
@@ -294,7 +297,7 @@
 							"order" : 2
 						},
 						{
-							"thumbnail" : "M",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "M",
 							"value" : "27",
 							"scoring" : {
@@ -303,7 +306,7 @@
 							"order" : 3
 						},
 						{
-							"thumbnail" : "S",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "S",
 							"value" : "24",
 							"scoring" : {
@@ -312,7 +315,7 @@
 							"order" : 4
 						},
 						{
-							"thumbnail" : "All",
+							"thumbnail" : "../img/icon-size.png",
 							"text" : "No Restriction",
 							"value" : "any",
 							"order" : 5
@@ -323,8 +326,8 @@
 			"category" : "aesthetics",
 			"notes" : [
 				{
-					"title" : "note",
-					"text" : "industry standard is 30"
+					"title" : "Note",
+					"text" : "Industry standard is 30"
 				}
 			],
 			"right_answers" : ["wall ovens"]
@@ -337,13 +340,14 @@
 			"text" : [
 				{
 					"question" : "How would you describe yourself?",
+					"sub_question" : "Select one",
 					"type" : "radio-split",
 					"answers" : [
 						{
 							"text" : "Baker",
 							"value" : "baker",
 							"text_more" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
-							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -353,7 +357,7 @@
 							"text" : "Home Chef",
 							"value" : "home chef",
 							"text_more" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -364,7 +368,7 @@
 							"text" : "I'm Both",
 							"value" : "both",
 							"text_more" : "My friends are lucky to know me.",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -375,20 +379,21 @@
 							"text" : "I'm Neither",
 							"value" : "neither",
 							"text_more" : "I have a stack of take-out menus.",
-							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
 					]
 				},
 				{
 					"question" : "My friends would call me: (choose one)",
+					"sub_question" : "Select one",
 					"type" : "radio-split",
 					"answers" : [
 						{
 							"text" : "Baker",
 							"value" : "baker",
 							"text_more" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
-							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -398,7 +403,7 @@
 							"text" : "Home Chef",
 							"value" : "home chef",
 							"text_more" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -409,7 +414,7 @@
 							"text" : "I'm Both",
 							"value" : "both",
 							"text_more" : "My friends are lucky to know me.",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -420,7 +425,7 @@
 							"text" : "I'm neither",
 							"value" : "neither",
 							"text_more" : "I have a stack of take-out menus.",
-							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
 					]
@@ -436,21 +441,22 @@
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
-							"text" : "reheat food",
+							"text" : "Reheat food",
 							"value" : "reheat food",
-							"thumbnail" : "Reheat",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1
 							},
 							"order" : 1
 						},
 						{
-							"text" : "cook for family",
+							"text" : "Cook for family",
 							"value" : "cook for family",
-							"thumbnail" : "Family",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"combination" : 1,
 								"double" : 1
@@ -458,9 +464,9 @@
 							"order" : 2
 						},
 						{
-							"text" : "cook for guests",
+							"text" : "Cook for guests",
 							"value" : "cook for guests",
-							"thumbnail" : "Guests",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"combination" : 1,
 								"double" : 1
@@ -470,19 +476,20 @@
 					]
 				},
 				{
-					"type" : "boxes",
 					"question" : "For dinner, you'll typically find me:",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Reheating leftovers",
 							"value" : "any",
-							"thumbnail" : "Reheat",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Cooking a meal from scratch for myself or partner",
 							"value" : "single",
-							"thumbnail" : "Small",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1
 							},
@@ -491,7 +498,7 @@
 						{
 							"text" : "Cooking a meal from scratch for my family",
 							"value" : "double",
-							"thumbnail" : "Family",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -499,7 +506,7 @@
 						},
 						{
 							"text" : "Hosting a dinner party",
-							"thumbnail" : "Party",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "double",
 							"scoring" : {
 								"double" : 1
@@ -508,7 +515,7 @@
 						},
 						{
 							"text" : "Preparing a frozen meal",
-							"thumbnail" : "Heat",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "single combo",
 							"scoring" : {
 								"single" : 1,
@@ -518,7 +525,7 @@
 						},
 						{
 							"text" : "Ordering in delivery",
-							"thumbnail" : "Delivery",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "single",
 							"scoring" : {
 								"single" : 1
@@ -538,13 +545,14 @@
 			"thumbnail_type" : "text",			
 			"text" : [
 				{
-					"question" : "Rank what is most important to you (1-Most important to 4-Least important)",
+					"question" : "Rank what is most important to you:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Capacity",
 							"value" : "Capacity",
-							"thumbnail" : "Capacity",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1,
 								"capacity" : 1
@@ -554,7 +562,7 @@
 						{
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
-							"thumbnail" : "Easy",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"aquaLift" : 1
 							},
@@ -563,7 +571,7 @@
 						{
 							"text" : "Even heat",
 							"value" : "Even heat",
-							"thumbnail" : "Heat",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -572,7 +580,7 @@
 						{
 							"text" : "Cooking multiple dishes at once",
 							"value" : "Cooking multiple dishes at once",
-							"thumbnail" : "Multi",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -581,13 +589,14 @@
 					]
 				},
 				{
-					"question" : "My ideal kitchen is (choose):",
+					"question" : "My ideal kitchen is:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Able to prepare large meals",
 							"value" : "Able to prepare large meals",
-							"thumbnail" : "Capacity",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1,
 								"capacity" : 1
@@ -597,7 +606,7 @@
 						{
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
-							"thumbnail" : "Easy",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"aquaLift" : 1
 							},
@@ -606,7 +615,7 @@
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
-							"thumbnail" : "Heat",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -615,7 +624,7 @@
 						{
 							"text" : "Easy to use",
 							"value" : "Easy to use",
-							"thumbnail" : "Easy",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -634,11 +643,12 @@
 			"text" : [
 				{
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "24\"",
-							"thumbnail" : "24\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "24",
 							"scoring" : {
 								"width" : "24"
@@ -647,7 +657,7 @@
 						},
 						{
 							"text" : "27\"",
-							"thumbnail" : "27\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "27",
 							"scoring" : {
 								"width" : "27"
@@ -656,7 +666,7 @@
 						},
 						{
 							"text" : "30\"",
-							"thumbnail" : "30\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "30",
 							"scoring" : {
 								"width" : "30"
@@ -665,7 +675,7 @@
 						},
 						{
 							"text" : "36\"",
-							"thumbnail" : "36\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "36",
 							"scoring" : {
 								"width" : "36"
@@ -674,7 +684,7 @@
 						},
 						{
 							"text" : "48\"",
-							"thumbnail" : "48\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "48",
 							"scoring" : {
 								"width" : "48"
@@ -683,7 +693,7 @@
 						},
 						{
 							"text" : "15\" to 27\"",
-							"thumbnail" : "S",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "small",
 							"scoring" : {
 								"width" : "small"
@@ -692,7 +702,7 @@
 						},
 						{
 							"text" : "30\" to 48\"",
-							"thumbnail" : "L",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "big",
 							"scoring" : {
 								"width" : "medium"
@@ -702,18 +712,19 @@
 						{
 							"text" : "Any size",
 							"value" : "any",
-							"thumbnail" : "All",
+							"thumbnail" : "../img/icon-size.png",
 							"order" : 8
 						}
 					]								
 				},
 				{
 					"question" : "I want a cooktop that is:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "24\"",
-							"thumbnail" : "24\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "24",
 							"scoring" : {
 								"width" : "24"
@@ -722,7 +733,7 @@
 						},
 						{
 							"text" : "27\"",
-							"thumbnail" : "27\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "27",
 							"scoring" : {
 								"width" : "27"
@@ -731,7 +742,7 @@
 						},
 						{
 							"text" : "30\"",
-							"thumbnail" : "30\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "30",
 							"scoring" : {
 								"width" : "30"
@@ -740,7 +751,7 @@
 						},
 						{
 							"text" : "36\"",
-							"thumbnail" : "36\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "36",
 							"scoring" : {
 								"width" : "36"
@@ -749,7 +760,7 @@
 						},
 						{
 							"text" : "48\"",
-							"thumbnail" : "48\"",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "48",
 							"scoring" : {
 								"width" : "48"
@@ -758,7 +769,7 @@
 						},
 						{
 							"text" : "15\" to 27\"",
-							"thumbnail" : "S",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "small",
 							"scoring" : {
 								"size" : "small"
@@ -767,7 +778,7 @@
 						},
 						{
 							"text" : "30\" to 48\"",
-							"thumbnail" : "L",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "big",
 							"scoring" : {
 								"size" : "medium"
@@ -776,7 +787,7 @@
 						},
 						{
 							"text" : "Any size",
-							"thumbnail" : "All",
+							"thumbnail" : "../img/icon-size.png",
 							"value" : "any",
 							"order" : 8
 						}
@@ -787,8 +798,8 @@
 			"right_answers" : ["cooktops"],
 			"notes" : [
 				{
-					"title" : "note",
-					"text" : "industry standard is 30"
+					"title" : "Note",
+					"text" : "Industry standard is 30"
 				}
 			]
 		},
@@ -800,18 +811,19 @@
 			"text" : [
 				{
 					"question" : "Why do you cook?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
 							"value" : "any",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "For my family",
 							"value" : "induction",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -820,7 +832,7 @@
 						{
 							"text" : "For myself, because it's my passion",
 							"value" : "gas",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -829,7 +841,7 @@
 						{
 							"text" : "I cook for necessity",
 							"value" : "electric",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -839,18 +851,19 @@
 				},
 				{
 					"question" : "If my cooking style was a pizza, it would be:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
 							"value" : "any",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Family-sized meal",
 							"value" : "induction",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -859,7 +872,7 @@
 						{
 							"text" : "Made from scratch with all the gourmet fixings",
 							"value" : "gas",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -868,7 +881,7 @@
 						{
 							"text" : "Frozen pizza from the grocery store",
 							"value" : "electric",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -888,18 +901,19 @@
 			"text" : [
 				{
 					"question" : "What's your style?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Modern",
 							"value" : "any",
-							"thumbnail" : "M",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Traditional",
 							"value" : "induction",
-							"thumbnail" : "T",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -908,7 +922,7 @@
 						{
 							"text" : "Commercial",
 							"value" : "gas",
-							"thumbnail" : "C",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -918,17 +932,19 @@
 				},
 				{
 					"question" : "My friends would describe me as:",
-					"type" : "boxes",
+					"type" : "radio-split",
 					"answers" : [
 						{
-							"text" : "Modern (I always like to be on the cutting edge of design trends)",
-							"thumbnail" : "M",
+							"text" : "Modern",
+							"text_more" : "Modern (I always like to be on the cutting edge of design trends)",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "any",
 							"order" : 1
 						},
 						{
-							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
-							"thumbnail" : "T",
+							"text" : "Traditional",
+							"text_more" : "My kitchen reflects my classic style with a hint of nostalgia",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "induction",
 							"scoring" : {
 								"induction" : 1
@@ -936,8 +952,9 @@
 							"order" : 2
 						},
 						{
-							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
-							"thumbnail" : "C",
+							"text" : "Foodie",
+							"text_more" : "I'd like to think of myself as the ultimate home chef",
+							"thumbnail" : "../img/icon-style.png",
 							"value" : "gas",
 							"scoring" : {
 								"gas" : 1
@@ -957,22 +974,23 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"question" : "Rank what is most important to you:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
-							"text" : "energy efficiency",
+							"text" : "Energy efficiency",
 							"value" : "energy efficiency",
-							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
+							"thumbnail" : "../img/icon-energy.png",
 							"scoring" : {
 								"induction" : 1
 							},
 							"order" : 1
 						},
 						{
-							"text" : "ease of cleaning",
+							"text" : "Ease of cleaning",
 							"value" : "ease of cleaning",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"induction" : 1,
 								"electric" : 1
@@ -980,9 +998,9 @@
 							"order" : 2
 						},
 						{
-							"text" : "precise temperature",
+							"text" : "Precise temperature",
 							"value" : "precise temperature",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"induction" : 1,
 								"gas" : 1
@@ -990,18 +1008,18 @@
 							"order" : 3
 						},
 						{
-							"text" : "ease of use",
+							"text" : "Ease of use",
 							"value" : "ease of use",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"electric" : 1
 							},
 							"order" : 4
 						},
 						{
-							"text" : "professional style cooking",
+							"text" : "Professional style cooking",
 							"value" : "professional style cooking",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1010,22 +1028,23 @@
 					]
 				},
 				{
-					"question" : "My ideal kitchen is (choose):",
+					"question" : "My ideal kitchen is:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
-							"text" : "energy efficiency",
+							"text" : "Energy efficiency",
 							"value" : "energy efficiency",
-							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
+							"thumbnail" : "../img/icon-energy.png",
 							"scoring" : {
 								"induction" : 1
 							},
 							"order" : 1
 						},
 						{
-							"text" : "ease of cleaning",
+							"text" : "Ease of cleaning",
 							"value" : "ease of cleaning",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"induction" : 1,
 								"electric" : 1
@@ -1035,7 +1054,7 @@
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-feature.png",
 							"scoring" : {
 								"induction" : 1,
 								"gas" : 1
@@ -1043,18 +1062,18 @@
 							"order" : 3
 						},
 						{
-							"text" : "ease of use",
+							"text" : "Ease of use",
 							"value" : "ease of use",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-feature.png",
 							"scoring" : {
 								"electric" : 1
 							},
 							"order" : 4
 						},
 						{
-							"text" : "professional",
+							"text" : "Professional",
 							"value" : "professional",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-feature.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1073,6 +1092,7 @@
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
+					"sub_question" : "Select one",
 					"type" : "boxes-icon",
 					"answers" : [
 						{
@@ -1080,7 +1100,7 @@
 							"value" : "yes",
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/gas-.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"order" : 1
 						},
 						{
@@ -1088,7 +1108,7 @@
 							"value" : "no",
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
-							"thumbnail" : "https://cdn4.iconfinder.com/data/icons/electricity/500/Energy_lightning_power_electric_electricity-512.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"scoring" : {
 								"gas" : null
 							},
@@ -1098,6 +1118,7 @@
 				},
 				{
 					"question" : "Are you able to have gas in your kitchen?",
+					"sub_question" : "Select one",
 					"type" : "boxes-icon",
 					"answers" : [
 						{
@@ -1105,7 +1126,7 @@
 							"value" : "yes",
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/gas-.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"order" : 1
 						},
 						{
@@ -1113,7 +1134,7 @@
 							"value" : "no",
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
-							"thumbnail" : "https://cdn4.iconfinder.com/data/icons/electricity/500/Energy_lightning_power_electric_electricity-512.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"scoring" : {
 								"gas" : null
 							},
@@ -1132,18 +1153,19 @@
 			"text" : [
 				{
 					"question" : "Why do you cook?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
 							"value" : "any",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "For my family",
 							"value" : "induction",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1152,7 +1174,7 @@
 						{
 							"text" : "For myself, because it's my passion",
 							"value" : "gas",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1161,7 +1183,7 @@
 						{
 							"text" : "I cook for necessity",
 							"value" : "electric",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -1171,18 +1193,19 @@
 				},
 				{
 					"question" : "If my cooking style was a pizza, it would be:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
 							"value" : "any",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Family-sized meal",
 							"value" : "induction",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1191,7 +1214,7 @@
 						{
 							"text" : "Made from scratch with all the gourmet fixings",
 							"value" : "gas",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1200,7 +1223,7 @@
 						{
 							"text" : "Frozen pizza from the grocery store",
 							"value" : "electric",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -1220,18 +1243,19 @@
 			"text" : [
 				{
 					"question" : "What's your style?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Modern",
 							"value" : "any",
-							"thumbnail" : "M",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Traditional",
 							"value" : "induction",
-							"thumbnail" : "T",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1240,7 +1264,7 @@
 						{
 							"text" : "Commercial",
 							"value" : "gas",
-							"thumbnail" : "C",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1255,13 +1279,13 @@
 						{
 							"text" : "Modern (I always like to be on the cutting edge of design trends)",
 							"value" : "any",
-							"thumbnail" : "M",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
 							"value" : "induction",
-							"thumbnail" : "T",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1270,7 +1294,7 @@
 						{
 							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
 							"value" : "gas",
-							"thumbnail" : "C",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1289,13 +1313,14 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "Rank what is most important to you (1-Most important to 5-Least important)",
+					"question" : "Rank what is most important to you:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Energy Efficiency",
 							"value" : "energy efficiency",
-							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
+							"thumbnail" : "../img/icon-energy.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1304,7 +1329,7 @@
 						{
 							"text" : "Ease of Cleaning",
 							"value" : "ease of cleaning",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"induction" : 1,
 								"electric" : 1
@@ -1314,7 +1339,7 @@
 						{
 							"text" : "Precise Temperature",
 							"value" : "precise temperature",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"induction" : 1,
 								"gas" : 1
@@ -1324,7 +1349,7 @@
 						{
 							"text" : "Ease of Use",
 							"value" : "ease of use",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -1333,7 +1358,7 @@
 						{
 							"text" : "Professional Style Cooking",
 							"value" : "professional style cooking",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1342,13 +1367,14 @@
 					]
 				},
 				{
-					"question" : "My ideal kitchen is (choose):",
+					"question" : "My ideal kitchen is:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Energy Efficiency",
 							"value" : "energy efficiency",
-							"thumbnail" : "http://www.iconexperience.com/_img/i_collection_png/256x256/plain/environment.png",
+							"thumbnail" : "../img/icon-energy.png",
 							"scoring" : {
 								"induction" : 1
 							},
@@ -1357,7 +1383,7 @@
 						{
 							"text" : "Ease of Cleaning",
 							"value" : "ease of cleaning",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"induction" : 1,
 								"electric" : 1
@@ -1367,7 +1393,7 @@
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "precise temperature",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"induction" : 1,
 								"gas" : 1
@@ -1377,7 +1403,7 @@
 						{
 							"text" : "Ease of Use",
 							"value" : "ease of use",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"electric" : 1
 							},
@@ -1386,7 +1412,7 @@
 						{
 							"text" : "Professional",
 							"value" : "professional",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -1405,6 +1431,7 @@
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
+					"sub_question" : "Select one",
 					"type" : "boxes-icon",
 					"answers" : [
 						{
@@ -1412,6 +1439,7 @@
 							"value" : "yes",
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"order" : 1
 						},
 						{
@@ -1419,6 +1447,7 @@
 							"value" : "no",
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
+							"thumbnail" : "../img/icon-fueltype.png",
 							"scoring" : {
 								"gas" : null
 							},
@@ -1428,19 +1457,24 @@
 				},
 				{
 					"question" : "Are you able to have gas in your kitchen?",
+					"sub_question" : "Select one",
 					"type" : "boxes-icon",
 					"answers" : [
 						{
 							"text" : "Yes",
 							"value" : "yes",
 							"image" : "../img/icon-thumb-gas.png",
-							"hover" : "../img/icon-thumb-gas-active.png",							"order" : 1
+							"hover" : "../img/icon-thumb-gas-active.png",
+							"thumbnail" : "../img/icon-fueltype.png",
+							"order" : 1
 						},
 						{
 							"text" : "No",
 							"value" : "no",
 							"image" : "../img/icon-thumb-electric.png",
-							"hover" : "../img/icon-thumb-electric-active.png",							"scoring" : {
+							"hover" : "../img/icon-thumb-electric-active.png",
+							"thumbnail" : "../img/icon-fueltype.png",
+							"scoring" : {
 								"gas" : null
 							},
 							"order" : 2
@@ -1458,13 +1492,14 @@
 			"text" : [
 				{
 					"question" : "What do you consider youself?",
-					"type" : "boxes-icon",
+					"sub_question" : "Select one",
+					"type" : "radio-split",
 					"answers" : [
 						{
 							"text" : "Baker",
 							"value" : "baker",
 							"text_more" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
-							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -1474,7 +1509,7 @@
 							"text" : "Home Chef",
 							"value" : "home chef",
 							"text_more" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -1485,7 +1520,7 @@
 							"text" : "Both",
 							"value" : "both",
 							"text_more" : "",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -1496,20 +1531,21 @@
 							"text" : "Neither",
 							"value" : "neither",
 							"text_more" : "",
-							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
 					]
 				},
 				{
-					"question" : "My friends would call me: (choose one)",
-					"type" : "boxes-icon",
+					"question" : "My friends would call me:",
+					"sub_question" : "Select one",
+					"type" : "radio-split",
 					"answers" : [
 						{
 							"text" : "Baker",
 							"value" : "baker",
 							"text_more" : "The person who makes the perfect pastry, the gooiest cookies and the softest bread.",
-							"thumbnail" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRmRELXFbfyUhQmbr1ZRdRfVISocVdxJb52NES24YocLmfWbwU-",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -1519,7 +1555,7 @@
 							"text" : "Home Chef",
 							"value" : "home chef",
 							"text_more" : "The person who boasts the best roast, has mastered the spiciest Indian and who isn't afraid of fancy knife skills.",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/elite-food/512/chef-hat-48.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -1530,7 +1566,7 @@
 							"text" : "I'm both",
 							"value" : "both",
 							"text_more" : "I'm both - my friends are lucky to know me.",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/plus-24-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
 								"convection" : 1
@@ -1541,7 +1577,7 @@
 							"text" : "I'm neither",
 							"value" : "neither",
 							"text_more" : "My friends are lucky to know me.",
-							"thumbnail" : "http://assets.windowsphone.com/4c22d098-26c6-4b73-93f0-7a6d7c7cfd95/system-icon-no-data_InvariantCulture_Default.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
 					]
@@ -1557,12 +1593,13 @@
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Reheat food",
 							"value" : "reheat food",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1
 							},
@@ -1571,7 +1608,7 @@
 						{
 							"text" : "Cook for family",
 							"value" : "cook for family",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"combination" : 1,
 								"double" : 1
@@ -1581,7 +1618,7 @@
 						{
 							"text" : "Cook for guests",
 							"value" : "cook for guests",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"combination" : 1,
 								"double" : 1
@@ -1592,18 +1629,19 @@
 				},
 				{
 					"question" : "For dinner, you'll typically find me:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Reheating leftovers",
 							"value" : "any",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
 							"text" : "Cooking a meal from scratch for myself or partner",
 							"value" : "single",
-							"thumbnail" : "https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1
 							},
@@ -1612,7 +1650,7 @@
 						{
 							"text" : "Cooking a meal from scratch for my family",
 							"value" : "double",
-							"thumbnail" : "https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1621,7 +1659,7 @@
 						{
 							"text" : "Hosting a dinner party",
 							"value" : "double",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1630,7 +1668,7 @@
 						{
 							"text" : "Preparing a frozen meal",
 							"value" : "single combo",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1,
 								"combination" : 1
@@ -1640,7 +1678,7 @@
 						{
 							"text" : "Ordering in delivery",
 							"value" : "single",
-							"thumbnail" : "http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"single" : 1
 							},
@@ -1659,13 +1697,14 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "Rank what is most important to you 1-Most important to 4-Least important",
+					"question" : "Rank what is most important to you?",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Capacity",
 							"value" : "double",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/food-solid-icons-volume-4/128/172-128.png",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"double" : 1,
 								"capacity" : 1
@@ -1675,7 +1714,7 @@
 						{
 							"text" : "Ease of cleaning",
 							"value" : "double",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"aquaLift" : 1
 							},
@@ -1684,7 +1723,7 @@
 						{
 							"text" : "Even heat",
 							"value" : "single combo",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -1693,7 +1732,7 @@
 						{
 							"text" : "Cooking flexibility",
 							"value" : "Cooking flexibility",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1702,13 +1741,14 @@
 					]
 				},
 				{
-					"question" : "My ideal kitchen is (choose):",
+					"question" : "My ideal kitchen is:",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"answers" : [
 						{
 							"text" : "Able to prepare large meals",
 							"value" : "double",
-							"thumbnail" : "https://cdn2.iconfinder.com/data/icons/food-solid-icons-volume-4/128/172-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"double" : 1,
 								"capacity" : 1
@@ -1718,7 +1758,7 @@
 						{
 							"text" : "Easy to clean",
 							"value" : "Easy to clean",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Glass_Spray-128.png",
+							"thumbnail" : "../img/icon-cleaning.png",
 							"scoring" : {
 								"aquaLift" : 1
 							},
@@ -1727,7 +1767,7 @@
 						{
 							"text" : "Appliances that produce precise temperature",
 							"value" : "Appliances that produce precise temperature",
-							"thumbnail" : "https://cdn3.iconfinder.com/data/icons/weather-icons-1/64/Temperature-128.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -1736,7 +1776,7 @@
 						{
 							"text" : "Cooking flexibility",
 							"value" : "Cooking flexibility",
-							"thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Simple_icon_location.svg/50px-Simple_icon_location.svg.png",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1767,43 +1807,43 @@
 					},
 					"answers" : {
 						"30" : {
-							"thumbnail" : "30\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 30
 							}
 						},
 						"31" : {
-							"thumbnail" : "31\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 31
 							}
 						},
 						"32" : {
-							"thumbnail" : "32\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 32
 							}
 						},
 						"33" : {
-							"thumbnail" : "33\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 33
 							}
 						},
 						"34" : {
-							"thumbnail" : "34\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 34
 							}
 						},
 						"35" : {
-							"thumbnail" : "35\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 35
 							}
 						},
 						"36" : {
-							"thumbnail" : "36\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 36
 							}
@@ -1823,37 +1863,37 @@
 					},
 					"answers" : {
 						"66" : {
-							"thumbnail" : "66\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 66
 							}
 						},
 						"67" : {
-							"thumbnail" : "67\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 67
 							}
 						},
 						"68" : {
-							"thumbnail" : "68\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 68
 							}
 						},
 						"69" : {
-							"thumbnail" : "69\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 69
 							}
 						},
 						"70" : {
-							"thumbnail" : "70\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 70
 							}
 						},
 						"71" : {
-							"thumbnail" : "71\"",
+							"thumbnail" : "../img/icon-size.png",
 							"scoring" : {
 								 "width" : 71
 							}
@@ -1870,11 +1910,13 @@
 			"text" : [
 				{
 					"question" : "My fridge…",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Keeps the drinks cold",
 							"value" : "Keeps the drinks cold",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -1884,6 +1926,7 @@
 						{
 							"text" : "Is a farmers' market",
 							"value" : "Is a farmers' market",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -1893,6 +1936,7 @@
 						{
 							"text" : "Feeds a family",
 							"value" : "Feeds a family",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -1901,6 +1945,7 @@
 						{
 							"text" : "Holds ready-to-eat meals",
 							"value" : "Holds ready-to-eat meals",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -1910,6 +1955,7 @@
 						{
 							"text" : "Backstage of entertainment ",
 							"value" : "Backstage of entertainment ",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"french door" : 1
 							},
@@ -1919,11 +1965,13 @@
 				},
 				{
 					"question" : "I use my fridge to:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Chill my drinks",
 							"value" : "Chill my drinks",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -1933,6 +1981,7 @@
 						{
 							"text" : "Use as a personal farmers' market",
 							"value" : "Use as a personal farmers' market",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -1942,6 +1991,7 @@
 						{
 							"text" : "Keep my family's favourite foods",
 							"value" : "Keep my family's favourite foods",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -1950,6 +2000,7 @@
 						{
 							"text" : "Stock up ready-to-eat meals",
 							"value" : "Stock up ready-to-eat meals",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -1959,6 +2010,7 @@
 						{
 							"text" : "Keep the party platers chilled",
 							"value" : "Keep the party platers chilled",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								"french door" : 1
 							},
@@ -1975,11 +2027,13 @@
 			"text" : [
 				{
 					"question" : "How do you keep your fridge?",
+					"sub_question" : "Select one",
 					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Perfectly organized",
 							"value" : "Perfectly organized",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -1988,6 +2042,7 @@
 						{
 							"text" : "Lots of clothes, organized",
 							"value" : "Lots of clothes, organized",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -1995,8 +2050,9 @@
 							"order" : 2
 						},
 						{
-							"text" : "lots of clothes, disorganized",
+							"text" : "Lots of clothes, disorganized",
 							"value" : "lots of clothes, disorganized",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -2005,6 +2061,7 @@
 						{
 							"text" : "Few clothes",
 							"value" : "Few clothes",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -2014,12 +2071,14 @@
 					]
 				},
 				{
-					"question" : "My friends consider me: (choose one)",
+					"question" : "My friends consider me:",
+					"sub_question" : "Select one",
 					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Very organized and always on time",
 							"value" : "Very organized and always on time",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -2028,6 +2087,7 @@
 						{
 							"text" : "Sort of organized, sometimes late",
 							"value" : "Sort of organized, sometimes late",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -2037,6 +2097,7 @@
 						{
 							"text" : "Organized, always late",
 							"value" : "Organized, always late",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -2045,6 +2106,7 @@
 						{
 							"text" : "Disorganized but on time",
 							"value" : "Disorganized but on time",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -2062,11 +2124,13 @@
 			"text" : [
 				{
 					"question" : "On a regular basis, my fridge feeds..",
+					"sub_question" : "Select one",
 					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "Single",
 							"value" : "Single",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -2076,6 +2140,7 @@
 						{
 							"text" : "Couple",
 							"value" : "Couple",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -2085,6 +2150,7 @@
 						{
 							"text" : "Family of 4",
 							"value" : "Family of 4",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -2094,6 +2160,7 @@
 						{
 							"text" : "Large family (6+)",
 							"value" : "Large family (6+)",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"french door" : 1
 							},
@@ -2102,6 +2169,7 @@
 						{
 							"text" : "Party/entertaining",
 							"value" : "Party/entertaining",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"french door" : 1
 							},
@@ -2110,12 +2178,14 @@
 					]
 				},
 				{
-					"question" : "My fridge is full: (choose one)",
+					"question" : "My fridge is full:",
+					"sub_question" : "Select one",
 					"type" : "radio",
 					"answers" : [
 						{
 							"text" : "All week, I grocery shop almost daily",
 							"value" : "All week, I grocery shop almost daily",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1
 							},
@@ -2124,6 +2194,7 @@
 						{
 							"text" : "At beginning of the week, but I make meals from what I have",
 							"value" : "At beginning of the week, but I make meals from what I have",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"side by side" : 1,
 								"french door" : 1
@@ -2133,6 +2204,7 @@
 						{
 							"text" : "Hardly ever, my family eats everything",
 							"value" : "Hardly ever, my family eats everything",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1,
@@ -2143,6 +2215,7 @@
 						{
 							"text" : "Rarely, I eat mostly frozen meals",
 							"value" : "Rarely, I eat mostly frozen meals",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"top mount" : 1,
 								"bottom mount" : 1
@@ -2152,6 +2225,7 @@
 						{
 							"text" : "Right before I host a big party",
 							"value" : "Right before I host a big party",
+							"thumbnail" : "../img/icon-organization.png",
 							"scoring" : {
 								"french door" : 1
 							},
@@ -2168,11 +2242,13 @@
 			"text" : [
 				{
 					"question" : "I drink water from…",
+					"sub_question" : "Select all that apply",
 					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "Bottles",
 							"value" : "Bottles",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2181,6 +2257,7 @@
 						{
 							"text" : "Tap",
 							"value" : "Tap",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"in-door ice/water" : 1
 							},
@@ -2189,6 +2266,7 @@
 						{
 							"text" : "Filter water jug",
 							"value" : "Filter water jug",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2197,6 +2275,7 @@
 						{
 							"text" : "Water cooler",
 							"value" : "Water cooler",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2205,17 +2284,20 @@
 						{
 							"text" : "I mostly drink juice/tea/coffee/soda",
 							"value" : "I mostly drink juice/tea/coffee/soda",
+							"thumbnail" : "../img/icon-capacity.png",
 							"order" : 5
 						}
 					]
 				},
 				{
 					"question" : "You wake up in the middle of the night very thirsty, so you grab:",
+					"sub_question" : "Select all that apply",
 					"type" : "checkbox",
 					"answers" : [
 						{
 							"text" : "Bottle of water",
 							"value" : "Bottle of water",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2224,6 +2306,7 @@
 						{
 							"text" : "Glass of tap water",
 							"value" : "Glass of tap water",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"in-door ice/water" : 1
 							},
@@ -2232,6 +2315,7 @@
 						{
 							"text" : "Glass of filtered water",
 							"value" : "Glass of filtered water",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2240,6 +2324,7 @@
 						{
 							"text" : "Drink from the water cooler",
 							"value" : "Drink from the water cooler",
+							"thumbnail" : "../img/icon-capacity.png",
 							"scoring" : {
 								"filtered in-door ice/water" : 2
 							},
@@ -2248,6 +2333,7 @@
 						{
 							"text" : "A Glass of Milk or Juice",
 							"value" : "A Glass of Milk or Juice",
+							"thumbnail" : "../img/icon-capacity.png",
 							"order" : 5
 						}
 					]
@@ -2261,6 +2347,7 @@
 			"text" : [
 				{
 					"question" : "I would like to use ice in…",
+					"sub_question" : "Select all that apply",
 					"type" : "boxes-icon",
 					"answers" : [
 						{
@@ -2269,6 +2356,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"selected" : "../img/icon-thumb-softdrinks-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2280,6 +2368,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"selected" : "../img/icon-thumb-softdrinks-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2291,6 +2380,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"selected" : "../img/icon-thumb-softdrinks-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2302,6 +2392,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"selected" : "../img/icon-thumb-softdrinks-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2311,7 +2402,8 @@
 				},
 				{
 					"question" : "I use ice when…",
-					"type" : "checkbox",
+					"sub_question" : "Select all that apply",
+					"type" : "boxes-icon",
 					"answers" : [
 						{
 							"text" : "I have a soft drink",
@@ -2319,6 +2411,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"selected" : "../img/icon-thumb-softdrinks-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2330,6 +2423,7 @@
 							"image" : "../img/icon-thumb-cocktails.png",
 							"hover" : "../img/icon-thumb-cocktails-active.png",
 							"selected" : "../img/icon-thumb-cocktails-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2341,6 +2435,7 @@
 							"image" : "../img/icon-thumb-water.png",
 							"hover" : "../img/icon-thumb-water-active.png",
 							"selected" : "../img/icon-thumb-water-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2352,6 +2447,7 @@
 							"image" : "../img/icon-thumb-smoothies.png",
 							"hover" : "../img/icon-thumb-smoothies-active.png",
 							"selected" : "../img/icon-thumb-smoothies-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2363,6 +2459,7 @@
 							"image" : "../img/icon-thumb-coolers.png",
 							"hover" : "../img/icon-thumb-coolers-active.png",
 							"selected" : "../img/icon-thumb-coolers-active.png",
+							"thumbnail" : "../img/icon-ice.png",
 							"scoring" : {
 								"in-door ice/water" : "x"
 							},
@@ -2392,6 +2489,7 @@
 						{
 							"text" : "Form",
 							"value" : "Form",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : "x"
 							},
@@ -2400,6 +2498,7 @@
 						{
 							"text" : "Function",
 							"value" : "Function",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : "x"
 							},
@@ -2421,6 +2520,7 @@
 						{
 							"text" : "Always",
 							"value" : "Always",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : 4
 							},
@@ -2429,6 +2529,7 @@
 						{
 							"text" : "Often",
 							"value" : "Often",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : 3
 							},
@@ -2437,6 +2538,7 @@
 						{
 							"text" : "Sometimes",
 							"value" : "Sometimes",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : 2
 							},
@@ -2445,6 +2547,7 @@
 						{
 							"text" : "Rarely",
 							"value" : "Rarely",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : 1
 							},
@@ -2453,6 +2556,7 @@
 						{
 							"text" : "Never",
 							"value" : "Never",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"counter depth" : 0
 							},
@@ -2475,6 +2579,7 @@
 						{
 							"text" : "I go to the farmers' markets",
 							"value" : "I go to the farmers' markets",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "ethylene filter" : 2,
 								 "side by side" : 1,
@@ -2485,6 +2590,7 @@
 						{
 							"text" : "I go to the grocery store but stick to the perimeter",
 							"value" : "I go to the grocery store but stick to the perimeter",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "ethylene filter" : 1,
 								 "side by side" : 1,
@@ -2495,6 +2601,7 @@
 						{
 							"text" : "I go aisle to aisle",
 							"value" : "I go aisle to aisle",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "side by side" : 1
 							},
@@ -2503,6 +2610,7 @@
 						{
 							"text" : "I spend a lot of time in the frozen food section",
 							"value" : "I spend a lot of time in the frozen food section",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "top mount" : 1,
 								 "bottom mount" : 1
@@ -2518,6 +2626,7 @@
 						{
 							"text" : "A small basket at the farmers' market",
 							"value" : "A small basket at the farmers' market",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "ethylene filter" : 2,
 								 "side by side" : 1,
@@ -2528,6 +2637,7 @@
 						{
 							"text" : "A basket at the grocery store to shop the perimeter",
 							"value" : "A basket at the grocery store to shop the perimeter",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "ethylene filter" : 1,
 								 "side by side" : 1,
@@ -2538,6 +2648,7 @@
 						{
 							"text" : "A shopping cart at the grocery store to go aisle-to-aisle",
 							"value" : "A shopping cart at the grocery store to go aisle-to-aisle",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "side by side" : 1
 							},
@@ -2546,6 +2657,7 @@
 						{
 							"text" : "A basket or shopping cart to fill with frozen food",
 							"value" : "A basket or shopping cart to fill with frozen food",
+							"thumbnail" : "../img/icon-features.png",
 							"scoring" : {
 								 "top mount" : 1,
 								 "bottom mount" : 1
@@ -2569,6 +2681,7 @@
 							"text" : "Stainless",
 							"value" : "Stainless",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "stainless"
 							},
@@ -2578,6 +2691,7 @@
 							"text" : "White",
 							"value" : "White",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/WH-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "white"
 							},
@@ -2587,6 +2701,7 @@
 							"text" : "Black",
 							"value" : "Black",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "black"
 							},
@@ -2596,6 +2711,7 @@
 							"text" : "Stainless Black",
 							"value" : "Stainless Black",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "stainless black"
 							},
@@ -2611,6 +2727,7 @@
 							"text" : "Stainless",
 							"value" : "Stainless",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/SS-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "stainless"
 							},
@@ -2620,6 +2737,7 @@
 							"text" : "White",
 							"value" : "White",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/WH-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "white"
 							},
@@ -2629,6 +2747,7 @@
 							"text" : "Black",
 							"value" : "Black",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "black"
 							},
@@ -2638,6 +2757,7 @@
 							"text" : "Stainless Black",
 							"value" : "Stainless Black",
 							"image" : "http://www.maytag.com/digitalassets/ColorBars/BL-MT.png",
+							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								 "colour" : "stainless black"
 							},
