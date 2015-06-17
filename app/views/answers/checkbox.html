@@ -1,23 +1,9 @@
 <!-- Checkbox answers -->
-<style>
-
-.answer {
-	border: solid 0px #ff0000;
-}
-
-.selected {
-	  border: solid 4px #ffff00;
-}
-
-.noanswer {
-	-webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-	border: solid 4px #ff0000;
-}
-</style>
 <div class="answers-main-content row">
-	<a href="" class="answer-option answer-box col-md-3" ng-click="answer.answer=true" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
-		<div ng-bind="answer.text"></div>
+	<a href="" class="answer-option answer-box col-md-6" ng-click="answer.answer=true" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<div class="select-icon"></div>
+		<div class="label-wrap">
+			<span class="label-text" ng-bind="answer.text"></span>
+		</div>
 	</a>
 </div>
