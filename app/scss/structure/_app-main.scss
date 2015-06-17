@@ -13,7 +13,7 @@
 
 .app-content-main-top {
 	@include make-row;
-	margin-bottom: 25px;
+	padding-bottom: 25px;
 	.app-content-main-top-left {
 		@include make-md-column(8);
 	}
@@ -50,6 +50,8 @@
 	}
 }
 
+
+
 .app-categories {
 	text-align: center;
 	display: block;
@@ -73,8 +75,8 @@
 
 .app-content-main-bottom {
 	@include make-row;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	.app-content-main-bottom-left {
 		@include make-md-column(2);
 	}

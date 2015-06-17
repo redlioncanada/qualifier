@@ -1,7 +1,149 @@
 
+// .answer-box {
+// 	background: url('img/4-select-2-up-bg.png') center center no-repeat;
+// 	&.select-4 {
+// 		background: url('img/4-select-2-up-bg.png') center center no-repeat;
+// 	}
+// }
+
 .answer-box {
-	. background: url('img/4-select-2-up-bg.png') center center no-repeat;
-	&.select-4 {
-		background: url('img/4-select-2-up-bg.png') center center no-repeat;
+	&.col-md-6 {
+		display: block;
+		width: 544px;
+		height: 83px;
+		background: url('../img/4-select-2-up-bg.png');
+		.label-wrap {
+			top: 13px;
+			position: relative;
+		}
 	}
 }
+
+.answers-main-content {
+	// @include
+}
+
+// Select answer
+.answer.select {
+	&.single {
+		width: 544px;
+		height: 70px;
+		background: url('../img/multi-select-bg.png');
+		display: block;
+	}
+}
+
+// temporary
+// .answer-box {
+// 	width: 285px;
+//   	height: 59px;
+//   	background: url('../img/4-select-4-up-bg.png');
+// }
+
+// width: 374px;
+// height: 59px;
+// background: url('../img/2-select-bg.png');
+
+// width: 544px;
+// height: 83px;
+// background: url('../img/4-select-2-up-bg.png');
+
+// width: 284px;
+// height: 59px;
+// background: url('../img/4-select-4-up-bg.png');
+
+
+// width: 285px;
+// height: 192px;
+// background: url('../img/4-select-4-up-item-bg.png');
+
+// width: 545px;
+// height: 84px;
+// background: url('../img/multi-select-with-blue-bg.png');
+
+// width: 33px;
+// height: 33px;
+// background: url('../img/not-selected-box.png');
+
+
+
+// width: 861px;
+// height: 42px;
+// background: url('../img/slider-bg.png');
+
+.select {
+
+	.multi {
+		display: block;
+		width: 285px;
+		height: 192px;
+		background: url('../img/4-select-4-up-item-bg.png');
+	}
+
+}
+.selected {
+	.select-icon {
+		background: url('../img/icon-select-selected.png');
+	}
+}
+
+.select-icon {
+	display: block;
+	width: 33px;
+	height: 33px;
+	background: url('../img/icon-select-not-selected.png');
+	position: absolute;
+	top: 21px;
+	left: 27px;
+}
+
+// Ranking
+.as-sortable-item {
+	border: none;
+}
+.ranking {
+	.rank-number-wrap {
+		display: inline-block;
+		border-radius: 2px;
+		background-color: rgba(76, 76, 76, 0.161);
+		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+		width: 63px;
+		height: 61px;
+		.rank-number {
+			font-family: $AG-Bold-Cnd;
+			font-size: 27px;
+			// opacity: 0.54; // this should also be a colour...
+			color: #5d5d5d;
+			top: 12px;
+	  		position: relative;
+		}	
+	}
+	.label-wrap {
+		display: inline-block;
+		width: 532px;
+		height: 49px;
+		background: url('../img/ranking-bg.png');
+	}
+	
+}
+.label-wrap {
+	display: inline-block;
+}
+.label-text {
+	font-family: $AG-Bold-Cnd;
+	font-size: 20px;
+	// opacity: 0.80; // this should also be a colour...
+	color: #575757;
+	top: 10px;
+	position: relative;
+}
+
+// Slider 
+// .jslider-bg {
+// 	width: 861px;
+// 	height: 42px;
+// 	background: url('../img/slider-bg.png');
+// }
+// .jslider-pointer {
+
+// }

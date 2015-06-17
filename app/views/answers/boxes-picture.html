@@ -18,10 +18,10 @@
 </style>
 <div class="answers-main-content row" ng-controller="BoxesPictureCtrl">
 	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box {{answer.classes}} col-md-{{boxWidth}}" ng-click="clear(questionsData.question.show.answers);answer.answer=true;controls.questionHasAnswer=true" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
-		<img ng-if="!!answer.hover" ng-src="{{answer.activeImage}}" ng-mouseover="answer.activeImage=answer.hover" ng-mouseleave="answer.activeImage=answer.image" />
-		<img ng-if="!answer.hover" ng-src="{{answer.activeImage}}" />
+		<div class="img-wrap">
+			<img ng-if="!!answer.hover" ng-src="{{answer.activeImage}}" ng-mouseover="answer.activeImage=answer.hover" ng-mouseleave="answer.activeImage=answer.image" />
+			<img ng-if="!answer.hover" ng-src="{{answer.activeImage}}" />
+		</div>
 		<div class="category-name" ng-bind="answer.text"></div>
 	</a>
-
-
 </div>

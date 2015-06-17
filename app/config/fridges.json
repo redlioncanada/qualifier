@@ -5,6 +5,7 @@
 			"text" : [
 				{
 					"question" : "My fridge…",
+					"type" : "multiselect",
 					"answers" : [
 						{
 							"text" : "Keeps the drinks cold",

@@ -13,11 +13,12 @@
 				<button class="btn btn-default">Begin</button>
 			</div>
 		</div>
-
 	</div>
+	
 
-	<div ng-if="!!questionsData.question.show.type" class="app-categories app-content-main" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
+	<div ng-if="!!questionsData.question.show.type" class="app-categories content-inner" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
 	</div>
+	
 
 
 </div>
