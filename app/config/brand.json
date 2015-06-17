@@ -14,7 +14,7 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"type" : "boxes-picture",
+					"type" : "categories",
 					"question" : "Welcome to My Maytag, what can we help you find?",
 					"sub_question" : "Select One",
 					"answers" : [
@@ -78,7 +78,7 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"type" : "boxes-picture",
+					"type" : "categories",
 					"question" : "Which product would you like to explore first?",
 					"sub_question" : "Select One",
 					"answers" : [

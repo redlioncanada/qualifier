@@ -27,7 +27,7 @@ angular.module('App')
 	  		var qtype = q.show.type;
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
-	          if (qtype == "radio" || qtype == "boxes" || qtype == "boxes-picture" || qtype == "boxes-picture-carousel" || qtype == "checkbox") {
+	          if (qtype == "radio" || qtype == "boxes" || qtype == "boxes-picture" || qtype == "boxes-picture-carousel" || qtype == "checkbox" || qtype == "categories") {
 	            if (a.answer == true) {
 	              return a
 	            }
