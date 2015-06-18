@@ -17,6 +17,6 @@ angular.module('App')
   					$rootScope.controls.questionHasAnswer=true
   					break;
   				}
-  			}		
+  			}
   		}
 });
