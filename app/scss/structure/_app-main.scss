@@ -42,7 +42,7 @@
 
 
 
-.app-categories {
+.app-answers {
 	text-align: center;
 	display: block;
 	width: 100%;
@@ -80,11 +80,17 @@
 		text-align: right;
 	}
 	.btn-next, .btn-prev {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 		svg {
 			display: block;
 			width: 28px;
 		}
-		&:hover {
+		&:hover, &:focus {
 			text-decoration: none;
 		}
 	}
@@ -96,4 +102,14 @@
 		font-size: 9px;
 		margin-top: 5px;
 	}
+	.icon-nav-wrap {
+		a {
+			cursor: pointer;
+		}
+	}
+
 }
+
+// .results-count-wrap {
+// 	background: url('');
+// }

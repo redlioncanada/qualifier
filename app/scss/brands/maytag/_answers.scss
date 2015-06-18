@@ -38,6 +38,12 @@
 
 		}
 	}
+	&.picture {
+		display: block;
+		width: 544px;
+		height: 83px;
+		background: url('../img/4-select-2-up-bg.png');
+	}
 }
 
 .answers-main-content {
@@ -60,11 +66,15 @@
 	background: url('../img/select-with-blue-bg.png');
 	.label-wrap {
 		position: absolute;
+		left: 90px;
 	}
 	.label-more-wrap {
 		display: inline-block;
-		width: 318px;
+		width: 307px;
 		text-align: left;
+		position: absolute;
+		left: 218px;
+		top: 20px;
 	}
 	.label-text-more {
 		color: #ffffff;
@@ -166,6 +176,14 @@
 	border: none;
 }
 .ranking {
+	ul, li, a {
+		-webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	}
 	.rank-number-wrap {
 		display: inline-block;
 		border-radius: 2px;

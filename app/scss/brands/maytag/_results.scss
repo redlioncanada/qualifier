@@ -1,0 +1,36 @@
+#results {
+	.results-top {
+		h1 {
+			font-family: $AG-Bold-Cnd;
+			font-size: 41px;
+			color: #333333;
+		}
+		.results-adjust-desc {
+			font-family: $AG-Bold-Cnd;
+			font-size: 16px;
+			line-height: 15px;
+			color: #5c5c5c;
+		}
+	}
+	li.result {
+		&:nth-child(1), &:nth-child(3) {
+			.product-name {
+				font-size: 20px;
+				color: #373737;
+			}
+		}
+		&:nth-child(2) { // this is for the middle result
+			.product-name {
+				font-size: 27px;
+				color: #293257; 
+			}
+		}
+		.product-name {
+			font-family: $AG-Bold-Cnd;
+		}
+		.product-img-wrap {
+			width: 250px
+		}
+	}
+	
+}

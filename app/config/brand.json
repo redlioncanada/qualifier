@@ -193,12 +193,11 @@
 		"Cooking - Wall Ovens - Size" : {
 			"next" : "Cooking - Wall Ovens - Cooking Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
-			"thumbnail_text" : "Size",
-			"thumbnail_type" : "text",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
-					"sub_question" : "Select one",
+					"question" : "Please carefully measure the space where your cooktop will be",
+					"sub_question" : "<a href=\"\">Measurement Guide</a>",
 					"type" : "radio",
 					"classes" : "boxes select single",
 					"answers" : [
@@ -335,7 +334,6 @@
 		"Cooking - Wall Ovens - Cooking Style" : {
 			"next" : "Cooking - Wall Ovens - Design Style",
 			"previous" : "Cooking - Wall Ovens - Size",
-			"thumbnail_text" : "Style",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -436,12 +434,12 @@
 		"Cooking - Wall Ovens - Design Style" : {
 			"next" : "Cooking - Wall Ovens - Ranking",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
-			"thumbnail_text" : "Design",
-			"thumbnail_type" : "text",			
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
 					"sub_question" : "Select one",
+					"thumbnail" : "../img/icon-style.png",
 					"type" : "radio",
 					"answers" : [
 						{
@@ -478,6 +476,7 @@
 				{
 					"question" : "For dinner, you'll typically find me:",
 					"sub_question" : "Select one",
+					"thumbnail" : "../img/icon-style.png",
 					"type" : "radio",
 					"answers" : [
 						{
@@ -541,13 +540,13 @@
 		"Cooking - Wall Ovens - Ranking" : {
 			"next" : null,
 			"previous" : "Cooking - Wall Ovens - Design Style",
-			"thumbnail_text" : "Priority",
-			"thumbnail_type" : "text",			
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Rank what is most important to you:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-style.png",
 					"answers" : [
 						{
 							"text" : "Capacity",
@@ -592,6 +591,7 @@
 					"question" : "My ideal kitchen is:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-style.png",
 					"answers" : [
 						{
 							"text" : "Able to prepare large meals",
@@ -638,13 +638,13 @@
 		"Cooking - Cooktops - Size" : {
 			"next" : "Cooking - Cooktops - Cooking Style",
 			"previous" : "Cooking - Pre-Qualifier - Wall Ovens/Cooktops",
-			"thumbnail_text" : "Size",
-			"thumbnail_type" : "text",	
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Please carefully measure the space where your cooktop will be <a href=\"\">Measurement Guide</a>",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "24\"",
@@ -806,13 +806,13 @@
 		"Cooking - Cooktops - Cooking Style" : {
 			"next" : "Cooking - Cooktops - Design Style",
 			"previous" : "Cooking - Cooktops - Size",
-			"thumbnail_text" : "Style",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Why do you cook?",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
@@ -853,6 +853,7 @@
 					"question" : "If my cooking style was a pizza, it would be:",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
@@ -896,13 +897,13 @@
 		"Cooking - Cooktops - Design Style" : {
 			"next" : "Cooking - Cooktops - Ranking",
 			"previous" : "Cooking - Cooktops - Cooking Style",
-			"thumbnail_text" : "Design",
-			"thumbnail_type" : "text",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What's your style?",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Modern",
@@ -932,11 +933,12 @@
 				},
 				{
 					"question" : "My friends would describe me as:",
+					"sub_question" : "Select one",
 					"type" : "radio-split",
 					"answers" : [
 						{
 							"text" : "Modern",
-							"text_more" : "Modern (I always like to be on the cutting edge of design trends)",
+							"text_more" : "I always like to be on the cutting edge of design trends",
 							"thumbnail" : "../img/icon-style.png",
 							"value" : "any",
 							"order" : 1
@@ -970,13 +972,13 @@
 		"Cooking - Cooktops - Ranking" : {
 			"next" : "Cooking - Cooktops - Gas",
 			"previous" : "Cooking - Cooktops - Design Style",
-			"thumbnail_text" : "Priority",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Rank what is most important to you:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Energy efficiency",
@@ -1031,6 +1033,7 @@
 					"question" : "My ideal kitchen is:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Energy efficiency",
@@ -1087,13 +1090,13 @@
 		"Cooking - Cooktops - Gas" : {
 			"next" : null,
 			"previous" : "Cooking - Cooktops - Ranking",
-			"thumbnail_text" : "Gas",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
 					"sub_question" : "Select one",
 					"type" : "boxes-icon",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Yes",
@@ -1148,13 +1151,13 @@
 		"Cooking - Ranges - Cooking Style" : {
 			"next" : "Cooking - Ranges - Design Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
-			"thumbnail_text" : "Priority",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Why do you cook?",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "For others/I like to entertain",
@@ -1195,6 +1198,7 @@
 					"question" : "If my cooking style was a pizza, it would be:",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Delivery from my favourite spot",
@@ -1238,13 +1242,13 @@
 		"Cooking - Ranges - Design Style" : {
 			"next" : "Cooking - Ranges - Ranking",
 			"previous" : "Cooking - Ranges - Cooking Style",
-			"thumbnail_text" : "Design",
-			"thumbnail_type" : "text",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What's your style?",
 					"sub_question" : "Select one",
 					"type" : "radio",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Modern",
@@ -1274,16 +1278,20 @@
 				},
 				{
 					"question" : "My friends would describe me as:",
-					"type" : "boxes",
+					"sub_question" : "Select one",
+					"type" : "radio-split",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
-							"text" : "Modern (I always like to be on the cutting edge of design trends)",
+							"text" : "Modern",
+							"text_more" : "I always like to be on the cutting edge of design trends",
 							"value" : "any",
 							"thumbnail" : "../img/icon-style.png",
 							"order" : 1
 						},
 						{
-							"text" : "Traditional (My kitchen reflects my classic style with a hint of nostalgia)",
+							"text" : "Traditional",
+							"text_more" : "My kitchen reflects my classic style with a hint of nostalgia",
 							"value" : "induction",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
@@ -1292,7 +1300,8 @@
 							"order" : 2
 						},
 						{
-							"text" : "Foodie (I'd like to think of myself as the ultimate home chef)",
+							"text" : "Foodie",
+							"text_more" : "I'd like to think of myself as the ultimate home chef",
 							"value" : "gas",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
@@ -1309,13 +1318,13 @@
 		"Cooking - Ranges - Ranking" : {
 			"next" : "Cooking - Ranges - Gas",
 			"previous" : "Cooking - Ranges - Design Style",
-			"thumbnail_text" : "Rank",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Rank what is most important to you:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-features.png",
 					"answers" : [
 						{
 							"text" : "Energy Efficiency",
@@ -1370,6 +1379,7 @@
 					"question" : "My ideal kitchen is:",
 					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
+					"thumbnail" : "../img/icon-features.png",
 					"answers" : [
 						{
 							"text" : "Energy Efficiency",
@@ -1426,13 +1436,13 @@
 		"Cooking - Ranges - Gas" : {
 			"next" : "Cooking - Ranges - Cooking Style 2",
 			"previous" : "Cooking - Ranges - Ranking",
-			"thumbnail_text" : "Gas",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Is your kitchen equipped for gas?",
 					"sub_question" : "Select one",
 					"type" : "boxes-icon",
+					"thumbnail" : "../img/icon-fueltype.png",
 					"answers" : [
 						{
 							"text" : "Yes",
@@ -1459,6 +1469,7 @@
 					"question" : "Are you able to have gas in your kitchen?",
 					"sub_question" : "Select one",
 					"type" : "boxes-icon",
+					"thumbnail" : "../img/icon-size.png",
 					"answers" : [
 						{
 							"text" : "Yes",
@@ -1487,13 +1498,13 @@
 		"Cooking - Ranges - Cooking Style 2" : {
 			"next" : "Cooking - Ranges - Design Style 2",
 			"previous" : "Cooking - Ranges - Gas",
-			"thumbnail_text" : "Style",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What do you consider youself?",
 					"sub_question" : "Select one",
 					"type" : "radio-split",
+					"thumbnail" : "../img/icon-style.png",
 					"answers" : [
 						{
 							"text" : "Baker",
@@ -1517,9 +1528,9 @@
 							"order" : 2
 						},
 						{
-							"text" : "Both",
+							"text" : "I'm Both",
 							"value" : "both",
-							"text_more" : "",
+							"text_more" : "My friends are lucky to know me.",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
@@ -1528,9 +1539,9 @@
 							"order" : 3
 						},
 						{
-							"text" : "Neither",
+							"text" : "I'm Neither",
 							"value" : "neither",
-							"text_more" : "",
+							"text_more" : "I have a stack of take-out menus.",
 							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
@@ -1565,7 +1576,7 @@
 						{
 							"text" : "I'm both",
 							"value" : "both",
-							"text_more" : "I'm both - my friends are lucky to know me.",
+							"text_more" : "My friends are lucky to know me.",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
 								"trueConvection" : 1,
@@ -1576,7 +1587,7 @@
 						{
 							"text" : "I'm neither",
 							"value" : "neither",
-							"text_more" : "My friends are lucky to know me.",
+							"text_more" : "I have a stack of take-out menus.",
 							"thumbnail" : "../img/icon-style.png",
 							"order" : 4
 						}
@@ -1588,7 +1599,6 @@
 		"Cooking - Ranges - Design Style 2" : {
 			"next" : "Cooking - Ranges - Ranking 2",
 			"previous" : "Cooking - Ranges - Cooking Style 2",
-			"thumbnail_text" : "Design",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -1693,7 +1703,6 @@
 		"Cooking - Ranges - Ranking 2" : {
 			"next" : null,
 			"previous" : "Cooking - Ranges - Design Style 2",
-			"thumbnail_text" : "Rank",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -1792,7 +1801,7 @@
 		"Fridge - Size" : {
 			"previous" : "Appliance",
 			"next" : null,
-			"thumbnail_type" : "text",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "Just tell us how much space you have to fill.",
@@ -1907,6 +1916,7 @@
 		"Fridge - Purpose" : {
 			"previous" : "Appliance",
 			"next" : "Fridge - Organization",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "My fridge…",
@@ -2024,6 +2034,7 @@
 		"Fridge - Organization" : {
 			"previous" : "Fridge - Purpose",
 			"next" : "Fridge - Capacity",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How do you keep your fridge?",
@@ -2121,6 +2132,7 @@
 		"Fridge - Capacity" : {
 			"previous" : "Fridge - Organization",
 			"next" : "Fridge - Water",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "On a regular basis, my fridge feeds..",
@@ -2239,6 +2251,7 @@
 		"Fridge - Water" : {
 			"previous" : "Fridge - Capacity",
 			"next" : "Fridge - Ice",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "I drink water from…",
@@ -2344,6 +2357,7 @@
 		"Fridge - Ice" : {
 			"previous" : "Fridge - Water",
 			"next" : "Fridge - Style",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "I would like to use ice in…",
@@ -2474,6 +2488,7 @@
 		"Fridge - Style" : {
 			"previous" : "Fridge - Ice",
 			"next" : "Fridge - Features",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What's most important to you when choosing your appliances?",
@@ -2571,6 +2586,7 @@
 		"Fridge - Features" : {
 			"previous" : "Fridge - Style",
 			"next" : "Fridge - Colour",
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How do you shop for your groceries? (choose all that apply)",
@@ -2672,6 +2688,7 @@
 		"Fridge - Colour" : {
 			"previous" : "Fridge - Features",
 			"next" : null,
+			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "What's your colour preference?",
@@ -2771,7 +2788,6 @@
 		"Laundry - Size" : {
 			"previous" : "Appliance",
 			"next" : null,
-			"thumbnail_text" : "Size",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
