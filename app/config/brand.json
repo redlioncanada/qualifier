@@ -468,10 +468,10 @@
 					"type" : "slider",
 
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
 					    "scale": ["Very Important", "-", "Not a Concern"]       
@@ -492,6 +492,18 @@
 						"2" : {
 							"thumbnail" : "z",
 							"value" : 2,
+							"scoring" : {
+							}
+						},
+						"3" : {
+							"thumbnail" : "y",
+							"value" : 3,
+							"scoring" : {
+							}
+						},
+						"4" : {
+							"thumbnail" : "z",
+							"value" : 4,
 							"scoring" : {
 							}
 						}
@@ -589,10 +601,10 @@
 					"type" : "slider",
 
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
 					    "scale": ["Very Important", "-", "Not a Concern"]       
@@ -615,6 +627,18 @@
 							"value" : 2,
 							"scoring" : {
 							}
+						},
+						"3" : {
+							"thumbnail" : "y",
+							"value" : 3,
+							"scoring" : {
+							}
+						},
+						"4" : {
+							"thumbnail" : "z",
+							"value" : 4,
+							"scoring" : {
+							}
 						}
 					}
 				}											
@@ -631,29 +655,47 @@
 					"question" : "How often do you need extra space in your oven?",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Never", "-", "Often"]       
+					    "scale": ["Never", "-", "Often"]     
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-size.png",
-							"scoring" : {
+							"value" : 0,
+							"scoring" : {							
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-size.png",
+							"value" : 1,
 							"scoring" : {
+								"mediumCapacity" : true
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-size.png",
+							"value" : 2,
 							"scoring" : {
-								"capacity" : 1
+								"largeCapacity" : true
+							}
+						},
+						"3" : {
+							"thumbnail" : "../img/icon-size.png",
+							"value" : 3,
+							"scoring" : {
+								"largerCapacity" : true
+							}
+						},
+						"4" : {
+							"thumbnail" : "../img/icon-size.png",
+							"value" : 4,
+							"scoring" : {
+								"largestCapacity" : true
 							}
 						}
 					}
@@ -931,10 +973,10 @@
 					"type" : "slider",
 
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
 					    "scale": ["Very Important", "-", "Not a Concern"]       
@@ -955,6 +997,18 @@
 						"2" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
+							"scoring" : {
+							}
+						},
+						"3" : {
+							"thumbnail" : "y",
+							"value" : 3,
+							"scoring" : {
+							}
+						},
+						"4" : {
+							"thumbnail" : "z",
+							"value" : 4,
 							"scoring" : {
 							}
 						}
@@ -987,36 +1041,42 @@
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 1,
 							"scoring" : {
+								"smallestCapacity" : true
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
 							"scoring" : {
+								"smallCapacity" : true
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 3,
 							"scoring" : {
+								"mediumCapacity" : true
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 4,
 							"scoring" : {
+								"largeCapacity" : true
 							}
 						},
 						"5" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 5,
 							"scoring" : {
+								"largerCapacity" : true
 							}
 						},
 						"6" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 6,
 							"scoring" : {
+								"largestCapacity" : true
 							}
 						}
 					}
@@ -1041,7 +1101,8 @@
 							"value" : "dog bed",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
-								"capacity" : 1
+								"largerCapacity" : true,
+								"largestCapacity" : true
 							},
 							"order" : 1
 						},
@@ -1050,7 +1111,8 @@
 							"value" : "duvet",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
-								"capacity" : 1
+								"largerCapacity" : true,
+								"largestCapacity" : true
 							},
 							"order" : 2
 						},
@@ -1059,7 +1121,8 @@
 							"value" : "kids",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
-								"capacity" : 1
+								"largerCapacity" : true,
+								"largestCapacity" : true
 							},
 							"order" : 3
 						}
@@ -1486,10 +1549,10 @@
 					"question" : "Is being energy efficient important to your household?",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
 					    "scale": ["Very Important", "-", "Not a Concern"]       
@@ -1510,6 +1573,18 @@
 						"2" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
+							"scoring" : {
+							}
+						},
+						"3" : {
+							"thumbnail" : "y",
+							"value" : 3,
+							"scoring" : {
+							}
+						},
+						"4" : {
+							"thumbnail" : "z",
+							"value" : 4,
 							"scoring" : {
 							}
 						}
@@ -1839,6 +1914,8 @@
 							"value" : "soft drink",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
+								"indoor" : 1,
+								"factory" : 1
 							},
 							"order" : 1
 						},
@@ -1847,6 +1924,8 @@
 							"value" : "cocktails",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
+								"indoor" : 1,
+								"factory" : 1			
 							},
 							"order" : 2
 						},
@@ -1855,6 +1934,8 @@
 							"value" : "water",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
+								"indoor" : 1,
+								"factory" : 1								
 							},
 							"order" : 3
 						},
@@ -1863,6 +1944,8 @@
 							"value" : "smoothies",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
+								"indoor" : 1,
+								"factory" : 1								
 							},
 							"order" : 4
 						},
@@ -1871,6 +1954,8 @@
 							"value" : "cooler",
 							"thumbnail" : "../img/icon-style.png",
 							"scoring" : {
+								"indoor" : 1,
+								"factory" : 1								
 							},
 							"order" : 5
 						}
@@ -2123,11 +2208,11 @@
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 3,
-					    "step": 1,
+					    "to": 50,
+					    "step": 10,
 					    "dimension": "",
 					    "scale": [
-							"0", "I've lost count"
+							"0-10","11-20","21-30","31-40","41-50","I've lost count"
 					    ]       
 					},
 					"answers" : {
@@ -2137,23 +2222,37 @@
 							"scoring" : {
 							}
 						},
-						"1" : {
+						"10" : {
 							"thumbnail" : "../img/icon-size.png",
-							"value" : 1,
+							"value" : 10,
 							"scoring" : {
 								"placeSettings": "13"
 							}
 						},
-						"2" : {
+						"20" : {
 							"thumbnail" : "../img/icon-size.png",
-							"value" : 2,
+							"value" : 20,
 							"scoring" : {
 								"placeSettings": "14"
 							}
 						},
-						"3" : {
+						"30" : {
 							"thumbnail" : "../img/icon-size.png",
-							"value" : 3,
+							"value" : 30,
+							"scoring" : {
+								"placeSettings": "14"
+							}
+						},
+						"40" : {
+							"thumbnail" : "../img/icon-size.png",
+							"value" : 40,
+							"scoring" : {
+								"placeSettings": "14"
+							}
+						},
+						"50" : {
+							"thumbnail" : "../img/icon-size.png",
+							"value" : 50,
 							"scoring" : {
 								"placeSettings": "15"
 							}
@@ -2359,10 +2458,10 @@
 					"type" : "slider",
 
 					"thumbnail" : "../img/icon-size.png",
-					"answer" : 1,
+					"answer" : 2,
 					"options" : {       
 					    "from": 0,
-					    "to": 2,
+					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
 					    "scale": ["Very Important", "-", "Not a Concern"]       
@@ -2383,6 +2482,18 @@
 						"2" : {
 							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
+							"scoring" : {
+							}
+						},
+						"3" : {
+							"thumbnail" : "y",
+							"value" : 3,
+							"scoring" : {
+							}
+						},
+						"4" : {
+							"thumbnail" : "z",
+							"value" : 4,
 							"scoring" : {
 							}
 						}
