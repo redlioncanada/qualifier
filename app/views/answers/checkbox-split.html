@@ -1,6 +1,6 @@
 <!-- Box answers -->
 <div class="answers-main-content">
-	<a href="" class="answer-option answer-box radio-split col-md-6" ng-repeat="answer in questionsData.question.show.answers" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" class="answer-option answer-box radio-split col-md-6" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=!answer.answer" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap">
 			<span class="label-text" ng-bind="answer.text"></span>
