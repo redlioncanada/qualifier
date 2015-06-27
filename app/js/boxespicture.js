@@ -2,7 +2,6 @@
 console.log("loaded")
 angular.module('App')
   .controller('BoxesPictureCtrl', function ($scope, $rootScope) {
-  		// $scope.boxWidth= Math.min(Math.floor(12/$rootScope.questionsData.question.show.answers.length), 1)
   		$scope.toggle = function (answers, answer) {
   			for (var a in answers) {
   				if (answers[a].value == answer.value) {

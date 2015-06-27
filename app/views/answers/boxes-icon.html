@@ -1,6 +1,9 @@
-<!-- Icon box answers -->
+<!-- Picture box answers -->
+<div class="answers-main-content row" ng-controller="BoxesPictureCtrl">
+
 <div class="answers-main-content boxes-icon" ng-controller="BoxesPictureCtrl">
-	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box boxes-icon {{answer.classes}} col-md-{{boxWidth}}" ng-click="toggle(questionsData.question.show.answers, answer);controls.questionHasAnswer=true;answer.activeImage=answer.hover" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" ng-repeat="answer in questionsData.question.show.answers" 
+	class="answer answer-option answer-box boxes-icon {{answer.classes}} col-md-{{boxWidth}}" ng-init="answer.activeImage=answer.image" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="icon-wrap">
 			<img ng-if="!!answer.hover" ng-src="{{answer.activeImage}}" ng-mouseover="answer.activeImage=answer.hover" ng-mouseleave="answer.activeImage=answer.image" />
 			<img ng-if="!answer.hover" ng-src="{{answer.activeImage}}" />
