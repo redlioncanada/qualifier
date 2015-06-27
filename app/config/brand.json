@@ -2233,41 +2233,35 @@
 					},
 					"answers" : {
 						"0" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"10" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 10,
 							"scoring" : {
 								"placeSettings": "13"
 							}
 						},
 						"20" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 20,
 							"scoring" : {
 								"placeSettings": "14"
 							}
 						},
 						"30" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 30,
 							"scoring" : {
 								"placeSettings": "14"
 							}
 						},
 						"40" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 40,
 							"scoring" : {
 								"placeSettings": "14"
 							}
 						},
 						"50" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 50,
 							"scoring" : {
 								"placeSettings": "15"
@@ -2300,19 +2294,16 @@
 					},
 					"answers" : {
 						"0" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
 							"scoring" : {
 							}
@@ -2336,7 +2327,7 @@
 						{
 							"text" : "As soon as it's full",
 							"value" : "full",
-							"thumbnail" : "../img/icon-style.png",
+							"thumbnail" : "../img/laundry-Q2-a.jpg",
 							"scoring" : {
 								 "quiet" : true
 							},
@@ -2345,7 +2336,7 @@
 						{
 							"text" : "After I get my kids organized and into bed",
 							"value" : "night",
-							"thumbnail" : "../img/icon-style.png",
+							"thumbnail" : "../img/laundry-Q2-a.jpg",
 							"scoring" : {
 								"quiet" : true
 							},
@@ -2354,7 +2345,7 @@
 						{
 							"text" : "Every morning before we all scatter out of the house",
 							"value" : "morning",
-							"thumbnail" : "../img/icon-style.png",
+							"thumbnail" : "../img/laundry-Q2-a.jpg",
 							"scoring" : {
 							},
 							"order" : 3
@@ -2362,7 +2353,7 @@
 						{
 							"text" : "Only during off peak hours",
 							"value" : "offpeak",
-							"thumbnail" : "../img/icon-style.png",
+							"thumbnail" : "../img/laundry-Q2-a.jpg",
 							"scoring" : {
 								"quiet" : true
 							},
@@ -2387,8 +2378,7 @@
 						{
 							"text" : "Full & Tidy",
 							"value" : "Full & Tidy",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "http://placehold.it/268x165",
 							"scoring" : {
 								"premiumAdjusters" : 1
 							},
@@ -2397,8 +2387,7 @@
 						{
 							"text" : "Full & Messy",
 							"value" : "Full & Messy",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "http://placehold.it/268x165",
 							"scoring" : {						
 							},
 							"order" : 2
@@ -2406,8 +2395,7 @@
 						{
 							"text" : "I still see some room!",
 							"value" : "I still see some room!",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "http://placehold.it/268x165",
 							"scoring" : {
 								"premiumAdjusters" : 1
 							},
@@ -2416,8 +2404,7 @@
 						{
 							"text" : "Almost empty",
 							"value" : "Almost empty",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "http://placehold.it/268x165",
 							"scoring" : {
 							},
 							"order" : 4
@@ -2435,14 +2422,13 @@
 			"text" : [
 				{
 					"question" : "Select your style...",
-					"type" : "boxes-picture",
+					"type" : "boxes-picture-2",
 					"thumbnail" : "../img/icon-style.png",
 					"answers" : [
 						{ 
 							"text" : "Simple/Sleek",
 							"value" : "Simple/Sleek",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "../img/dishwasher-Q5-sleek-modern.jpg",
 							"scoring" : {
 								"fid" : 1
 							},
@@ -2451,8 +2437,7 @@
 						{
 							"text" : "Traditional/Commercial",
 							"value" : "Traditional/Commercial",
-							"image" : "../img/icon-style.png",
-							"thumbnail" : "../img/icon-style.png",
+							"image" : "../img/dishwasher-Q5-traditional-commercial.jpg",
 							"scoring" : {
 								"console" : 1						
 							},
@@ -2484,19 +2469,19 @@
 					},
 					"answers" : {
 						"0" : {
-							"thumbnail" : "../img/icon-size.png",
+							"thumbnail" : "a",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
-							"thumbnail" : "../img/icon-size.png",
+							"thumbnail" : "b",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
-							"thumbnail" : "../img/icon-size.png",
+							"thumbnail" : "c",
 							"value" : 2,
 							"scoring" : {
 							}
