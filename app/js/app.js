@@ -62,7 +62,6 @@ App.filter('byPrice', function() {
   };
 });
 
-
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
     $rootScope.objSize = function (obj) {

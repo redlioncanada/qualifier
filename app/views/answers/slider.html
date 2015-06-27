@@ -2,45 +2,7 @@
 
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
-<style>
 
-.jslider .jslider-value {
-    background-repeat: no-repeat !important;
-    background-size: 40px 40px;
-    width: 40px;
-	height: 40px;
-	padding-top: 50px;
-	padding-left: 10px;
-	margin-top: -50px;
-}
-
-div.people1 .jslider .jslider-value {
-    background-image: url('https://cdn0.iconfinder.com/data/icons/family-and-people/80/Family_People-09-128.png') !important;
-}
-
-div.people2 .jslider .jslider-value {
-    background-image: url('http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png') !important;
-}
-
-div.people3 .jslider .jslider-value {
-    background-image: url('https://cdn3.iconfinder.com/data/icons/snack-time/400/snack_time-19-256.png') !important;
-}
-
-div.people4 .jslider .jslider-value {
-    background-image: url('https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg') !important;
-}
-div.people5 .jslider .jslider-value {
-    background-image: url('http://iconizer.net/files/DOT_pictograms/orig/restaurant_food.png') !important;
-}
-div.people6 .jslider .jslider-value {
-    background-image: url('https://lh3.googleusercontent.com/-F2a23c4TRdA/AAAAAAAAAAI/AAAAAAAAABU/tWyHXIIuLak/photo.jpg') !important;
-}
-
-.jslider-value span {
-	opacity : 0;
-}
-
-</style>
-<div class="answers-main-content row people{{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="width: 50%; margin-left: 25%; clear: both; float: left; margin-bottom:50px;">
+<div class="answers-main-content answer-slider people{{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
 	<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
 </div>

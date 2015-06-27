@@ -7,9 +7,22 @@
 			<div class="app-content-main-top-left">
 				<h2 ng-bind="questionsData.question.show.question"></h2>
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
+
+				<div>
+					<a class="" ng-if="!!questionsData.question.show.why">
+						<span class="icon-why">?</span>
+						<span ng-bind="questionsData.question.show.why">Why am I being asked this?</span>
+					</a>	
+					<a class="" ng-if="!!questionsData.question.show.measurement_guide">
+						<span class="icon-info">i</span>
+						<span ng-bind="questionsData.question.show.measurement_guide">Measurement Guide</span>
+					</a>	
+				</div>
+				
 			</div>
 
 			<div class="app-content-main-top-right" ng-if="questionsData.scoringQuestions.length">
+				<!-- Needs to switch to save after intro -->
 				<button class="btn btn-default">Begin</button>
 			</div>
 		</div>

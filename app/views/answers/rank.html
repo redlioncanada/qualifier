@@ -1,6 +1,6 @@
 <!-- Rank the answers -->
 <!-- https://github.com/a5hik/ng-sortable -->
-<div class="answers-main-content row ranking" ng-controller="RankCtrl">
+<div class="answers-main-content ranking" ng-controller="RankCtrl">
 	<ul data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers">
 		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
 			<div class="rank-number-wrap">

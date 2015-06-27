@@ -1,3 +1,5 @@
+// Need to separate the styles from the structure here
+
 #results {
 	.results-top {
 		h1 {
@@ -13,24 +15,176 @@
 		}
 	}
 	li.result {
+		border-radius: 5px;
 		&:nth-child(1), &:nth-child(3) {
+			margin-top: 113px;
+			.result-inner {
+				padding-top: 25px;
+			}
 			.product-name {
 				font-size: 20px;
 				color: #373737;
 			}
+			.product-details {
+				padding-top: 16px;
+				padding-bottom: 22px;
+				padding-left: 25px;
+				padding-right: 25px;
+				border-radius: 5px;
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					color-stop(0, #EFEFEF),
+					color-stop(0.3, #FFFFFF)
+				);
+				background-image: -o-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 50%);
+				background-image: -moz-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 50%);
+				background-image: -webkit-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 50%);
+				background-image: -ms-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 50%);
+				background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 50%);
+			}
+			.product-price {
+				font-size: 24px;
+				color: #3d3d3d;
+			}
+			.product-sku {
+				padding-top: 5px;
+			}
+			.product-features-title {
+				font-family: $AG-Bold-Cnd;
+				font-size: 16px;
+				color: #757575;
+			}
+			.btn {
+				font-family: $AG-Bold-Cnd;
+				font-size: 21px;
+				// Bootstrap mixin
+				@include button-variant(#ffffff, #7d7d7d, #7d7d7d);
+				padding: 3px 18px;
+				&:hover {
+					background-color: #002e58;
+				}
+				.btn-text {
+					font-size: 17px;
+				}
+			}
+
 		}
 		&:nth-child(2) { // this is for the middle result
+			h2 {
+				margin-bottom: 20px;
+			}
 			.product-name {
 				font-size: 27px;
 				color: #293257; 
 			}
+			.product-price {
+				font-size: 39px;
+				color: #293257;
+
+			}
+			.product-features-title {
+				font-family: $AG-Bold-Cnd;
+				font-size: 20px;
+				color: #4c4c4c;
+			}
+			.product-features-list {
+				
+				li {
+					font-size: 16px;
+				}
+			}
+			.btn {
+				font-family: $AG-Bold-Cnd;
+				font-size: 21px;
+				// Bootstrap mixin
+				@include button-variant(#ffffff, #002e58, #002e58);
+				padding: 3px 18px;
+				.btn-text {
+					font-size: 21px;
+				}
+			}
+			.result-inner {
+				padding-top: 31px;
+				border-radius: 5px;
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					color-stop(0, #EFEFEF),
+					color-stop(0.3, #FFFFFF)
+				);
+				background-image: -o-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 20%);
+				background-image: -moz-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 20%);
+				background-image: -webkit-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 20%);
+				background-image: -ms-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 20%);
+				background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 20%);
+			}
+			.product-details {
+				padding-top: 33px;
+				padding-bottom: 33px;
+				padding-left: 55px;
+				padding-right: 55px;
+			}
+			.product-sku {
+				color: #999999;
+				font-size: 20px;
+				padding-top: 8px;
+			}
+		}
+		h2 {
+			margin-top: 0;
+			margin-bottom: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.product-details-wrap {
+
 		}
 		.product-name {
 			font-family: $AG-Bold-Cnd;
+			text-transform: uppercase;
+			font-size: 20px;
+			color: #373737;
 		}
 		.product-img-wrap {
-			width: 250px
+			width: 250px;
 		}
+		
+		.product-price {
+			display: inline-block;
+			font-family: $AG-Bold-Cnd;
+			
+		}
+		.product-sku {
+			font-family: $AG-Bold-Cnd;
+			display: inline-block;
+			font-size: 14px;
+			color: #3d3d3d;
+			text-transform: uppercase;
+			text-align: right;
+		}
+
+		
+		.product-features-list {
+			list-style: none;
+			margin-bottom: 30px;
+			li {
+				font-size: 12px;
+				display: block;
+				&:before {
+				    content:"\2713\0020";
+				    color: #232c52;
+				    padding-right: 5px;
+				}
+			}
+		}
+		.btn-wrap {
+			text-align: center;
+		}
+		
 	}
-	
+
 }

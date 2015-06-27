@@ -2,9 +2,9 @@
 
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
-<div class="answers-main-content row" style="width: 50%; margin-left: 25%; clear: both; float: left">
+<div class="answers-main-content answer-slider">
 	<input ng-model="questionsData.question.text[0].slider_answer" ng-change="questionsData.question.text[0].answer=questionsData.question.text[0].answers[questionsData.question.text[0].slider_answer]" type="text" id="answerSlider" slider options="questionsData.question.text[0].options" />
 </div>
-<div class="answers-main-content row" style="width: 50%; margin-left: 25%; clear: both; float: left">
+<div class="answers-main-content answer-slider">
     <input ng-model="questionsData.question.text[1].slider_answer" ng-change="questionsData.question.text[1].answer=questionsData.question.text[1].answers[questionsData.question.text[1].slider_answer]" type="text" id="answerSlider" slider options="questionsData.question.text[1].options" />
 </div>

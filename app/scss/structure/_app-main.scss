@@ -39,7 +39,9 @@
 	}
 }
 
-
+.answers-main-content {
+	@include make-row;
+}
 
 
 .app-answers {
