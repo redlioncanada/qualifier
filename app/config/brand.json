@@ -915,12 +915,6 @@
 				{
 					"question" : "Is being energy efficient important to your household?",
 					"type" : "slider",
-
-					"question" : "Why do you cook?",
-					"sub_question" : "Select one",
-					"why" : "Why am I being asked this?",
-					"info" : "Measurement Guide",
-					"type" : "radio",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,
 					"options" : {       

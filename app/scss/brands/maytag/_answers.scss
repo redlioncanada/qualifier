@@ -17,9 +17,42 @@
 	}
 }
 
+.answers-main-content {
+	// @include
+}
+
+.select-icon {
+	display: block;
+	width: 33px;
+	height: 33px;
+	background: url('../img/icon-select-not-selected.png');
+	position: absolute;
+	top: 21px;
+	left: 27px;
+}
+
+.selected {
+	.select-icon {
+		background: url('../img/icon-select-selected.png');
+	}
+}
+
+.label-wrap {
+	display: inline-block;
+}
+.label-text {
+	font-family: $AG-Bold-Cnd;
+	font-size: 20px;
+	// opacity: 0.80; // this should also be a colour...
+	color: #575757;
+	// top: 10px;
+	position: relative;
+}
 
 .answer-box {
-	&.col-md-6 {
+
+	// Single select answers
+	&.radio {
 		display: block;
 		width: 544px;
 		height: 83px;
@@ -39,164 +72,170 @@
 
 		}
 	}
+	// Fancy split single select
+	&.radio-split {
+		width: 545px;
+		height: 84px;
+		background: url('../img/select-with-blue-bg.png');
+		display: inline-block;
+		.label-wrap {
+			position: absolute;
+			left: 90px;
+		}
+		.label-more-wrap {
+			display: inline-block;
+			width: 307px;
+			text-align: left;
+			position: absolute;
+			left: 218px;
+			top: 20px;
+		}
+		.label-text-more {
+			color: #ffffff;
+			font-size: 16px;
+			line-height: 16px;
+			font-family: $AG-Bold-Cnd;
+		}
+	}
+	// Checkbox
+	&.checkbox {
+		width: 532px;
+		height: 70px;
+		background: url('../img/checkbox-bg.png');
+		display: inline-block;
+		.label-wrap {
+			position: absolute;
+			left: 90px;
+		}
+
+	}
+	// &.multi {
+	// 	display: block;
+	// 	width: 285px;
+	// 	height: 192px;
+	// 	background: url('../img/4-select-4-up-item-bg.png');
+	// }
+
 	&.picture {
 		display: block;
 		width: 544px;
 		height: 83px;
 		background: url('../img/4-select-2-up-bg.png');
 	}
-}
-
-.answers-main-content {
-	// @include
-}
-
-// Select answer
-.answer-box.select {
-	&.single {
-		width: 544px;
-		height: 70px;
-		background: url('../img/multi-select-bg.png');
-		display: block;
-	}
-}
-
-.answer-box.radio-split {
-	width: 545px;
-	height: 84px;
-	background: url('../img/select-with-blue-bg.png');
-	.label-wrap {
-		position: absolute;
-		left: 90px;
-	}
-	.label-more-wrap {
+	.picture-2 {
+		width: 277px;
+		height: 229px;
+		background: url('../img/boxes-picture-2-up-bg.png');
 		display: inline-block;
-		width: 307px;
-		text-align: left;
-		position: absolute;
-		left: 218px;
-		top: 20px;
-	}
-	.label-text-more {
-		color: #ffffff;
-		font-size: 16px;
-		line-height: 16px;
-		font-family: $AG-Bold-Cnd;
-	}
-}
-
-.answer-box.boxes-icon-2 {
-	// @include make-md-column(6);
-	width: 181px;
-	height: 215px;
-	background: url('../img/icon-thumb-bg.png');
-	display: inline-block;
-	position: relative;
-	.icon-wrap {
-		img {
-			position: relative;
-			top: 25px;
+		position: relative;
+		.icon-wrap {
+			img {
+				position: relative;
+				top: 25px;
+			}
+		}
+		.select-icon {
+			top: 188px;
+			left: 19px;
+		}
+		.label-wrap {
+			position: absolute;
+			bottom: 11px;
+			left: 66px;
+			text-align: left;
 		}
 	}
-	.select-icon {
-		top: 170px;
-		left: 19px;
-	}
-	.label-wrap {
-		position: absolute;
-		bottom: 21px;
-	}
-}
-.answer-box.boxes-icon-5 {
-	// // @include make-md-column(6);
-	// width: 181px;
-	// height: 215px;
-	// background: url('../img/icon-thumb-bg.png');
-	// display: inline-block;
-	// position: relative;
-	// .icon-wrap {
-	// 	img {
-	// 		position: relative;
-	// 		top: 25px;
-	// 	}
-	// }
-	// .select-icon {
-	// 	top: 170px;
-	// 	left: 19px;
-	// }
-	// .label-wrap {
-	// 	position: absolute;
-	// 	bottom: 21px;
-	// }
-}
-
-.answer-box.picture-4 {
-	width: 277px;
-	height: 229px;
-	background: url('../img/boxes-picture-4-up-bg.png');
-	display: inline-block;
-	position: relative;
-	.icon-wrap {
-		img {
-			position: relative;
-			top: 25px;
+	.picture-3 {
+		width: 277px;
+		height: 229px;
+		background: url('../img/boxes-picture-2-up-bg.png');
+		display: inline-block;
+		position: relative;
+		.icon-wrap {
+			img {
+				position: relative;
+				top: 25px;
+			}
+		}
+		.select-icon {
+			top: 188px;
+			left: 19px;
+		}
+		.label-wrap {
+			position: absolute;
+			bottom: 11px;
+			left: 66px;
+			text-align: left;
 		}
 	}
-	.select-icon {
-		top: 188px;
-		left: 19px;
-	}
-	.label-wrap {
-		position: absolute;
-		bottom: 11px;
-		left: 66px;
-		text-align: left;
-	}
-}
-.answer-box.picture-3 {
-	width: 277px;
-	height: 229px;
-	background: url('../img/boxes-picture-2-up-bg.png');
-	display: inline-block;
-	position: relative;
-	.icon-wrap {
-		img {
-			position: relative;
-			top: 25px;
+	.picture-4 {
+		width: 277px;
+		height: 229px;
+		background: url('../img/boxes-picture-4-up-bg.png');
+		display: inline-block;
+		position: relative;
+		.icon-wrap {
+			img {
+				position: relative;
+				top: 25px;
+			}
+		}
+		.select-icon {
+			top: 188px;
+			left: 19px;
+		}
+		.label-wrap {
+			position: absolute;
+			bottom: 11px;
+			left: 66px;
+			text-align: left;
 		}
 	}
-	.select-icon {
-		top: 188px;
-		left: 19px;
-	}
-	.label-wrap {
-		position: absolute;
-		bottom: 11px;
-		left: 66px;
-		text-align: left;
-	}
-}
-.answer-box.picture-2 {
-	width: 277px;
-	height: 229px;
-	background: url('../img/boxes-picture-2-up-bg.png');
-	display: inline-block;
-	position: relative;
-	.icon-wrap {
-		img {
-			position: relative;
-			top: 25px;
+	// Single select with icons - 2 answers
+	.boxes-icon-2 {
+		// @include make-md-column(6);
+		width: 181px;
+		height: 215px;
+		background: url('../img/icon-thumb-bg.png');
+		display: inline-block;
+		position: relative;
+		.icon-wrap {
+			img {
+				position: relative;
+				top: 25px;
+			}
+		}
+		.select-icon {
+			top: 170px;
+			left: 19px;
+		}
+		.label-wrap {
+			position: absolute;
+			bottom: 21px;
 		}
 	}
-	.select-icon {
-		top: 188px;
-		left: 19px;
-	}
-	.label-wrap {
-		position: absolute;
-		bottom: 11px;
-		left: 66px;
-		text-align: left;
+	// Multiselect with icons - 5 answers
+	.boxes-icon-5 {
+		// // @include make-md-column(6);
+		// width: 181px;
+		// height: 215px;
+		// background: url('../img/icon-thumb-bg.png');
+		// display: inline-block;
+		// position: relative;
+		// .icon-wrap {
+		// 	img {
+		// 		position: relative;
+		// 		top: 25px;
+		// 	}
+		// }
+		// .select-icon {
+		// 	top: 170px;
+		// 	left: 19px;
+		// }
+		// .label-wrap {
+		// 	position: absolute;
+		// 	bottom: 21px;
+		// }
 	}
 }
 
@@ -232,37 +271,10 @@
 // height: 33px;
 // background: url('../img/not-selected-box.png');
 
-
-
 // width: 861px;
 // height: 42px;
 // background: url('../img/slider-bg.png');
 
-.select {
-
-	.multi {
-		display: block;
-		width: 285px;
-		height: 192px;
-		background: url('../img/4-select-4-up-item-bg.png');
-	}
-
-}
-.selected {
-	.select-icon {
-		background: url('../img/icon-select-selected.png');
-	}
-}
-
-.select-icon {
-	display: block;
-	width: 33px;
-	height: 33px;
-	background: url('../img/icon-select-not-selected.png');
-	position: absolute;
-	top: 21px;
-	left: 27px;
-}
 
 // Ranking
 .as-sortable-item {
@@ -312,16 +324,5 @@
 		top: 10px;
 	}
 	
-}
-.label-wrap {
-	display: inline-block;
-}
-.label-text {
-	font-family: $AG-Bold-Cnd;
-	font-size: 20px;
-	// opacity: 0.80; // this should also be a colour...
-	color: #575757;
-	// top: 10px;
-	position: relative;
 }
 

@@ -260,8 +260,8 @@ div.people6 .jslider .jslider-value {
 			// background-position: -1px -60px; 
 			position: absolute; 
 			left: 20%; 
-			top: -4px; 
-			margin-left: -8px; 
+			top: -12px; 
+			margin-left: -39px; 
 			cursor: pointer; 
 			cursor: hand; 
 
@@ -269,7 +269,7 @@ div.people6 .jslider .jslider-value {
 			display: block;
 			width: 72px;
 			height: 66px;
-			background: url('../img/slider-pointer.svg') !important;
+			background: url('../img/slider-pointer.png') !important;
 			background-size: 72px 66px;
 		}
 		.jslider-pointer-to { 
@@ -295,24 +295,24 @@ div.people6 .jslider .jslider-value {
 		}
 		.jslider-value {
 			left: 0; 
-			font-size: 9px;
-			white-space: nowrap; 
-			padding: 1px 2px 0; 
+			// font-size: 9px;
+			// white-space: nowrap; 
+			// padding: 1px 2px 0; 
 			position: absolute; 
-			top: -19px;
-			background: white; 
-			line-height: 12px; 
-			-moz-border-radius: 2px; 
-			-webkit-border-radius: 2px; 
-			-o-border-radius: 2px; 
-			border-radius: 2px; 
+			// top: -19px;
+			// background: white; 
+			// line-height: 12px; 
+			// -moz-border-radius: 2px; 
+			// -webkit-border-radius: 2px; 
+			// -o-border-radius: 2px; 
+			// border-radius: 2px; 
 
 
 			// New
 		    background-repeat: no-repeat !important;
-		    background-size: 40px 40px;
-		    width: 40px;
-			height: 40px;
+		    background-size: 141px 47px;
+		    width: 141px;
+			height: 47px;
 			padding-top: 50px;
 			padding-left: 10px;
 			margin-top: -50px;
