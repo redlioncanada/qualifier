@@ -2,6 +2,7 @@
 <div class="answers-main-content" ng-controller="BoxesPictureCtrl">
 	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box picture-3 {{answer.classes}} col-md-{{boxWidth}}" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="img-wrap">
+			<!-- 3 image of 357 x 165 -->
 			<img ng-src="answer.image" />
 		</div>
 		<div class="select-icon"></div>

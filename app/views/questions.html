@@ -8,18 +8,20 @@
 				<h2 ng-bind="questionsData.question.show.question"></h2>
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
-				<div>
-					<a class="" ng-if="!!questionsData.question.show.why">
+				<div class="extra-info-wrap">
+					<a class="" ng-if="!!questionsData.question.show.explanation_title">
 						<span class="icon-why">?</span>
-						<span ng-bind="questionsData.question.show.why">Why am I being asked this?</span>
-					</a>	
-					<a class="" ng-if="!!questionsData.question.show.measurement_guide">
+						<span ng-bind="questionsData.question.show.explanation_title"></span>
+					</a>
+					<a class="" ng-if="!!questionsData.question.show.info">
 						<span class="icon-info">i</span>
-						<span ng-bind="questionsData.question.show.measurement_guide">Measurement Guide</span>
+						<span ng-bind="questionsData.question.show.info"></span>
 					</a>	
 				</div>
-				
 			</div>
+
+			<!-- Needs to be in a hover box / overlay
+				<span ng-bind="expquestionsData.question.show.explanation"></span> -->
 
 			<div class="app-content-main-top-right" ng-if="questionsData.scoringQuestions.length">
 				<!-- Needs to switch to save after intro -->

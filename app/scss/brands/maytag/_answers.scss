@@ -85,7 +85,7 @@
 	}
 }
 
-.answer-box.boxes-icon {
+.answer-box.boxes-icon-2 {
 	// @include make-md-column(6);
 	width: 181px;
 	height: 215px;
@@ -107,6 +107,29 @@
 		bottom: 21px;
 	}
 }
+.answer-box.boxes-icon-5 {
+	// // @include make-md-column(6);
+	// width: 181px;
+	// height: 215px;
+	// background: url('../img/icon-thumb-bg.png');
+	// display: inline-block;
+	// position: relative;
+	// .icon-wrap {
+	// 	img {
+	// 		position: relative;
+	// 		top: 25px;
+	// 	}
+	// }
+	// .select-icon {
+	// 	top: 170px;
+	// 	left: 19px;
+	// }
+	// .label-wrap {
+	// 	position: absolute;
+	// 	bottom: 21px;
+	// }
+}
+
 .answer-box.picture-4 {
 	width: 277px;
 	height: 229px;
