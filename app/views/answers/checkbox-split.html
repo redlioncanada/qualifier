@@ -1,6 +1,6 @@
 <!-- Checkbox multi-select answers - two columns for 4 anwsers and up with a blue bg -->
 <div class="answers-main-content">
-	<a href="" class="answer-option answer-box checkbox split" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=!answer.answer" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" class="answer-option answer-box checkbox-split" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=!answer.answer" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap">
 			<span class="label-text" ng-bind="answer.text"></span>

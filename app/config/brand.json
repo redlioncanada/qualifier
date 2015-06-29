@@ -755,7 +755,7 @@
 				{
 					"question" : "How do you use your oven?",
 					"sub_question" : "Select all that apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-features.png",
 					"answers" : [
 						{
@@ -1053,13 +1053,12 @@
 				{
 					"question" : "Are you concerned about the noise level of your laundry machines?",
 					"sub_question" : "Select one",
-					"type" : "boxes-picture-3",
+					"type" : "radio",
 					"thumbnail" : "../img/icon-noise.png",
 					"answers" : [
 						{
 							"text" : "Very much so, my laundry is located near a bedroom",
 							"value" : "sensitive",
-							"image" : "http://placehold.it/357x165",
 							"scoring" : {
 								"soundGuard" : 1,
 							 	"vibrationControl" : 1
@@ -1069,7 +1068,6 @@
 						{
 							"text" : "A little bit, but noise doesn’t bother me for the most part",
 							"value" : "concerned",
-							"image" : "http://placehold.it/357x165",
 							"scoring" : {
 								"audioLevel" : 1
 							},
@@ -1078,7 +1076,6 @@
 						{
 							"text" : "Not at all, my laundry is down in the basement",
 							"value" : "unconcerned",
-							"image" : "http://placehold.it/357x165",
 							"scoring" : {
 							},
 							"order" : 3
@@ -1097,7 +1094,7 @@
 				{
 					"question" : "Do you have any space constraints for your laundry room?",
 					"sub_question" : "Select one",
-					"type" : "radio",
+					"type" : "radio-4",
 					"thumbnail" : "../img/icon-orientation.png",
 					"answers" : [
 						{
@@ -1147,7 +1144,7 @@
 				{
 					"question" : "Do you often need items washed and dried in under an hour?",
 					"sub_question" : "Select all that apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-speed.png",
 					"answers" : [
 						{
@@ -1198,7 +1195,7 @@
 				{
 					"question" : "What kind of fabrics do you wash together?",
 					"sub_question" : "Select all that apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-fabric.png",
 					"answers" : [
 						{
@@ -1670,7 +1667,7 @@
 				{
 					"question" : "I need a fridge for my family that can… ",
 					"sub_question" : "Select all the apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-organization.png",
 					"answers" : [
 						{
@@ -1719,7 +1716,7 @@
 				{
 					"question" : "You wake up thirsty in the middle of the night, so you grab...",
 					"sub_question" : "Select one",
-					"type" : "radio",
+					"type" : "radio-4",
 					"thumbnail" : "../img/icon-water.png",
 					"answers" : [
 						{
@@ -1847,7 +1844,7 @@
 				{
 					"question" : "For the most part, your family’s fridge is...",
 					"sub_question" : "Select one",
-					"type" : "radio",
+					"type" : "radio-4",
 					"thumbnail" : "../img/icon-orientation.png",
 					"answers" : [
 						{
@@ -1942,7 +1939,7 @@
 				{
 					"question" : "How do you shop for your groceries?",
 					"sub_question" : "Select all that apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-features.png",
 					"answers" : [
 						{
@@ -2161,7 +2158,7 @@
 			"text" : [
 				{
 					"question" : "When do you usually hit the start button?",
-					"type" : "radio",
+					"type" : "radio-4",
 					"thumbnail" : "../img/icon-noise.png",
 					"answers" : [
 						{
@@ -2208,7 +2205,7 @@
 			"text" : [
 				{
 					"question" : "Before running your dishwasher, it looks like this:",
-					"type" : "boxes-picture",
+					"type" : "boxes-picture-4",
 					"thumbnail" : "../img/icon-organization.png",
 					"answers" : [
 						{
