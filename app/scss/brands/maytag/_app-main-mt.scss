@@ -30,9 +30,10 @@
 
 
 .app-answers {
+	float: left;
 	.answer-option {
-		margin-left: 10px;
-		margin-right: 10px;
+		// margin-left: 10px;
+		// margin-right: 10px;
 		&:hover {
 			text-decoration: none;
 			// fade in / out

@@ -51,8 +51,15 @@
 	position: relative;
 }
 
+// .answer-option {
+// 	margin-left: 9px;
+// 	margin-right: 9px;
+// }
+
 .answer-box {
-	  position: relative;
+	margin-left: 9px;
+	margin-right: 9px;
+	position: relative;
 	// Single select answers
 	&.radio {
 		margin-left: auto;
