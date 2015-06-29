@@ -108,18 +108,6 @@
 							},
 							"next" : "Cooking - Wall Ovens - Size",						
 							"order" : 2
-						}, 
-						{
-							"text" : "Vent Hoods",
-							"value" : "hoods",
-							"classes" : "category venthoods",
-							"image" : "img/vent-hood-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/vent-hood-Standalone_1175X1290.jpg",
-							"scoring" : {
-								"type" : "Vents - Size"
-							},	
-							"next" : "Vents - Size",						
-							"order" : 4
 						}
 					]
 				},
@@ -151,18 +139,6 @@
 							},
 							"next" : "Cooking - Wall Ovens - Size",
 							"order" : 2
-						},
-						{
-							"text" : "Vent Hoods",
-							"value" : "hoods",
-							"classes" : "category venthoods",
-							"image" : "img/vent-hood-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/vent-hood-Standalone_1175X1290.jpg",
-							"scoring" : {
-								"type" : "Vents"
-							},
-							"next" : "Vents - Size",
-							"order" : 4
 						}
 					]
 				}
@@ -198,13 +174,13 @@
 						"27" : {
 							"value" : 1,
 							"scoring" : {
-								 "width" : 27
+								"width" : 27
 							}
 						},
 						"30" : {
 							"value" : 0,
 							"scoring" : {
-								 "width" : 30
+								"width" : 30
 							}
 						}
 					}								
@@ -228,18 +204,19 @@
 						"combo" : {
 							"value" : 1,
 							"scoring" : {
-								 "combo" : true
+								"combo" : true
 							}
 						},
 						"double" : {
 							"value" : 2,
 							"scoring" : {
-								 "double" : true
+								"double" : true
 							}
 						},
 						"no restriction" : {
 							"value" : 3,
 							"scoring" : {
+
 							}
 						}
 					}								
@@ -317,7 +294,7 @@
 					"question" : "How would your family describe you?",
 					"sub_question" : "Select all that apply",
 					"thumbnail" : "../img/icon-style.png",
-					"type" : "checkbox-split",
+					"type" : "checkbox-4-split",
 					"answers" : [
 						{
 							"text" : "A baker",
@@ -677,7 +654,7 @@
 				{
 					"question" : "Why do you cook?",
 					"sub_question" : "Select one",
-					"type" : "radio",
+					"type" : "radio-4",
 					"thumbnail" : "../img/icon-style.png",
 					"answers" : [
 						{
@@ -968,7 +945,7 @@
 			"text" : [
 				{
 					"question" : "How many people are in your household?",
-					"type" : "slider",
+					"type" : "slider-people",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 3,
 					"options" : {       
@@ -980,42 +957,36 @@
 					},
 					"answers" : {
 						"1" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 1,
 							"scoring" : {
 								"smallestCapacity" : true
 							}
 						},
 						"2" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 2,
 							"scoring" : {
 								"smallCapacity" : true
 							}
 						},
 						"3" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 3,
 							"scoring" : {
 								"mediumCapacity" : true
 							}
 						},
 						"4" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 4,
 							"scoring" : {
 								"largeCapacity" : true
 							}
 						},
 						"5" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 5,
 							"scoring" : {
 								"largerCapacity" : true
 							}
 						},
 						"6" : {
-							"thumbnail" : "../img/icon-size.png",
 							"value" : 6,
 							"scoring" : {
 								"largestCapacity" : true
@@ -2023,7 +1994,7 @@
 				{
 					"question" : "What would we find inside your dishwasher right now?",
 					"sub_question" : "Select all that apply",
-					"type" : "checkbox",
+					"type" : "checkbox-4",
 					"thumbnail" : "../img/icon-cleaning.png",
 					"answers" : [
 						{

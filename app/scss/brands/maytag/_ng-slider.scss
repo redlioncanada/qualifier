@@ -27,7 +27,6 @@ div.people6 .jslider .jslider-value {
     background-image: url('../img/family-5.png') !important;
 }
 
-
 .answer-slider {
 	// width: 50%; 
 	// margin-left: 25%; 
@@ -140,7 +139,7 @@ div.people6 .jslider .jslider-value {
 				z-index: 1;
 				left: 0; 
 				width: 1px; 
-				background-color: #185F83;
+				// background-color: #185F83;
 			}
 		}
 		&.sliderCSS {
@@ -261,7 +260,8 @@ div.people6 .jslider .jslider-value {
 			position: absolute; 
 			left: 20%; 
 			top: -12px; 
-			margin-left: -39px; 
+			// margin-left: -39px; 
+			margin-left: -36px; 
 			cursor: pointer; 
 			cursor: hand; 
 
@@ -331,7 +331,8 @@ div.people6 .jslider .jslider-value {
 				font-size: 0; 
 			}
 			ins { 
-				font-size: 9px; 
+				font-family: $AG-Bold-Cnd;
+				font-size: 20px; 
 				text-decoration: none; 
 				position: absolute; 
 				left: 0px; 
@@ -351,5 +352,10 @@ div.people6 .jslider .jslider-value {
 	.jslider-single .jslider-value-to,
 	.jslider-single .jslider-bg .v,
 	.jslider-limitless .jslider-label { display: none; }
+	&.bottom {
+		.jslider-pointer {
+			background: url('../img/slider-pointer-2.png') !important;
+		}
+	}
 }
 

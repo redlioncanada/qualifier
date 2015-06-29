@@ -3,6 +3,6 @@
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
 
-<div class="answers-main-content answer-slider {{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
+<div class="answers-main-content answer-slider people{{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
 	<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
 </div>
