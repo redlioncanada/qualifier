@@ -53,7 +53,8 @@ div.people6 .jslider .jslider-value {
 
 		& .jslider-bg i {
 		// & .jslider-pointer { 
-			background: url(../img/jslider.png) no-repeat 0 0; 
+			// background: url(../img/jslider.png) no-repeat 0 0; 
+			background: none !important;
 		}
 
 
@@ -288,7 +289,7 @@ div.people6 .jslider .jslider-value {
 			position: absolute; 
 			top: -18px; 
 			left: 0px; 
-			
+
 			font-family: $AG-Bold-Cnd;
 			font-size: 20px;
 		}	

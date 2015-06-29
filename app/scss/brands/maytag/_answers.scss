@@ -52,13 +52,12 @@
 .answer-box {
 	  position: relative;
 	// Single select answers
-	&.radio {
+	&.radio, &.radio-4 {
 		display: block;
-		width: 544px;
-		height: 83px;
-		background: url('../img/4-select-2-up-bg.png');
-		margin-left: auto;
-		margin-right: auto;
+		width: 532px;
+		height: 70px;
+		background: url('../img/radio-bg.png');
+		margin-bottom: 15px;
 		.label-wrap {
 			top: 0;
 			// top: 9px; for 4 up
@@ -73,22 +72,8 @@
 	}
 	// 4 or more = 2 columns
 	&.radio-4 {
-		width: 544px;
-		height: 83px;
-		background: url('../img/4-select-2-up-bg.png');
 		display: inline-block;
 		float: left;
-		.label-wrap {
-			top: 0;
-			// top: 9px; for 4 up
-			position: relative;
-			left: 15px;
-			height: 70px;
-			padding: 23px 0 0 0;
-			max-width: 405px;
-			text-align: left;
-			// padding: 10px 0 0 0;
-		}
 	}
 	// Fancy split bg
 	&.radio-split, &.checkbox-split {
@@ -99,13 +84,14 @@
 		.label-wrap {
 			position: absolute;
 			left: 90px;
+			top: 24px;
 		}
 		.label-more-wrap {
 			display: inline-block;
-			width: 307px;
+			width: 303px;
 			text-align: left;
 			position: absolute;
-			left: 218px;
+			left: 220px;
 			top: 20px;
 		}
 		.label-text-more {
@@ -116,27 +102,26 @@
 		}
 	}
 	// Checkbox
-	&.checkbox {
+	&.checkbox, &.checkbox-4 {
 		width: 532px;
 		height: 70px;
 		background: url('../img/checkbox-bg.png');
 		display: block;
+		margin-bottom: 15px;
 		.label-wrap {
 			position: absolute;
-			left: 110px;
-			top: 20px;
+			left: 100px;
+			top: 23px;
 		}
 	}
 	&.checkbox-4 {
-		width: 532px;
-		height: 70px;
-		background: url('../img/checkbox-bg.png');
 		display: inline-block;
-		.label-wrap {
-			position: absolute;
-			left: 110px;
-			top: 20px;
-		}
+		float: left;
+		// .label-wrap {
+		// 	position: absolute;
+		// 	left: 100px;
+		// 	top: 23px;
+		// }
 	}
 	// &.checkbox.split {
 	// 	width: 545px;
@@ -208,7 +193,7 @@
 		}
 	}
 	// Single select with icons - 2 answers
-	&.boxes-icon-2{
+	&.boxes-icon-2, &.boxes-icon-5  { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
 		width: 181px;
 		height: 215px;
@@ -229,11 +214,11 @@
 			bottom: 21px;
 		}
 	}
-	// Multiselect with icons - 5 answers
-	&.boxes-icon-5 {
+	
+	// &.boxes-icon-5 {
 		// // @include make-md-column(6);
-		// width: 181px;
-		// height: 215px;
+		// width: 183px;
+		// height: 217px;
 		// background: url('../img/icon-thumb-bg.png');
 		// display: inline-block;
 		// position: relative;
@@ -251,7 +236,7 @@
 		// 	position: absolute;
 		// 	bottom: 21px;
 		// }
-	}
+	// }
 }
 
 // temporary
