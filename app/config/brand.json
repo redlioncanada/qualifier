@@ -1032,7 +1032,7 @@
 						{
 							"text" : "The kids’ laundry. So much kids’ laundry.",
 							"value" : "kids",
-							"thumbnail" : "../img/laundry-Q2-c.jpg",
+							"image" : "../img/laundry-Q2-c.jpg",
 							"scoring" : {
 								"largerCapacity" : true,
 								"largestCapacity" : true

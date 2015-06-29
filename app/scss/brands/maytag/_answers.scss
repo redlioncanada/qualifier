@@ -77,6 +77,7 @@
 		height: 83px;
 		background: url('../img/4-select-2-up-bg.png');
 		display: inline-block;
+		float: left;
 		.label-wrap {
 			top: 0;
 			// top: 9px; for 4 up
@@ -157,15 +158,16 @@
 		height: 83px;
 		background: url('../img/4-select-2-up-bg.png');
 	}
-	&.picture-2 {
-		width: 277px;
+	&.picture-2, &.picture-3 {
+		width: 367px;
 		height: 229px;
-		background: url('../img/boxes-picture-2-up-bg.png');
+		background: url('../img/boxes-picture-3-bg.png');
 		display: inline-block;
-		.icon-wrap {
+		.img-wrap {
+			margin-top: 4px;
 			img {
-				position: relative;
-				top: 25px;
+				// position: relative;
+				// top: 25px;
 			}
 		}
 		.select-icon {
@@ -180,37 +182,18 @@
 		}
 	}
 	&.picture-3 {
-		// 3 image of 357 x 165
-		width: 367px;
-		height: 229px;
-		background: url('../img/boxes-picture-3-bg.png');
-		display: inline-block;
-		.icon-wrap {
-			img {
-				position: relative;
-				top: 25px;
-			}
-		}
-		.select-icon {
-			top: 188px;
-			left: 19px;
-		}
-		.label-wrap {
-			position: absolute;
-			bottom: 11px;
-			left: 66px;
-			text-align: left;
-		}
+		float: left;
 	}
 	&.picture-4 {
 		width: 277px;
 		height: 229px;
 		background: url('../img/boxes-picture-4-up-bg.png');
 		display: inline-block;
-		.icon-wrap {
+		.img-wrap {
+			margin-top: 4px;
 			img {
-				position: relative;
-				top: 25px;
+				// position: relative;
+				// top: 25px;
 			}
 		}
 		.select-icon {
