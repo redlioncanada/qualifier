@@ -6,9 +6,8 @@ https://www.npmjs.com/package/ng-slider -->
 	<div class="slider-label">
 		
 	</div>
-	<!-- <div class="answers-main-content answer-slider" ng-controller="SliderMultipleCtrl"> -->
-	<div class="answers-main-content answer-slider" ng-controller="SliderCtrl">
-		<input ng-model="questionsData.question.text[0].slider_answer" ng-change="questionsData.question.text[0].answer=questionsData.question.text[0].answers[questionsData.question.text[0].slider_answer]" type="text" id="answerSlider" slider options="questionsData.question.text[0].options" />
+	<div class="answers-main-content answer-slider" ng-controller="SliderMultipleCtrl">
+		<input ng-model="questionsData.question.text[0].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="questionsData.question.text[0].options" />
 	</div>
 </div>
 
@@ -16,9 +15,8 @@ https://www.npmjs.com/package/ng-slider -->
 	<div class="slider-label">
 
 	</div>
-	<!-- <div class="answers-main-content answer-slider bottom" ng-controller="SliderMultipleCtrl"> -->
-	<div class="answers-main-content answer-slider bottom" ng-controller="SliderCtrl">
-	    <input ng-model="questionsData.question.text[1].slider_answer" ng-change="questionsData.question.text[1].answer=questionsData.question.text[1].answers[questionsData.question.text[1].slider_answer]" type="text" id="answerSlider" slider options="questionsData.question.text[1].options" />
+	<div class="answers-main-content answer-slider bottom" ng-controller="SliderMultipleCtrl">
+	    <input ng-model="questionsData.question.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="questionsData.question.text[1].options" />
 	</div>
 </div>
 

@@ -1540,11 +1540,12 @@
 					}								
 				},
 				{
-					"answer" : 0,
+					"answer" : 33,
 					"options" : { 
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
+					    "dimension": "",
 					    "scale": ["30","36"]       
 					},
 					"answers" : {
@@ -1603,7 +1604,7 @@
 			"text" : [
 				{
 					"question" : "On a regular basis, I depend on my fridge to feed...",
-					"type" : "Checkbox",
+					"type" : "slider",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 1,
 					"options" : {       
