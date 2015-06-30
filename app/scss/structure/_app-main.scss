@@ -40,7 +40,9 @@
 }
 
 .answers-main-content {
-	@include make-row;
+	width: 100%;
+	// margin-right: 15px;
+	// margin-left: 15px;
 }
 
 
@@ -105,8 +107,8 @@
 		margin-top: 5px;
 	}
 	.icon-nav-wrap {
-		display: inline-block;
-		float: left;
+		// display: inline-block;
+		// float: left;
 		a {
 			cursor: pointer;
 		}
