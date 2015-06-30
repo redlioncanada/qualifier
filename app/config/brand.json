@@ -94,7 +94,7 @@
 							"scoring" : {
 								"type" : "Ranges"
 							},
-							"next" : "Cooking - Ranges - Preference",
+							"next" : "Cooking - Ranges - Energy",
 							"order" : 1
 						},
 						{
@@ -125,7 +125,7 @@
 							"scoring" : {
 								"type" : "Ranges"
 							},
-							"next" : "Cooking - Ranges - Cooking Style",						
+							"next" : "Cooking - Ranges - Energy",						
 							"order" : 1
 						},
 						{
@@ -294,7 +294,7 @@
 					"question" : "How would your family describe you?",
 					"sub_question" : "Select all that apply",
 					"thumbnail" : "../img/icon-style.png",
-					"type" : "checkbox-4-split",
+					"type" : "checkbox-split",
 					"answers" : [
 						{
 							"text" : "A baker",
@@ -471,82 +471,11 @@
 				}											
 			]
 		},
-		"Cooking - Ranges - Preference" : {
-			"next" : "Cooking - Ranges - Energy",
-			"previous" : "Cooking - Pre-Qualifier 1",
-			"explanation_title" : "Why Are You Asking Me About Preference?",
-			"explanation" : "By understanding your cooking priorities, we can better understand what features you need to suit your lifestyle.",
-			"thumbnail_type" : "image",
-			"text" : [
-				{
-					"question" : "When shopping for a range, what’s most important to you?",
-					"type" : "rank",
-					"thumbnail" : "../img/icon-features.png",
-					"answers" : [
-						{
-							"text" : "Space to cook large dishes",
-							"value" : "large dishes",
-							"scoring" : {
-								"double" : 1,
-								"maxCapacity" : 1
-							},
-							"order" : 1
-						},
-						{
-							"text" : "Ease of cleaning",
-							"value" : "easy cleaning",
-							"scoring" : {
-							},
-							"order" : 2
-						},
-						{
-							"text" : "Precise cooking temperature",
-							"value" : "temperature",
-							"scoring" : {
-								"gas" : 1
-							},
-							"order" : 3
-						},
-						{
-							"text" : "Even heat for baking",
-							"value" : "even heat",
-							"scoring" : {
-								"trueConvection" : 1
-							},
-							"order" : 4
-						},
-						{
-							"text" : "Cooking multi-course meals",
-							"value" : "multi-course",
-							"scoring" : {
-								"double" : 1,
-								"warmingDrawer" : 1
-							},
-							"order" : 5
-						},
-						{
-							"text" : "Up to date technology",
-							"value" : "tech",
-							"scoring" : {
-							},
-							"order" : 6
-						},
-						{
-							"text" : "Energy Efficiency",
-							"value" : "energy",
-							"scoring" : {
-							},
-							"order" : 7
-						}
-					]
-				}										
-			]
-		},
 		"Cooking - Ranges - Energy" : {
 			"next" : "Cooking - Ranges - Capacity",
-			"previous" : "Cooking - Ranges - Preference",
+			"previous" : "Cooking - Pre-Qualifier 1",
 			"explanation_title" : "Why Are You Asking Me About Energy?",
-			"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect one to fit your needs.",
+			"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -851,7 +780,7 @@
 			]
 		},
 		"Cooking - Ranges - Gas" : {
-			"next" : null,
+			"next" : "Cooking - Ranges - Preference",
 			"previous" : "Cooking - Ranges - Lifestyle",
 			"explanation_title" : "Why Are You Asking Me About Gas?", 
 			"explanation" : "Some kitchens are equipped for gas and others are not. We need to know this information to recommend the perfect range.",
@@ -880,6 +809,77 @@
 						}
 					]
 				}
+			]
+		},
+		"Cooking - Ranges - Preference" : {
+			"next" : null,
+			"previous" : "Cooking - Ranges - Gas",
+			"explanation_title" : "Why Are You Asking Me About Preference?",
+			"explanation" : "By understanding your cooking priorities, we can better understand what features you need to suit your lifestyle.",
+			"thumbnail_type" : "image",
+			"text" : [
+				{
+					"question" : "When shopping for a range, what’s most important to you?",
+					"type" : "rank",
+					"thumbnail" : "../img/icon-features.png",
+					"answers" : [
+						{
+							"text" : "Space to cook large dishes",
+							"value" : "large dishes",
+							"scoring" : {
+								"double" : 1,
+								"maxCapacity" : 1
+							},
+							"order" : 1
+						},
+						{
+							"text" : "Ease of cleaning",
+							"value" : "easy cleaning",
+							"scoring" : {
+							},
+							"order" : 2
+						},
+						{
+							"text" : "Precise cooking temperature",
+							"value" : "temperature",
+							"scoring" : {
+								"gas" : 1
+							},
+							"order" : 3
+						},
+						{
+							"text" : "Even heat for baking",
+							"value" : "even heat",
+							"scoring" : {
+								"trueConvection" : 1
+							},
+							"order" : 4
+						},
+						{
+							"text" : "Cooking multi-course meals",
+							"value" : "multi-course",
+							"scoring" : {
+								"double" : 1,
+								"warmingDrawer" : 1
+							},
+							"order" : 5
+						},
+						{
+							"text" : "Up to date technology",
+							"value" : "tech",
+							"scoring" : {
+							},
+							"order" : 6
+						},
+						{
+							"text" : "Energy Efficiency",
+							"value" : "energy",
+							"scoring" : {
+							},
+							"order" : 7
+						}
+					]
+				}										
 			]
 		},
 		"Laundry - Energy" : {

@@ -41,7 +41,9 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 App.filter('orderByOrder', function() {
   return function(items) {
     var filtered = [];
+    console.log(items)
     angular.forEach(items, function(item) {
+      console.log(item)
       filtered[parseInt(item.order)] = item;
     });
     return filtered;
