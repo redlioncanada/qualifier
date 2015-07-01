@@ -6,16 +6,9 @@
 // 	}
 // }
 
-.answer {
-	// img {
-	// 	-webkit-transition: opacity 0.5s ease-in-out;
-	//     -moz-transition: opacity 0.5s ease-in-out;
-	//     transition: opacity 0.5s ease-in-out;
-	// }
-	&.categories.selected img {
-		opacity: 0.3;
-	}
-}
+
+
+
 
 .answers-main-content {
 	// @include
@@ -41,6 +34,7 @@
 
 .label-wrap {
 	display: inline-block;
+	text-align: left;
 }
 .label-text {
 	font-family: $AG-Bold-Cnd;
@@ -69,24 +63,32 @@
 		display: block;
 		width: 532px;
 		height: 70px;
+
 		background: url('../img/radio-bg.png');
 		margin-bottom: 20px;
 		.label-wrap {
-			top: 0;
+			// top: 0;
 			// top: 9px; for 4 up
-			position: relative;
-			left: 15px;
-			height: 70px;
-			padding: 23px 0 0 0;
+			// position: relative;
+			// left: 15px;
+			// height: 70px;
+			// padding: 23px 0 0 0;
 			max-width: 405px;
 			text-align: left;
 			// padding: 10px 0 0 0;
+
+			top: 24px;
+			position: absolute;
+			left: 79px;
 		}
 	}
 	// 4 or more = 2 columns
 	&.radio-4 {
 		display: inline-block;
 		float: left;
+		.select-icon {
+			left: 24px;
+		}
 	}
 	// Fancy split bg
 	&.radio-split, &.checkbox-split {
@@ -103,10 +105,10 @@
 		.label-more-wrap {
 			display: inline-block;
 			width: 303px;
-			text-align: center;
+			text-align: left;
 			position: absolute;
 			left: 220px;
-			top: 20px;
+			top: 18px;
 		}
 		.label-text-more {
 			color: #ffffff;
@@ -142,30 +144,11 @@
 		// 	top: 23px;
 		// }
 	}
-	// &.checkbox.split {
-	// 	width: 545px;
-	// 	height: 84px;
-	// 	background: url('../img/select-with-blue-bg.png');
-	// 	display: inline-block;
 
-	// }
-	// &.multi {
-	// 	display: block;
-	// 	width: 285px;
-	// 	height: 192px;
-	// 	background: url('../img/4-select-4-up-item-bg.png');
-	// }
-
-	&.picture {
-		display: block;
-		width: 544px;
-		height: 83px;
-		background: url('../img/4-select-2-up-bg.png');
-	}
 	&.picture-2, &.picture-3 {
 		width: 367px;
 		height: 229px;
-		background: url('../img/boxes-picture-3-bg.png');
+		background: url('../img/boxes-picture-bg.png');
 		display: inline-block;
 		.img-wrap {
 			margin-top: 4px;
@@ -191,7 +174,7 @@
 	&.picture-4 {
 		width: 277px;
 		height: 229px;
-		background: url('../img/boxes-picture-4-up-bg.png');
+		background: url('../img/boxes-picture-4-bg.png');
 		display: inline-block;
 		.img-wrap {
 			margin-top: 4px;
@@ -212,11 +195,11 @@
 		}
 	}
 	// Single select with icons - 2 answers
-	&.boxes-icon-2, &.boxes-icon-5  { // + Multiselect with icons - 5 answers
+	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split  { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
 		width: 181px;
 		height: 215px;
-		background: url('../img/icon-thumb-bg.png');
+		background: url('../img/boxes-icon-bg.png');
 		display: inline-block;
 		.icon-wrap {
 			img {
