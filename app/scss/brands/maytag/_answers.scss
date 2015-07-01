@@ -219,6 +219,30 @@
 			bottom: 21px;
 		}
 	}
+	&.boxes-icon-split {
+		.select {
+			left: 13px;
+		}
+		.label-wrap {
+			position: absolute;
+			bottom: 15px;
+			left: 57px;
+		}
+		.label-more-wrap {
+			display: inline-block;
+			width: 303px;
+			text-align: left;
+			position: absolute;
+			left: 220px;
+			top: 18px;
+		}
+		.label-text-more {
+			color: #ffffff;
+			font-size: 16px;
+			line-height: 16px;
+			font-family: $AG-Bold-Cnd;
+		}
+	}
 	
 	// &.boxes-icon-5 {
 		// // @include make-md-column(6);
@@ -243,6 +267,20 @@
 		// }
 	// }
 }
+
+.picture-4-container {
+	.answer-box {
+		margin-left: 8px;
+		margin-right: 8px;
+		&:nth-child(1) {
+			margin-left: 0;
+		}
+		&:nth-child(4) {
+			margin-right: 0;
+		}
+	}
+}
+
 
 // temporary
 // .answer-box {
@@ -327,6 +365,7 @@
 	}
 	.label-text {
 		top: 10px;
+		left: 80px;
 	}
 	
 }

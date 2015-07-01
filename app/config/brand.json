@@ -795,12 +795,16 @@
 						{
 							"text" : "Yes",
 							"text_more" : "We’re cooking with fire now.",
+							"image" : "../img/icon-thumb-gas.png",
+							"hover" : "../img/icon-thumb-gas-active.png",
 							"value" : "yes",
 							"order" : 1
 						},
 						{
 							"text" : "No",
 							"text_more" : "We're just plug-in and go.",
+							"image" : "../img/icon-thumb-electric.png",
+							"hover" : "../img/icon-thumb-electric-active.png",
 							"value" : "no",
 							"scoring" : {
 								"gas" : null

@@ -7,7 +7,7 @@
 	.content-inner {
 		width: 100%;
 		padding-top: 25px;
-		padding-bottom: 25px;
+		// padding-bottom: 25px;
 	}
 }
 
@@ -55,7 +55,7 @@
 
 .app-content-main-bottom {
 	@include make-row;
-	padding-top: 25px;
+	// padding-top: 25px;
 	padding-bottom: 25px;
 	.app-content-main-bottom-left {
 		@include make-md-column(2);

@@ -9,11 +9,11 @@
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="" ng-if="!!questionsData.question.show.explanation_title">
+					<a class="btn-why" ng-if="!!questionsData.question.show.explanation_title">
 						<span class="icon-why">?</span>
 						<span ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="" ng-if="!!questionsData.question.show.info">
+					<a class="btn-info" ng-if="!!questionsData.question.show.info">
 						<span class="icon-info">i</span>
 						<span ng-bind="questionsData.question.show.info"></span>
 					</a>	
@@ -31,7 +31,7 @@
 	</div>
 	
 
-	<div ng-if="!!questionsData.question.show.type" class="app-answers content-inner" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
+	<div ng-if="!!questionsData.question.show.type" class="app-answers" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
 	</div>
 	
 
