@@ -22,9 +22,9 @@
 							"text" : "Laundry",
 							"value" : "Laundry",
 							"classes" : "category laundry",
-							"image" : "img/laundry-Pair_1175X1290_P130793_53.jpg",
+							"image" : "img/cat-laundry.jpg",
 							"hover" : "img/maytag-man-washer-hover.png",							
-							"thumbnail" : "img/laundry-Pair_1175X1290_P130793_53.jpg",							
+							"thumbnail" : "img/cat-laundry.jpg",							
 							"next" : "Laundry - Energy",
 							"scoring" : {
 								"appliance" : "Laundry"
@@ -35,9 +35,9 @@
 							"text" : "Cooking",
 							"value" : "Stove",
 							"classes" : "category cooking",
-							"image" : "img/wall-over-double-Standalone_1175X1290.jpg",
+							"image" : "img/cat-cooking.jpg",
 							"hover" : "img/maytag-man-cooking-hover.png",
-							"thumbnail" : "img/wall-over-double-Standalone_1175X1290.jpg",
+							"thumbnail" : "img/cat-cooking.jpg",
 							"scoring" : {
 								"appliance" : "Stove"
 							},
@@ -48,9 +48,9 @@
 							"text" : "Refrigerator",
 							"value" : "Fridge",
 							"classes" : "category fridge",
-							"image" : "img/fridge-Standalone_1175X1290.jpg",
+							"image" : "img/cat-fridge.jpg",
 							"hover" : "img/maytag-man-fridge-hover.png",
-							"thumbnail" : "img/fridge-Standalone_1175X1290.jpg",
+							"thumbnail" : "img/cat-fridge.jpg",
 							"scoring" : {
 								"appliance" : "Fridge"
 							},
@@ -61,9 +61,9 @@
 							"text" : "Dishwasher",
 							"value" : "Dishwasher",
 							"classes" : "category dishwasher",
-							"image" : "img/dishwasher-Standalone_1175X1290.jpg",
+							"image" : "img/cat-dishwasher.jpg",
 							"hover" : "img/maytag-man-dishwasher-hover.png",
-							"thumbnail" : "img/dishwasher-Standalone_1175X1290.jpg",
+							"thumbnail" : "img/cat-dishwasher.jpg",
 							"scoring" : {
 								"appliance" : "Fridge"
 							},
@@ -88,9 +88,9 @@
 						{
 							"text" : "Free Standing Ranges",
 							"value" : "free stand range",
-							"classes" : "category ranges",
-							"image" : "img/range-gas-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/range-gas-Standalone_1175X1290.jpg",
+							"classes" : "sub-category ranges",
+							"image" : "img/cat-cooking-sub-free-range.jpg",
+							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
 							"scoring" : {
 								"type" : "Ranges"
 							},
@@ -100,9 +100,9 @@
 						{
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
-							"classes" : "category wallovens",
-							"image" : "img/walloven-single-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/walloven-single-Standalone_1175X1290.jpg",
+							"classes" : "sub-category wallovens",
+							"image" : "img/cat-cooking-sub-wall-oven.jpg",
+							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"scoring" : {
 								"type" : "Wall Ovens"
 							},
@@ -119,9 +119,9 @@
 						{
 							"text" : "Free Standing Range",
 							"value" : "free stand range",
-							"classes" : "category ranges",
-							"image" : "img/range-gas-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/range-gas-Standalone_1175X1290.jpg",
+							"classes" : "sub-category ranges",
+							"image" : "img/cat-cooking-sub-free-range.jpg",
+							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
 							"scoring" : {
 								"type" : "Ranges"
 							},
@@ -131,9 +131,9 @@
 						{
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
-							"classes" : "category wallovens",
-							"image" : "img/walloven-single-Standalone_1175X1290.jpg",
-							"thumbnail" : "img/walloven-single-Standalone_1175X1290.jpg",
+							"classes" : "sub-category wallovens",
+							"image" : "img/cat-cooking-sub-wall-oven.jpg",
+							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"scoring" : {
 								"type" : "Wall Ovens"
 							},
@@ -802,18 +802,22 @@
 				{
 					"question" : "Is your kitchen equipped for gas?",
 					"sub_question" : "Select one",
-					"type" : "radio-split",
+					"type" : "boxes-icon-split",
 					"thumbnail" : "../img/icon-fueltype.png",
 					"answers" : [
 						{
 							"text" : "Yes",
 							"text_more" : "We’re cooking with fire now.",
+							"image" : "../img/icon-thumb-gas.png",
+							"hover" : "../img/icon-thumb-gas-active.png",
 							"value" : "yes",
 							"order" : 1
 						},
 						{
 							"text" : "No",
 							"text_more" : "We're just plug-in and go.",
+							"image" : "../img/icon-thumb-electric.png",
+							"hover" : "../img/icon-thumb-electric-active.png",
 							"value" : "no",
 							"scoring" : {
 								"gas" : null

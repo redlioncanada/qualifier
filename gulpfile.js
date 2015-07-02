@@ -107,7 +107,13 @@ gulp.task('views', function() {
     .pipe(gulp.dest('build/views/'));
 });
 
+// Fonts
+// gulp.task('fonts', function() {
+//   return gulp.src('app/**/*.{ttf,woff,eof,svg}')
+//     .pipe(gulp.dest('build/fonts'));
+// });
 
+// Images
 gulp.task('images', function() {
   return gulp.src('app/img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))

@@ -7,7 +7,7 @@
 	.content-inner {
 		width: 100%;
 		padding-top: 25px;
-		padding-bottom: 25px;
+		// padding-bottom: 25px;
 	}
 }
 
@@ -51,25 +51,11 @@
 	display: block;
 	width: 100%;
 	margin-bottom: 25px;
-	.category {
-		display: inline-block;
-		img {
-			// -webkit-transition: opacity 0.3s ease;
-		 //    -moz-transition: opacity 0.3s ease;
-		 //    transition: opacity 0.3s ease;
-		}
-		&:hover {
-			// Appliance man img
-			img {
-				opacity: 0.3;
-			}
-		}
-	}
 }
 
 .app-content-main-bottom {
 	@include make-row;
-	padding-top: 25px;
+	// padding-top: 25px;
 	padding-bottom: 25px;
 	.app-content-main-bottom-left {
 		@include make-md-column(2);
