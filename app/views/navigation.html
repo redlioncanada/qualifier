@@ -20,9 +20,9 @@
 
 
 	<div class="app-content-main-bottom-center">
-		<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="col-xs-1 thumbnail results-count-wrap">
-			<span bo-text="brandData.apptext.results" style="width: 30px; height: 30px"></span>
-			<span ng-bind="questionsData.currentCount"></span>
+		<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="thumbnail results-count-wrap">
+			<div class="results-count-number" ng-bind="questionsData.currentCount"></div>
+			<div class="results-count-label" bo-text="brandData.apptext.results"></div>
 		</a>
 
 
