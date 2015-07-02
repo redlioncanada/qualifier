@@ -37,6 +37,15 @@
 	    	</a>      
 		</div>
 
+		<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap">
+	      
+	    	<a class="col-xs-1 thumbnail">
+		      	<img src="img/navigationplaceholder.png" style="width: 40px" />
+		      	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
+	    	</a>      
+		</div>
+
+
 		<!-- Compare Results btn - external link to comparison tool -->
 		<div ng-if="resultsscreen">
 

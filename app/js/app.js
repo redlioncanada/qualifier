@@ -19,7 +19,7 @@ var App = angular.module('App', nglibs);
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
     $urlRouterProvider.otherwise("/");
-    localStorageServiceProvider.setPrefix('Whirlpool');
+    localStorageServiceProvider.setPrefix("MaytagQualifier_");
 
     $stateProvider
       .state('main', {
@@ -41,12 +41,44 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 App.filter('orderByOrder', function() {
   return function(items) {
     var filtered = [];
-    console.log(items)
     angular.forEach(items, function(item) {
-      console.log(item)
       filtered[parseInt(item.order)] = item;
     });
     return filtered;
+  };
+});
+
+App.filter('nextQuestions', function($rootScope, $filter) {
+  return function(items) {
+    var nextQuestions = []
+    var t = null
+    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
+    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+      if (item.order == l-1) {
+        t = item
+      }
+    })
+
+    if (!!t > 0) { 
+      var n = $rootScope.objSize($filter('filter')(t.show.answers, function(item) { return 'next' in item }))
+      while ('next' in t || n > 0) {
+        if ('next' in t) {
+          nextQuestions.push($rootScope.questionsData.questions[t.next])          
+          t = $rootScope.questionsData.questions[t.next]
+        } else {
+          var next = $rootScope.getFirstObjectProperty($filter('filter')(t.show.answers, function(item) { return item.answer == true })).next
+          nextQuestions.push($rootScope.questionsData.questions[next])
+          t = $rootScope.questionsData.questions[next]
+        }
+
+        if (!!t) {
+          var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
+        } else {
+          break;
+        }
+      }
+      return nextQuestions
+    }
   };
 });
 
@@ -67,7 +99,16 @@ App.filter('byPrice', function() {
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
     $rootScope.objSize = function (obj) {
-      return Object.keys(obj).length;
+      if (!!obj) {
+        return Object.keys(obj).length;
+      } else {
+        return 0;
+      }
+    }
+    $rootScope.getFirstObjectProperty = function (obj) {
+      for (var p in obj) {
+        return obj[p]
+      }
     }
     $rootScope.log = function (log) {
       console.log(log);

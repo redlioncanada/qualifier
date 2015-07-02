@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService) {
   	$rootScope.questionsData = {}
   	$rootScope.questionsData.scoringQuestions = {};
   	$rootScope.questionsData.currentCount = null;
@@ -130,29 +130,50 @@ angular.module('App')
   		}
   		if (!!hasAnswer) {
   			$rootScope.controls.questionHasAnswer = true
+  			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			} else {
-  				var nextOrder = $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order + 1
-  				// Check if it is the same path or not
-  				var next = $filter('filter')($rootScope.questionsData.scoringQuestions, function (item) {
-  					return item.order == nextOrder
+  				// if this question doesn't set next, then its fine
+  				// if this question does, then delete everything after
+  				var hasNext = false
+  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].answers, function (item, k) {
+  					if ('next' in item) 
+  						hasNext = true
   				})
+  				if ( hasNext.length > 0 ) {
+	  				angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+	  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name]) {
+	  						delete $rootScope.questionsData.scoringQuestions[item.name]
+	  					}
+	  				})  					
+  				}
   			}
+  			localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($rootScope.questionsData.question));
 
   			$scope.recalculateResults();
 	  		if ("next" in $rootScope.questionsData.question) {
 	  			var name = $rootScope.questionsData.question.next
 	  			if (!!name) {
-	  				$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.next]
+	  				var hasStoredAnswer = localStorageService.get($rootScope.questionsData.question.next)
+		  			if (!!hasStoredAnswer) {
+		  				$rootScope.questionsData.question = hasStoredAnswer
+		  			} else {
+		  				$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.next]
+		  			}
 	  			} else {
 	  				$rootScope.questionsData.question = null;
 	  			}
 	  		}
 	  		else if ("next" in hasAnswer) {
 	  			var name = hasAnswer.next
-	  			$rootScope.questionsData.question = $rootScope.questionsData.questions[hasAnswer.next]
+	  			var hasStoredAnswer = localStorageService.get(hasAnswer.next)
+	  			if (!!hasStoredAnswer) {
+	  				$rootScope.questionsData.question = hasStoredAnswer
+	  			} else {
+	  				$rootScope.questionsData.question = $rootScope.questionsData.questions[hasAnswer.next]	  				
+	  		} 
 	  		}
 	  		if (!!$rootScope.questionsData.question) {
 	  			$rootScope.controls.questionHasAnswer = false
@@ -170,7 +191,6 @@ angular.module('App')
   	}
   	//set questions to head
   	$rootScope.questionsData.questions = $rootScope.brandData.questions
-  	console.log($rootScope.questionsData.questions)
   	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
   	$rootScope.questionsData.question.name = "Appliance"
   	$scope.show();

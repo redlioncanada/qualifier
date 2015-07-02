@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('NavigationCtrl', function ($scope, $state) {
+  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter) {
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
