@@ -31,13 +31,12 @@
 	    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1 thumbnail" ng-click="questionsData.question=q;navToQuestions()">
 
 		      	<img ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 40px" />
-		      	<!-- <span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span> -->
 		      	<span ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span>
-		      	<!-- <span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"> -->
+		      	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 	    	</a>      
 		</div>
 
-		<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap">
+		<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 	      
 	    	<a class="col-xs-1 thumbnail">
 		      	<img src="img/navigationplaceholder.png" style="width: 40px" />

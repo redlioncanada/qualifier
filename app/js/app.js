@@ -54,21 +54,26 @@ App.filter('nextQuestions', function($rootScope, $filter) {
     var t = null
     var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
     angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-      if (item.order == l-1) {
+      if (item.order == l) {
         t = item
       }
     })
-
     if (!!t > 0) { 
-      var n = $rootScope.objSize($filter('filter')(t.show.answers, function(item) { return 'next' in item }))
+      var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
       while ('next' in t || n > 0) {
         if ('next' in t) {
           nextQuestions.push($rootScope.questionsData.questions[t.next])          
           t = $rootScope.questionsData.questions[t.next]
         } else {
-          var next = $rootScope.getFirstObjectProperty($filter('filter')(t.show.answers, function(item) { return item.answer == true })).next
-          nextQuestions.push($rootScope.questionsData.questions[next])
-          t = $rootScope.questionsData.questions[next]
+          var n = $filter('filter')(t.text[0].answers, function(item) { return item.answer == true })
+          if ($rootScope.objSize(n) > 0) {
+            var next = $rootScope.getFirstObjectProperty(n).next
+            nextQuestions.push($rootScope.questionsData.questions[next])
+            t = $rootScope.questionsData.questions[next]            
+          } else {
+            t = null
+          }
+
         }
 
         if (!!t) {

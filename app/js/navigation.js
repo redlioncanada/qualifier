@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter) {
   	$scope.setType = function (q,a) {
+  		console.log(a.thumbnail_type);
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
 	  			return q.thumbnail_type

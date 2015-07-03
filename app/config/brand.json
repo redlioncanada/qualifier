@@ -81,37 +81,6 @@
 			"thumbnail_type" : "image",
 			"text" : [
 				{
-					"question" : "Which product would you like to explore first?",
-					"sub_question" : "Select one",
-					"type" : "categories",
-					"answers" : [
-						{
-							"text" : "Free Standing Ranges",
-							"value" : "free stand range",
-							"classes" : "sub-category ranges",
-							"image" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
-							"scoring" : {
-								"type" : "Ranges"
-							},
-							"next" : "Cooking - Ranges - Energy",
-							"order" : 1
-						},
-						{
-							"text" : "Wall Ovens",
-							"value" : "wall oven",
-							"classes" : "sub-category wallovens",
-							"image" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
-							"scoring" : {
-								"type" : "Wall Ovens"
-							},
-							"next" : "Cooking - Wall Ovens - Size",						
-							"order" : 2
-						}
-					]
-				},
-				{
 					"question" : "What product are you shopping for today?",
 					"sub_question" : "Select one",
 					"type" : "categories",
