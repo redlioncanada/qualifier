@@ -154,7 +154,7 @@
 			"text" : [
 				{
 					"question" : "We’ve got the perfect wall oven for your family. Just tell us how much space you have to fill.",
-					"sub_question" : "<a href=\"\">Measurement Guide</a>",
+					"sub_question" : "Slide to answer",
 					"type" : "slider-multiple",
 					"thumbnail" : "../img/icon-size.png",
 					"answer" : 1,
@@ -238,7 +238,7 @@
 			"text" : [
 				{
 					"question" : "When shopping for an oven, what’s most important to you?",
-					"sub_question" : "Select one",
+					"sub_question" : "Click and drag to rank",
 					"explanation_title" : "Why Are You Asking Me About Preference?",
 					"explanation" : "By understanding your cooking priorities, we can better understand what features you need that will suit your lifestyle.",
 					"thumbnail" : "../img/icon-features.png",
@@ -426,6 +426,7 @@
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,
@@ -480,6 +481,7 @@
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,
@@ -529,6 +531,7 @@
 			"text" : [
 				{
 					"question" : "How often do you need extra space in your oven?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 2,
@@ -824,6 +827,7 @@
 			"text" : [
 				{
 					"question" : "When shopping for a range, what’s most important to you?",
+					"sub_question" : "Click and drag to rank",
 					"type" : "rank",
 					"thumbnail" : "../img/icon-features.png",
 					"answers" : [
@@ -895,6 +899,7 @@
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,
@@ -949,6 +954,7 @@
 			"text" : [
 				{
 					"question" : "How many people are in your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider-people",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 3,
@@ -1267,8 +1273,8 @@
 			"text" : [
 				{
 					"question" : "What do you find yourself doing to your dryer?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
-
 					"thumbnail" : "../img/icon-size.png",
 					"answer" : 1,
 					"options" : {       
@@ -1312,8 +1318,8 @@
 			"text" : [
 				{
 					"question" : "How close are you and your iron?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
-
 					"thumbnail" : "../img/icon-size.png",
 					"answer" : 1,
 					"options" : { 
@@ -1396,6 +1402,7 @@
 			"text" : [
 				{
 					"question" : "How often do you rely on a dry-cleaner?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-dryclean.png",
 					"answer" : 1,
@@ -1444,6 +1451,7 @@
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,
@@ -1493,7 +1501,7 @@
 			"text" : [
 				{
 					"question" : "We’ve got the perfect fridge for your family. Just tell us how much space you have to fill.",
-					"sub_question" : "<a href=\"\">Measurement Guide</a>",
+					"sub_question" : "Slide to answer",
 					"thumbnail" : "../img/icon-size.png",
 					"type" : "slider-multiple",
 					"answer" : 66,
@@ -1608,6 +1616,7 @@
 			"text" : [
 				{
 					"question" : "On a regular basis, I depend on my fridge to feed...",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 1,
@@ -1898,6 +1907,7 @@
 			"text" : [
 				{
 					"question" : "I choose form over function...",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-style.png",
 					"answer" : 1,
@@ -2061,6 +2071,7 @@
 			"text" : [
 				{
 					"question" : "My family generates this many dishes every week:",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-capacity.png",
 					"answer" : 2,
@@ -2122,6 +2133,7 @@
 			"text" : [
 				{
 					"question" : "How often do you select custom cycles?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-cycles.png",
 					"answer" : 1,
@@ -2294,6 +2306,7 @@
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
+					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
 					"answer" : 2,

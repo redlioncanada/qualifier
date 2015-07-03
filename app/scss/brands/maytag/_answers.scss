@@ -14,6 +14,43 @@
 	// @include
 	// margin-right: 15px;
 	// margin-left: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+	&.regular-container {
+		width: 550px;
+	}
+	// Radio, checkbox 4 and up as well as split
+	&.regular-4-container {
+		width: 1100px;
+	}
+	&.picture-2-container {
+		width: 770px;
+	}
+	&.picture-3-container {
+		width: 1155px;
+	}
+	&.picture-4-container {
+		width: 1156px;
+	}
+
+	// Boxes icon 2, 5, and split
+	&.boxes-icon-container {
+		width: 1156px;
+	}
+
+	// Two boxes icons or two split
+	&.boxes-icon-2-container {
+		width: 398px;
+
+	}
+	&.boxes-icon-5-container {
+		width: 995px;
+	}
+
+
 }
 
 .select-icon {
@@ -198,7 +235,7 @@
 		}
 	}
 	// Single select with icons - 2 answers
-	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split  { // + Multiselect with icons - 5 answers
+	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
 		width: 181px;
 		height: 215px;
