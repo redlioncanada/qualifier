@@ -64,8 +64,8 @@
 	}
 	.app-content-main-bottom-center {
 		@include make-md-column(10);
-		padding-left: 0;
-		padding-right: 0;
+		// padding-left: 0;
+		// padding-right: 0;
 		text-align: center;
 
 	}

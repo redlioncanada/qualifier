@@ -516,6 +516,7 @@
 					"sub_question" : "Slide to answer",
 					"type" : "slider",
 					"thumbnail" : "../img/icon-energy.png",
+					"thumbnail_text" : "Energy",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,

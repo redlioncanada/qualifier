@@ -286,10 +286,13 @@ div.people6 .jslider .jslider-value {
 
 
 			display: block;
-			width: 72px;
-			height: 66px;
+			// width: 72px;
+			// height: 66px;
+
+			width: 74px;
+			height: 69px;
 			background: url('../img/slider-pointer.png') !important;
-			background-size: 72px 66px;
+			background-size: 74px 69px;
 		}
 		.jslider-pointer-to { 
 			left: 80%; 
@@ -380,7 +383,7 @@ div.people6 .jslider .jslider-value {
 	.jslider-limitless .jslider-label { display: none; }
 	&.bottom {
 		.jslider-pointer {
-			background: url('../img/slider-pointer-2.png') !important;
+			background: url('../img/slider-pointer-bottom.png') !important;
 		}
 	}
 }
