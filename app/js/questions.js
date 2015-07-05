@@ -21,48 +21,45 @@ angular.module('App')
 		$rootScope.questionsData.currentCount = 0;
 		$rootScope.questionsData.currentScore = {	
   			"type" : false,
-  			"size" : false,
-  			"width" : false,
-  			"category" : false,
-			"induction" : 0,
-			"gas" : 0,
-			"electric" : 0,
-			"convection" : 0,
-			"trueConvection" : 0,
-			"double" : 0,
-			"single" : 0,
-			"combination" : 0,
+			"width" : 0,
+			"height" : 0,
 			"capacity" : 0,
-			"aquaLift" : 0 ,
-			"frenchDoor" : 0 ,
-			"sideBySide" : 0 ,
-			"topFreezer" : 0 ,
-			"bottomFreezer" : 0 , 
-			"filtered" : 0 ,
-			"inDoor" : 0 ,
-			"counterDepth" : 0 ,
-			"ethyleneFilter" : 0 ,
-			"decibels" : 0 ,
-			"stainlessTub" : 0 ,
-			"2Racks" : 0 ,
-			"3Racks" : 0 ,
-			"culinaryCaddy" : 0 ,
-			"proWash" : 0 ,
-			"sensorCycle" : 0 ,
-			"anyWare" : 0 ,
-			"controls" : 0 ,
-			"frontLoad" : 0 ,
-			"topLoad" : 0 ,
-			"moreCycles" : 0 ,
-			"easeOfUse" : 0 ,
-			"digitalDial" : 0 ,
-			"knobDial" : 0 ,
-			"energyEfficiency" : 0 ,
-			"quiet" : 0 ,
-			"lowVibration" : 0 ,
-			"sensorDry" : 0 ,
-			"steam" : 0 ,
-			"powerWash" : 0 			
+			"single" : false,
+			"double" : false,
+			"combination" : false,
+			"trueConvection" : false,
+			"soundGuard" : false,
+			"vibrationControl" : false,
+			"audioLevel" : false,
+			"frontLoad" : false,
+			"topLoad" : false,
+			"stacked" : false,
+			"rapidWash" : false,
+			"rapidDry" : false,
+			"cycleOptions" : false,
+			"sensorDry" : false,
+			"wrinkleControl" : false,
+			"steamEnhanced" : false,
+			"placeSettings" : 0,
+			"decibels" : 0,
+			"premiumAdjusters" : false,
+			"fid" : false,
+			"console" : false,
+			"powerCold" : false,
+			"topMount" : false,
+			"bottomMount" : false,
+			"frenchDoor" : false,
+			"indoorDispenser" : false,
+			"counterDepth" : false,
+			"freshFlow" : false,
+			"tempControlPantry" : false,
+			"dualCool" : false,
+			"gas" : false,
+			"maxCapacity" : false,
+			"warmingDrawer" : false,
+			"electric" : false,
+			"powerBurner" : false,
+			"powerPreheat" : false			
 		}
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
@@ -93,7 +90,7 @@ angular.module('App')
 			a.score = 0;
 			for (var score in $rootScope.questionsData.currentScore) {
 				var s = $rootScope.questionsData.currentScore[score]
-				if (s == null || (typeof s == "string" && s != a[score])) {
+				if ((s == null && a[score] == true) || (typeof s == "string" && s != a[score])) {
 					a.score = null;
 					break;
 				} else if (a[score] == true && !isNaN(s)) {
@@ -121,6 +118,13 @@ angular.module('App')
 
 	$rootScope.controls = {}
 	$rootScope.controls.questionHasAnswer = true
+
+	$scope.freshQuestion = function (q) {
+		var newq = angular.copy(q)
+		newq.$$hashKey = null
+		return newq
+	}
+
   	$rootScope.next = function () {
   		// Make sure there is an answer
   		var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
@@ -150,7 +154,7 @@ angular.module('App')
 	  				})  					
   				}
   			}
-  			localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($rootScope.questionsData.question));
+  			localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($scope.freshQuestion($rootScope.questionsData.question)));
 
   			$scope.recalculateResults();
 	  		if ("next" in $rootScope.questionsData.question) {

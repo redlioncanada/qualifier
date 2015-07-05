@@ -1,5 +1,5 @@
 {
-	"brand" : "Maytag",
+	"brand" : "maytag",
 	"apptext" :{
 		"apptitle" : "Maytag",
 		"appdescription" : "Welcome to the Maytag Qualifier tool!",
@@ -39,7 +39,7 @@
 							"hover" : "img/maytag-man-cooking-hover.png",
 							"thumbnail" : "img/cat-cooking.jpg",
 							"scoring" : {
-								"appliance" : "Stove"
+								"appliance" : "Cooking"
 							},
 							"next" : "Cooking - Pre-Qualifier 1",
 							"order" : 2
@@ -52,7 +52,7 @@
 							"hover" : "img/maytag-man-fridge-hover.png",
 							"thumbnail" : "img/cat-fridge.jpg",
 							"scoring" : {
-								"appliance" : "Fridge"
+								"appliance" : "Fridges"
 							},
 							"next" : "Fridges - Energy",
 							"order" : 3
@@ -65,7 +65,7 @@
 							"hover" : "img/maytag-man-dishwasher-hover.png",
 							"thumbnail" : "img/cat-dishwasher.jpg",
 							"scoring" : {
-								"appliance" : "Fridge"
+								"appliance" : "Dishwashers"
 							},
 							"next" : "Dishwashers - Cleaning Power",
 							"order" : 4

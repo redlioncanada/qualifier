@@ -92,7 +92,8 @@ App.filter('byPrice', function() {
     var filtered = [];
     var range = price.split(";")
     angular.forEach(items, function(appliance) {
-        var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
+        //var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
+        var p =appliance.price
         if (p > range[0] && p < range[1]) {
           filtered.push(appliance)
         }
@@ -120,10 +121,22 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
     }
 
     $resource("config/brand.json").get({}, function (res, headers) {
+          $rootScope.locale = "en_CA"
           $rootScope.brandData = res;
-          $resource("config/appliances.json").get({}, function (res, headers) {
+          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
-                console.log($rootScope.appliances);
+                // fake the prices for now, change when we build in colour picker
+                angular.forEach( $rootScope.appliances, function (item, key) { 
+
+                    $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
+
+                    // also fake gas, electric for laundry
+                    if ($rootScope.appliances[key].appliance == "Laundry") {
+                        $rootScope.appliances[key].gas = Math.floor((Math.random() * 2)) == 0 ? true : false
+                        $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
+                    }
+                })
+                console.log($rootScope.appliances)
                 $state.go('main.questions');
           });
     });
