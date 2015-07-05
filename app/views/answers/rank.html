@@ -1,7 +1,7 @@
 <!-- Rank the answers -->
 <!-- https://github.com/a5hik/ng-sortable -->
 <div class="answers-main-content ranking" ng-controller="RankCtrl" ng-init="rankCount=objSize(questionsData.question.show.answers)">
-	<ul class="rank-numbers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers" style="height:{{(rankCount * 63) + 63}};">
+	<ul class="rank-numbers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers" style="height:{{(rankCount * 63) + 63}}px;">
 		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
 			<div class="rank-number-wrap">
 				<span class="rank-number" ng-bind="$index+1"></span>
@@ -9,8 +9,7 @@
 		</li>
 	</ul>
 
-
-	<ul class="rank-answers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers" style="height:{{(rankCount * 63) + 63}};">
+	<ul class="rank-answers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers" style="height:{{(rankCount * 63) + 63}}px;">
 		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
 			<!-- <div class="rank-number-wrap">
 				<span class="rank-number" ng-bind="$index+1"></span>

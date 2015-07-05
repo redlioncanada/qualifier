@@ -9,19 +9,20 @@
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-why" ng-if="!!questionsData.question.show.explanation_title">
-						<span class="icon-why">?</span>
-						<span ng-bind="questionsData.question.show.explanation_title"></span>
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
+						<span class="btn-icon">
+							<span>?</span>
+						</span>
+						<span class="btn-text" ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="btn-info" ng-if="!!questionsData.question.show.info">
-						<span class="icon-info">i</span>
-						<span ng-bind="questionsData.question.show.info"></span>
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
+						<span class="btn-icon">
+							<span>i</span>
+						</span>
+						<span class="btn-text" ng-bind="questionsData.question.show.info_title"></span>
 					</a>	
 				</div>
 			</div>
-
-			<!-- Needs to be in a hover box / overlay
-				<span ng-bind="expquestionsData.question.show.explanation"></span> -->
 
 			<div class="app-content-main-top-right" ng-if="questionsData.scoringQuestions.length">
 				<!-- Needs to switch to save after intro -->

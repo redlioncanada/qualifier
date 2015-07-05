@@ -1,5 +1,5 @@
 <!-- Checkbox multi-select answers - single column for 2 or 3 answers -->
-<div class="answers-main-content" ng-controller="BoxesPictureCtrl">
+<div class="answers-main-content regular-container" ng-controller="BoxesPictureCtrl">
 	<a href="" class="answer-option answer-box checkbox" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=!answer.answer" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap">

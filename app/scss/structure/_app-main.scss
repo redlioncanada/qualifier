@@ -58,15 +58,21 @@
 	// padding-top: 25px;
 	padding-bottom: 25px;
 	.app-content-main-bottom-left {
-		@include make-md-column(2);
+		@include make-md-column(1);
+		// padding-left: 0;
+		// padding-right: 0;
 	}
 	.app-content-main-bottom-center {
-		@include make-md-column(8);
+		@include make-md-column(10);
+		// padding-left: 0;
+		// padding-right: 0;
 		text-align: center;
 
 	}
 	.app-content-main-bottom-right {
-		@include make-md-column(2);
+		@include make-md-column(1);
+		// padding-left: 0;
+		// padding-right: 0;
 		text-align: right;
 	}
 	.btn-next, .btn-prev {

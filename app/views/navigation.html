@@ -20,19 +20,19 @@
 
 
 	<div class="app-content-main-bottom-center">
-		<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="col-xs-1 thumbnail results-count-wrap">
-			<span bo-text="brandData.apptext.results" style="width: 30px; height: 30px"></span>
-			<span ng-bind="questionsData.currentCount"></span>
+		<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="results-count-wrap">
+			<div class="results-count-number" ng-bind="questionsData.currentCount"></div>
+			<div class="results-count-label" bo-text="brandData.apptext.results"></div>
 		</a>
 
 
 		<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
 	      
-	    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="col-xs-1 thumbnail" ng-click="questionsData.question=q;navToQuestions()">
-
-		      	<img ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 40px" />
-		      	<span ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span>
-		      	<span ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
+	    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()">
+		      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" style="width: 40px" />
+		      	<!-- <span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span> -->
+		      	<!-- <span class="icon-text" ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span> -->
+		      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
 	    	</a>      
 		</div>
 
@@ -57,7 +57,7 @@
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<a href="#" class="btn-next" ng-click="next()" id="next">
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question">
 			<div class="btn btn-default">
 				<span class="arrow-next">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">
