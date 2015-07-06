@@ -84,8 +84,13 @@
 		display: block;
 		padding-bottom: 20px;
 	}
-	.product-price, .product-sku {
-		@include make-md-column(6);
+	.product-price,  {
+		@include make-md-column(4);
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.product-sku {
+		@include make-md-column(8);
 		padding-left: 0;
 		padding-right: 0;
 	}
