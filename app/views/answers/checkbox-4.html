@@ -2,8 +2,8 @@
 <div class="answers-main-content regular-4-container">
 	<a href="" class="answer-option answer-box checkbox-4" ng-repeat="answer in questionsData.question.show.answers" ng-click="answer.answer=!answer.answer" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
-		<div class="label-wrap">
-			<span class="label-text" ng-bind="answer.text" ng-class="{'long-answer': answer.text.length > 60}"></span>
+		<div class="label-wrap" ng-class="{'long-answer': answer.text.length > 60}">
+			<span class="label-text" ng-bind="answer.text"></span>
 		</div>
 	</a>
 </div>

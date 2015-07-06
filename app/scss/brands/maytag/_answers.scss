@@ -117,6 +117,12 @@
 			top: 24px;
 			position: absolute;
 			left: 79px;
+			&.long-answer {
+				top: 15px;
+				.label-text {
+					line-height: 20px;
+				}
+			}
 		}
 	}
 	// 4 or more = 2 columns
@@ -138,6 +144,12 @@
 			position: absolute;
 			left: 90px;
 			top: 24px;
+			&.long-answer {
+				top: 15px;
+				.label-text {
+					line-height: 20px;
+				}
+			}
 		}
 		.label-more-wrap {
 			display: inline-block;
@@ -173,6 +185,12 @@
 			position: absolute;
 			left: 100px;
 			top: 23px;
+			&.long-answer {
+				top: 15px;
+				.label-text {
+					line-height: 20px;
+				}
+			}
 		}
 	}
 	&.checkbox-4 {
