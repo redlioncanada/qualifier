@@ -189,9 +189,16 @@ angular.module('App')
   		} 
   	}
    	$rootScope.previous = function () {
-  		if ("previous" in $rootScope.questionsData.question) {
-	  		$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.previous]
-	  	}
+   		if (!!$rootScope.questionsData.question) {
+	  		if ("previous" in $rootScope.questionsData.question) {
+		  		var hasStoredAnswer = localStorageService.get($rootScope.questionsData.question.previous)
+		  		if (!!hasStoredAnswer) {
+		  			$rootScope.questionsData.question = hasStoredAnswer
+		  		} else {
+		  			$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.previous]
+		  		}
+		  	}
+		}
   	}
   	//set questions to head
   	$rootScope.questionsData.questions = $rootScope.brandData.questions
