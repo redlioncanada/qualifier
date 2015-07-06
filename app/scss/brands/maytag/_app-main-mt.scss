@@ -170,54 +170,30 @@
 	.btn-text {
 		color: #7d7d7d;
 	}
-	.icon-nav-wrap {
-		
-	}
-	.icon-nav {
-		display: inline-block;
-		float: left;
-		width: 80px;
-		text-align: center;
-	}
 	.icon-text {
-		padding-top: 13px;
 		font-size: 11px;
 		color: #2e2e2e;
 		font-family: Geneva, Verdana, sans-serif;
-		display: block;
 		&:hover {
 			color: #2e2e2e;
 			text-decoration: none;
 		}
 	}
-	.icon-img {
-		width: 41px;
-	}
-	
 	
 
-	
-
-	.results-count-wrap {
-		display: inline-block;
-		float: left;
-		width: 59px;
-		height: 59px;
+	.results-count {
 		background: url('../img/matches-bg.png') center center no-repeat;
-		.results-count-number {
-			font-family: $AG-Bold-Cnd;
-			font-size: 27px;
-			color: #414141;
-			line-height: 27px;
-			padding-top: 7px;
-			padding-bottom: 2px;
-		}
-		.results-count-label {
-			font-family: $AG-Bold-Cnd;
-			font-size: 14px;
-			color: #414141;
-			text-transform: uppercase;
-		}
+	}	
+	.results-count-number {
+		font-family: $AG-Bold-Cnd;
+		font-size: 27px;
+		color: #414141;
+		line-height: 27px;
+	}
+	.results-count-label {
+		font-family: $AG-Bold-Cnd;
+		font-size: 14px;
+		color: #414141;
 	}
 
 	// before icons, lines:
@@ -238,7 +214,7 @@
 }
 
 .app-content-main-bottom-center .icon-nav-wrap {
-	&:after {
+	&:not(:last-child):after {
 		content: "";
 		background: #666666;
 		width: 1px;

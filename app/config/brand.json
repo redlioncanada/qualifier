@@ -11,7 +11,6 @@
 		"Appliance" : {
 			"previous" : null,
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Appliance",							
 			"text" : [
 				{
 					"question" : "Welcome to My Maytag, what can we help you find?",
@@ -681,7 +680,6 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-convection.png",
-							"thumbnail_text" : "Convection",
 							"text" : "A Baker",
 							"text_more" : "Birthday cakes, Thanksgiving pies and gingerbread men, I’m usually covered in flour.",
 							"value" : "baker",
@@ -692,7 +690,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
-							"thumbnail_text" : "Convection",
 							"text" : "A Home Chef",
 							"value" : "home chef",
 							"text_more" : "Holiday roasts, Sunday night casserole and taco Tuesdays I love trying new recipes.",
@@ -703,7 +700,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
-							"thumbnail_text" : "Convection",
 							"text" : "I’m Both",
 							"text_more" : "I shine at school bake sales and can have mastered family-friendly meatloaf.",
 							"value" : "both",
@@ -714,7 +710,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
-							"thumbnail_text" : "Convection",
 							"text" : "I’m Neither",
 							"text_more" : "My family’s stack of take-out menus is impressive.",
 							"value" : "neither",
@@ -729,8 +724,8 @@
 		"Cooking - Ranges - Usage" : {
 			"next" : "Cooking - Ranges - Lifestyle",
 			"previous" : "Cooking - Ranges - Convection",
-			"thumbnail_text" : "Usage",
 			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
@@ -741,7 +736,6 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Reheats leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
@@ -751,7 +745,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Cooks multiple meals daily",
 							"value" : "multiple meals",
 							"scoring" : {
@@ -760,7 +753,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Will help me host parties and cook multi-course meals",
 							"value" : "host parties",
 							"scoring" : {
@@ -770,7 +762,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Fits large holiday roasts",
 							"value" : "large dishes",
 							"scoring" : {
@@ -780,7 +771,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Will help me make the perfect sauce",
 							"value" : "perfect",
 							"scoring" : {
@@ -790,7 +780,6 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"text" : "Perfectly cooks a high temperature stir-fry",
 							"value" : "temperature",
 							"scoring" : {
@@ -819,7 +808,6 @@
 							"text" : "The busy control room of my home where we get the kids ready for school, lunches packed, soccer and so much more.",
 							"value" : "busy",
 							"thumbnail" : "../img/icon-lifestyle.png",
-							"thumbnail_text" : "Lifestyle",
 							"scoring" : {
 								"powerPreheat" : 1
 							},
@@ -829,7 +817,6 @@
 							"text" : "The place where we create new family favourite meals.",
 							"value" : "create",
 							"thumbnail" : "../img/icon-lifestyle.png",
-							"thumbnail_text" : "Lifestyle",
 							"scoring" : {
 								"double" : 1
 							},
@@ -839,7 +826,6 @@
 							"text" : "Our entertaining hub – the place where birthdays, holidays and BBQs come together.",
 							"value" : "entertain",
 							"thumbnail" : "../img/icon-lifestyle.png",
-							"thumbnail_text" : "Lifestyle",
 							"scoring" : {
 								"combination" : 1
 							},
@@ -868,7 +854,6 @@
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
-							"thumbnail_text" : "Fuel Type",
 							"value" : "yes",
 							"order" : 1
 						},
@@ -878,7 +863,6 @@
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
-							"thumbnail_text" : "Fuel Type",
 							"value" : "no",
 							"scoring" : {
 								"gas" : null
@@ -892,8 +876,8 @@
 		"Cooking - Ranges - Preference" : {
 			"next" : null,
 			"previous" : "Cooking - Ranges - Gas",
-			"thumbnail_text" : "Preference",
 			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
 			"text" : [
 				{
 					"question" : "When shopping for a range, what’s most important to you?",
@@ -906,7 +890,6 @@
 							"text" : "Space to cook large dishes",
 							"value" : "large dishes",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 								"double" : 1,
 								"maxCapacity" : 1
@@ -917,7 +900,6 @@
 							"text" : "Ease of cleaning",
 							"value" : "easy cleaning",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 							},
 							"order" : 2
@@ -926,7 +908,6 @@
 							"text" : "Precise cooking temperature",
 							"value" : "temperature",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -936,7 +917,6 @@
 							"text" : "Even heat for baking",
 							"value" : "even heat",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -946,7 +926,6 @@
 							"text" : "Cooking multi-course meals",
 							"value" : "multi-course",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 								"double" : 1,
 								"warmingDrawer" : 1
@@ -957,7 +936,6 @@
 							"text" : "Up to date technology",
 							"value" : "tech",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 							},
 							"order" : 6
@@ -966,7 +944,6 @@
 							"text" : "Energy Efficiency",
 							"value" : "energy",
 							"thumbnail" : "../img/icon-features.png",
-							"thumbnail_text" : "Features",
 							"scoring" : {
 							},
 							"order" : 7
@@ -998,35 +975,30 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
-							"thumbnail_text" : "Energy",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-energy.png",
-							"thumbnail_text" : "Energy",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-energy.png",
-							"thumbnail_text" : "Energy",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-energy.png",
-							"thumbnail_text" : "Energy",
 							"value" : 3,
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-energy.png",
-							"thumbnail_text" : "Energy",
 							"value" : 4,
 							"scoring" : {
 							}

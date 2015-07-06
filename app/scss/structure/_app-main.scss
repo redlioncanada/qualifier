@@ -4,9 +4,11 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	@include noselect;
 	.content-inner {
 		width: 100%;
 		padding-top: 25px;
+		@include noselect;
 		// padding-bottom: 25px;
 	}
 }
@@ -14,6 +16,7 @@
 .app-content-main-top {
 	@include make-row;
 	padding-bottom: 25px;
+	@include noselect;
 	.app-content-main-top-left {
 		@include make-md-column(8);
 	}
@@ -57,6 +60,7 @@
 	@include make-row;
 	padding-top: 25px;
 	padding-bottom: 25px;
+	@include noselect;
 	.app-content-main-bottom-left {
 		@include make-md-column(1);
 		// padding-left: 0;
@@ -64,8 +68,8 @@
 	}
 	.app-content-main-bottom-center {
 		@include make-md-column(10);
-		// padding-left: 0;
-		// padding-right: 0;
+		padding-left: 0;
+		padding-right: 0;
 		text-align: center;
 
 	}
@@ -76,12 +80,7 @@
 		text-align: right;
 	}
 	.btn-next, .btn-prev {
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
+		@include noselect;
 		svg {
 			display: block;
 			width: 28px;
@@ -98,12 +97,45 @@
 		font-size: 9px;
 		margin-top: 5px;
 	}
+	.icon-nav {
+		display: inline-block;
+		float: left;
+		// width: 80px;
+		width: 69px; // necessary for fitting max number
+		text-align: center;
+	}
+	.icon-text {
+		display: block;
+		padding-top: 13px;
+		// padding-top: 6px;
+	}
+	.results-count-wrap {
+		display: inline-block;
+		float: left;
+		.results-count {
+			display: inline-block;
+			// float: left;
+			width: 59px;
+			height: 59px;
+		}
+		.results-count-number {
+			padding-top: 7px;
+			padding-bottom: 2px;
+		}
+		.results-count-label {
+			text-transform: uppercase;
+		}
+	}
 	.icon-nav-wrap {
-		// display: inline-block;
-		// float: left;
+		display: inline-block;
+		float: left;
 		a {
 			cursor: pointer;
 		}
+	}
+	.icon-img {
+		max-width: 41px;
+		max-height: 41px;
 	}
 
 }

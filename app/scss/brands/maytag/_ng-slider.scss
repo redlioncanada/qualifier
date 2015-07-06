@@ -45,7 +45,7 @@ div.people6 .jslider .jslider-value {
 	height: 47px;
 }
 
-.answer-slider {
+.answer-slider, .price-slider {
 	// width: 50%; 
 	// margin-left: 25%; 
 	// clear: both; 
@@ -128,6 +128,10 @@ div.people6 .jslider .jslider-value {
 			width: 861px;
 			height: 42px;
 			background: url('../img/slider-bg.png');
+
+			// width: 972px;
+			// height: 63px;
+			// background: url('../img/slider-full-bg.png');
 			i { 
 				height: 5px; 
 				position: absolute; 
@@ -388,3 +392,17 @@ div.people6 .jslider .jslider-value {
 	}
 }
 
+
+// Results Page
+#results {
+	.price-slider {
+		margin-top: 0;
+		margin-bottom: 0;
+		.jslider-bg {
+			position: relative; 
+			width: 475px;
+			height: 42px;
+			background: url('../img/slider-results-bg.png');
+		}
+	}
+}

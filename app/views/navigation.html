@@ -21,18 +21,17 @@
 
 	<div class="app-content-main-bottom-center">
 		<div class="bottom-nav-inner">
-			<a ng-if="!!questionsData.currentCount || questionsData.currentCount==0" class="results-count-wrap">
-				<div class="results-count-number" ng-bind="questionsData.currentCount"></div>
-				<div class="results-count-label" bo-text="brandData.apptext.results"></div>
-			</a>
+			<div class="results-count-wrap" ng-if="!!questionsData.currentCount || questionsData.currentCount==0">
+				<a class="results-count">
+					<div class="results-count-number" ng-bind="questionsData.currentCount"></div>
+					<div class="results-count-label" bo-text="brandData.apptext.results"></div>
+				</a>
+			</div>
 
 
 			<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
-		      
 		    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()">
 			      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" />
-			      	<!-- <span ng-if="q.a_thumbnail_type=='glyphicon'" class="glyphicon glyphicon-{{a.thumbnail}}" style="width: 30px; height: 30px"></span> -->
-			      	<!-- <span class="icon-text" ng-if="q.a_thumbnail_type=='text'" style="width: 30px; height: 30px" bo-text="a.thumbnail"></span> -->
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
 		    	</a>      
 			</div>
@@ -40,7 +39,7 @@
 			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 		      
 		    	<a class="icon-nav">
-			      	<img class="icon-img" src="img/navigationplaceholder.png" />
+			      	<img class="icon-img" src="img/nav-placeholder.png" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 		    	</a>      
 			</div>
