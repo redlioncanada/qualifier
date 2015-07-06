@@ -11,6 +11,7 @@
 		"Appliance" : {
 			"previous" : null,
 			"thumbnail_type" : "image",
+			"thumbnail_text" : "Appliance",
 			"text" : [
 				{
 					"question" : "Welcome to My Maytag, what can we help you find?",
@@ -81,6 +82,7 @@
 		"Cooking - Pre-Qualifier 1" : {
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
+			"thumbnail_text" : "Cooking",
 			"text" : [
 				{
 					"question" : "Which product would you like to explore first?",
@@ -461,7 +463,7 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important", "-", "Not a Concern"]       
+					    "scale": ["Very Important","|", "|", "|","Not a Concern"]       
 					},
 					"answers" : {
 						"0" : {
@@ -516,7 +518,7 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important", "-", "Not a Concern"]       
+					    "scale": ["Very Important","|","|","|","Not a Concern"]       
 					},
 					"answers" : {
 						"0" : {
@@ -970,7 +972,7 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important", "-", "Not a Concern"]       
+					    "scale": ["Very Important","|","|","|","Not a Concern"]       
 					},
 					"answers" : {
 						"0" : {
@@ -1548,7 +1550,7 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important", "-", "Not a Concern"]       
+					    "scale": ["Very Important","|","|","|", "Not a Concern"]       
 					},
 					"answers" : {
 						"0" : {
@@ -2473,7 +2475,7 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important", "-", "Not a Concern"]       
+					    "scale": ["Very Important","|","|","|","Not a Concern"]       
 					},
 					"answers" : {
 						"0" : {
