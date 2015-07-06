@@ -9,17 +9,17 @@
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!questionsData.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.show.explanation}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
 						<span class="btn-icon">
 							<span>?</span>
 						</span>
-						<span class="btn-text" ng-bind="questionsData.show.explanation_title"></span>
+						<span class="btn-text" ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="btn-wrap" ng-if="!!questionsData.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.show.info}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
 						<span class="btn-icon">
 							<span>i</span>
 						</span>
-						<span class="btn-text" ng-bind="questionsData.show.info_title"></span>
+						<span class="btn-text" ng-bind="questionsData.question.show.info_title"></span>
 					</a>	
 				</div>
 			</div>
