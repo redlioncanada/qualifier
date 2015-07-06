@@ -108,7 +108,7 @@
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
-								"type" : "Wall Ovens"
+								"type" : "Ovens"
 							},
 							"next" : "Cooking - Wall Ovens - Size",						
 							"order" : 2
@@ -141,7 +141,7 @@
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
-								"type" : "Wall Ovens"
+								"type" : "Ovens"
 							},
 							"next" : "Cooking - Wall Ovens - Size",
 							"order" : 2
@@ -250,8 +250,7 @@
 					"title" : "Note",
 					"text" : "Industry standard is 30"
 				}
-			],
-			"right_answers" : ["wall ovens"]
+			]
 		},
 		"Cooking - Wall Ovens - Ranking" : {
 			"next" : "Cooking - Wall Ovens - Cooking Style",
