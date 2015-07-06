@@ -109,7 +109,7 @@
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
-								"type" : "Wall Ovens"
+								"type" : "Ovens"
 							},
 							"next" : "Cooking - Wall Ovens - Size",						
 							"order" : 2
@@ -142,7 +142,7 @@
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
-								"type" : "Wall Ovens"
+								"type" : "Ovens"
 							},
 							"next" : "Cooking - Wall Ovens - Size",
 							"order" : 2
@@ -242,8 +242,7 @@
 					"title" : "Note",
 					"text" : "Industry standard is 30"
 				}
-			],
-			"right_answers" : ["wall ovens"]
+			]
 		},
 		"Cooking - Wall Ovens - Ranking" : {
 			"next" : "Cooking - Wall Ovens - Cooking Style",
@@ -670,6 +669,7 @@
 		"Cooking - Ranges - Convection" : {
 			"next" : "Cooking - Ranges - Usage",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
+			"thumbnail_text" : "Convection",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -729,6 +729,7 @@
 		"Cooking - Ranges - Usage" : {
 			"next" : "Cooking - Ranges - Lifestyle",
 			"previous" : "Cooking - Ranges - Convection",
+			"thumbnail_text" : "Usage",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -804,6 +805,7 @@
 		"Cooking - Ranges - Lifestyle" : {
 			"next" : "Cooking - Ranges - Gas",
 			"previous" : "Cooking - Ranges - Usage",
+			"thumbnail_text" : "Lifestyle",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -850,6 +852,7 @@
 		"Cooking - Ranges - Gas" : {
 			"next" : "Cooking - Ranges - Preference",
 			"previous" : "Cooking - Ranges - Lifestyle",
+			"thumbnail_text" : "Fuel Type",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -889,6 +892,7 @@
 		"Cooking - Ranges - Preference" : {
 			"next" : null,
 			"previous" : "Cooking - Ranges - Gas",
+			"thumbnail_text" : "Preference",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
