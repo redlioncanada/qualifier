@@ -24,9 +24,9 @@
 				</div>
 			</div>
 
-			<div class="app-content-main-top-right" ng-if="questionsData.scoringQuestions.length">
+			<div class="app-content-main-top-right" ng-if="objSize(questionsData.scoringQuestions) ==0">
 				<!-- Needs to switch to save after intro -->
-				<button class="btn btn-default">Begin</button>
+				<button class="btn btn-default" ng-click="next()">Begin</button>
 			</div>
 		</div>
 	</div>
