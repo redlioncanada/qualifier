@@ -6,3 +6,20 @@
 	-ms-user-select: none;
 	user-select: none;
 }
+
+@mixin large-square-label-wrap {
+	display: inline-block;
+	border-radius: 2px;
+	background-color: rgba(76, 76, 76, 0.161);
+	box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+	width: 63px;
+	height: 61px;
+}
+@mixin large-square-label {
+	font-family: $AG-Bold-Cnd;
+	font-size: 27px;
+	// opacity: 0.54; // this should also be a colour...
+	color: #5d5d5d;
+	top: 12px;
+	position: relative;
+}

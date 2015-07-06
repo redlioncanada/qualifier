@@ -106,14 +106,15 @@
 	}
 	.icon-text {
 		display: block;
-		// padding-top: 13px;
-		padding-top: 6px;
+		padding-top: 13px;
+		// padding-top: 6px;
 	}
 	.results-count-wrap {
 		display: inline-block;
+		float: left;
 		.results-count {
 			display: inline-block;
-			float: left;
+			// float: left;
 			width: 59px;
 			height: 59px;
 		}
@@ -127,9 +128,7 @@
 	}
 	.icon-nav-wrap {
 		display: inline-block;
-		.icon-nav {
-			float: left;
-		}
+		float: left;
 		a {
 			cursor: pointer;
 		}

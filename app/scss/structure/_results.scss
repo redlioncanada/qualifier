@@ -7,17 +7,27 @@
 			margin-bottom: 0;
 			text-align: left;
 			text-transform: uppercase;
+			float: left;
 		}
 		.results-adjust-desc {
 			display: inline-block;
 			margin-left: 10px;
 			text-align: left;
 			text-transform: uppercase;
+			float: left;
+			position: relative;
+			top: 9px;
 		}
 		.price-slider {
 			display: inline-block;
 			width: 475px;
+			// margin-left: 100px;
+		}
+		.price-slider-wrap {
+			display: inline-block;
 			margin-left: 100px;
+			height: 70px;
+			float: left;
 		}
 	}
 	.results-list {
