@@ -25,7 +25,7 @@
 			</div>
 
 			<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
-		    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="{{questionsData.question.show.question}}">
+		    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="{{q.show.question}}">
 			      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
 		    	</a>      
