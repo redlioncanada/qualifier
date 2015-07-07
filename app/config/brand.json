@@ -25,6 +25,7 @@
 							"image" : "img/cat-laundry.jpg",
 							"hover" : "img/maytag-man-washer-hover.png",							
 							"thumbnail" : "img/cat-laundry.jpg",							
+							"thumbnail_current" : "img/cat-laundry.jpg",							
 							"thumbnail_text" : "Laundry",							
 							"next" : "Laundry - Energy",
 							"scoring" : {
@@ -39,6 +40,7 @@
 							"image" : "img/cat-cooking.jpg",
 							"hover" : "img/maytag-man-cooking-hover.png",
 							"thumbnail" : "img/cat-cooking.jpg",
+							"thumbnail_current" : "img/cat-cooking.jpg",
 							"thumbnail_text" : "Cooking",
 							"scoring" : {
 								"appliance" : "Cooking"
@@ -53,6 +55,7 @@
 							"image" : "img/cat-fridge.jpg",
 							"hover" : "img/maytag-man-fridge-hover.png",
 							"thumbnail" : "img/cat-fridge.jpg",
+							"thumbnail_current" : "img/cat-fridge.jpg",
 							"thumbnail_text" : "Fridge",
 							"scoring" : {
 								"appliance" : "Fridges"
@@ -67,6 +70,7 @@
 							"image" : "img/cat-dishwasher.jpg",
 							"hover" : "img/maytag-man-dishwasher-hover.png",
 							"thumbnail" : "img/cat-dishwasher.jpg",
+							"thumbnail_current" : "img/cat-dishwasher.jpg",
 							"thumbnail_text" : "Dishwasher",
 							"scoring" : {
 								"appliance" : "Dishwashers"
@@ -95,6 +99,7 @@
 							"classes" : "sub-category ranges",
 							"image" : "img/cat-cooking-sub-free-range.jpg",
 							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
+							"thumbnail_current" : "img/cat-cooking-sub-free-range.jpg",
 							"thumbnail_text" : "Range",
 							"scoring" : {
 								"type" : "Ranges"
@@ -108,6 +113,7 @@
 							"classes" : "sub-category wallovens",
 							"image" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
+							"thumbnail_current" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
 								"type" : "Ovens"
@@ -128,6 +134,7 @@
 							"classes" : "sub-category ranges",
 							"image" : "img/cat-cooking-sub-free-range.jpg",
 							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
+							"thumbnail_current" : "img/cat-cooking-sub-free-range.jpg",
 							"thumbnail_text" : "Range",
 							"scoring" : {
 								"type" : "Ranges"
@@ -141,6 +148,7 @@
 							"classes" : "sub-category wallovens",
 							"image" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
+							"thumbnail_current" : "img/cat-cooking-sub-wall-oven.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
 								"type" : "Ovens"
@@ -176,12 +184,14 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"27" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 1,
 							"scoring" : {
 								"width" : 27
@@ -189,6 +199,7 @@
 						},
 						"30" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 0,
 							"scoring" : {
 								"width" : 30
@@ -208,6 +219,7 @@
 					"answers" : {
 						"single" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 0,
 							"scoring" : {
 								"single" : true
@@ -215,6 +227,7 @@
 						},
 						"combo" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 1,
 							"scoring" : {
 								"combo" : true
@@ -222,6 +235,7 @@
 						},
 						"double" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 2,
 							"scoring" : {
 								"double" : true
@@ -229,6 +243,7 @@
 						},
 						"no restriction" : {
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 3,
 							"scoring" : {
 
@@ -260,6 +275,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Space to cook large dishes",
 							"value" : "space",
 							"scoring" : {
@@ -270,6 +286,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Even heat for baking",
 							"value" : "even heat",
 							"scoring" : {
@@ -279,6 +296,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Cooking multi-course meals",
 							"value" : "multi-course",
 							"scoring" : {
@@ -288,12 +306,14 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Ease of cleaning",
 							"value" : "easy cleaning",
 							"order" : 4
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Up to date with technology",
 							"value" : "tech",
 							"order" : 5
@@ -317,6 +337,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "A baker",
 							"text_more" : "birthday cakes, Thanksgiving pies and gingerbread men, I’m usually covered in flour.",
 							"value" : "baker",
@@ -327,6 +348,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "I’m Both",
 							"text_more" : "I shine at school bake sales and have mastered family-friendly meatloaf.",
 							"value" : "both",
@@ -337,6 +359,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "A Home Chef",
 							"value" : "home chef",
 							"text_more" : "Holiday roasts, Sunday night casserole and taco Tuesdays I love trying new recipes.",
@@ -347,6 +370,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "I’m Neither",
 							"text_more" : "My family’s stack of take-out menus is impressive.",
 							"value" : "neither",
@@ -373,6 +397,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "To mostly reheat leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
@@ -382,6 +407,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Cook multiple meals daily",
 							"value" : "multiple meals",
 							"scoring" : {
@@ -390,6 +416,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "To help me host parties and cook multi-course meals",
 							"value" : "host parties",
 							"scoring" : {
@@ -416,6 +443,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"text" : "The busy control room of my home where we get the kids ready for school, lunches packed, soccer and so much more.",
 							"value" : "busy",
 							"scoring" : {
@@ -425,6 +453,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"text" : "The place where we create new family favourite meals.",
 							"value" : "create",
 							"scoring" : {
@@ -434,6 +463,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"text" : "Our entertaining hub – the place where birthdays, holidays and BBQs come together.",
 							"value" : "entertain",
 							"scoring" : {
@@ -468,30 +498,35 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 3,
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
 							"scoring" : {
 							}
@@ -523,30 +558,35 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 3,
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
 							"scoring" : {
 							}
@@ -578,12 +618,14 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 0,
 							"scoring" : {							
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
 							"scoring" : {
 								"mediumCapacity" : true
@@ -591,6 +633,7 @@
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
 							"scoring" : {
 								"largeCapacity" : true
@@ -598,6 +641,7 @@
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
 							"scoring" : {
 								"largerCapacity" : true
@@ -605,6 +649,7 @@
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
 							"scoring" : {
 								"largestCapacity" : true
@@ -629,6 +674,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "From Sunday roasts to pasta night, my family depends on me to make dinner.",
 							"value" : "family",
 							"scoring" : {
@@ -638,6 +684,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "Because I’m always trying new dishes for my family, I need a range that can handle variety.",
 							"value" : "variety",
 							"scoring" : {
@@ -647,6 +694,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "From birthday parties to family holidays, I need a range that can handle cakes and feasts for a crowd.",
 							"value" : "crowd",
 							"scoring" : {
@@ -656,6 +704,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "Cook? We’re more of a take-out family with an impressive collection of frozen foods.",
 							"value" : "frozen",
 							"scoring" : {
@@ -682,6 +731,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-convection.png",
+							"thumbnail_current" : "../img/icon-convection-current.png",
 							"text" : "A Baker",
 							"text_more" : "Birthday cakes, Thanksgiving pies and gingerbread men, I’m usually covered in flour.",
 							"value" : "baker",
@@ -692,6 +742,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
+							"thumbnail_current" : "../img/icon-convection-current.png",
 							"text" : "A Home Chef",
 							"value" : "home chef",
 							"text_more" : "Holiday roasts, Sunday night casserole and taco Tuesdays I love trying new recipes.",
@@ -702,6 +753,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
+							"thumbnail_current" : "../img/icon-convection-current.png",
 							"text" : "I’m Both",
 							"text_more" : "I shine at school bake sales and can have mastered family-friendly meatloaf.",
 							"value" : "both",
@@ -712,6 +764,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-convection.png",
+							"thumbnail_current" : "../img/icon-convection-current.png",
 							"text" : "I’m Neither",
 							"text_more" : "My family’s stack of take-out menus is impressive.",
 							"value" : "neither",
@@ -738,6 +791,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Reheats leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
@@ -747,6 +801,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Cooks multiple meals daily",
 							"value" : "multiple meals",
 							"scoring" : {
@@ -755,6 +810,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Will help me host parties and cook multi-course meals",
 							"value" : "host parties",
 							"scoring" : {
@@ -764,6 +820,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Fits large holiday roasts",
 							"value" : "large dishes",
 							"scoring" : {
@@ -773,6 +830,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Will help me make the perfect sauce",
 							"value" : "perfect",
 							"scoring" : {
@@ -782,6 +840,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Perfectly cooks a high temperature stir-fry",
 							"value" : "temperature",
 							"scoring" : {
@@ -810,6 +869,7 @@
 							"text" : "The busy control room of my home where we get the kids ready for school, lunches packed, soccer and so much more.",
 							"value" : "busy",
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"scoring" : {
 								"powerPreheat" : 1
 							},
@@ -819,6 +879,7 @@
 							"text" : "The place where we create new family favourite meals.",
 							"value" : "create",
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -828,6 +889,7 @@
 							"text" : "Our entertaining hub – the place where birthdays, holidays and BBQs come together.",
 							"value" : "entertain",
 							"thumbnail" : "../img/icon-lifestyle.png",
+							"thumbnail_current" : "../img/icon-lifestyle-current.png",
 							"scoring" : {
 								"combination" : 1
 							},
@@ -856,6 +918,7 @@
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
+							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"value" : "yes",
 							"order" : 1
 						},
@@ -865,6 +928,7 @@
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
+							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"value" : "no",
 							"scoring" : {
 								"gas" : null
@@ -892,6 +956,7 @@
 							"text" : "Space to cook large dishes",
 							"value" : "large dishes",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 								"double" : 1,
 								"maxCapacity" : 1
@@ -902,6 +967,7 @@
 							"text" : "Ease of cleaning",
 							"value" : "easy cleaning",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 							},
 							"order" : 2
@@ -910,6 +976,7 @@
 							"text" : "Precise cooking temperature",
 							"value" : "temperature",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 								"gas" : 1
 							},
@@ -919,6 +986,7 @@
 							"text" : "Even heat for baking",
 							"value" : "even heat",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -928,6 +996,7 @@
 							"text" : "Cooking multi-course meals",
 							"value" : "multi-course",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 								"double" : 1,
 								"warmingDrawer" : 1
@@ -938,6 +1007,7 @@
 							"text" : "Up to date technology",
 							"value" : "tech",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 							},
 							"order" : 6
@@ -946,6 +1016,7 @@
 							"text" : "Energy Efficiency",
 							"value" : "energy",
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"scoring" : {
 							},
 							"order" : 7
@@ -977,30 +1048,35 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 3,
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
 							"scoring" : {
 							}
@@ -1032,6 +1108,7 @@
 					"answers" : {
 						"1" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
 							"scoring" : {
 								"smallestCapacity" : true
@@ -1039,6 +1116,7 @@
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
 							"scoring" : {
 								"smallCapacity" : true
@@ -1046,6 +1124,7 @@
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
 							"scoring" : {
 								"mediumCapacity" : true
@@ -1053,6 +1132,7 @@
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
 							"scoring" : {
 								"largeCapacity" : true
@@ -1060,6 +1140,7 @@
 						},
 						"5" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
 							"scoring" : {
 								"largerCapacity" : true
@@ -1067,6 +1148,7 @@
 						},
 						"6" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 6,
 							"scoring" : {
 								"largestCapacity" : true
@@ -1094,6 +1176,7 @@
 							"value" : "dog bed",
 							"image" : "../img/laundry-Q2-a.jpg",
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"scoring" : {
 								"largerCapacity" : true,
 								"largestCapacity" : true
@@ -1105,6 +1188,7 @@
 							"value" : "duvet",
 							"image" : "../img/laundry-Q2-b.jpg",
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"scoring" : {
 								"largerCapacity" : true,
 								"largestCapacity" : true
@@ -1116,6 +1200,7 @@
 							"value" : "kids",
 							"image" : "../img/laundry-Q2-c.jpg",
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"scoring" : {
 								"largerCapacity" : true,
 								"largestCapacity" : true
@@ -1143,6 +1228,7 @@
 							"text" : "Very much so, my laundry is located near a bedroom",
 							"value" : "sensitive",
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
 								"soundGuard" : 1,
 							 	"vibrationControl" : 1
@@ -1153,6 +1239,7 @@
 							"text" : "A little bit, but noise doesn’t bother me for the most part",
 							"value" : "concerned",
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
 								"audioLevel" : 1
 							},
@@ -1162,6 +1249,7 @@
 							"text" : "Not at all, my laundry is down in the basement",
 							"value" : "unconcerned",
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
 							},
 							"order" : 3
@@ -1185,6 +1273,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "The ceiling is a little low, but there’s plenty of space on the floor",
 							"value" : "low with floor space",
 							"scoring" : {
@@ -1194,6 +1283,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "Low ceiling and very little floor space",
 							"value" : "low with little floor space",
 							"scoring" : {
@@ -1203,6 +1293,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "High ceiling and very little floor space",
 							"value" : "high with floor space",
 							"scoring" : {
@@ -1213,6 +1304,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "No space constraints",
 							"value" : "everything",
 							"scoring" : {
@@ -1239,6 +1331,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-speed.png",
+							"thumbnail_current" : "../img/icon-speed-current.png",
 							"text" : "Yes, we are always on the go",
 							"value" : "yes",
 							"scoring" : {
@@ -1249,6 +1342,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-speed.png",
+							"thumbnail_current" : "../img/icon-speed-current.png",
 							"text" : "Sometimes between school and practice",
 							"value" : "sometimes",
 							"scoring" : {
@@ -1259,6 +1353,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-speed.png",
+							"thumbnail_current" : "../img/icon-speed-current.png",
 							"text" : "Only when there is an unexpected spill",
 							"value" : "not often",
 							"scoring" : {
@@ -1269,6 +1364,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-speed.png",
+							"thumbnail_current" : "../img/icon-speed-current.png",
 							"text" : "Rarely",
 							"value" : "rarely",
 							"scoring" : {
@@ -1294,6 +1390,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Denim",
 							"value" : "denim",
 							"scoring" : {
@@ -1303,6 +1400,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Delicates",
 							"value" : "delicates",
 							"scoring" : {
@@ -1312,6 +1410,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Gym clothes",
 							"value" : "gym clothes",
 							"scoring" : {
@@ -1321,6 +1420,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Ballet tights",
 							"value" : "ballet tights",
 							"scoring" : {
@@ -1330,6 +1430,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Everyday wear",
 							"value" : "everyday wear",
 							"scoring" : {
@@ -1339,6 +1440,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-fabric.png",
+							"thumbnail_current" : "../img/icon-fabric-current.png",
 							"text" : "Towels",
 							"value" : "towels",
 							"scoring" : {
@@ -1373,6 +1475,7 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 0,
 							"scoring" : {
 								"sensorDry" : 1
@@ -1380,12 +1483,14 @@
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 2,
 							"scoring" : {
 								"sensorDry" : 1
@@ -1418,6 +1523,7 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-wrinkles.png",
+							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 0,
 							"scoring" : {
 								"wrinkleControl" : 1
@@ -1425,6 +1531,7 @@
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-wrinkles.png",
+							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 1,
 							"scoring" : {
 								"wrinkleControl" : 2
@@ -1432,6 +1539,7 @@
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-wrinkles.png",
+							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 2,
 							"scoring" : {
 								"wrinkleControl" : 3
@@ -1460,6 +1568,7 @@
 							"image" : "../img/icon-thumb-gas.png",
 							"hover" : "../img/icon-thumb-gas-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
+							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"scoring" : {
 								"electric" : null
 							},
@@ -1471,6 +1580,7 @@
 							"image" : "../img/icon-thumb-electric.png",
 							"hover" : "../img/icon-thumb-electric-active.png",
 							"thumbnail" : "../img/icon-fueltype.png",
+							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"scoring" : {
 								"gas" : null
 							},
@@ -1504,12 +1614,14 @@
 						"0" : {
 							"value" : 0,
 							"thumbnail" : "../img/icon-dryclean.png",
+							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"value" : 1,
 							"thumbnail" : "../img/icon-dryclean.png",
+							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
 								"steamEnhanced" : 1
 							}
@@ -1517,6 +1629,7 @@
 						"2" : {
 							"value" : 2,
 							"thumbnail" : "../img/icon-dryclean.png",
+							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
 								"steamEnhanced" : 2
 							}
@@ -1524,6 +1637,7 @@
 						"3" : {
 							"value" : 3,
 							"thumbnail" : "../img/icon-dryclean.png",
+							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
 								"steamEnhanced" : 3
 							}
@@ -1556,30 +1670,35 @@
 						"0" : {
 							"value" : 0,
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"value" : 1,
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"value" : 2,
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"value" : 3,
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"value" : 4,
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
 							}
 						}
@@ -1611,6 +1730,7 @@
 						"66" : {
 							"value" : 66,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"height" : 66
 							}
@@ -1618,6 +1738,7 @@
 						"67" : {
 							"value" : 67,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "height" : 67
 							}
@@ -1625,6 +1746,7 @@
 						"68" : {
 							"value" : 68,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "height" : 68
 							}
@@ -1632,6 +1754,7 @@
 						"69" : {
 							"value" : 69,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "height" : 69
 							}
@@ -1639,6 +1762,7 @@
 						"70" : {
 							"value" : 70,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "height" : 70
 							}
@@ -1646,6 +1770,7 @@
 						"71" : {
 							"value" : 71,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "height" : 71
 							}
@@ -1665,6 +1790,7 @@
 						"30" : {
 							"value" : 30,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width" : 30
 							}
@@ -1672,6 +1798,7 @@
 						"31" : {
 							"value" : 31,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "width" : 31
 							}
@@ -1679,6 +1806,7 @@
 						"32" : {
 							"value" : 32,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								 "width" : 32
 							}
@@ -1686,6 +1814,7 @@
 						"33" : {
 							"value" : 33,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width" : 33
 							}
@@ -1693,6 +1822,7 @@
 						"34" : {
 							"value" : 34,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width" : 34
 							}
@@ -1700,6 +1830,7 @@
 						"35" : {
 							"value" : 35,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width" : 35
 							}
@@ -1707,6 +1838,7 @@
 						"36" : {
 							"value" : 36,
 							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width" : 36
 							}
@@ -1744,18 +1876,21 @@
 					"answers" : {
 						"1" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
 							"scoring" : {
 								"powerCold" : 1
@@ -1763,6 +1898,7 @@
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
 							"scoring" : {
 								"powerCold" : 2
@@ -1770,6 +1906,7 @@
 						},
 						"5" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
 							"scoring" : {
 								"powerCold" : 2
@@ -1794,6 +1931,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "Keep the drinks cold - from milk to fruit juice, pop to iced tea and everything in between",
 							"value" : "reheat",
 							"scoring" : {
@@ -1803,6 +1941,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "Be our personal grocery store - all ten aisles in one place",
 							"value" : "multiple meals",
 							"scoring" : {
@@ -1813,6 +1952,7 @@
 							"text" : "Hold our ready-to-eat prepared meals - we’re always on the go",
 							"value" : "host parties",
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1823,6 +1963,7 @@
 							"text_more" : "we’re always on the go",
 							"value" : "host parties",
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"scoring" : {
 								"double" : 1
 							},
@@ -1849,6 +1990,7 @@
 							"text" : "A nice, cold bottle of water",
 							"value" : "bottle of water",
 							"thumbnail" : "../img/icon-water.png",
+							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
 								"indoor" : 1
 							},
@@ -1858,6 +2000,7 @@
 							"text" : "A glass of tap water",
 							"value" : "glass of tap water",
 							"thumbnail" : "../img/icon-water.png",
+							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
 								"indoor" : 1
 							},
@@ -1867,6 +2010,7 @@
 							"text" : "A glass of filtered water",
 							"value" : "glass of filtered water",
 							"thumbnail" : "../img/icon-water.png",
+							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
 								"indoor" : 1
 							},
@@ -1876,6 +2020,7 @@
 							"text" : "A drink from our water cooler",
 							"value" : "drink from our water cooler",
 							"thumbnail" : "../img/icon-water.png",
+							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
 								"indoor" : 1
 							},
@@ -1885,6 +2030,7 @@
 							"text" : "A glass of milk or juice",
 							"value" : "glass of milk or juice",
 							"thumbnail" : "../img/icon-water.png",
+							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
 							},
 							"order" : 5
@@ -1908,6 +2054,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "My soft drink",
 							"value" : "soft drink",
 							"image" : "../img/icon-thumb-softdrinks.png",
@@ -1920,6 +2067,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "My cocktails",
 							"value" : "cocktails",
 							"image" : "../img/icon-thumb-cocktails.png",
@@ -1932,6 +2080,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "My water",
 							"value" : "water",
 							"image" : "../img/icon-thumb-water.png",
@@ -1944,6 +2093,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "My smoothies",
 							"value" : "smoothies",
 							"image" : "../img/icon-thumb-smoothies.png",
@@ -1956,6 +2106,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "My coolers",
 							"value" : "cooler",
 							"image" : "../img/icon-thumb-cooler.png",
@@ -1985,6 +2136,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "Perfectly organized",
 							"value" : "perfect",
 							"scoring" : {
@@ -1994,6 +2146,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "Organized with lots of stuff",
 							"value" : "organized",
 							"scoring" : {
@@ -2003,6 +2156,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "Disorganized with lots of stuff",
 							"value" : "disorganized",
 							"scoring" : {
@@ -2012,6 +2166,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-orientation.png",
+							"thumbnail_current" : "../img/icon-orientation-current.png",
 							"text" : "Sparsely filled",
 							"value" : "sparse",
 							"scoring" : {
@@ -2051,6 +2206,7 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 0,
 							"scoring" : {
 								"counterDepth" : 2
@@ -2058,6 +2214,7 @@
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 1,
 							"scoring" : {
 								"counterDepth" : 1
@@ -2065,6 +2222,7 @@
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
@@ -2088,6 +2246,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "I’m on a first-name basis at the farmers’ market.",
 							"value" : "farmers market",
 							"scoring" : {
@@ -2099,6 +2258,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "I visit the grocery store but stick to the perimeter to get the basics.",
 							"value" : "basics",
 							"scoring" : {
@@ -2111,6 +2271,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "I go aisle-to-aisle at the grocery store and always fill my cart.",
 							"value" : "full grocery store",
 							"scoring" : {
@@ -2119,6 +2280,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-features.png",
+							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "The frozen food aisle is my second home.",
 							"value" : "frozen food",
 							"scoring" : {
@@ -2144,6 +2306,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Pots and Pans",
 							"value" : "pots",
 							"scoring" : {
@@ -2152,6 +2315,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Casserole dishes",
 							"value" : "casserole",
 							"scoring" : {
@@ -2160,6 +2324,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Sports bottles",
 							"value" : "bottles",
 							"scoring" : {
@@ -2168,6 +2333,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Wine glasses and tumblers",
 							"value" : "glasses",
 							"scoring" : {
@@ -2176,6 +2342,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Cutting boards",
 							"value" : "boards",
 							"scoring" : {
@@ -2184,6 +2351,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Baby bottles",
 							"value" : "baby bottles",
 							"scoring" : {
@@ -2192,6 +2360,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-cleaning.png",
+							"thumbnail_current" : "../img/icon-cleaning-current.png",
 							"text" : "Every single utensil known to humankind",
 							"value" : "everything",
 							"scoring" : {
@@ -2227,12 +2396,14 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"10" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 10,
 							"scoring" : {
 								"placeSettings": "13"
@@ -2240,6 +2411,7 @@
 						},
 						"20" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 20,
 							"scoring" : {
 								"placeSettings": "14"
@@ -2247,6 +2419,7 @@
 						},
 						"30" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 30,
 							"scoring" : {
 								"placeSettings": "14"
@@ -2254,6 +2427,7 @@
 						},
 						"40" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 40,
 							"scoring" : {
 								"placeSettings": "14"
@@ -2261,6 +2435,7 @@
 						},
 						"50" : {
 							"thumbnail" : "../img/icon-capacity.png",
+							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 50,
 							"scoring" : {
 								"placeSettings": "15"
@@ -2295,18 +2470,21 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-cycles.png",
+							"thumbnail_current" : "../img/icon-cycles-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-cycles.png",
+							"thumbnail_current" : "../img/icon-cycles-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-cycles.png",
+							"thumbnail_current" : "../img/icon-cycles-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
@@ -2330,6 +2508,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "As soon as it's full",
 							"value" : "full",
 							"scoring" : {
@@ -2339,6 +2518,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "After I get my kids organized and into bed",
 							"value" : "night",
 							"scoring" : {
@@ -2348,6 +2528,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "Every morning before we all scatter out of the house",
 							"value" : "morning",
 							"scoring" : {
@@ -2356,6 +2537,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "Only during off peak hours",
 							"value" : "offpeak",
 							"scoring" : {
@@ -2382,6 +2564,7 @@
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "Full & Tidy",
 							"value" : "Full & Tidy",
 							"image" : "",
@@ -2392,6 +2575,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "Full & Messy",
 							"value" : "Full & Messy",
 							"image" : "",
@@ -2401,6 +2585,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "I still see some room!",
 							"value" : "I still see some room!",
 							"image" : "",
@@ -2411,6 +2596,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-organization.png",
+							"thumbnail_current" : "../img/icon-organization-current.png",
 							"text" : "Almost empty",
 							"value" : "Almost empty",
 							"image" : "",
@@ -2436,6 +2622,7 @@
 					"answers" : [
 						{ 
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "Simple/Sleek",
 							"value" : "Simple/Sleek",
 							"image" : "../img/dishwasher-Q5-sleek-modern.jpg",
@@ -2446,6 +2633,7 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
+							"thumbnail_current" : "../img/icon-style-current.png",
 							"text" : "Traditional/Commercial",
 							"value" : "Traditional/Commercial",
 							"image" : "../img/dishwasher-Q5-traditional-commercial.jpg",
@@ -2480,30 +2668,35 @@
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
 							"scoring" : {
 							}
 						},
 						"1" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 1,
 							"scoring" : {
 							}
 						},
 						"2" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 2,
 							"scoring" : {
 							}
 						},
 						"3" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 3,
 							"scoring" : {
 							}
 						},
 						"4" : {
 							"thumbnail" : "../img/icon-energy.png",
+							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
 							"scoring" : {
 							}
