@@ -213,7 +213,7 @@
 		height: 229px;
 		background: url('../img/boxes-picture-bg.png');
 		display: inline-block;
-		@include boxshadow;
+		// @include boxshadow;
 		.img-wrap {
 			margin-top: 4px;
 			img {
@@ -240,7 +240,7 @@
 		height: 229px;
 		background: url('../img/boxes-picture-4-bg.png');
 		display: inline-block;
-		@include boxshadow;
+		// @include boxshadow;
 		.img-wrap {
 			margin-top: 4px;
 			img {

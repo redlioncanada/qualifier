@@ -2384,7 +2384,7 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"text" : "Full & Tidy",
 							"value" : "Full & Tidy",
-							"image" : "http://placehold.it/268x165",
+							"image" : "",
 							"scoring" : {
 								"premiumAdjusters" : 1
 							},
@@ -2394,7 +2394,7 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"text" : "Full & Messy",
 							"value" : "Full & Messy",
-							"image" : "http://placehold.it/268x165",
+							"image" : "",
 							"scoring" : {						
 							},
 							"order" : 2
@@ -2403,7 +2403,7 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"text" : "I still see some room!",
 							"value" : "I still see some room!",
-							"image" : "http://placehold.it/268x165",
+							"image" : "",
 							"scoring" : {
 								"premiumAdjusters" : 1
 							},
@@ -2413,7 +2413,7 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"text" : "Almost empty",
 							"value" : "Almost empty",
-							"image" : "http://placehold.it/268x165",
+							"image" : "",
 							"scoring" : {
 							},
 							"order" : 4

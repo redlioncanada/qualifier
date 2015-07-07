@@ -15,10 +15,6 @@
 		</a>
 	</div>
 
-
-
-
-
 	<div class="app-content-main-bottom-center">
 		<div class="bottom-nav-inner">
 			<div class="results-count-wrap" ng-if="!!questionsData.currentCount || questionsData.currentCount==0">
@@ -44,17 +40,7 @@
 		    	</a>      
 			</div>
 
-
-			<!-- Compare Results btn - external link to comparison tool -->
-			<div ng-if="!questionsData.question">
-
-				<a class="btn btn-default">
-
-					<span>Compare</span>
-				</a>
-			</div>
 		</div>
-
 	</div>
 
 	<div class="app-content-main-bottom-right">
@@ -69,7 +55,14 @@
 				</span>
 			</div>
 			<div class="btn-text" bo-text="brandData.apptext.next"></div>
-		</button>
+		</a>
+
+		<!-- Compare Results btn - external link to comparison tool -->
+		<div class="compare-btn-wrap" ng-if="!questionsData.question">
+			<a id="compare" class="btn btn-compare">
+				<span>Compare Models</span>
+			</a>
+		</div>
 	</div>
 
 </div>

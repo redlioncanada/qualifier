@@ -195,22 +195,17 @@
 		font-size: 14px;
 		color: #414141;
 	}
-
-	// before icons, lines:
-	// tall one
-	// display: inline-block;
-	// height: 42px;
-	// width: 1px;
-	// background: #666666;
-	// margin-top: 0px;
-
-	// short one
-	// display: inline-block;
-	// height: 20px;
-	// width: 1px;
-	// background: #666666;
-	// margin-top: 10px;
-
+	.compare-btn-wrap {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+	}
+	.btn-compare {
+		font-family: $AG-Bold-Cnd;
+		font-size: 21px;
+		@include button-variant(#ffffff, #002e58, #002e58);
+		padding: 3px 18px;
+	}
 }
 
 .app-content-main-bottom-center .icon-nav-wrap {
