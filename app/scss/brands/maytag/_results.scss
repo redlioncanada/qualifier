@@ -67,6 +67,9 @@
 				// Bootstrap mixin
 				@include button-variant(#ffffff, #7d7d7d, #7d7d7d);
 				padding: 3px 18px;
+				&:hover {
+					background-color: #002e58;
+				}
 			}
 			.btn-text {
 				font-size: 17px;
