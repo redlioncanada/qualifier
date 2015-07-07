@@ -1,0 +1,51 @@
+$scale1: 1.15;
+$scale2: 1.07;
+
+@-webkit-keyframes pulse-animation {
+	0% { -webkit-transform: scale(1); }
+	30% { -webkit-transform: scale($scale1); }
+	40% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(1); }
+	60% { -webkit-transform: scale($scale2); }
+	70% { -webkit-transform: scale(1); }
+	80% { -webkit-transform: scale(1); }
+	100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse-animation {
+	0% { -moz-transform: scale(1); }
+	30% { -moz-transform: scale($scale1); }
+	40% { -moz-transform: scale(1); }
+	50% { -moz-transform: scale(1); }
+	60% { -moz-transform: scale($scale2); }
+	70% { -moz-transform: scale(1); }
+	80% { -moz-transform: scale(1); }
+	100% { -moz-transform: scale(1); }
+}
+@-ms-keyframes pulse-animation {
+	0% { -ms-transform: scale(1); }
+	30% { -ms-transform: scale($scale1); }
+	40% { -ms-transform: scale(1); }
+	50% { -ms-transform: scale(1); }
+	60% { -ms-transform: scale($scale2); }
+	70% { -ms-transform: scale(1); }
+	80% { -ms-transform: scale(1); }
+	100% { -ms-transform: scale(1); }
+}
+@keyframes pulse-animation {
+	0% { transform: scale(1); }
+	30% { transform: scale($scale1); }
+	40% { transform: scale(1); }
+	50% { transform: scale(1); }
+	60% { transform: scale($scale2); }
+	70% { transform: scale(1); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: 'pulse-animation';
+	-webkit-animation-duration: 5000ms;
+	-webkit-transform-origin: 70% 70%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
