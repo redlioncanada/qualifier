@@ -6,40 +6,40 @@
 }
 
 div.people1 .jslider .jslider-value {
-    background-image: url('../img/family-1.png') !important;
+    background-image: url('../img/family-1.png') center center no-repeat !important;
 	background-size: 28px 47px;
 	width: 28px;
 	height: 47px;
 }
 
 div.people2 .jslider .jslider-value {
-    background-image: url('../img/family-2.png') !important;
+    background-image: url('../img/family-2.png') center center no-repeat !important;
 	background-size: 50px 47px;
 	width: 50px;
 	height: 47px;}
 
 div.people3 .jslider .jslider-value {
-    background-image: url('../img/family-3.png') !important;
+    background-image: url('../img/family-3.png') center center no-repeat !important;
 	background-size: 70px 47px;
 	width: 70px;
 	height: 47px;
 }
 
 div.people4 .jslider .jslider-value {
-    background-image: url('../img/family-4.png') !important;
+    background-image: url('../img/family-4.png') center center no-repeat !important;
 	background-size: 95px 47px;
 	width: 95px;
 	height: 47px;
 }
 div.people5 .jslider .jslider-value {
-    background-image: url('../img/family-5.png') !important;
+    background-image: url('../img/family-5.png') center center no-repeat !important;
 	background-size: 141px 47px;
 	width: 141px;
 	height: 47px;
 }
 // Will be dog and cats later
 div.people6 .jslider .jslider-value {
-    background-image: url('../img/family-5.png') !important;
+    background-image: url('../img/family-5.png') center center no-repeat !important;
 	background-size: 141px 47px;
 	width: 141px;
 	height: 47px;
@@ -371,7 +371,9 @@ div.people6 .jslider .jslider-value {
 				color: #999;
 
 
-				width: 150px;
+				width: 200px;
+				left: -100px;
+				text-align: center;
 			}
 		}
 		.jslider-label, .jslider-value {

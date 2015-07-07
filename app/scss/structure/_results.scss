@@ -32,10 +32,37 @@
 	}
 	.results-top-right-btns {
 		display: inline-block;
+		float: right;
 		a {
 			width: 48px;
 			height: 47px;
 			background: #002e58;
+			text-align: center;
+			display: inline-block;
+			margin-left: 1px;
+			margin-right: 1px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			&:hover {
+				background: #00153F;
+			}
+			span {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				position: relative;
+				top: 9px;
+			}
+		}
+		.icon-save {
+			background: url('../img/icon-save.png') center center no-repeat;
+		}	
+		.icon-share {
+			background: url('../img/icon-share.png') center center no-repeat;
+		}
+		.icon-print {
+			background: url('../img/icon-print.png') center center no-repeat;
 		}
 	}
 	.results-list {

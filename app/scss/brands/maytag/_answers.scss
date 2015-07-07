@@ -59,8 +59,8 @@
 	height: 33px;
 	background: url('../img/icon-select-not-selected.png');
 	position: absolute;
-	top: 21px;
-	left: 27px;
+	top: 20px;
+	left: 24px;
 }
 
 .selected {
@@ -76,9 +76,8 @@
 .label-text {
 	font-family: $AG-Bold-Cnd;
 	font-size: 20px;
-	// opacity: 0.80; // this should also be a colour...
-	color: #575757;
-	// top: 10px;
+	// color: #575757;
+	color: #3E3E3E; // 10% darker
 	position: relative;
 }
 
@@ -103,6 +102,7 @@
 
 		background: url('../img/radio-bg.png');
 		margin-bottom: 20px;
+		@include boxshadow;
 		.label-wrap {
 			// top: 0;
 			// top: 9px; for 4 up
@@ -110,11 +110,11 @@
 			// left: 15px;
 			// height: 70px;
 			// padding: 23px 0 0 0;
-			max-width: 405px;
+			max-width: 415px;
 			text-align: left;
 			// padding: 10px 0 0 0;
 
-			top: 24px;
+			top: 22px;
 			position: absolute;
 			left: 79px;
 			&.long-answer {
@@ -140,10 +140,12 @@
 		background: url('../img/split-bg.png');
 		display: inline-block;
 		margin-bottom: 20px;
+		@include boxshadow;
 		.label-wrap {
 			position: absolute;
 			left: 90px;
-			top: 24px;
+			top: 22px;
+
 			&.long-answer {
 				top: 15px;
 				.label-text {
@@ -178,13 +180,16 @@
 		background: url('../img/checkbox-bg.png');
 		display: block;
 		margin-bottom: 20px;
-		.select {
-			left: 23px;
-		}
+		@include boxshadow;
+		// .select-icon {
+		// 	top: 19px;
+		// 	left: 23px;
+		// }
 		.label-wrap {
 			position: absolute;
+			top: 22px;
 			left: 100px;
-			top: 23px;
+			max-width: 415px;
 			&.long-answer {
 				top: 15px;
 				.label-text {
@@ -208,6 +213,7 @@
 		height: 229px;
 		background: url('../img/boxes-picture-bg.png');
 		display: inline-block;
+		@include boxshadow;
 		.img-wrap {
 			margin-top: 4px;
 			img {
@@ -234,6 +240,7 @@
 		height: 229px;
 		background: url('../img/boxes-picture-4-bg.png');
 		display: inline-block;
+		@include boxshadow;
 		.img-wrap {
 			margin-top: 4px;
 			img {
@@ -259,6 +266,7 @@
 		height: 215px;
 		background: url('../img/boxes-icon-bg.png');
 		display: inline-block;
+		@include boxshadow;
 		.icon-wrap {
 			img {
 				position: relative;
@@ -273,6 +281,36 @@
 			position: absolute;
 			bottom: 16px;
 			left: 66px;
+		}
+
+		img.hover {
+			top: 25px;
+			left: 25px;
+			position: absolute;
+			opacity: 0;
+		}
+		&:hover {
+			img.normal {
+				visibility: hidden;
+			}
+			img.hover {
+				opacity: 1;
+			}
+		}
+		// img.normal,  {
+		// 	display: block;
+		// 	// -webkit-transition: opacity 0.3s ease-in-out;
+		// 	// -moz-transition: opacity 0.3s ease-in-out;
+		// 	// -o-transition: opacity 0.3s ease-in-out;
+		// 	// transition: opacity 0.3s ease-in-out;
+		// }
+		&.selected {
+			img.normal {
+				opacity: 0;
+			}
+			img.hover {
+				opacity: 1;
+			}
 		}
 	}
 	&.boxes-icon-split {
