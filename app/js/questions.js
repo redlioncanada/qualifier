@@ -2,9 +2,7 @@
 
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService) {
-  	$rootScope.questionsData = {}
-  	$rootScope.questionsData.scoringQuestions = {};
-  	$rootScope.questionsData.currentCount = null;
+
 
 	$scope.hasAnswer = function (question) {
 		if ('answers' in question.show) {
@@ -116,9 +114,6 @@ angular.module('App')
 		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	 
 	}
 
-	$rootScope.controls = {}
-	$rootScope.controls.questionHasAnswer = true
-
 	$scope.freshQuestion = function (q) {
 		var newq = angular.copy(q)
 		newq.$$hashKey = null
@@ -189,21 +184,39 @@ angular.module('App')
   		} 
   	}
    	$rootScope.previous = function () {
+   		var q = null
    		if (!!$rootScope.questionsData.question) {
 	  		if ("previous" in $rootScope.questionsData.question) {
-		  		var hasStoredAnswer = localStorageService.get($rootScope.questionsData.question.previous)
-		  		if (!!hasStoredAnswer) {
-		  			$rootScope.questionsData.question = hasStoredAnswer
-		  		} else {
-		  			$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.previous]
-		  		}
+		  		q = $rootScope.questionsData.question.previous
 		  	}
+		} else {
+			$state.go("main.questions")
+			console.log($rootScope.questionsData.scoringQuestions)
+		    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
+		    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+		      if (item.order == l) {
+		      	q = item.name
+		      }
+		    })			
 		}
+		var hasStoredAnswer = localStorageService.get(q)
+  		if (!!hasStoredAnswer) {
+  			$rootScope.questionsData.question = hasStoredAnswer
+  		} else {
+  			$rootScope.questionsData.question = $rootScope.questionsData.questions[q]
+  		}
   	}
   	//set questions to head
-  	$rootScope.questionsData.questions = $rootScope.brandData.questions
-  	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-  	$rootScope.questionsData.question.name = "Appliance"
-  	$scope.show();
+  	if (!$rootScope.questionsData) {
+	 	$rootScope.controls = {}
+		$rootScope.controls.questionHasAnswer = true
+	  	$rootScope.questionsData = {}
+	  	$rootScope.questionsData.scoringQuestions = {};
+	  	$rootScope.questionsData.currentCount = null;
+	  	$rootScope.questionsData.questions = $rootScope.brandData.questions
+	  	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
+	  	$rootScope.questionsData.question.name = "Appliance"
+	  	$scope.show();
+  	}
 
 });

@@ -14,9 +14,7 @@ angular.module('App')
   			var minPrice = null, maxPrice = null
   			for (var a in $rootScope.appliances) {
   				var appliance = $rootScope.appliances[a]
-          console.log(appliance, appliance.price)
           if (appliance.score !=null) {
-    				//var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
             var p = appliance.price
     				if (minPrice == null) {
     					minPrice = p; maxPrice = p
