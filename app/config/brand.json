@@ -327,9 +327,9 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
-							"text" : "A home chef",
-							"value" : "home chef",
-							"text_more" : "Holiday roasts, Sunday night casserole and taco Tuesdays I love trying new recipes.",
+							"text" : "I’m Both",
+							"text_more" : "I shine at school bake sales and have mastered family-friendly meatloaf.",
+							"value" : "both",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -337,9 +337,9 @@
 						},
 						{
 							"thumbnail" : "../img/icon-style.png",
-							"text" : "I’m Both",
-							"text_more" : "I shine at school bake sales and can have mastered family-friendly meatloaf.",
-							"value" : "both",
+							"text" : "A Home Chef",
+							"value" : "home chef",
+							"text_more" : "Holiday roasts, Sunday night casserole and taco Tuesdays I love trying new recipes.",
 							"scoring" : {
 								"trueConvection" : 1
 							},
@@ -352,7 +352,7 @@
 							"value" : "neither",
 							"scoring" : {
 							},
-							"order" : 3
+							"order" : 4
 						}
 					]
 				}
