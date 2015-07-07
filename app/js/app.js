@@ -123,6 +123,11 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
     $resource("config/brand.json").get({}, function (res, headers) {
           $rootScope.locale = "en_CA"
           $rootScope.brandData = res;
+
+          angular.forEach( $rootScope.brandData.questions, function (item, key) { 
+              $rootScope.brandData.questions[key].name = key
+          })
+          
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
                 // fake the prices for now, change when we build in colour picker

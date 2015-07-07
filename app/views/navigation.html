@@ -26,14 +26,14 @@
 
 			<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
 		    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="{{q.show.question}}">
-			      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" />
+			      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
 		    	</a>      
 			</div>
 
 			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 		    	<a class="icon-nav">
-			      	<img class="icon-img" src="img/nav-placeholder.png" />
+			      	<img class="icon-img" src="img/nav-placeholder.png" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 		    	</a>      
 			</div>
