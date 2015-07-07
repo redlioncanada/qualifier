@@ -176,7 +176,6 @@ angular.module('App')
 	  		}
 	  		if (!!$rootScope.questionsData.question) {
 	  			$rootScope.controls.questionHasAnswer = false
-	  			$rootScope.questionsData.question.name = name
 				$scope.show(); 	
 			} else {
 				$state.go('main.results')
@@ -215,7 +214,6 @@ angular.module('App')
 	  	$rootScope.questionsData.currentCount = null;
 	  	$rootScope.questionsData.questions = $rootScope.brandData.questions
 	  	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-	  	$rootScope.questionsData.question.name = "Appliance"
 	  	$scope.show();
   	}
 
