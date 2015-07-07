@@ -127,13 +127,18 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
           angular.forEach( $rootScope.brandData.questions, function (item, key) { 
               $rootScope.brandData.questions[key].name = key
           })
-          
-          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+
+          $resource("http://mymaytag.wpc-stage.com/api_test/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
                 // fake the prices for now, change when we build in colour picker
                 angular.forEach( $rootScope.appliances, function (item, key) { 
-
-                    $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
+                    console.log(item)
+                      if (item.appliance == "Laundry") {
+                        $rootScope.appliances[key].price = parseFloat(item.washerColours[0].prices.CAD) + parseFloat(item.dryerColours[0].prices.CAD)
+                      } else {
+                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
+                      }
+                    
 
                     // also fake gas, electric for laundry
                     if ($rootScope.appliances[key].appliance == "Laundry") {
