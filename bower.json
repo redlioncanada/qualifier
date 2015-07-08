@@ -31,7 +31,8 @@
     "ng-slider": "2.2.3",
     "ng-sortable": "~1.2.0",
     "protractor": "~2.1.0",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "angularjs-slider": "~0.1.21"
   },
   "devDependencies": {},
   "directory": "app/components",

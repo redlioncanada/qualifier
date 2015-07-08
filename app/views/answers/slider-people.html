@@ -4,8 +4,12 @@
 https://www.npmjs.com/package/ng-slider -->
 
 <div class="answers-main-content answer-slider people{{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
-	<!-- <div class="slider-label-wrap">
-		<span class="slider-label">#</span>
-	</div> -->
-	<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
+    <rzslider
+     id="answerSlider" 
+     rz-slider-model="questionsData.question.show.answer"
+     rz-slider-floor="questionsData.question.show.options.from"
+     rz-slider-ceil="questionsData.question.show.options.to"
+     rz-slider-step="{{questionsData.question.show.options.step}}"
+     rz-slider-hide-limit-labels="false"
+     rz-slider-translate="translate"></rzslider>
 </div>

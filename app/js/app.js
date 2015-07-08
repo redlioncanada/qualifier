@@ -11,7 +11,7 @@ var nglibs = [
   'LocalStorageModule',
   'ui.bootstrap',
   'ui.sortable',
-  'ngSlider'
+  'rzModule'
 ];
 
 var App = angular.module('App', nglibs);
@@ -88,13 +88,12 @@ App.filter('nextQuestions', function($rootScope, $filter) {
 });
 
 App.filter('byPrice', function() {
-  return function(items, price) {
+  return function(items, minprice, maxprice) {
     var filtered = [];
-    var range = price.split(";")
+        console.log(minprice,maxprice)
     angular.forEach(items, function(appliance) {
-        //var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
         var p =appliance.price
-        if (p >= range[0] && p <= range[1]) {
+        if (p >= minprice && p <= maxprice) {
           filtered.push(appliance)
         }
     });

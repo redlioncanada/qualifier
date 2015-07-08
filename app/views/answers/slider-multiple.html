@@ -2,20 +2,17 @@
 
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
-<div class="slider-wrap" ng-controller="SliderMultipleCtrl">
-	<div class="slider-label">
-		
-	</div>
-	<div class="answers-main-content answer-slider">
-		<input ng-model="questionsData.question.text[0].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="questionsData.question.text[0].options" />
-	</div>
-</div>
-
-<div class="slider-wrap">
-	<div class="slider-label">
-
-	</div>
-	<div class="answers-main-content answer-slider bottom">
-	    <input ng-model="questionsData.question.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="questionsData.question.text[1].options" />
+<div ng-controller="SliderMultipleCtrl">
+	<div class="slider-wrap" ng-repeat="t in questionsData.question.text">
+		<div class="answers-main-content answer-slider" ng-class="{'bottom' : (questionsData.question.text.length == t+1)}">
+		    <rzslider
+		     id="answerSlider" 
+		     rz-slider-model="t.answer"
+		     rz-slider-floor="t.options.from"
+		     rz-slider-ceil="t.options.to"
+		     rz-slider-step="t.options.step}}"
+		     rz-slider-hide-limit-labels="false"
+		     rz-slider-translate="translate"></rzslider>
+		</div>
 	</div>
 </div>

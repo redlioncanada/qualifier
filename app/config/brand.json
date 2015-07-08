@@ -182,10 +182,11 @@
 					    "scale": ["27","30","Any Size"]       
 					},
 					"answers" : {
-						"0" : {
+						"Any" : {
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 2,
+							"text" : "Any Size",
 							"scoring" : {
 							}
 						},
@@ -193,6 +194,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 1,
+							"text" : "27\"",
 							"scoring" : {
 								"width" : 27
 							}
@@ -201,6 +203,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 0,
+							"text" : "30\"",
 							"scoring" : {
 								"width" : 30
 							}
@@ -221,6 +224,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 0,
+							"text" : "single",
 							"scoring" : {
 								"single" : true
 							}
@@ -229,6 +233,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 1,
+							"text" : "combo",
 							"scoring" : {
 								"combo" : true
 							}
@@ -237,6 +242,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 2,
+							"text" : "double",
 							"scoring" : {
 								"double" : true
 							}
@@ -245,6 +251,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 3,
+							"text" : "no restriction",
 							"scoring" : {
 
 							}
@@ -500,6 +507,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						},
@@ -528,6 +536,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						}
@@ -560,6 +569,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						},
@@ -588,6 +598,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						}
@@ -620,6 +631,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 0,
+							"text" : "Never",
 							"scoring" : {							
 							}
 						},
@@ -651,6 +663,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
+							"text" : "Often",
 							"scoring" : {
 								"largestCapacity" : true
 							}
@@ -1050,6 +1063,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						},
@@ -1078,6 +1092,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						}
@@ -1110,6 +1125,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
+							"text" : "1",
 							"scoring" : {
 								"smallestCapacity" : true
 							}
@@ -1118,6 +1134,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
+							"text" : "2",
 							"scoring" : {
 								"smallCapacity" : true
 							}
@@ -1126,6 +1143,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
+							"text" : "3",
 							"scoring" : {
 								"mediumCapacity" : true
 							}
@@ -1134,6 +1152,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
+							"text" : "4",
 							"scoring" : {
 								"largeCapacity" : true
 							}
@@ -1142,6 +1161,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
+							"text" : "5",
 							"scoring" : {
 								"largerCapacity" : true
 							}
@@ -1150,6 +1170,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 6,
+							"text" : "6+",
 							"scoring" : {
 								"largestCapacity" : true
 							}
@@ -1477,6 +1498,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 0,
+							"text" : "Adding more time, every time",
 							"scoring" : {
 								"sensorDry" : 1
 							}
@@ -1485,6 +1507,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 1,
+							"text" : "Nothing",
 							"scoring" : {
 							}
 						},
@@ -1492,6 +1515,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 2,
+							"text" : "Reducing time to prevent over-drying",
 							"scoring" : {
 								"sensorDry" : 1
 							}
@@ -1525,6 +1549,7 @@
 							"thumbnail" : "../img/icon-wrinkles.png",
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 0,
+							"text" : "Very, my iron and I are the best of friends",
 							"scoring" : {
 								"wrinkleControl" : 1
 							}
@@ -1533,6 +1558,7 @@
 							"thumbnail" : "../img/icon-wrinkles.png",
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 1,
+							"text" : "Sometimes",
 							"scoring" : {
 								"wrinkleControl" : 2
 							}
@@ -1541,6 +1567,7 @@
 							"thumbnail" : "../img/icon-wrinkles.png",
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 2,
+							"text" : "Who has time to iron?",
 							"scoring" : {
 								"wrinkleControl" : 3
 							}
@@ -1613,6 +1640,7 @@
 					"answers" : {
 						"0" : {
 							"value" : 0,
+							"text" : "Never",
 							"thumbnail" : "../img/icon-dryclean.png",
 							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
@@ -1636,6 +1664,7 @@
 						},
 						"3" : {
 							"value" : 3,
+							"text" : "Often",
 							"thumbnail" : "../img/icon-dryclean.png",
 							"thumbnail_current" : "../img/icon-dryclean-current.png",
 							"scoring" : {
@@ -1669,6 +1698,7 @@
 					"answers" : {
 						"0" : {
 							"value" : 0,
+							"text" : "Very Important",
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
@@ -1697,6 +1727,7 @@
 						},
 						"4" : {
 							"value" : 4,
+							"text" : "Not a Concern",
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
@@ -1729,6 +1760,7 @@
 					"answers" : {
 						"66" : {
 							"value" : 66,
+							"text" : "65.9",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1737,6 +1769,7 @@
 						},
 						"67" : {
 							"value" : 67,
+							"text" : "67",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1745,6 +1778,7 @@
 						},
 						"68" : {
 							"value" : 68,
+							"text" : "68",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1753,6 +1787,7 @@
 						},
 						"69" : {
 							"value" : 69,
+							"text" : "69",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1761,6 +1796,7 @@
 						},
 						"70" : {
 							"value" : 70,
+							"text" : "70",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1769,6 +1805,7 @@
 						},
 						"71" : {
 							"value" : 71,
+							"text" : "71",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1789,6 +1826,7 @@
 					"answers" : {
 						"30" : {
 							"value" : 30,
+							"text" : "30",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1797,6 +1835,7 @@
 						},
 						"31" : {
 							"value" : 31,
+							"text" : "31",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1805,6 +1844,7 @@
 						},
 						"32" : {
 							"value" : 32,
+							"text" : "32",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1813,6 +1853,7 @@
 						},
 						"33" : {
 							"value" : 33,
+							"text" : "33",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1821,6 +1862,7 @@
 						},
 						"34" : {
 							"value" : 34,
+							"text" : "34",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1829,6 +1871,7 @@
 						},
 						"35" : {
 							"value" : 35,
+							"text" : "35",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1837,6 +1880,7 @@
 						},
 						"36" : {
 							"value" : 36,
+							"text" : "36",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1878,6 +1922,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
+							"text" : "Myself<br />to keep me fueled all week",
 							"scoring" : {
 							}
 						},
@@ -1885,6 +1930,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
+							"text" : "Me and my better half<br />we like to take care of each other",
 							"scoring" : {
 							}
 						},
@@ -1892,6 +1938,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
+							"text" : "A family of four<br />from pasta night to meatloaf Sundays, we’re a hungry bunch",
 							"scoring" : {
 								"powerCold" : 1
 							}
@@ -1900,6 +1947,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
+							"text" : "My large family<br />The cooking never ends, at least we have leftovers for packed lunches",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -1908,6 +1956,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
+							"text" : "My guests when entertaining<br />I might as well open a birthday party catering service",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2208,6 +2257,7 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 0,
+							"text" : "Always<br />Home aesthetics are very important to me",
 							"scoring" : {
 								"counterDepth" : 2
 							}
@@ -2216,6 +2266,7 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 1,
+							"text" : "Sometimes<br />I like to balance form and function",
 							"scoring" : {
 								"counterDepth" : 1
 							}
@@ -2224,7 +2275,8 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 2,
-							"scoring" : {
+							"text" : "Function<br />Performance is my main priority",
+ 							"scoring" : {
 							}
 						}
 					}
@@ -2383,7 +2435,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "When it comes to washing dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for your family.",
 					"type" : "slider",
-					"answer" : 2,
+					"answer" : 30,
 					"options" : {       
 					    "from": 0,
 					    "to": 50,
@@ -2398,6 +2450,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 0,
+							"text" : "0-10",
 							"scoring" : {
 							}
 						},
@@ -2405,6 +2458,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 10,
+							"text" : "11-20",
 							"scoring" : {
 								"placeSettings": "13"
 							}
@@ -2413,6 +2467,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 20,
+							"text" : "21-30",
 							"scoring" : {
 								"placeSettings": "14"
 							}
@@ -2421,6 +2476,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 30,
+							"text" : "31-40",
 							"scoring" : {
 								"placeSettings": "14"
 							}
@@ -2429,6 +2485,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 40,
+							"text" : "41-50",
 							"scoring" : {
 								"placeSettings": "14"
 							}
@@ -2437,6 +2494,7 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 50,
+							"text" : "I've lost count",
 							"scoring" : {
 								"placeSettings": "15"
 							}
@@ -2472,6 +2530,7 @@
 							"thumbnail" : "../img/icon-cycles.png",
 							"thumbnail_current" : "../img/icon-cycles-current.png",
 							"value" : 0,
+							"text" : "Never",
 							"scoring" : {
 							}
 						},
@@ -2486,6 +2545,7 @@
 							"thumbnail" : "../img/icon-cycles.png",
 							"thumbnail_current" : "../img/icon-cycles-current.png",
 							"value" : 2,
+							"text" : "Often",
 							"scoring" : {
 							}
 						}
@@ -2658,18 +2718,19 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
 					"answer" : 2,
+					"type" : "slider",
 					"options" : {       
 					    "from": 0,
 					    "to": 4,
 					    "step": 1,
-					    "dimension": "",
-					    "scale": ["Very Important","|","|","|","Not a Concern"]       
+					    "dimension": ""   
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						},
@@ -2698,6 +2759,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						}

@@ -6,12 +6,14 @@
 
 			<!-- Slider -->
 			<div class="price-slider-wrap">
-				<!-- <div class="price-slider-label-wrap">
-					<span class="price-slider-label">$</span>
-				</div> -->
-				<div class="price-slider">
-					<input ng-model="price" type="text" id="answerSlider" slider options="resultsOptions" />
-				</div>
+			    <rzslider
+			     rz-slider-model="minPrice"
+			     rz-slider-high="maxPrice"
+			     rz-slider-floor="resultsOptions.from"
+			     rz-slider-ceil="resultsOptions.to"
+			     rz-slider-step="resultsOptions.step}}"
+			     rz-slider-hide-limit-labels="false"
+			     rz-slider-translate="translate"></rzslider>
 			</div>
 
 			<!-- Save, Share, Print -->
@@ -29,7 +31,7 @@
 		</div>
 
 		<ul class="results-list" ng-if="!!questionsData.currentCount">
-			<li ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3" class="result">
+			<li ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:minPrice:maxPrice | orderBy:'score' | limitTo:3" class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
 						<!-- needs to appear only for the middle one -->

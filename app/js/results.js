@@ -10,24 +10,29 @@ angular.module('App')
         "dimension": ""  
       }
 
+
+    $scope.translate = function (value) {
+      return "$" + (value).toString()
+    }
+
+
   		$scope.setPriceRange = function () {
-  			var minPrice = null, maxPrice = null
+  			$scope.minPrice = null, $scope.maxPrice = null
   			for (var a in $rootScope.appliances) {
   				var appliance = $rootScope.appliances[a]
           if (appliance.score !=null) {
             var p = appliance.price
-    				if (minPrice == null) {
-    					minPrice = p; maxPrice = p
-    				} else if (p < minPrice) {
-    					minPrice = p
-    				} else if (p > maxPrice) {
-    					maxPrice = p
+    				if ($scope.minPrice == null) {
+    					$scope.minPrice = p; $scope.maxPrice = p
+    				} else if (p < $scope.minPrice) {
+    					$scope.minPrice = p
+    				} else if (p > $scope.maxPrice) {
+    					$scope.maxPrice = p
     				}
           }
   			}
-  			$scope.resultsOptions.from = minPrice
-        $scope.resultsOptions.to = maxPrice
-  			$scope.price = minPrice.toString() + ";" + maxPrice.toString()
+  			$scope.resultsOptions.from = $scope.minPrice
+        $scope.resultsOptions.to = $scope.maxPrice
   		}
   		$scope.setPriceRange()
 
