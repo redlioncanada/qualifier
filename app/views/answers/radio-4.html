@@ -1,5 +1,5 @@
 <!-- Radio single-select answers - two columns for 4 answers and up -->
-<div class="answers-main-content regular-4-container" ng-controller="BoxesPictureCtrl">
+<div class="answers-main-content regular-4-container" ng-controller="RadioCtrl">
 	<a href="" class="answer-option answer-box radio-4" ng-repeat="answer in questionsData.question.show.answers" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap" ng-class="{'long-answer': answer.text.length > 60}">

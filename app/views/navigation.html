@@ -25,17 +25,15 @@
 			</div>
 
 			<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
-		    	<a ng-init="a=setAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="{{q.show.question}}">
-			      	<img class="icon-img" ng-if="q.a_thumbnail_type=='image'" ng-src="{{a.thumbnail}}" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
-			      	<img class="icon-img-current" ng-src="{{a.thumbnail_current}}" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
+		    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="{{q.show.question}}">
+			      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || a.thumbnail }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
 		    	</a>      
 			</div>
 
 			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 		    	<a class="icon-nav">
-			      	<img class="icon-img" src="img/nav-placeholder.png" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
-			      	<img class="icon-img-current" ng-src="{{a.thumbnail_current}}" ng-class="{ 'current' : (q.name == questionsData.question.name)}" />
+			      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 		    	</a>      
 			</div>
@@ -44,7 +42,7 @@
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="objSize(questionsData.scoringQuestions)!=0 && !!questionsData.question">
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="objSize(questionsData.scoringQuestions)!=0 && !!questionsData.question" ng-class="{'clickNext' : !!controls.questionHasAnswer}">
 			<div class="btn btn-default">
 				<span class="arrow-next">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">

@@ -1,5 +1,5 @@
 <!-- 3 Picture box answers -->
-<div class="answers-main-content picture-3-container" ng-controller="BoxesPictureCtrl">
+<div class="answers-main-content picture-3-container" ng-controller="CheckboxCtrl">
 	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box picture-3 {{answer.classes}} col-md-{{boxWidth}}" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="img-wrap">
 			<img ng-src="{{answer.image}}" />

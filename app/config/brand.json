@@ -1,4 +1,4 @@
-{
+ {
 	"brand" : "maytag",
 	"apptext" :{
 		"apptitle" : "Maytag",
@@ -330,10 +330,10 @@
 			"text" : [
 				{
 					"question" : "How would your family describe you?",
-					"sub_question" : "Select all that apply",
+					"sub_question" : "Select One",
 					"explanation_title" : "Why Are You Asking Me About Cooking?",
 					"explanation" : "Our ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your needs.",
-					"type" : "checkbox-split",
+					"type" : "radio-split",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",
@@ -910,7 +910,7 @@
 					"sub_question" : "Select one",
 					"explanation_title" : "Why Are You Asking Me About Gas?", 
 					"explanation" : "Some kitchens are equipped for gas and others are not. We need to know this information to recommend the perfect range.",
-					"type" : "boxes-icon-split",
+					"type" : "boxes-icon-split-radio",
 					"answers" : [
 						{
 							"text" : "Yes",
@@ -1169,7 +1169,7 @@
 					"sub_question" : "Select all that apply",
 					"explanation_title" : "Why are you asking me about capacity?",
 					"explanation" : "Large capacity laundry machines can help you manage your biggest items, but only if you need them to. By understanding what you wash we can recommend the machine that suits your family best.",
-					"type" : "boxes-picture-3",
+					"type" : "boxes-picture-3-checkbox",
 					"answers" : [
 						{
 							"text" : "The dog’s bed.",
@@ -1560,7 +1560,7 @@
 					"sub_question" : "Select one",
 					"explanation_title" : "Why are you asking me about fuel?",
 					"explanation" : "Some laundry rooms are fitted for gas dryers. Selecting your preference will help us filter the search results and provide the option best suited for your home.",
-					"type" : "boxes-icon-2",
+					"type" : "boxes-icon-2-radio",
 					"answers" : [
 						{
 							"text" : "Gas",
@@ -2560,7 +2560,7 @@
 					"sub_question" : "Select one",
 					"explanation_title" : "Why are you asking me about organization?",
 					"explanation" : "After assessing your technique we can suggest ways to optimize organization for your home.",
-					"type" : "boxes-picture-4",
+					"type" : "boxes-picture-4-radio",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-organization.png",
@@ -2618,7 +2618,7 @@
 					"question" : "Select your style...",
 					"explanation_title" : "Why are you asking me about organization?",
 					"explanation" : "After assessing your technique we can suggest ways to optimize organization for your home.",
-					"type" : "boxes-picture-2",
+					"type" : "boxes-picture-2-radio",
 					"answers" : [
 						{ 
 							"thumbnail" : "../img/icon-style.png",

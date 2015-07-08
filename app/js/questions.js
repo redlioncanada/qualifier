@@ -3,17 +3,28 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService) {
 
-
-	$scope.hasAnswer = function (question) {
-		if ('answers' in question.show) {
-			for (var a in question.show.answers) {
-				if (!!question.show.answers[a].answer) {
-					return question.show.answers[a];
-				}
-			}
-		}
-		return false;
-	}
+  	$rootScope.hasAnswer = function (q) {
+  		if (!!q) {
+	  		var qtype = q.show.type;
+	        for (var ans in q.show.answers ) {
+	          var a = q.show.answers[ans]
+	          if (qtype == "rank") {
+	            if (a.answer == 1) {
+	              return a
+	            }              
+	          } else if (qtype == "slider" || qtype == "slider-people") {
+	            if (a.value == q.show.answer) {
+	              return a
+	            }       
+	          } else {
+	            if (a.answer == true) {
+	              return a
+	            }	          	
+	          }
+	        }
+	    }
+    	return false;
+  	}
 
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
@@ -122,13 +133,7 @@ angular.module('App')
 
   	$rootScope.next = function () {
   		// Make sure there is an answer
-  		var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
-  		if (!hasAnswer) {
-  			// apply class to all answers
-  			$rootScope.controls.questionHasAnswer = false 
-  		}
-  		if (!!hasAnswer) {
-  			$rootScope.controls.questionHasAnswer = true
+  		if (!!$rootScope.controls.questionHasAnswer) {
   			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
@@ -152,30 +157,27 @@ angular.module('App')
   			localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($scope.freshQuestion($rootScope.questionsData.question)));
 
   			$scope.recalculateResults();
+  			var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
 	  		if ("next" in $rootScope.questionsData.question) {
 	  			var name = $rootScope.questionsData.question.next
-	  			if (!!name) {
-	  				var hasStoredAnswer = localStorageService.get($rootScope.questionsData.question.next)
-		  			if (!!hasStoredAnswer) {
-		  				$rootScope.questionsData.question = hasStoredAnswer
-		  			} else {
-		  				$rootScope.questionsData.question = $rootScope.questionsData.questions[$rootScope.questionsData.question.next]
-		  			}
-	  			} else {
-	  				$rootScope.questionsData.question = null;
-	  			}
 	  		}
 	  		else if ("next" in hasAnswer) {
 	  			var name = hasAnswer.next
-	  			var hasStoredAnswer = localStorageService.get(hasAnswer.next)
-	  			if (!!hasStoredAnswer) {
-	  				$rootScope.questionsData.question = hasStoredAnswer
-	  			} else {
-	  				$rootScope.questionsData.question = $rootScope.questionsData.questions[hasAnswer.next]	  				
-	  		} 
 	  		}
+	  		if (!!name) {
+				var hasStoredAnswer = localStorageService.get(name)
+				if (!!hasStoredAnswer) {
+					$rootScope.questionsData.question = hasStoredAnswer
+					$rootScope.controls.questionHasAnswer = true
+				} else {
+					$rootScope.questionsData.question = $rootScope.questionsData.questions[name]
+					$rootScope.controls.questionHasAnswer = false	  				
+				} 
+			} else {
+	  			$rootScope.questionsData.question = null;
+	  		}
+
 	  		if (!!$rootScope.questionsData.question) {
-	  			$rootScope.controls.questionHasAnswer = false
 				$scope.show(); 	
 			} else {
 				$state.go('main.results')
@@ -204,11 +206,12 @@ angular.module('App')
   		} else {
   			$rootScope.questionsData.question = $rootScope.questionsData.questions[q]
   		}
+  		$rootScope.controls.questionHasAnswer = true
   	}
   	//set questions to head
   	if (!$rootScope.questionsData) {
 	 	$rootScope.controls = {}
-		$rootScope.controls.questionHasAnswer = true
+		$rootScope.controls.questionHasAnswer = false
 	  	$rootScope.questionsData = {}
 	  	$rootScope.questionsData.scoringQuestions = {};
 	  	$rootScope.questionsData.currentCount = null;
