@@ -142,17 +142,17 @@
 	.icon-img {
 		max-width: 41px;
 		max-height: 41px;
-		&.current {
-			display: none;
-		}
+		// &.current {
+		// 	display: none;
+		// }
 	}
 	.icon-img-current {
-		display: none;
+		// display: none;
 		max-width: 52px;
 		max-height: 53px;
-		&.current {
-			display: inline-block;
-		}
+		// &.current {
+		// 	display: inline-block;
+		// }
 	}
 
 }
