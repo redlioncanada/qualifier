@@ -142,13 +142,13 @@ angular.module('App')
   				// if this question doesn't set next, then its fine
   				// if this question does, then delete everything after
   				var hasNext = false
-  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].answers, function (item, k) {
+  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
   					if ('next' in item) 
   						hasNext = true
   				})
-  				if ( hasNext.length > 0 ) {
+  				if ( !!hasNext ) {
 	  				angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-	  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name]) {
+	  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
 	  						delete $rootScope.questionsData.scoringQuestions[item.name]
 	  					}
 	  				})  					
@@ -192,7 +192,6 @@ angular.module('App')
 		  	}
 		} else {
 			$state.go("main.questions")
-			console.log($rootScope.questionsData.scoringQuestions)
 		    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
 		    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
 		      if (item.order == l) {
