@@ -16,7 +16,7 @@
 				{
 					"question" : "Welcome to My Maytag, what can we help you find?",
 					"sub_question" : "Select one",
-					"type" : "categories",
+					"type" : "categories-click",
 					"answers" : [
 						{
 							"text" : "Laundry",
