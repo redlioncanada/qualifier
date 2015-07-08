@@ -1,4 +1,4 @@
-<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom">
+<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom" ng-if="questionsData.question.name !='Appliance'">
 
 	<div class="app-content-main-bottom-left">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
