@@ -2443,7 +2443,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 10,
 							"scoring" : {
-								"placeSettings": 13
+								"placeSettings13": 1
 							}
 						},
 						"20" : {
@@ -2451,7 +2451,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 20,
 							"scoring" : {
-								"placeSettings": 14
+								"placeSettings14": 1
 							}
 						},
 						"30" : {
@@ -2459,7 +2459,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 30,
 							"scoring" : {
-								"placeSettings": 14
+								"placeSettings14": 1
 							}
 						},
 						"40" : {
@@ -2467,7 +2467,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 40,
 							"scoring" : {
-								"placeSettings": 14
+								"placeSettings14": 1
 							}
 						},
 						"50" : {
@@ -2475,7 +2475,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 50,
 							"scoring" : {
-								"placeSettings": 15
+								"placeSettings15": 1
 							}
 						}
 					}

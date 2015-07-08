@@ -143,6 +143,12 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].gas = Math.floor((Math.random() * 2)) == 0 ? true : false
                         $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
+                    } else if ($rootScope.appliances[key].appliance == "Dishwashers") {
+                      $rootScope.appliances[key]["placeSettings"+$rootScope.appliances[key].placeSettings.toString()] = true
+                      $rootScope.appliances[key].quiet = false
+                      if (parseFloat($rootScope.appliances[key].decibels) <= 47) {
+                        $rootScope.appliances[key].quiet = true
+                      }
                     }
                 })
                 $state.go('main.questions');
