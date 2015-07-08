@@ -100,7 +100,7 @@ rzslider {
 		//  -o-transition:all linear 0.15s;
 		//  transition:all linear 0.15s;
 
-			top: 0 !important
+			top: 0 !important;
 			width: 74px;
 			height: 69px;
 			background: url('../img/slider-pointer.png') !important;
@@ -154,6 +154,16 @@ rzslider {
 					z-index: 9999;
 					// top: 17px;
 				}
+				// &:after {
+				// 	content: '';
+				// 	width: 1px;
+				// 	background-color: #999;
+				// 	height: 44px;
+				// 	position: relative;
+				// 	margin-left: 14px;
+				// 	display: inline-block;
+				// 	z-index: 9999;
+				// }
 			}
 		}
 	}
@@ -169,6 +179,9 @@ rzslider {
 					&:before {
 						top: 29px;
 					}
+					// &:after {
+					// 	top: 29px;
+					// }
 				}
 			}
 		}
