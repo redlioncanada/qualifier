@@ -165,6 +165,7 @@
 			"next" : "Cooking - Wall Ovens - Ranking",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-size-current.png",
 			"thumbnail_text" : "Size",
 			"text" : [
 				{
