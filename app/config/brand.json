@@ -87,6 +87,7 @@
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Cooking",
+			"thumbnail_current" : "img/nav-placeholder-current.png",
 			"text" : [
 				{
 					"question" : "Which product would you like to explore first?",
@@ -165,8 +166,8 @@
 			"next" : "Cooking - Wall Ovens - Ranking",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-size-current.png",
 			"thumbnail_text" : "Size",
+			"thumbnail_current" : "../img/icon-size-current.png",
 			"text" : [
 				{
 					"question" : "We’ve got the perfect wall oven for your family. Just tell us how much space you have to fill.",
@@ -265,8 +266,8 @@
 			"next" : "Cooking - Wall Ovens - Cooking Style",
 			"previous" : "Cooking - Wall Ovens - Size",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"text" : [
 				{
 					"question" : "When shopping for an oven, what’s most important to you?",
@@ -328,8 +329,8 @@
 			"next" : "Cooking - Wall Ovens - Usage",
 			"previous" : "Cooking - Wall Ovens - Ranking",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-style-current.png",
 			"thumbnail_text" : "Style",
+			"thumbnail_current" : "../img/icon-style-current.png",
 			"text" : [
 				{
 					"question" : "How would your family describe you?",
@@ -389,8 +390,8 @@
 			"next" : "Cooking - Wall Ovens - Lifestyle",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"text" : [
 				{
 					"question" : "How do you use your oven?",
@@ -436,8 +437,8 @@
 			"next" : "Cooking - Wall Ovens - Energy",
 			"previous" : "Cooking - Wall Ovens - Usage",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-lifestyle-current.png",
 			"thumbnail_text" : "Lifestyle",
+			"thumbnail_current" : "../img/icon-lifestyle-current.png",
 			"text" : [
 				{
 					"question" : "I consider my kitchen…",
@@ -484,8 +485,8 @@
 			"next" : null,
 			"previous" : "Cooking - Wall Ovens - Lifestyle",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
@@ -545,8 +546,8 @@
 			"next" : "Cooking - Ranges - Capacity",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"text" : [
 				{
 					"question" : "Is being energy efficient important to your household?",
@@ -605,9 +606,9 @@
 		"Cooking - Ranges - Capacity" : {
 			"next" : "Cooking - Ranges - Cooking Style",
 			"previous" : "Cooking - Ranges - Energy",
+			"thumbnail_type" : "image",
 			"thumbnail_text" : "Capacity",
 			"thumbnail_current" : "../img/icon-capacity-current.png",
-			"thumbnail_type" : "image",
 			"text" : [
 				{
 					"question" : "How often do you need extra space in your oven?",
