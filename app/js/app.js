@@ -50,6 +50,15 @@ App.filter('orderByOrder', function() {
 
 App.filter('nextQuestions', function($rootScope, $filter) {
   return function(items) {
+    var getNext = function (q) {
+      var r = false
+      angular.forEach(q.text[0].answers, function (item, k) {
+        if ('next' in item && item.answer == true) {
+          r = item
+        }
+      })
+      return r
+    }
     var nextQuestions = []
     var t = null
     var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
@@ -58,32 +67,24 @@ App.filter('nextQuestions', function($rootScope, $filter) {
         t = item
       }
     })
-    if (!!t > 0) { 
-      var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
-      while ('next' in t || n > 0) {
-        if ('next' in t) {
-          nextQuestions.push($rootScope.questionsData.questions[t.next])          
-          t = $rootScope.questionsData.questions[t.next]
-        } else {
-          var n = $filter('filter')(t.text[0].answers, function(item) { return item.answer == true })
-          if ($rootScope.objSize(n) > 0) {
-            var next = $rootScope.getFirstObjectProperty(n).next
-            nextQuestions.push($rootScope.questionsData.questions[next])
-            t = $rootScope.questionsData.questions[next]            
-          } else {
-            t = null
-          }
-
-        }
-
-        if (!!t) {
-          var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
-        } else {
-          break;
-        }
+    while (!!t) {
+      var nn = null
+      if ('next' in t) {
+        nn = t.next
+      } 
+      else if (!!getNext(t)) {
+        nn = getNext(t).next
+      } 
+      else {
+        t = null
       }
-      return nextQuestions
+      if (!!t) {
+        nextQuestions.push($rootScope.questionsData.questions[nn])          
+        t = $rootScope.questionsData.questions[nn]
+      }
     }
+    return nextQuestions
+
   };
 });
 
@@ -144,7 +145,6 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                         $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
                     }
                 })
-                console.log($rootScope.appliances)
                 $state.go('main.questions');
           });
     });
