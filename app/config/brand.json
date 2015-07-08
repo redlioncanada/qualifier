@@ -264,6 +264,7 @@
 			"next" : "Cooking - Wall Ovens - Cooking Style",
 			"previous" : "Cooking - Wall Ovens - Size",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -326,6 +327,7 @@
 			"next" : "Cooking - Wall Ovens - Usage",
 			"previous" : "Cooking - Wall Ovens - Ranking",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-style-current.png",
 			"thumbnail_text" : "Style",
 			"text" : [
 				{
@@ -386,6 +388,7 @@
 			"next" : "Cooking - Wall Ovens - Lifestyle",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -432,6 +435,7 @@
 			"next" : "Cooking - Wall Ovens - Energy",
 			"previous" : "Cooking - Wall Ovens - Usage",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-lifestyle-current.png",
 			"thumbnail_text" : "Lifestyle",
 			"text" : [
 				{
@@ -479,6 +483,7 @@
 			"next" : null,
 			"previous" : "Cooking - Wall Ovens - Lifestyle",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
 			"text" : [
 				{
@@ -539,6 +544,7 @@
 			"next" : "Cooking - Ranges - Capacity",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
 			"text" : [
 				{
@@ -599,6 +605,7 @@
 			"next" : "Cooking - Ranges - Cooking Style",
 			"previous" : "Cooking - Ranges - Energy",
 			"thumbnail_text" : "Capacity",
+			"thumbnail_current" : "../img/icon-capacity-current.png",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -663,6 +670,7 @@
 			"next" : "Cooking - Ranges - Convection",
 			"previous" : "Cooking - Ranges - Capacity",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-style-current.png",
 			"thumbnail_text" : "Style",
 			"text" : [
 				{
@@ -720,6 +728,7 @@
 			"next" : "Cooking - Ranges - Usage",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
 			"thumbnail_text" : "Convection",
+			"thumbnail_current" : "../img/icon-convection-current.png",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -780,6 +789,7 @@
 			"next" : "Cooking - Ranges - Lifestyle",
 			"previous" : "Cooking - Ranges - Convection",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -856,6 +866,7 @@
 			"next" : "Cooking - Ranges - Gas",
 			"previous" : "Cooking - Ranges - Usage",
 			"thumbnail_text" : "Lifestyle",
+			"thumbnail_current" : "../img/icon-lifestyle-current.png",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -903,6 +914,7 @@
 			"next" : "Cooking - Ranges - Preference",
 			"previous" : "Cooking - Ranges - Lifestyle",
 			"thumbnail_text" : "Fuel Type",
+			"thumbnail_current" : "../img/icon-fueltype-current.png",
 			"thumbnail_type" : "image",
 			"text" : [
 				{
@@ -943,6 +955,7 @@
 			"next" : null,
 			"previous" : "Cooking - Ranges - Gas",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -1029,6 +1042,7 @@
 			"next" : "Laundry - Capacity 1",
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
 			"text" : [
 				{
@@ -1089,6 +1103,7 @@
 			"next" : "Laundry - Capacity 2",
 			"previous" : "Laundry - Energy",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-capacity-current.png",
 			"thumbnail_text" : "Capacity",
 			"text" : [
 				{
@@ -1162,6 +1177,7 @@
 			"next" : "Laundry - Noise",
 			"previous" : "Laundry - Capacity 1",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-capacity-current.png",
 			"thumbnail_text" : "Capacity",
 			"text" : [
 				{
@@ -1215,6 +1231,7 @@
 			"next" : "Laundry - Orientation",
 			"previous" : "Laundry - Capacity 2",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
 			"text" : [
 				{
@@ -1262,6 +1279,7 @@
 			"next" : "Laundry - Speed",
 			"previous" : "Laundry - Noise",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-orientation-current.png",
 			"thumbnail_text" : "Orientation",
 			"text" : [
 				{
@@ -1320,6 +1338,7 @@
 			"next" : "Laundry - Fabrics",
 			"previous" : "Laundry - Orientation",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-speed-current.png",
 			"thumbnail_text" : "Speed",
 			"text" : [
 				{
@@ -1379,6 +1398,7 @@
 			"next" : "Laundry - Sensor",
 			"previous" : "Laundry - Speed",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-fabric-current.png",
 			"thumbnail_text" : "Fabric",
 			"text" : [
 				{
@@ -1456,6 +1476,7 @@
 			"next" : "Laundry - Wrinkles",
 			"previous" : "Laundry - Fabrics",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -1504,6 +1525,7 @@
 			"next" : "Laundry - Fuel Type",
 			"previous" : "Laundry - Sensor",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-wrinkles-current.png",
 			"thumbnail_text" : "Wrinkles",
 			"text" : [
 				{
@@ -1553,6 +1575,7 @@
 			"next" : "Laundry - Dry Cleaning",
 			"previous" : "Laundry - Wrinkles",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-fueltype-current.png",
 			"thumbnail_text" : "Fuel Type",
 			"text" : [
 				{
@@ -1594,6 +1617,7 @@
 			"next" : null,
 			"previous" : "Laundry - Fuel Type",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-dryclean-current.png",
 			"thumbnail_text" : "Dry Clean",
 			"text" : [
 				{
@@ -1650,6 +1674,7 @@
 			"next" : "Fridges - Size",
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
 			"text" : [
 				{
@@ -1710,6 +1735,7 @@
 			"next" : "Fridges - Capacity",
 			"previous" : "Fridges - Energy",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-size-current.png",
 			"thumbnail_text" : "Size",
 			"text" : [
 				{
@@ -1851,6 +1877,7 @@
 			"next" : "Fridges - Organization",
 			"previous" : "Fridges - Size",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-capacity-current.png",
 			"thumbnail_text" : "Capacity",
 			"text" : [
 				{
@@ -1920,6 +1947,7 @@
 			"next" : "Fridges - Water",
 			"previous" : "Fridges - Capacity",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-organization-current.png",
 			"thumbnail_text" : "Organization",
 			"text" : [
 				{
@@ -1977,6 +2005,7 @@
 			"next" : "Fridges - Ice",
 			"previous" : "Fridges - Organization",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-water-current.png",
 			"thumbnail_text" : "Water",
 			"text" : [
 				{
@@ -2043,6 +2072,7 @@
 			"next" : "Fridges - Orientation",
 			"previous" : "Fridges - Water",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-ice-current.png",
 			"thumbnail_text" : "Ice",
 			"text" : [
 				{
@@ -2125,6 +2155,7 @@
 			"next" : "Fridges - Style",
 			"previous" : "Fridges - Organization",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-orientation-current.png",
 			"thumbnail_text" : "Orientation",
 			"text" : [
 				{
@@ -2183,6 +2214,7 @@
 			"next" : "Fridges - Features",
 			"previous" : "Fridges - Orientation",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-style-current.png",
 			"thumbnail_text" : "Style",
 			"text" : [
 				{
@@ -2235,6 +2267,7 @@
 			"next" : null,
 			"previous" : "Fridges - Style",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-features-current.png",
 			"thumbnail_text" : "Features",
 			"text" : [
 				{
@@ -2295,6 +2328,7 @@
 			"next" : "Dishwashers - Capacity",
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-cleaning-current.png",
 			"thumbnail_text" : "Cleaning",
 			"text" : [
 				{
@@ -2375,6 +2409,7 @@
 			"next" : "Dishwashers - Cycles",
 			"previous" : "Dishwashers - Cleaning Power",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-capacity-current.png",
 			"thumbnail_text" : "Capacity",
 			"text" : [
 				{
@@ -2449,6 +2484,7 @@
 			"next" : "Dishwashers - Noise",
 			"previous" : "Dishwashers - Capacity",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-cycles-current.png",
 			"thumbnail_text" : "Cycles",
 			"text" : [
 				{
@@ -2497,6 +2533,7 @@
 			"next" : "Dishwashers - Flexibility",
 			"previous" : "Dishwashers - Cycles",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
 			"text" : [
 				{
@@ -2553,6 +2590,7 @@
 			"next" : "Dishwashers - Style",
 			"previous" : "Dishwashers - Noise",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-organization-current.png",
 			"thumbnail_text" : "Organization",
 			"text" : [
 				{
@@ -2612,6 +2650,7 @@
 			"next" : "Dishwashers - Energy",
 			"previous" : "Dishwashers - Flexibility",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-style-current.png",
 			"thumbnail_text" : "Style",
 			"text" : [
 				{
@@ -2650,6 +2689,7 @@
 			"next" : null,
 			"previous" : "Dishwashers - Style",
 			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-energy-current.png",
 			"thumbnail_text" : "Energy",
 			"text" : [
 				{
