@@ -33,7 +33,7 @@
 
 			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 		    	<a class="icon-nav">
-			      	<img ng-src="{{(q.name == questionsData.question.name) && 'img/nav-placeholder-current.png' || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+			      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 		    	</a>      
 			</div>
