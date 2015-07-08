@@ -1,6 +1,6 @@
 <div id="results" class="main-content" ng-controller="ResultsCtrl"> 
 	<div class="content-inner">
-		<div class="results-top">
+		<div class="results-top" ng-if="questionsData.currentCount !=0">
 			<h1>Results</h1>
 			<div class="results-adjust-desc">Adjust your price range <br>to further refine your results</div>
 
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<ul class="results-list" ng-if="!!questionsData.currentCount">
+		<ul class="results-list" ng-if="questionsData.currentCount !=0">
 			<li ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3" class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
@@ -83,7 +83,7 @@
 			</li>
 		</ul>
 
-		<div class="results-top" ng-if="!questionsData.currentCount">
+		<div class="results-top" ng-if="questionsData.currentCount==0">
 			<h1>
 				No results!
 			</h1>

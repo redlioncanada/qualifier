@@ -2658,6 +2658,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
 					"answer" : 2,
+					"type" : "slider",
 					"options" : {       
 					    "from": 0,
 					    "to": 4,

@@ -29,6 +29,8 @@ angular.module('App')
         $scope.resultsOptions.to = maxPrice
   			$scope.price = minPrice.toString() + ";" + maxPrice.toString()
   		}
-  		$scope.setPriceRange()
+      if ($rootScope.questionsData.currentCount > 0) {
+    		$scope.setPriceRange()
+      }
 
 });
