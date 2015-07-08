@@ -1,0 +1,190 @@
+/**
+ * Angular JS slider directive
+ *
+ * (c) Rafal Zajac <rzajac$gmail.com>
+ * http://github.com/rzajac/angularjs-slider
+ *
+ * Licensed under the MIT license
+ */
+ $radius: 3px;
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Slider colors */
+$handleActiveColor: #451aff;
+$handleHoverColor: #fff;
+$labelTextColor: #999;
+$handleBgColor: #0db9f0;
+$handleInnerColor: #fff;
+$limitLabelTextColor: $labelTextColor;
+$barFillColor: $handleBgColor;
+$barNormalColor: #d8e0f3;
+
+
+
+/* Slider size parameters */
+$handleSize: 90px;
+$handlePointerSize: 8px;
+$bubblePadding: 1px 3px;
+// $barHeight: 42px;
+$barHeight: 65px;
+
+.answer-slider, .price-slider {
+	height: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	// @include make-md-column(8);
+	width: 899px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+rzslider {
+	display: inline-block;
+	position: relative;
+	height: $barHeight;
+	width: 100%;
+	margin: 30px 0 15px 0;
+	vertical-align: middle;
+	span {
+		white-space: nowrap;
+		position: absolute;
+		display: inline-block;
+		&.rz-base {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+		}
+		&.rz-bar {
+			// width: 100%;
+			// height: 100%;
+			z-index: 0;
+			// background: $barNormalColor;
+			// @include rounded($barHeight/2);
+
+			position: relative;
+			// width: 861px;
+			// height: 42px;
+			// background: url('../img/slider-bg.png');
+
+
+			width: 899px;
+			height: 65px;
+			background: url('../img/slider-full-bg-no-label.png') center center no-repeat;
+
+			border-radius: 0 !important;
+			&.rz-selection {
+				display: none !important;
+				width: 0%;
+				z-index: 1;
+				//background: $barFillColor;
+				// @include rounded($barHeight/2);
+
+				background: none;
+			}
+		}
+		&.rz-pointer {
+			cursor: pointer;
+			// width: $handleSize;
+			// height: $handleSize;
+			// top: -$handleSize/2 + $barHeight/2;
+			// background-color: $handleBgColor;
+			z-index: 2;
+			// @include rounded($handleSize/2);
+		//  -webkit-transition:all linear 0.15s;
+		//  -moz-transition:all linear 0.15s;
+		//  -o-transition:all linear 0.15s;
+		//  transition:all linear 0.15s;
+
+			top: 0 !important
+			width: 74px;
+			height: 69px;
+			background: url('../img/slider-pointer.png') !important;
+			background-size: 74px 69px;
+			border-radius: 0 !important;
+			&:after {
+				// content: '';
+				// width: $handlePointerSize;
+				// height: $handlePointerSize;
+				// position: absolute;
+				// top: ($handleSize/2) - ($handlePointerSize/2);
+				// left: ($handleSize/2) - ($handlePointerSize/2);
+				// @include rounded($handlePointerSize/2);
+				// background: $handleInnerColor;
+				display: none !important;
+			}
+			// &:hover:after {
+			// 	background-color: $handleHoverColor;
+			// }
+			// &.rz-active:after {
+			// 	background-color: $handleActiveColor;
+			// }
+		}
+		&.rz-bubble {
+			cursor: default;
+			top: -$handleSize;
+			padding: $bubblePadding;
+			// color: $labelTextColor;
+
+			color: #999;
+			// opacity: 1 !important;
+			display: inline-block;
+			&.rz-selection {
+				top: ($handleSize/2);
+			}
+			&.rz-limit {
+				// top: $handleSize !important;
+				color: $limitLabelTextColor;
+				// opacity: 1 !important;
+				left: 34px; // a bit less than half for the pointer width
+				font-family: $AG-Bold-Cnd;
+				font-size: 20px;
+				&:before {
+					content: '';
+					width: 1px;
+					background-color: #999;
+					height: 44px;
+					position: relative;
+					margin-right: 14px;
+					display: inline-block;
+					z-index: 9999;
+					// top: 17px;
+				}
+			}
+		}
+	}
+	// Specific, need to add double sliders
+	&.top-labels {
+		span {
+			&.rz-bubble {
+				// display: none !important;
+				opacity: 0 !important;
+				&.rz-limit {
+					top: -$handleSize !important;
+					opacity: 1 !important;
+					&:before {
+						top: 29px;
+					}
+				}
+			}
+		}
+	}
+	&.bottom-labels {
+		span {
+			&.rz-bubble {
+				// display: none !important;
+				&.rz-limit {
+					top: $handleSize !important;
+					&:before {
+						// top: 0;
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,16 +1,18 @@
 <!-- Slider answer -->
 
-<!-- http://darul75.github.io/ng-slider/ 
-https://www.npmjs.com/package/ng-slider -->
+<!-- https://github.com/rzajac/angularjs-slider 
+http://rzajac.github.io/angularjs-slider/-->
 
 <div class="answers-main-content answer-slider {{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
 
     <rzslider
      id="answerSlider" 
+     class="{{questionsData.question.show.classes}}"
      rz-slider-model="questionsData.question.show.answer"
      rz-slider-floor="questionsData.question.show.options.from"
      rz-slider-ceil="questionsData.question.show.options.to"
      rz-slider-step="{{questionsData.question.show.options.step}}"
      rz-slider-hide-limit-labels="false"
-     rz-slider-translate="translate"></rzslider>
+     rz-slider-translate="translate"
+     rz-slider-always-show-bar="true"></rzslider>
 </div>

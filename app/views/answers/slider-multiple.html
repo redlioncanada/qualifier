@@ -1,7 +1,8 @@
-<!-- Slider answer -->
+<!-- Multiple slider answer -->
 
-<!-- http://darul75.github.io/ng-slider/ 
-https://www.npmjs.com/package/ng-slider -->
+<!-- https://github.com/rzajac/angularjs-slider 
+http://rzajac.github.io/angularjs-slider/-->
+
 <div ng-controller="SliderMultipleCtrl">
 	<div class="slider-wrap" ng-repeat="t in questionsData.question.text">
 		<div class="answers-main-content answer-slider" ng-class="{'bottom' : (questionsData.question.text.length == t+1)}">
@@ -12,7 +13,8 @@ https://www.npmjs.com/package/ng-slider -->
 		     rz-slider-ceil="t.options.to"
 		     rz-slider-step="t.options.step}}"
 		     rz-slider-hide-limit-labels="false"
-		     rz-slider-translate="translate"></rzslider>
+		     rz-slider-translate="translate"
+		     rz-slider-always-show-bar="true"></rzslider>
 		</div>
 	</div>
 </div>
