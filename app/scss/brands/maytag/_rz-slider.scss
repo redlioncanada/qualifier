@@ -41,6 +41,12 @@ $barHeight: 65px;
 	width: 899px;
 	margin-left: auto;
 	margin-right: auto;
+	// &.large-label {
+	// 	width: 972px;
+	// }
+}
+.answer-slider {
+	margin-bottom: 100px;
 }
 
 rzslider {
@@ -126,13 +132,26 @@ rzslider {
 		}
 		&.rz-bubble {
 			cursor: default;
-			top: -$handleSize;
-			padding: $bubblePadding;
+			top: -35px;
+			// padding: $bubblePadding;
 			// color: $labelTextColor;
-
-			color: #999;
-			// opacity: 1 !important;
+			padding-top: 5px;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 0;
+			color: $labelTextColor;
+			opacity: 1 !important;
 			display: inline-block;
+
+			font-family: $AG-Bold-Cnd;
+			font-size: 20px;
+
+			background-color: rgba(76, 76, 76, 0.161);
+			box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+			width: 63px;
+			height: 61px;
+
+			text-align: center;
 			&.rz-selection {
 				top: ($handleSize/2);
 			}
@@ -140,53 +159,74 @@ rzslider {
 				// top: $handleSize !important;
 				color: $limitLabelTextColor;
 				// opacity: 1 !important;
-				left: 34px; // a bit less than half for the pointer width
-				font-family: $AG-Bold-Cnd;
-				font-size: 20px;
-				&:before {
-					content: '';
-					width: 1px;
-					background-color: #999;
-					height: 44px;
-					position: relative;
-					margin-right: 14px;
-					display: inline-block;
-					z-index: 9999;
-					// top: 17px;
+				// left: 0px;
+				// left: 0; // temporary
+				padding-top: 0;
+				// left: 34px; // a bit less than half for the pointer width
+				// font-family: $AG-Bold-Cnd;
+				// font-size: 20px;
+				top: -$handleSize;
+				background-color: transparent;
+				box-shadow: none;
+				&.floor, &.ceiling {
+					width: auto;
+					height: auto;
 				}
-				// &:after {
-				// 	content: '';
-				// 	width: 1px;
-				// 	background-color: #999;
-				// 	height: 44px;
-				// 	position: relative;
-				// 	margin-left: 14px;
-				// 	display: inline-block;
-				// 	z-index: 9999;
-				// }
-			}
-		}
-	}
-	// Specific, need to add double sliders
-	&.top-labels {
-		span {
-			&.rz-bubble {
-				// display: none !important;
-				opacity: 0 !important;
-				&.rz-limit {
-					top: -$handleSize !important;
-					opacity: 1 !important;
+				&.floor {
+					left: 28px !important;
 					&:before {
-						top: 29px;
+						content: '';
+						width: 1px;
+						background-color: #999;
+						height: 44px;
+						position: relative;
+						margin-right: 14px;
+						display: inline-block;
+						z-index: 9999;
+						// top: 17px;
 					}
-					// &:after {
-					// 	top: 29px;
-					// }
+				}
+				&.ceiling {
+					// left: 753px !important;
+					// left: 750px !important;
+					// margin-left: -88px !important; // temporary
+					&:after {
+						content: '';
+						width: 1px;
+						background-color: #999;
+						height: 44px;
+						position: relative;
+						margin-left: 14px;
+						display: inline-block;
+						z-index: 9999;
+					}
 				}
 			}
 		}
 	}
-	&.bottom-labels {
+	// &.large-label span.rz-bar {
+	// 	width: 972px;
+	// 	height: 63px;
+	// 	background: url('../img/slider-full-bg.png') center center no-repeat;
+	// }
+
+	// Specific, need to add double sliders
+	// &.top-labels, .bottom-labels { 
+	// 	span {
+	// 		&.rz-bubble {
+	// 			// display: none !important;
+	// 			opacity: 1 !important;
+	// 			&.rz-limit {
+	// 				top: -$handleSize !important;
+	// 				opacity: 1 !important;
+	// 				&:before, &:after {
+	// 					top: 29px;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	&.bottom-labels { // temporary
 		span {
 			&.rz-bubble {
 				// display: none !important;
@@ -199,5 +239,83 @@ rzslider {
 			}
 		}
 	}
+	&.no-pointer-labels { // previously just top labels
+		span {
+			&.rz-bubble {
+				opacity: 0 !important;
+				&.rz-limit {
+					top: -$handleSize !important;
+					opacity: 1 !important;
+					&:before, &:after {
+						top: 29px;
+					}
+				}
+			}
+		}
+	}
 
+	// &.bottom {
+	// 	.jslider-pointer {
+	// 		background: url('../img/slider-pointer-bottom.png') !important;
+	// 	}
+	// }
+}
+.slider-top-labels {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.scale-label {
+	display: inline-block;
+	font-family: $AG-Bold-Cnd;
+	font-size: 20px;
+	color: #757575;
+}
+
+.slider-large-label-wrap {
+	// @include large-square-label-wrap;
+
+	width: 63px;
+	height: 61px;
+	display: inline-block;
+	position: absolute;
+	left: -61px;
+	top: 2px;
+	.slider-large-label {
+		@include large-square-label;
+	}
+}
+// Slider labels
+
+.slider-label-wrap {
+	
+}
+
+// Results Page
+#results {
+	rzslider {
+		top: -7px;
+		height: auto;
+		margin: 0 !important;
+		span {
+			&.rz-bar {
+				position: relative; 
+				// width: 475px;
+				// height: 42px;
+				// background: url('../img/slider-results-bg.png');
+
+				width: 500px;
+				height: 54px;
+				background: url('../img/slider-results-bg-temp.png');
+
+			}
+			&.rz-pointer {
+				// top: 0 !important;
+			}
+			&.rz-limit, &.range {
+				display: none !important;
+			}
+		}
+	}
 }

@@ -454,11 +454,3 @@
 	
 }
 
-// Slider labels
-
-.slider-label-wrap {
-	@include large-square-label-wrap;
-	.slider-label {
-		@include large-square-label;
-	}
-}

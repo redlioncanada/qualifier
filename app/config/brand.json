@@ -495,7 +495,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect wall oven to fit your needs.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -558,7 +558,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -621,7 +621,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "If you cook large meals often, then we recommend an oven with a larger capacity.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1054,7 +1054,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1116,8 +1116,8 @@
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why are you asking me about my family size?",
 					"explanation" : "Like your family, all of our machines are unique. If we understand a little more about your family we can recommend a machine that suits the specific needs of your home.",
-					"type" : "slider-people",
-					"classes" : "slider-people",
+					"type" : "slider",
+					"classes" : "bottom-labels",
 					"answer" : 3,
 					"options" : {       
 					    "from": 1,
@@ -1491,7 +1491,7 @@
 					"explanation_title" : "Why are you asking me about time?",
 					"explanation" : "We would like to save you time by offering you cycles that will minimize your need to continually check your laundry progress.",
 					"type" : "slider",
-					"classes" : "bottom-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 1,
 					"options" : {       
 					    "from": 0,
@@ -1543,7 +1543,7 @@
 					"explanation_title" : "Why are you asking me about ironing?",
 					"explanation" : "Some of our machines are designed to minimize wrinkles. By helping us determine your needs, we are better able to provide for them.",
 					"type" : "slider",
-					"classes" : "bottom-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 1,
 					"options" : { 
 					    "from": 0,
@@ -1637,7 +1637,7 @@
 					"explanation_title" : "Why are you asking me about my dry-cleaning?",
 					"explanation" : "Some of our machines are designed to help refresh clothes. By helping us determine your needs, we are better able to provide for them.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 1,
 					"options" : { 
 					    "from": 0,
@@ -1696,7 +1696,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect one to fit your needs.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1914,7 +1914,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "We want to get a better idea of how you use your fridge and what you put in it so we can find you the one that fits your lifestyle.",
 					"type" : "slider",
-					"classes" : "bottom-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 1,
 					"options" : {       
 					    "from": 1,
@@ -1922,19 +1922,28 @@
 					    "step": 1,
 					    "dimension": "",
 					    "scale": [
-							"Myself<br />to keep me fueled all week", 
-							"Me and my better half<br />we like to take care of each other",
-							"A family of four<br />from pasta night to meatloaf Sundays, we’re a hungry bunch",
-							"My large family<br />The cooking never ends, at least we have leftovers for packed lunches",
-							"My guests when entertaining<br />I might as well open a birthday party catering service"
-					    ]       
+							"Myself", 
+							"Me and my better half",
+							"A family of four",
+							"My large family",
+							"My guests when entertaining"
+					    ],
+					    "scale_more" : [
+					    	"To keep me fueled all week", 
+							"We like to take care of each other",
+							"From pasta night to meatloaf Sundays, we’re a hungry bunch",
+							"The cooking never ends, at least we have leftovers for packed lunches",
+							"I might as well open a birthday party catering service"
+					    ]
+
 					},
 					"answers" : {
 						"1" : {
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 1,
-							"text" : "Myself<br />to keep me fueled all week",
+							"text" : "Myself",
+							"text_more" : "To keep me fueled all week",
 							"scoring" : {
 							}
 						},
@@ -1942,7 +1951,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 2,
-							"text" : "Me and my better half<br />we like to take care of each other",
+							"text" : "Me and my better half",
+							"text_more" : "We like to take care of each other",
 							"scoring" : {
 							}
 						},
@@ -1950,7 +1960,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
-							"text" : "A family of four<br />from pasta night to meatloaf Sundays, we’re a hungry bunch",
+							"text" : "A family of four",
+							"text_more" : "From pasta night to meatloaf Sundays, we’re a hungry bunch",
 							"scoring" : {
 								"powerCold" : 1
 							}
@@ -1959,7 +1970,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
-							"text" : "My large family<br />The cooking never ends, at least we have leftovers for packed lunches",
+							"text" : "My large family",
+							"text_more" : "The cooking never ends, at least we have leftovers for packed lunches",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -1968,7 +1980,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
-							"text" : "My guests when entertaining<br />I might as well open a birthday party catering service",
+							"text" : "My guests when entertaining",
+							"text_more" : "I might as well open a birthday party catering serviceg",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2260,9 +2273,14 @@
 					    "step": 1,
 					    "dimension": "",
 					    "scale": [
-							"Always<br />Home aesthetics are very important to me",
- 							"Sometimes<br />I like to balance form and function",
- 							"Function<br />Performance is my main priority"
+							"Always",
+ 							"Sometimes",
+ 							"Function"
+					    ],
+					    "scale_more" : [
+					    	"Home aesthetics are very important to me",
+					    	"I like to balance form and function",
+					    	"Performance is my main priority"
 					    ]       
 					},
 					"answers" : {
@@ -2270,7 +2288,8 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 0,
-							"text" : "Always<br />Home aesthetics are very important to me",
+							"text" : "Always",
+							"text_more" : "Home aesthetics are very important to me",
 							"scoring" : {
 								"counterDepth" : 2
 							}
@@ -2279,7 +2298,8 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 1,
-							"text" : "Sometimes<br />I like to balance form and function",
+							"text" : "Sometimes",
+							"text_more" : "I like to balance form and function",
 							"scoring" : {
 								"counterDepth" : 1
 							}
@@ -2288,7 +2308,8 @@
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
 							"value" : 2,
-							"text" : "Function<br />Performance is my main priority",
+							"text" : "Function",
+							"text_more" : "Performance is my main priority",
  							"scoring" : {
 							}
 						}
@@ -2448,13 +2469,13 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "When it comes to washing dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for your family.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "bottom-labels",
 					"answer" : 30,
 					"options" : {       
 					    "from": 0,
 					    "to": 50,
 					    "step": 10,
-					    "dimension": "",
+					    "dimension": "#",
 					    "scale": [
 							"0-10","11-20","21-30","31-40","41-50","I've lost count"
 					    ]       
@@ -2508,7 +2529,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 50,
-							"text" : "I've lost count",
+							"text" : "50+",
+							"text_more" : "I've lost count",
 							"scoring" : {
 								"placeSettings": "15"
 							}
@@ -2529,7 +2551,7 @@
 					"explanation_title" : "Why are you asking me about cycles?",
 					"explanation" : "Think of custom cycles like a tailored fit for your dishes. This question will help us to determine which additional features will be of use to you.",
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"answer" : 1,
 					"options" : {       
 					    "from": 0,
@@ -2734,7 +2756,7 @@
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
 					"answer" : 2,
 					"type" : "slider",
-					"classes" : "top-labels",
+					"classes" : "no-pointer-labels",
 					"options" : {       
 					    "from": 0,
 					    "to": 4,
