@@ -10,7 +10,7 @@
 					<span class="price-slider-label">$</span>
 				</div> -->
 				<div class="price-slider">
-					<input ng-model="price" type="text" id="answerSlider" slider options="resultsOptions" />
+					<input ng-model="controls.price" type="text" id="answerSlider" slider options="resultsOptions" />
 				</div>
 			</div>
 
@@ -29,7 +29,7 @@
 		</div>
 
 		<ul class="results-list" ng-if="questionsData.currentCount !=0">
-			<li ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3" class="result">
+			<li ng-repeat="a in appliances | filter:{score : '!null'} | byPrice:controls.price | orderBy:'score' | limitTo:3" class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
 						<!-- needs to appear only for the middle one -->

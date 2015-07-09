@@ -71,7 +71,25 @@ angular.module('App')
 			"warmingDrawer" : false,
 			"electric" : false,
 			"powerBurner" : false,
-			"powerPreheat" : false			
+			"powerPreheat" : false,
+			"mediumCapacity" : 0,
+			"largeCapacity" : 0,
+			"largerCapacity" : 0,
+			"largestCapacity" : 0,
+			"width30" : 0,
+			"width31" : 0,
+			"width32" : 0,
+			"width33" : 0,
+			"width34" : 0,			
+			"width35" : 0,
+			"width36" : 0,
+			"height66" : 0,
+			"height67" : 0,
+			"height68" : 0,
+			"height69" : 0,
+			"height70" : 0,
+			"height71" : 0,
+
 		}
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]

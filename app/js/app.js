@@ -93,9 +93,8 @@ App.filter('byPrice', function() {
     var filtered = [];
     var range = price.split(";")
     angular.forEach(items, function(appliance) {
-        //var p = parseFloat((appliance.price.match(/[\.]?[0-9]/g)).join(""))
         var p =appliance.price
-        if (p >= range[0] && p <= range[1]) {
+        if (p >= parseFloat(range[0]) && p <= parseFloat(range[1])) {
           filtered.push(appliance)
         }
     });
@@ -149,6 +148,44 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                       if (parseFloat($rootScope.appliances[key].decibels) <= 47) {
                         $rootScope.appliances[key].quiet = true
                       }
+                    } else if ($rootScope.appliances[key].appliance == "Fridges") {
+                      $rootScope.appliances[key]["height"+$rootScope.appliances[key].height.toString()] = true
+                      $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                    } else if ($rootScope.appliances[key].appliance == "Cooking") {
+                      if ($rootScope.appliances[key].type == "Ovens") {
+                        $rootScope.appliances[key].width = 27
+                        $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                      } 
+                      else if ($rootScope.appliances[key].type == "Ranges") {
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.7) {
+                          $rootScope.appliances[key].largestCapacity = true
+                        } 
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.4) {
+                          $rootScope.appliances[key].largerCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.2) {
+                          $rootScope.appliances[key].largeCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.8) {
+                          $rootScope.appliances[key].mediumCapacity = true
+                        }                    
+                      }
+                    } else if ($rootScope.appliances[key].appliance == "Laundry") {
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
+                          $rootScope.appliances[key].largestCapacity = true
+                        } 
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.2) {
+                          $rootScope.appliances[key].largerCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5) {
+                          $rootScope.appliances[key].largeCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.8) {
+                          $rootScope.appliances[key].mediumCapacity = true
+                        }                    
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.2) {
+                          $rootScope.appliances[key].smallCapacity = true
+                        }
                     }
                 })
                 $state.go('main.questions');
