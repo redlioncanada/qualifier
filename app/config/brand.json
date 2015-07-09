@@ -502,14 +502,14 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important","|", "|", "|","Not a Concern"]       
+					    "scale": ["Not a Concern","|", "|", "|","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
-							"text" : "Very Important",
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						},
@@ -538,7 +538,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
-							"text" : "Not a Concern",
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						}
@@ -565,14 +565,14 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important","|","|","|","Not a Concern"]       
+					    "scale": ["Not a Concern","|","|","|","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
-							"text" : "Very Important",
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						},
@@ -601,7 +601,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
-							"text" : "Not a Concern",
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						}
@@ -1061,14 +1061,14 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important","|","|","|","Not a Concern"]       
+					    "scale": ["Not a Concern","|","|","|","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
-							"text" : "Very Important",
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						},
@@ -1097,7 +1097,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
-							"text" : "Not a Concern",
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						}
@@ -1703,12 +1703,12 @@
 					    "to": 4,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very Important","|","|","|", "Not a Concern"]       
+					    "scale": ["Not a Concern","|","|","|", "Very Important"]       
 					},
 					"answers" : {
 						"0" : {
 							"value" : 0,
-							"text" : "Very Important",
+							"text" : "Not a Concern",
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
@@ -1737,7 +1737,7 @@
 						},
 						"4" : {
 							"value" : 4,
-							"text" : "Not a Concern",
+							"text" : "Very Important",
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"scoring" : {
@@ -2761,14 +2761,14 @@
 					    "from": 0,
 					    "to": 4,
 					    "step": 1,
-					    "dimension": ""   
+					    "dimension": ""
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
-							"text" : "Very Important",
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						},
@@ -2797,7 +2797,7 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
-							"text" : "Not a Concern",
+							"text" : "Very Important",
 							"scoring" : {
 							}
 						}
