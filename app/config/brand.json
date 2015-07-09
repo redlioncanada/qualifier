@@ -1759,7 +1759,7 @@
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-multiple",
-					"classes" : "",
+					"classes" : "slider-multiple",
 					"answer" : 66,
 					"options" : {       
 					    "from": 66,
