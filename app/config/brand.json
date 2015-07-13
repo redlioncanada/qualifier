@@ -23,7 +23,7 @@
 							"value" : "Laundry",
 							"classes" : "category laundry",
 							"image" : "img/cat-laundry.jpg",
-							"hover" : "img/maytag-man-washer-hover.png",							
+							"hover" : "img/maytag-man-washer-dryer-hover.png",							
 							"thumbnail" : "img/cat-laundry.jpg",							
 							"thumbnail_current" : "img/cat-laundry.jpg",							
 							"thumbnail_text" : "Laundry",							
