@@ -1,0 +1,349 @@
+/**
+ * Angular JS slider directive
+ *
+ * (c) Rafal Zajac <rzajac$gmail.com>
+ * http://github.com/rzajac/angularjs-slider
+ *
+ * Licensed under the MIT license
+ */
+ $radius: 3px;
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Slider colors */
+$handleActiveColor: #451aff;
+$handleHoverColor: #fff;
+$labelTextColor: #999;
+$handleBgColor: #0db9f0;
+$handleInnerColor: #fff;
+$limitLabelTextColor: $labelTextColor;
+$barFillColor: $handleBgColor;
+$barNormalColor: #d8e0f3;
+
+
+
+/* Slider size parameters */
+$handleSize: 90px;
+$handlePointerSize: 8px;
+$bubblePadding: 1px 3px;
+// $barHeight: 42px;
+$barHeight: 65px;
+
+.answer-slider, .price-slider {
+	height: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	// @include make-md-column(8);
+	width: 899px;
+	margin-left: auto;
+	margin-right: auto;
+	// &.large-label {
+	// 	width: 972px;
+	// }
+}
+.answer-slider {
+	margin-bottom: 100px;
+	// position: relative;
+}
+
+rzslider {
+	display: inline-block;
+	position: relative;
+	height: $barHeight;
+	width: 100%;
+	margin: 30px 0 15px 0;
+	vertical-align: middle;
+	span {
+		white-space: nowrap;
+		position: absolute;
+		display: inline-block;
+		&.rz-base {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+		}
+		&.rz-bar {
+			// width: 100%;
+			// height: 100%;
+			z-index: 0;
+			// background: $barNormalColor;
+			// @include rounded($barHeight/2);
+
+			// position: relative;
+			// width: 861px;
+			// height: 42px;
+			// background: url('../img/slider-bg.png');
+
+
+			width: 899px;
+			height: 65px;
+			background: url('../img/slider-full-bg-no-label.png');
+
+			border-radius: 0 !important;
+			&.rz-selection {
+				display: none !important;
+				width: 0%;
+				z-index: 1;
+				//background: $barFillColor;
+				// @include rounded($barHeight/2);
+
+				background: none;
+			}
+		}
+		&.rz-pointer {
+			cursor: pointer;
+			// width: $handleSize;
+			// height: $handleSize;
+			// top: -$handleSize/2 + $barHeight/2;
+			// background-color: $handleBgColor;
+			z-index: 2;
+			// @include rounded($handleSize/2);
+		//  -webkit-transition:all linear 0.15s;
+		//  -moz-transition:all linear 0.15s;
+		//  -o-transition:all linear 0.15s;
+		//  transition:all linear 0.15s;
+
+			top: 0 !important;
+			width: 74px;
+			height: 69px;
+			background: url('../img/slider-pointer.png') !important;
+			background-size: 74px 69px;
+			border-radius: 0 !important;
+			&:after {
+				// content: '';
+				// width: $handlePointerSize;
+				// height: $handlePointerSize;
+				// position: absolute;
+				// top: ($handleSize/2) - ($handlePointerSize/2);
+				// left: ($handleSize/2) - ($handlePointerSize/2);
+				// @include rounded($handlePointerSize/2);
+				// background: $handleInnerColor;
+				display: none !important;
+			}
+			// &:hover:after {
+			// 	background-color: $handleHoverColor;
+			// }
+			// &.rz-active:after {
+			// 	background-color: $handleActiveColor;
+			// }
+		}
+		&.rz-bubble {
+			cursor: default;
+			top: -35px;
+			// padding: $bubblePadding;
+			// color: $labelTextColor;
+			padding-top: 5px;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 0;
+			color: $labelTextColor;
+			opacity: 1 !important;
+			display: inline-block;
+
+			font-family: $AG-Bold-Cnd;
+			font-size: 20px;
+			text-transform: uppercase;
+			background-color: rgba(76, 76, 76, 0.161);
+			box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+			width: 63px;
+			height: 61px;
+
+			text-align: center;
+			&.rz-selection {
+				top: ($handleSize/2);
+			}
+			&.rz-limit {
+				// top: $handleSize !important;
+				color: $limitLabelTextColor;
+				// opacity: 1 !important;
+				// left: 0px;
+				// left: 0; // temporary
+				padding-top: 0;
+				// left: 34px; // a bit less than half for the pointer width
+				// font-family: $AG-Bold-Cnd;
+				// font-size: 20px;
+				top: -$handleSize;
+				background-color: transparent;
+				box-shadow: none;
+				&.floor, &.ceiling {
+					width: auto;
+					height: auto;
+				}
+				&.floor {
+					// left: 28px !important;
+					left: 0 !important;
+					&:before {
+						content: '';
+						width: 1px;
+						background-color: #999;
+						height: 44px;
+						position: relative;
+						margin-right: 14px;
+						display: inline-block;
+						z-index: 9999;
+						// top: 17px;
+					}
+				}
+				&.ceiling {
+					// left: 753px !important;
+					// left: 750px !important;
+					// margin-left: -88px !important; // temporary
+					&:after {
+						content: '';
+						width: 1px;
+						background-color: #999;
+						height: 44px;
+						position: relative;
+						margin-left: 14px;
+						display: inline-block;
+						z-index: 9999;
+					}
+				}
+			}
+		}
+	}
+	// &.large-label span.rz-bar {
+	// 	width: 972px;
+	// 	height: 63px;
+	// 	background: url('../img/slider-full-bg.png') center center no-repeat;
+	// }
+
+	// Specific, need to add double sliders
+	// &.top-labels, .bottom-labels { 
+	// 	span {
+	// 		&.rz-bubble {
+	// 			// display: none !important;
+	// 			opacity: 1 !important;
+	// 			&.rz-limit {
+	// 				top: -$handleSize !important;
+	// 				opacity: 1 !important;
+	// 				&:before, &:after {
+	// 					top: 29px;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	&.bottom-labels { // temporary
+		span {
+			&.rz-bubble {
+				// display: none !important;
+				&.rz-limit {
+					top: $handleSize !important;
+					&:before {
+						// top: 0;
+					}
+				}
+			}
+		}
+	}
+	&.no-pointer-labels { // previously just top labels
+		span {
+			&.rz-bubble {
+				opacity: 0 !important;
+				&.rz-limit {
+					top: -$handleSize !important;
+					opacity: 1 !important;
+					&:before, &:after {
+						top: 29px;
+					}
+				}
+			}
+		}
+	}
+
+	// &.bottom {
+	// 	.jslider-pointer {
+	// 		background: url('../img/slider-pointer-bottom.png') !important;
+	// 	}
+	// }
+}
+.answer-slider.bottom {
+	rzslider span.rz-pointer {
+		background: url('../img/slider-pointer-bottom.png') center center no-repeat !important;
+	}
+}
+.slider-top-labels {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.scale-label {
+	display: inline-block;
+	font-family: $AG-Bold-Cnd;
+	font-size: 20px;
+	color: #757575;
+}
+
+.slider-large-label-wrap {
+	// @include large-square-label-wrap;
+
+	width: 63px;
+	height: 61px;
+	display: inline-block;
+	position: absolute;
+	left: -61px;
+	top: 2px;
+	.slider-large-label {
+		@include large-square-label;
+	}
+}
+// Slider labels
+
+.slider-label-wrap {
+	
+}
+
+// .slider-wrap {
+// 	width: 861px;
+// 	position: relative;
+// 	display: inline-block;
+// }
+// .slider-bg {
+// 	display: inline-block;
+// 	position: absolute;
+// 	width: 413px;
+// 	height: 63px;
+// }
+// .slider-bg-left {
+// 	background: url('../img/answer-grey-bg-left.png') center center no-repeat;
+// 	left: 0;
+// }
+// .slider-bg-right {
+// 	background: url('../img/answer-grey-bg-right.png') center center no-repeat;
+// 	right: 0;
+// }
+
+
+// Results Page
+#results {
+	rzslider {
+		top: -7px;
+		height: auto;
+		margin: 0 !important;
+		span {
+			&.rz-bar {
+				position: relative; 
+				// width: 475px;
+				// height: 42px;
+				// background: url('../img/slider-results-bg.png');
+
+				width: 500px;
+				height: 54px;
+				background: url('../img/slider-results-bg-temp.png');
+
+			}
+			&.rz-pointer {
+				// top: 0 !important;
+			}
+			&.rz-limit, &.range {
+				display: none !important;
+			}
+		}
+	}
+}

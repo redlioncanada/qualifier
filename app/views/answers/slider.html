@@ -1,16 +1,41 @@
 <!-- Slider answer -->
 
-<!-- http://darul75.github.io/ng-slider/ 
-https://www.npmjs.com/package/ng-slider -->
+<!-- https://github.com/rzajac/angularjs-slider 
+http://rzajac.github.io/angularjs-slider/-->
 
-<div class="answers-main-content answer-slider {{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
+<div class="answers-main-content answer-slider {{questionsData.question.show.answer}} {{questionsData.question.show.classes}}" ng-controller="SliderCtrl" style="">
 
-    <rzslider
-     id="answerSlider" 
-     rz-slider-model="questionsData.question.show.answer"
-     rz-slider-floor="questionsData.question.show.options.from"
-     rz-slider-ceil="questionsData.question.show.options.to"
-     rz-slider-step="{{questionsData.question.show.options.step}}"
-     rz-slider-hide-limit-labels="false"
-     rz-slider-translate="translate"></rzslider>
+<!--      <div class="slider-top-labels" ng-if="questionsData.question.show.classes == 'top-labels'">
+ -->          <!-- <span class="scale-label-wrap {{$index +1}}" ng-repeat="tick in questionsData.question.show.options.scale"> -->
+               <!-- <span class="scale-label" ng-repeat="tick in questionsData.question.show.options.scale" ng-class="{{$index + 1}}">{{tick}}</span>
+
+               <span class="scale-label-more" ng-repeat="more in questionsData.question.show.options.scale_more" ng-class="{{$index + 1}}">{{more}}</span> -->
+         <!--  </span> -->
+     <!-- </div> -->
+     <!-- <div class="slider-bg slider-bg-left"></div>
+     <div class="slider-bg slider-bg-right"></div> -->
+     <!-- <div class="slider-wrap"> -->
+       <rzslider
+        id="answerSlider" 
+        class="{{questionsData.question.show.classes}}"
+        rz-slider-model="questionsData.question.show.answer"
+        rz-slider-floor="questionsData.question.show.options.from"
+        rz-slider-ceil="questionsData.question.show.options.to"
+        rz-slider-step="{{questionsData.question.show.options.step}}"
+        rz-slider-hide-limit-labels="false"
+        rz-slider-translate="translate"
+        rz-slider-always-show-bar="true">
+            <!-- <div class="slider-large-label-wrap" ng-if="!!questionsData.question.show.options.dimension">
+                 <span class="slider-large-label" ng-bind="questionsData.question.show.options.dimension"></span>
+            </div> -->
+
+       </rzslider>
+    <!--  </div> -->
+     <!-- <div class="slider-bottom-labels" ng-if="questionsData.question.show.classes == 'bottom-labels'">
+          <div ng-repeat="scale in questionsData.question.show.options.scale">
+               <span class="scale-label-wrap" ng-repeat="tick in questionsData.question.show.options.scale">
+                    <span class="scale-label">{{tick}}</span>
+               </span>
+          </div>
+     </div> -->
 </div>
