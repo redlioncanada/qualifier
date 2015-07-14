@@ -24,6 +24,10 @@ describe('Appliances App', function() {
 			});
 		}
 
+		var makePath = function () {
+
+		}
+
 		var crawlToResults = function (test) {
 			startItUp(function () {
 				var next = function () {
@@ -46,21 +50,22 @@ describe('Appliances App', function() {
 
 					});
 				}
-				next();
+				$$('.answer').then(function (answers) { 
+					var r = Math.floor((Math.random() * answers.length))
+					answers[r].click()
+					next();
+				});
 			});
 		}
 	describe('Questions', function() {
 
 		describe('when next is selected and there is no answer', function() {
 			it('should not go to the next question or results', function() {
-				//browser.get('http://localhost:3000').then( function () {
-				startItUp(function () {
-					var question = element(by.id('questionText')).getText()
+				crawlToRandomQuestion(function () {
+					var question = element(by.binding('questionsData.question.show.question')).getText()
 					element(by.id('next')).click()
-					expect(element(by.id('questionText')).getText()).toEqual(question)	
-
+					expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)	
 				});
-				//});
 			});
 		});
 
@@ -68,12 +73,12 @@ describe('Appliances App', function() {
 		describe('when next is selected and there is an answer', function() {
 			it('should go to the next question or results', function() {
 				browser.get('http://localhost:3000').then( function () {
-					var question = element(by.id('questionText')).getText()
+					var question = element(by.binding('questionsData.question.show.question')).getText()
 					$$('.answer').then(function (answers) { 
 						var r = Math.floor((Math.random() * answers.length))
 						answers[r].click()
 						element(by.id('next')).click()
-						expect(element(by.id('questionText')).getText()).toNotEqual(question)
+						expect(element(by.binding('questionsData.question.show.question')).getText()).toNotEqual(question)
 					});
 				});
 			});
@@ -86,14 +91,25 @@ describe('Appliances App', function() {
 
 		describe('when user navigates to results', function() {
 			it('there should be no more than 3 results', function() {
-				//browser.get('http://localhost:3000').then( function () {
 				crawlToResults(function () {
 					var results = element.all(by.repeater("a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3"))
 					expect(results.count() <= 3).toBeTruthy();
 				});
-				//});
 			});
 		});
+
+		describe('when user navigates to results they expect top 3', function() {
+			it('there should be no more than 3 results', function() {
+				crawlToResults(function () {
+					//console.log($rootScope)
+					var results = element.all(by.repeater("a in appliances | filter:{score : '!null'} | byPrice:price | orderBy:'score' | limitTo:3"))
+					var path = makePath()
+					expect(results.count() <= 3).toBeTruthy();
+				});
+			});
+		});
+
+
 	});
 
 	describe('Navigation', function() {
@@ -102,19 +118,21 @@ describe('Appliances App', function() {
 		describe('when next is selected and it is an old question', function() {
 			it('the number of navigation elements should stay the same', function() {
 				browser.get('http://localhost:3000').then( function () {
-					var question = element(by.id('questionText')).getText()
+					var question = element(by.binding('questionsData.question.show.question')).getText()
 					$$('.answer').then(function (answers) { 
 						var r = Math.floor((Math.random() * answers.length))
 						answers[r].click()
-						element(by.id('next')).click()
+						//element(by.id('next')).click()
 						var navigationCount = element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count()
-						expect(element(by.id('questionText')).getText()).toNotEqual(question)
+						console.log(navigationCount)
+						expect(element(by.binding('questionsData.question.show.question')).getText()).toNotEqual(question)
 						element(by.id('previous')).click()
-						expect(element(by.id('questionText')).getText()).toEqual(question)
+						expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)
 						$$('.answer').then(function (answers) { 
 							var r = Math.floor((Math.random() * answers.length))
+							console.log(answers)
 							answers[r].click()
-							element(by.id('next')).click()
+							//element(by.id('next')).click()
 							expect( element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count() ).toEqual(navigationCount)
 						});	
 					});				
@@ -130,7 +148,7 @@ describe('Appliances App', function() {
 					$$('.answer').then(function (answers) { 
 						var r = Math.floor((Math.random() * answers.length))
 						answers[r].click()
-						element(by.id('next')).click()
+						// element(by.id('next')).click()
 						expect( element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count() ).toNotEqual(navigationCount)
 					});
 				});
