@@ -58,13 +58,22 @@
 }
 
 .tooltip {
-
-	.tooltip-arrow {
+	&.top .tooltip-arrow {
+		border-top-color: #02274b;
+	}
+	&.bottom .tooltip-arrow {
 		border-bottom-color: #02274b;
-		opacity: 0.7;
+	}
+	&.left .tooltip-arrow {
+		border-right-color: #02274b;
+	}
+	&.right .tooltip-arrow {
+		border-left-color: #02274b;
+	}
+	.tooltip-arrow {
+		opacity: 0.9;
 		margin-left: -5px;
 		border-width: 0 5px 50px
-
 	}
 	.tooltip-inner {
 		color: #fff;

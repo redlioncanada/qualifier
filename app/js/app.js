@@ -50,6 +50,15 @@ App.filter('orderByOrder', function() {
 
 App.filter('nextQuestions', function($rootScope, $filter) {
   return function(items) {
+    var getNext = function (q) {
+      var r = false
+      angular.forEach(q.text[0].answers, function (item, k) {
+        if ('next' in item && item.answer == true) {
+          r = item
+        }
+      })
+      return r
+    }
     var nextQuestions = []
     var t = null
     var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
@@ -58,32 +67,24 @@ App.filter('nextQuestions', function($rootScope, $filter) {
         t = item
       }
     })
-    if (!!t > 0) { 
-      var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
-      while ('next' in t || n > 0) {
-        if ('next' in t) {
-          nextQuestions.push($rootScope.questionsData.questions[t.next])          
-          t = $rootScope.questionsData.questions[t.next]
-        } else {
-          var n = $filter('filter')(t.text[0].answers, function(item) { return item.answer == true })
-          if ($rootScope.objSize(n) > 0) {
-            var next = $rootScope.getFirstObjectProperty(n).next
-            nextQuestions.push($rootScope.questionsData.questions[next])
-            t = $rootScope.questionsData.questions[next]            
-          } else {
-            t = null
-          }
-
-        }
-
-        if (!!t) {
-          var n = $rootScope.objSize($filter('filter')(t.text[0].answers, function(item) { return 'next' in item }))
-        } else {
-          break;
-        }
+    while (!!t) {
+      var nn = null
+      if ('next' in t) {
+        nn = t.next
+      } 
+      else if (!!getNext(t)) {
+        nn = getNext(t).next
+      } 
+      else {
+        t = null
       }
-      return nextQuestions
+      if (!!t) {
+        nextQuestions.push($rootScope.questionsData.questions[nn])          
+        t = $rootScope.questionsData.questions[nn]
+      }
     }
+    return nextQuestions
+
   };
 });
 
@@ -131,19 +132,62 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                 $rootScope.appliances = res.products;
                 // fake the prices for now, change when we build in colour picker
                 angular.forEach( $rootScope.appliances, function (item, key) { 
-                      if (item.appliance == "Laundry") {
-                        $rootScope.appliances[key].price = parseFloat(item.washerColours[0].prices.CAD) + parseFloat(item.dryerColours[0].prices.CAD)
-                      } else {
-                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
-                      }
-                    
+                    if ($rootScope.appliances[key].appliance == "Laundry") {
+                      $rootScope.appliances[key].price = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
+                    } else {
+                      $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
+                    }
                     // also fake gas, electric for laundry
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].gas = Math.floor((Math.random() * 2)) == 0 ? true : false
                         $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
-                    }
+
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
+                          $rootScope.appliances[key].largestCapacity = true
+                        } 
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.2) {
+                          $rootScope.appliances[key].largerCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5) {
+                          $rootScope.appliances[key].largeCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.8) {
+                          $rootScope.appliances[key].mediumCapacity = true
+                        }                    
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.2) {
+                          $rootScope.appliances[key].smallCapacity = true
+                        }
+
+                    } else if ($rootScope.appliances[key].appliance == "Dishwashers") {
+                      $rootScope.appliances[key]["placeSettings"+$rootScope.appliances[key].placeSettings.toString()] = true
+                      $rootScope.appliances[key].quiet = false
+                      if (parseFloat($rootScope.appliances[key].decibels) <= 47) {
+                        $rootScope.appliances[key].quiet = true
+                      }
+                    } else if ($rootScope.appliances[key].appliance == "Fridges") {
+                      $rootScope.appliances[key]["height"+$rootScope.appliances[key].height.toString()] = true
+                      $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                    } else if ($rootScope.appliances[key].appliance == "Cooking") {
+                      if ($rootScope.appliances[key].type == "Ovens") {
+                        $rootScope.appliances[key].width = 27
+                        $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                      } 
+                      else if ($rootScope.appliances[key].type == "Ranges") {
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.7) {
+                          $rootScope.appliances[key].largestCapacity = true
+                        } 
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.4) {
+                          $rootScope.appliances[key].largerCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.2) {
+                          $rootScope.appliances[key].largeCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.8) {
+                          $rootScope.appliances[key].mediumCapacity = true
+                        }                    
+                      }
+                    } 
                 })
-                console.log($rootScope.appliances)
                 $state.go('main.questions');
           });
     });

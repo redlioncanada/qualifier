@@ -1,4 +1,4 @@
-<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom">
+<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom" ng-if="questionsData.question.name !='Appliance'">
 
 	<div class="app-content-main-bottom-left">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
@@ -33,7 +33,7 @@
 
 			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 		    	<a class="icon-nav">
-			      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+			      	<img ng-src="{{(q.name == questionsData.question.name) && q.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
 		    	</a>      
 			</div>

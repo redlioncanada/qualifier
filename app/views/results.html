@@ -1,6 +1,6 @@
 <div id="results" class="main-content" ng-controller="ResultsCtrl"> 
 	<div class="content-inner">
-		<div class="results-top">
+		<div class="results-top" ng-if="questionsData.currentCount !=0">
 			<h1>Results</h1>
 			<div class="results-adjust-desc">Adjust your price range <br>to further refine your results</div>
 
@@ -74,7 +74,7 @@
 									<li><span>Width: <span bo-text="a.width"></span>"</span></li>
 								</ul> -->
 								<div class="btn-wrap">
-									<a href="{{a.url}}" class="btn btn-default">
+									<a href="{{a.url}}" class="btn btn-default" target="_blank">
 										<span class="btn-text">More Info</span>
 									</a>
 								</div>
@@ -85,7 +85,7 @@
 			</li>
 		</ul>
 
-		<div class="results-top" ng-if="!questionsData.currentCount">
+		<div class="results-top" ng-if="questionsData.currentCount==0">
 			<h1>
 				No results!
 			</h1>

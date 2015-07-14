@@ -49,8 +49,11 @@ angular.module('App')
 			"sensorDry" : false,
 			"wrinkleControl" : false,
 			"steamEnhanced" : false,
-			"placeSettings" : 0,
+			"placeSettings13" : 0,
+			"placeSettings14" : 0,
+			"placeSettings15" : 0,
 			"decibels" : 0,
+			"quiet" : 0,
 			"premiumAdjusters" : false,
 			"fid" : false,
 			"console" : false,
@@ -68,7 +71,25 @@ angular.module('App')
 			"warmingDrawer" : false,
 			"electric" : false,
 			"powerBurner" : false,
-			"powerPreheat" : false			
+			"powerPreheat" : false,
+			"mediumCapacity" : 0,
+			"largeCapacity" : 0,
+			"largerCapacity" : 0,
+			"largestCapacity" : 0,
+			"width30" : 0,
+			"width31" : 0,
+			"width32" : 0,
+			"width33" : 0,
+			"width34" : 0,			
+			"width35" : 0,
+			"width36" : 0,
+			"height66" : 0,
+			"height67" : 0,
+			"height68" : 0,
+			"height69" : 0,
+			"height70" : 0,
+			"height71" : 0,
+
 		}
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
@@ -142,13 +163,13 @@ angular.module('App')
   				// if this question doesn't set next, then its fine
   				// if this question does, then delete everything after
   				var hasNext = false
-  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].answers, function (item, k) {
+  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
   					if ('next' in item) 
   						hasNext = true
   				})
-  				if ( hasNext.length > 0 ) {
+  				if ( !!hasNext ) {
 	  				angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-	  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name]) {
+	  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
 	  						delete $rootScope.questionsData.scoringQuestions[item.name]
 	  					}
 	  				})  					
@@ -192,7 +213,6 @@ angular.module('App')
 		  	}
 		} else {
 			$state.go("main.questions")
-			console.log($rootScope.questionsData.scoringQuestions)
 		    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
 		    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
 		      if (item.order == l) {
