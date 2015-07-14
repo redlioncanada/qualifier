@@ -425,3 +425,7 @@ td,
 th {
   padding: 0;
 }
+
+
+*:focus, *:active {outline:none !important;}
+*::-moz-focus-inner {border:0!important;}
