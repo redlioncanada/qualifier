@@ -132,16 +132,29 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                 $rootScope.appliances = res.products;
                 // fake the prices for now, change when we build in colour picker
                 angular.forEach( $rootScope.appliances, function (item, key) { 
-                      if (item.appliance == "Laundry") {
-                        $rootScope.appliances[key].price = parseFloat(item.washerColours[0].prices.CAD) + parseFloat(item.dryerColours[0].prices.CAD)
-                      } else {
-                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
-                      }
+                    $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
                     
                     // also fake gas, electric for laundry
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].gas = Math.floor((Math.random() * 2)) == 0 ? true : false
                         $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
+
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
+                          $rootScope.appliances[key].largestCapacity = true
+                        } 
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.2) {
+                          $rootScope.appliances[key].largerCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 5) {
+                          $rootScope.appliances[key].largeCapacity = true
+                        }
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.8) {
+                          $rootScope.appliances[key].mediumCapacity = true
+                        }                    
+                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.2) {
+                          $rootScope.appliances[key].smallCapacity = true
+                        }
+
                     } else if ($rootScope.appliances[key].appliance == "Dishwashers") {
                       $rootScope.appliances[key]["placeSettings"+$rootScope.appliances[key].placeSettings.toString()] = true
                       $rootScope.appliances[key].quiet = false
@@ -170,23 +183,7 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                           $rootScope.appliances[key].mediumCapacity = true
                         }                    
                       }
-                    } else if ($rootScope.appliances[key].appliance == "Laundry") {
-                        if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
-                          $rootScope.appliances[key].largestCapacity = true
-                        } 
-                        if (parseFloat($rootScope.appliances[key].capacity) >= 5.2) {
-                          $rootScope.appliances[key].largerCapacity = true
-                        }
-                        if (parseFloat($rootScope.appliances[key].capacity) >= 5) {
-                          $rootScope.appliances[key].largeCapacity = true
-                        }
-                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.8) {
-                          $rootScope.appliances[key].mediumCapacity = true
-                        }                    
-                        if (parseFloat($rootScope.appliances[key].capacity) >= 4.2) {
-                          $rootScope.appliances[key].smallCapacity = true
-                        }
-                    }
+                    } 
                 })
                 $state.go('main.questions');
           });
