@@ -1245,20 +1245,32 @@
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
-								"soundGuard" : 1,
-							 	"vibrationControl" : 1
+								"soundGuard" : 3,
+							 	"vibrationControl" : 3
 							},
 							"order" : 1
 						},
 						{
-							"text" : "A little bit, but noise doesn’t bother me for the most part",
+							"text" : "Moderately, our laundry room is located near out main living area",
 							"value" : "concerned",
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
-								"audioLevel" : 1
+								"soundGuard" : 2,
+							 	"vibrationControl" : 2
 							},
 							"order" : 2
+						},
+						{
+							"text" : "A little bit, but noise doesn’t bother me for the most part",
+							"value" : "littlebit",
+							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
+							"scoring" : {
+								"soundGuard" : 1,
+							 	"vibrationControl" : 1
+							},
+							"order" : 3
 						},
 						{
 							"text" : "Not at all, my laundry is down in the basement",
@@ -1267,7 +1279,7 @@
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
 							},
-							"order" : 3
+							"order" : 4
 						}
 					]
 				}
