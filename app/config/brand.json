@@ -2156,6 +2156,17 @@
 								"factory" : 1								
 							},
 							"order" : 5
+						},
+						{
+							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
+							"text" : "Nothing",
+							"value" : "nothing",
+							"image" : "../img/icon-thumb-cooler.png",
+							"hover" : "../img/icon-thumb-cooler-active.png",
+							"scoring" : {							
+							},
+							"order" : 6
 						}
 					]
 				}

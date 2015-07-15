@@ -22,6 +22,9 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
     localStorageServiceProvider.setPrefix("MaytagQualifier_");
 
     $stateProvider
+      .state('loading', {
+        templateUrl: 'views/loading.html'
+      }) 
       .state('main', {
         templateUrl: 'views/main.html'
       }) 
@@ -104,6 +107,7 @@ App.filter('byPrice', function() {
 
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
+  $state.go('loading');
     $rootScope.objSize = function (obj) {
       if (!!obj) {
         return Object.keys(obj).length;
