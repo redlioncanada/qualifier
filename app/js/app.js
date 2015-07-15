@@ -198,7 +198,11 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                     } 
                 })
                 $state.go('main.questions');
+          }, function () {
+              $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
+    }, function () {
+      $rootScope.errorMessage = "We're having connectivity issues. Please reload."
     });
   }]);
 
