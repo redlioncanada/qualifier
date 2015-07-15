@@ -13,7 +13,6 @@ describe('Appliances App', function() {
 						answers[r].click()
 						element(by.id('next')).click()
 						var b = Math.floor((Math.random() * 2))
-						console.log(b, !!b)
 						if (!!b) 
 							next()
 						else 
@@ -32,41 +31,74 @@ describe('Appliances App', function() {
 			startItUp(function () {
 				var next = function () {
 					console.log("next");
+					browser.findElements(".answer").then(function (answers) {
+						console.log("answers")
+						console.log(answers.length)
+					})
 					$$('.answer').then(function (answers) { 
-						var r = Math.floor((Math.random() * answers.length))
-						answers[r].click()
-						element(by.id('next')).click().then(function () {
-							element(by.id('next')).isPresent().then(function (p) {
-								console.log("p", p)
-								if (!!p) 
-									next()
-								else 
-									test()
+						console.log("answers")
+						console.log(answers.length)
+						if (answers.length > 0) {
+								var r = Math.floor((Math.random() * answers.length))
+								answers[r].click().then(function () {
+									console.log(element(by.id('next')).length);
+									if (element(by.id('next')).length > 0) {
+										element(by.id('next')).click().then(function () {
+											element(by.id('next')).isPresent().then(function (p) {
+												if (!!p) 
+													next()
+												else 
+													test()
+											});
+										});
+									} else {
+										$('html').getOuterHtml().then(function(html){ console.log(html); });
+									}
 
-							});
-
-
-						})
-
+								});
+						} else {
+							$('html').getOuterHtml().then(function(html){ console.log(html); });
+						}
 					});
 				}
 				$$('.answer').then(function (answers) { 
 					var r = Math.floor((Math.random() * answers.length))
-					answers[r].click()
-					next();
+					answers[r].click().then(function () {
+						next();						
+					});
 				});
 			});
 		}
 	describe('Questions', function() {
 
 		describe('when next is selected and there is no answer', function() {
-			it('should not go to the next question or results', function() {
-				crawlToRandomQuestion(function () {
-					var question = element(by.binding('questionsData.question.show.question')).getText()
-					element(by.id('next')).click()
-					expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)	
+			// it('should not go to the next question or results', function() {
+			// 	crawlToRandomQuestion(function () {
+			// 		var question = element(by.binding('questionsData.question.show.question')).getText()
+			// 		element(by.id('next')).click()
+			// 		expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)	
+			// 	});
+			// });
+
+			iit('should not go to the next question or results', function(){
+				browser.get('http://localhost:3000');
+				var ans = $$('.answer');
+				ans.count().then(function(count){
+					var random_num = Math.floor( (Math.random() * count) );
+					ans.get(random_num).click();
+
+					ans.count().then(function(count){
+						console.log('count', count);
+						// var random_num = Math.floor( (Math.random() * count) );
+						// ans.get(random_num).click();
+						// element(by.linkText('Next')).click();
+						// browser.pause();
+					});
+
+
 				});
 			});
+
 		});
 
 
@@ -121,20 +153,23 @@ describe('Appliances App', function() {
 					var question = element(by.binding('questionsData.question.show.question')).getText()
 					$$('.answer').then(function (answers) { 
 						var r = Math.floor((Math.random() * answers.length))
-						answers[r].click()
-						//element(by.id('next')).click()
-						var navigationCount = element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count()
-						console.log(navigationCount)
-						expect(element(by.binding('questionsData.question.show.question')).getText()).toNotEqual(question)
-						element(by.id('previous')).click()
-						expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)
-						$$('.answer').then(function (answers) { 
-							var r = Math.floor((Math.random() * answers.length))
-							console.log(answers)
-							answers[r].click()
+						answers[r].click().then(function () {
 							//element(by.id('next')).click()
-							expect( element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count() ).toEqual(navigationCount)
-						});	
+							var navigationCount = element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count()
+							expect(element(by.binding('questionsData.question.show.question')).getText()).toNotEqual(question)
+							element(by.id('previous')).click()
+							expect(element(by.binding('questionsData.question.show.question')).getText()).toEqual(question)
+							$$('.answer').then(function (answers) { 
+								var r = Math.floor((Math.random() * answers.length))
+								//console.log(answers)
+								answers[r].click().then(function () {
+								//element(by.id('next')).click()
+								expect( element.all(by.repeater('q in questionsData.scoringQuestions | orderByOrder')).count() ).toEqual(navigationCount)
+								});
+
+							});								
+						})
+
 					});				
 				});
 			});

@@ -10,7 +10,7 @@
 	</ul>
 
 	<ul class="rank-answers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="questionsData.question.show.answers" style="height:{{(rankCount * 63) + 63}}px;">
-		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}">
+		<li data-ng-repeat="item in questionsData.question.show.answers" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}" class="answer">
 			<!-- <div class="rank-number-wrap">
 				<span class="rank-number" ng-bind="$index+1"></span>
 			</div> -->

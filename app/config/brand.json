@@ -1265,27 +1265,30 @@
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
-								"soundGuard" : 1,
-							 	"vibrationControl" : 1
+								"soundGuard" : 3,
+							 	"vibrationControl" : 3
 							},
 							"order" : 1
 						},
 						{
 							"text" : "A little bit, but noise doesn’t bother me for the most part",
-							"value" : "concerned",
+							"value" : "littlebit",
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
-								"audioLevel" : 1
+								"soundGuard" : 2,
+							 	"vibrationControl" : 2
 							},
 							"order" : 2
 						},
 						{
 							"text" : "Moderately, our laundry room is located near our main living area",
-							"value" : "concerned",
+							"value" : "moderately",
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"scoring" : {
+								"soundGuard" : 1,
+							 	"vibrationControl" : 1
 							},
 							"order" : 3
 						},
@@ -2174,6 +2177,17 @@
 								"factory" : 1								
 							},
 							"order" : 5
+						},
+						{
+							"thumbnail" : "../img/icon-ice.png",
+							"thumbnail_current" : "../img/icon-ice-current.png",
+							"text" : "Nothing",
+							"value" : "nothing",
+							"image" : "../img/icon-thumb-cooler.png",
+							"hover" : "../img/icon-thumb-cooler-active.png",
+							"scoring" : {							
+							},
+							"order" : 6
 						}
 					]
 				}
@@ -2506,7 +2520,7 @@
 			]
 		},
 		"Dishwashers - Cycles" : {
-			"next" : "Dishwashers - Noise",
+			"next" : "Dishwashers - Noise 1",
 			"previous" : "Dishwashers - Capacity",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "../img/icon-cycles-current.png",
@@ -2554,8 +2568,8 @@
 				}											
 			]
 		},
-		"Dishwashers - Noise" : {
-			"next" : "Dishwashers - Flexibility",
+		"Dishwashers - Noise 1" : {
+			"next" : "Dishwashers - Noise 2",
 			"previous" : "Dishwashers - Cycles",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "../img/icon-noise-current.png",
@@ -2606,6 +2620,45 @@
 								"quiet" : true
 							},
 							"order" : 4
+						}
+					]
+				}
+			]
+		},
+		"Dishwashers - Noise 2" : {
+			"next" : "Dishwashers - Flexibility",
+			"previous" : "Dishwashers - Noise 2",
+			"thumbnail_type" : "image",
+			"thumbnail_current" : "../img/icon-noise-current.png",
+			"thumbnail_text" : "Noise",
+			"text" : [
+				{
+					"question" : "Do you live in an open concept space?",
+					"sub_question" : "Select one",
+					"explanation_title" : "Why are you asking me about my space?",
+					"explanation" : "If you live in an open concept space, we want to take that into consideration to recommend the perfect machine to keep the noise at a minimum.",
+					"type" : "boxes-picture-2-radio",
+					"answers" : [
+						{
+							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
+							"text" : "Yes",
+							"image" : "/img/open-concept.png",
+							"value" : "yes",
+							"scoring" : {
+								 "quiet" : true
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
+							"text" : "No",
+							"image" : "/img/closed-concept.png",
+							"value" : "no",
+							"scoring" : {
+							},
+							"order" : 2
 						}
 					]
 				}
