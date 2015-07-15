@@ -51,6 +51,23 @@ App.filter('orderByOrder', function() {
   };
 });
 
+App.filter('rearrange', function() {
+  return function(items, num) {
+      console.log("rearranging")
+      angular.forEach(items, function (item) {
+        console.log(item.score)
+      })
+      var temp = items[0];
+      items[0] = items[1];
+      items[1] = temp;
+      console.log("rearranged")
+      angular.forEach(items, function (item) {
+        console.log(item.score)
+      })      
+      return items;
+  };
+});
+
 App.filter('nextQuestions', function($rootScope, $filter) {
   return function(items) {
     var getNext = function (q) {
@@ -93,6 +110,10 @@ App.filter('nextQuestions', function($rootScope, $filter) {
 
 App.filter('byPrice', function() {
   return function(items, price) {
+    console.log("score")
+      angular.forEach(items, function (item) {
+        console.log(item.score)
+      })
     var inside = [];
     var outside = [];
     var range = price.split(";")

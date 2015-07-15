@@ -965,7 +965,7 @@
 							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"value" : "no",
 							"scoring" : {
-								"gas" : null
+								"gas" : -30
 							},
 							"order" : 2
 						}
@@ -1373,10 +1373,10 @@
 			"text" : [
 				{
 					"question" : "Do you often need items washed and dried in under an hour?",
-					"sub_question" : "Select all that apply",
+					"sub_question" : "Select one",
 					"explanation_title" : "Why are you asking me about dry time?",
 					"explanation" : "Some of our laundry machines are specifically designed to get you out the door in record time. By understanding your needs we can find the machine that suits your lifestyle best.",
-					"type" : "checkbox-4",
+					"type" : "radio-4",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-speed.png",
@@ -1623,7 +1623,6 @@
 							"thumbnail" : "../img/icon-fueltype.png",
 							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"scoring" : {
-								"electric" : null
 							},
 							"order" : 1
 						},
@@ -1635,7 +1634,7 @@
 							"thumbnail" : "../img/icon-fueltype.png",
 							"thumbnail_current" : "../img/icon-fueltype-current.png",
 							"scoring" : {
-								"gas" : null
+								"gas" : -30
 							},
 							"order" : 2
 						}
