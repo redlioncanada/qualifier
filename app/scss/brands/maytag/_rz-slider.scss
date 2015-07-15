@@ -38,7 +38,8 @@ $barHeight: 65px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	// @include make-md-column(8);
-	width: 899px;
+	width: 895px;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	// &.large-label {
@@ -48,6 +49,12 @@ $barHeight: 65px;
 .answer-slider {
 	margin-bottom: 100px;
 	// position: relative;
+}
+
+.slider-wrap {
+	width: 853px;
+	position: relative;
+	display: inline-block;
 }
 
 rzslider {
@@ -73,15 +80,15 @@ rzslider {
 			// background: $barNormalColor;
 			// @include rounded($barHeight/2);
 
-			// position: relative;
-			// width: 861px;
-			// height: 42px;
-			// background: url('../img/slider-bg.png');
+			position: relative;
+			width: 853px;
+			height: 33px;
+			background: url('../img/slider-bg.png'); // new
 
 
-			width: 899px;
-			height: 65px;
-			background: url('../img/slider-full-bg-no-label.png');
+			// width: 899px;
+			// height: 65px;
+			// background: url('../img/slider-full-bg-no-label.png');
 
 			border-radius: 0 !important;
 			&.rz-selection {
@@ -107,7 +114,8 @@ rzslider {
 		//  -o-transition:all linear 0.15s;
 		//  transition:all linear 0.15s;
 
-			top: 0 !important;
+			// top: 0 !important;
+			top: -12px !important;
 			width: 74px;
 			height: 69px;
 			background: url('../img/slider-pointer.png') !important;
@@ -299,25 +307,21 @@ rzslider {
 	
 }
 
-// .slider-wrap {
-// 	width: 861px;
-// 	position: relative;
-// 	display: inline-block;
-// }
-// .slider-bg {
-// 	display: inline-block;
-// 	position: absolute;
-// 	width: 413px;
-// 	height: 63px;
-// }
-// .slider-bg-left {
-// 	background: url('../img/answer-grey-bg-left.png') center center no-repeat;
-// 	left: 0;
-// }
-// .slider-bg-right {
-// 	background: url('../img/answer-grey-bg-right.png') center center no-repeat;
-// 	right: 0;
-// }
+
+.slider-bg {
+	display: inline-block;
+	position: absolute;
+	width: 413px;
+	height: 63px;
+}
+.slider-bg-left {
+	background: url('../img/answer-grey-bg-left.png') center center no-repeat;
+	left: 0;
+}
+.slider-bg-right {
+	background: url('../img/answer-grey-bg-right.png') center center no-repeat;
+	right: 0;
+}
 
 
 // Results Page

@@ -566,7 +566,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "no-pointer-labels top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -581,6 +581,7 @@
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 0,
 							"text" : "Not a Concern",
+							"text_more" : "Test Remove",
 							"scoring" : {
 							}
 						},
@@ -595,6 +596,8 @@
 							"thumbnail" : "../img/icon-energy.png",
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 2,
+							"text" : "Test Remove",
+							"text_more" : "Test Remove",
 							"scoring" : {
 							}
 						},
@@ -610,6 +613,7 @@
 							"thumbnail_current" : "../img/icon-energy-current.png",
 							"value" : 4,
 							"text" : "Very Important",
+							"text_more" : "Test Remove",
 							"scoring" : {
 							}
 						}
