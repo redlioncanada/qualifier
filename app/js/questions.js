@@ -133,6 +133,8 @@ angular.module('App')
 										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 									}
 								}
+							} else if (isNaN(a.answer) == false) {
+								
 							}
 						}
 					}
@@ -251,7 +253,7 @@ angular.module('App')
   		} else {
   			$rootScope.questionsData.question = $rootScope.questionsData.questions[q]
   		}
-  		$rootScope.controls.questionHasAnswer = true
+  		$rootScope.controls.questionHasAnswer = true 
   	}
   	//set questions to head
   	if (!$rootScope.questionsData) {
