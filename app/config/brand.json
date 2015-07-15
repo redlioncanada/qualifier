@@ -202,6 +202,24 @@
 								"width27" : 1
 							}
 						},
+						"28" : {
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"value" : 1,
+							"text" : "28\"",
+							"scoring" : {
+								"width28" : 1
+							}
+						},
+						"29" : {
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"value" : 1,
+							"text" : "29\"",
+							"scoring" : {
+								"width29" : 1
+							}
+						},
 						"30" : {
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
@@ -227,7 +245,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 0,
-							"text" : "single",
+							"text" : "Single",
 							"scoring" : {
 								"single" : 1
 							}
@@ -236,7 +254,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 1,
-							"text" : "combo",
+							"text" : "Combo",
 							"scoring" : {
 								"combination" : 1
 							}
@@ -245,7 +263,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 2,
-							"text" : "double",
+							"text" : "Double",
 							"scoring" : {
 								"double" : 1
 							}
@@ -254,7 +272,7 @@
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 3,
-							"text" : "no restriction",
+							"text" : "No Restriction",
 							"scoring" : {
 
 							}
@@ -502,7 +520,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect wall oven to fit your needs.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -566,7 +584,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels top-labels",
+					"classes" : "top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -634,7 +652,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "If you cook large meals often, then we recommend an oven with a larger capacity.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1074,7 +1092,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1514,7 +1532,7 @@
 					"explanation_title" : "Why are you asking me about time?",
 					"explanation" : "We would like to save you time by offering you cycles that will minimize your need to continually check your laundry progress.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels three",
 					"answer" : 1,
 					"options" : {       
 					    "from": 0,
@@ -1567,21 +1585,21 @@
 					"explanation_title" : "Why are you asking me about ironing?",
 					"explanation" : "Some of our machines are designed to minimize wrinkles. By helping us determine your needs, we are better able to provide for them.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels three",
 					"answer" : 1,
 					"options" : { 
 					    "from": 0,
 					    "to": 2,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Very, my iron and I are the best of friends", "Sometimes", "Who has time to iron?"]       
+					    "scale": ["Who has time to iron?", "Sometimes", "Very, my iron and I are the best of friends"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-wrinkles.png",
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 0,
-							"text" : "Very, my iron and I are the best of friends",
+							"text" : "Who has time to iron?",
 							"scoring" : {
 								"wrinkleControl" : 1
 							}
@@ -1599,7 +1617,7 @@
 							"thumbnail" : "../img/icon-wrinkles.png",
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 2,
-							"text" : "Who has time to iron?",
+							"text" : "Very, my iron and I are <br>the best of friends",
 							"scoring" : {
 								"wrinkleControl" : 3
 							}
@@ -1663,7 +1681,7 @@
 					"explanation_title" : "Why are you asking me about my dry-cleaning?",
 					"explanation" : "Some of our machines are designed to help refresh clothes. By helping us determine your needs, we are better able to provide for them.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 1,
 					"options" : { 
 					    "from": 0,
@@ -1675,9 +1693,9 @@
 					"answers" : {
 						"0" : {
 							"value" : 0,
-							"text" : "Never",
 							"thumbnail" : "../img/icon-dryclean.png",
 							"thumbnail_current" : "../img/icon-dryclean-current.png",
+							"text" : "Never",
 							"scoring" : {
 							}
 						},
@@ -1699,9 +1717,9 @@
 						},
 						"3" : {
 							"value" : 3,
-							"text" : "Often",
 							"thumbnail" : "../img/icon-dryclean.png",
 							"thumbnail_current" : "../img/icon-dryclean-current.png",
+							"text" : "Often",
 							"scoring" : {
 								"steamEnhanced" : 3
 							}
@@ -1723,7 +1741,7 @@
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect one to fit your needs.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
@@ -1787,19 +1805,19 @@
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-multiple",
-					"classes" : "slider-multiple",
+					"classes" : "top-labels",
 					"answer" : 66,
 					"options" : {       
 					    "from": 66,
 					    "to": 71,
 					    "step": 1,
-					    "dimension": " \"",
+					    "dimension": "H",
 					    "scale": ["65.9","71"]       
 					},
 					"answers" : {
 						"66" : {
 							"value" : 66,
-							"text" : "65.9",
+							"text" : "65.9\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1808,7 +1826,7 @@
 						},
 						"67" : {
 							"value" : 67,
-							"text" : "67",
+							"text" : "67\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1817,7 +1835,7 @@
 						},
 						"68" : {
 							"value" : 68,
-							"text" : "68",
+							"text" : "68\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1826,7 +1844,7 @@
 						},
 						"69" : {
 							"value" : 69,
-							"text" : "69",
+							"text" : "69\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1835,7 +1853,7 @@
 						},
 						"70" : {
 							"value" : 70,
-							"text" : "70",
+							"text" : "70\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1844,7 +1862,7 @@
 						},
 						"71" : {
 							"value" : 71,
-							"text" : "71",
+							"text" : "71\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1859,13 +1877,13 @@
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
-					    "dimension": "",
+					    "dimension": "W",
 					    "scale": ["30","36"]       
 					},
 					"answers" : {
 						"30" : {
 							"value" : 30,
-							"text" : "30",
+							"text" : "30\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1874,7 +1892,7 @@
 						},
 						"31" : {
 							"value" : 31,
-							"text" : "31",
+							"text" : "31\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1883,7 +1901,7 @@
 						},
 						"32" : {
 							"value" : 32,
-							"text" : "32",
+							"text" : "32\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1892,7 +1910,7 @@
 						},
 						"33" : {
 							"value" : 33,
-							"text" : "33",
+							"text" : "33\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1901,7 +1919,7 @@
 						},
 						"34" : {
 							"value" : 34,
-							"text" : "34",
+							"text" : "34\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1910,7 +1928,7 @@
 						},
 						"35" : {
 							"value" : 35,
-							"text" : "35",
+							"text" : "35\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1919,7 +1937,7 @@
 						},
 						"36" : {
 							"value" : 36,
-							"text" : "36",
+							"text" : "36\"",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1943,7 +1961,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "We want to get a better idea of how you use your fridge and what you put in it so we can find you the one that fits your lifestyle.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "pointer-labels-people bottom-labels",
 					"answer" : 1,
 					"options" : {       
 					    "from": 1,
@@ -1956,15 +1974,7 @@
 							"A family of four",
 							"My large family",
 							"My guests when entertaining"
-					    ],
-					    "scale_more" : [
-					    	"To keep me fueled all week", 
-							"We like to take care of each other",
-							"From pasta night to meatloaf Sundays, we’re a hungry bunch",
-							"The cooking never ends, at least we have leftovers for packed lunches",
-							"I might as well open a birthday party catering service"
 					    ]
-
 					},
 					"answers" : {
 						"1" : {
@@ -1989,8 +1999,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
-							"text" : "A family of four",
-							"text_more" : "From pasta night to meatloaf Sundays, we’re a hungry bunch",
+							"text" : "My family",
+							"text_more" : "From pasta night to meatloaf <br>Sundays, we’re a hungry bunch",
 							"scoring" : {
 								"powerCold" : 1
 							}
@@ -2000,7 +2010,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
 							"text" : "My large family",
-							"text_more" : "The cooking never ends, at least we have leftovers for packed lunches",
+							"text_more" : "The cooking never ends, at least<br> we have leftovers for packed lunches",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2009,8 +2019,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
-							"text" : "My guests when entertaining",
-							"text_more" : "I might as well open a birthday party catering serviceg",
+							"text" : "My guests when <br>entertaining",
+							"text_more" : "I might as well open a birthday<br> party catering serviceg",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2310,12 +2320,7 @@
 							"Always",
  							"Sometimes",
  							"Function"
-					    ],
-					    "scale_more" : [
-					    	"Home aesthetics are very important to me",
-					    	"I like to balance form and function",
-					    	"Performance is my main priority"
-					    ]       
+					    ]
 					},
 					"answers" : {
 						"0" : {
@@ -2506,7 +2511,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "When it comes to washing dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for your family.",
 					"type" : "slider",
-					"classes" : "bottom-labels",
+					"classes" : "pointer-labels",
 					"answer" : 30,
 					"options" : {       
 					    "from": 0,
@@ -2589,7 +2594,7 @@
 					"explanation_title" : "Why are you asking me about cycles?",
 					"explanation" : "Think of custom cycles like a tailored fit for your dishes. This question will help us to determine which additional features will be of use to you.",
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"answer" : 1,
 					"options" : {       
 					    "from": 0,
@@ -2798,7 +2803,7 @@
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
 					"answer" : 2,
 					"type" : "slider",
-					"classes" : "no-pointer-labels",
+					"classes" : "top-labels",
 					"options" : {       
 					    "from": 0,
 					    "to": 4,

@@ -6,15 +6,42 @@ http://rzajac.github.io/angularjs-slider/-->
 <div ng-controller="SliderMultipleCtrl">
 	<div class="slider-wrap" ng-repeat="t in questionsData.question.text">
 		<div class="answers-main-content answer-slider" ng-class="{'bottom' : (questionsData.question.text.length == t+1)}">
-		    <rzslider
-		     id="answerSlider" 
-		     rz-slider-model="t.answer"
-		     rz-slider-floor="t.options.from"
-		     rz-slider-ceil="t.options.to"
-		     rz-slider-step="t.options.step}}"
-		     rz-slider-hide-limit-labels="false"
-		     rz-slider-translate="translate"
-		     rz-slider-always-show-bar="true"></rzslider>
+
+			<div class="slider-top-labels" ng-if="questionsData.question.show.classes == 'top-labels'">
+		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.show.answers">
+		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
+		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
+		        </div>
+		    </div>
+		    
+		    <!-- If the slider has a dimension value, then it appears within the label below -->
+		    <!-- <div class="slider-large-label-wrap" ng-if="!!questionsData.question.show.options.dimension">
+		        <span class="slider-large-label" ng-bind="questionsData.question.show.options.dimension"></span>
+		    </div> -->
+
+		    <div class="slider-bg slider-bg-left"></div>
+		    <div class="slider-bg slider-bg-right"></div>
+
+		    <div class="slider-wrap">
+			    <rzslider
+			     id="answerSlider" 
+			     class="{{questionsData.question.show.classes}}"
+			     rz-slider-model="t.answer"
+			     rz-slider-floor="t.options.from"
+			     rz-slider-ceil="t.options.to"
+			     rz-slider-step="t.options.step}}"
+			     rz-slider-hide-limit-labels="false"
+			     rz-slider-translate="translate"
+			     rz-slider-always-show-bar="true"></rzslider>
+		    </div>
+
+		    <div class="slider-bottom-labels" ng-if="questionsData.question.show.classes == 'bottom-labels'">
+		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.show.answers">
+		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
+		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
+		        </div>
+		    </div>
+		    
 		</div>
 	</div>
 </div>
