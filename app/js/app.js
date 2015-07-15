@@ -93,17 +93,22 @@ App.filter('nextQuestions', function($rootScope, $filter) {
 
 App.filter('byPrice', function() {
   return function(items, price) {
-    var filtered = [];
+    var inside = [];
+    var outside = [];
     var range = price.split(";")
     angular.forEach(items, function(appliance) {
         var p =appliance.price
         if (p >= parseFloat(range[0]) && p <= parseFloat(range[1])) {
-          filtered.push(appliance)
+          inside.push(appliance)
+        } else {
+          outside.push(appliance)
         }
     });
-    return filtered;
+    return inside.concat(outside);
   };
 });
+
+// New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
