@@ -93,21 +93,48 @@ angular.module('App')
 		}
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
-			for (var answers in q.show.answers) {
-				var a = q.show.answers[answers]
-				// If answer isn't null, use it for scoring
-				if (a.answer != false) {
-					// If it is true, simply apply scoring
-					if (a.answer == true) {
-						for (var scores in a.scoring) {
-							var s = a.scoring[scores]
-							// scores is type, s is 'range'
-							if (s == null) {
-								$rootScope.questionsData.currentScore[scores] = null
-							} else if (typeof s == "string") {
-								$rootScope.questionsData.currentScore[scores] = s
-							} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-								$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+			if (q.show.type != "slider-multiple") {
+				for (var answers in q.show.answers) {
+					var a = q.show.answers[answers]
+					// If answer isn't null, use it for scoring
+					if (a.answer != false) {
+						// If it is true, simply apply scoring
+						if (a.answer == true) {
+							for (var scores in a.scoring) {
+								var s = a.scoring[scores]
+								// scores is type, s is 'range'
+								if (s == null) {
+									$rootScope.questionsData.currentScore[scores] = null
+								} else if (typeof s == "string") {
+									$rootScope.questionsData.currentScore[scores] = s
+								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
+									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+								}
+							}
+						}
+					}
+				}
+			} else {
+				for (var t in q.text) {
+					for (var answers in q.text[t].answers) {
+						var a = q.text[t].answers[answers]
+						// If answer isn't null, use it for scoring
+						if (a.answer != false) {
+							// If it is true, simply apply scoring
+							if (a.answer == true) {
+								for (var scores in a.scoring) {
+									var s = a.scoring[scores]
+									// scores is type, s is 'range'
+									if (s == null) {
+										$rootScope.questionsData.currentScore[scores] = null
+									} else if (typeof s == "string") {
+										$rootScope.questionsData.currentScore[scores] = s
+									} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
+										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+									}
+								}
+							} else if (isNaN(a.answer) == false) {
+								
 							}
 						}
 					}
@@ -226,7 +253,7 @@ angular.module('App')
   		} else {
   			$rootScope.questionsData.question = $rootScope.questionsData.questions[q]
   		}
-  		$rootScope.controls.questionHasAnswer = true
+  		$rootScope.controls.questionHasAnswer = true 
   	}
   	//set questions to head
   	if (!$rootScope.questionsData) {

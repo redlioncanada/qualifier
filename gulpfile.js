@@ -116,7 +116,6 @@ gulp.task('views', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src('app/img/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('build/img/*'));
     // .pipe(notify({ message: 'Images task complete' }));
 });

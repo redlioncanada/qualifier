@@ -169,9 +169,6 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                     }
                     // also fake gas, electric for laundry
                     if ($rootScope.appliances[key].appliance == "Laundry") {
-                        $rootScope.appliances[key].gas = Math.floor((Math.random() * 2)) == 0 ? true : false
-                        $rootScope.appliances[key].electric = Math.floor((Math.random() * 2)) == 0 ? true : false
-
                         if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
                           $rootScope.appliances[key].largestCapacity = true
                         } 
@@ -195,12 +192,41 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                         $rootScope.appliances[key].quiet = true
                       }
                     } else if ($rootScope.appliances[key].appliance == "Fridges") {
-                      $rootScope.appliances[key]["height"+$rootScope.appliances[key].height.toString()] = true
-                      $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                      if ($rootScope.appliances[key].height <= 66) {
+                        $rootScope.appliances[key]["height66"] = true
+                      } else if ($rootScope.appliances[key].height <= 67) {
+                        $rootScope.appliances[key]["height67"] = true
+                      } else if ($rootScope.appliances[key].height <= 68) {
+                        $rootScope.appliances[key]["height68"] = true
+                      } else if ($rootScope.appliances[key].height <= 69) {
+                        $rootScope.appliances[key]["height69"] = true
+                      } else if ($rootScope.appliances[key].height <= 70) {
+                        $rootScope.appliances[key]["height70"] = true
+                      } else if ($rootScope.appliances[key].height <= 71) {
+                        $rootScope.appliances[key]["height71"] = true
+                      }
+                      if ($rootScope.appliances[key].width <= 30) {
+                        $rootScope.appliances[key]["width30"] = true
+                      } else if ($rootScope.appliances[key].width <= 31) {
+                        $rootScope.appliances[key]["width31"] = true
+                      } else if ($rootScope.appliances[key].width <= 32) {
+                        $rootScope.appliances[key]["width32"] = true
+                      } else if ($rootScope.appliances[key].width <= 33) {
+                        $rootScope.appliances[key]["width33"] = true
+                      } else if ($rootScope.appliances[key].width <= 34) {
+                        $rootScope.appliances[key]["width34"] = true
+                      } else if ($rootScope.appliances[key].width <= 35) {
+                        $rootScope.appliances[key]["width35"] = true
+                      } else if ($rootScope.appliances[key].width <= 36) {
+                        $rootScope.appliances[key]["width36"] = true
+                      }
                     } else if ($rootScope.appliances[key].appliance == "Cooking") {
                       if ($rootScope.appliances[key].type == "Ovens") {
-                        $rootScope.appliances[key].width = 27
-                        $rootScope.appliances[key]["width"+$rootScope.appliances[key].width.toString()] = true
+                        if ($rootScope.appliances[key].width <= 27) {
+                          $rootScope.appliances[key]["width27"] = true
+                        } else if ($rootScope.appliances[key].width <= 30) {
+                          $rootScope.appliances[key]["width30"] = true
+                        } 
                       } 
                       else if ($rootScope.appliances[key].type == "Ranges") {
                         if (parseFloat($rootScope.appliances[key].capacity) >= 6.7) {
