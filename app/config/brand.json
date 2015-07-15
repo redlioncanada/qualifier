@@ -1257,7 +1257,7 @@
 					"sub_question" : "Select one",
 					"explanation_title" : "Why are you asking me about sound?",
 					"explanation" : "Some of our laundry pairs are specifically designed to limit noise. By understanding your needs we can find the perfect machines for your home.",
-					"type" : "radio",
+					"type" : "radio-4",
 					"answers" : [
 						{
 							"text" : "Very much so, my laundry is located near a bedroom",
@@ -1521,7 +1521,7 @@
 					    "to": 2,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Adding more time, every time", "Nothing", "Reducing time to prevent over-drying"]       
+					    "scale": ["Reducing time to prevent over-drying", "Nothing", "Adding more time, every time"]       
 					},
 					"answers" : {
 						"0" : {
