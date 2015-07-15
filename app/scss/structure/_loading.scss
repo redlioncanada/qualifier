@@ -1,0 +1,11 @@
+.loading {
+	height: 500px;
+	width: 100%;
+	.loading-icon {
+		position: absolute;
+		left: 50%;
+		margin-left: -15px;
+		display: block;
+		top: 235px;
+	}
+}
