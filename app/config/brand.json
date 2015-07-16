@@ -2693,7 +2693,7 @@
 		},
 		"Dishwashers - Noise 2" : {
 			"next" : "Dishwashers - Flexibility",
-			"previous" : "Dishwashers - Noise 2",
+			"previous" : "Dishwashers - Noise 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "../img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
