@@ -76,6 +76,7 @@ angular.module('App')
 			"largeCapacity" : 0,
 			"largerCapacity" : 0,
 			"largestCapacity" : 0,
+			"width27" : 0,
 			"width30" : 0,
 			"width31" : 0,
 			"width32" : 0,
@@ -88,9 +89,11 @@ angular.module('App')
 			"height68" : 0,
 			"height69" : 0,
 			"height70" : 0,
-			"height71" : 0,
+			"height71" : 0
 
 		}
+
+		console.log("SCORE")
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
 			if (q.show.type != "slider-multiple") {
@@ -101,6 +104,7 @@ angular.module('App')
 						// If it is true, simply apply scoring
 						if (a.answer == true) {
 							for (var scores in a.scoring) {
+								console.log("prescore",scores, a.scoring[scores])
 								var s = a.scoring[scores]
 								// scores is type, s is 'range'
 								if (s == null) {
@@ -110,7 +114,21 @@ angular.module('App')
 								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
 									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 								}
+								console.log("postscore",scores, a.scoring[scores])
 							}
+						} else if (isNaN(a.answer) == false) {
+							for (var scores in a.scoring) {
+								console.log("prescore",scores, a.scoring[scores])
+								var s = a.scoring[scores]
+								if (s == null) {
+									$rootScope.questionsData.currentScore[scores] = null
+								} else if (typeof s == "string") {
+									$rootScope.questionsData.currentScore[scores] = s * a.answer
+								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
+									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * a.answer)
+								}
+								console.log("postscore",scores, a.scoring[scores])
+							}									
 						}
 					}
 				}
@@ -124,6 +142,7 @@ angular.module('App')
 							if (a.answer == true) {
 								for (var scores in a.scoring) {
 									var s = a.scoring[scores]
+									console.log("prescore",scores, a.scoring[scores])
 									// scores is type, s is 'range'
 									if (s == null) {
 										$rootScope.questionsData.currentScore[scores] = null
@@ -132,9 +151,8 @@ angular.module('App')
 									} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
 										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 									}
+									console.log("postscore",scores, a.scoring[scores])
 								}
-							} else if (isNaN(a.answer) == false) {
-								
 							}
 						}
 					}
