@@ -1531,14 +1531,14 @@
 					    "to": 2,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Adding more time, every time", "Nothing", "Reducing time to prevent over-drying"]       
+					    "scale": ["Reducing time to prevent over-drying", "Nothing", "Adding more time, every time"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 0,
-							"text" : "Adding more time, every time",
+							"text" : "Reducing time to <br>prevent over-drying",
 							"scoring" : {
 								"sensorDry" : 1
 							}
@@ -1555,7 +1555,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 2,
-							"text" : "Reducing time to prevent over-drying",
+							"text" : "Adding more time, <br>every time",
 							"scoring" : {
 								"sensorDry" : 1
 							}
@@ -1794,85 +1794,19 @@
 			"thumbnail_text" : "Size",
 			"text" : [
 				{
-					"question" : "We’ve got the perfect fridge for your family. Just tell us how much space you have to fill.",
+					"question" : "We’ve got the perfect fridge for your family.",
 					"question_more" : "Just tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-multiple",
-					"answer" : 66,
-					"options" : {       
-					    "from": 66,
-					    "to": 71,
-					    "step": 1,
-					    "dimension": " \"",
-					    "scale": ["65.9","71"]       
-					},
-					"answers" : {
-						"66" : {
-							"value" : 66,
-							"text" : "66\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								"height66" : 1
-							}
-						},
-						"67" : {
-							"value" : 67,
-							"text" : "67\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								 "height67" : 1
-							}
-						},
-						"68" : {
-							"value" : 68,
-							"text" : "68\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								 "height68" : 1
-							}
-						},
-						"69" : {
-							"value" : 69,
-							"text" : "69\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								 "height69" : 1
-							}
-						},
-						"70" : {
-							"value" : 70,
-							"text" : "70\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								 "height70" : 1
-							}
-						},
-						"71" : {
-							"value" : 71,
-							"text" : "71\"",
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"scoring" : {
-								 "height71" : 1
-							}
-						}
-					}								
-				},
-				{
 					"answer" : 33,
 					"options" : { 
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
-					    "dimension": "",
-					    "scale": ["30","36"]       
+					    "dimension": "W",
+					    "scale": ["30","31","32","33","34","35","36"]       
 					},
 					"answers" : {
 						"30" : {
@@ -1936,6 +1870,72 @@
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
 								"width36" : 1
+							}
+						}
+					}								
+				},
+				{
+					"answer" : 66,
+					"options" : {       
+					    "from": 66,
+					    "to": 71,
+					    "step": 1,
+					    "dimension": "H",
+					    "scale": ["65.9","66","67","68","69","70","71"]       
+					},
+					"answers" : {
+						"66" : {
+							"value" : 66,
+							"text" : "66\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								"height66" : 1
+							}
+						},
+						"67" : {
+							"value" : 67,
+							"text" : "67\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								 "height67" : 1
+							}
+						},
+						"68" : {
+							"value" : 68,
+							"text" : "68\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								 "height68" : 1
+							}
+						},
+						"69" : {
+							"value" : 69,
+							"text" : "69\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								 "height69" : 1
+							}
+						},
+						"70" : {
+							"value" : 70,
+							"text" : "70\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								 "height70" : 1
+							}
+						},
+						"71" : {
+							"value" : 71,
+							"text" : "71\"",
+							"thumbnail" : "../img/icon-size.png",
+							"thumbnail_current" : "../img/icon-size-current.png",
+							"scoring" : {
+								 "height71" : 1
 							}
 						}
 					}								

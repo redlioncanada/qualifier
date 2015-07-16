@@ -7,14 +7,14 @@ https://www.npmjs.com/package/ng-slider -->
 		
 		<div class="answers-main-content answer-slider">
 			<div class="slider-top-labels">
-		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.show.answers">
+		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.text[0].answers">
 		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
 		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
 		        </div>
 		    </div>
 			    
-		    <div class="slider-large-label-wrap" ng-if="!!questionsData.question.show.options.dimension">
-		        <span class="slider-large-label" ng-bind="questionsData.question.show.options.dimension"></span>
+		    <div class="slider-large-label-wrap" ng-if="!!questionsData.question.text[0].options.dimension">
+		        <span class="slider-large-label" ng-bind="questionsData.question.text[0].options.dimension"></span>
 		    </div>
 
 		    <div class="slider-bg slider-bg-left"></div>
@@ -30,8 +30,8 @@ https://www.npmjs.com/package/ng-slider -->
 	<div class="multi-slider-wrap">
 		
 		<div class="answers-main-content answer-slider bottom">
-		    <div class="slider-large-label-wrap" ng-if="!!questionsData.question.show.options.dimension">
-		        <span class="slider-large-label" ng-bind="questionsData.question.show.options.dimension"></span>
+		    <div class="slider-large-label-wrap" ng-if="!!questionsData.question.text[1].options.dimension">
+		        <span class="slider-large-label" ng-bind="questionsData.question.text[1].options.dimension"></span>
 		    </div>
 
 		    <div class="slider-bg slider-bg-left"></div>
@@ -40,9 +40,9 @@ https://www.npmjs.com/package/ng-slider -->
 		    <div class="slider-wrap">
 		    	<input ng-model="questionsData.question.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="questionsData.question.text[1].options" />
 		    </div>
-		    
+
 		    <div class="slider-bottom-labels">
-		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.show.answers">
+		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.text[1].answers">
 		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
 		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
 		        </div>
