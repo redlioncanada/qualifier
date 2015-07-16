@@ -331,6 +331,7 @@
 					"explanation_title" : "Why Are You Asking Me About Cooking?",
 					"explanation" : "Our ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your needs.",
 					"type" : "radio-split",
+					"classes" : "family-describe",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",
@@ -378,7 +379,7 @@
 						{
 							"thumbnail" : "../img/icon-style.png",
 							"thumbnail_current" : "../img/icon-style-current.png",
-							"text" : "I'm no home chef",
+							"text" : "I'm no<br>home chef",
 							"text_more" : "I enjoy cooking for my family",
 							"value" : "not a home chef",
 							"scoring" : {
@@ -449,6 +450,7 @@
 					"explanation_title" : "Why Are You Asking Me About My Kitchen?",
 					"explanation" : "How you use your kitchen will help us determine what kind of features you need to keep up with your life.",
 					"type" : "checkbox",
+					"classes" : "consider-kitchen",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-lifestyle.png",
@@ -798,7 +800,7 @@
 						{
 							"thumbnail" : "../img/icon-convection.png",
 							"thumbnail_current" : "../img/icon-convection-current.png",
-							"text" : "I’m no home chef",
+							"text" : "I’m no<br>home chef",
 							"text_more" : "I enjoy cooking for my family",
 							"value" : "not a home chef",
 							"scoring" : {
@@ -1139,7 +1141,7 @@
 					"explanation_title" : "Why are you asking me about my family size?",
 					"explanation" : "Like your family, all of our machines are unique. If we understand a little more about your family we can recommend a machine that suits the specific needs of your home.",
 					"type" : "slider-people",
-					"classes" : "bottom-labels",
+					"classes" : "bottom-labels has-dimension-label",
 					"answer" : 3,
 					"options" : {       
 					    "from": 1,
@@ -1542,7 +1544,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 0,
-							"text" : "Reducing time to <br>prevent over-drying",
+							"text" : "Reducing time to<br>prevent over-drying",
 							"scoring" : {
 								"sensorDry" : 1
 							}
@@ -1559,7 +1561,7 @@
 							"thumbnail" : "../img/icon-features.png",
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"value" : 2,
-							"text" : "Adding more time, <br>every time",
+							"text" : "Adding more time,<br>every time",
 							"scoring" : {
 								"sensorDry" : 1
 							}

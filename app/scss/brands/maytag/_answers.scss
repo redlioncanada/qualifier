@@ -85,6 +85,27 @@
 // 	font-size: 17px;
 // }
 
+// special cases........
+.consider-kitchen {
+	.label-text {
+		font-size: 17px;
+	}
+}
+.answers-main-content {
+	& > :nth-child(4) .family-split { 
+		.label-more-wrap {
+			top: 26px;
+		}
+	}
+	& > :nth-child(5) .family-split {
+		.label-wrap {
+			top: 10px;
+		}
+		.label-more-wrap {
+			top: 26px;
+		}
+	}
+} 
 
 
 .answer-box {
@@ -148,6 +169,7 @@
 		display: inline-block;
 		margin-bottom: 20px;
 		@include boxshadow;
+		float: left;
 		.label-wrap {
 			position: absolute;
 			left: 90px;
@@ -175,6 +197,7 @@
 			font-family: $AG-Bold-Cnd;
 		}
 	}
+	
 	// Checkbox
 
 	&.checkbox {
@@ -214,6 +237,7 @@
 		// 	top: 23px;
 		// }
 	}
+	
 
 	&.picture-2, &.picture-3 {
 		width: 367px;

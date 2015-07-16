@@ -5,52 +5,62 @@
 	opacity : 0;
 }
 
-div.people1 .jslider .jslider-value {
-    background-image: url('../img/family-1.png') center center no-repeat !important;
+div.people1 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-1.png') center center no-repeat !important;
 	background-size: 28px 50px;
 	width: 28px;
 	height: 50px;
 	display: block;
+	margin-left: -14px !important; // half of width to center it
 }
 
-div.people2 .jslider .jslider-value {
-    background-image: url('../img/family-2.png') center center no-repeat !important;
+div.people2 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-2.png') center center no-repeat !important;
 	background-size: 36px 50px;
 	width: 36px;
 	height: 50px;
 	display: block;
+	margin-left: -18px !important;
 }
 
-div.people3 .jslider .jslider-value {
-    background-image: url('../img/family-3.png') center center no-repeat !important;
+div.people3 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-3.png') center center no-repeat !important;
 	background-size: 59px 50px;
 	width: 59px;
 	height: 50px;
 	display: block;
+	margin-left: -29.5px !important;
 }
 
-div.people4 .jslider .jslider-value {
-    background-image: url('../img/family-4.png') center center no-repeat !important;
+div.people4 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-4.png') center center no-repeat !important;
 	background-size: 70px 50px;
 	width: 70px;
 	height: 50px;
 	display: block;
+	margin-left: -35px !important;
 }
-div.people5 .jslider .jslider-value {
-    background-image: url('../img/family-5.png') center center no-repeat !important;
+div.people5 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-5.png') center center no-repeat !important;
 	background-size: 85px 50px;
 	width: 85px;
 	height: 50px;
 	display: block;
+	margin-left: -42.5px !important;
 }
 // Will be dog and cats later
-div.people6 .jslider .jslider-value {
-    background-image: url('../img/family-6.png') center center no-repeat !important;
+div.people6 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-6.png') center center no-repeat !important;
 	background-size: 126px 50px;
 	width: 126px;
 	height: 50px;
 	display: block;
+	margin-right: -63px !important; //opposite as it's the last one
 }
+.people-slider {
+	margin-top: 100px;
+}
+
 .answer-slider {
 	margin-bottom: 100px;
 }
@@ -61,7 +71,7 @@ div.people6 .jslider .jslider-value {
 	// clear: both; 
 	// float: left;
 	height: 100px;
-	margin-top: 50px;
+	margin-top: 75px;
 	margin-bottom: 50px;
 	// @include make-md-column(8);
 	width: 895px;
@@ -270,6 +280,9 @@ div.people6 .jslider .jslider-value {
 		.jslider-scale, .jslider-label {
 			display: none;
 		}
+		.jslider-value-to {
+			display: none !important;
+		}
 		// 	.jslider-scale span { 
 		// 		position: absolute; 
 		// 		width: 5px; 
@@ -356,11 +369,11 @@ div.people6 .jslider .jslider-value {
 		 //    background-size: 141px 47px;
 		 //    width: 141px;
 			// height: 47px;
-			// background: transparent !important;
-			padding-top: 50px;
-			padding-left: 10px;
-			margin-top: -80px;
-
+			background: transparent !important;
+			// padding-top: 50px;
+			// padding-left: 10px;
+			margin-top: -60px;
+			display: none;
 		}
 
 		.jslider-value-to { 
@@ -410,7 +423,8 @@ div.people6 .jslider .jslider-value {
 }
 .pointer-labels {
 	.jslider-label {
-		top: -52px;
+		// top: -52px;
+		top: 0;
 		opacity: 1 !important;
 		// padding-top: 5px;
 		// font-family: $AG-Bold-Cnd;
@@ -420,6 +434,8 @@ div.people6 .jslider .jslider-value {
 		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
 		width: 63px;
 		height: 61px;
+		display: block;
+
 	}
 	.jslider-value {
 		font-family: $AG-Bold-Cnd;
@@ -432,26 +448,46 @@ div.people6 .jslider .jslider-value {
 	}
 }
 
-
-
-
-
-
-
 .slider-wrap {
 	width: 853px;
 	position: relative;
 	display: inline-block;
 }
-// .multi-slider-wrap {
-	
-// }
+
+.has-dimension-label {
+	.slider-bg-left {
+		left: -63px;
+	}
+}
+.multi-slider-wrap {
+	.slider-bg-left {
+		left: -63px;
+	}
+}
 
 .slider-answer-label-wrap {
 	display: none;
 }
 
 .top-labels.three {
+	.slider-top-labels {
+		& > :nth-child(2) {
+			display: inline-block;
+			left: 50%;
+			&:before {
+				content: '';
+				width: 1px;
+				background-color: #999;
+				height: 44px;
+				position: relative;
+				margin-right: 5px;
+				display: inline-block;
+				z-index: 9999;
+			}
+		}
+	}
+}
+.top-labels.five {
 	.slider-top-labels {
 		& > :nth-child(3) {
 			display: inline-block;
@@ -482,6 +518,7 @@ div.people6 .jslider .jslider-value {
 		display: inline-block;
 		// left: 42px;
 		left: 22px;
+		text-align: left;
 		// | LABEL
 		&:before {
 			content: '';
@@ -500,6 +537,7 @@ div.people6 .jslider .jslider-value {
 		display: inline-block;
 		// right: 42px;
 		right: 19px;
+		text-align: right;
 		&:before {
 			display: none;
 		}
@@ -551,7 +589,7 @@ div.people6 .jslider .jslider-value {
 	}
 	& > :first-child, & > :last-child {
 		// top: 90px;
-		bottom: -90px;
+		bottom: -100px;
 	}
 }
 
