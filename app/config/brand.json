@@ -2178,7 +2178,7 @@
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"scoring" : {
 								"indoorDispenser" : 1,
-								"factory" : 1
+								"factoryInstalledIceMaker" : 1
 							},
 							"order" : 1
 						},
@@ -2191,7 +2191,7 @@
 							"hover" : "../img/icon-thumb-cocktails-active.png",
 							"scoring" : {
 								"indoorDispenser" : 1,
-								"factory" : 1			
+								"factoryInstalledIceMaker" : 1			
 							},
 							"order" : 2
 						},
@@ -2204,7 +2204,7 @@
 							"hover" : "../img/icon-thumb-water-active.png",
 							"scoring" : {
 								"indoorDispenser" : 1,
-								"factory" : 1								
+								"factoryInstalledIceMaker" : 1								
 							},
 							"order" : 3
 						},
@@ -2217,7 +2217,7 @@
 							"hover" : "../img/icon-thumb-smoothies-active.png",
 							"scoring" : {
 								"indoorDispenser" : 1,
-								"factory" : 1								
+								"factoryInstalledIceMaker" : 1								
 							},
 							"order" : 4
 						},
@@ -2230,7 +2230,7 @@
 							"hover" : "../img/icon-thumb-cooler-active.png",
 							"scoring" : {
 								"indoorDispenser" : 1,
-								"factory" : 1								
+								"factoryInstalledIceMaker" : 1								
 							},
 							"order" : 5
 						},

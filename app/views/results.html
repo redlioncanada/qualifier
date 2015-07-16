@@ -33,7 +33,7 @@
 				<div class="result-wrap">
 					<div class="result-inner">
 						<h3 ng-if="$index==1">Recommended For You</h3>
-						<h2><span class="product-name" bo-text="a.name"></span> </h2>
+						<h2><span class="product-name" ng-bind-html="a.name"></span> </h2>
 						<div class="product-img-wrap">
 							<img ng-src="http://maytag.com{{a.image}}" style="width: 220px">
 						</div>
