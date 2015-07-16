@@ -123,41 +123,6 @@
 							"order" : 2
 						}
 					]
-				},
-				{
-					"question" : "What product are you shopping for today?",
-					"sub_question" : "Select one",
-					"type" : "categories",
-					"answers" : [
-						{
-							"text" : "Free Standing Range",
-							"value" : "free stand range",
-							"classes" : "sub-category ranges",
-							"image" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail_current" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail_text" : "Range",
-							"scoring" : {
-								"type" : "Ranges"
-							},
-							"next" : "Cooking - Ranges - Energy",						
-							"order" : 1
-						},
-						{
-							"text" : "Wall Ovens",
-							"value" : "wall oven",
-							"classes" : "sub-category wallovens",
-							"image" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail_current" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail_text" : "Wall Oven",
-							"scoring" : {
-								"type" : "Ovens"
-							},
-							"next" : "Cooking - Wall Ovens - Size",
-							"order" : 2
-						}
-					]
 				}
 			],
 			"category" : "aesthetics"
@@ -1578,7 +1543,8 @@
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 0,
 							"scoring" : {
-								"wrinkleControl" : 1
+								"washerWrinkleControl" : 1,
+								"dryerWrinkleControl" : 1
 							}
 						},
 						"1" : {
@@ -1586,7 +1552,8 @@
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 1,
 							"scoring" : {
-								"wrinkleControl" : 2
+								"washerWrinkleControl" : 2,
+								"dryerWrinkleControl" : 2
 							}
 						},
 						"2" : {
@@ -1594,7 +1561,8 @@
 							"thumbnail_current" : "../img/icon-wrinkles-current.png",
 							"value" : 2,
 							"scoring" : {
-								"wrinkleControl" : 3
+								"washerWrinkleControl" : 3,
+								"dryerWrinkleControl" : 3
 							}
 						}
 					}
@@ -1993,7 +1961,8 @@
 							"text" : "Keep the drinks cold - from milk to fruit juice, pop to iced tea and everything in between",
 							"value" : "reheat",
 							"scoring" : {
-								"combination" : 1
+								"topMount" : 1,
+								"bottomMount" : 1
 							},
 							"order" : 1
 						},
@@ -2003,7 +1972,8 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"thumbnail_current" : "../img/icon-organization-current.png",
 							"scoring" : {
-								"double" : 1
+								"topMount" : 1,
+								"bottomMount" : 1
 							},
 							"order" : 2
 						},
@@ -2013,6 +1983,8 @@
 							"text" : "Be our personal grocery store - all ten aisles in one place",
 							"value" : "multiple meals",
 							"scoring" : {
+								"frenchDoor" : 1,
+								"powerCold" : 1
 							},
 							"order" : 3
 						},
@@ -2023,7 +1995,8 @@
 							"thumbnail" : "../img/icon-organization.png",
 							"thumbnail_current" : "../img/icon-organization-current.png",
 							"scoring" : {
-								"double" : 1
+								"frenchDoor" : 1,
+								"powerCold" : 1
 							},
 							"order" : 4
 						}
@@ -2051,7 +2024,7 @@
 							"thumbnail" : "../img/icon-water.png",
 							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
-								"indoor" : 1
+								"indoorDispenser" : 1
 							},
 							"order" : 1
 						},
@@ -2061,7 +2034,7 @@
 							"thumbnail" : "../img/icon-water.png",
 							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
-								"indoor" : 1
+								"indoorDispenser" : 1
 							},
 							"order" : 2
 						},
@@ -2071,7 +2044,7 @@
 							"thumbnail" : "../img/icon-water.png",
 							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
-								"indoor" : 1
+								"indoorDispenser" : 1
 							},
 							"order" : 3
 						},
@@ -2090,7 +2063,7 @@
 							"thumbnail" : "../img/icon-water.png",
 							"thumbnail_current" : "../img/icon-water-current.png",
 							"scoring" : {
-								"indoor" : 1
+								"indoorDispenser" : 1
 							},
 							"order" : 5
 						}
@@ -2120,7 +2093,7 @@
 							"image" : "../img/icon-thumb-softdrinks.png",
 							"hover" : "../img/icon-thumb-softdrinks-active.png",
 							"scoring" : {
-								"indoor" : 1,
+								"indoorDispenser" : 1,
 								"factory" : 1
 							},
 							"order" : 1
@@ -2133,7 +2106,7 @@
 							"image" : "../img/icon-thumb-cocktails.png",
 							"hover" : "../img/icon-thumb-cocktails-active.png",
 							"scoring" : {
-								"indoor" : 1,
+								"indoorDispenser" : 1,
 								"factory" : 1			
 							},
 							"order" : 2
@@ -2146,7 +2119,7 @@
 							"image" : "../img/icon-thumb-water.png",
 							"hover" : "../img/icon-thumb-water-active.png",
 							"scoring" : {
-								"indoor" : 1,
+								"indoorDispenser" : 1,
 								"factory" : 1								
 							},
 							"order" : 3
@@ -2159,7 +2132,7 @@
 							"image" : "../img/icon-thumb-smoothies.png",
 							"hover" : "../img/icon-thumb-smoothies-active.png",
 							"scoring" : {
-								"indoor" : 1,
+								"indoorDispenser" : 1,
 								"factory" : 1								
 							},
 							"order" : 4
@@ -2172,7 +2145,7 @@
 							"image" : "../img/icon-thumb-cooler.png",
 							"hover" : "../img/icon-thumb-cooler-active.png",
 							"scoring" : {
-								"indoor" : 1,
+								"indoorDispenser" : 1,
 								"factory" : 1								
 							},
 							"order" : 5
@@ -2587,7 +2560,7 @@
 							"text" : "As soon as it's full",
 							"value" : "full",
 							"scoring" : {
-								 "quiet" : true
+								 "quiet" : 1
 							},
 							"order" : 1
 						},
@@ -2597,7 +2570,7 @@
 							"text" : "After I get my kids organized and into bed",
 							"value" : "night",
 							"scoring" : {
-								"quiet" : true
+								"quiet" : 1
 							},
 							"order" : 2
 						},
@@ -2616,7 +2589,7 @@
 							"text" : "Only during off-peak hours",
 							"value" : "offpeak",
 							"scoring" : {
-								"quiet" : true
+								"quiet" : 1
 							},
 							"order" : 4
 						}
@@ -2645,7 +2618,7 @@
 							"image" : "/img/open-concept.png",
 							"value" : "yes",
 							"scoring" : {
-								 "quiet" : true
+								 "quiet" : 1
 							},
 							"order" : 1
 						},
@@ -2737,24 +2710,23 @@
 					"type" : "boxes-picture-2-radio",
 					"answers" : [
 						{ 
-							"thumbnail" : "../img/icon-style.png",
-							"thumbnail_current" : "../img/icon-style-current.png",
-							"text" : "Simple/Sleek",
-							"value" : "Simple/Sleek",
+							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
+							"text" : "Yes",
+							"value" : "yes",
 							"image" : "../img/dishwasher-Q5-sleek-modern.jpg",
 							"scoring" : {
-								"FID" : 1
+								"quiet" : 1
 							},
 							"order" : 1
 						},
 						{
-							"thumbnail" : "../img/icon-style.png",
-							"thumbnail_current" : "../img/icon-style-current.png",
-							"text" : "Traditional/Commercial",
-							"value" : "Traditional/Commercial",
+							"thumbnail" : "../img/icon-noise.png",
+							"thumbnail_current" : "../img/icon-noise-current.png",
+							"text" : "No",
+							"value" : "no",
 							"image" : "../img/dishwasher-Q5-traditional-commercial.jpg",
-							"scoring" : {
-								"console" : 1						
+							"scoring" : {					
 							},
 							"order" : 2
 						}
@@ -2793,7 +2765,7 @@
 							"value" : "Traditional/Commercial",
 							"image" : "../img/dishwasher-Q5-traditional-commercial.jpg",
 							"scoring" : {
-								"console" : 1						
+								"frontConsole" : 1						
 							},
 							"order" : 2
 						}
