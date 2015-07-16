@@ -76,6 +76,7 @@ angular.module('App')
 			"largeCapacity" : 0,
 			"largerCapacity" : 0,
 			"largestCapacity" : 0,
+			"width27" : 0,
 			"width30" : 0,
 			"width31" : 0,
 			"width32" : 0,
@@ -88,19 +89,23 @@ angular.module('App')
 			"height68" : 0,
 			"height69" : 0,
 			"height70" : 0,
-			"height71" : 0,
+			"height71" : 0
 
 		}
+
+		console.log("SCORE")
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
 			if (q.show.type != "slider-multiple") {
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
-					if (a.answer != false) {
+					if (a.answer !== false) {
 						// If it is true, simply apply scoring
-						if (a.answer == true) {
+						if (a.answer === true) {
+							console.log("is true", a.value, a.answer)
 							for (var scores in a.scoring) {
+								console.log("prescore",scores, a.scoring[scores])
 								var s = a.scoring[scores]
 								// scores is type, s is 'range'
 								if (s == null) {
@@ -110,8 +115,38 @@ angular.module('App')
 								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
 									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 								}
+								console.log("postscore",scores, a.scoring[scores])
 							}
+						} else if (isNaN(parseInt(a.answer)) == false) {
+							console.log("is a ranking", a.value, a.answer)
+							var rankscoring = {
+								"0" : 3,
+								"1" : 2,
+								"2" : 1
+							}
+							var getScore = function (ranking) {
+								if (ranking.toString() in rankscoring) {
+									return rankscoring[ranking.toString()]
+								}
+								return 0
+							}
+							for (var scores in a.scoring) {
+								console.log("prescore",scores, a.scoring[scores])
+								var s = a.scoring[scores]
+								var t = getScore(a.answer)
+								if (s == null) {
+									$rootScope.questionsData.currentScore[scores] = null
+								} else if (typeof s == "string") {
+									$rootScope.questionsData.currentScore[scores] = s * t
+								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
+									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * t)
+								}
+								console.log(a.value, s, t)
+								console.log("postscore",scores, a.scoring[scores])
+							}									
 						}
+					} else {
+						console.log("is false", a.value, a.answer)
 					}
 				}
 			} else {
@@ -124,6 +159,7 @@ angular.module('App')
 							if (a.answer == true) {
 								for (var scores in a.scoring) {
 									var s = a.scoring[scores]
+									console.log("prescore",scores, a.scoring[scores])
 									// scores is type, s is 'range'
 									if (s == null) {
 										$rootScope.questionsData.currentScore[scores] = null
@@ -132,9 +168,8 @@ angular.module('App')
 									} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
 										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
 									}
+									console.log("postscore",scores, a.scoring[scores])
 								}
-							} else if (isNaN(a.answer) == false) {
-								
 							}
 						}
 					}

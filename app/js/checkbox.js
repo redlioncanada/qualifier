@@ -5,10 +5,10 @@ angular.module('App')
   		$scope.toggle = function (answers, answer) {
   			answer.answer = !answer.answer
         $rootScope.controls.questionHasAnswer=false
-        console.log(answer.value, answer.value == "nothing")
         if (answer.value == "nothing" && answer.answer == true) {
+          $rootScope.controls.questionHasAnswer=true
     			for (var a in answers) {
-            if (answers[a].answer != "nothing") {
+            if (answers[a].value != "nothing") {
     				  answers[a].answer = false
             }
     			}
@@ -17,6 +17,14 @@ angular.module('App')
             if (answers[a].answer == true) {
               $rootScope.controls.questionHasAnswer=true
               break;
+            }
+          }
+          if ($rootScope.controls.questionHasAnswer==true) {
+            for (var a in answers) {
+              if (answers[a].value == "nothing") {
+                answers[a].answer = false
+                break;
+              }
             }
           }          
         }
