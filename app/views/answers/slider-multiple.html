@@ -5,7 +5,7 @@ https://www.npmjs.com/package/ng-slider -->
 <div ng-controller="SliderMultipleCtrl">
 	<div class="multi-slider-wrap">
 		
-		<div class="answers-main-content answer-slider">
+		<div class="answers-main-content answer-slider pointer-labels">
 			<div class="slider-top-labels">
 		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.text[0].answers">
 		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
@@ -29,7 +29,7 @@ https://www.npmjs.com/package/ng-slider -->
 
 	<div class="multi-slider-wrap">
 		
-		<div class="answers-main-content answer-slider bottom">
+		<div class="answers-main-content answer-slider bottom pointer-labels">
 		    <div class="slider-large-label-wrap" ng-if="!!questionsData.question.text[1].options.dimension_label">
 		        <span class="slider-large-label" ng-bind="questionsData.question.text[1].options.dimension_label"></span>
 		    </div>

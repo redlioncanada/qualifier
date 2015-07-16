@@ -149,7 +149,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			width: 853px;
 			height: 33px;
 			background: url('../img/slider-bg.png');
-
+			z-index: 10;
 			// width: 972px;
 			// height: 63px;
 			// background: url('../img/slider-full-bg.png');
@@ -320,6 +320,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			// width: 72px;
 			// height: 66px;
 
+			z-index: 50px;
 			width: 74px;
 			height: 69px;
 			background: url('../img/slider-pointer.png') !important;
@@ -421,30 +422,47 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 	}
 }
-.pointer-labels {
-	.jslider-value {
-		// top: -52px;
-		top: 0;
-		opacity: 1 !important;
-		background: rgba(76, 76, 76, 0.161) !important;
-		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
-		width: 63px;
-		height: 61px;
-		margin-top: -30px;
-		display: block;
-		span {
+
+.answer-slider.pointer-labels {
+	.jslider {
+		.jslider-value {
+			// top: -52px;
+			top: 0;
+			opacity: 1 !important;
+			background: rgba(76, 76, 76, 0.161) !important;
+			box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+			width: 63px;
+			height: 61px;
+			margin-top: -48px;
+			margin-left: -30px !important;
+			display: block;
+			padding-top: 10px;
+			text-align: center;
 			font-family: $AG-Bold-Cnd;
 			font-size: 20px;
 			text-transform: uppercase;
 			color: #999;
+			z-index: 5;
+			span {
+				font-family: $AG-Bold-Cnd;
+				font-size: 20px;
+				text-transform: uppercase;
+				color: #999;
+				opacity: 1;
+			}
 		}
-
 	}
-	.jslider-value {
-		
-	}
+	
 	.slider-bottom-labels {
 		margin-top: 40px;
+	}
+}
+.answer-slider.bottom.pointer-labels {
+	.jslider {
+		.jslider-value {
+			margin-top: 24px;
+			  padding-top: 38px;
+		}
 	}
 }
 
@@ -462,6 +480,9 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 .multi-slider-wrap {
 	.slider-bg-left {
 		left: -63px;
+	}
+	.answer-slider.bottom {
+		margin-top: 25px;
 	}
 }
 
@@ -565,7 +586,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 // Move the labels up further so that the pointer label fits underneath
 .pointer-labels .slider-top-labels {
 	.slider-answer-label-wrap {
-		top: -97px;
+		top: -122px;
 	}
 }
 
@@ -624,15 +645,13 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 }
 // Slider labels
 
-
-
-
 .slider-bg {
 	display: inline-block;
 	position: absolute;
 	width: 413px;
 	height: 63px;
 	top: -8px;
+	z-index: 5;
 	// top: 15px;
 	// bottom: -29px;
 }

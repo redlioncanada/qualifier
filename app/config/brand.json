@@ -1811,7 +1811,7 @@
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
-					    "dimension": "",
+					    "dimension": "\"",
 					    "dimension_label": "W",
 					    "scale": ["30","31","32","33","34","35","36"]       
 					},
@@ -1887,7 +1887,7 @@
 					    "from": 66,
 					    "to": 71,
 					    "step": 1,
-					    "dimension": "",
+					    "dimension": "\"",
 					    "dimension_label": "H",
 					    "scale": ["65.9","66","67","68","69","70","71"]       
 					},
