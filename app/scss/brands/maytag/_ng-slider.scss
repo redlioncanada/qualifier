@@ -125,8 +125,8 @@ div.people6 .jslider .jslider-value {
 		}
 		.jslider-bg {
 			position: relative; 
-			width: 861px;
-			height: 42px;
+			width: 853px;
+			height: 33px;
 			background: url('../img/slider-bg.png');
 
 			// width: 972px;
@@ -393,6 +393,145 @@ div.people6 .jslider .jslider-value {
 			background: url('../img/slider-pointer-bottom.png') !important;
 		}
 	}
+}
+
+.slider-answer-label-wrap {
+	display: none;
+}
+.slider-top-labels, .slider-bottom-labels {
+	display: block;
+	width: 100%;
+	position: relative;
+	.slider-answer-label-wrap {
+		// display: inline-block;
+		position: absolute;
+	}
+	& > :first-child {
+		display: inline-block;
+		// left: 0;
+		// left: 45px;
+		left: 58px;
+		// | LABEL
+		&:before {
+			content: '';
+			width: 1px;
+			background-color: #999;
+			height: 44px;
+			position: relative;
+			margin-right: 14px;
+			display: inline-block;
+			z-index: 9999;
+			// top: 17px;
+		}
+	}
+	// last
+	& > :last-child {
+		display: inline-block;
+		// right: 45px;
+		right: 58px;
+		&:before {
+			display: none;
+		}
+		// LABEL |
+		&:after {
+			content: '';
+			width: 1px;
+			background-color: #999;
+			height: 44px;
+			position: relative;
+			margin-left: 14px;
+			display: inline-block;
+			z-index: 9999;
+		}
+	}
+	// Middle one
+	//.slider-answer-label-wrap.3 {
+	// 	position: relative;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// 	display: inline-block;
+	// }
+}
+
+// Move the labels up further so that the pointer label fits underneath
+.pointer-labels .slider-top-labels {
+	.slider-answer-label-wrap {
+		top: -97px !important;
+	}
+}
+
+.slider-top-labels {
+	.slider-answer-label-wrap.2 {
+		top: -90px !important;
+	}
+	.slider-answer-label-wrap {
+		top: -70px !important;
+		&:after, &:before {
+			top: 29px;
+		}
+	}
+	
+}
+
+.slider-bottom-labels {
+	.slider-answer-label-wrap {
+		display: inline-block;
+		bottom: 20px;
+	}
+	& > :last-child {
+		top: 90px !important;
+	}
+}
+
+// answer.text
+.slider-answer-label {
+	display: inline-block;
+	font-family: $AG-Bold-Cnd;
+	font-size: 20px;
+	color: #999;
+	text-transform: uppercase;
+	// answer.text_more
+	&.more {
+		// display: block;
+		text-transform: none;
+		font-size: 15px;
+		line-height: 15px;
+	}
+}
+
+.slider-large-label-wrap {
+	// @include large-square-label-wrap;
+
+	width: 63px;
+	height: 61px;
+	display: inline-block;
+	position: absolute;
+	left: -61px;
+	top: 2px;
+	.slider-large-label {
+		@include large-square-label;
+	}
+}
+// Slider labels
+
+
+
+
+.slider-bg {
+	display: inline-block;
+	position: absolute;
+	width: 413px;
+	height: 63px;
+	top: 15px;
+	// bottom: -29px;
+}
+.slider-bg-left {
+	background: url('../img/answer-grey-bg-left.png') center center no-repeat;
+	left: 0;
+}
+.slider-bg-right {
+	background: url('../img/answer-grey-bg-right.png') center center no-repeat;
+	right: 0;
 }
 
 
