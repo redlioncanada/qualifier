@@ -3,9 +3,25 @@
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
 
-<div class="answers-main-content answer-slider people{{questionsData.question.show.answer}}" ng-controller="SliderCtrl" style="">
-	<!-- <div class="slider-label-wrap">
-		<span class="slider-label">#</span>
-	</div> -->
-	<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
+<div class="answers-main-content answer-slider people{{questionsData.question.show.answer}} {{questionsData.question.show.classes}}" ng-controller="SliderCtrl" style="">
+	
+	<div class="slider-large-label-wrap" ng-if="!!questionsData.question.show.options.dimension">
+        <span class="slider-large-label" ng-bind="questionsData.question.show.options.dimension"></span>
+    </div>
+
+    <div class="slider-bg slider-bg-left"></div>
+    <div class="slider-bg slider-bg-right"></div>
+
+    <div class="slider-wrap">
+
+		<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
+	</div>
+
+    <div class="slider-bottom-labels">
+        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in questionsData.question.show.answers">
+            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
+            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
+        </div>
+    </div>
+
 </div>
