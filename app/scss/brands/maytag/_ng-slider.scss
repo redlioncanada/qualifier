@@ -422,26 +422,26 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 .pointer-labels {
-	.jslider-label {
+	.jslider-value {
 		// top: -52px;
 		top: 0;
 		opacity: 1 !important;
-		// padding-top: 5px;
-		// font-family: $AG-Bold-Cnd;
-		// font-size: 20px;
-		// text-transform: uppercase;
-		background-color: rgba(76, 76, 76, 0.161);
+		background: rgba(76, 76, 76, 0.161) !important;
 		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
 		width: 63px;
 		height: 61px;
+		margin-top: -30px;
 		display: block;
+		span {
+			font-family: $AG-Bold-Cnd;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #999;
+		}
 
 	}
 	.jslider-value {
-		font-family: $AG-Bold-Cnd;
-		font-size: 20px;
-		text-transform: uppercase;
-		color: #999;
+		
 	}
 	.slider-bottom-labels {
 		margin-top: 40px;

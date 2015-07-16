@@ -2520,13 +2520,14 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "When it comes to washing dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for your family.",
 					"type" : "slider",
-					"classes" : "top-labels pointer-labels",
+					"classes" : "bottom-labels pointer-labels",
 					"answer" : 2,
 					"options" : {       
 					    "from": 0,
 					    "to": 50,
 					    "step": 10,
 					    "dimension": "",
+					    "dimension_label": "#",
 					    "scale": [
 							"0-10","11-20","21-30","31-40","41-50","I've lost count"
 					    ]       
@@ -2717,7 +2718,7 @@
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "Yes",
-							"image" : "/img/open-concept.png",
+							"image" : "/img/Dishwasher_Q5_MT-open-concept-yes.png",
 							"value" : "yes",
 							"scoring" : {
 								 "quiet" : 1
@@ -2728,7 +2729,7 @@
 							"thumbnail" : "../img/icon-noise.png",
 							"thumbnail_current" : "../img/icon-noise-current.png",
 							"text" : "No",
-							"image" : "/img/closed-concept.png",
+							"image" : "/img/Dishwasher_Q5_MT-open-concept-no.png",
 							"value" : "no",
 							"scoring" : {
 							},
