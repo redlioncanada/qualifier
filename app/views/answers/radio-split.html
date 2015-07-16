@@ -1,12 +1,12 @@
 <!-- Radio single-select answers with a blue bg -->
 <div class="answers-main-content regular-4-container" ng-controller="RadioCtrl">
-	<a href="" class="answer answer-option answer-box radio-split" ng-repeat="answer in questionsData.question.show.answers" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" class="answer answer-option answer-box radio-split {{questionsData.question.show.classes}}" ng-repeat="answer in questionsData.question.show.answers" ng-click="toggle(questionsData.question.show.answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap">
-			<span class="label-text" ng-bind="answer.text"></span>
+			<span class="label-text" ng-bind-html="answer.text"></span>
 		</div>
 		<div class="label-more-wrap" ng-class="{'long-answer': answer.text_more.length > 50}">
-			<span class="label-text-more" ng-bind="answer.text_more"></span>
+			<span class="label-text-more" ng-bind-html="answer.text_more"></span>
 		</div>
 	</a>
 </div>
