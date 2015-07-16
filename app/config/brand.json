@@ -2637,8 +2637,8 @@
 			]
 		},
 		"Dishwashers - Flexibility" : {
-			"next" : "Dishwashers - Style",
-			"previous" : "Dishwashers - Noise",
+			"next" : "Dishwashers - Space",
+			"previous" : "Dishwashers - Noise 2",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "../img/icon-organization-current.png",
 			"thumbnail_text" : "Organization",
