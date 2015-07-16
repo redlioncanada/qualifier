@@ -135,7 +135,8 @@
 			"thumbnail_current" : "../img/icon-size-current.png",
 			"text" : [
 				{
-					"question" : "We’ve got the perfect wall oven for your family. Just tell us how much space you have to fill.",
+					"question" : "We’ve got the perfect wall oven for your family.",
+					"question_more" : "Just tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
@@ -147,6 +148,7 @@
 						"to" : 4,      
 					    "step": 1,
 					    "dimension": " \"",
+					    "dimension_label" : "W",
 					    "scale": ["27","28","29","30","No restriction"]       
 					},
 					"answers" : {
@@ -202,6 +204,7 @@
 						"to" : 3,     
 					    "step": 1,
 					    "dimension": "",
+					    "dimension_label": "H",
 					    "scale": ["Single", "Combo", "Double", "No restrictions"]       
 					},
 					"answers" : {
@@ -1143,6 +1146,7 @@
 					    "to": 6,
 					    "step": 1,
 					    "dimension": "",
+					    "dimension_label": "#",
 					    "scale": ["1","2","3","4","5","6+"]       
 					},
 					"answers" : {
@@ -1805,7 +1809,8 @@
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
-					    "dimension": "W",
+					    "dimension": "",
+					    "dimension_label": "W",
 					    "scale": ["30","31","32","33","34","35","36"]       
 					},
 					"answers" : {
@@ -1880,7 +1885,8 @@
 					    "from": 66,
 					    "to": 71,
 					    "step": 1,
-					    "dimension": "H",
+					    "dimension": "",
+					    "dimension_label": "H",
 					    "scale": ["65.9","66","67","68","69","70","71"]       
 					},
 					"answers" : {
@@ -1994,7 +2000,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 3,
 							"text" : "My family",
-							"text_more" : "From pasta night to meatloaf <br>Sundays, we’re a hungry bunch",
+							"text_more" : "From pasta night to meatloaf<br>Sundays, we’re a hungry bunch",
 							"scoring" : {
 								"powerCold" : 1
 							}
@@ -2004,7 +2010,7 @@
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 4,
 							"text" : "My large family",
-							"text_more" : "The cooking never ends, at least<br> we have leftovers for packed lunches",
+							"text_more" : "The cooking never ends, at least<br>we have leftovers for packed lunches",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2013,8 +2019,8 @@
 							"thumbnail" : "../img/icon-capacity.png",
 							"thumbnail_current" : "../img/icon-capacity-current.png",
 							"value" : 5,
-							"text" : "My guests when <br>entertaining",
-							"text_more" : "I might as well open a birthday<br> party catering serviceg",
+							"text" : "My guests when<br>entertaining",
+							"text_more" : "I might as well open a birthday<br>party catering serviceg",
 							"scoring" : {
 								"powerCold" : 2
 							}
@@ -2319,7 +2325,7 @@
 					"explanation_title" : "Why Are You Asking Me About Style?",
 					"explanation" : "Since some fridges are built deeper than typical counter depth, we need to know how important having a fridge that's in-line with your counters is to your purchasing decision.",
 					"type" : "radio-split",
-					"classes" : "three",
+					"classes" : "three form-function",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",

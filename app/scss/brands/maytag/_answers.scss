@@ -134,6 +134,12 @@
 			left: 24px;
 		}
 	}
+	&.form-function {
+		float: left;
+		.label-more-wrap {
+			top: 27px
+		}
+	}
 	// Fancy split bg
 	&.radio-split, &.checkbox-split {
 		width: 532px;

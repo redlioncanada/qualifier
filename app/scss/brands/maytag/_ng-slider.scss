@@ -356,7 +356,7 @@ div.people6 .jslider .jslider-value {
 		 //    background-size: 141px 47px;
 		 //    width: 141px;
 			// height: 47px;
-			background: transparent !important;
+			// background: transparent !important;
 			padding-top: 50px;
 			padding-left: 10px;
 			margin-top: -80px;
@@ -408,6 +408,36 @@ div.people6 .jslider .jslider-value {
 		}
 	}
 }
+.pointer-labels {
+	.jslider-label {
+		top: -52px;
+		opacity: 1 !important;
+		// padding-top: 5px;
+		// font-family: $AG-Bold-Cnd;
+		// font-size: 20px;
+		// text-transform: uppercase;
+		background-color: rgba(76, 76, 76, 0.161);
+		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+		width: 63px;
+		height: 61px;
+	}
+	.jslider-value {
+		font-family: $AG-Bold-Cnd;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #999;
+	}
+	.slider-bottom-labels {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
 .slider-wrap {
 	width: 853px;
 	position: relative;
@@ -516,7 +546,7 @@ div.people6 .jslider .jslider-value {
 
 .slider-bottom-labels {
 	.slider-answer-label-wrap {
-		display: inline-block;
+		// display: inline-block; // only for special cases
 		bottom: 20px;
 	}
 	& > :first-child, & > :last-child {
@@ -542,14 +572,14 @@ div.people6 .jslider .jslider-value {
 }
 
 .slider-large-label-wrap {
-	// @include large-square-label-wrap;
+	@include large-square-label-wrap;
 
 	width: 63px;
 	height: 61px;
 	display: inline-block;
 	position: absolute;
-	left: -61px;
-	top: 2px;
+	left: -62px;
+	top: -7px;
 	.slider-large-label {
 		@include large-square-label;
 	}
