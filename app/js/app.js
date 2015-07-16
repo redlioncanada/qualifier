@@ -169,6 +169,7 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                     }
                     // also fake gas, electric for laundry
                     if ($rootScope.appliances[key].appliance == "Laundry") {
+                        $rootScope.appliances[key].capacity = Math.min($rootScope.appliances[key].washerCapacity,$rootScope.appliances[key].dryerCapacity)
                         if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
                           $rootScope.appliances[key].largestCapacity = true
                         } 

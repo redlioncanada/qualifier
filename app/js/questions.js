@@ -100,9 +100,10 @@ angular.module('App')
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
-					if (a.answer != false) {
+					if (a.answer !== false) {
 						// If it is true, simply apply scoring
-						if (a.answer == true) {
+						if (a.answer === true) {
+							console.log("is true", a.value, a.answer)
 							for (var scores in a.scoring) {
 								console.log("prescore",scores, a.scoring[scores])
 								var s = a.scoring[scores]
@@ -116,20 +117,36 @@ angular.module('App')
 								}
 								console.log("postscore",scores, a.scoring[scores])
 							}
-						} else if (isNaN(a.answer) == false) {
+						} else if (isNaN(parseInt(a.answer)) == false) {
+							console.log("is a ranking", a.value, a.answer)
+							var rankscoring = {
+								"0" : 3,
+								"1" : 2,
+								"2" : 1
+							}
+							var getScore = function (ranking) {
+								if (ranking.toString() in rankscoring) {
+									return rankscoring[ranking.toString()]
+								}
+								return 0
+							}
 							for (var scores in a.scoring) {
 								console.log("prescore",scores, a.scoring[scores])
 								var s = a.scoring[scores]
+								var t = getScore(a.answer)
 								if (s == null) {
 									$rootScope.questionsData.currentScore[scores] = null
 								} else if (typeof s == "string") {
-									$rootScope.questionsData.currentScore[scores] = s * a.answer
+									$rootScope.questionsData.currentScore[scores] = s * t
 								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * a.answer)
+									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * t)
 								}
+								console.log(a.value, s, t)
 								console.log("postscore",scores, a.scoring[scores])
 							}									
 						}
+					} else {
+						console.log("is false", a.value, a.answer)
 					}
 				}
 			} else {
