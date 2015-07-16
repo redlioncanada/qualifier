@@ -144,21 +144,14 @@
 					"classes" : "",
 					"answer" : 1,
 					"options" : { 
-						"from" : 0,
-						"to" : 4,      
+						"from" : 27,
+						"to" : 30,      
 					    "step": 1,
 					    "dimension": " \"",
 					    "dimension_label" : "W",
-					    "scale": ["27","28","29","30","No restriction"]       
+					    "scale": ["27","28","29","30"]       
 					},
 					"answers" : {
-						"0" : {
-							"thumbnail" : "../img/icon-size.png",
-							"thumbnail_current" : "../img/icon-size-current.png",
-							"value" : 0,
-							"scoring" : {
-							}
-						},
 						"27" : {
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
@@ -191,6 +184,7 @@
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"value" : 4,
 							"text" : "30\"",
+							"text_more" : "No Restriction",
 							"scoring" : {
 								"width30" : 1
 							}
@@ -200,8 +194,8 @@
 				{
 					"answer" : 1,
 					"options" : {  
-						"from" : 0,
-						"to" : 3,     
+						"from" : 1,
+						"to" : 4,     
 					    "step": 1,
 					    "dimension": "",
 					    "dimension_label": "H",
