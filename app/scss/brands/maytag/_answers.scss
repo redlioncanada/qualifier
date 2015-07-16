@@ -76,15 +76,16 @@
 .label-text {
 	font-family: $AG-Bold-Cnd;
 	font-size: 20px;
-	// color: #575757;
-	color: #3E3E3E; // 10% darker
+	color: #000000;
 	position: relative;
 }
 
-// .answer-option {
-// 	margin-left: 9px;
-// 	margin-right: 9px;
+// need to fix this for that really long answer...
+// &.long-answer .label-text {
+// 	font-size: 17px;
 // }
+
+
 
 .answer-box {
 	margin-left: 9px;
@@ -262,30 +263,30 @@
 	// Single select with icons - 2 answers
 	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
-		width: 174px;
-		height: 207px;
+		width: 172px;
+		height: 205px;
 		background: url('../img/boxes-icon-bg-new.png');
 		display: inline-block;
 		@include boxshadow;
 		.icon-wrap {
 			img {
 				position: relative;
-				top: 25px;
+				top: 12px;
 			}
 		}
 		.select-icon {
-			top: 170px;
-			left: 19px;
+			top: 161px;
+			left: 15px;
 		}
 		.label-wrap {
 			position: absolute;
-			bottom: 16px;
-			left: 66px;
+			bottom: 14px;
+			left: 60px;
 		}
 
 		img.hover {
-			top: 25px;
-			left: 25px;
+			top: 12px;
+			left: 20px;
 			position: absolute;
 			opacity: 0;
 		}
