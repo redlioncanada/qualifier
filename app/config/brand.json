@@ -1521,7 +1521,7 @@
 					    "to": 2,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Reducing time to prevent over-drying", "Nothing", "Adding more time, every time"]       
+					    "scale": ["Adding more time, every time", "Nothing", "Reducing time to prevent over-drying"]       
 					},
 					"answers" : {
 						"0" : {
@@ -2182,8 +2182,8 @@
 							"thumbnail_current" : "../img/icon-ice-current.png",
 							"text" : "Nothing",
 							"value" : "nothing",
-							"image" : "../img/icon-thumb-cooler.png",
-							"hover" : "../img/icon-thumb-cooler-active.png",
+							"image" : "../img/icon-thumb-nothing.png",
+							"hover" : "../img/icon-thumb-nothing-active.png",
 							"scoring" : {							
 							},
 							"order" : 6
@@ -2264,6 +2264,7 @@
 					"explanation_title" : "Why Are You Asking Me About Style?",
 					"explanation" : "Since some fridges are built deeper than typical counter depth, we need to know how important having a fridge that's in-line with your counters is to your purchasing decision.",
 					"type" : "radio-split",
+					"classes" : "three",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-style.png",
