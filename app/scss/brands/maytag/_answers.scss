@@ -46,9 +46,9 @@
 		width: 398px;
 
 	}
-	&.boxes-icon-5-container {
-		width: 995px;
-	}
+	// &.boxes-icon-5-container {
+	// 	width: 995px;
+	// }
 
 
 }
@@ -262,9 +262,9 @@
 	// Single select with icons - 2 answers
 	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
-		width: 181px;
-		height: 215px;
-		background: url('../img/boxes-icon-bg.png');
+		width: 174px;
+		height: 207px;
+		background: url('../img/boxes-icon-bg-new.png');
 		display: inline-block;
 		@include boxshadow;
 		.icon-wrap {
