@@ -15,4 +15,12 @@ angular.module('App')
     		}
       }
   	}
+    $scope.setLast = function () {
+      for (var t in $rootScope.questionsData.question.text) {      
+        for (var i in $rootScope.questionsData.question.text[t].answers) {
+          $rootScope.questionsData.question.text[t].last = $rootScope.questionsData.question.text[t].answers[i].value
+        }
+      }
+    }
+
 });

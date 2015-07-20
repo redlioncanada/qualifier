@@ -20,7 +20,7 @@ https://www.npmjs.com/package/ng-slider -->
     <div class="slider-bg slider-bg-left"></div>
     <div class="slider-bg slider-bg-right"></div>
 
-    <div class="slider-wrap">
+    <div class="slider-wrap" ng-init="setLast()" ng-class="{'last-answer-active' : questionsData.question.show.answer == questionsData.question.show.last}">
 		<input ng-model="questionsData.question.show.answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="questionsData.question.show.options" />
 	</div>
 
