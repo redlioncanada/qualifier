@@ -92,13 +92,18 @@
 				{
 					"question" : "Which product would you like to explore first?",
 					"sub_question" : "Select one",
-					"type" : "categories",
+					"type" : "categories-carousel",
+
 					"answers" : [
 						{
 							"text" : "Free Standing Ranges",
 							"value" : "free stand range",
 							"classes" : "sub-category ranges",
-							"image" : "img/cat-cooking-sub-free-range-1-electric.jpg",
+							"images" : [
+								"img/cat-cooking-sub-free-range-1-electric.jpg",
+								"img/cat-cooking-sub-free-range-2-gas.jpg",
+								"img/cat-cooking-sub-free-range-3-gas-double.jpg"
+							],
 							"thumbnail" : "img/cat-cooking-sub-free-range-1-electric.jpg",
 							"thumbnail_current" : "img/cat-cooking-sub-free-range-1-electric.jpg",
 							"thumbnail_text" : "Range",
@@ -112,7 +117,11 @@
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
 							"classes" : "sub-category wallovens",
-							"image" : "img/walloven-single.jpg",
+							"images" : [
+								"img/walloven-single.jpg",
+								"img/walloven-double.jpg",
+								"img/walloven-half-double.jpg"
+							],
 							"thumbnail" : "img/walloven-single.jpg",
 							"thumbnail_current" : "img/walloven-single.jpg",
 							"thumbnail_text" : "Wall Oven",

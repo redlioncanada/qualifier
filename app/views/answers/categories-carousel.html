@@ -1,0 +1,17 @@
+<!-- Initial Categories and Subcategores with Large Custom Pictures -->
+<div class="answers-main-content" ng-controller="RadioCtrl">
+
+	<a href="" ng-repeat="answer in questionsData.question.show.answers" class="answer answer-option answer-box categories {{answer.classes}} col-md-{{boxWidth}}" ng-click="toggle(questionsData.question.show.answers, answer)" ng-init="answer.activeImage=answer.image" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<carousel interval="5000" style="width: 200px; height: 200px">
+			<slide ng-repeat="image in answer.images">
+				<img ng-src="{{image}}" style="margin:auto;">
+				<div class="carousel-caption">
+					<h4>{{answer.text}}</h4>
+				</div>	
+			</slide>
+		</carousel>
+		<img class="hover" ng-if="!!answer.hover" ng-src="{{answer.hover}}" />
+
+		<div class="category-name" ng-bind="answer.text"></div>
+	</a>
+</div>
