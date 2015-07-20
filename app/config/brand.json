@@ -37,10 +37,10 @@
 							"text" : "Cooking",
 							"value" : "Stove",
 							"classes" : "category cooking",
-							"image" : "img/cat-cooking.jpg",
+							"image" : "img/walloven-double.jpg",
 							"hover" : "img/maytag-man-cooking-hover.png",
-							"thumbnail" : "img/cat-cooking.jpg",
-							"thumbnail_current" : "img/cat-cooking.jpg",
+							"thumbnail" : "img/walloven-double.jpg",
+							"thumbnail_current" : "img/walloven-double.jpg",
 							"thumbnail_text" : "Cooking",
 							"scoring" : {
 								"appliance" : "Cooking"
@@ -98,9 +98,9 @@
 							"text" : "Free Standing Ranges",
 							"value" : "free stand range",
 							"classes" : "sub-category ranges",
-							"image" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail" : "img/cat-cooking-sub-free-range.jpg",
-							"thumbnail_current" : "img/cat-cooking-sub-free-range.jpg",
+							"image" : "img/cat-cooking-sub-free-range-1-electric.jpg",
+							"thumbnail" : "img/cat-cooking-sub-free-range-1-electric.jpg",
+							"thumbnail_current" : "img/cat-cooking-sub-free-range-1-electric.jpg",
 							"thumbnail_text" : "Range",
 							"scoring" : {
 								"type" : "Ranges"
@@ -112,9 +112,9 @@
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
 							"classes" : "sub-category wallovens",
-							"image" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail" : "img/cat-cooking-sub-wall-oven.jpg",
-							"thumbnail_current" : "img/cat-cooking-sub-wall-oven.jpg",
+							"image" : "img/walloven-single.jpg",
+							"thumbnail" : "img/walloven-single.jpg",
+							"thumbnail_current" : "img/walloven-single.jpg",
 							"thumbnail_text" : "Wall Oven",
 							"scoring" : {
 								"type" : "Ovens"
@@ -444,7 +444,7 @@
 					"explanation_title" : "Why Are You Asking Me About My Kitchen?",
 					"explanation" : "How you use your kitchen will help us determine what kind of features you need to keep up with your life.",
 					"type" : "checkbox",
-					"classes" : "consider-kitchen",
+					"classes" : "longer-label-text",
 					"answers" : [
 						{
 							"thumbnail" : "../img/icon-lifestyle.png",
@@ -895,6 +895,7 @@
 					"explanation_title" : "Why Are You Asking Me About My Kitchen?",
 					"explanation" : "How you use your kitchen will help us determine what kind of features you need to keep up with your life.",
 					"type" : "checkbox",
+					"classes" : "longer-label-text",
 					"answers" : [
 						{
 							"text" : "The busy control room of my home where we get the kids ready for school, lunches made for everyone, soccer and so much more",
@@ -1812,7 +1813,7 @@
 					"answers" : {
 						"30" : {
 							"value" : 30,
-							"text" : "30\"",
+							"text" : "30",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1821,7 +1822,7 @@
 						},
 						"31" : {
 							"value" : 31,
-							"text" : "31\"",
+							"text" : "31",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1830,7 +1831,7 @@
 						},
 						"32" : {
 							"value" : 32,
-							"text" : "32\"",
+							"text" : "32",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1839,7 +1840,7 @@
 						},
 						"33" : {
 							"value" : 33,
-							"text" : "33\"",
+							"text" : "33",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1848,7 +1849,7 @@
 						},
 						"34" : {
 							"value" : 34,
-							"text" : "34\"",
+							"text" : "34",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1857,7 +1858,7 @@
 						},
 						"35" : {
 							"value" : 35,
-							"text" : "35\"",
+							"text" : "35",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1866,7 +1867,7 @@
 						},
 						"36" : {
 							"value" : 36,
-							"text" : "36\"",
+							"text" : "36",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1888,7 +1889,7 @@
 					"answers" : {
 						"66" : {
 							"value" : 66,
-							"text" : "66\"",
+							"text" : "66",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1897,7 +1898,7 @@
 						},
 						"67" : {
 							"value" : 67,
-							"text" : "67\"",
+							"text" : "67",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1906,7 +1907,7 @@
 						},
 						"68" : {
 							"value" : 68,
-							"text" : "68\"",
+							"text" : "68",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1915,7 +1916,7 @@
 						},
 						"69" : {
 							"value" : 69,
-							"text" : "69\"",
+							"text" : "69",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1924,7 +1925,7 @@
 						},
 						"70" : {
 							"value" : 70,
-							"text" : "70\"",
+							"text" : "70",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1933,7 +1934,7 @@
 						},
 						"71" : {
 							"value" : 71,
-							"text" : "71\"",
+							"text" : "71",
 							"thumbnail" : "../img/icon-size.png",
 							"thumbnail_current" : "../img/icon-size-current.png",
 							"scoring" : {
@@ -1957,7 +1958,7 @@
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
 					"explanation" : "We want to get a better idea of how you use your fridge and what you put in it so we can find you the one that fits your lifestyle.",
 					"type" : "slider",
-					"classes" : "pointer-labels-people bottom-labels",
+					"classes" : "pointer-labels-people bottom-labels bottom-labels-detailed",
 					"answer" : 1,
 					"options" : {       
 					    "from": 1,

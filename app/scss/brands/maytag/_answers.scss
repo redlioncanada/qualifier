@@ -86,7 +86,7 @@
 // }
 
 // special cases........
-.consider-kitchen {
+.longer-label-text {
 	.label-text {
 		font-size: 17px;
 	}
@@ -456,6 +456,9 @@
 	    -moz-user-select: none;
 	    -ms-user-select: none;
 	    user-select: none;
+	}
+	ul {
+		list-style: none;
 	}
 	.rank-numbers-list {
 		display: inline-block;
