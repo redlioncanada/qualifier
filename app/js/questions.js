@@ -200,7 +200,7 @@ angular.module('App')
 	}
 
 	$scope.show = function () {
-	  	if ($rootScope.questionsData.question.text.length > 1) {
+	  	if ($rootScope.questionsData.question.text.length > 1 && $rootScope.questionsData.question.text[0].type == "slider-multiple") {
 			var ref = Math.floor((Math.random() * $rootScope.questionsData.question.text.length))			
 		} else {
 			var ref = 0;
