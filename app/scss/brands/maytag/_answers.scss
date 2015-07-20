@@ -63,7 +63,15 @@
 	left: 24px;
 }
 
+
+
 .selected {
+	// transform: translateY(4px);
+	transform: translate(1px, 3px);
+  	box-shadow: none !important;
+  	.img-wrap, .select-label-wrap { // for boxes-picture
+		box-shadow: none !important;
+  	}
 	.select-icon {
 		background: url('../img/icon-select-selected.png');
 	}
@@ -109,6 +117,7 @@
 
 
 .answer-box {
+	transition: all 0.3s ease;
 	margin-left: 9px;
 	margin-right: 9px;
 	position: relative;
@@ -240,17 +249,26 @@
 	
 
 	&.picture-2, &.picture-3 {
-		width: 367px;
-		height: 229px;
-		background: url('../img/boxes-picture-bg.png');
 		display: inline-block;
-		// @include boxshadow;
 		.img-wrap {
-			margin-top: 4px;
+			display: block;
+			width: 366px;
+			height: 173px;
+			background: url('../img/boxes-picture-bg-top.png');
+			@include boxshadow;
 			img {
+				margin-top: 4px;
 				// position: relative;
 				// top: 25px;
 			}
+		}
+		.select-label-wrap {
+			margin-top: 8px;
+			display: block;
+			width: 366px;
+			height: 49px;
+			background: url('../img/boxes-picture-bg-bottom.png');
+			@include boxshadow;
 		}
 		.select-icon {
 			top: 188px;
@@ -267,17 +285,26 @@
 		float: left;
 	}
 	&.picture-4 {
-		width: 277px;
-		height: 229px;
-		background: url('../img/boxes-picture-4-bg.png');
 		display: inline-block;
-		// @include boxshadow;
 		.img-wrap {
-			margin-top: 4px;
+			display: block;
+			width: 277px;
+			height: 173px;
+			background: url('../img/boxes-picture-4-bg-top.png');
+			@include boxshadow;
 			img {
+				margin-top: 4px;
 				// position: relative;
 				// top: 25px;
 			}
+		}
+		.select-label-wrap {
+			margin-top: 8px;
+			display: block;
+			width: 277px;
+			height: 50px;
+			background: url('../img/boxes-picture-4-bg-bottom.png');
+			@include boxshadow;
 		}
 		.select-icon {
 			top: 188px;
