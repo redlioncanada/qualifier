@@ -157,6 +157,9 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
           angular.forEach( $rootScope.brandData.questions, function (item, key) { 
               $rootScope.brandData.questions[key].name = key
           })
+          var manifest = [
+            "img/slider-pointer.png"
+          ];
 
           $resource("http://mymaytag.wpc-stage.com/api_test/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
