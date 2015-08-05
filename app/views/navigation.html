@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="objSize(questionsData.scoringQuestions)!=0 && !!questionsData.question">
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!oneAnswer && !!questionsData.question">
 			<div class="btn btn-default" ng-class="{'pulse' : !!controls.questionHasAnswer}">
 				<span class="arrow-next">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">
