@@ -667,6 +667,12 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	right: 0;
 }
 
+.last-answer-active {
+	.jslider-value {
+		right: -32px !important;
+	}
+}
+
 
 // Results Page
 #results {

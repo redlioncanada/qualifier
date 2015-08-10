@@ -8,8 +8,6 @@
 
 
 
-
-
 .answers-main-content {
 	// @include
 	// margin-right: 15px;
@@ -521,5 +519,42 @@
 	@include large-square-label-wrap;
 	.slider-label {
 		@include large-square-label;
+	}
+}
+
+.carousel {
+	.carousel-indicators {
+		display: none !important;
+	}
+	.carousel-control {
+		.right, .left {
+			background: none !important;
+		}
+	}
+	.carousel-control {
+		span {
+			background: #172F57;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+
+		}
+	}
+	.right .carousel-control {
+		span {
+			&:before {
+
+			}
+		}
+	}
+	.left .carousel-control {
+		span {
+			&:before {
+				
+			}
+		}
+	}
+	.carousel-caption {
+		bottom: -50px;
 	}
 }

@@ -93,7 +93,6 @@
 					"question" : "Which product would you like to explore first?",
 					"sub_question" : "Select one",
 					"type" : "categories-carousel",
-
 					"answers" : [
 						{
 							"text" : "Free Standing Ranges",
