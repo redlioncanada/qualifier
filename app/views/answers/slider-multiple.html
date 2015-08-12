@@ -13,12 +13,12 @@ https://www.npmjs.com/package/ng-slider -->
 		        </div>
 		    </div>
 			    
-		    <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
+		    <!-- <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
 		        <span class="slider-large-label" ng-bind="qs.options.dimension_label"></span>
-		    </div>
+		    </div> -->
 
-		    <div class="slider-bg slider-bg-left"></div>
-		    <div class="slider-bg slider-bg-right"></div>
+		   <!--  <div class="slider-bg slider-bg-left"></div>
+		    <div class="slider-bg slider-bg-right"></div> -->
 
 		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}">
 				<input ng-model="qs.text[0].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[0].options" />
@@ -30,12 +30,12 @@ https://www.npmjs.com/package/ng-slider -->
 	<div class="multi-slider-wrap">
 		
 		<div class="answers-main-content answer-slider bottom pointer-labels">
-		    <div class="slider-large-label-wrap" ng-if="!!qs.text[1].options.dimension_label">
+		    <!-- <div class="slider-large-label-wrap" ng-if="!!qs.text[1].options.dimension_label">
 		        <span class="slider-large-label" ng-bind="qs.text[1].options.dimension_label"></span>
-		    </div>
+		    </div> -->
 
-		    <div class="slider-bg slider-bg-left"></div>
-		    <div class="slider-bg slider-bg-right"></div>
+		    <!-- <div class="slider-bg slider-bg-left"></div>
+		    <div class="slider-bg slider-bg-right"></div> -->
 
 		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[1].answer == qs.text[1].last}">
 		    	<input ng-model="qs.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[1].options" />

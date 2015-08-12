@@ -249,3 +249,26 @@
 	// 	}
 	// }
 }
+
+.bottom-nav-intructions {
+	position: relative;
+	display: block;
+	// width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	.instructions {
+		color: #a7a7a7;
+		font-size: 10px;
+		text-align: center;
+		padding-bottom: 3px;
+	}
+}
+
+.bottom-nav-inner {
+	display: block;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	border-top: 1px solid #a7a7a7;
+}

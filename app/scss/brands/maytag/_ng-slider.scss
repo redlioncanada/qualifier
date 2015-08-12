@@ -534,6 +534,12 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	display: block;
 	width: 100%;
 	position: relative;
+
+
+	// All labels are bottom labels now........!~!!!!
+	top: 125px;
+
+
 	.slider-answer-label-wrap {
 		// display: inline-block;
 		position: absolute;
@@ -645,6 +651,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	.slider-large-label {
 		@include large-square-label;
 	}
+
+	display: none;
 }
 // Slider labels
 
@@ -661,10 +669,12 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 .slider-bg-left {
 	background: url('../img/answer-grey-bg-left.png') center center no-repeat;
 	left: 0;
+	display: none;
 }
 .slider-bg-right {
 	background: url('../img/answer-grey-bg-right.png') center center no-repeat;
 	right: 0;
+	display: none;
 }
 
 .last-answer-active {
