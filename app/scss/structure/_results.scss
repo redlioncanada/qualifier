@@ -2,19 +2,18 @@
 	padding-top: 25px;
 	.results-top {
 		h1 {
-			display: inline-block;
+			// display: inline-block;
 			margin-top: 0;
-			margin-bottom: 0;
-			text-align: left;
+			margin-bottom: 6px;
+			text-align: center;
 			text-transform: uppercase;
-			float: left;
+			// float: left;
 		}
 		.results-adjust-desc {
-			display: inline-block;
+			// display: inline-block;
 			margin-left: 10px;
-			text-align: left;
+			text-align: center;
 			text-transform: uppercase;
-			float: left;
 			position: relative;
 			top: 9px;
 		}
@@ -24,10 +23,10 @@
 			// margin-left: 100px;
 		}
 		.price-slider-wrap {
-			display: inline-block;
+			display: block;
 			margin-left: 100px;
 			height: 120px;
-			float: left;
+			// float: left;
 		}
 	}
 	.results-top-right-btns {
@@ -122,14 +121,14 @@
 			}
 		}
 	}
-	.product-details-top {
+	.product-price-sku-wrap {
 		// @include make-row;
 		width: 100%;
 		float: left;
 		display: block;
 		padding-bottom: 20px;
 	}
-	.product-price,  {
+	.product-price {
 		@include make-md-column(4);
 		padding-left: 0;
 		padding-right: 0;
