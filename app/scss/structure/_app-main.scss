@@ -67,6 +67,10 @@
 	display: block;
     position: relative;
 }
+.bottom-nav-wrap {
+	max-width: 800px;
+    display: inline-block;
+}
 
 .app-content-main-bottom {
 	@include make-row;
