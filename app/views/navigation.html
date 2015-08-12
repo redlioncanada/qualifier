@@ -24,6 +24,8 @@
 				<span class="instructions">Click on an icon to change your answer</span>
 			</div>
 			<div class="bottom-nav-inner">
+
+			<!-- Previously answered question is icon-name.png, current question is icon-name-current.png, unanwered question icon is icon-name-next.png -->
 				<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
 			    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
 				      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || a.thumbnail }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
