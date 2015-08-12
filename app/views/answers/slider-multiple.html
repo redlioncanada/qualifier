@@ -6,12 +6,7 @@ https://www.npmjs.com/package/ng-slider -->
 	<div class="multi-slider-wrap" ng-init="setLast()" >
 		
 		<div class="answers-main-content answer-slider pointer-labels">
-			<div class="slider-top-labels">
-		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in qs.text[0].answers">
-		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
-		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
-		        </div>
-		    </div>
+			
 			    
 		    <!-- <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
 		        <span class="slider-large-label" ng-bind="qs.options.dimension_label"></span>
@@ -23,6 +18,13 @@ https://www.npmjs.com/package/ng-slider -->
 		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}">
 				<input ng-model="qs.text[0].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[0].options" />
 			</div>
+
+			<!-- <div class="slider-top-labels">
+		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in qs.text[0].answers">
+		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
+		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
+		        </div>
+		    </div> -->
 
 		</div>
 	</div>
@@ -41,12 +43,12 @@ https://www.npmjs.com/package/ng-slider -->
 		    	<input ng-model="qs.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[1].options" />
 		    </div>
 
-		    <div class="slider-bottom-labels">
+		    <!-- <div class="slider-bottom-labels">
 		        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in qs.text[1].answers">
 		            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
 		            <span class="slider-answer-label more" ng-bind-html="labeltext.text_more"></span>
 		        </div>
-		    </div>
+		    </div> -->
 
 		</div>
 
