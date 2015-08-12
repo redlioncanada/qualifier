@@ -1,0 +1,14 @@
+<!-- 3 Picture box answers -->
+<div class="answers-main-content picture-3-container" ng-controller="RadioCtrl">
+	<a href="" ng-repeat="answer in qs.text[0].answers" class="answer answer-option answer-box picture-3 {{answer.classes}} col-md-{{boxWidth}}" ng-click="toggle(qs.text[0].answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+		<div class="img-wrap">
+			<img ng-src="{{answer.image}}" />
+		</div>
+		<div class="select-label-wrap">
+			<div class="select-icon"></div>
+			<div class="label-wrap">
+				<span class="label-text" ng-bind-html="answer.text"></span>
+			</div>
+		</div>
+	</a>
+</div>

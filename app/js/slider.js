@@ -3,7 +3,6 @@
 angular.module('App')
   .controller('SliderCtrl', function ($scope, $rootScope) {
   	// jslider-value
-    $rootScope.questionsData.question.oneAnswer = false;
   	$scope.setAnswer = function () {
   		for (var i in $rootScope.questionsData.question.show.answers) {
   			if ($rootScope.questionsData.question.show.answers[i].value == $rootScope.questionsData.question.show.answer) {

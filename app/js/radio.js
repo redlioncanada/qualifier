@@ -2,7 +2,6 @@
 console.log("loaded")
 angular.module('App')
   .controller('RadioCtrl', function ($scope, $rootScope) {
-      $rootScope.questionsData.question.oneAnswer = true;
   		$scope.toggle = function (answers, answer) {
         if (answer.value == "nothing") {
           $rootScope.controls.questionHasAnswer=false

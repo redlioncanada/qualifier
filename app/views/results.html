@@ -36,9 +36,10 @@
 						<h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion"></h3>
 						<h2><span class="product-name" ng-bind-html="a.name"></span> </h2>
 						<div class="product-img-wrap">
-							<img ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
+							<img ng-if="a.appliance!='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
+							<img ng-if="a.appliance=='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/{{a.image}}" style="width: 220px">
 						</div>
-						<div class="product-colour-picker-wrap">
+						<div class="product-colour-picker-wrap" ng-if="a.appliance!='Laundry'">
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div style="margin-left: auto; margin-right: auto">
 								<span ng-repeat="colour in a.colours">
@@ -54,7 +55,7 @@
 									</div>
 									<div class="product-sku">
 										<span bo-text="brandData.apptext.model"></span>
-										<span>{{a.sku}}</span>
+										<span>{{a.picker.sku}}</span>
 									</div>
 								</div>
 

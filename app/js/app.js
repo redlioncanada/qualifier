@@ -223,6 +223,7 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
                         //$rootScope.appliances[key].colours[i].image = setColourURL($rootScope.appliances[key].appliance,$rootScope.appliances[key].image, $rootScope.appliances[key].colours[i].colourCode);
                         $rootScope.appliances[key].colours[i].prices = {}
                         $rootScope.appliances[key].colours[i].prices.CAD = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
+                        $rootScope.appliances[key].colours[i].sku = $rootScope.appliances[key].colours[i].washerSku
                       }
                       $rootScope.appliances[key].price = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
                     } else {

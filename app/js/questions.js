@@ -237,7 +237,7 @@ angular.module('App')
 	  				})  					
   				}
   			}
-  			localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($scope.freshQuestion($rootScope.questionsData.question)));
+  			//localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($scope.freshQuestion($rootScope.questionsData.question)));
 
   			$scope.recalculateResults();
   			var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
