@@ -727,7 +727,8 @@
 							"text" : "Reheat leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
-								"warmingDrawer" : 1
+								"warmingDrawer" : 1,
+								"powerPreheat" : 1
 							},
 							"order" : 1
 						},
@@ -746,7 +747,8 @@
 							"text" : "Help me host parties and cook multi-course meals",
 							"value" : "host parties",
 							"scoring" : {
-								"double" : 1
+								"double" : 1,
+								"warmingDrawer" : 1
 							},
 							"order" : 3
 						},
@@ -766,7 +768,7 @@
 							"text" : "Bake, bake, and bake some more",
 							"value" : "perfect",
 							"scoring" : {
-								"gas" : 1
+								"trueConvection" : 1
 							},
 							"order" : 5
 						},
@@ -1256,7 +1258,7 @@
 							"value" : 1,
 							"text" : "Occasionally",
 							"scoring" : {
-								"sensorDry" : 1
+								"minCycles" : 1
 							}
 						},
 						"2" : {
@@ -1265,7 +1267,7 @@
 							"value" : 2,
 							"text" : "Very Often",
 							"scoring" : {
-								"sensorDry" : 2							
+								"maxCycles" : 1							
 							}
 						},
 						"3" : {
@@ -1274,7 +1276,7 @@
 							"value" : 3,
 							"text" : "Always",
 							"scoring" : {
-								"sensorDry" : 3
+								"maxCycles" : 2
 							}
 						}
 					}
@@ -2199,6 +2201,8 @@
 							"value" : 0,
 							"text" : "0",
 							"scoring" : {
+								"placeSettings13": 1,
+								"placeSettings14": 1
 							}
 						},
 						"5" : {
@@ -2207,7 +2211,7 @@
 							"value" : 5,
 							"text" : "5",
 							"scoring" : {
-								"placeSettings13": 1
+								"placeSettings14": 1
 							}
 						},
 						"10" : {
@@ -2216,7 +2220,8 @@
 							"value" : 10,
 							"text" : "10",
 							"scoring" : {
-								"placeSettings14": 1
+								"placeSettings14": 1,
+								"placeSettings15": 1
 							}
 						},
 						"15" : {
@@ -2277,7 +2282,7 @@
 						"2" : {
 							"thumbnail" : "../img/icon-cycles.png",
 							"thumbnail_current" : "../img/icon-cycles-current.png",
-							"value" : 1,
+							"value" : 2,
 							"text" : "When we have company",
 							"scoring" : {
 							}
@@ -2474,7 +2479,7 @@
 							"value" : "Traditional",
 							"image" : "../img/dishwasher-Q5-sleek-modern.jpg",
 							"scoring" : {
-								"FID" : 1
+								"frontConsole" : 1
 							},
 							"order" : 1
 						},
@@ -2484,8 +2489,8 @@
 							"text" : "Commercial",
 							"value" : "Commercial",
 							"image" : "../img/dishwasher-Q5-traditional-commercial.jpg",
-							"scoring" : {
-								"frontConsole" : 1						
+							"scoring" : {	
+								"FID" : 1					
 							},
 							"order" : 2
 						}

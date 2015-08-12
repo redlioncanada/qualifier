@@ -233,6 +233,14 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
 
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].capacity = Math.min($rootScope.appliances[key].washerCapacity,$rootScope.appliances[key].dryerCapacity)
+                        cycleOptions
+
+                        if (parseFloat($rootScope.appliances[key].cycleOptions) <= 10) {
+                          $rootScope.appliances[key].minCycles = true
+                        } else {
+                          $rootScope.appliances[key].maxCycles = true
+                        }
+
                         if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
                           $rootScope.appliances[key].largestCapacity = true
                         } 
