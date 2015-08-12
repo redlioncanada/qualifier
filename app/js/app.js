@@ -188,6 +188,22 @@ App.filter('byPrice', function() {
 App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
   console.log("Run");
   $state.go('loading');
+
+
+    $rootScope.objSizeClean = function (obj) {
+      for (var i in obj) {
+        if (!obj[i]) {
+          obj.splice(i,1);
+        }
+      }
+      console.log(obj);
+      console.log(Object.keys(obj).length);
+      if (!!obj) {
+        return Object.keys(obj).length;
+      } else {
+        return 0;
+      }
+    }
     $rootScope.objSize = function (obj) {
       if (!!obj) {
         return Object.keys(obj).length;
@@ -233,7 +249,6 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
 
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].capacity = Math.min($rootScope.appliances[key].washerCapacity,$rootScope.appliances[key].dryerCapacity)
-                        cycleOptions
 
                         if (parseFloat($rootScope.appliances[key].cycleOptions) <= 10) {
                           $rootScope.appliances[key].minCycles = true

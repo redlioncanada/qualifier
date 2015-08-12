@@ -24,14 +24,13 @@
 			</div>
 			<div class="bottom-nav-inner">
 
-			<!-- Previously answered question is icon-name.png, current question is icon-name-current.png, unanwered question icon is icon-name-next.png -->
 				<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance'">
 			    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
 				      	<img ng-src="../img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			    	</a>      
 				</div>
 
-				<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
+				<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 			    	<a class="icon-nav">
 				      	<img ng-src="../img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			    	</a>      
@@ -42,12 +41,11 @@
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<!-- Compare Results btn - external link to comparison tool -->
-		<!-- <div class="compare-btn-wrap" ng-if="!questionsData.question">
-			<a id="compare" class="btn btn-compare">
-				<span>Compare Models</span>
+		<div class="compare-btn-wrap" ng-if="!!questionsData.question && objSizeClean(nextQs) == 0">
+			<a id="compare" class="btn btn-compare" ng-click="questionsData.question=null">
+				<span>Back to Results</span>
 			</a>
-		</div> -->
+		</div>
 	</div>
 
 </div>
