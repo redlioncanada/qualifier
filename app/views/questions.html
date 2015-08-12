@@ -1,5 +1,32 @@
 <!-- Application Start Screen -->
-<div id="app-content-main" class="main-content">
+<!--<style>
+
+.animate-show, 
+.animate-hide
+{ 
+    -webkit-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+} 
+ 
+.animate-show {
+    left: 100%;
+}
+.animate-show.animate-show-active {
+    left: 0;
+}
+ 
+.animate-hide {
+    left: 0;
+}
+.animate-hide.animate-hide-active{
+    left: -100%;
+}
+
+</style>-->
+<div id="app-content-main" class="main-content slidey" ng-repeat="(name, allqs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
 	<div class="content-inner">
 
 		<!-- Top of main section -->

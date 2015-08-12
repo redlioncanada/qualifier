@@ -32,7 +32,8 @@
     "ng-sortable": "~1.2.0",
     "protractor": "~2.1.0",
     "underscore": "~1.8.3",
-    "preloadjs": "*"
+    "angular-animate": "~1.4.3",
+    "greensock": "~1.17.0"
   },
   "devDependencies": {},
   "directory": "app/components",

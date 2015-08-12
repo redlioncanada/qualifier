@@ -31,17 +31,10 @@ describe('Appliances App', function() {
 			startItUp(function () {
 				var next = function () {
 					console.log("next");
-					browser.findElements(".answer").then(function (answers) {
-						console.log("answers")
-						console.log(answers.length)
-					})
 					$$('.answer').then(function (answers) { 
-						console.log("answers")
-						console.log(answers.length)
 						if (answers.length > 0) {
 								var r = Math.floor((Math.random() * answers.length))
 								answers[r].click().then(function () {
-									console.log(element(by.id('next')).length);
 									if (element(by.id('next')).length > 0) {
 										element(by.id('next')).click().then(function () {
 											element(by.id('next')).isPresent().then(function (p) {
@@ -86,9 +79,7 @@ describe('Appliances App', function() {
 				ans.count().then(function(count){
 					var random_num = Math.floor( (Math.random() * count) );
 					ans.get(random_num).click();
-
 					ans.count().then(function(count){
-						console.log('count', count);
 						// var random_num = Math.floor( (Math.random() * count) );
 						// ans.get(random_num).click();
 						// element(by.linkText('Next')).click();
@@ -121,6 +112,30 @@ describe('Appliances App', function() {
 
 	describe('Results', function() {
 
+		var cases = [
+			{
+				"steps" : [
+					"Laundry",
+					"Not a Concern",
+					"6+",
+					"Kids' laundry, so much kids' laundry",
+					"Not at all, my laundry is down in the basement",
+					"No space constraints",
+					"Rarely",
+					"Ballet Tights",
+					"Adding more time, every time",
+					"Very, my iron and I are the best of friends",
+					"Electric",
+					"Often"
+				],
+				"results" : [
+				]
+			}
+
+		]
+		describe('for when a user picks'), function() {
+
+		});			
 		describe('when user navigates to results', function() {
 			it('there should be no more than 3 results', function() {
 				crawlToResults(function () {

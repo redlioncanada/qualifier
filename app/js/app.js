@@ -11,10 +11,32 @@ var nglibs = [
   'LocalStorageModule',
   'ui.bootstrap',
   'ui.sortable',
-  'ngSlider'
+  'ngSlider',
+  'ngAnimate'
 ];
 
 var App = angular.module('App', nglibs);
+
+App.animation('.slidey', function ($window) {
+    return {
+        addClass: function (element, className, done) {
+            if (className == 'ng-hide') {
+                TweenMax.to(element, 0.5, {left: -element.parent().width(), onComplete: done });
+            }
+            else {
+                done();
+            }
+        },
+        enter: function (element, done) {
+            console.log("SHOWWWWW");
+            TweenMax.fromTo(element, 1, { left: $window.innerWidth}, {left: 0, onComplete: done});
+        },
+
+        leave: function (element, done) {
+            TweenMax.to(element, 1, {left: -$window.innerWidth, onComplete: done});
+        }
+    };
+});
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
@@ -32,6 +54,11 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
         url : "/questions/",
         templateUrl: 'views/questions.html',
         controller: 'QuestionsCtrl'
+      })
+      .state('main.questions.makedata', {
+        url : "/questions/data",
+        templateUrl: 'views/questionsdata.html',
+        controller: 'QuestionsDataCtrl'
       })
       .state('main.results', {
         url : "/results",
