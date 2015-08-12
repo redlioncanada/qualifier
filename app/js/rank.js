@@ -3,7 +3,7 @@
 angular.module('App')
   .controller('RankCtrl', function ($scope, $rootScope) {
 	$scope.sortable = {}
-    $rootScope.oneAnswer = false;
+    $rootScope.questionsData.question.oneAnswer = false;
 	$scope.sortable.dragControlListeners = {
     	orderChanged: function(event) {
             $rootScope.controls.questionHasAnswer = true

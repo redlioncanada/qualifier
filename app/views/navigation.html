@@ -1,5 +1,7 @@
 <div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom" ng-if="questionsData.question.name !='Appliance'">
 
+<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
+
 	<div class="app-content-main-bottom-left">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
 			<div class="btn btn-default">
@@ -42,7 +44,7 @@
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!oneAnswer && !!questionsData.question">
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!questionsData.question.oneAnswer && !!questionsData.question">
 			<div class="btn btn-default" ng-class="{'pulse' : !!controls.questionHasAnswer}">
 				<span class="arrow-next">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">

@@ -1,53 +1,27 @@
 <!-- Application Start Screen -->
-<!--<style>
 
-.animate-show, 
-.animate-hide
-{ 
-    -webkit-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 30s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-} 
- 
-.animate-show {
-    left: 100%;
-}
-.animate-show.animate-show-active {
-    left: 0;
-}
- 
-.animate-hide {
-    left: 0;
-}
-.animate-hide.animate-hide-active{
-    left: -100%;
-}
-
-</style>-->
-<div id="app-content-main" class="main-content slidey" ng-repeat="(name, allqs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
+<div class="main-content slidey" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
 	<div class="content-inner">
 
 		<!-- Top of main section -->
 		<div class="app-content-main-top">
 			<div class="app-content-main-top-left">
-				<h2 ng-bind="questionsData.question.show.question"></h2>
-				<h2 class="main-question-more" ng-if="!!questionsData.question.show.question_more"  ng-bind="questionsData.question.show.question_more"></h2>
-				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
+				<h2 ng-bind="qs.text[0].question"></h2>
+				<h2 class="main-question-more" ng-if="!!qs.text[0].question_more"  ng-bind="qs.text[0].question_more"></h2>
+				<h3 ng-if="!!qs.text[0].sub_question" ng-bind="qs.text[0].sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
+					<a class="btn-wrap" ng-if="!!qs.text[0].explanation_title" tooltip-placement="bottom" tooltip="{{qs.text[0].explanation}}">
 						<span class="btn-icon">
 							<span>?</span>
 						</span>
-						<span class="btn-text" ng-bind="questionsData.question.show.explanation_title"></span>
+						<span class="btn-text" ng-bind="qs.text[0].explanation_title"></span>
 					</a>
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
+					<a class="btn-wrap" ng-if="!!qs.text[0].info_title" tooltip-placement="bottom" tooltip="{{qs.text[0].info}}">
 						<span class="btn-icon">
 							<span>i</span>
 						</span>
-						<span class="btn-text" ng-bind="questionsData.question.show.info_title"></span>
+						<span class="btn-text" ng-bind="qs.text[0].info_title"></span>
 					</a>	
 				</div>
 			</div>
@@ -55,9 +29,47 @@
 	</div>
 	
 
-	<div ng-if="!!questionsData.question.show.type" class="app-answers" ng-include="'views/answers/'+questionsData.question.show.type+'.html'">
+	<div ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
 	</div>
 	
-
-
 </div>
+<style>
+.body {
+	min-height: 500px;
+
+}
+
+.slidey.ng-hide-add,
+.slidey.ng-hide-remove {
+  -webkit-transition: all ease-in-out 2s;
+  -moz-transition: all ease-in-out 2s;
+  -o-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+  /*display: block!important; */
+}
+.slidey {
+	left: 50%;
+}
+.slidey.ng-hide-remove {
+    left: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.slidey.ng-hide-remove.ng-hide-remove-active {
+    left: 700px;
+    position: absolute;
+    opacity: 1;
+}
+ 
+.slidey.ng-hide-add {
+    left: 700px;
+    position: absolute;
+    opacity: 1;
+}
+.slidey.ng-hide-add.ng-hide-add-active{
+    left: -100%;
+    position: absolute;
+    opacity: 0;
+}
+
+</style>

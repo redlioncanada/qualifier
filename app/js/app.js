@@ -19,24 +19,33 @@ var App = angular.module('App', nglibs);
 
 App.animation('.slidey', function ($window) {
     return {
-        addClass: function (element, className, done) {
-            if (className == 'ng-hide') {
-                TweenMax.to(element, 0.5, {left: -element.parent().width(), onComplete: done });
-            }
-            else {
-                done();
-            }
-        },
-        enter: function (element, done) {
-            console.log("SHOWWWWW");
-            TweenMax.fromTo(element, 1, { left: $window.innerWidth}, {left: 0, onComplete: done});
-        },
-
-        leave: function (element, done) {
-            TweenMax.to(element, 1, {left: -$window.innerWidth, onComplete: done});
-        }
+//        addClass: function (element, className, done) {
+//            
+//            if (className == 'ng-hide') {
+//                console.log("HIDE");
+//                console.log(-$window.innerWidth);
+//                TweenMax.to(element, 3, {left: -$window.innerWidth, onComplete: done });
+//            }
+//            else {
+//                done();
+//            }
+//        }//,
+//        removeClass: function (element, className, done) {
+//
+//            if (className == 'ng-hide') {
+//                console.log("UNHIDE");
+//                element.removeClass('ng-hide');
+//
+//                TweenMax.set(element, { left: $window.innerWidth });
+//                TweenMax.to(element, 3, {left: 0, onComplete: done });
+//            }
+//            else {
+//                done();
+//            }
+//        }
     };
 });
+
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
@@ -80,17 +89,35 @@ App.filter('orderByOrder', function() {
 
 App.filter('rearrange', function() {
   return function(items, num) {
-      console.log("rearranging")
-      angular.forEach(items, function (item) {
-        console.log(item.score)
-      })
       var temp = items[0];
       items[0] = items[1];
-      items[1] = temp;
-      console.log("rearranged")
-      angular.forEach(items, function (item) {
-        console.log(item.score)
-      })      
+      items[1] = temp;     
+      return items;
+  };
+});
+
+App.filter('after', function() {
+  return function(items, num) {  
+      items.splice(0,num)
+      return items
+  };
+});
+
+App.filter('assignScore', function() {
+  return function(items, appliance) {
+      angular.forEach(items, function(item) {
+        if (item.featureKey in appliance) {
+          if (!!appliance[item.featureKey]) {
+            item.score = 2;
+          } else if (!!item.top3) {
+            item.score = 1;
+          }
+        } else if (!!item.top3) {
+          item.score = 1;
+        } else {
+          item.score = 0;
+        }
+      });          
       return items;
   };
 });
@@ -188,16 +215,21 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
             "img/slider-pointer.png"
           ];
 
-          $resource("http://mymaytag.wpc-stage.com/api_test/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
-                // fake the prices for now, change when we build in colour picker
                 angular.forEach( $rootScope.appliances, function (item, key) { 
                     if ($rootScope.appliances[key].appliance == "Laundry") {
+                      for (var i in item.colours) {
+                        //$rootScope.appliances[key].colours[i].image = setColourURL($rootScope.appliances[key].appliance,$rootScope.appliances[key].image, $rootScope.appliances[key].colours[i].colourCode);
+                        $rootScope.appliances[key].colours[i].prices = {}
+                        $rootScope.appliances[key].colours[i].prices.CAD = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
+                      }
                       $rootScope.appliances[key].price = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
                     } else {
                       $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
                     }
-                    // also fake gas, electric for laundry
+
+
                     if ($rootScope.appliances[key].appliance == "Laundry") {
                         $rootScope.appliances[key].capacity = Math.min($rootScope.appliances[key].washerCapacity,$rootScope.appliances[key].dryerCapacity)
                         if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {

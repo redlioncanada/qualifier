@@ -3,7 +3,7 @@
 angular.module('App')
   .controller('SliderMultipleCtrl', function ($scope, $rootScope) {
   	// jslider-value
-    $rootScope.oneAnswer = false;
+    $rootScope.questionsData.question.oneAnswer = false;
   	$scope.setAnswer = function () {
       for (var t in $rootScope.questionsData.question.text) {
     		for (var i in $rootScope.questionsData.question.text[t].answers) {

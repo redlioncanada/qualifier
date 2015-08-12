@@ -2,7 +2,7 @@
 console.log("loaded")
 angular.module('App')
   .controller('CheckboxCtrl', function ($scope, $rootScope) {
-      $rootScope.oneAnswer = false;
+      $rootScope.questionsData.question.oneAnswer = false;
   		$scope.toggle = function (answers, answer) {
   			answer.answer = !answer.answer
         $rootScope.controls.questionHasAnswer=false
