@@ -4,16 +4,6 @@
 			<h1 bo-text="brandData.apptext.resultsPage"></h1>
 			<div class="results-adjust-desc" bo-text="brandData.apptext.oneLastStep"></div>
 
-			<!-- Slider -->
-			<div class="price-slider-wrap">
-				<!-- <div class="price-slider-label-wrap">
-					<span class="price-slider-label">$</span>
-				</div> -->
-				<div class="price-slider">
-					<input ng-model="controls.price" type="text" id="answerSlider" slider options="resultsOptions" />
-				</div>
-			</div>
-
 			<!-- Save, Share, Print -->
 			<div class="results-top-right-btns">
 				<a class="btn-save" href="">
@@ -22,9 +12,16 @@
 				<a class="btn-share" href="">
 					<span class="icon-share"></span>
 				</a>
-				<a class="btn-print" href="">
-					<span class="icon-print"></span>
-				</a>
+			</div>
+		</div>
+
+		<!-- Slider -->
+		<div class="price-slider-wrap">
+			<!-- <div class="price-slider-label-wrap">
+				<span class="price-slider-label">$</span>
+			</div> -->
+			<div class="price-slider">
+				<input ng-model="controls.price" type="text" id="answerSlider" slider options="resultsOptions" />
 			</div>
 		</div>
 
@@ -34,7 +31,6 @@
 					<div class="result-inner">
 						<h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch"></h3>
 						<h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion"></h3>
-						<h2><span class="product-name" ng-bind-html="a.name"></span> </h2>
 						<div class="product-img-wrap">
 							<img ng-if="a.appliance!='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
 							<img ng-if="a.appliance=='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/{{a.image}}" style="width: 220px">
@@ -47,20 +43,20 @@
 								</span>
 							</div>
 						</div>
+						<div class="product-price-sku-wrap">
+							<div class="product-price">
+								<span>${{a.picker.prices.CAD}}</span>
+							</div>
+							<div class="product-sku">
+								<span bo-text="brandData.apptext.model"></span>
+								<span>{{a.sku}}</span>
+							</div>
+
+						</div>
 						<div class="product-details-wrap">
+							<h2><span class="product-name" ng-bind-html="a.name"></span> </h2>
+							
 							<div class="product-details">
-								<div class="product-details-top">
-									<div class="product-price">
-										<span>${{a.picker.prices.CAD}}</span>
-									</div>
-									<div class="product-sku">
-										<span bo-text="brandData.apptext.model"></span>
-										<span>{{a.picker.sku}}</span>
-									</div>
-								</div>
-
-
-
 								<div ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
 									<h3><img ng-if="!!sf.featureKey" ng-src="/img/icon-{{sf.featureKey}}.png" /><span ng-bind-html="sf.headline"></span></h3>
 									<span ng-bind-html="sf.description"></span>
