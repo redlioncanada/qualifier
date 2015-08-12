@@ -183,15 +183,15 @@
 	.btn-text {
 		color: #7d7d7d;
 	}
-	.icon-text {
-		font-size: 11px;
-		color: #2e2e2e;
-		font-family: Geneva, Verdana, sans-serif;
-		&:hover {
-			color: #2e2e2e;
-			text-decoration: none;
-		}
-	}
+	// .icon-text {
+	// 	font-size: 11px;
+	// 	color: #2e2e2e;
+	// 	font-family: Geneva, Verdana, sans-serif;
+	// 	&:hover {
+	// 		color: #2e2e2e;
+	// 		text-decoration: none;
+	// 	}
+	// }
 	
 
 	.results-count {
@@ -222,30 +222,30 @@
 }
 
 .app-content-main-bottom-center .icon-nav-wrap {
-	&:not(:last-child):after {
-		content: "";
-		background: #666666;
-		width: 1px;
-		height: 20px;
-		display: inline-block;
-		position: relative;
-		float: left;
-		margin-top: 10px;
-	}
-	&:nth-child(1), &:nth-child(2) {
-		&:after {
-			content: "";
-			background: #666666;
-			width: 1px;
-			height: 42px;
-			display: inline-block;
-			// left: -50px;
-			// position: absolute;
-			// left: 10px;
-			// top: 0;
-			position: relative;
-			float: left;
-			margin-top: 0px;
-		}
-	}
+	// &:not(:last-child):after {
+	// 	content: "";
+	// 	background: #666666;
+	// 	width: 1px;
+	// 	height: 20px;
+	// 	display: inline-block;
+	// 	position: relative;
+	// 	float: left;
+	// 	margin-top: 10px;
+	// }
+	// &:nth-child(1), &:nth-child(2) {
+	// 	&:after {
+	// 		content: "";
+	// 		background: #666666;
+	// 		width: 1px;
+	// 		height: 42px;
+	// 		display: inline-block;
+	// 		// left: -50px;
+	// 		// position: absolute;
+	// 		// left: 10px;
+	// 		// top: 0;
+	// 		position: relative;
+	// 		float: left;
+	// 		margin-top: 0px;
+	// 	}
+	// }
 }

@@ -87,13 +87,23 @@
 	}
 	.btn-next, .btn-prev {
 		@include noselect;
-		svg {
-			display: block;
-			width: 28px;
-		}
+		
+		// temporary
+		bottom: 200px;
+		position: absolute;
+		// svg {
+		// 	display: block;
+		// 	width: 28px;
+		// }
 		&:hover, &:focus {
 			text-decoration: none;
 		}
+	}
+	.btn-prev {
+		left: -25px;
+	}
+	.btn-next {
+		right: -25px;
 	}
 	.btn {
 		padding: 3px 18px;
@@ -106,8 +116,7 @@
 	.icon-nav {
 		display: inline-block;
 		float: left;
-		// width: 80px;
-		width: 69px; // necessary for fitting max number
+		width: 40px;
 		text-align: center;
 	}
 	.icon-text {

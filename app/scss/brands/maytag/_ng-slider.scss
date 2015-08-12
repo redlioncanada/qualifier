@@ -309,9 +309,9 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			// background-position: -1px -60px; 
 			position: absolute; 
 			left: 20%; 
-			top: -16px; 
+			top: -15px; 
 			// margin-left: -39px; 
-			margin-left: -36px; 
+			margin-left: -43px; 
 			cursor: pointer; 
 			cursor: hand; 
 
@@ -321,10 +321,10 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			// height: 66px;
 
 			z-index: 50;
-			width: 74px;
-			height: 69px;
-			background: url('../img/slider-pointer.png') !important;
-			background-size: 74px 69px;
+			width: 86px;
+			height: 74px;
+			background: url('../img/slider-pointer.png') center center no-repeat !important;
+			background-size: 86px 74px;
 			// &:hover {
 
 			// }
@@ -419,11 +419,11 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	.jslider-single .jslider-value-to,
 	.jslider-single .jslider-bg .v,
 	.jslider-limitless .jslider-label { display: none; }
-	&.bottom {
-		.jslider-pointer {
-			background: url('../img/slider-pointer-bottom.png') !important;
-		}
-	}
+	// &.bottom {
+	// 	.jslider-pointer {
+	// 		background: url('../img/slider-pointer-bottom.png') !important;
+	// 	}
+	// }
 }
 
 .answer-slider.pointer-labels {
@@ -456,18 +456,18 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 	}
 	
-	.slider-bottom-labels {
-		margin-top: 40px;
-	}
+	// .slider-bottom-labels {
+	// 	margin-top: 40px;
+	// }
 }
-.answer-slider.bottom.pointer-labels {
-	.jslider {
-		.jslider-value {
-			margin-top: 24px;
-			  padding-top: 38px;
-		}
-	}
-}
+// .answer-slider.bottom.pointer-labels {
+// 	.jslider {
+// 		.jslider-value {
+// 			margin-top: 24px;
+// 			  padding-top: 38px;
+// 		}
+// 	}
+// }
 
 .slider-wrap {
 	width: 853px;
@@ -484,9 +484,9 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	.slider-bg-left {
 		left: -63px;
 	}
-	.answer-slider.bottom {
-		margin-top: 25px;
-	}
+	// .answer-slider.bottom {
+	// 	margin-top: 25px;
+	// }
 }
 
 .slider-answer-label-wrap {
@@ -606,16 +606,16 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	
 }
 
-.slider-bottom-labels {
-	.slider-answer-label-wrap {
-		// display: inline-block; // only for special cases
-		bottom: 20px;
-	}
-	& > :first-child, & > :last-child {
-		// top: 90px;
-		bottom: -100px;
-	}
-}
+// .slider-bottom-labels {
+// 	.slider-answer-label-wrap {
+// 		// display: inline-block; // only for special cases
+// 		bottom: 20px;
+// 	}
+// 	& > :first-child, & > :last-child {
+// 		// top: 90px;
+// 		bottom: -100px;
+// 	}
+// }
 
 // answer.text
 .slider-answer-label {
