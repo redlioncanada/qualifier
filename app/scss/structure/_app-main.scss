@@ -62,38 +62,58 @@
 	margin-bottom: 25px;
 }
 
+// new container for prev and next app nav arrows
+.app-nav-arrows {
+	display: block;
+    position: relative;
+}
+.bottom-nav-wrap {
+	max-width: 800px;
+    display: inline-block;
+}
+
 .app-content-main-bottom {
 	@include make-row;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	@include noselect;
-	.app-content-main-bottom-left {
-		@include make-md-column(1);
-		// padding-left: 0;
-		// padding-right: 0;
-	}
+	// .app-content-main-bottom-left {
+	// 	@include make-md-column(1);
+	// 	// padding-left: 0;
+	// 	// padding-right: 0;
+	// }
 	.app-content-main-bottom-center {
-		@include make-md-column(10);
+		// @include make-md-column(10);
 		padding-left: 0;
 		padding-right: 0;
 		text-align: center;
 
 	}
-	.app-content-main-bottom-right {
-		@include make-md-column(1);
-		// padding-left: 0;
-		// padding-right: 0;
-		text-align: right;
-	}
+	// .app-content-main-bottom-right {
+	// 	@include make-md-column(1);
+	// 	// padding-left: 0;
+	// 	// padding-right: 0;
+	// 	text-align: right;
+	// }
 	.btn-next, .btn-prev {
 		@include noselect;
-		svg {
-			display: block;
-			width: 28px;
-		}
+		
+		// temporary
+		bottom: 200px;
+		position: absolute;
+		// svg {
+		// 	display: block;
+		// 	width: 28px;
+		// }
 		&:hover, &:focus {
 			text-decoration: none;
 		}
+	}
+	.btn-prev {
+		left: -25px;
+	}
+	.btn-next {
+		right: -25px;
 	}
 	.btn {
 		padding: 3px 18px;
@@ -106,8 +126,7 @@
 	.icon-nav {
 		display: inline-block;
 		float: left;
-		// width: 80px;
-		width: 69px; // necessary for fitting max number
+		width: 40px;
 		text-align: center;
 	}
 	.icon-text {

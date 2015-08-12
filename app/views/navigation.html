@@ -1,68 +1,51 @@
 <div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom" ng-if="questionsData.question.name !='Appliance'">
 
-<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
+	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
+
+	<div class="app-nav-arrows">
+		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
+			<img class="arrow-prev" ng-src="img/arrow-left.png">
+		</a>
+
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question &&!questionsData.question.show.oneAnswe">
+			<img class="arrow-next" ng-src="img/arrow-right.png">
+		</a>
+
+	</div>
 
 	<div class="app-content-main-bottom-left">
-		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
-			<div class="btn btn-default">
-				<span class="arrow-prev">
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">
-						<g>
-							<path fill="#FFFFFF" d="M0.5,14l11,11c0.3,0.3,0.8,0.5,1.2,0.5c0.4,0,0.9-0.2,1.2-0.5c0.7-0.7,0.7-1.8,0-2.4l-8.1-8.1h29.4 c1,0,1.7-0.8,1.7-1.7c0-1-0.8-1.7-1.7-1.7H5.9L14,2.9c0.7-0.7,0.7-1.8,0-2.4c-0.7-0.7-1.8-0.7-2.4,0l-11,11	C-0.2,12.2-0.2,13.3,0.5,14z"/>
-						</g>
-					</svg>
-				</span>
-			</div>
-			<div class="btn-text" bo-text="brandData.apptext.previous"></div>
-		</a>
+		
 	</div>
 
 	<div class="app-content-main-bottom-center">
-		<div class="bottom-nav-inner">
-			<div class="results-count-wrap" ng-if="!!questionsData.currentCount || questionsData.currentCount==0">
-				<a class="results-count">
-					<div class="results-count-number" ng-bind="questionsData.currentCount"></div>
-					<div class="results-count-label" bo-text="brandData.apptext.results"></div>
-				</a>
+		<div class="bottom-nav-wrap">
+			<div class="bottom-nav-intructions">
+				<span class="instructions">Click on an icon to change your answer</span>
 			</div>
+			<div class="bottom-nav-inner">
+				<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
+			    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
+				      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || a.thumbnail }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+			    	</a>      
+				</div>
 
-			<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q)">
-		    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="questionsData.question=q;navToQuestions()" tooltip-placement="top" tooltip="Question: {{q.show.question}}">
-			      	<img ng-src="{{(q.name == questionsData.question.name) && a.thumbnail_current || a.thumbnail }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text"></span>
-		    	</a>      
+				<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
+			    	<a class="icon-nav">
+				      	<img ng-src="{{(q.name == questionsData.question.name) && q.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+			    	</a>      
+				</div>
+
 			</div>
-
-			<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
-		    	<a class="icon-nav">
-			      	<img ng-src="{{(q.name == questionsData.question.name) && q.thumbnail_current || 'img/nav-placeholder.png' }}" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-			      	<span class="icon-text" ng-if="!!q.thumbnail_text" bo-text="q.thumbnail_text">
-		    	</a>      
-			</div>
-
 		</div>
 	</div>
 
 	<div class="app-content-main-bottom-right">
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question &&!questionsData.question.show.oneAnswer">
-			<div class="btn btn-default" ng-class="{'pulse' : !!controls.questionHasAnswer}">
-				<span class="arrow-next">
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 25.5" enable-background="new 0 0 37 25.5" xml:space="preserve">
-						<g>
-							<path fill="#FFFFFF" d="M36.5,11.5l-11-11c-0.7-0.7-1.8-0.7-2.4,0c-0.7,0.7-0.7,1.8, 0,2.4l8.1,8.1H1.7c-1,0-1.7,0.8-1.7,1.7 c0,1,0.8,1.7,1.7,1.7h29.4l-8.1,8.1c-0.7,0.7-0.7,1.8,0,2.4c0.3,0.3,0.8,0.5,1.2,0.5c0.4,0,0.9-0.2,1.2-0.5l11-11 C37.2,13.3,37.2,12.2,36.5,11.5z"/>
-						</g>
-					</svg>
-				</span>
-			</div>
-			<div class="btn-text" bo-text="brandData.apptext.next"></div>
-		</a>
-
 		<!-- Compare Results btn - external link to comparison tool -->
-		<div class="compare-btn-wrap" ng-if="!questionsData.question">
+		<!-- <div class="compare-btn-wrap" ng-if="!questionsData.question">
 			<a id="compare" class="btn btn-compare">
 				<span>Compare Models</span>
 			</a>
-		</div>
+		</div> -->
 	</div>
 
 </div>
