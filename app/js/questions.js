@@ -214,9 +214,9 @@ angular.module('App')
 		return newq
 	}
 
-  	$rootScope.next = function () {
+  	$rootScope.next = function (done) {
   		// Make sure there is an answer
-  		if (!!$rootScope.controls.questionHasAnswer) {
+  		if (!!$rootScope.controls.questionHasAnswer || !!done) {
   			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
@@ -247,7 +247,7 @@ angular.module('App')
 	  		else if ("next" in hasAnswer) {
 	  			var name = hasAnswer.next
 	  		}
-	  		if (!!name) {
+	  		if (!!name && !done) {
 				var hasStoredAnswer = localStorageService.get(name)
 				if (!!hasStoredAnswer) {
 					$rootScope.questionsData.question = hasStoredAnswer

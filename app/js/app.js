@@ -17,36 +17,6 @@ var nglibs = [
 
 var App = angular.module('App', nglibs);
 
-App.animation('.slidey', function ($window) {
-    return {
-//        addClass: function (element, className, done) {
-//            
-//            if (className == 'ng-hide') {
-//                console.log("HIDE");
-//                console.log(-$window.innerWidth);
-//                TweenMax.to(element, 3, {left: -$window.innerWidth, onComplete: done });
-//            }
-//            else {
-//                done();
-//            }
-//        }//,
-//        removeClass: function (element, className, done) {
-//
-//            if (className == 'ng-hide') {
-//                console.log("UNHIDE");
-//                element.removeClass('ng-hide');
-//
-//                TweenMax.set(element, { left: $window.innerWidth });
-//                TweenMax.to(element, 3, {left: 0, onComplete: done });
-//            }
-//            else {
-//                done();
-//            }
-//        }
-    };
-});
-
-
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
     $urlRouterProvider.otherwise("/");
