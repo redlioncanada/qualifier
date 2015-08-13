@@ -394,13 +394,13 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			position: relative; 
 			top: 32px;
 
-			&:first-child span, &:last-child span {
-				border-left: 1px solid #999;
+			& > :first-child, & > :last-child {
+				border-left: 1px solid #999 !important;;
 			}
 			span { 
 				position: absolute; 
 				height: 28px; 
-				border-left: 0;
+				border-left: 0 !important;
 				font-size: 0; 
 			}
 			ins { 
@@ -437,6 +437,29 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	// 		background: url('../img/slider-pointer-bottom.png') !important;
 	// 	}
 	// }
+}
+
+// Specific case
+.answer-slider .family-size {
+	.jslider {
+		.jslider-scale {
+			& > :nth-child(2), 
+			& > :nth-child(3), 
+			& > :nth-child(4), 
+			& > :nth-child(5) {
+				display: none !important;
+				ins {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+// Specific case
+div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
+	margin-right: -42.5px !important;
+	margin-left: auto;
 }
 
 .answer-slider.pointer-labels {
@@ -494,6 +517,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 .multi-slider-wrap {
+	margin-bottom: 100px;
 	.slider-bg-left {
 		left: -63px;
 	}
@@ -515,8 +539,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	// }
 
 	.jslider-scale {
-		&:nth-child(2) {
-			border-left: 1px solid #999;
+		& > :nth-child(2) {
+			border-left: 1px solid #999 !important;
 		}
 	}
 }
@@ -537,8 +561,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	// }
 
 	.jslider-scale {
-		&:nth-child(2), &:nth-child(3) {
-			border-left: 1px solid #999;
+		& > :nth-child(2), & > :nth-child(3) {
+			border-left: 1px solid #999 !important;
 		}
 	}
 }
@@ -563,8 +587,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	// }
 
 	.jslider-scale {
-		&:nth-child(2), &:nth-child(3), &:nth-child(4) {
-			border-left: 1px solid #999;
+		& > :nth-child(2), & > :nth-child(3), & > :nth-child(4) {
+			border-left: 1px solid #999 !important;
 		}
 	}
 }
@@ -741,6 +765,12 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 
+
+.answer-slider.no-jslider-scale {
+	.jslider .jslider-scale {
+		display: none !important;
+	}
+}
 
 // Results Page
 #results {
