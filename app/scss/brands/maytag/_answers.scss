@@ -214,7 +214,8 @@
 	&.checkbox, &.checkbox-4 {
 		width: 532px;
 		height: 70px;
-		background: url('../img/checkbox-bg.png');
+		// background: url('../img/checkbox-bg.png');
+		background: url('../img/radio-bg.png');
 		display: block;
 		margin-bottom: 20px;
 		@include boxshadow;
