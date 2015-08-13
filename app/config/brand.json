@@ -232,7 +232,7 @@
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Single Oven",
 							"value" : "single",
-							"image" : "",
+							"image" : "../img/Cooking-Q2-single.png",
 							"scoring" : {
 								"single" : 1
 							},
@@ -243,7 +243,7 @@
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Microwave Oven Combo",
 							"value" : "combo",
-							"image" : "",
+							"image" : "../img/Cooking-Q2-combo.png",
 							"scoring" : {
 								"combination" : 1
 							},
@@ -254,7 +254,7 @@
 							"thumbnail_current" : "../img/icon-features-current.png",
 							"text" : "Double Oven",
 							"value" : "double",
-							"image" : "",
+							"image" : "../img/Cooking-Q2-double.png",
 							"scoring" : {
 								"double" : 1
 							},
