@@ -39,6 +39,6 @@
   "devDependencies": {},
   "directory": "app/components",
   "resolutions": {
-    "angular": ">= 1.0.8"
+    "angular": "1.4.3"
   }
 }
