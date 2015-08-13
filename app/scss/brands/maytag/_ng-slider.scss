@@ -439,6 +439,23 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	// }
 }
 
+// Specific case
+.answer-slider .family-size {
+	.jslider {
+		.jslider-scale {
+			&:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
+				display: none !important;
+			}
+		}
+	}
+}
+
+// Specific case
+div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
+	margin-right: -42.5px !important;
+	margin-left: auto;
+}
+
 .answer-slider.pointer-labels {
 	.jslider {
 		.jslider-value {

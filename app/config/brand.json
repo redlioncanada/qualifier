@@ -895,7 +895,7 @@
 					"explanation" : "Like your family, all of our machines are unique. If we understand a little more about your family we can recommend a machine that suits the specific needs of your home.",
 					"type" : "slider-people",
 					"oneAnswer" : false,
-					"classes" : "slider-labels no-middle-labels",
+					"classes" : "slider-labels family-size",
 					"answer" : 3,
 					"options" : {       
 					    "from": 1,
@@ -1621,7 +1621,7 @@
 					"explanation" : "We want to get a better idea of how you use your fridge and what you put in it so we can find you the one that fits your lifestyle.",
 					"type" : "slider-people",
 					"oneAnswer" : false,
-					"classes" : "pointer-labels-people slider-labels five",
+					"classes" : "slider-labels five fridge-capacity",
 					"answer" : 1,
 					"options" : {       
 					    "from": 1,
@@ -1885,7 +1885,7 @@
 						{
 							"thumbnail" : "../img/icon-ice.png",
 							"thumbnail_current" : "../img/icon-ice-current.png",
-							"text" : "A cooler for parties",
+							"text" : "My cooler",
 							"value" : "cooler",
 							"image" : "../img/icon-thumb-cooler.png",
 							"hover" : "../img/icon-thumb-cooler-active.png",
