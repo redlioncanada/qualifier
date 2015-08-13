@@ -155,7 +155,7 @@
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider",
 					"oneAnswer" : false,
-					"classes" : "pointer-label",
+					"classes" : "slider-pointer-labels no-jslider-scale",
 					"answer" : 1,
 					"options" : { 
 						"from" : 27,
@@ -276,7 +276,7 @@
 					"sub_question" : "Select One",
 					"explanation_title" : "Why Are You Asking Me About Cooking?",
 					"explanation" : "Our ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your needs.",
-					"type" : "radio-5",
+					"type" : "radio-4",
 					"oneAnswer" : true,
 					"classes" : "family-describe",
 					"answers" : [
@@ -1459,7 +1459,7 @@
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-multiple",
-					"classes" : "slider-pointer-labels",
+					"classes" : "slider-pointer-labels no-jslider-scale",
 					"oneAnswer" : false,
 					"side_label" : "width",
 					"answer" : 33,
@@ -1546,7 +1546,7 @@
 					    "step": 1,
 					    "dimension": "\"",
 					    "dimension_label": "HEIGHT",
-					    "scale": ["65.9","66","67","68","69","70","71"]       
+					    "scale": ["66","67","68","69","70","71"]       
 					},
 					"answers" : {
 						"66" : {
@@ -1982,7 +1982,7 @@
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Style?",
 					"explanation" : "Since some fridges are built deeper than typical counter depth, we need to know how important having a fridge that's in-line with your counters is to your purchasing decision.",
-					"type" : "radio-3",
+					"type" : "radio",
 					"oneAnswer" : true,
 					"classes" : "three form-function",
 					"answers" : [
