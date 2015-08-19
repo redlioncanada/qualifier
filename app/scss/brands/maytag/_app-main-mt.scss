@@ -9,7 +9,8 @@
 		font-family: $AG-Bold-Cnd;
 	}
 	h2 {
-		color: #000000;
+		color: #333333;
+		letter-spacing: 1px;
 	}
 	h2.main-question-more {
 		font-size: 24px;
@@ -19,6 +20,7 @@
 		color: #5c5c5c;
 	}
 	.app-content-main-top-left {
+		width: 90%;
 
 	}
 	.app-content-main-top-right {
@@ -94,8 +96,10 @@
 .app-answers {
 	float: left;
 	.answer-option {
-		// margin-left: 10px;
-		// margin-right: 10px;
+		&.category {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
 		&:hover {
 			text-decoration: none;
 			// fade in / out
@@ -110,26 +114,26 @@
 		&.laundry {
 			// margin-left: 0;
 			img {
-				width: 250px;
+				//width: 250px;
 				// height: 293px;
 			}
 		}
 		&.cooking {
 			img {
-				width: 250px;
+				//width: 250px;
 				// height: 315px;
 			}
 		}
 		&.fridge {
 			img {
-				width: 275px;
+				//width: 275px;
 				// height: 315px;
 			}
 		}
 		&.dishwasher {
 			// margin-right: 0;
 			img {
-				width: 175px;
+				//width: 175px;
 				// height: 315px;
 			}
 		}
@@ -137,22 +141,22 @@
 		// Subcategory examples
 		&.ranges {
 			img {
-				width: 250px;
+				//width: 250px;
 			}
 		}
 		&.cooktops {
 			img {
-				width: 200px;
+				//width: 200px;
 			}
 		}
 		&.wallovens {
 			img {
-				width: 200px;
+				//width: 200px;
 			}
 		}
 		&.venthoods {
 			img {
-				width: 200px;
+				//width: 200px;
 			}
 		}
 		.category-name {

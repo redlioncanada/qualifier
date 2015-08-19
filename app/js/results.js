@@ -7,6 +7,7 @@ angular.module('App')
         "from": 0,
         "to": 3000,
         "step": 100,
+        "smooth" : false,
         "dimension": ""  
       }
 

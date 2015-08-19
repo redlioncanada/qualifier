@@ -124,7 +124,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	&.radio, &.radio-3, &.radio-4 {
+	&.radio, &.radio-2, &.radio-3, &.radio-4 {
 		display: block;
 		width: 532px;
 		height: 70px;
@@ -155,6 +155,13 @@
 		}
 	}
 	// 4 or more = 2 columns
+	&.radio-2 {
+		display: inline-block;
+		float: left;
+		.select-icon {
+			left: 24px;
+		}
+	}
 	&.radio-4 {
 		display: inline-block;
 		float: left;
@@ -211,13 +218,14 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	&.checkbox, &.checkbox-4 {
 		width: 532px;
 		height: 70px;
 		// background: url('../img/checkbox-bg.png');
 		background: url('../img/radio-bg.png');
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		@include boxshadow;
 		// .select-icon {
 		// 	top: 19px;
@@ -245,7 +253,30 @@
 		// 	top: 23px;
 		// }
 	}
-	
+	&.checkbox, &.checkbox-2 {
+		width: 532px;
+		height: 70px;
+		background: url('../img/radio-bg.png');
+		display: block;
+		margin-bottom: 10px;
+		@include boxshadow;
+		.label-wrap {
+			position: absolute;
+			top: 22px;
+			left: 100px;
+			max-width: 415px;
+			&.long-answer {
+				top: 15px;
+				.label-text {
+					line-height: 20px;
+				}
+			}
+		}
+	}
+	&.checkbox-2 {
+		display: inline-block;
+		float: left;
+	}	
 
 	&.picture-2, &.picture-3 {
 		display: inline-block;

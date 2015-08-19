@@ -49,6 +49,14 @@ div.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	margin-left: -42.5px !important;
 }
 // Will be dog and cats later
+
+.jslider-pointer {
+    -webkit-transition:all linear 0.15s;
+    -moz-transition:all linear 0.15s;
+    -o-transition:all linear 0.15s;
+    transition:all linear 0.15s;
+}
+
 div.people6 .jslider .jslider-value:not(.jslider-value-to) {
     background: url('../img/family-6.png') center center no-repeat !important;
 	background-size: 126px 50px;
@@ -64,6 +72,10 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 
 .answer-slider {
 	margin-bottom: 100px;
+	width: 895px;
+}
+.price_slider {
+	width: 609px;
 }
 
 .answer-slider, .price-slider {
@@ -75,7 +87,6 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	margin-top: 75px;
 	margin-bottom: 50px;
 	// @include make-md-column(8);
-	width: 895px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -147,14 +158,13 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 		.jslider-bg {
 			position: relative; 
-			width: 853px;
-			height: 33px;
+			width: 860px;
+			height: 40px;
 			background: url('../img/slider-bg.png');
 			z-index: 10;
 			// width: 972px;
 			// height: 63px;
 			// background: url('../img/slider-full-bg.png');
-
 			i { 
 				height: 5px; 
 				position: absolute; 
@@ -188,6 +198,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 				// background-color: #185F83;
 			}
 		}
+
 		&.sliderCSS {
 			.jslider-bg {
 				.l { 
@@ -427,6 +438,11 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 
 	}
 
+	.left-tag .jslider .jslider-bg {
+		background: url('../img/slider-gradient-bg.png');
+	}	
+
+
 	.jslider-single .jslider-pointer-to,
 	.jslider-single .jslider-value-to,
 	.jslider-single .jslider-bg .v,
@@ -484,7 +500,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 			z-index: 5;
 			span {
 				font-family: $AG-Bold-Cnd;
-				font-size: 20px;
+				font-size: 28px;
 				text-transform: uppercase;
 				color: #999;
 				opacity: 1;
@@ -775,13 +791,44 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 // Results Page
 #results {
 	.price-slider {
-		margin-top: 0;
-		margin-bottom: 0;
+		margin-top: 30px;
+		margin-bottom: 20px;
+			width: 609px;
 		.jslider-bg {
 			position: relative; 
-			width: 475px;
-			height: 42px;
+			width: 609px;
+			height: 28px;
 			background: url('../img/slider-results-bg.png');
+		}
+	}
+	.price-slider.pointer-labels {
+		.jslider {
+			.jslider-value {
+				// top: -52px;
+				top: 0;
+				opacity: 1 !important;
+				background: rgba(76, 76, 76, 0.161) !important;
+				box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+				width: 63px;
+				height: 61px;
+				margin-top: -48px;
+				margin-left: -30px !important;
+				display: block;
+				padding-top: 10px;
+				text-align: center;
+				font-family: $AG-Bold-Cnd;
+				font-size: 20px;
+				text-transform: uppercase;
+				color: #999;
+				z-index: 5;
+				span {
+					font-family: $AG-Bold-Cnd;
+					font-size: 28px;
+					text-transform: uppercase;
+					color: #999;
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
