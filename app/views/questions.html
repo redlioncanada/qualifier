@@ -1,38 +1,42 @@
 <!-- Application Start Screen -->
 
-<div class="main-content slidey" ng-class="{
-		animateLeft: controls.controlClicked == 'next',
-		animateRight: controls.controlClicked == 'previous'
-	}" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
-	<div class="content-inner">
+<div class="slidey-wrap-all">
 
-		<!-- Top of main section -->
-		<div class="app-content-main-top">
-			<div class="app-content-main-top-left">
-				<h2 ng-bind="qs.text[0].question"></h2>
-				<h2 class="main-question-more" ng-if="!!qs.text[0].question_more"  ng-bind="qs.text[0].question_more"></h2>
-				<h3 ng-if="!!qs.text[0].sub_question" ng-bind="qs.text[0].sub_question"></h3>
+	<div class="main-content slidey" ng-class="{
+			animateLeft: controls.controlClicked == 'next',
+			animateRight: controls.controlClicked == 'previous'
+		}" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
+		<div class="content-inner">
 
-				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!qs.text[0].explanation_title" tooltip-placement="bottom" tooltip="{{qs.text[0].explanation}}">
-						<span class="btn-icon">
-							<span>?</span>
-						</span>
-						<span class="btn-text" ng-bind="qs.text[0].explanation_title"></span>
-					</a>
-					<a class="btn-wrap" ng-if="!!qs.text[0].info_title" tooltip-placement="bottom" tooltip="{{qs.text[0].info}}">
-						<span class="btn-icon">
-							<span>i</span>
-						</span>
-						<span class="btn-text" ng-bind="qs.text[0].info_title"></span>
-					</a>	
+			<!-- Top of main section -->
+			<div class="app-content-main-top">
+				<div class="app-content-main-top-left">
+					<h2 ng-bind="qs.text[0].question"></h2>
+					<h2 class="main-question-more" ng-if="!!qs.text[0].question_more"  ng-bind="qs.text[0].question_more"></h2>
+					<h3 ng-if="!!qs.text[0].sub_question" ng-bind="qs.text[0].sub_question"></h3>
+
+					<div class="extra-info-wrap">
+						<a class="btn-wrap" ng-if="!!qs.text[0].explanation_title" tooltip-placement="bottom" tooltip="{{qs.text[0].explanation}}">
+							<span class="btn-icon">
+								<span>?</span>
+							</span>
+							<span class="btn-text" ng-bind="qs.text[0].explanation_title"></span>
+						</a>
+						<a class="btn-wrap" ng-if="!!qs.text[0].info_title" tooltip-placement="bottom" tooltip="{{qs.text[0].info}}">
+							<span class="btn-icon">
+								<span>i</span>
+							</span>
+							<span class="btn-text" ng-bind="qs.text[0].info_title"></span>
+						</a>	
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
+		
 
-	<div ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
+		<div ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
+		</div>
+		
 	</div>
-	
+
 </div>

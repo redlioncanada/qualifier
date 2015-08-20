@@ -289,9 +289,21 @@
 	max-width: 100%;
 }
 
+.slidey-wrap-all {
+	position: relative;
+	left: 50%;
+	height: 600px;
+}
+.slidey {
+	position: absolute;
+	left: -(1160px / 2);
+	width: 1160px;
+}
+
 .slidey.animateLeft {
 	&.ng-hide-remove {
 		transition: all ease-in-out 1s;
+		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(200%);
 	    opacity: 0;
 	}
@@ -302,6 +314,7 @@
 
 	&.ng-hide-add {
 		transition: all ease-in-out 1s;
+		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
 	    opacity: 1;
 	}
@@ -314,6 +327,7 @@
 .slidey.animateRight {
 	&.ng-hide-remove {
 		transition: all ease-in-out 1s;
+		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(-200%);
 	    opacity: 0;
 	}
@@ -324,6 +338,7 @@
 
 	&.ng-hide-add {
 		transition: all ease-in-out 1s;
+		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
 	    opacity: 1;
 	}
