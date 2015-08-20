@@ -1,6 +1,9 @@
 <!-- Application Start Screen -->
 
-<div class="main-content slidey" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
+<div class="main-content slidey" ng-class="{
+		animateLeft: controls.controlClicked == 'next',
+		animateRight: controls.controlClicked == 'previous'
+	}" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
 	<div class="content-inner">
 
 		<!-- Top of main section -->
