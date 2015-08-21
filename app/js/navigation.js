@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter) {
+  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window) {
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
@@ -23,8 +23,12 @@ angular.module('App')
 	};
 
 	$scope.startOver = function () {
-		$rootScope.scoringQuestions = {}
-		$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-		$rootScope.show()
+		//$rootScope.scoringQuestions = {}
+		//$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
+		//$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
+		//$rootScope.show()
+		//$scope.navToQuestions();
+		$location.path('/');
+    	$window.location.reload();
 	}
 });

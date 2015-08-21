@@ -12,7 +12,7 @@ https://www.npmjs.com/package/ng-slider -->
     <!-- <div class="slider-bg slider-bg-left"></div>
     <div class="slider-bg slider-bg-right"></div> -->
 
-    <div class="slider-wrap" ng-init="setLast()"  ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}">
+    <div class="slider-wrap" ng-init="setLast(qs)"  ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}">
 
 		<input ng-model="qs.text[0].answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="qs.text[0].options" />
 	</div>

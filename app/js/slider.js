@@ -13,9 +13,10 @@ angular.module('App')
   			}
   		}
   	}
-    $scope.setLast = function () {
-      for (var i in $rootScope.questionsData.question.show.answers) {
-        $rootScope.questionsData.question.show.last = $rootScope.questionsData.question.show.answers[i].value
+    $scope.setLast = function (qs) {
+      console.log("SET LAST");
+      for (var i in qs.text[0].answers) {
+        qs.text[0].last = qs.text[0].answers[i].value
       }
     }
 });

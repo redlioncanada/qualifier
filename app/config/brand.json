@@ -16,7 +16,7 @@
 		"resultsPage" : "Results Page",
 		"model" : "model",
 		"changeYourAnswer" : "Click on an icon to change your answer",
-		"startover" : "Start<br />Over",
+		"startover" : "Start<br />&nbsp;Over",
 		"backtoresults" : "Back to<br />Results"
 	},
 	"questions" : {
@@ -156,7 +156,7 @@
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider",
 					"oneAnswer" : false,
-					"classes" : "slider-pointer-labels no-jslider-scale",
+					"classes" : "pointer-labels no-jslider-scale left-tag",
 					"answer" : 1,
 					"options" : { 
 						"from" : 27,

@@ -1,5 +1,4 @@
 <!-- Application Start Screen -->
-
 <div class="main-content"> 
 	<div class="content-inner">
 
@@ -26,10 +25,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+		
 
-	<div class="slidey" style="min-width: 1160px" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name" ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
+	<div class="slidey-wrap-all">
+		<div ng-class="{
+				animateLeft: controls.controlClicked == 'next',
+				animateRight: controls.controlClicked == 'previous'
+			}" style="min-width: 1160px" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name" ng-if="!!qs.text[0].type" class="slidey app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
+		</div>
 	</div>
-	
 </div>
