@@ -15,7 +15,9 @@
 		"otherSuggestion" : "Other Suggestion",
 		"resultsPage" : "Results Page",
 		"model" : "model",
-		"changeYourAnswer" : "Click on an icon to change your answer"
+		"changeYourAnswer" : "Click on an icon to change your answer",
+		"startover" : "Start<br />Over",
+		"backtoresults" : "Back to<br />Results"
 	},
 	"questions" : {
 		"Appliance" : {
@@ -150,7 +152,6 @@
 					"question" : "We’ve got the perfect wall oven for your family.",
 					"question_more" : "Just tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
-					"side_label" : "width",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider",
@@ -283,7 +284,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A baker always covered in flour\"",
+							"text" : "\"A baker always covered in flour.\"",
 							"value" : "baker",
 							"scoring" : {
 								"trueConvection" : 1
@@ -294,7 +295,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Enjoys trying new recipes\"",
+							"text" : "\"Enjoys trying new recipes.\"",
 							"value" : "both",
 							"scoring" : {
 								"trueConvection" : 1
@@ -304,7 +305,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Someone that cooks because they have to\"",
+							"text" : "\"Someone who cooks because they have to.\"",
 							"value" : "neither",
 							"scoring" : {
 							},
@@ -313,7 +314,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A home chef\"",
+							"text" : "\"A home chef.\"",
 							"value" : "home chef",
 							"scoring" : {
 								"trueConvection" : 1
@@ -323,7 +324,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"The frozen food expert\"",
+							"text" : "\"The frozen food expert.\"",
 							"value" : "not a home chef",
 							"scoring" : {
 							},
@@ -1462,7 +1463,6 @@
 					"type" : "slider-multiple",
 					"classes" : "slider-pointer-labels no-jslider-scale left-tag",
 					"oneAnswer" : false,
-					"side_label" : "width",
 					"answer" : 33,
 					"options" : { 
 						"from" : 30,
@@ -1540,7 +1540,7 @@
 				},
 				{
 					"answer" : 66,
-					"side_label" : "height",
+					"dimension_label" : "height",
 					"options" : {       
 					    "from": 66,
 					    "to": 71,
@@ -1922,8 +1922,8 @@
 				{
 					"question" : "For the most part, your family’s fridge is...",
 					"sub_question" : "Select one",
-					"explanation_title" : "Why Are You Asking Me About Water?",
-					"explanation" : "Some of our fridge models provide water dispensing features. By understanding how you consume water, we can suggest a fridge that will best suit your needs.",
+					"explanation_title" : "Why Are You Asking Me About organization?",
+					"explanation" : "After assessing your technique we can suggest ways to optimize organization for your home.",
 					"type" : "radio-4",
 					"oneAnswer" : true,
 					"answers" : [
@@ -2464,8 +2464,8 @@
 				{
 					"question" : "Select your style:",
 					"sub_question" : "Select One",
-					"explanation_title" : "Why are you asking me about organization?",
-					"explanation" : "After assessing your technique we can suggest ways to optimize organization for your home.",
+					"explanation_title" : "Why are you asking me about style?",
+					"explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you.",
 					"type" : "boxes-picture-2-radio",
 					"oneAnswer" : true,
 					"answers" : [

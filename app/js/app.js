@@ -155,10 +155,10 @@ App.filter('byPrice', function() {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $resource) {
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($rootScope, $state, $resource, localStorageService) {
   console.log("Run");
   $state.go('loading');
-
+    localStorageService.clearAll();
 
     $rootScope.objSizeClean = function (obj) {
       for (var i in obj) {
@@ -166,8 +166,6 @@ App.run(['$rootScope', '$state', "$resource", function ($rootScope, $state, $res
           obj.splice(i,1);
         }
       }
-      console.log(obj);
-      console.log(Object.keys(obj).length);
       if (!!obj) {
         return Object.keys(obj).length;
       } else {

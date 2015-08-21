@@ -3,19 +3,19 @@
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
 <div ng-controller="SliderMultipleCtrl">
-	<div class="multi-slider-wrap" ng-init="setLast()" >
-		
-		<div class="answers-main-content answer-slider pointer-labels">
+
+	<div class="multi-slider-wrap" ng-init="setLast()" > 
+
+		<!-- If the slider has a dimension value, then it appears within the label below -->
+	    <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label" style="width: 100px; clear: none; float:left">
+	        <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>
+	    </div>
+
+		<div class="answers-main-content answer-slider pointer-labels {{qs.text[0].classes}}">
 			
-			<!-- If the slider has a dimension value, then it appears within the label below -->
-		    <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
-		        <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>
-		    </div>
 
-		    <!-- Only if it has a dimension value, and now only on the left side -->
-		    <div class="slider-bg slider-bg-left" ng-if="!!qs.text[0].options.dimension_label"></div>
 
-		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}">
+		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}"  style="clear: none; float:left">
 				<input ng-model="qs.text[0].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[0].options" />
 			</div>
 
@@ -30,15 +30,15 @@ https://www.npmjs.com/package/ng-slider -->
 	</div>
 
 	<div class="multi-slider-wrap">
-		
-		<div class="answers-main-content answer-slider bottom pointer-labels">
-		    <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
-		        <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>
-		    </div>
 
-		    <div class="slider-bg slider-bg-left" ng-if="!!qs.text[0].options.dimension_label"></div>
+	    <div class="slider-large-label-wrap" ng-if="!!qs.text[1].options.dimension_label" style="width: 100px; clear: none; float:left">
+	        <span class="slider-large-label" ng-bind="qs.text[1].options.dimension_label"></span>
+	    </div>	
 
-		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[1].answer == qs.text[1].last}">
+		<div class="answers-main-content answer-slider bottom pointer-labels {{qs.text[1].classes}}">
+
+
+		    <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[1].answer == qs.text[1].last}" style="clear: none; float:left">
 		    	<input ng-model="qs.text[1].answer" ng-change="setAnswer()" type="text" id="answerSlider" slider options="qs.text[1].options" />
 		    </div>
 

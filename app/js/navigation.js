@@ -21,4 +21,10 @@ angular.module('App')
 		}
 		return false
 	};
+
+	$scope.startOver = function () {
+		$rootScope.scoringQuestions = {}
+		$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
+		$rootScope.show()
+	}
 });

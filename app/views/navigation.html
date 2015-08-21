@@ -37,15 +37,33 @@
 				</div>
 
 			</div>
-		</div>
-	</div>
 
-	<div class="app-content-main-bottom-right">
-		<div class="compare-btn-wrap" ng-if="!!questionsData.question && objSizeClean(nextQs) == 0">
-			<a id="compare" class="btn btn-compare" ng-click="log((objSizeClean(nextQs) == 0));next(true)">
-				<span>Back to Results</span>
+
+		<div class="startover-btn-wrap" ng-if="!!objSizeClean(questionsData.scoringQuestions)">
+			<a id="startover" class="btn btn-startover" ng-click="startOver()">
+				<span ng-bind-html="brandData.apptext.startover"></span>
 			</a>
 		</div>
+		<div class="backtoresults-btn-wrap" ng-if="!!questionsData.question && objSizeClean(nextQs) == 0">
+			<a id="backtoresults" class="btn btn-backtoresults" ng-click="log((objSizeClean(nextQs) == 0));next(true)">
+				<span ng-bind-html="brandData.apptext.backtoresults"></span>
+			</a>
+		</div>
+
+
+
+
+
+		</div>
+
+
+
+
+
 	</div>
+
+
+
+
 
 </div>

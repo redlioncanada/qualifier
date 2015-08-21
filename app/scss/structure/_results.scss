@@ -33,9 +33,8 @@
 		display: inline-block;
 		float: right;
 		a {
-			width: 48px;
-			height: 47px;
-			background: #002e58;
+			width: 36px;
+			height: 36px;
 			text-align: center;
 			display: inline-block;
 			margin-left: 1px;
@@ -43,9 +42,6 @@
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
 			border-radius: 3px;
-			&:hover {
-				background: #00153F;
-			}
 			span {
 				width: 30px;
 				height: 30px;
@@ -124,7 +120,7 @@
 	.product-price-sku-wrap {
 		// @include make-row;
 		width: 100%;
-		float: left;
+		font-size: 20px;
 		display: block;
 		padding-bottom: 20px;
 	}

@@ -1,27 +1,27 @@
 <!-- Application Start Screen -->
 
-<div class="main-content slidey" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name"> 
+<div class="main-content"> 
 	<div class="content-inner">
 
 		<!-- Top of main section -->
 		<div class="app-content-main-top">
 			<div class="app-content-main-top-left">
-				<h2 ng-bind="qs.text[0].question"></h2>
-				<h2 class="main-question-more" ng-if="!!qs.text[0].question_more"  ng-bind="qs.text[0].question_more"></h2>
-				<h3 ng-if="!!qs.text[0].sub_question" ng-bind="qs.text[0].sub_question"></h3>
+				<h2 ng-bind="questionsData.question.show.question"></h2>
+				<h2 class="main-question-more" ng-if="!!questionsData.question.show.question_more"  ng-bind="questionsData.question.show.question_more"></h2>
+				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!qs.text[0].explanation_title" tooltip-placement="bottom" tooltip="{{qs.text[0].explanation}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
 						<span class="btn-icon">
 							<span>?</span>
 						</span>
-						<span class="btn-text" ng-bind="qs.text[0].explanation_title"></span>
+						<span class="btn-text" ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="btn-wrap" ng-if="!!qs.text[0].info_title" tooltip-placement="bottom" tooltip="{{qs.text[0].info}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
 						<span class="btn-icon">
 							<span>i</span>
 						</span>
-						<span class="btn-text" ng-bind="qs.text[0].info_title"></span>
+						<span class="btn-text" ng-bind="questionsData.question.show.info_title"></span>
 					</a>	
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 	</div>
 	
 
-	<div ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
+	<div class="slidey" style="min-width: 1160px" ng-repeat="(name, qs) in questionsData.questions" ng-show="name==questionsData.question.name" ng-if="!!qs.text[0].type" class="app-answers" ng-include="'views/answers/'+qs.text[0].type+'.html'">
 	</div>
 	
 </div>
