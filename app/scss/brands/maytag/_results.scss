@@ -42,6 +42,7 @@
 			font-family: $AG-Bold-Cnd;
 			font-size: 16px;
 			color: #022d58; 
+			text-transform: uppercase;
 		}
 		.product-price-sku-wrap {
 			font-family: $AG-Bold-Cnd;
@@ -70,6 +71,9 @@
 					margin-top: 0px;
 					margin-bottom: 0px;
 					font-size: 20px;
+				}
+				.product-price-sku-wrap {
+					color: #7f7f7f;
 				}
 			}
 			.product-details {
@@ -191,6 +195,22 @@
 		.product-details {
 			padding-left: 43px;
 			padding-right: 43px;
+
+			h4.sales-feature, h4.sales-feature-additional {
+				position: relative;
+				overflow: visible; // show all of icon even outside boundaries
+				img:first-child {
+					position: absolute;
+					left: 0px;
+					top: 50%;
+					transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					-webkit-transform: translateY(-50%);
+				}
+			}
+			h4.sales-feature {
+			  margin: 20px 0;
+			}
 		}
 		.product-img-wrap {
 			width: 250px;
@@ -228,11 +248,19 @@
 		font-family: $AG-Bold-Cnd;
 		color: #022d58;
 		font-size: 16px;
-		text-transform: uppercase;
+		text-transform: none;
 		display: inline-block;
 		text-align: left;
-		padding-left: 20px;
-
+		padding-left: 26px;
+	}
+	h4.sales-feature span[ng-bind-html="sf.headline"] {
+	  font-size: 14px;
+		padding-left: 50px;
+		text-transform: uppercase;
+		color: #686868;
+	}
+	h4.sales-feature-additional span[ng-bind-html="sf.headline"] {
+		color: #686868;
 	}
 
 	span[ng-bind-html="sf.description"] {
