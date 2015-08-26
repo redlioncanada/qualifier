@@ -5,7 +5,7 @@
 		<!-- Top of main section -->
 		<div class="app-content-main-top">
 			<div class="app-content-main-top-left">
-				<h2 ng-bind="questionsData.question.show.question"></h2>
+				<h2 ng-bind-html="questionsData.question.show.question"></h2>
 				<h2 class="main-question-more" ng-if="!!questionsData.question.show.question_more"  ng-bind="questionsData.question.show.question_more"></h2>
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 

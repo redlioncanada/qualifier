@@ -636,7 +636,7 @@
 		},
 		"Cooking - Ranges - Convection" : {
 			"next" : "Cooking - Ranges - Usage",
-			"previous" : "Cooking - Wall Ovens - Cooking Style",
+			"previous" : "Cooking - Ranges - Cooking Style",
 			"thumbnail_text" : "Convection",
 			"thumbnail_current" : "img/icon-convection-current.png",
 			"thumbnail_type" : "image",
@@ -1455,7 +1455,7 @@
 			"thumbnail_text" : "Size",
 			"text" : [
 				{
-					"question" : "We’ve got the perfect fridge for your family.",
+					"question" : "We&#39;ve got the perfect fridge for your family.",
 					"question_more" : "Just tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
@@ -1761,8 +1761,8 @@
 					"sub_question" : "Select all that apply",
 					"explanation_title" : "Why Are You Asking Me About Water?",
 					"explanation" : "Some of our fridge models provide water dispensing features. By understanding how you consume water, we can suggest a fridge that will best suit your needs.",
-					"type" : "radio-4",
-					"oneAnswer" : true,
+					"type" : "checkbox-4",
+					"oneAnswer" : false,
 					"answers" : [
 						{
 							"text" : "A nice, cold bottle of water",

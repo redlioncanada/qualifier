@@ -5,6 +5,12 @@
 	opacity : 0;
 }
 
+.price-slider {
+	.jslider-value span:before {
+	    content: "$";
+	}
+}
+
 div.people1 .jslider .jslider-value:not(.jslider-value-to) {
     background: url('../img/family-1.png') center center no-repeat !important;
 	background-size: 28px 50px;

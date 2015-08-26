@@ -132,23 +132,31 @@ App.filter('nextQuestions', function($rootScope, $filter) {
   };
 });
 
-App.filter('byPrice', function() {
+App.filter('byPrice', function($rootScope) {
   return function(items, price) {
-    console.log("score")
-      angular.forEach(items, function (item) {
-        console.log(item.score)
-      })
     var inside = [];
     var outside = [];
     var range = price.split(";")
+    range[0] = parseFloat(range[0])
+    range[1] = parseFloat(range[1])    
     angular.forEach(items, function(appliance) {
         var p =appliance.price
-        if (p >= parseFloat(range[0]) && p <= parseFloat(range[1])) {
+        if (p >= range[0] && p <= range[1]) {
           inside.push(appliance)
         } else {
           outside.push(appliance)
         }
     });
+    console.log("Inside length");
+    console.log(inside.length);
+    if (inside.length < 3) {
+        if (range[1] + $rootScope.resultsOptions.step <= $rootScope.resultsOptions.to) {
+          range[1] += $rootScope.resultsOptions.step
+        } else {
+          range[0] -= $rootScope.resultsOptions.step
+        }
+        $rootScope.controls.price = range.join(";")
+    }
     return inside.concat(outside);
   };
 });
@@ -203,6 +211,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
                 $rootScope.appliances = res.products;
                 angular.forEach( $rootScope.appliances, function (item, key) { 
                     if ($rootScope.appliances[key].appliance == "Laundry") {
+                      $rootScope.appliances[key].sku = $rootScope.appliances[key].washerSku + "/" + $rootScope.appliances[key].dryerSku
                       for (var i in item.colours) {
                         //$rootScope.appliances[key].colours[i].image = setColourURL($rootScope.appliances[key].appliance,$rootScope.appliances[key].image, $rootScope.appliances[key].colours[i].colourCode);
                         $rootScope.appliances[key].colours[i].prices = {}

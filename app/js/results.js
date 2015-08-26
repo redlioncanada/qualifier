@@ -3,12 +3,13 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope) {
 
-      $scope.resultsOptions = {
+      $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
-        "step": 100,
+        "step": 250,
         "smooth" : false,
-        "dimension": ""  
+        "threshold" : 250,
+        "dimension": ''
       }
 
   		$scope.setPriceRange = function () {
@@ -26,9 +27,9 @@ angular.module('App')
     				}
           }
   			}
-  			$scope.resultsOptions.from = minPrice
-        $scope.resultsOptions.to = maxPrice
-  			$scope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
+  			$rootScope.resultsOptions.from = minPrice
+        $rootScope.resultsOptions.to = maxPrice
+  			$rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
   		}
       if ($rootScope.questionsData.currentCount > 0) {
     		$scope.setPriceRange()
