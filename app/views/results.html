@@ -39,7 +39,7 @@
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div class="colourBar">
 								<span ng-repeat="colour in a.colours">
-									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="a.picker=colour" />
+									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
 								</span>
 							</div>
 						</div>

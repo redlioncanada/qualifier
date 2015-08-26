@@ -140,15 +140,23 @@ App.filter('byPrice', function($rootScope) {
     range[0] = parseFloat(range[0])
     range[1] = parseFloat(range[1])    
     angular.forEach(items, function(appliance) {
-        var p =appliance.price
-        if (p >= range[0] && p <= range[1]) {
-          inside.push(appliance)
-        } else {
+        var ins = false
+        angular.forEach(appliance.colours, function(colour) {
+           var p = parseFloat(colour.prices.CAD)
+           if (p >= range[0] && p <= range[1] && ins == false) {
+            inside.push(appliance)
+            ins = true
+            if (!!('picker' in appliance)) {
+              if (appliance.picker.prices.CAD < range[0] && appliance.picker.prices.CAD > range[1]) {
+                appliance.picker=colour;
+              }
+            }
+           }
+        });        
+        if (ins == false) {
           outside.push(appliance)
         }
     });
-    console.log("Inside length");
-    console.log(inside.length);
     if (inside.length < 3) {
         if (range[1] + $rootScope.resultsOptions.step <= $rootScope.resultsOptions.to) {
           range[1] += $rootScope.resultsOptions.step
