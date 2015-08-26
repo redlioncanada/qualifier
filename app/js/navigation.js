@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window) {
+  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window, $timeout) {
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
@@ -11,8 +11,21 @@ angular.module('App')
 	  	}
   	} 
 
-  	$scope.navToQuestions = function () {
-  		$state.go('main.questions')
+  	$scope.navToQuestions = function (q) {
+  		if (!!$rootScope.questionsData.question) {
+  			console.log($rootScope.questionsData.question.order, q.order);
+  			if ($rootScope.questionsData.question.order < q.order) {
+  				$rootScope.controls.controlClicked = 'next';
+  			} else {
+  				$rootScope.controls.controlClicked = 'previous';
+  			}
+  		} else {
+  			$rootScope.controls.controlClicked = 'previous';
+  		}
+  		$timeout(function() {
+	  		$rootScope.questionsData.question=q;
+	  		$state.go('main.questions')
+	  	}, 100);
   	}
 
   	$scope.byName = function(q) {
