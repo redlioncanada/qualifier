@@ -13,7 +13,6 @@ angular.module('App')
 
   	$scope.navToQuestions = function (q) {
   		if (!!$rootScope.questionsData.question) {
-  			console.log($rootScope.questionsData.question.order, q.order);
   			if ($rootScope.questionsData.question.order < q.order) {
   				$rootScope.controls.controlClicked = 'next';
   			} else {
