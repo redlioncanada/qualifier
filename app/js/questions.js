@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout) {
 
+
   	$rootScope.hasAnswer = function (q) {
   		if (!!q) {
 	  		var qtype = q.show.type;
@@ -12,7 +13,7 @@ angular.module('App')
 	            if (a.answer == 1) {
 	              return a
 	            }              
-	          } else if (qtype == "slider" || qtype == "slider-people") {
+	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "multi-slider") {
 	            if (a.value == q.show.answer) {
 	              return a
 	            }       
@@ -23,8 +24,24 @@ angular.module('App')
 	          }
 	        }
 	    }
-    	return false;
+    	return false
   	}
+
+
+  	$rootScope.questionHasAnswer = function (q) {
+  		if (!!q) {
+	  		var qtype = q.show.type;
+	        for (var ans in q.show.answers ) {
+	          var a = q.show.answers[ans]
+	          if (a.answer == true) {
+	              return true
+	          }	          	
+	          
+	        }
+	    }
+    	return false
+  	}
+
 
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
@@ -258,8 +275,7 @@ angular.module('App')
 						$rootScope.questionsData.question = hasStoredAnswer
 						$rootScope.controls.questionHasAnswer = true
 					} else {
-						$rootScope.questionsData.question = $rootScope.questionsData.questions[name]
-						$rootScope.controls.questionHasAnswer = false	  				
+						$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
 					} 
 				} else {
 		  			$rootScope.questionsData.question = null;
@@ -267,6 +283,7 @@ angular.module('App')
 
 		  		if (!!$rootScope.questionsData.question) {
 					$scope.show(); 	
+					$rootScope.controls.questionHasAnswer = $rootScope.questionHasAnswer($rootScope.questionsData.question)	
 				} else {
 					$state.go('main.results')
 				}
