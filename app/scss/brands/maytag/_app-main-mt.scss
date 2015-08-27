@@ -25,7 +25,7 @@
 		letter-spacing: 1px;
 	}
 	.app-content-main-top-left {
-		width: 90%;
+		width: 100%;
 		padding-left: 70px;
 		padding-right: 70px;
 	}
@@ -102,7 +102,10 @@
 .app-answers {
 	float: left;
 	.answer-option {
-		&.category {
+		&.sub-category {
+			margin-top: 100px;
+		}
+		&.category, &.sub-category {
 			margin-left: 40px;
 			margin-right: 40px;
 		}
@@ -351,6 +354,24 @@
 	position: absolute;
 	left: -(1160px / 2);
 	width: 1160px;
+
+	.answers-main-content {
+		&.answer-slider {
+			margin-top: 133px;
+		}
+
+		&.regular-2-container {
+			margin-top: 123px;
+		}
+
+		&.regular-4-container {
+			margin-top: 78px;
+		}
+
+		&.picture-2-container, &.boxes-icon-2-container, &.picture-3-container {
+			margin-top: 68px;
+		}
+	}
 }
 
 .slidey.animateLeft {
