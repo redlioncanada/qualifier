@@ -182,7 +182,13 @@
 
 .app-content-main-bottom {
 	.btn-next, .btn-prev {
+		opacity: 0.7;
+		-webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
 		&:hover {
+			opacity: 1;
 			.btn {
 				background-color: #002e58;
 			}
@@ -283,33 +289,21 @@
 	}
 }
 
+//popover styles
 .app-content-main-bottom-center .icon-nav-wrap {
-	// &:not(:last-child):after {
-	// 	content: "";
-	// 	background: #666666;
-	// 	width: 1px;
-	// 	height: 20px;
-	// 	display: inline-block;
-	// 	position: relative;
-	// 	float: left;
-	// 	margin-top: 10px;
-	// }
-	// &:nth-child(1), &:nth-child(2) {
-	// 	&:after {
-	// 		content: "";
-	// 		background: #666666;
-	// 		width: 1px;
-	// 		height: 42px;
-	// 		display: inline-block;
-	// 		// left: -50px;
-	// 		// position: absolute;
-	// 		// left: 10px;
-	// 		// top: 0;
-	// 		position: relative;
-	// 		float: left;
-	// 		margin-top: 0px;
-	// 	}
-	// }
+	&:not(:last-child) {
+		.popover-title {
+			text-transform: uppercase;
+			border-bottom: 1px solid #FFF;
+		}
+		.popover {
+			border-radius: 0px;
+		}
+		* {
+			font-size: 9pt;
+			color: #FFF;
+		}
+	}
 }
 
 .bottom-nav-intructions {
@@ -370,14 +364,16 @@
 			margin-top: 123px;
 		}
 
-		&.regular-4-container {
+		&.regular-3-container, &.regular-4-container {
 			margin-top: 78px;
 		}
 
-		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-5-container {
+		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-4-container, &.boxes-icon-5-container {
 			margin-top: 68px;
 		}
 	}
+
+
 }
 
 .slidey.animateLeft {

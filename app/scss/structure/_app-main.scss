@@ -23,8 +23,10 @@
 	@include make-row;
 	padding-bottom: 25px;
 	@include noselect;
+
 	.app-content-main-top-left {
 		@include make-md-column(8);
+		min-height: 110px;
 	}
 	.app-content-main-top-right {
 		@include make-md-column(4);
