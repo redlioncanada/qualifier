@@ -26,7 +26,7 @@
 
 	.app-content-main-top-left {
 		@include make-md-column(8);
-		min-height: 110px;
+		min-height: 146px;
 	}
 	.app-content-main-top-right {
 		@include make-md-column(4);
