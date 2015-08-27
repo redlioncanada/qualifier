@@ -7,7 +7,7 @@
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question &&!questionsData.question.show.oneAnswer">
+		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question &&(!questionsData.question.show.oneAnswer || !!controls.questionHasAnswer)">
 			<img class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 
@@ -29,7 +29,7 @@
 				      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 			    	</a>      
 				</div>
-
+ 
 				<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 			    	<a class="icon-nav">
 				      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
