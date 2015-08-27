@@ -182,7 +182,13 @@
 
 .app-content-main-bottom {
 	.btn-next, .btn-prev {
+		opacity: 0.7;
+		-webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
 		&:hover {
+			opacity: 1;
 			.btn {
 				background-color: #002e58;
 			}
@@ -370,11 +376,11 @@
 			margin-top: 123px;
 		}
 
-		&.regular-4-container {
+		&.regular-3-container, &.regular-4-container {
 			margin-top: 78px;
 		}
 
-		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-5-container {
+		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-4-container, &.boxes-icon-5-container {
 			margin-top: 68px;
 		}
 	}
