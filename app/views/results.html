@@ -35,11 +35,12 @@
 							<img ng-if="a.appliance!='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
 							<img ng-if="a.appliance=='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/{{a.image}}" style="width: 220px">
 						</div>
-						<div class="product-colour-picker-wrap" ng-if="a.appliance!='Laundry'">
+						<div class="product-colour-picker-wrap">
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div class="colourBar">
 								<span ng-repeat="colour in a.colours">
-									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
+									<img ng-if="a.appliance!='Laundry'" ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
+									<img ng-if="a.appliance=='Laundry'" ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.code}}-MT.png" />
 								</span>
 							</div>
 						</div>

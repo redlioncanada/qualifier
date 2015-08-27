@@ -1,9 +1,9 @@
-<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
+<div ng-controller="NavigationCtrl" style="clear: both;" class="app-content-main-bottom">
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
 	<div class="app-nav-arrows">
-		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="objSize(questionsData.scoringQuestions)!=0">
+		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
@@ -17,7 +17,7 @@
 		
 	</div>
 
-	<div class="app-content-main-bottom-center">
+	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
 		<div class="bottom-nav-wrap">
 			<div class="bottom-nav-intructions">
 				<span class="instructions">Click on an icon to change your answer</span>
