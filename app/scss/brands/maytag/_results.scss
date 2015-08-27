@@ -159,7 +159,7 @@
 			}
 			.product-details {
 				padding-top: 33px;
-				padding-bottom: 33px;
+				padding-bottom: 21px;
 				padding-left: 55px;
 				padding-right: 55px;
 
@@ -231,6 +231,7 @@
 		}
 		.btn-wrap {
 			text-align: center;
+			padding-top: 17px;
 		}
 		
 	}
@@ -260,12 +261,15 @@
 		color: #686868;
 	}
 	h4.sales-feature-additional span[ng-bind-html="sf.headline"] {
-		color: #686868;
+		color: #8e8e8e;
+		font-family: $AG-stack;
+		font-size: 7pt;
+		vertical-align: middle;
 	}
 
 	span[ng-bind-html="sf.description"] {
 		font-size: 10px;
-		color: #686868;
+		color: #adadad;
 		text-align: left;
 	}
 }

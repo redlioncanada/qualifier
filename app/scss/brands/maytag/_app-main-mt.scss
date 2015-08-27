@@ -2,14 +2,18 @@
 
 #main {
 	background: white;
+	overflow-x: hidden;
 }
 
 .app-content-main-top {
+	width: 1160px;
+	margin: 0 auto;
+
 	h2, h3 {
 		font-family: $AG-Bold-Cnd;
 	}
 	h2 {
-		color: #333333;
+		color: #292929;
 		letter-spacing: 1px;
 	}
 	h2.main-question-more {
@@ -17,11 +21,13 @@
 		margin-top: 0;
 	}
 	h3 {
-		color: #5c5c5c;
+		color: #7e7e7e;
+		letter-spacing: 1px;
 	}
 	.app-content-main-top-left {
 		width: 90%;
-
+		padding-left: 70px;
+		padding-right: 70px;
 	}
 	.app-content-main-top-right {
 		.btn {
@@ -331,8 +337,8 @@
 
 
 .body {
-	min-height: 500px;
-	overflow-x: hidden;
+	min-height: 518px;
+	overflow: hidden;
 	max-width: 100%;
 }
 
