@@ -364,9 +364,14 @@
 			margin-top: 123px;
 		}
 
-		&.regular-3-container, &.regular-4-container {
+		&.regular-3-container, &.regular-4-container, &.regular-4-container.answersize34 {
 			margin-top: 78px;
 		}
+
+		&.regular-4-container.answersize56 {
+			margin-top: 3px;
+		}
+
 
 		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-4-container, &.boxes-icon-5-container {
 			margin-top: 68px;
