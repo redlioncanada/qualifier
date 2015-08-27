@@ -39,7 +39,7 @@
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div class="colourBar">
 								<span ng-repeat="colour in a.colours">
-									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="a.picker=colour" />
+									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
 								</span>
 							</div>
 						</div>
@@ -50,12 +50,14 @@
 							</span>
 							<span class="product-sku">
 								<span bo-text="brandData.apptext.model"></span>:&nbsp; 
-								<span>{{a.sku}}</span>
+								<span>{{a.picker.sku}}</span>
 							</span>
 
 						</div>
 						<div class="product-details-wrap">
-							<h2><span class="product-name" ng-bind-html="a.name"></span> </h2>
+							<h2><span ng-if="a.appliance!='Laundry'" class="product-name" ng-bind-html="a.name"></span> </h2>
+							<h2><span ng-if="a.appliance=='Laundry'" class="product-name" ng-bind-html="a.washerName"></span> </h2>
+							<h2><span ng-if="a.appliance=='Laundry'" class="product-name" ng-bind-html="a.dryerName"></span> </h2>
 							
 							<div class="product-details">
 								<div ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 

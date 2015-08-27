@@ -11,7 +11,18 @@ angular.module('App')
 	  	}
   	} 
 
-  	$scope.navToQuestions = function () {
+  	$scope.navToQuestions = function (q) {
+  		if (!!$rootScope.questionsData.question) {
+  			console.log($rootScope.questionsData.question.order, q.order);
+  			if ($rootScope.questionsData.question.order < q.order) {
+  				$rootScope.controls.controlClicked = 'next';
+  			} else {
+  				$rootScope.controls.controlClicked = 'previous';
+  			}
+  		} else {
+  			$rootScope.controls.controlClicked = 'previous';
+  		}
+  		$rootScope.questionsData.question=q;
   		$state.go('main.questions')
   	}
 
