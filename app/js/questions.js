@@ -232,6 +232,52 @@ angular.module('App')
 		return newq
 	}
 
+	$rootScope.moveToQuestion = function (name, done) {
+		// Start - Make sure to delete future questions if this answer has changed the path
+  		// if this question doesn't set next, then its fine
+  		// if this question does, then delete everything after
+  		// this should happen when stuff moves
+  		var hasNext = false
+  		if (!!$rootScope.questionsData.question) {
+	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
+	  			if ('next' in item) 
+	  				hasNext = true
+	  		})
+	  		if ( !!hasNext ) {
+		  		angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+		  			if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
+		  				delete $rootScope.questionsData.scoringQuestions[item.name]
+		  			}
+		  		})  					
+	  		}
+	  	}
+		// End - Make sure to delete future questions if this answer has changed the path
+		$scope.recalculateResults();
+		if (!!name && !done) {
+			var hasStoredAnswer = localStorageService.get(name)
+			if (!!hasStoredAnswer) {
+				$rootScope.questionsData.question = hasStoredAnswer
+				$rootScope.controls.questionHasAnswer = true
+			} else {
+				$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
+			} 
+		} else {
+  			$rootScope.questionsData.question = null;
+  		}
+
+  		if (!!$rootScope.questionsData.question) {
+			$scope.show(); 	
+			$rootScope.controls.questionHasAnswer = $rootScope.questionHasAnswer($rootScope.questionsData.question)	
+  			// Is the question already in the answered questions queue
+  			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
+	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
+	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
+  			}
+		} else {
+			$state.go('main.results')
+		}	
+	}
+
   	$rootScope.next = function (done) {
   		$rootScope.controls.controlClicked = 'next';
 
@@ -240,29 +286,6 @@ angular.module('App')
   		$timeout(function() {
 	  		// Make sure there is an answer
 	  		if (!!$rootScope.controls.questionHasAnswer || !!done) {
-	  			// Is the question already in the answered questions queue
-	  			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
-		  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
-		  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
-	  			} else {
-	  				// if this question doesn't set next, then its fine
-	  				// if this question does, then delete everything after
-	  				var hasNext = false
-	  				angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
-	  					if ('next' in item) 
-	  						hasNext = true
-	  				})
-	  				if ( !!hasNext ) {
-		  				angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-		  					if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
-		  						delete $rootScope.questionsData.scoringQuestions[item.name]
-		  					}
-		  				})  					
-	  				}
-	  			}
-	  			//localStorageService.set($rootScope.questionsData.question.name, JSON.stringify($scope.freshQuestion($rootScope.questionsData.question)));
-
-	  			$scope.recalculateResults();
 	  			var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
 		  		if ("next" in $rootScope.questionsData.question) {
 		  			var name = $rootScope.questionsData.question.next
@@ -270,24 +293,7 @@ angular.module('App')
 		  		else if ("next" in hasAnswer) {
 		  			var name = hasAnswer.next
 		  		}
-		  		if (!!name && !done) {
-					var hasStoredAnswer = localStorageService.get(name)
-					if (!!hasStoredAnswer) {
-						$rootScope.questionsData.question = hasStoredAnswer
-						$rootScope.controls.questionHasAnswer = true
-					} else {
-						$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
-					} 
-				} else {
-		  			$rootScope.questionsData.question = null;
-		  		}
-
-		  		if (!!$rootScope.questionsData.question) {
-					$scope.show(); 	
-					$rootScope.controls.questionHasAnswer = $rootScope.questionHasAnswer($rootScope.questionsData.question)	
-				} else {
-					$state.go('main.results')
-				}
+		  		$rootScope.moveToQuestion(name, done)
 	  		} 
   		}, 100);
 
@@ -302,27 +308,21 @@ angular.module('App')
         // $timeout is a hacky way to make sure the above assignment propagates before
         // any animation takes place.
   		$timeout(function() {
-	   		var q = null
+	   		var name = null
 	   		if (!!$rootScope.questionsData.question) {
 		  		if ("previous" in $rootScope.questionsData.question) {
-			  		q = $rootScope.questionsData.question.previous
+			  		name = $rootScope.questionsData.question.previous
 			  	}
 			} else {
 				$state.go("main.questions")
 			    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
 			    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
 			      if (item.order == l) {
-			      	q = item.name
+			      	name = item.name
 			      }
 			    })			
 			}
-			var hasStoredAnswer = localStorageService.get(q)
-	  		if (!!hasStoredAnswer) {
-	  			$rootScope.questionsData.question = hasStoredAnswer
-	  		} else {
-	  			$rootScope.questionsData.question = $rootScope.questionsData.questions[q]
-	  		}
-	  		$rootScope.controls.questionHasAnswer = true 
+			$rootScope.moveToQuestion(name)
 	  	}, 100);
 
   	}
@@ -335,8 +335,9 @@ angular.module('App')
 	  	$rootScope.questionsData.scoringQuestions = {};
 	  	$rootScope.questionsData.currentCount = null;
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
-	  	$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-	  	$rootScope.show()
+	  	$rootScope.moveToQuestion("Appliance")
+	  	//$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
+	  	//$rootScope.show()
   	}
 
 });
