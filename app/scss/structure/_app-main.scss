@@ -15,7 +15,7 @@
 
 .main {
 	.main-content {
-		min-height: 300px;
+		min-height: 125px;
 	}
 }
 
@@ -75,8 +75,8 @@
 
 .app-content-main-bottom {
 	@include make-row;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	@include noselect;
 	// .app-content-main-bottom-left {
 	// 	@include make-md-column(1);
@@ -87,6 +87,7 @@
 		// @include make-md-column(10);
 		padding-left: 0;
 		padding-right: 0;
+		padding-top: 25px;
 		text-align: center;
 
 	}
@@ -111,10 +112,10 @@
 		}
 	}
 	.btn-prev {
-		left: -25px;
+		left: 25px;
 	}
 	.btn-next {
-		right: -25px;
+		right: 25px;
 	}
 	.btn {
 		padding: 3px 18px;
