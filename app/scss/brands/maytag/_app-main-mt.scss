@@ -355,6 +355,12 @@
 	left: -(1160px / 2);
 	width: 1160px;
 
+	div[ng-controller="SliderMultipleCtrl"] .answers-main-content {
+		&.answer-slider {
+			margin-top: 40px;
+		}
+	}
+
 	.answers-main-content {
 		&.answer-slider {
 			margin-top: 133px;
@@ -368,7 +374,7 @@
 			margin-top: 78px;
 		}
 
-		&.picture-2-container, &.boxes-icon-2-container, &.picture-3-container {
+		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-5-container {
 			margin-top: 68px;
 		}
 	}
