@@ -21,9 +21,6 @@ angular.module('App')
 	              return a
 	            }              
 	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "multi-slider") {
-	          	if (!q.show.touched) {
-	          		return false
-	          	}
 	            if (a.value == q.show.answer) {
 	              return a
 	            }       
