@@ -83,6 +83,9 @@ gulp.task('components', function () {
     gulp.src('app/components/*/*/*.js')
         .pipe(gulp.dest('build/components'));
 
+    gulp.src('app/js/components/*/*/*.js')
+        .pipe(gulp.dest('build/components'))
+
     return gulp.src('app/components/*/*.js')
         .pipe(gulp.dest('build/components'));
 });
