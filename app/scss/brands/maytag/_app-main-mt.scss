@@ -176,7 +176,7 @@
 			}
 		}
 		.category-name {
-			margin-top: 25px;
+			margin-top: 20px;
 			display: block;
 			color: #000000;
 			font-size: 19px;
@@ -323,7 +323,7 @@
 	position: relative;
 	display: block;
 	// width: 100%;
-	margin-left: -78px;
+
 	.instructions {
 		color: #a7a7a7;
 		font-size: 10px;
@@ -356,6 +356,7 @@
 	position: relative;
 	left: 50%;
 	height: 380px;
+	margin-top: -50px;
 }
 .slidey {
 	position: absolute;
