@@ -68,8 +68,16 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('components', ['components1'], function(cb) {
+    gulp.src('app/js/components/*/*/*.js')
+        .pipe(gulp.dest('build/components'))
+
+    return gulp.src('app/js/components/*/*.js')
+        .pipe(gulp.dest('build/components'));
+});
+
 // process Components JS files and return the stream.
-gulp.task('components', function () {
+gulp.task('components1', function () {
 
     gulp.src('app/components/*/*/*/*.png')
         .pipe(gulp.dest('build/components'));
@@ -83,11 +91,9 @@ gulp.task('components', function () {
     gulp.src('app/components/*/*/*.js')
         .pipe(gulp.dest('build/components'));
 
-    gulp.src('app/js/components/*/*/*.js')
-        .pipe(gulp.dest('build/components'))
-
     return gulp.src('app/components/*/*.js')
         .pipe(gulp.dest('build/components'));
+    
 });
 
 // process Components JS files and return the stream.
