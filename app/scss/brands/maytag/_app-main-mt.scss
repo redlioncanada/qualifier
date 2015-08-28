@@ -56,6 +56,10 @@
 				font-size: 20px;
 				position: relative;
 				bottom: 2px;
+				display: block;
+				float: left;
+				text-align: center;
+				width: 100%;
 			}
 
 		}
@@ -64,7 +68,8 @@
 			color: #000;
 			font-size: 8px;
 			position: relative;
-			bottom: 5px;
+			left: 5px;
+			bottom: 9px;
 			text-transform: uppercase;
 		}
 	}
@@ -72,28 +77,30 @@
 
 .tooltip {
 	&.top .tooltip-arrow {
-		border-top-color: #02274b;
+		border-top-color: #002e5f;
 	}
 	&.bottom .tooltip-arrow {
-		border-bottom-color: #02274b;
+		border-bottom-color: #002e5f;
 	}
 	&.left .tooltip-arrow {
-		border-right-color: #02274b;
+		border-right-color: #002e5f;
 	}
 	&.right .tooltip-arrow {
-		border-left-color: #02274b;
+		border-left-color: #002e5f;
 	}
 	.tooltip-arrow {
-		opacity: 0.9;
 		margin-left: -5px;
-		border-width: 0 5px 50px
+		border-width: 0 5px 50px;
+		border-radius: 0px;
 	}
 	.tooltip-inner {
 		color: #fff;
-		background: #02274b;
+		background: #002e5f;
 		font-size: 10px;
 		line-height: 12px;
 		padding: 30px 15px;
+		border-radius: 0px;
+		opacity: 1;
 	}
 }
 
@@ -181,13 +188,15 @@
 }
 
 .app-content-main-bottom {
+	.btn-next.disabled, .btn-prev.disabled, .btn-prev {
+		opacity: 0.5;
+	}
 	.btn-next, .btn-prev {
-		opacity: 0.7;
 		-webkit-transition: all 0.3s ease;
 	    -moz-transition: all 0.3s ease;
 	    -ms-transition: all 0.3s ease;
 	    transition: all 0.3s ease;
-		&:hover {
+		&:hover:not(.disabled) {
 			opacity: 1;
 			.btn {
 				background-color: #002e58;
@@ -357,6 +366,12 @@
 	}
 
 	.answers-main-content {
+		&.label-inches .jslider-value span::after {
+			content: "\"";
+			position: absolute;
+			top: 12px;
+		}
+
 		&.answer-slider {
 			margin-top: 133px;
 		}
