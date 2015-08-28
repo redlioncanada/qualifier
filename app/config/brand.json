@@ -2180,7 +2180,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 5,
 					"options" : {       
 					    "from": 0,
 					    "to": 15,

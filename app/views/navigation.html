@@ -7,7 +7,7 @@
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
-		<a href="#" class="btn-next" ng-if="!!questionsData.question" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
+		<a href="#" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
 			<img class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 
@@ -39,7 +39,7 @@
 			</div>
 
 
-		<div class="startover-btn-wrap" ng-if="!!objSizeClean(questionsData.scoringQuestions)">
+		<div class="startover-btn-wrap" ng-if="!questionsData.question">
 			<a id="startover" class="btn btn-startover" ng-click="startOver()">
 				<span ng-bind-html="brandData.apptext.startover"></span>
 			</a>
