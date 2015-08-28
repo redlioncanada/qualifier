@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
+    $scope.$on('$locationChangeSuccess', function(event) {
 
-    //$scope.$on('$locationChangeSuccess', function(event) {
-    //		console.log($route.current);
-    //        // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
-    //        if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
-    //            //$route.current = lastRoute; //Does the actual prevention of routing
-    //        }
-    //});
+    		console.log($state,$stateParams);
+            // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
+            //if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
+                //$route.current = lastRoute; //Does the actual prevention of routing
+            //}
+    });
   	$rootScope.hasAnswer = function (q) {
   		if (!!q) {
 	  		var qtype = q.show.type;
@@ -287,8 +287,8 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
-  			//$location.path("/question/"+name).replace()
-  			//console.log($location)
+  			$location.path("/question/"+name).replace()
+  			console.log($location)
 		} else {
 			$state.go('main.results')
 		}	

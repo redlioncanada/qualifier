@@ -19,7 +19,7 @@ var App = angular.module('App', nglibs);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
-    $urlRouterProvider.otherwise("/");
+    //$urlRouterProvider.otherwise("/");
     localStorageServiceProvider.setPrefix("MaytagQualifier_");
 
     $stateProvider
@@ -172,6 +172,17 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
     localStorageService.clearAll();
 
     $rootScope.resultsTouched = false;
+
+    $rootScope.safeApply = function(fn) {
+      var phase = this.$root.$$phase;
+      if(phase == '$apply' || phase == '$digest') {
+        if(fn && (typeof(fn) === 'function')) {
+          fn();
+        }
+      } else {
+        this.$apply(fn);
+      }
+    };
 
     $rootScope.objSizeClean = function (obj) {
       for (var i in obj) {
