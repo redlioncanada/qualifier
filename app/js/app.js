@@ -21,7 +21,7 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
     $locationProvider.html5Mode(false);
     $urlRouterProvider.otherwise("/");
     localStorageServiceProvider.setPrefix("MaytagQualifier_");
-
+    
     $stateProvider
       .state('loading', {
         templateUrl: 'views/loading.html'
@@ -30,14 +30,9 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
         templateUrl: 'views/main.html'
       }) 
       .state('main.questions', {
-        url : "/questions/",
+        url : "/questions/:questionName",
         templateUrl: 'views/questions.html',
         controller: 'QuestionsCtrl'
-      })
-      .state('main.questions.makedata', {
-        url : "/questions/data",
-        templateUrl: 'views/questionsdata.html',
-        controller: 'QuestionsDataCtrl'
       })
       .state('main.results', {
         url : "/results",
