@@ -102,12 +102,21 @@
 				color: #757575;
 			}
 			.btn {
-				font-family: $AG-Bold-Cnd;
+				font-family: $AG-stack;
+				font-size: 16px;
 				// Bootstrap mixin
-				@include button-variant(#ffffff, #7d7d7d, #7d7d7d);
+				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
-				&:hover {
-					background-color: #002e58;
+				.btn-text {
+					font-size: 11px;
+					text-transform: uppercase;
+					vertical-align: middle;
+					letter-spacing: 1px;
+				}
+				.btn-text::after {
+					content: '>';
+					margin-left: 10px;
+					padding-bottom: 3px;
 				}
 			}
 			.btn-text {
@@ -144,13 +153,21 @@
 				}
 			}
 			.btn {
-				font-family: $AG-Bold-Cnd;
-				font-size: 21px;
+				font-family: $AG-stack;
+				font-size: 16px;
 				// Bootstrap mixin
-				@include button-variant(#ffffff, #7d7d7d, #7d7d7d);
+				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
 				.btn-text {
-					font-size: 21px;
+					font-size: 11px;
+					text-transform: uppercase;
+					vertical-align: middle;
+					letter-spacing: 1px;
+				}
+				.btn-text::after {
+					content: '>';
+					margin-left: 10px;
+					padding-bottom: 3px;
 				}
 			}
 			.result-inner {
