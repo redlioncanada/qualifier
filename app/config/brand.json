@@ -156,13 +156,12 @@
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider",
 					"oneAnswer" : false,
-					"classes" : "pointer-labels no-jslider-scale left-tag",
+					"classes" : "pointer-labels no-jslider-scale left-tag label-inches",
 					"answer" : 1,
 					"options" : { 
 						"from" : 27,
 						"to" : 30,      
 					    "step": 1,
-					    "dimension": "\"",
 					    "dimension_label" : "WIDTH",
 					    "scale": ["27","28","29","30"]       
 					},
@@ -1461,14 +1460,13 @@
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-multiple",
-					"classes" : "slider-pointer-labels no-jslider-scale left-tag",
+					"classes" : "slider-pointer-labels no-jslider-scale left-tag label-inches",
 					"oneAnswer" : false,
 					"answer" : 33,
 					"options" : { 
 						"from" : 30,
 						"to" : 36,      
 					    "step": 1,
-					    "dimension": "\"",
 					    "dimension_label": "WIDTH",
 					    "scale": ["","","","","","",""]       
 					},
@@ -1540,16 +1538,16 @@
 				},
 				{
 					"answer" : 66,
+					"classes": "label-inches",
 					"dimension_label" : "height",
 					"options" : {       
 					    "from": 66,
 					    "to": 71,
 					    "step": 1,
-					    "dimension": "\"",
 					    "dimension_label": "HEIGHT",
 					    "scale": ["","","","","",""]       
 					},
-					"classes" : "left-tag",
+					"classes" : "left-tag label-inches",
 					"answers" : {
 						"66" : {
 							"value" : 66,
