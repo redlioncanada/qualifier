@@ -4,13 +4,13 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route) {
 
 
-    $scope.$on('$locationChangeSuccess', function(event) {
-    		console.log($route.current);
-            // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
-            if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
-                //$route.current = lastRoute; //Does the actual prevention of routing
-            }
-    });
+    //$scope.$on('$locationChangeSuccess', function(event) {
+    //		console.log($route.current);
+    //        // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
+    //        if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
+    //            //$route.current = lastRoute; //Does the actual prevention of routing
+    //        }
+    //});
   	$rootScope.hasAnswer = function (q) {
   		if (!!q) {
 	  		var qtype = q.show.type;
@@ -19,14 +19,17 @@ angular.module('App')
 	          if (qtype == "rank") {
 	            if (a.answer == 1) {
 	              return a
+	              break;
 	            }              
-	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "multi-slider") {
+	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "slider-multiple") {
 	            if (a.value == q.show.answer) {
 	              return a
+	              break;
 	            }       
 	          } else {
 	            if (a.answer == true) {
 	              return a
+	              break;
 	            }	          	
 	          }
 	        }
@@ -40,10 +43,22 @@ angular.module('App')
 	  		var qtype = q.show.type;
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
-	          if (a.answer == true) {
+	          if (qtype == "rank") {
+	            if (a.answer == 1) {
 	              return true
-	          }	          	
-	          
+	              break;
+	            }              
+	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "slider-multiple") {
+	            if (a.value == q.show.answer) {
+	              return true
+	              break;
+	            }       
+	          } else {
+	            if (a.answer == true) {
+	              return true
+	              break;
+	            }	          	
+	          }
 	        }
 	    }
     	return false
@@ -266,14 +281,14 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			$scope.show(); 	
-			$rootScope.controls.questionHasAnswer = $rootScope.questionHasAnswer($rootScope.questionsData.question)	
+			$rootScope.controls.questionHasAnswer = !!$rootScope.hasAnswer($rootScope.questionsData.question)
   			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
-  			$location.path("/question/"+name).replace()
-  			console.log($location)
+  			//$location.path("/question/"+name).replace()
+  			//console.log($location)
 		} else {
 			$state.go('main.results')
 		}	
