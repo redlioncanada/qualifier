@@ -9,7 +9,7 @@ angular.module('App')
         "to": 3000,
         "step": 250,
         "smooth" : false,
-        "threshold" : 250,
+        //"threshold" : 250,
         "dimension": ''
       }
 
