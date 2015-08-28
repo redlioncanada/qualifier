@@ -287,7 +287,7 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
-  			$location.path("/question/"+name).replace()
+  			//$location.path("/question/"+name).replace()
   			console.log($location)
 		} else {
 			$state.go('main.results')
@@ -295,6 +295,7 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
+  		console.log("Next");
   		$rootScope.controls.controlClicked = 'next';
 
         // $timeout is a hacky way to make sure the above assignment propagates before
@@ -302,7 +303,7 @@ angular.module('App')
   		$timeout(function() {
 	  		// Make sure there is an answer
 	  		if (!!$rootScope.controls.questionHasAnswer || !!done) {
-	  			var hasAnswer = $scope.hasAnswer($rootScope.questionsData.question)
+	  			var hasAnswer = $rootScope.hasAnswer($rootScope.questionsData.question)
 		  		if ("next" in $rootScope.questionsData.question) {
 		  			var name = $rootScope.questionsData.question.next
 		  		}
