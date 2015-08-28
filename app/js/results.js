@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope) {
 
+      $rootScope.resultsTouched = true;
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,

@@ -21,7 +21,7 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
     $locationProvider.html5Mode(false);
     $urlRouterProvider.otherwise("/");
     localStorageServiceProvider.setPrefix("MaytagQualifier_");
-    
+
     $stateProvider
       .state('loading', {
         templateUrl: 'views/loading.html'
@@ -170,6 +170,8 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
   console.log("Run");
   $state.go('loading');
     localStorageService.clearAll();
+
+    $rootScope.resultsTouched = false;
 
     $rootScope.objSizeClean = function (obj) {
       for (var i in obj) {

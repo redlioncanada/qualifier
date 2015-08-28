@@ -1,9 +1,16 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route) {
 
-  	// $stateParams.CustomerId
+
+    $scope.$on('$locationChangeSuccess', function(event) {
+    		console.log($route.current);
+            // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
+            if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
+                //$route.current = lastRoute; //Does the actual prevention of routing
+            }
+    });
   	$rootScope.hasAnswer = function (q) {
   		if (!!q) {
 	  		var qtype = q.show.type;
@@ -14,6 +21,9 @@ angular.module('App')
 	              return a
 	            }              
 	          } else if (qtype == "slider" || qtype == "slider-people" || qtype == "multi-slider") {
+	          	if (!q.show.touched) {
+	          		return false
+	          	}
 	            if (a.value == q.show.answer) {
 	              return a
 	            }       
@@ -249,7 +259,8 @@ angular.module('App')
 				$rootScope.questionsData.question = hasStoredAnswer
 				$rootScope.controls.questionHasAnswer = true
 			} else {
-				//$location.path("/question/"+name) //.replace().path(normalized);
+				//console.log($location.replace("/question/"+name));
+				//$location.path("/question/"+name).replace() //.replace().path(normalized);
 				$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
 			} 
 		} else {
@@ -264,6 +275,8 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
+  			$location.path("/question/"+name).replace()
+  			console.log($location)
 		} else {
 			$state.go('main.results')
 		}	
