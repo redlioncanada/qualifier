@@ -31,16 +31,15 @@
 					<div class="result-inner">
 						<h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch"></h3>
 						<h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion"></h3>
-						<div class="product-img-wrap">
-							<img ng-if="a.appliance!='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
-							<img ng-if="a.appliance=='Laundry'" ng-init="a.picker=a.colours[0]" ng-src="http://maytag.com/{{a.image}}" style="width: 220px">
+						<div class="product-img-wrap" ng-init="a.picker=a.colours[0]">
+							<img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
+							<img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.picker.image}}" style="width: 220px; height: 280px">
 						</div>
 						<div class="product-colour-picker-wrap">
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div class="colourBar">
 								<span ng-repeat="colour in a.colours">
-									<img ng-if="a.appliance!='Laundry'" ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
-									<img ng-if="a.appliance=='Laundry'" ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.code}}-MT.png" />
+									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
 								</span>
 							</div>
 						</div>

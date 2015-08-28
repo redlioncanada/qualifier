@@ -225,11 +225,22 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
 
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
+                var relcodes = {
+                  'M1' : 'DC',
+                  'WH' : 'DW'
+                }
                 angular.forEach( $rootScope.appliances, function (item, key) { 
                     if ($rootScope.appliances[key].appliance == "Laundry") {
+
                       $rootScope.appliances[key].sku = $rootScope.appliances[key].washerSku + "/" + $rootScope.appliances[key].dryerSku
                       for (var i in item.colours) {
                         //$rootScope.appliances[key].colours[i].image = setColourURL($rootScope.appliances[key].appliance,$rootScope.appliances[key].image, $rootScope.appliances[key].colours[i].colourCode);
+                        $rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
+                        if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                          $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
+                        } else {
+                          $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
+                        }
                         $rootScope.appliances[key].colours[i].prices = {}
                         $rootScope.appliances[key].colours[i].prices.CAD = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
                         $rootScope.appliances[key].colours[i].sku = $rootScope.appliances[key].colours[i].washerSku
