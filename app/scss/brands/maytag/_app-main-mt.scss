@@ -188,7 +188,10 @@
 }
 
 .app-content-main-bottom {
-	.btn-next.disabled, .btn-prev.disabled, .btn-prev {
+	.disabled {
+		cursor: default;
+	}
+	.btn-next.disabled, .btn-prev.disabled {
 		opacity: 0.5;
 	}
 	.btn-next, .btn-prev {
