@@ -109,7 +109,7 @@
 					"oneAnswer" : true,
 					"answers" : [
 						{
-							"text" : "Free Standing Ranges",
+							"text" : "Ranges",
 							"value" : "free stand range",
 							"classes" : "sub-category ranges",
 							"image" : "img/cooking-range.png",
@@ -223,7 +223,7 @@
 				{
 					"question" : "What style of wall oven are you looking for?",
 					"sub_question" : "Select One",
-					"explanation_title" : "Why Are You Asking Me About Preference?",
+					"explanation_title" : "Why are you asking me about space constraints?",
 					"explanation" : "By understanding your cooking priorities, we can better understand what features you need that will suit your lifestyle.",
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
