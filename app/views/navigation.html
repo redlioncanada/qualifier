@@ -7,7 +7,7 @@
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
-		<a href="#" class="btn-next" ng-click="next()" id="next" ng-if="!!questionsData.question &&(!questionsData.question.show.oneAnswer || !!controls.questionHasAnswer)">
+		<a href="#" class="btn-next" ng-if="!!questionsData.question" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
 			<img class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 
@@ -44,8 +44,8 @@
 				<span ng-bind-html="brandData.apptext.startover"></span>
 			</a>
 		</div>
-		<div class="backtoresults-btn-wrap" ng-if="!!questionsData.question && objSizeClean(nextQs) == 0">
-			<a id="backtoresults" class="btn btn-backtoresults" ng-click="log((objSizeClean(nextQs) == 0));next(true)">
+		<div class="backtoresults-btn-wrap" ng-if="!!resultsTouched">
+			<a id="backtoresults" class="btn btn-backtoresults" ng-click="next(true)">
 				<span ng-bind-html="brandData.apptext.backtoresults"></span>
 			</a>
 		</div>
