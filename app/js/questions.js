@@ -3,14 +3,35 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
-    $scope.$on('$locationChangeSuccess', function(event) {
 
-    		console.log($state,$stateParams);
-            // Want to prevent re-loading when going from /dataEntry/1 to some other dataEntry path
-            //if ($route && $route.current && $route.current.$route.templateUrl.indexOf('questions') > 0) {
-                //$route.current = lastRoute; //Does the actual prevention of routing
-            //}
+    $scope.$on('$locationChangeSuccess', function(event) {
+    		console.log('$locationChangeSuccess')
+    		var q = ($location.path()).toString().replace("/question/","");
+    		console.log("From ", $rootScope.questionsData.question.name, " To ", q);
+    		if (!!$rootScope.questionsData.question) {
+	    		if ($rootScope.questionsData.question.name != q && !!q) {
+		  			if ($rootScope.questionsData.question.order < $rootScope.questionsData.questions[q].order) {
+		  				$rootScope.controls.controlClicked = 'next';
+		  			} else {
+		  				$rootScope.controls.controlClicked = 'previous';
+		  			}
+			  		$timeout(function() {
+						$rootScope.moveToQuestion(q)
+					}, 100)	
+			  	}
+    		}
+ 			else {
+	  			console.log("back to questions")
+	  			console.log(q);
+	  			$rootScope.controls.controlClicked = 'previous';
+		  		$timeout(function() {
+					$rootScope.moveToQuestion(q)
+				}, 100)	
+	  		}
+
     });
+
+
   	$rootScope.hasAnswer = function (q) {
   		if (!!q) {
 	  		var qtype = q.show.type;
@@ -271,8 +292,6 @@ angular.module('App')
 				$rootScope.questionsData.question = hasStoredAnswer
 				$rootScope.controls.questionHasAnswer = true
 			} else {
-				//console.log($location.replace("/question/"+name));
-				//$location.path("/question/"+name).replace() //.replace().path(normalized);
 				$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
 			} 
 		} else {
@@ -287,8 +306,13 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
-  			//$location.path("/question/"+name).replace()
-  			console.log($location)
+  			$rootScope.questionsData.question.disabled=false
+  			
+  			//if ($rootScope.questionsData.question.name == 'Appliance') {
+  			//	$location.url("/question/"+name)
+  			//} else {
+  				$location.path("/question/"+name).replace()
+  			//}
 		} else {
 			$state.go('main.results')
 		}	
@@ -296,6 +320,7 @@ angular.module('App')
 
   	$rootScope.next = function (done) {
   		console.log("Next");
+  		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
 
         // $timeout is a hacky way to make sure the above assignment propagates before
@@ -320,6 +345,7 @@ angular.module('App')
 
 
    	$rootScope.previous = function () {
+   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'previous';
 
         // $timeout is a hacky way to make sure the above assignment propagates before
@@ -353,8 +379,6 @@ angular.module('App')
 	  	$rootScope.questionsData.currentCount = null;
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 	  	$rootScope.moveToQuestion("Appliance")
-	  	//$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-	  	//$rootScope.show()
   	}
 
 });

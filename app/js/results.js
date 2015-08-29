@@ -1,7 +1,23 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
+
+
+    $scope.$on('$locationChangeSuccess', function(event) {
+    		console.log('results $locationChangeSuccess')
+    		console.log(($location.path()).toString());
+    		if ( ($location.path()).toString().search("question") != -1) {
+    			var q = ($location.path()).toString().replace("/question/","");
+		  		$rootScope.controls.controlClicked = 'previous';
+		  		
+		  		$timeout(function() {
+		  			$state.go('main.questions')
+					$rootScope.moveToQuestion(q)
+				}, 100)
+		  	}
+    });
+
 
       $rootScope.resultsTouched = true;
       $rootScope.resultsOptions = {
@@ -13,27 +29,27 @@ angular.module('App')
         "dimension": ''
       }
 
-  		$scope.setPriceRange = function () {
-  			var minPrice = null, maxPrice = null
-  			for (var a in $rootScope.appliances) {
-  				var appliance = $rootScope.appliances[a]
+               $scope.setPriceRange = function () {
+                       var minPrice = null, maxPrice = null
+                       for (var a in $rootScope.appliances) {
+                               var appliance = $rootScope.appliances[a]
           if (appliance.score !=null) {
             for (var c in appliance.colours) {
               var p = parseFloat(appliance.colours[c].prices.CAD)
-      				if (minPrice == null) {
-      					minPrice = p; maxPrice = p
-      				} else if (p < minPrice) {
-      					minPrice = p
-      				} else if (p > maxPrice) {
-      					maxPrice = p
-      				}
+                               if (minPrice == null) {
+                                       minPrice = p; maxPrice = p
+                               } else if (p < minPrice) {
+                                       minPrice = p
+                               } else if (p > maxPrice) {
+                                       maxPrice = p
+                               }
             }
           }
-  			}
-  			$rootScope.resultsOptions.from = minPrice
+                       }
+                       $rootScope.resultsOptions.from = minPrice
         $rootScope.resultsOptions.to = maxPrice
-  			$rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
-  		}
+                       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
+               }
 
       $scope.expandPriceRange = function (price) {
         var range = $rootScope.controls.price.split(";")
@@ -52,7 +68,7 @@ angular.module('App')
 
 
       if ($rootScope.questionsData.currentCount > 0) {
-    		$scope.setPriceRange()
+               $scope.setPriceRange()
       }
 
 });
