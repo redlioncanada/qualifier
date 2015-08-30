@@ -26,8 +26,8 @@
 	}
 	.app-content-main-top-left {
 		width: 100%;
-		padding-left: 70px;
-		padding-right: 70px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 	.app-content-main-top-right {
 		.btn {
@@ -113,8 +113,8 @@
 			margin-top: 100px;
 		}
 		&.category, &.sub-category {
-			margin-left: 40px;
-			margin-right: 40px;
+			margin-left: 45px;
+			margin-right: 45px;
 		}
 		&:hover {
 			text-decoration: none;
@@ -322,6 +322,8 @@
 .bottom-nav-intructions {
 	position: relative;
 	display: block;
+	text-align: left;
+	margin-left: 12px;
 	// width: 100%;
 
 	.instructions {
@@ -388,8 +390,12 @@
 			margin-top: 78px;
 		}
 
-		&.regular-4-container.answersize56, &.regular-4-container.answersize78 {
-			margin-top: 36px;
+		&.regular-4-container.answersize56 {
+			margin-top: 45px;
+		}
+
+		&.regular-4-container.answersize78 {
+			margin-top: 0px;
 		}
 
 		&.picture-2-container, &.picture-3-container, &.boxes-icon-2-container, &.boxes-icon-4-container, &.boxes-icon-5-container {
