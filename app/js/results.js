@@ -81,7 +81,11 @@ angular.module('App')
             var margin = parseInt($(el).parent().css('marginTop'));
             padding.push(height);
             parentMargin.push(margin);
-            if (height > maxPadding) maxPadding = height;
+            if (i == 1) {
+              if (height > maxPadding-margin) maxPadding = height;
+            } else {
+              if (height > maxPadding) maxPadding = height;
+            }
           });
 
           $('.result-wrap .btn-wrap').each(function(i, el) {

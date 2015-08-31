@@ -1,6 +1,6 @@
 <!-- Checkbox multi-select answers - single column for 2 or 3 answers -->
 <div class="answers-main-content regular-container slidey" ng-controller="CheckboxCtrl" ng-class="{'answersize34' : objSize(qs.text[0].answers) == 3 || objSize(qs.text[0].answers) == 4, 'answersize56' :  objSize(qs.text[0].answers) == 5 || objSize(qs.text[0].answers) == 6, 'answersize78' : objSize(qs.text[0].answers) == 7 || objSize(qs.text[0].answers) == 8}">
-	<a href="" class="answer answer-option answer-box checkbox {{qs.text[0].classes}}" ng-repeat="answer in qs.text[0].answers" ng-click="qs.disabled || toggle(qs.text[0].answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" class="answer answer-option answer-box checkbox {{qs.text[0].classes}}" ng-repeat="answer in qs.text[0].answers" ng-click="qs.disabled || toggle(qs.text[0].answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, toggleButton : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap" ng-class="{'long-answer': answer.text.length > 60}">
 			<span class="label-text" ng-bind-html="answer.text"></span>
