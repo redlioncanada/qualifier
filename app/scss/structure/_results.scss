@@ -32,6 +32,8 @@
 	.results-top-right-btns {
 		display: inline-block;
 		float: right;
+		padding-right: 51px;
+		
 		a {
 			width: 30px;
 			height: 30px;
@@ -106,7 +108,7 @@
 			  	width: 100%;
 				text-align: center;
 				margin-top: 30px;
-				margin-bottom: 30px;
+				margin-bottom: 3px;
 				img {
 					width: 220px;
 					display: block;

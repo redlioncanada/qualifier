@@ -1033,7 +1033,7 @@
 				{
 					"question" : "What is your laundry pair preference?",
 					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about space constraints?",
+					"explanation_title" : "Why are you asking me about orientation?",
 					"explanation" : "We understand that every laundry space is different. By understanding yours, we are able to find the perfect pairing for your home.",
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
@@ -2099,7 +2099,7 @@
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Pots and Pans",
+							"text" : "Pots and pans",
 							"value" : "pots",
 							"scoring" : {
 							},
@@ -2369,7 +2369,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "Yes - my kitchen opens on to another room",
+							"text" : "Yes - My kitchen opens on to another room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-yes.png",
 							"value" : "yes",
 							"scoring" : {
@@ -2380,7 +2380,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "No - my kitchen is its own room",
+							"text" : "No - My kitchen is its own room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-no.png",
 							"value" : "no",
 							"scoring" : {

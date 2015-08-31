@@ -4,10 +4,15 @@
 	<div class="content-inner">
 		<div class="buttons-top">
 				<!-- Save, Share, Print -->
-				<div class="buttons-top-right-btns">
-					<a class="btn-share" href="">
+				<div ng-controller="ShareCtrl" class="buttons-top-right-btns">
+					<share class="share-wrapper" href="">
 						<span class="icon-share"></span>
-					</a>
+						<div class="share-popout-cover"></div>
+						<div class="share-popout">
+							<span class="icon-share-fb"></span>
+							<span class="icon-share-tw"></span>
+						</div>
+					</share>
 				</div>
 		</div>
 		<!-- Top of main section -->
