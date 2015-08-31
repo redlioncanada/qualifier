@@ -414,10 +414,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(200%);
+	    -webkit-transform: translateX(200%);
 	    opacity: 0;
 	}
 	&.ng-hide-remove-active {
 		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
 		opacity: 1;
 	}
 
@@ -425,10 +427,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
+	    -webkit-transform: translateX(0%);
 	    opacity: 1;
 	}
 	&.ng-hide-add-active {
 		transform: translateX(-200%);
+		-webkit-transform: translateX(-200%);
 		opacity: 0;
 	}
 }
@@ -438,10 +442,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(-200%);
+	    -webkit-transform: translateX(-200%);
 	    opacity: 0;
 	}
 	&.ng-hide-remove-active {
 		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
 		opacity: 1;
 	}
 
@@ -449,10 +455,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
+	    -webkit-transform: translateX(0%);
 	    opacity: 1;
 	}
 	&.ng-hide-add-active {
 		transform: translateX(200%);
+		-webkit-transform: translateX(200%);
 		opacity: 0;
 	}
 }
