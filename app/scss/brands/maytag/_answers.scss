@@ -63,10 +63,7 @@
 
 
 
-.selected {
-	// transform: translateY(4px);
-	transform: translate(1px, 3px);
-  	box-shadow: none !important;
+.toggleButton {
   	.img-wrap, .select-label-wrap { // for boxes-picture
 		box-shadow: none !important;
   	}
@@ -115,7 +112,7 @@
 
 
 .answer-box {
-	transition: all 0.3s ease;
+	transition: all 1s ease;
 	margin-left: 9px;
 	margin-right: 9px;
 	position: relative;
