@@ -157,7 +157,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "pointer-labels no-jslider-scale left-tag label-inches",
-					"answer" : 1,
+					"answer" : 27,
 					"options" : { 
 						"from" : 27,
 						"to" : 30,      
@@ -406,7 +406,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 0,
 					"options" : {
 					    "from": 0,
 					    "to": 3,
@@ -466,7 +466,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -526,7 +526,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -837,7 +837,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -897,7 +897,7 @@
 					"type" : "slider-people",
 					"oneAnswer" : false,
 					"classes" : "slider-labels family-size",
-					"answer" : 3,
+					"answer" : 1,
 					"options" : {       
 					    "from": 1,
 					    "to": 6,
@@ -1230,7 +1230,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 1,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -1293,7 +1293,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 1,
+					"answer" : 0,
 					"options" : { 
 					    "from": 0,
 					    "to": 3,
@@ -1401,7 +1401,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 2,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -1462,7 +1462,7 @@
 					"type" : "slider-multiple",
 					"classes" : "slider-pointer-labels no-jslider-scale left-tag label-inches",
 					"oneAnswer" : false,
-					"answer" : 33,
+					"answer" : 30,
 					"options" : { 
 						"from" : 30,
 						"to" : 36,      
@@ -2178,7 +2178,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 5,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 15,
@@ -2246,7 +2246,7 @@
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 1,
+					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
@@ -2505,7 +2505,7 @@
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Energy?",
 					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
-					"answer" : 2,
+					"answer" : 0,
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",

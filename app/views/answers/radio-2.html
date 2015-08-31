@@ -1,6 +1,6 @@
 <!-- Radio single-select answers - two columns for 2 answers -->
 <div class="answers-main-content regular-2-container" ng-controller="RadioCtrl">
-	<a href="" class="answer answer-option answer-box radio-2 {{qs.text[0].classes}}" ng-repeat="answer in qs.text[0].answers" ng-click="toggle(qs.text[0].answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
+	<a href="" class="answer answer-option answer-box radio-2 {{qs.text[0].classes}}" ng-repeat="answer in qs.text[0].answers" ng-click="qs.disabled || toggle(qs.text[0].answers, answer)" ng-class="{noanswer : !controls.questionHasAnswer, selected : answer.answer}">
 		<div class="select-icon"></div>
 		<div class="label-wrap" ng-class="{'long-answer': answer.text.length > 60}">
 			<span class="label-text" ng-bind-html="answer.text"></span>
