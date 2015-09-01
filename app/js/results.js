@@ -66,6 +66,9 @@ angular.module('App')
 
       }
 
+      $scope.constructPageTitle = function() {
+        return $rootScope.brandData.apptext.oneLastStep + " " + $rootScope.applianceType;
+      }
 
       if ($rootScope.questionsData.currentCount > 0) {
                $scope.setPriceRange()

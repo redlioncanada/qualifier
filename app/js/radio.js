@@ -3,6 +3,7 @@ console.log("loaded")
 angular.module('App')
   .controller('RadioCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {
+        console.log(answers);
         if (answer.value == "nothing") {
           $rootScope.controls.questionHasAnswer=false
           for (var a in answers) {
@@ -28,5 +29,8 @@ angular.module('App')
         if ($rootScope.controls.questionHasAnswer == true) {
             $rootScope.next();
         }
-      }			
+      }
+      $scope.setAppliance = function(appliance) {
+        $rootScope.applianceType = appliance;
+      }		
 });

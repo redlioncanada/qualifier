@@ -256,6 +256,10 @@
 		@include button-variant(#ffffff, #002e58, #002e58);
 		padding: 3px 18px;
 	}
+	.btn-wrapper {
+		float: right;
+		margin-top: 20px;
+	}
 	.backtoresults-btn-wrap {
 		display: inline-block;
 	    border-left: solid 1px #002e58;
@@ -326,7 +330,7 @@
 	position: relative;
 	display: block;
 	text-align: center;
-	margin-left: 12px;
+	border-bottom: 1px solid #a7a7a7;
 	// width: 100%;
 
 	.instructions {
@@ -343,7 +347,6 @@
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	border-top: 1px solid #a7a7a7;
 	float: left;
 }
 

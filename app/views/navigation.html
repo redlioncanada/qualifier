@@ -19,36 +19,37 @@
 
 	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
 		<div class="bottom-nav-wrap">
-			<div class="bottom-nav-intructions">
-				<span class="instructions">Click on an icon to change your answer</span>
-			</div>
 			<div class="bottom-nav-inner">
-
-				<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
-			    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="navToQuestions(q)" popover-placement="bottom" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
-				      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-			    	</a>      
+				<div class="bottom-nav-intructions">
+					<span class="instructions">Click on an icon to change your answer</span>
 				</div>
- 
-				<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
-			    	<a class="icon-nav">
-				      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-			    	</a>      
+				<div class="bottom-nav-inner-inner">
+					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
+				    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="navToQuestions(q)" popover-placement="bottom" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
+					      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+				    	</a>      
+					</div>
+	 
+					<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
+				    	<a class="icon-nav">
+					      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+				    	</a>      
+					</div>
 				</div>
-
 			</div>
 
-
-		<div class="startover-btn-wrap" ng-if="!questionsData.question">
-			<a id="startover" class="btn btn-startover" ng-click="startOver()">
-				<span ng-bind-html="brandData.apptext.startover"></span>
-			</a>
-		</div>
-		<div class="backtoresults-btn-wrap" ng-if="!!resultsTouched && !!questionsData.question">
-			<a id="backtoresults" class="btn btn-backtoresults" ng-click="next(true)">
-				<span ng-bind-html="brandData.apptext.backtoresults"></span>
-			</a>
-		</div>
+			<div class="btn-wrapper">
+				<div class="startover-btn-wrap" ng-if="!questionsData.question">
+					<a id="startover" class="btn btn-startover" ng-click="startOver()">
+						<span ng-bind-html="brandData.apptext.startover"></span>
+					</a>
+				</div>
+				<div class="backtoresults-btn-wrap" ng-if="!!resultsTouched && !!questionsData.question">
+					<a id="backtoresults" class="btn btn-backtoresults" ng-click="next(true)">
+						<span ng-bind-html="brandData.apptext.backtoresults"></span>
+					</a>
+				</div>
+			</div>
 
 
 

@@ -7,7 +7,7 @@
 		"next" : "Next",
 		"results" : "Results",
 		"msrp" : "MSRP",
-		"oneLastStep" : "One Last Step: Adjust your price to find your perfect range",
+		"oneLastStep" : "One Last Step: Adjust your price to find your perfect",
 		"moreInfo" : "More Info",
 		"print" : "Print",
 		"colourPreference" : "Adjust your colour preference.",
@@ -34,6 +34,7 @@
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
+							"displayName": "Laundry Pair",
 							"classes" : "category laundry",
 							"image" : "img/start-laundry.png",
 							"hover" : "img/start-laundry-hover.png",							
@@ -49,6 +50,7 @@
 						{
 							"text" : "Cooking",
 							"value" : "Stove",
+							"displayName": "Range",
 							"classes" : "category cooking",
 							"image" : "img/start-stove.png",
 							"hover" : "img/start-stove-hover.png",
@@ -64,6 +66,7 @@
 						{
 							"text" : "Refrigerator",
 							"value" : "Fridge",
+							"displayName": "Refrigerator",
 							"classes" : "category fridge",
 							"image" : "img/start-fridge.png",
 							"hover" : "img/start-fridge-hover.png",
@@ -79,6 +82,7 @@
 						{
 							"text" : "Dishwasher",
 							"value" : "Dishwasher",
+							"displayName": "Dishwasher",
 							"classes" : "category dishwasher",
 							"image" : "img/start-dishwasher.png",
 							"hover" : "img/start-dishwasher-hover.png",
