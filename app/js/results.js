@@ -70,30 +70,4 @@ angular.module('App')
       if ($rootScope.questionsData.currentCount > 0) {
                $scope.setPriceRange()
       }
-
-      //make sure the results columns are the same height
-      $timeout(function() {
-          var padding = [];
-          var parentMargin = [];
-          var maxPadding = 0;
-          $('.result-wrap').each(function(i, el) {
-            var height = $(el).height();
-            var margin = parseInt($(el).parent().css('marginTop'));
-            padding.push(height);
-            parentMargin.push(margin);
-            if (i == 1) {
-              if (height > maxPadding-margin) maxPadding = height;
-            } else {
-              if (height > maxPadding) maxPadding = height;
-            }
-          });
-
-          $('.result-wrap .btn-wrap').each(function(i, el) {
-            if ($(el).hasClass('touched')) return;
-            $(el).addClass('touched');
-            var curPadding = parseInt($(el).css('paddingTop'));
-            curPadding += maxPadding - padding[i] - parentMargin[i];
-            $(el).css('paddingTop', curPadding);
-          });
-      }, 100, false);
 });
