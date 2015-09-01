@@ -63,7 +63,7 @@
 
 
 
-.toggleButton {
+.selected {
   	.img-wrap, .select-label-wrap { // for boxes-picture
 		box-shadow: none !important;
   	}
@@ -127,7 +127,7 @@
 		height: 70px;
 
 		background: url('../img/radio-bg.png');
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		@include boxshadow;
 		.label-wrap {
 			// top: 0;
