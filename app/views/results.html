@@ -5,13 +5,14 @@
 			<div class="results-adjust-desc" bo-text="brandData.apptext.oneLastStep"></div>
 
 			<!-- Save, Share, Print -->
-			<div class="results-top-right-btns">
-				<a class="btn-mail" href="">
-					<span class="icon-mail"></span>
-				</a>
-				<a class="btn-share" href="">
+			<div ng-controller="ShareCtrl" class="buttons-top-right-btns">
+				<share class="share-wrapper" href="">
 					<span class="icon-share"></span>
-				</a>
+					<div class="share-popout">
+						<span class="icon-share-fb"><a href="#"></a></span>
+						<span class="icon-share-tw"><a href="#"></a></span>
+					</div>
+				</share>
 			</div>
 		</div>
 
