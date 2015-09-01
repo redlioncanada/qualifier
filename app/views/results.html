@@ -65,7 +65,7 @@
 							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
 							
 							<div class="product-details">
-								<div ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
+								<div class="sales-feature-wrapper" ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
 									<h4 class="sales-feature">
 										<img ng-if="!!sf.featureKey" ng-class="{multiline: sf.headline.length > 46}" ng-src="img/icon-{{sf.featureKey}}.png" />
 										<img ng-if="!sf.featureKey" ng-class="{multiline: sf.headline.length > 46}" ng-src="img/icon-genericfeature.png" />
