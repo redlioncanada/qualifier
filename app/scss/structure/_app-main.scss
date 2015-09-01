@@ -33,7 +33,7 @@
 					position: relative;
 				}
 			}
-			.share-popout {
+			.share-popout, .share-popout-cover {
 				position: absolute;
 				top: 0;
 				width: 64px;
@@ -47,6 +47,11 @@
 					display: inline-block;
 					margin-right: 2px;
 				}
+			}
+			.share-popout-cover {
+				background-color: #FFF;
+				z-index: 2;
+				height: 100%;
 			}
 			.icon-share,.icon-share-fb,.icon-share-tw {
 				background: url('../img/icon-share.png') center center no-repeat;

@@ -6,16 +6,17 @@ angular.module('App')
       restrict: 'E',
       
       link: function(scope, element, attrs) {
-        $(element).find('.icon-share').on('click', function(e) {
+        var shareIcon = $(element).find('.icon-share');
+        $(shareIcon).on('click', function(e) {
           popout(e);
         });
         $(element).find('.share-popout span').on('click', function(e) {
           popin(e);
         });
-        element.on('mouseover', function(e) {
+        $(shareIcon).on('mouseover', function(e) {
           popout(e);
         });
-        element.on('mouseout', function(e) {
+        $(shareIcon).on('mouseout', function(e) {
           popin(e);
         });
 
