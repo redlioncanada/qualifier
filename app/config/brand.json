@@ -115,6 +115,7 @@
 						{
 							"text" : "Ranges",
 							"value" : "free stand range",
+							"displayName": "Range",
 							"classes" : "sub-category ranges",
 							"image" : "img/cooking-range.png",
 							"thumbnail" : "img/cat-cooking-sub-free-range-1-electric.jpg",
@@ -129,6 +130,7 @@
 						{
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
+							"displayName": "Wall Oven",
 							"classes" : "sub-category wallovens",
 							"image" : "img/cooking-walloven.png",
 							"thumbnail" : "img/walloven-single.jpg",
