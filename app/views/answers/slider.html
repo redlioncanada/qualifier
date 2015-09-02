@@ -11,7 +11,7 @@ https://www.npmjs.com/package/ng-slider -->
 
 
     <div class="answers-main-content answer-slider {{qs.text[0].answer}} {{qs.text[0].classes}}" ng-init="setLast(qs)">
-        <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}" style="clear:none; float:left">
+        <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last, 'slowDrag' : qs.text[0].slowDrag }" style="clear:none; float:left">
 		  <input ng-model="qs.text[0].answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="qs.text[0].options" />
         </div>
 	</div>

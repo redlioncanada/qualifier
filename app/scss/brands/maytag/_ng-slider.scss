@@ -56,12 +56,19 @@ div.people5 .jslider .jslider-value:not(.jslider-value-to) {
 }
 // Will be dog and cats later
 
-.jslider-pointer, .jslider-value {
-    -webkit-transition:all linear 0.15s;
-    -moz-transition:all linear 0.15s;
-    -o-transition:all linear 0.15s;
-    transition:all linear 0.15s;
-}
+//.jslider-pointer:not(.jslider-pointer-hover), .jslider-pointer:not(.jslider-pointer-hover) ~ .jslider-value {
+//    -webkit-transition:all linear 0.15s;
+//    -moz-transition:all linear 0.15s;
+//    -o-transition:all linear 0.15s;
+//    transition:all linear 0.15s;
+//}
+
+//.jslider-pointer, .jslider-value {
+//    -webkit-transition:all linear 0.15s;
+//    -moz-transition:all linear 0.15s;
+//    -o-transition:all linear 0.15s;
+//    transition:all linear 0.15s;
+//}
 
 div.people6 .jslider .jslider-value:not(.jslider-value-to) {
     background: url('../img/family-6.png') center center no-repeat !important;
@@ -363,6 +370,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 		.jslider-pointer-to { 
 			left: 80%; 
+			z-index: 100 !important;
 		}
 		.jslider-pointer-hover { 
 			// background-position: -21px -60px; 
