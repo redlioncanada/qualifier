@@ -134,6 +134,7 @@ App.filter('byPrice', function($rootScope) {
     var range = price.split(";")
     range[0] = parseFloat(range[0])
     range[1] = parseFloat(range[1])    
+
     angular.forEach(items, function(appliance) {
         var ins = false
         angular.forEach(appliance.colours, function(colour) {
@@ -154,9 +155,9 @@ App.filter('byPrice', function($rootScope) {
     });
     if (inside.length < 3) {
         if (range[1] + $rootScope.resultsOptions.step <= $rootScope.resultsOptions.to) {
-          range[1] += $rootScope.resultsOptions.step
+          range[1] += $rootScope.resultsOptions.fakestep
         } else {
-          range[0] -= $rootScope.resultsOptions.step
+          range[0] -= $rootScope.resultsOptions.fakestep
         }
         $rootScope.controls.price = range.join(";")
     }

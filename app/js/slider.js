@@ -15,9 +15,7 @@ angular.module('App')
   	}
 
     $scope.setLast = function (qs) {
-      console.log("SET LAST");
       qs.text[0].options.round = 5
-
       var last = null
       for (var a in qs.text[0].answers) {
         if (!!last) {
@@ -28,28 +26,34 @@ angular.module('App')
         }
       }
 
-      qs.text[0].options.modelLabels = function (value) {
-            return value.toFixed(0)
-      }
-
-      qs.text[0].options.callback = function(value, released) {      
-          if (!!released) {
-            $rootScope.questionsData.question.text[0].slowDrag = true
-            // useful when combined with 'realtime' option
-            // released it triggered when mouse up
-            for (var a in $rootScope.questionsData.question.text[0].answers) {
-                  console.log( $rootScope.questionsData.question.text[0].answer , $rootScope.questionsData.question.text[0].options.halfway,  parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway , parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway   )
-                  if ($rootScope.questionsData.question.text[0].answer > (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway) &&  $rootScope.questionsData.question.text[0].answer < (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway)) {
-                    $rootScope.questionsData.question.text[0].answer = $rootScope.questionsData.question.text[0].answers[a].value
-                    break
-                  }
-            }
-            //$rootScope.questionsData.question.text[0].answer = Math.floor(parseFloat(value)).toFixed(0)
-            $rootScope.safeApply();
-          } else {
-            $rootScope.questionsData.question.text[0].slowDrag = false
+      qs.text[0].options.modelLabels = angular.copy(function (value) {
+        if (!!$rootScope.questionsData.question) {
+          if (qs.name == $rootScope.questionsData.question.name) {  
+              $rootScope.questionsData.question.text[0].roundedAnswer = value.toFixed(0)
+              console.log($rootScope.questionsData.question.text[0].roundedAnswer)
+              $rootScope.safeApply()
+              return value.toFixed(0)
           }
-      }
+        }
+      })
+
+      qs.text[0].options.callback = angular.copy(function(value, released) {  
+        if (!!$rootScope.questionsData.question) {
+          if (qs.name == $rootScope.questionsData.question.name) {    
+            if (!!released) {
+              for (var a in $rootScope.questionsData.question.text[0].answers) {
+                    //console.log( $rootScope.questionsData.question.text[0].answer , $rootScope.questionsData.question.text[0].options.halfway,  parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway , parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway   )
+                    if ($rootScope.questionsData.question.text[0].answer > (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway) &&  $rootScope.questionsData.question.text[0].answer < (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway)) {
+                      $rootScope.questionsData.question.text[0].answer = $rootScope.questionsData.question.text[0].answers[a].value
+                      break
+                    }
+              }
+              $rootScope.safeApply();
+            } 
+          }
+        }
+      })
+
       for (var i in qs.text[0].answers) {
         qs.text[0].last = qs.text[0].answers[i].value
       }

@@ -22,17 +22,43 @@ angular.module('App')
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
-        "step": 250,
+        "fakestep": 250,
         "smooth" : false,
-        //"threshold" : 250,
-        "dimension": ''
-      }
-      console.log($rootScope.appliances);
+        "step" : 1,
+        "threshold" : 250,
+        "dimension": '',
+        "callback" : function(value, released) {  
 
-               $scope.setPriceRange = function () {
-                       var minPrice = null, maxPrice = null
-                       for (var a in $rootScope.appliances) {
-                               var appliance = $rootScope.appliances[a]
+          if (!!released) {
+            console.log("ok")
+            var range = value.split(";")
+
+            for (var r in range) {
+              var m = range[r] % $rootScope.resultsOptions.fakestep
+              if (m != 0) {
+                  //console.log(m, Math.floor(range[r] / $rootScope.resultsOptions.fakestep), Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1, ((Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1)*$rootScope.resultsOptions.fakestep)-range[r])
+                  if (m < ((Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1)*$rootScope.resultsOptions.fakestep)-range[r]) {
+                      range[r] = (Math.floor(range[r] / $rootScope.resultsOptions.fakestep))*$rootScope.resultsOptions.fakestep
+                  } else {
+                      range[r] = (Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1)*$rootScope.resultsOptions.fakestep
+                  }
+              }
+            }
+
+            $rootScope.controls.price = range.join(";")
+            console.log($rootScope.controls.price)
+            $rootScope.safeApply()
+          } 
+
+        } 
+
+      }
+
+
+$scope.setPriceRange = function () {
+       var minPrice = null, maxPrice = null
+       for (var a in $rootScope.appliances) {
+          var appliance = $rootScope.appliances[a]
           if (appliance.score !=null) {
             for (var c in appliance.colours) {
               var p = parseFloat(appliance.colours[c].prices.CAD)
@@ -45,11 +71,11 @@ angular.module('App')
                                }
             }
           }
-                       }
-                       $rootScope.resultsOptions.from = minPrice
+       }
+       $rootScope.resultsOptions.from = minPrice
         $rootScope.resultsOptions.to = maxPrice
-                       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
-               }
+       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
+}
 
       $scope.expandPriceRange = function (price) {
         var range = $rootScope.controls.price.split(";")
