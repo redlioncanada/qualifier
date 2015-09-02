@@ -255,13 +255,18 @@
 					position: absolute;
 					left: 0px;
 					top: 12%;
+					width: 36px;
 					transform: translateY(-50%);
 					-ms-transform: translateY(-50%);
 					-webkit-transform: translateY(-50%);
 				}
+				img:first-child[src="img/icon-capacity.png"] {
+					padding-bottom: 16px;
+				}
 				img.multiline:first-child {
 					top: 35%;
 				}
+
 			}
 			h4.sales-feature-additional {
 				position: relative;
