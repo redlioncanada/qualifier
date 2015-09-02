@@ -1,5 +1,4 @@
 'use strict';
-console.log("loaded")
 angular.module('App')
   .controller('RadioCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {
@@ -28,5 +27,8 @@ angular.module('App')
         if ($rootScope.controls.questionHasAnswer == true) {
             $rootScope.next();
         }
-      }			
+      }
+      $scope.setAppliance = function(appliance) {
+        $rootScope.applianceType = appliance;
+      }		
 });

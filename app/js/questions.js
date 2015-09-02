@@ -5,7 +5,6 @@ angular.module('App')
 
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    		console.log('$locationChangeSuccess')
     		var q = ($location.path()).toString().replace("/question/","");
     		console.log("From ", $rootScope.questionsData.question.name, " To ", q);
     		if (!!$rootScope.questionsData.question) {
@@ -21,8 +20,6 @@ angular.module('App')
 			  	}
     		}
  			else {
-	  			console.log("back to questions")
-	  			console.log(q);
 	  			$rootScope.controls.controlClicked = 'previous';
 		  		$timeout(function() {
 					$rootScope.moveToQuestion(q)
@@ -319,7 +316,6 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		console.log("Next");
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
 

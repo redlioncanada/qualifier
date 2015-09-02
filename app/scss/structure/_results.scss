@@ -10,8 +10,6 @@
 			// float: left;
 		}
 		.results-adjust-desc {
-			// display: inline-block;
-			margin-left: 10px;
 			text-align: center;
 			text-transform: uppercase;
 			position: relative;
@@ -32,6 +30,8 @@
 	.results-top-right-btns {
 		display: inline-block;
 		float: right;
+		padding-right: 51px;
+		
 		a {
 			width: 30px;
 			height: 30px;
@@ -79,7 +79,6 @@
 					background-color: rgba(76, 76, 76, 0);
 					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
 					width: 100%;
-					height: 1367px;
 				}
 			}
 			
@@ -91,7 +90,6 @@
 					background-color: rgb(255, 255, 255);
 					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
 					width: 100%;
-					height: 1399px;
 				}
 				.result-inner {
 
@@ -108,7 +106,7 @@
 			  	width: 100%;
 				text-align: center;
 				margin-top: 30px;
-				margin-bottom: 30px;
+				margin-bottom: 3px;
 				img {
 					width: 220px;
 					display: block;

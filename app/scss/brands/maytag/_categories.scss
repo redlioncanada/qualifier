@@ -29,6 +29,13 @@ $opacityTiming: 0.5s;
 	}
 	.sub-category {
 		display: inline-block;
+		img.normal {
+			opacity: 1;
+			-webkit-transition: opacity $opacityTiming ease-in-out;
+			-moz-transition: opacity $opacityTiming ease-in-out;
+			-o-transition: opacity $opacityTiming ease-in-out;
+			transition: opacity $opacityTiming ease-in-out;
+		}
 		&:hover img.normal {
 			opacity: 0.3;
 		}

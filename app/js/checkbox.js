@@ -1,5 +1,4 @@
 'use strict';
-console.log("loaded")
 angular.module('App')
   .controller('CheckboxCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {

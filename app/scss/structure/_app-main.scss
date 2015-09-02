@@ -14,27 +14,70 @@
 		.buttons-top-right-btns {
 			display: inline-block;
 			float: right;
-			a {
-				width: 30px;
+			margin-right: 50px;
+
+			.share-wrapper {
 				height: 30px;
 				text-align: center;
 				display: inline-block;
 				margin-left: 1px;
-				margin-right: 1px;
 				-webkit-border-radius: 3px;
 				-moz-border-radius: 3px;
 				border-radius: 3px;
-				span {
+				position: relative;
+
+				> span {
+					z-index: 3;
 					width: 30px;
 					height: 30px;
 					display: inline-block;
 					position: relative;
-					top: 9px;
+					float: left;
 				}
-			}	
-			.icon-share {
-				background: url('../img/icon-share.png') center center no-repeat;
+
+				> span:not(:first-child) {
+					margin-left: 2px;
+				}
 			}
+			.share-popout, .share-popout-cover {
+				position: absolute;
+				top: 0;
+				width: 64px;
+				z-index: 1;
+				/*display: none;*/
+
+				span {
+					float: left;
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					margin-right: 2px;
+				}
+			}
+			.share-popout-cover {
+				background-color: #FFF;
+				z-index: 2;
+				height: 100%;
+			}
+			.icon-email {
+				display: none !important;
+			}
+			.icon-share,.icon-email,.icon-share-fb,.icon-share-tw {
+				background: url('../img/icon-share.png') center center no-repeat;
+				cursor: pointer;
+			}
+			.icon-email {
+				background: url('../img/icon-mail.png') center center no-repeat;
+			}
+			.icon-share-fb {
+				background: url('../img/icon-share-fb.png') center center no-repeat;
+			}
+			.icon-share-tw {
+				background: url('../img/icon-share-tw.png') center center no-repeat;
+			}
+		}
+		.buttons-top-right-btns.show-email-icon .icon-email {
+			display: block !important;
 		}
 	}
 }
@@ -52,7 +95,7 @@
 
 	.app-content-main-top-left {
 		@include make-md-column(8);
-		min-height: 149px;
+		min-height: 154px;
 	}
 	.app-content-main-top-right {
 		@include make-md-column(4);

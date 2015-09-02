@@ -64,9 +64,6 @@
 
 
 .selected {
-	// transform: translateY(4px);
-	transform: translate(1px, 3px);
-  	box-shadow: none !important;
   	.img-wrap, .select-label-wrap { // for boxes-picture
 		box-shadow: none !important;
   	}
@@ -115,7 +112,7 @@
 
 
 .answer-box {
-	transition: all 0.3s ease;
+	transition: all 1s ease;
 	margin-left: 9px;
 	margin-right: 9px;
 	position: relative;
@@ -130,27 +127,23 @@
 		height: 70px;
 
 		background: url('../img/radio-bg.png');
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		@include boxshadow;
 		.label-wrap {
-			// top: 0;
-			// top: 9px; for 4 up
-			// position: relative;
-			// left: 15px;
-			// height: 70px;
-			// padding: 23px 0 0 0;
-			max-width: 415px;
-			text-align: left;
-			// padding: 10px 0 0 0;
-
-			top: 22px;
 			position: absolute;
-			left: 79px;
+			left: 88px;
+			max-width: 415px;
+			display: table;
+			height: 70px;
+
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 	}
@@ -186,14 +179,19 @@
 		float: left;
 		.label-wrap {
 			position: absolute;
-			left: 90px;
-			top: 22px;
+			left: 88px;
+			max-width: 415px;
+			display: table;
+			height: 70px;
 
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 		.label-more-wrap {
@@ -231,16 +229,22 @@
 		// 	top: 19px;
 		// 	left: 23px;
 		// }
+
 		.label-wrap {
 			position: absolute;
-			top: 22px;
 			left: 88px;
 			max-width: 415px;
+			display: table;
+			height: 70px;
+
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 	}
@@ -265,6 +269,10 @@
 			top: 22px;
 			left: 100px;
 			max-width: 415px;
+
+			.label-text {
+				height: 70px;
+			}
 			&.long-answer {
 				top: 15px;
 				.label-text {

@@ -237,3 +237,247 @@ $scale2: 1.07;
 	-webkit-animation-name: bounceInLeft;
 	animation-name: bounceInLeft;
 }
+
+@-moz-keyframes toggleButtonDown {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+}
+
+@-webkit-keyframes toggleButtonDown {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+}
+
+
+@keyframes toggleButtonDown {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+}
+
+.toggleButtonDown {
+	-webkit-animation-name: toggleButtonDown;
+	-moz-animation-name: toggleButtonDown;
+	animation-name: toggleButtonDown;
+
+	animation-duration: 0.35s;	
+	-moz-animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	transform: translate(1px, 3px);
+	box-shadow: 0px 0px 0px 0px #000;
+}
+
+@-webkit-keyframes toggleButtonUp {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+}
+
+@-moz-keyframes toggleButtonUp {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+}
+
+@keyframes toggleButtonUp {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+		box-shadow: 0px 0px 0px 0px #000;
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+		box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+	}
+}
+
+.toggleButtonUp {
+	-webkit-animation-name: toggleButtonUp;
+	animation-name: toggleButtonUp;
+	-moz-animation-name: toggleButtonUp;
+
+	animation-duration: 0.35s;	
+	-webkit-animation-duration: 0.25s;
+	-moz-animation-duration: 0.25s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	transform: translate(0px, 0px);
+	box-shadow: 4px 4px 5px -1px rgba(150, 150, 150, 0.5);
+}
+
+@-moz-keyframes toggleButtonDownNoShadow {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+}
+
+@-webkit-keyframes toggleButtonDownNoShadow {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+}
+
+
+@keyframes toggleButtonDownNoShadow {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+}
+
+.toggleButtonDownNoShadow {
+	-webkit-animation-name: toggleButtonDown;
+	-moz-animation-name: toggleButtonDown;
+	animation-name: toggleButtonDown;
+
+	animation-duration: 0.35s;	
+	-moz-animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	transform: translate(1px, 3px);
+}
+
+@-webkit-keyframes toggleButtonUpNoShadow {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+}
+
+@-moz-keyframes toggleButtonUpNoShadow {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes toggleButtonUpNoShadow {
+	0% {
+		-webkit-transform: translate(1px, 3px);
+		-ms-transform: translate(1px, 3px);
+		transform: translate(1px, 3px);
+	}
+
+	100% {
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+}
+
+.toggleButtonUpNoShadow {
+	-webkit-animation-name: toggleButtonUp;
+	animation-name: toggleButtonUp;
+	-moz-animation-name: toggleButtonUp;
+
+	animation-duration: 0.35s;	
+	-webkit-animation-duration: 0.25s;
+	-moz-animation-duration: 0.25s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
+
+	transform: translate(0px, 0px);
+}

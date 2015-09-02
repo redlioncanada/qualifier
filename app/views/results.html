@@ -2,16 +2,11 @@
 	<div class="content-inner">
 		<div class="results-top" ng-if="questionsData.currentCount !=0">
 			<h1 bo-text="brandData.apptext.resultsPage"></h1>
-			<div class="results-adjust-desc" bo-text="brandData.apptext.oneLastStep"></div>
+			<div class="results-adjust-desc" ng-bind-html="constructPageTitle()"></div>
 
 			<!-- Save, Share, Print -->
-			<div class="results-top-right-btns">
-				<a class="btn-mail" href="">
-					<span class="icon-mail"></span>
-				</a>
-				<a class="btn-share" href="">
-					<span class="icon-share"></span>
-				</a>
+			<div ng-controller="ShareCtrl" class="show-email-icon buttons-top-right-btns">
+				<share class="share-wrapper" href=""></share>
 			</div>
 		</div>
 
@@ -38,9 +33,11 @@
 						<div class="product-colour-picker-wrap">
 							<span bo-text="brandData.apptext.colourPreference"></span>
 							<div class="colourBar">
-								<span ng-repeat="colour in a.colours">
-									<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour" />
-								</span>
+								<ul class="color-wrapper">
+									<li ng-repeat="colour in a.colours" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour;selectPicker(a,colour);" ng-class="{selected: a.picker.colourCode==colour.colourCode}">
+										<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" />
+									</li>
+								</ul>
 							</div>
 						</div>
 						<div class="product-price-sku-wrap">
@@ -57,28 +54,32 @@
 
 						</div>
 						<div class="product-details-wrap">
-							<h2><span ng-if="a.appliance!='Laundry'" class="product-name" ng-bind-html="a.name"></span> </h2>
-							<h2><span ng-if="a.appliance=='Laundry'" class="product-name" ng-bind-html="a.washerName"></span> </h2>
-							<h2><span ng-if="a.appliance=='Laundry'" class="product-name" ng-bind-html="a.dryerName"></span> </h2>
+							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
+							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>
+							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
 							
 							<div class="product-details">
-								<div ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
+								<div class="sales-feature-wrapper" ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
 									<h4 class="sales-feature">
-										<img ng-if="!!sf.featureKey" ng-src="img/icon-{{sf.featureKey}}.png" />
-										<img ng-if="!sf.featureKey" ng-src="img/icon-genericfeature.png" />
+										<img ng-if="!!sf.featureKey" ng-class="{multiline: sf.headline.length > 46}" ng-src="img/icon-{{sf.featureKey}}.png" />
+										<img ng-if="!sf.featureKey" ng-class="{multiline: sf.headline.length > 46}" ng-src="img/icon-genericfeature.png" />
 										<span ng-bind-html="sf.headline"></span>
 									</h4>
 									<span ng-bind-html="sf.description"></span>
 								</div>
-
-								<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
-									<h4 class="sales-feature-additional">
-										<img src="img/results-checkmark.png">
-										<span ng-bind-html="sf.headline"></span>
-									</h4>
+								<div class="sales-feature-spacer"></div>
+								<div class="sales-feature-additional-wrapper">
+									<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
+										<h4 class="sales-feature-additional">
+											<img src="img/results-checkmark.png">
+											<span ng-bind-html="sf.headline"></span>
+										</h4>
+									</div>
 								</div>
+								
+							</div>
 
-								<div class="btn-wrap">
+							<div class="btn-wrap">
 									<a href="{{a.url}}" class="btn btn-default" target="_blank">
 										<span class="btn-text" bo-text="brandData.apptext.moreInfo"></span>
 									</a>
@@ -88,7 +89,6 @@
 									</a>
 
 								</div>
-							</div>
 						</div>
 					</div>
 				</div>
