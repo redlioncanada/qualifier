@@ -21,7 +21,7 @@
 		<div class="bottom-nav-wrap">
 			<div class="bottom-nav-inner">
 				<div class="bottom-nav-intructions">
-					<span class="instructions">Click on an icon to change your answer</span>
+					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
 				</div>
 				<div class="bottom-nav-inner-inner">
 					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
@@ -39,7 +39,7 @@
 			</div>
 
 			<div class="btn-wrapper">
-				<div class="startover-btn-wrap" ng-if="!questionsData.question">
+				<div class="startover-btn-wrap" ng-if="questionsData.question.name != 'Appliance'">
 					<a id="startover" class="btn btn-startover" ng-click="startOver()">
 						<span ng-bind-html="brandData.apptext.startover"></span>
 					</a>
