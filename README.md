@@ -28,7 +28,7 @@ Each brand has it's own palette, fonts, and other individual files to adjust the
 
 
 ##Locale  
-To change app locale, open app.js and change $rootScope.locale to either:
+To change app locale, open app.js and change $rootScope.locale to either:  
     $rootScope.locale = "en_CA";  
 or  
     $rootScope.locale = "fr_CA";
