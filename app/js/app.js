@@ -11,8 +11,7 @@ var nglibs = [
   'LocalStorageModule',
   'ui.bootstrap',
   'ui.sortable',
-  //'ngSlider',
-  'angularAwesomeSlider',
+  'ngSlider',
   'ngAnimate'
 ];
 
