@@ -11,7 +11,8 @@ var nglibs = [
   'LocalStorageModule',
   'ui.bootstrap',
   'ui.sortable',
-  'ngSlider',
+  //'ngSlider',
+  'angularAwesomeSlider',
   'ngAnimate'
 ];
 
@@ -212,9 +213,12 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
       console.log(log);
     }
 
-    $resource("config/brand.json").get({}, function (res, headers) {
-          $rootScope.locale = "en_CA"
-          $rootScope.brandData = res;
+    //$rootScope.locale = "en_CA"
+    $rootScope.locale = "fr_CA"
+    $rootScope.brand = "maytag"
+
+    $resource("config/"+$rootScope.brand+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
+          $rootScope.brandData = res
 
           angular.forEach( $rootScope.brandData.questions, function (item, key) { 
               $rootScope.brandData.questions[key].name = key
@@ -223,7 +227,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
             "img/slider-pointer.png"
           ];
 
-          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
                 var relcodes = {
                   'M1' : 'DC',
