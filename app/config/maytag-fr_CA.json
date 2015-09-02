@@ -9,15 +9,15 @@
 		"msrp" : "MSRP",
 		"oneLastStep" : "RÉVISEZ VOTRE FOURCHETTE DE PRIX AFIN DE PRÉCISER VOS RÉSULTATS...",
 		"moreInfo" : "Informations supplémentaires",
-		"print" : "Print",
+		"print" : "Impression",
 		"colourPreference" : "Sélectionnez votre couleur",
-		"yourBestMatch" : "Your Best Match",
-		"otherSuggestion" : "Other Suggestion",
-		"resultsPage" : "Results Page",
-		"model" : "model",
-		"changeYourAnswer" : "Click on an icon to change your answer",
-		"startover" : "Start<br />&nbsp;Over",
-		"backtoresults" : "Back to<br />Results"
+		"yourBestMatch" : "Votre Meilleur Résultat",
+		"otherSuggestion" : "Autres Suggestion",
+		"resultsPage" : "Page de résultats",
+		"model" : "Le Modèle",
+		"changeYourAnswer" : "Cliquez sur une icône pour modifier votre réponse",
+		"startover" : "Repartir",
+		"backtoresults" : "Retour aux<br />Résultats"
 	},
 	"questions" : {
 		"Appliance" : {
@@ -162,7 +162,7 @@
 						"from" : 27,
 						"to" : 30,      
 					    "step": 0.0001,
-					    "dimension_label" : "WIDTH",
+					    "dimension_label" : "LARGEUR",
 					    "scale": ["27","28","29","30"]       
 					},
 					"answers" : {
