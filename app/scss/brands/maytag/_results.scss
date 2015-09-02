@@ -237,12 +237,15 @@
 			padding-left: 43px;
 			padding-right: 43px;
 
-			.sales-feature-additional-wrapper {
+			.sales-feature-wrapper {
 				padding-top: 10px;
 			}
 
-			.sales-feature-wrapper {
-				padding-top: 10px;
+			.sales-feature-spacer {
+				margin: 30px auto;
+				height: 1px;
+				width: 77%;
+				background-color: #022d58;
 			}
 
 			h4.sales-feature {

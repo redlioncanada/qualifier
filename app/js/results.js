@@ -5,7 +5,6 @@ angular.module('App')
 
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    		console.log('results $locationChangeSuccess')
     		console.log(($location.path()).toString());
     		if ( ($location.path()).toString().search("question") != -1) {
     			var q = ($location.path()).toString().replace("/question/","");
@@ -28,6 +27,7 @@ angular.module('App')
         //"threshold" : 250,
         "dimension": ''
       }
+      console.log($rootScope.appliances);
 
                $scope.setPriceRange = function () {
                        var minPrice = null, maxPrice = null

@@ -124,6 +124,9 @@ gulp.task('views', function() {
 
 // Images
 gulp.task('images', function() {
+    gulp.src('app/img/*/*')
+    .pipe(gulp.dest('build/img/'));
+
   return gulp.src('app/img/*')
     .pipe(gulp.dest('build/img/'));
     // .pipe(notify({ message: 'Images task complete' }));

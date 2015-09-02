@@ -167,7 +167,6 @@ App.filter('byPrice', function($rootScope) {
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
 App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($rootScope, $state, $resource, localStorageService) {
-  console.log("Run");
   $state.go('loading');
     localStorageService.clearAll();
 

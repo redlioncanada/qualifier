@@ -14,7 +14,6 @@ angular.module('App')
   		}
   	}
     $scope.setLast = function (qs) {
-      console.log("SET LAST");
       for (var i in qs.text[0].answers) {
         qs.text[0].last = qs.text[0].answers[i].value
       }

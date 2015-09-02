@@ -13,7 +13,6 @@ angular.module('App')
 
   	$scope.navToQuestions = function (q) {
   		if (!!$rootScope.questionsData.question) {
-  			console.log($rootScope.questionsData.question.order, q.order);
   			if ($rootScope.questionsData.question.order < q.order) {
   				$rootScope.controls.controlClicked = 'next';
   			} else {
@@ -40,6 +39,7 @@ angular.module('App')
 		//$rootScope.show()
 		//$scope.navToQuestions();
 		$location.path('/');
-    	$window.location.reload();
+    $rootScope.resultsTouched = false;
+    $window.location.reload();
 	}
 });

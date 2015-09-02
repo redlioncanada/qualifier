@@ -5,7 +5,7 @@
 			<div class="results-adjust-desc" ng-bind-html="constructPageTitle()"></div>
 
 			<!-- Save, Share, Print -->
-			<div ng-controller="ShareCtrl" class="buttons-top-right-btns">
+			<div ng-controller="ShareCtrl" class="show-email-icon buttons-top-right-btns">
 				<share class="share-wrapper" href=""></share>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 									</h4>
 									<span ng-bind-html="sf.description"></span>
 								</div>
-
+								<div class="sales-feature-spacer"></div>
 								<div class="sales-feature-additional-wrapper">
 									<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
 										<h4 class="sales-feature-additional">
