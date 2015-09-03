@@ -3,7 +3,7 @@
 <!-- http://darul75.github.io/ng-slider/ 
 https://www.npmjs.com/package/ng-slider -->
 
-<div class="answers-main-content answer-slider people-slider people{{qs.text[0].answer}} {{qs.text[0].classes}}" ng-controller="SliderCtrl" style="">
+<div class="answers-main-content answer-slider people-slider people{{qs.text[0].answer | number:0}} {{qs.text[0].classes}}" ng-controller="SliderCtrl" style="">
 	
 	<!-- <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label">
         <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>

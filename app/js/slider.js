@@ -22,10 +22,10 @@ angular.module('App')
           qs.text[0].options.halfway = (qs.text[0].answers[a].value-last.value) / 2 
           break
         } else {
-            last = qs.text[0].answers[a]
+            last = qs.text[0].answers[a];
         }
       }
-
+      qs.text[0].options.realtime = true;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
         if (!!$rootScope.questionsData.question) {
           if (qs.name == $rootScope.questionsData.question.name) {  
@@ -49,7 +49,7 @@ angular.module('App')
               }
               $rootScope.safeApply();
             } else {
-              console.log("notreleased")
+              //released
             } 
           }
         }
