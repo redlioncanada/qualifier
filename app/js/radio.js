@@ -24,7 +24,7 @@ angular.module('App')
             }
           }
         }
-        if ($rootScope.controls.questionHasAnswer == true) {
+        if ($rootScope.controls.questionHasAnswer == true || $rootScope.questionsData.question.name == 'Appliance') {
             $rootScope.next();
         }
       }

@@ -30,7 +30,7 @@ angular.module('App')
         if (!!$rootScope.questionsData.question) {
           if (qs.name == $rootScope.questionsData.question.name) {  
               $rootScope.questionsData.question.text[0].roundedAnswer = value.toFixed(0)
-              console.log($rootScope.questionsData.question.text[0].roundedAnswer)
+              //console.log($rootScope.questionsData.question.text[0].roundedAnswer)
               $rootScope.safeApply()
               return value.toFixed(0)
           }

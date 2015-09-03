@@ -93,7 +93,8 @@ $scope.setPriceRange = function () {
       }
 
       $scope.constructPageTitle = function() {
-        return $rootScope.brandData.apptext.oneLastStep + " " + $rootScope.applianceType;
+        var suffix = typeof $rootScope.applianceType !== 'undefined' ? $rootScope.applianceType : '';
+        return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
       if ($rootScope.questionsData.currentCount > 0) {

@@ -3,12 +3,15 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
-
     $scope.$on('$locationChangeSuccess', function(event) {
     		var q = ($location.path()).toString().replace("/question/","");
-    		console.log("From ", $rootScope.questionsData.question.name, " To ", q);
+
+    		if (q == 'Appliance') {
+    			$rootScope.resultsTouched = false;
+    		}
+
     		if (!!$rootScope.questionsData.question) {
-	    		if ($rootScope.questionsData.question.name != q && !!q) {
+	    		if ($rootScope.questionsData.question.name != q && !!q && q !== '/questions/') {
 		  			if ($rootScope.questionsData.question.order < $rootScope.questionsData.questions[q].order) {
 		  				$rootScope.controls.controlClicked = 'next';
 		  			} else {
