@@ -113,12 +113,11 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	.jslider {
 		cursor: pointer; 
 		display: block; 
-		width: 100%; 
+		width: 95%; 
 		height: 1em; 
 		position: relative; 
 		top: 0.6em; 
 		font-family: Arial, sans-serif;
-
 		
 
 		& .jslider-bg i {
@@ -180,10 +179,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			width: 860px;
 			height: 40px;
 			background: url('../img/slider-bg.png');
+			margin-left: -30px;
 			z-index: 10;
-			// width: 972px;
-			// height: 63px;
-			// background: url('../img/slider-full-bg.png');
 			i { 
 				height: 5px; 
 				position: absolute; 
@@ -426,6 +423,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		.jslider-scale { 
 			position: relative; 
 			top: 32px;
+			width: 98%;
+			//margin-left: 20px;
 
 			& > :first-child, & > :last-child {
 				border-left: 1px solid #999 !important;;
@@ -477,9 +476,16 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 
 .left-tag .jslider .jslider-bg {
 	background: url('../img/slider-gradient-bg.png');
-	margin-left: -80px;
+	margin-left: -100px;
 	width: 945px;
 	height: 44px;
+}
+
+.left-tag .jslider {
+	width: 96%;
+	.jslider-scale { 
+		width: 97%;
+	}
 }
 
 // Specific case
@@ -775,7 +781,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	//top: -7px;
 	.slider-large-label {
 		@include large-square-label;
-		margin-right: -78px;
+		margin-right: -22px;
 		font-size: 24px;
     	z-index: 11;
 	}
