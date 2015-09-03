@@ -27,13 +27,13 @@ angular.module('App')
       }
       qs.text[0].options.realtime = true;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
-        if (!!$rootScope.questionsData.question) {
-          if (qs.name == $rootScope.questionsData.question.name) {  
+        //if (!!$rootScope.questionsData.question) {
+          //if (qs.name == $rootScope.questionsData.question.name) {  
               $rootScope.questionsData.question.text[0].roundedAnswer = value.toFixed(0)
               $rootScope.safeApply()
               return value.toFixed(0)
-          }
-        }
+          //}
+        //}
       })
 
       qs.text[0].options.callback = angular.copy(function(value, released) {  
