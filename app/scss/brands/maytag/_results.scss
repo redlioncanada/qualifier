@@ -138,6 +138,7 @@
 				// Bootstrap mixin
 				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
+				margin-top: 4px;
 				.btn-text {
 					font-size: 11px;
 					text-transform: uppercase;
@@ -182,6 +183,7 @@
 				// Bootstrap mixin
 				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
+				margin-top: 4px;
 				.btn-text {
 					font-size: 11px;
 					text-transform: uppercase;

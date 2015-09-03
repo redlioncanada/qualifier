@@ -868,3 +868,27 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 	}
 }
+
+/*french css start*/
+.body[ng-class="fr_CA"] {
+	.price-slider {
+		.jslider-value span:before {
+		    content: "";
+		}
+		.jslider-value span:after {
+		    content: " $";
+		}
+	}
+
+	.price-slider.pointer-labels {
+		.jslider {
+			padding-top: 11px !important;
+
+			.jslider-value {
+				span {
+					font-size: 24px !important;
+				}
+			}
+		}
+	}
+}

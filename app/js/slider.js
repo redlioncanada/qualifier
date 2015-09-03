@@ -29,15 +29,8 @@ angular.module('App')
       qs.text[0].options.modelLabels = angular.copy(function (value) {
         if (!!$rootScope.questionsData.question) {
           if (qs.name == $rootScope.questionsData.question.name) {  
-              //for (var a in $rootScope.questionsData.question.text[0].answers) {
-              //      //console.log( $rootScope.questionsData.question.text[0].answer , $rootScope.questionsData.question.text[0].options.halfway,  parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway , parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway   )
-              //      if ($rootScope.questionsData.question.text[0].answer > (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway) &&  $rootScope.questionsData.question.text[0].answer < (parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway)) {
-              //        $rootScope.questionsData.question.text[0].roundedAnswer = $rootScope.questionsData.question.text[0].answers[a].value
-              //        break
-              //      }
-              //}
-              //console.log($rootScope.questionsData.question.text[0].roundedAnswer)
-              //$rootScope.safeApply()
+              $rootScope.questionsData.question.text[0].roundedAnswer = value.toFixed(0)
+              $rootScope.safeApply()
               return value.toFixed(0)
           }
         }
