@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window) {
+  .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window, $timeout) {
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
@@ -21,8 +21,12 @@ angular.module('App')
   		} else {
   			$rootScope.controls.controlClicked = 'previous';
   		}
-  		$rootScope.questionsData.question=q;
-  		$state.go('main.questions')
+      $timeout(function() {
+    		//$rootScope.questionsData.question=q;
+
+    		$state.go('main.questions')
+        $rootScope.moveToQuestion(q.name)
+      }, 100) 
   	}
 
   	$scope.byName = function(q) {
