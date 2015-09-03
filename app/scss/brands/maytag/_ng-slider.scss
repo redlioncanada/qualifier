@@ -870,7 +870,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 /*french css start*/
-.body[ng-class="fr_CA"] {
+div[ng-class="fr_CA"] {
 	.price-slider {
 		.jslider-value span:before {
 		    content: "";
@@ -890,5 +890,10 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 				}
 			}
 		}
+	}
+
+	.slider-large-label {
+		font-size: 18px;
+		top: 15px;
 	}
 }

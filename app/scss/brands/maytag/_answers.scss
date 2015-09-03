@@ -81,6 +81,7 @@
 	font-size: 20px;
 	color: #272727;
 	position: relative;
+	line-height: 17px;
 }
 
 // need to fix this for that really long answer...
@@ -596,5 +597,29 @@
 	}
 	.carousel-caption {
 		bottom: -50px;
+	}
+}
+
+//french css begin
+div[ng-class="fr_CA"] {
+	.boxes-icon-5-container {
+		.label-wrap {
+			display: inline-block;
+			text-align: left;
+			height: 48px;
+			bottom: 4px;
+			display: table;
+		}
+		.label-text {
+			font-family: $AG-Bold-Cnd;
+			font-size: 20px;
+			color: #272727;
+			position: relative;
+			line-height: 17px;
+			display: table-cell;
+			vertical-align: middle;
+			max-width: 108px;
+			font-size: 12pt;
+		}
 	}
 }

@@ -474,14 +474,12 @@
 }
 
 /*french css start*/
-.body[ng-class="fr_CA"] {
-	.app-content-main-bottom {
-		.btn-backtoresults, .btn-startover {
-			width: 55px !important;
-		}
+div[ng-class="fr_CA"] {
+	.btn-backtoresults, .btn-startover {
+		width: 55px !important;
+	}
 
-		.btn-startover {
-			line-height: 22px !important;
-		}
+	.btn-startover {
+		line-height: 22px !important;
 	}
 }

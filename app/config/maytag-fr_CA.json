@@ -526,14 +526,14 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Never", "Only during holidays", "Few times a year", "Very Often"]     
+					    "scale": ["JAMAIS", "UNIQUEMENT PENDANT<br/>LES FÊTES", "PLUSIEURS FOIS <br/>PAR AN", "TRÈS SOUVENT"]     
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "img/icon-capacity.png",
 							"thumbnail_current" : "img/icon-capacity-current.png",
 							"value" : 0,
-							"text" : "jamais",
+							"text" : "JAMAIS",
 							"scoring" : {							
 							}
 						},
@@ -1085,7 +1085,7 @@
 						{
 							"thumbnail" : "img/icon-speed.png",
 							"thumbnail_current" : "img/icon-speed-current.png",
-							"text" : "Oui, nous sommes toujours sur la brèche",
+							"text" : "Oui, nous sommes TOUJOURS sur la brèche",
 							"value" : "yes",
 							"scoring" : {
  								"rapidWash" : 3,
@@ -1228,14 +1228,14 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Never", "Occasionally", "Very Often", "Always"]       
+					    "scale": ["JAMAIS", "PARFOIS", "TRÈS SOUVENT", "TOUJOURS"]       
 					},
 					"answers" : {
 						"0" : {
 							"thumbnail" : "img/icon-features.png",
 							"thumbnail_current" : "img/icon-features-current.png",
 							"value" : 0,
-							"text" : "Jamais",
+							"text" : "JAMAIS",
 							"scoring" : {
 							}
 						},
@@ -1252,7 +1252,7 @@
 							"thumbnail" : "img/icon-features.png",
 							"thumbnail_current" : "img/icon-features-current.png",
 							"value" : 2,
-							"text" : "Very Often",
+							"text" : "TRÈS SOUVENT",
 							"scoring" : {
 								"maxCycles" : 1							
 							}
@@ -1261,7 +1261,7 @@
 							"thumbnail" : "img/icon-features.png",
 							"thumbnail_current" : "img/icon-features-current.png",
 							"value" : 3,
-							"text" : "Always",
+							"text" : "TOUJOURS",
 							"scoring" : {
 								"maxCycles" : 2
 							}
@@ -1291,7 +1291,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Never","Only before an event","A few times a month","Daily"]       
+					    "scale": ["JAMAIS","UNIQUEMENT AVANT<br/>UN ÉVÉNEMENT IMPORTANT","PLUSIEURS FOIS PAR MOIS","TOUS LES JOURS"]       
 					},
 					"answers" : {
 						"0" : {
@@ -1702,7 +1702,7 @@
 							"order" : 1
 						},
 						{
-							"text" : "Contenir des repas préparés prêts-à-manger – nous sommes toujours sur la brèche",
+							"text" : "Contenir des repas préparés prêts-à-manger – nous sommes TOUJOURS sur la brèche",
 							"value" : "host parties",
 							"thumbnail" : "img/icon-organization.png",
 							"thumbnail_current" : "img/icon-organization-current.png",
@@ -1980,7 +1980,7 @@
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Toujours – L’esthétique de la maison est très importante pour moi",
+							"text" : "TOUJOURS – L’esthétique de la maison est très importante pour moi",
 							"value" : 0,
 							"scoring" : {
 								"counterDepth" : 2
@@ -2000,7 +2000,7 @@
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Jamais – La performance est ma priorité",
+							"text" : "JAMAIS – La performance est ma priorité",
 							"value" : 2,
 							"scoring" : {
 							},
@@ -2040,7 +2040,7 @@
 						{
 							"thumbnail" : "img/icon-features.png",
 							"thumbnail_current" : "img/icon-features-current.png",
-							"text" : "Je fais toutes les allées du magasin et je remplis toujours mon chariot.",
+							"text" : "Je fais toutes les allées du magasin et je remplis TOUJOURS mon chariot.",
 							"value" : "full grocery store",
 							"scoring" : {
 							},
@@ -2176,7 +2176,7 @@
 					    "step": 0.0001,
 					    "dimension" : "",
 					    "scale": [
-							"0","5","10","15+<br />I've lost count"
+							"0","5","10","15+<br />J’AI PERDU LE COMPTE"
 					    ]       
 					},
 					"answers" : {
@@ -2213,7 +2213,7 @@
 							"thumbnail" : "img/icon-capacity.png",
 							"thumbnail_current" : "img/icon-capacity-current.png",
 							"value" : 15,
-							"text" : "15+<br />I've lost count",
+							"text" : "15+<br />J’AI PERDU LE COMPTE",
 							"scoring" : {
 								"placeSettings15": 1
 							}
@@ -2244,7 +2244,7 @@
 					    "step": 0.0001,
 					    "dimension": "",
 					    "scale": [
-							"Never","A couple<br /> times a week","When we<br /> have company","Very<br /> Often"
+							"JAMAIS","PLUSIEURS FOIS<br /> PAR SEMAINE","LORSQUE NOUS<br/> AVONS DES INVITÉS","TRÈS<br/> SOUVENT"
 					    ]       
 					},
 					"answers" : {
