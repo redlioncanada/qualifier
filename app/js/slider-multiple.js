@@ -30,14 +30,14 @@ angular.module('App')
           }
 
           qs.text[t].options.modelLabels = angular.copy(function (value) {
-            if (!!$rootScope.questionsData.question) {
-              if (qs.name == $rootScope.questionsData.question.name) {  
+            //if (!!$rootScope.questionsData.question) {
+              //if (qs.name == $rootScope.questionsData.question.name) {  
                   //$rootScope.questionsData.question.text[t].roundedAnswer = value.toFixed(0)
                   //console.log($rootScope.questionsData.question.text[t].roundedAnswer)
                   //$rootScope.safeApply()
                   return value.toFixed(0)
-              }
-            }
+              //}
+            //}
           })
           qs.text[t].options.answers = qs.text[t].answers
           qs.text[t].options.iterator = t
