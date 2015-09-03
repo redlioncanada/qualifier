@@ -145,7 +145,7 @@
 			"next" : "Cooking - Wall Ovens - Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Size",
+			"thumbnail_text" : "Taille",
 			"thumbnail_current" : "img/icon-size-current.png",
 			"text" : [
 				{
@@ -210,7 +210,7 @@
 			"next" : "Cooking - Wall Ovens - Cooking Style",
 			"previous" : "Cooking - Wall Ovens - Size",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Features",
+			"thumbnail_text" : "Caractéristiques",
 			"thumbnail_current" : "img/icon-features-current.png",
 			"text" : [
 				{
@@ -331,7 +331,7 @@
 			"next" : "Cooking - Wall Ovens - Energy",
 			"previous" : "Cooking - Wall Ovens - Cooking Style",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Features",
+			"thumbnail_text" : "Caractéristiques",
 			"thumbnail_current" : "img/icon-features-current.png",
 			"text" : [
 				{
@@ -389,7 +389,7 @@
 			"next" : null,
 			"previous" : "Cooking - Wall Ovens - Usage",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Energy",
+			"thumbnail_text" : "Énergie",
 			"thumbnail_current" : "img/icon-energy-current.png",
 			"text" : [
 				{
@@ -449,7 +449,7 @@
 			"next" : "Cooking - Ranges - Capacity",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Energy",
+			"thumbnail_text" : "Énergie",
 			"thumbnail_current" : "img/icon-energy-current.png",
 			"text" : [
 				{
@@ -509,7 +509,7 @@
 			"next" : "Cooking - Ranges - Cooking Style",
 			"previous" : "Cooking - Ranges - Energy",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Capacity",
+			"thumbnail_text" : "Capacité",
 			"thumbnail_current" : "img/icon-capacity-current.png",
 			"text" : [
 				{
@@ -699,7 +699,7 @@
 			"previous" : "Cooking - Ranges - Convection",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-features-current.png",
-			"thumbnail_text" : "Features",
+			"thumbnail_text" : "Caractéristiques",
 			"text" : [
 				{
 					"question" : "J’UTILISE MON FOUR POUR…",
@@ -777,7 +777,7 @@
 		"Cooking - Ranges - Gas" : {
 			"next" : null,
 			"previous" : "Cooking - Ranges - Usage",
-			"thumbnail_text" : "Fuel Type",
+			"thumbnail_text" : "Type d’alimentation",
 			"thumbnail_current" : "img/icon-fueltype-current.png",
 			"thumbnail_type" : "image",
 			"text" : [
@@ -819,7 +819,7 @@
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-energy-current.png",
-			"thumbnail_text" : "Energy",
+			"thumbnail_text" : "Énergie",
 			"text" : [
 				{
 					"question" : "l’efficacité énergétique est-elle importante pour votre famille?",
@@ -879,7 +879,7 @@
 			"previous" : "Laundry - Energy",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-capacity-current.png",
-			"thumbnail_text" : "Capacity",
+			"thumbnail_text" : "Capacité",
 			"text" : [
 				{
 					"question" : "combien de personnes votre FOYER compte-t-il?",
@@ -959,7 +959,7 @@
 			"previous" : "Laundry - Capacity 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
-			"thumbnail_text" : "Noise",
+			"thumbnail_text" : "Bruit",
 			"text" : [
 				{
 					"question" : "LES NIVEAUX DE BRUIT DE VOS APPAREILS DE LESSIVE SONT-ILS IMPORTANTS POUR VOUS?",
@@ -1020,7 +1020,7 @@
 			"previous" : "Laundry - Noise",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-orientation-current.png",
-			"thumbnail_text" : "Orientation",
+			"thumbnail_text" : "Configuration",
 			"text" : [
 				{
 					"question" : "Quelle configuration préférez-vous pour vos appareils de lessive?",
@@ -1072,7 +1072,7 @@
 			"previous" : "Laundry - Orientation",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-speed-current.png",
-			"thumbnail_text" : "Speed",
+			"thumbnail_text" : "Rapidité",
 			"text" : [
 				{
 					"question" : "deVEZ-VOUS SOUVENT LAVER ET FAIRE SÉCHER DES ARTICLES EN MOINS D’UNE HEURE?",
@@ -1212,7 +1212,7 @@
 			"previous" : "Laundry - Fabrics",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-features-current.png",
-			"thumbnail_text" : "Features",
+			"thumbnail_text" : "Caractéristiques",
 			"text" : [
 				{
 					"question" : "RÉGLEZ-VOUS FRÉQUEMMENT LA PROGRAMMATION DU TEMPS DE SÉCHAGE",
@@ -1275,7 +1275,7 @@
 			"previous" : "Laundry - Sensor",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-wrinkles-current.png",
-			"thumbnail_text" : "Wrinkles",
+			"thumbnail_text" : "Faux plis",
 			"text" : [
 				{
 					"question" : "à quelle fréquence utilisez-vous votre fer à repasser?",
@@ -1341,7 +1341,7 @@
 			"previous" : "Laundry - Wrinkles",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-fueltype-current.png",
-			"thumbnail_text" : "Fuel Type",
+			"thumbnail_text" : "Type d’alimentation",
 			"text" : [
 				{
 					"question" : "PRÉFÉRERIEZ-VOUS UNE SÉCHEUSE À GAZ OU ÉLECTRIQUE?",
@@ -1383,7 +1383,7 @@
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-energy-current.png",
-			"thumbnail_text" : "Energy",
+			"thumbnail_text" : "Énergie",
 			"text" : [
 				{
 					"question" : "l’efficacité énergétique est-elle importante pour votre famille?",
@@ -1443,7 +1443,7 @@
 			"previous" : "Fridges - Energy",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-size-current.png",
-			"thumbnail_text" : "Size",
+			"thumbnail_text" : "Taille",
 			"text" : [
 				{
 					"question" : "NOUS AVONS LE RÉFRIGÉRATEUR PARFAIT POUR VOTRE FAMILLE.",
@@ -1603,7 +1603,7 @@
 			"previous" : "Fridges - Size",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-capacity-current.png",
-			"thumbnail_text" : "Capacity",
+			"thumbnail_text" : "Capacité",
 			"text" : [
 				{
 					"question" : "RÉGULIÈREMENT, mon réfrigérateur ME PERMET DE nourrir…",
@@ -1680,7 +1680,7 @@
 			"previous" : "Fridges - Capacity",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-organization-current.png",
-			"thumbnail_text" : "Organization",
+			"thumbnail_text" : "Organisation",
 			"text" : [
 				{
 					"question" : "j’ai besoin d’un réfrigérateur pour ma famille qui PEUT…",
@@ -1743,7 +1743,7 @@
 			"previous" : "Fridges - Organization",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-water-current.png",
-			"thumbnail_text" : "Water",
+			"thumbnail_text" : "Eau",
 			"text" : [
 				{
 					"question" : "Vous vous réveillez assoiffé au beau milieu de la nuit, alors vous prenez…",
@@ -1811,7 +1811,7 @@
 			"previous" : "Fridges - Water",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-ice-current.png",
-			"thumbnail_text" : "Ice",
+			"thumbnail_text" : "Glaçons",
 			"text" : [
 				{
 					"question" : "J’AIME AJOUTER DES GLAÇONS À…",
@@ -1906,7 +1906,7 @@
 			"previous" : "Fridges - Organization",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-orientation-current.png",
-			"thumbnail_text" : "Orientation",
+			"thumbnail_text" : "Configuration",
 			"text" : [
 				{
 					"question" : "EN GÉNÉRAL, LE RÉFRIGÉRATEUR DE VOTRE FAMILLE EST…",
@@ -2015,7 +2015,7 @@
 			"previous" : "Fridges - Style",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-features-current.png",
-			"thumbnail_text" : "Features",
+			"thumbnail_text" : "Caractéristiques",
 			"text" : [
 				{
 					"question" : "COMMENT FAITES-VOUS votre ÉPICERIE?",
@@ -2077,7 +2077,7 @@
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-cleaning-current.png",
-			"thumbnail_text" : "Cleaning",
+			"thumbnail_text" : "Nettoyage",
 			"text" : [
 				{
 					"question" : "QUE TROUVERIONS-NOUS À L’INTÉRIEUR DE VOTRE LAVE-VAISSELLE EN CE MOMENT?",
@@ -2159,7 +2159,7 @@
 			"previous" : "Dishwashers - Cleaning Power",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-capacity-current.png",
-			"thumbnail_text" : "Capacity",
+			"thumbnail_text" : "Capacité",
 			"text" : [
 				{
 					"question" : "COMBIEN DE FOIS PAR SEMAINE EST-CE QUE VOTRE FAMILLE FAIT MARCHER LE LAVE-VAISSELLE?",
@@ -2227,7 +2227,7 @@
 			"previous" : "Dishwashers - Capacity",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-cycles-current.png",
-			"thumbnail_text" : "Cycles",
+			"thumbnail_text" : "Programmes",
 			"text" : [
 				{
 					"question" : "À QUELLE FRÉQUENCE CHOISISSEZ-VOUS DES PROGRAMMES PERSONNALISÉS?",
@@ -2289,7 +2289,7 @@
 			"previous" : "Dishwashers - Noise 2",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
-			"thumbnail_text" : "Noise",
+			"thumbnail_text" : "Bruit",
 			"text" : [
 				{
 					"question" : "QUAND METTEZ-VOUS HABITUELLEMENT LE LAVE-VAISSELLE EN MARCHE?",
@@ -2347,7 +2347,7 @@
 			"previous" : "Dishwashers - Cycles",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
-			"thumbnail_text" : "Noise",
+			"thumbnail_text" : "Bruit",
 			"text" : [
 				{
 					"question" : "VIVEZ-VOUS DANS UN ESPACE OUVERT?",
@@ -2387,7 +2387,7 @@
 			"previous" : "Dishwashers - Noise 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-organization-current.png",
-			"thumbnail_text" : "Organization",
+			"thumbnail_text" : "Organisation",
 			"text" : [
 				{
 					"question" : "AVANT DE METTRE EN MARCHE VOTRE LAVE-VAISSELLE, IL est…",
@@ -2489,7 +2489,7 @@
 			"previous" : "Dishwashers - Style",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-energy-current.png",
-			"thumbnail_text" : "Energy",
+			"thumbnail_text" : "Énergie",
 			"text" : [
 				{
 					"question" : "l’efficacité énergétique est-elle importante pour votre famille?",
