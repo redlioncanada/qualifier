@@ -482,4 +482,10 @@ div[ng-class="fr_CA"] {
 	.btn-startover {
 		line-height: 22px !important;
 	}
+
+	.app-content-main-bottom-center .icon-nav-wrap {
+		.popover-content {
+			text-transform: uppercase;
+		}
+	}
 }

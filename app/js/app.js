@@ -212,8 +212,8 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
       console.log(log);
     }
 
-    $rootScope.locale = "en_CA"
-//    $rootScope.locale = "fr_CA"
+    // $rootScope.locale = "en_CA"
+   $rootScope.locale = "fr_CA"
     $rootScope.brand = "maytag"
 
     $resource("config/"+$rootScope.brand+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
