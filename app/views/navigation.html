@@ -1,4 +1,4 @@
-<div ng-controller="NavigationCtrl" ng-class="{{locale}}" style="clear: both;" class="app-content-main-bottom">
+<div ng-controller="NavigationCtrl" ng-class="{{locale}}" resize style="clear: both;" class="app-content-main-bottom">
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
@@ -32,7 +32,8 @@
 	 
 					<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 				    	<a class="icon-nav">
-					      	<img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+                            <!-- img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png -->
+					      	<img ng-src="img/mbl/icon-current.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 				    	</a>      
 					</div>
 				</div>

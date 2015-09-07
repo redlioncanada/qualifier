@@ -42,6 +42,25 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
   }]);
 
+// Edited By Jacoub Bondre Sunday Sept 6th 2015
+// Converts JS Events to Angular and Broadcast globally
+// Implimented specifically for Progress bar and Results page functionality shifts but made available for all other needs
+//Example Implimentation
+//  $scope.$on('resize::resize', function() {
+//       console.log("resize");
+//  });
+//
+App.directive('resize', function($window) {
+  return {
+    link: function(scope) {
+      angular.element($window).on('resize', function(e) {
+        // Namespacing events with name of directive + event to avoid collisions
+        scope.$broadcast('resize::resize');
+      });
+    }
+  }
+});
+
 App.filter('orderByOrder', function() {
   return function(items) {
     var filtered = [];

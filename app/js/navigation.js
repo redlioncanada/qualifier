@@ -9,7 +9,11 @@ angular.module('App')
 	  		} 
 	  		return a.thumbnail_type
 	  	}
-  	} 
+  	}
+    
+    $scope.$on('resize::resize', function() {
+        console.log("resize");
+      });
 
   	$scope.navToQuestions = function (q) {
   		if (!!$rootScope.questionsData.question) {
