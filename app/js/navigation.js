@@ -2,6 +2,13 @@
 
 angular.module('App')
   .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window, $timeout) {
+    //On Constructor, check and set icontype
+    if (window.innerWidth < 1125){
+            $scope.useMobileIcons = true;
+        }else{
+            $scope.useMobileIcons = false;
+        }
+    //
   	$scope.setType = function (q,a) {
   		if (!!q) {
 	  		if (!a.thumbnail_type) {
@@ -13,9 +20,9 @@ angular.module('App')
     
     $scope.$on('resize::resize', function() {
         if (window.innerWidth < 1125){
-            $scope.isMobile = true;
+            $scope.useMobileIcons = true;
         }else{
-            $scope.isMobile = false;
+            $scope.useMobileIcons = false;
         }
       });
 
