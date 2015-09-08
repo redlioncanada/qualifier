@@ -16,6 +16,7 @@ var nglibs = [
 ];
 
 var App = angular.module('App', nglibs);
+App.constant('Modernizr', Modernizr);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
@@ -186,10 +187,11 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($rootScope, $state, $resource, localStorageService) {
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', function ($rootScope, $state, $resource, localStorageService, Modernizr) {
+
   $state.go('loading');
     localStorageService.clearAll();
-
+    $rootScope.isMobile = Modernizr.mobile;
     $rootScope.resultsTouched = false;
 
     $rootScope.safeApply = function(fn) {

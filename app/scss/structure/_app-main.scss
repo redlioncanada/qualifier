@@ -248,12 +248,132 @@
 
 }
 
-// .bottom-nav-inner {
-// 	display: inline-block;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// }
+.mobile-nav {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+}
 
-// .results-count-wrap {
-// 	background: url('');
-// }
+
+@media(max-width:1125px) {
+	body {
+		overflow-x: hidden;
+	}
+
+
+	.main-content .content-inner {
+		padding-top: 8px;
+	}
+
+	.app-content-main-top {
+		width: 80% !important;
+		margin: initial !important;
+		padding-top: 0px;
+		padding-bottom: 0px;
+
+		h2 {
+			margin-bottom: 2px;
+		}
+	}
+
+	.app-answers .category, .app-answers .sub-category {
+		width: 105px;
+		margin: 10px auto;
+	}
+
+	.app-content-main-top-left {
+		padding-left: 50px;
+	}
+
+	.main-content {
+		max-width: initial;
+	}
+
+	.app-content-main-top {
+		width: 100%;
+	}
+
+	.slidey-wrap-all {
+		height: 560px !important;
+	}
+
+	.slidey {
+		width: 80% !important;
+		min-width: 100% !important;
+		left: -50% !important;
+	}
+
+	.slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
+		width: 100px;
+		height: 500px;
+
+		.slider-wrap {
+			width: initial;
+			height: inherit;
+		}
+
+		.jslider {
+			width: 1em;
+			height: 95%;
+
+			.jslider-bg {
+				height: 95%;
+				width: 40px;
+				background: url("../img/slider-bg-vertical.jpg");
+			}
+		}
+	}
+
+	.regular-2-container {
+		width: 82% !important;
+	}
+
+	.regular-4-container {
+		width: 100% !important;
+	}
+
+	.picture-2-container, .picture-3-container {
+		width: 375px !important;
+		margin-top: 0px !important;
+	}
+
+	a.boxes-icon-5 {
+		margin-top: 10px;
+	}
+
+	a.answer-box.picture-3, a.answer-box.picture-2 {
+		width: 250px;
+	}
+
+	a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4 {
+		float: none;
+		margin-bottom: 14px;
+	}
+
+	a.answer-box.picture-3, a.answer-box.picture-2 {
+		.img-wrap {
+			height: initial;
+		}
+
+		.select-icon {
+			bottom: 8px;
+			top: initial;
+		}
+
+		.label-wrap * {
+			font-size: 16px;
+		}
+	}
+
+	a.answer-box.radio, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
+		float: initial !important;
+		margin: 10px auto;
+	}
+}
+
+@media(max-width:750px) {
+	.app-content-main-top-left {
+		h2 {font-size: 18pt;}
+		h3 {font-size: 12pt;}
+	}
+}

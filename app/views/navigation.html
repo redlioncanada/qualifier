@@ -1,14 +1,15 @@
 <div ng-controller="NavigationCtrl" ng-class="{{locale}}" resize style="clear: both;" class="app-content-main-bottom">
+	<div class="mobile-nav" ng-if="isMobile" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
 	<div class="app-nav-arrows">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
-			<img class="arrow-prev" ng-src="img/arrow-left.png">
+			<img ng-if="!isMobile" class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
 		<a href="#" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
-			<img class="arrow-next" ng-src="img/arrow-right.png">
+			<img ng-if="!isMobile" class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 
 	</div>
