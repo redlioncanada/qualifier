@@ -306,6 +306,7 @@
 	.slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		width: 100px;
 		height: 500px;
+		margin-top: 15px !important;
 
 		.slider-wrap {
 			width: initial;
@@ -314,12 +315,42 @@
 
 		.jslider {
 			width: 1em;
-			height: 95%;
+			height: 100%;
+
+			.jslider-pointer {
+				left: -40%;
+			}
 
 			.jslider-bg {
 				height: 95%;
-				width: 40px;
+				width: 23px;
 				background: url("../img/slider-bg-vertical.jpg");
+				background-size: contain;
+				margin-left: -18px;
+			}
+
+			.jslider-scale {
+				height: 87%;
+				top: 32px;
+				position: absolute;
+
+				span {
+					border-left: none !important;
+					left: 50px;
+					width: 20px;
+					display: table;
+				}
+
+				ins {
+					top: -9px;
+					left: 40px;
+					width: 180px;
+					text-align: left;
+					font-size: 12pt;
+					height: 45px;
+					display: table-cell;
+					vertical-align: middle;
+				}
 			}
 		}
 	}
