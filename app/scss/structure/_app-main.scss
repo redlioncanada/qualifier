@@ -275,7 +275,18 @@
 			margin-bottom: 2px;
 		}
 	}
-
+/* More Progress Bar styles.  If anything move styles from _app-main-mt.scss
+    As I do not see these as brand specific styles. A Progress Bar file would be optimal.
+    Added Sept 8th 2015 by Jacoub Bondre */
+    .app-content-main-bottom{
+        .icon-nav {
+            display: inline-block;
+            float: left;
+            width: 30px;
+            text-align: center;
+	   }
+    }
+    
 	.app-answers .category, .app-answers .sub-category {
 		width: 105px;
 		margin: 10px auto;

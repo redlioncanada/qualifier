@@ -23,6 +23,7 @@
 			<div class="bottom-nav-inner">
 				<div class="bottom-nav-intructions">
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
+                    <span class="mobileInstructions">swipe for next question</span>
 				</div>
 				<div class="bottom-nav-inner-inner">
 					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
