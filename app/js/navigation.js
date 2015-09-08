@@ -12,7 +12,11 @@ angular.module('App')
   	}
     
     $scope.$on('resize::resize', function() {
-        console.log("resize");
+        if (window.innerWidth < 1125){
+            $scope.isMobile = true;
+        }else{
+            $scope.isMobile = false;
+        }
       });
 
   	$scope.navToQuestions = function (q) {
