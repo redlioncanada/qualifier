@@ -111,4 +111,14 @@ $scope.setPriceRange = function () {
             //this.lrgBtn = $( "#large-button" );
         }
    }
+})
+.directive('mobileResults', function(){
+    return {
+        restrict: "EA",
+        scope: false,
+        templateUrl: 'views/result-templates/mobile-results.html',
+        controller: function(){
+            //this.lrgBtn = $( "#large-button" );
+        }
+   }
 });
