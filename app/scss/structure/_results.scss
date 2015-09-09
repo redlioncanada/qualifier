@@ -156,3 +156,150 @@
 		// }
 	}
 }
+
+/* Media Queries 
+Add Sept 09, 2015
+by Jacoub Bondre */
+
+@media(max-width:1125px) {
+    #results {
+	padding-top: 25px;
+	.results-top {
+		h1 {
+			// display: inline-block;
+			margin-top: 0;
+			margin-bottom: 6px;
+			text-align: center;
+			text-transform: uppercase;
+			// float: left;
+		}
+		.results-adjust-desc {
+			text-align: center;
+			text-transform: uppercase;
+			position: relative;
+			top: 9px;
+		}
+		.price-slider {
+			display: inline-block;
+			width: 609px;
+			// margin-left: 100px;
+		}
+		.price-slider-wrap {
+			display: block;
+			margin-left: 100px;
+			height: 120px;
+			// float: left;
+		}
+	}
+	.results-top-right-btns {
+		display: inline-block;
+		float: right;
+		padding-right: 51px;
+		
+		a {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			display: inline-block;
+			margin-left: 1px;
+			margin-right: 1px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			span {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				position: relative;
+				top: 9px;
+			}
+		}
+		.icon-save {
+			background: url('../img/icon-save.png') center center no-repeat;
+		}	
+		.icon-share {
+			background: url('../img/icon-share.png') center center no-repeat;
+		}
+		.icon-mail {
+			background: url('../img/icon-mail.png') center center no-repeat;
+		}
+		.icon-print {
+			background: url('../img/icon-print.png') center center no-repeat;
+		}
+	}
+	.results-list {
+		list-style: none;
+		clear: both;
+		-webkit-padding-start: 0;
+		padding: 25px 40px;
+		li.result {
+			display: inline-block;
+			position:absolute;
+			width: 100%;
+			
+			&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+				margin-left: 20px;
+				margin-right: 20px;
+				.result-wrap {
+					border-radius: 5px;
+					background-color: rgb(255, 255, 255);
+					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+					width: 100%;
+				}
+				.result-inner {
+
+				}
+				.product-img-wrap {
+					padding-top: 28px;
+				}
+			}
+            
+            &:nth-child(1) {
+                position: relative;
+				margin-left: 20px;
+				margin-right: 20px;
+				.result-wrap {
+					border-radius: 5px;
+					background-color: rgb(255, 255, 255);
+					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+					width: 100%;
+				}
+				.result-inner {
+
+				}
+				.product-img-wrap {
+					padding-top: 28px;
+				}
+			}
+            
+			h2, .product-name {
+				//
+			}
+			.product-img-wrap {
+			  	//
+				img {
+					//
+				}
+			}
+			.result-wrap {
+				//
+			}
+			.result-inner {
+					//
+			}
+		}
+	}
+	.product-price-sku-wrap {
+		//
+	}
+	.product-features-title {
+        //
+	}
+	.product-features-list {
+		//
+	}
+	.product-details {
+		//
+	}
+}
+}

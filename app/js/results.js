@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
 
+    $scope.useMobileTemplates = false;
 
     $scope.$on('$locationChangeSuccess', function(event) {
     		console.log(($location.path()).toString());
@@ -100,4 +101,24 @@ $scope.setPriceRange = function () {
       if ($rootScope.questionsData.currentCount > 0) {
                $scope.setPriceRange()
       }
+})
+.directive('desktopResults', function(){
+    return {
+        restrict: "EA",
+        scope: false,
+        templateUrl: 'views/result-templates/desktop-results.html',
+        controller: function(){
+            //this.lrgBtn = $( "#large-button" );
+        }
+   }
+})
+.directive('mobileResults', function(){
+    return {
+        restrict: "EA",
+        scope: false,
+        templateUrl: 'views/result-templates/mobile-results.html',
+        controller: function(){
+            //this.lrgBtn = $( "#large-button" );
+        }
+   }
 });
