@@ -250,8 +250,10 @@
 
 .mobile-nav {
 	position: absolute;
-	width: 100%;
-	height: 200px;
+	width: 110%;
+	height: 65px;
+	bottom: 165px;
+	left: -10px;
 }
 
 
@@ -274,6 +276,16 @@
 		h2 {
 			margin-bottom: 2px;
 		}
+	}
+
+	.app-content-main-top .extra-info-wrap {
+		position: absolute;
+		top: 10px;
+		right: -50px;
+	}
+
+	.app-content-main-top-left .main-question-more {
+		font-size: 18px !important;
 	}
 /* More Progress Bar styles.  If anything move styles from _app-main-mt.scss
     As I do not see these as brand specific styles. A Progress Bar file would be optimal.
@@ -305,10 +317,11 @@
 	}
 
 	.slidey-wrap-all {
-		height: 560px !important;
+		height: 600px !important;
+		margin-top: initial !important;
 	}
 
-	/*.slidey {
+	.slidey {
 		width: 80% !important;
 		min-width: 100% !important;
 		left: -50% !important;
@@ -324,7 +337,7 @@
 			height: inherit;
 		}
 
-		.jslider {
+		/*.jslider {
 			width: 1em;
 			height: 100%;
 
@@ -363,8 +376,8 @@
 					vertical-align: middle;
 				}
 			}
-		}
-	}*/
+		}*/
+	}
 
 	.regular-2-container {
 		width: 82% !important;
@@ -384,12 +397,13 @@
 	}
 
 	a.answer-box.picture-3, a.answer-box.picture-2 {
-		width: 250px;
+		width: 280px;
 	}
 
 	a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4 {
 		float: none;
-		margin-bottom: 14px;
+		margin: 14px auto;
+		display: block;
 	}
 
 	a.answer-box.picture-3, a.answer-box.picture-2 {
@@ -407,9 +421,12 @@
 		}
 	}
 
-	a.answer-box.radio, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
-		float: initial !important;
+	a.answer-box.radio-3 {
 		margin: 10px auto;
+	}
+
+	a.answer-box.radio, a.answer-box.radio-2, a.answer-box.radio-4 {
+		float: initial !important;
 	}
 }
 
@@ -417,5 +434,62 @@
 	.app-content-main-top-left {
 		h2 {font-size: 18pt;}
 		h3 {font-size: 12pt;}
+	}
+}
+
+@media(max-width:580px) {
+	.app-content-main-top, .app-content-main-top-left {
+		min-height: 128px;
+	}
+
+	.app-content-main-top-left {
+		h2 {font-size: 14pt;}
+	}
+
+	a.answer-box.category, a.answer-box.sub-category {
+		width: 80px;
+
+		.category-name {
+			font-size: 14px;
+		}
+	}
+
+	a.answer-box.boxes-icon-2, a.answer-box.boxes-icon-5 {
+		display: block;
+		margin: 10px auto;
+	}
+
+	a.answer-box.picture-3, a.answer-box.picture-4 {
+		width: 230px;
+
+		.label-wrap .label-text {
+			font-size: 12px;
+		}
+	}
+
+	a.answer-box.checkbox-4, a.answer-box.radio-2, a.answer-box.radio-4 {
+		width: 90%;
+
+		.selected .select-icon {
+			left: 18px;
+			top: 22px;
+		}
+
+		.select-icon {
+			width: 28px;
+			height: 28px;
+			top: 22px;
+			left: 18px;
+		}
+
+		.label-wrap {
+			left: 62px;
+			max-width: 75%;
+		}
+
+		.label-wrap .label-text {
+			font-size: 16px;
+			line-height: 16px;
+		}
 	}
 }

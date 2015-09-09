@@ -1,5 +1,5 @@
 <div ng-controller="NavigationCtrl" ng-class="{{locale}}" resize style="clear: both;" class="app-content-main-bottom">
-	<div class="mobile-nav" ng-if="isMobile" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>
+ 	<div class="mobile-nav" ng-if="isMobile" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
