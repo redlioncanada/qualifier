@@ -18,7 +18,7 @@ angular.module('App')
 	  	}
   	}
     
-    $scope.$on('resize::resize', function() {
+    $rootScope.$on('resize::resize', function() {
         if (window.innerWidth < 1125){
             $scope.useMobileIcons = true;
         }else{

@@ -3,7 +3,27 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
 
-    $scope.useMobileTemplates = false;
+    if (window.innerWidth < 1125){
+            $scope.useMobileTemplates = true;
+            //console.log("useMobile");
+        }else{
+            $scope.useMobileTemplates = false;
+            //console.log("dontUseMobile");
+        }
+    
+    $rootScope.$on('resize::resize', function() {
+        if (window.innerWidth < 1125){
+            $scope.$apply(function(){
+                $scope.useMobileTemplates = true;
+            });
+            console.log("useMobile = " + $scope.useMobileTemplates);
+        }else{
+            $scope.$apply(function(){
+                $scope.useMobileTemplates = false;
+            });
+             console.log("useMobile = " + $scope.useMobileTemplates);
+        }
+      });
 
     $scope.$on('$locationChangeSuccess', function(event) {
     		console.log(($location.path()).toString());
@@ -54,12 +74,6 @@ angular.module('App')
         } 
 
       }
-
-$scope.$on('resize::resize', function() {
-        if (window.innerWidth < 1125){
-           //
-        }
-      });
       
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
