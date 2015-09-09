@@ -341,6 +341,9 @@
 		text-align: center;
 		padding-bottom: 3px;
 	}
+    .mobileInstructions{
+            display: none;
+    }
 }
 
 .bottom-nav-inner {
@@ -487,5 +490,31 @@ div[ng-class="fr_CA"] {
 		.popover-content {
 			text-transform: uppercase;
 		}
+	}
+}
+
+/* Media Queries Start */
+/* Added by Jacoub Bondre Sept 8th 2015 */
+/* If time allots lets refactor progress bar styles into its own .scss file */
+@media(max-width:1125px) {
+    .bottom-nav-intructions {
+        border-bottom: none;
+        
+        .instructions{
+	       display: none;
+        }
+        .mobileInstructions {
+            display: inline-block;
+            font-size: 14px;
+            color: #8b8b8b;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+            font-family: $AG-Bold-Cnd;
+            padding-top: 5px;
+        }
+    }
+    
+    .startover-btn-wrap {
+		display: none !important;
 	}
 }
