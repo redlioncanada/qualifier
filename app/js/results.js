@@ -118,7 +118,11 @@ $scope.setPriceRange = function () {
         scope: false,
         templateUrl: 'views/result-templates/mobile-results.html',
         controller: function(){
-            //this.lrgBtn = $( "#large-button" );
+            $scope.selectorClick = (function (e){
+                console.log("clicked");
+                //$( "#"+e.target.id +"" ).css("background-color", "#004595");
+                //$( "#"+e.target.id +"" ).css("color","#FFF");
+            });
         }
    }
 });
