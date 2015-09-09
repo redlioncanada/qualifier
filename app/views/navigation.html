@@ -3,13 +3,13 @@
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
-	<div class="app-nav-arrows">
+	<div ng-if="!isMobile" class="app-nav-arrows">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
-			<img ng-if="!isMobile" class="arrow-prev" ng-src="img/arrow-left.png">
+			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
 		<a href="#" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
-			<img ng-if="!isMobile" class="arrow-next" ng-src="img/arrow-right.png">
+			<img class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 
 	</div>
