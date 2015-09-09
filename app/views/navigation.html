@@ -3,7 +3,7 @@
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
-	<div ng-if="!isMobile" class="app-nav-arrows">
+	<div ng-if="isMobile" class="app-nav-arrows">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>

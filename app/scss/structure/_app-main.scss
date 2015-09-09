@@ -327,6 +327,17 @@
 		left: -50% !important;
 	}
 
+	.slider-large-label {
+		top: -30px !important;
+	}
+
+	.people-slider {
+		div.jslider-value {
+			left: -85px !important;
+			height: 60px !important;
+		}
+	}
+
 	.slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		width: 100px;
 		height: 500px;
@@ -335,9 +346,10 @@
 		.slider-wrap {
 			width: initial;
 			height: inherit;
+			left: -50%;
 		}
 
-		/*.jslider {
+		.jslider {
 			width: 1em;
 			height: 100%;
 
@@ -345,16 +357,26 @@
 				left: -40%;
 			}
 
+			.jslider-value {
+				left: 50px;
+				margin-top: 5px;
+				height: 44px;
+
+				 span {
+				 	line-height: 21px;
+				 }
+			}
+
 			.jslider-bg {
-				height: 95%;
-				width: 23px;
+				height: 111%;
+				width: 26px;
 				background: url("../img/slider-bg-vertical.jpg");
 				background-size: contain;
 				margin-left: -18px;
 			}
 
 			.jslider-scale {
-				height: 87%;
+				height: 99%;
 				top: 32px;
 				position: absolute;
 
@@ -368,7 +390,7 @@
 				ins {
 					top: -9px;
 					left: 40px;
-					width: 180px;
+					width: 115px;
 					text-align: left;
 					font-size: 12pt;
 					height: 45px;
@@ -376,7 +398,7 @@
 					vertical-align: middle;
 				}
 			}
-		}*/
+		}
 	}
 
 	.regular-2-container {
@@ -394,6 +416,10 @@
 
 	a.boxes-icon-5 {
 		margin-top: 10px;
+	}
+
+	a.answer-box.form-function {
+		float: initial !important;
 	}
 
 	a.answer-box.picture-3, a.answer-box.picture-2 {

@@ -26,7 +26,7 @@ angular.module('App')
         }
       }
       qs.text[0].options.realtime = true;
-      //qs.text[0].options.vertical = $scope.isMobile;
+      qs.text[0].options.vertical = $scope.isMobile;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
         //if (!!$rootScope.questionsData.question) {
           //if (qs.name == $rootScope.questionsData.question.name) {  
