@@ -119,8 +119,13 @@ $scope.setPriceRange = function () {
         transclude: true,
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
-            console.log("The directive is connected");
-            scope.selectorClicked = function($event) { console.log("hi : " + $event.currentTarget.nodeName); };
+            scope.columnHeight = 0;
+            setTimeout(function(){},500);
+            console.log($('#result-column-0').height());
+            scope.selectorClicked = function($event) { 
+                    console.log("hi : " + $event.currentTarget.id);
+                    
+            };
         }
    }
 });
