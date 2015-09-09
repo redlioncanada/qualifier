@@ -1,12 +1,12 @@
 <!-- Spliting results so images and headers become mini navigation. -->
 <ul class="mobile-results-nav" ng-if="questionsData.currentCount !=0">
-    <li ng-click="selectorClick" ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="mobile-result-selector">
+    <li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="mobile-result-selector" ng-click="selectorClicked($event);">
         <div class="product-img-wrap" ng-init="a.picker=a.colours[0]">
             <img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" class="mobile-selector-img">
             <img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.picker.image}}" class="mobile-selector-img">
         </div>
         <h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch" class="mobile-results-header"></h3>
-        <h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion" class="mobile-results-header"></h3>
+        <h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion" class="mobile-results-header" ></h3>
     </li>
 </ul>
 

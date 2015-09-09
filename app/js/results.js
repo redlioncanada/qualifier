@@ -55,7 +55,6 @@ angular.module('App')
 
       }
 
-
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
        for (var a in $rootScope.appliances) {
@@ -106,8 +105,9 @@ $scope.setPriceRange = function () {
     return {
         restrict: "EA",
         scope: false,
+        transclude: true,
         templateUrl: 'views/result-templates/desktop-results.html',
-        controller: function(){
+        link: function(scope, element, attrs) {
             //this.lrgBtn = $( "#large-button" );
         }
    }
@@ -116,13 +116,11 @@ $scope.setPriceRange = function () {
     return {
         restrict: "EA",
         scope: false,
+        transclude: true,
         templateUrl: 'views/result-templates/mobile-results.html',
-        controller: function(){
-            $scope.selectorClick = (function (e){
-                console.log("clicked");
-                //$( "#"+e.target.id +"" ).css("background-color", "#004595");
-                //$( "#"+e.target.id +"" ).css("color","#FFF");
-            });
+        link: function(scope, element, attrs) {
+            console.log("The directive is connected");
+            scope.selectorClicked = function($event) { console.log("hi : " + $event.currentTarget.nodeName); };
         }
    }
 });
