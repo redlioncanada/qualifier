@@ -55,6 +55,12 @@ angular.module('App')
 
       }
 
+$scope.$on('resize::resize', function() {
+        if (window.innerWidth < 1125){
+           //
+        }
+      });
+      
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
        for (var a in $rootScope.appliances) {
@@ -120,10 +126,45 @@ $scope.setPriceRange = function () {
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
             scope.columnHeight = 0;
-            setTimeout(function(){},500);
-            console.log($('#result-column-0').height());
+            setTimeout(function(){
+                scope.columnHeight = $('#result-column-0').height() + 25;
+                console.log("height : " + scope.columnHeight);
+                //
+                if (scope.columnHeight < $('#result-column-1').height())
+                {
+                    scope.columnHeight = $('#result-column-1').height() + 25;
+                    console.log("height : " + scope.columnHeight);
+                };
+                //
+                if (scope.columnHeight < $('#result-column-2').height())
+                {
+                    scope.columnHeight = $('#result-column-2').height()+ 25;
+                    console.log("height : " + scope.columnHeight);
+                }
+                //
+                console.log("height : " + scope.columnHeight);
+                $('#mobile-results-holder').height(scope.columnHeight);
+            },500);
+            
             scope.selectorClicked = function($event) { 
-                    console.log("hi : " + $event.currentTarget.id);
+                var idClicked = $event.currentTarget.id;
+                console.log (idClicked);
+                if(idClicked == 'result-selector-0') {
+                        $('#mobile-results-holder').height($('#result-column-0').height() + 25);
+                        $('#result-column-0').css('left','0px');
+                        $('#result-column-1').css('left','480px');
+                        $('#result-column-2').css('left','960px');
+                }else if(idClicked == 'result-selector-1') {
+                        $('#mobile-results-holder').height($('#result-column-1').height() + 25);
+                        $('#result-column-0').css('left','-480px');
+                        $('#result-column-1').css('left','0px');
+                        $('#result-column-2').css('left','480px');
+                }else if(idClicked == 'result-selector-2') {
+                        $('#mobile-results-holder').height($('#result-column-2').height() + 25);
+                        $('#result-column-0').css('left','-960px');
+                        $('#result-column-1').css('left','-480px');
+                        $('#result-column-2').css('left','0px');
+                }
                     
             };
         }

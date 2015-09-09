@@ -11,7 +11,7 @@
 </ul>
 <div id="mobile-results-holder">
 <ul class="results-list" ng-if="questionsData.currentCount !=0">
-			<li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result" id="result-column-{{$index}}">
+			<li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result ani" id="result-column-{{$index}}">
 				<div class="result-wrap">
 					<div class="result-inner">
 						
