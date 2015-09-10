@@ -148,6 +148,7 @@
 	@include make-row;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	position: relative;
 	@include noselect;
 	// .app-content-main-bottom-left {
 	// 	@include make-md-column(1);
@@ -160,6 +161,83 @@
 		padding-right: 0;
 		text-align: center;
 
+	}
+
+	.app-content-main-bottom-results {
+		position: absolute;
+		display: block;
+		top: -200px;
+		width: 100%;
+		height: 200px;
+		background-color: #002e5f;
+
+		.results-menu-tab-wrapper {
+			width: 100%;
+			position: absolute;
+			top: -14px;
+
+			.results-menu-tab {
+				margin: 0 auto;
+				width: 90px;
+				display: block;
+			}
+		}
+
+		.results-menu-heading {
+			padding: 5px 0;
+			text-align: center;
+			color: #8592a5;
+			font-size: 9pt;
+		}
+
+		.results-menu-body {
+			width: 100%;
+			background: white;
+
+			.results-menu-menu {
+				list-style: none;
+				width: inherit;
+				margin: 0;
+				padding: 20px 10px;
+
+				li {
+					margin: 20px 40px;
+					height: 50px;
+					text-transform: lowercase;
+				}
+
+				li > div:first-child {
+					float: left;
+					height: 100%;
+					width: 13%;
+					display: table;
+				}
+
+				li > div:first-child div {
+					display: table-cell;
+					justify-content: center;
+				}
+
+				li > div:first-child img {
+					margin-top: -22px;
+					width: 100%;
+				}
+
+				li > div:last-child {
+					float: right;
+					height: 100%;
+					width: 87%;
+					display: table;
+				}
+
+				li > div:last-child div {
+					font-size: 9pt;
+					padding-left: 10px;
+					display: table-cell;
+					justify-content: center;
+				}
+			}
+		}
 	}
 	// .app-content-main-bottom-right {
 	// 	@include make-md-column(1);
@@ -251,8 +329,8 @@
 .mobile-nav {
 	position: absolute;
 	width: 110%;
-	height: 65px;
-	bottom: 165px;
+	height: 70px;
+	bottom: -263px;
 	left: -10px;
 }
 

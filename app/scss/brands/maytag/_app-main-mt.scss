@@ -508,7 +508,10 @@ div[ng-class="fr_CA"] {
 		display: none;
 	}
 
-	header.header-mobile
+	header.header-mobile {
+		display: block;
+	}
+	
     .bottom-nav-intructions {
         border-bottom: none;
         
