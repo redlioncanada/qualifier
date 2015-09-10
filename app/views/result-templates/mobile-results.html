@@ -5,7 +5,7 @@
             <img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" class="mobile-selector-img">
             <img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.picker.image}}" class="mobile-selector-img">
         </div>
-        <h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch" class="mobile-results-header" id="result-header-{{$index}}"></h3>
+        <h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch" ng-class="{'active': $index==1}" class="mobile-results-header" id="result-header-{{$index}}"></h3>
         <h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion" class="mobile-results-header" id="result-header-{{$index}}" ></h3>
     </li>
 </ul>
