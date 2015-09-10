@@ -80,9 +80,9 @@ angular.module('App')
 
       $scope.openMenu = function() {
         console.log('open menu');
-        $(element).animate({
+        /*$(element).animate({
           'top': $(element).
-        })
+        })*/
       }
 
       $scope.closeMenu = function() {
