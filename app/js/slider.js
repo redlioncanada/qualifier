@@ -27,7 +27,8 @@ angular.module('App')
         }
       }
       qs.text[0].options.realtime = true;
-      qs.text[0].options.vertical = isVertical;
+      qs.text[0].verticalOptions = angular.copy(qs.text[0].options);
+      qs.text[0].verticalOptions.vertical = true;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
         //if (!!$rootScope.questionsData.question) {
           //if (qs.name == $rootScope.questionsData.question.name) {  
@@ -61,18 +62,4 @@ angular.module('App')
         qs.text[0].last = qs.text[0].answers[i].value
       }
     }
-})
-.directive('verticalslider', function() {
-  return {
-    restrict: 'E',
-    transclude: true,
-    templateUrl: 'views/slider-templates/vertical-slider.html'
-  }
-})
-.directive('horizontalslider', function() {
-  return {
-    restrict: 'E',
-    transclude: true,
-    templateUrl: 'views/slider-templates/horizontal-slider.html'
-  }
 });
