@@ -166,18 +166,32 @@ $scope.setPriceRange = function () {
                 if(idClicked == 'result-selector-0') {
                         $('#mobile-results-holder').height($('#result-column-0').height() + 25);
                         $('#result-column-0').css('left','0px');
+                        //$('#result-header-0').css('font-size','14px');
+                        //$('#result-header-0').css('text-decoration','underline');
                         $('#result-column-1').css('left','480px');
                         $('#result-column-2').css('left','960px');
+                    //
+                    $('#result-header-0').addClass('active');
+                    $('#result-header-1').removeClass('active');
+                    $('#result-header-2').removeClass('active');
                 }else if(idClicked == 'result-selector-1') {
                         $('#mobile-results-holder').height($('#result-column-1').height() + 25);
                         $('#result-column-0').css('left','-480px');
                         $('#result-column-1').css('left','0px');
                         $('#result-column-2').css('left','480px');
+                    //
+                    $('#result-header-0').removeClass('active');
+                    $('#result-header-1').addClass('active');
+                    $('#result-header-2').removeClass('active');
                 }else if(idClicked == 'result-selector-2') {
                         $('#mobile-results-holder').height($('#result-column-2').height() + 25);
                         $('#result-column-0').css('left','-960px');
                         $('#result-column-1').css('left','-480px');
                         $('#result-column-2').css('left','0px');
+                    //
+                    $('#result-header-0').removeClass('active');
+                    $('#result-header-1').removeClass('active');
+                    $('#result-header-2').addClass('active');
                 }
                     
             };

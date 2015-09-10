@@ -5,15 +5,15 @@
             <img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" class="mobile-selector-img">
             <img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.picker.image}}" class="mobile-selector-img">
         </div>
-        <h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch" class="mobile-results-header"></h3>
-        <h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion" class="mobile-results-header" ></h3>
+        <h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch" class="mobile-results-header" id="result-header-{{$index}}"></h3>
+        <h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion" class="mobile-results-header" id="result-header-{{$index}}" ></h3>
     </li>
 </ul>
 <div id="mobile-results-holder">
 <ul class="results-list" ng-if="questionsData.currentCount !=0">
 			<li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result ani" id="result-column-{{$index}}">
 				<div class="result-wrap">
-					<div class="result-inner">
+					<!-- <div class="result-inner">
 						
 						<div class="product-colour-picker-wrap">
 							<span bo-text="brandData.apptext.colourPreference"></span>
@@ -24,8 +24,16 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-						<div class="product-price-sku-wrap">
+						</div> -->
+						
+						<div class="product-details-wrap">
+                           
+							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
+							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>
+							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
+                            <div class="sales-feature-spacer"></div>
+							<!-- Product Price Wrap -->
+                             <div class="product-price-sku-wrap">
 							<span class="product-price">
 								<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
 								<span ng-if="a.appliance!='Laundry' && locale=='en_CA'">${{a.picker.prices.CAD}}</span>
@@ -39,12 +47,10 @@
 								<span ng-if="a.appliance=='Laundry'">{{a.picker.washerSku}}/{{a.picker.dryerSku}}</span> 
 							</span>
 
-						</div>
-						<div class="product-details-wrap">
-							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
-							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>
-							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
-							
+						</div> 
+                            <!-- -->
+                            <div class="sales-feature-spacer"></div>
+                            <!-- -->
 							<div class="product-details">
 								<div class="sales-feature-wrapper" ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
 									<h4 class="sales-feature">
@@ -77,7 +83,7 @@
 
 								</div>
 						</div>
-					</div>
+					<!-- </div> -->
 				</div>
 			</li>
 		</ul>
