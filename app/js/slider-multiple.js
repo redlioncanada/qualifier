@@ -29,7 +29,8 @@ angular.module('App')
             }
           }
           qs.text[t].options.realtime = true;
-          qs.text[t].options.vertical = isVertical;
+          qs.text[t].verticalOptions = angular.copy(qs.text[t].options);
+          qs.text[t].verticalOptions.vertical = true;
           qs.text[t].options.modelLabels = angular.copy(function (value) {
             //if (!!$rootScope.questionsData.question) {
               //if (qs.name == $rootScope.questionsData.question.name) {  
