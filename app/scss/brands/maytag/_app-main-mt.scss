@@ -1,4 +1,6 @@
-
+header.header-desktop {
+	display: block;
+}
 
 #main {
 	background: white;
@@ -497,6 +499,11 @@ div[ng-class="fr_CA"] {
 /* Added by Jacoub Bondre Sept 8th 2015 */
 /* If time allots lets refactor progress bar styles into its own .scss file */
 @media(max-width:1125px) {
+	header.header-desktop {
+		display: none;
+	}
+
+	header.header-mobile
     .bottom-nav-intructions {
         border-bottom: none;
         

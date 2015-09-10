@@ -258,6 +258,7 @@
 
 
 @media(max-width:1125px) {
+
 	body {
 		overflow-x: hidden;
 	}
@@ -327,8 +328,16 @@
 		left: -50% !important;
 	}
 
-	.slider-large-label {
-		top: -30px !important;
+	.slider-large-label-wrap {
+		width: 100% !important;
+		float: none !important;
+		left: initial;
+		position: absolute;
+
+		.slider-large-label {
+			top: -30px !important;
+			margin-right: 118px !important;
+		}
 	}
 
 	.people-slider {
@@ -338,15 +347,32 @@
 		}
 	}
 
-	.slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
+	div[ng-controller="SliderMultipleCtrl"] {
+		.multi-slider-wrap {
+			width: 50%;
+			position: relative;
+
+			&:first-child {
+				float: left;
+			}
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+
+	.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		width: 100px;
 		height: 500px;
 		margin-top: 15px !important;
+
 
 		.slider-wrap {
 			width: initial;
 			height: inherit;
 			left: -50%;
+			float: none !important;
+			position: relative;
 		}
 
 		.jslider {
@@ -426,16 +452,10 @@
 		margin-top: 0px !important;
 	}
 
-	a.answer-box.boxes-icon-2 {
+	a.answer-box.boxes-icon-2, a.answer-box.boxes-icon-5 {
 		.label-wrap {
 			bottom: 0px !important;
 			left: 55px;
-		}
-	}
-
-	a.answer-box.boxes-icon-5 {
-		.label-wrap {
-			bottom: 14px !important;
 		}
 	}
 
@@ -568,4 +588,8 @@
 			line-height: 16px;
 		}
 	}
+}
+
+.hidden {
+	display: none;
 }

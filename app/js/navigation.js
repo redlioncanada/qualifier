@@ -17,14 +17,6 @@ angular.module('App')
 	  		return a.thumbnail_type
 	  	}
   	}
-    
-    $scope.$on('resize::resize', function() {
-        if (window.innerWidth < 1125){
-            $scope.useMobileIcons = true;
-        }else{
-            $scope.useMobileIcons = false;
-        }
-      });
 
   	$scope.navToQuestions = function (q) {
   		if (!!$rootScope.questionsData.question) {

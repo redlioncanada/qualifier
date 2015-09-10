@@ -51,12 +51,12 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 //       console.log("resize");
 //  });
 //
-App.directive('resize', function($window) {
+App.directive('resize', function($rootScope, $window) {
   return {
-    link: function(scope) {
+    link: function() {
       angular.element($window).on('resize', function(e) {
         // Namespacing events with name of directive + event to avoid collisions
-        scope.$broadcast('resize::resize');
+        $rootScope.$broadcast('resize::resize');
       });
     }
   }
@@ -233,6 +233,11 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       console.log(log);
     }
 
+    $rootScope.useMobileIcons = window.innerWidth < 1125;
+    $rootScope.$on('resize::resize', function() {
+      $rootScope.useMobileIcons = window.innerWidth < 1125;
+    });
+    
     // $rootScope.locale = "en_CA"
    $rootScope.locale = "fr_CA"
     $rootScope.brand = "maytag"

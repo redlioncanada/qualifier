@@ -85,7 +85,6 @@ angular.module('App')
     	return false
   	}
 
-
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
 		$rootScope.questionsData.currentScore = {	
