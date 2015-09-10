@@ -5,23 +5,32 @@ https://www.npmjs.com/package/ng-slider -->
 
 <div ng-controller="SliderCtrl" >
     
-        <div class="slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label" style="width: 100px; clear: none; float:left">
+        <div class="{{!$root.useMobileIcons ? 'hidden' : ''}} slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label" style="width: 100px; clear: none; float:left">
             <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>
         </div>
 
 
-    <div class="answers-main-content answer-slider {{qs.text[0].answer}} {{qs.text[0].classes}}" ng-init="setLast(qs)">
+        <verticalslider class="{{!$root.useMobileIcons ? 'hidden' : ''}}" ></verticalslider>
+        <horizontalslider class="{{$root.useMobileIcons ? 'hidden' : ''}}" ></horizontalslider>
+    <!--<div class="{{!$root.useMobileIcons ? 'hidden' : ''}} answers-main-content answer-slider {{qs.text[0].answer}} {{qs.text[0].classes}}" ng-init="setLast(qs, true)">
         <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}" style="clear:none; float:left">
 		  <input ng-model="qs.text[0].answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="qs.text[0].options" />
         </div>
-	</div>
-
-    <!-- <div class="slider-bottom-labels" ng-if="qs.text[0].classes == 'slider-labels'">
-        <div class="slider-answer-label-wrap {{$index + 1}}" ng-repeat="labeltext in qs.text[0].answers">
-            <div class="slider-answer-label-line"></div>
-            <span class="slider-answer-label" ng-bind-html="labeltext.text"></span>
-            <span class="slider-answer-label more" ng-if="labeltext.text_more" ng-bind-html="labeltext.text_more"></span>
-        </div>
-    </div> -->
+	</div>-->
 
 </div>
+
+<!--<div ng-controller="SliderCtrl">
+    
+        <div class="{{$root.useMobileIcons ? 'hidden' : ''}} slider-large-label-wrap" ng-if="!!qs.text[0].options.dimension_label" style="width: 100px; clear: none; float:left">
+            <span class="slider-large-label" ng-bind="qs.text[0].options.dimension_label"></span>
+        </div>
+
+
+    <div class="answers-main-content answer-slider {{$root.useMobileIcons ? 'hidden' : ''}} {{qs.text[0].answer}} {{qs.text[0].classes}}" ng-init="setLast(qs, false)">
+        <div class="slider-wrap" ng-class="{'last-answer-active' : qs.text[0].answer == qs.text[0].last}" style="clear:none; float:left">
+          <input ng-model="qs.text[0].answer" ng-change="setAnswer()"  type="text" id="answerSlider" slider options="qs.text[0].options" />
+        </div>
+    </div>
+
+</div>-->

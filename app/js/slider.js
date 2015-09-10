@@ -3,6 +3,7 @@
 angular.module('App')
   .controller('SliderCtrl', function ($scope, $rootScope) {
   	// jslider-value
+
   	$scope.setAnswer = function () {
   		for (var i in $rootScope.questionsData.question.show.answers) {
   			if ($rootScope.questionsData.question.show.answers[i].value == $rootScope.questionsData.question.show.answer) {
@@ -14,7 +15,7 @@ angular.module('App')
   		}
   	}
 
-    $scope.setLast = function (qs) {
+    $scope.setLast = function (qs,isVertical) {
       qs.text[0].options.round = 5
       var last = null
       for (var a in qs.text[0].answers) {
@@ -26,7 +27,7 @@ angular.module('App')
         }
       }
       qs.text[0].options.realtime = true;
-      qs.text[0].options.vertical = $scope.isMobile;
+      qs.text[0].options.vertical = isVertical;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
         //if (!!$rootScope.questionsData.question) {
           //if (qs.name == $rootScope.questionsData.question.name) {  
@@ -60,4 +61,18 @@ angular.module('App')
         qs.text[0].last = qs.text[0].answers[i].value
       }
     }
+})
+.directive('verticalslider', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    templateUrl: 'views/slider-templates/vertical-slider.html'
+  }
+})
+.directive('horizontalslider', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    templateUrl: 'views/slider-templates/horizontal-slider.html'
+  }
 });

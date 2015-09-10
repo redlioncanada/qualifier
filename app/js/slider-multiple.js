@@ -15,7 +15,7 @@ angular.module('App')
     		}
       }
   	}
-    $scope.setLast = function (qs) {
+    $scope.setLast = function (qs,isVertical) {
       for (var t in qs.text) {     
 
           qs.text[t].options.round = 5
@@ -28,8 +28,8 @@ angular.module('App')
                 last = qs.text[t].answers[a]
             }
           }
-          qs.text[0].options.realtime = true;
-          qs.text[0].options.vertical = $scope.isMobile;
+          qs.text[t].options.realtime = true;
+          qs.text[t].options.vertical = isVertical;
           qs.text[t].options.modelLabels = angular.copy(function (value) {
             //if (!!$rootScope.questionsData.question) {
               //if (qs.name == $rootScope.questionsData.question.name) {  
