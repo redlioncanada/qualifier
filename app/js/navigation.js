@@ -2,7 +2,6 @@
 
 angular.module('App')
   .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window, $timeout) {
-
     $scope.atResultsPage = false;
 
     $scope.$on('$locationChangeSuccess', function(event) {
@@ -70,8 +69,20 @@ angular.module('App')
     restrict: 'E',
     templateUrl: 'views/result-templates/results-menu.html',
     link: function($scope, element) {
+      console.log($scope.questionsData.questions);
+
+      $scope.menuState = false;
+      // $scope.menuButtonHeight
+
+      $scope.menuIsOpen = function() {
+        return $scope.menuState;
+      }
+
       $scope.openMenu = function() {
         console.log('open menu');
+        $(element).animate({
+          'top': $(element).
+        })
       }
 
       $scope.closeMenu = function() {
