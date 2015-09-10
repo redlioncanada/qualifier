@@ -164,20 +164,20 @@ by Jacoub Bondre */
 @media(max-width:1125px) {
     #results {
 	padding-top: 25px;
+    .share-wrapper{
+        display: none;
+    }
 	.results-top {
 		h1 {
-			// display: inline-block;
-			margin-top: 0;
-			margin-bottom: 6px;
-			text-align: center;
-			text-transform: uppercase;
-			// float: left;
+			display: none;
+			
 		}
 		.results-adjust-desc {
 			text-align: center;
 			text-transform: uppercase;
 			position: relative;
 			top: 9px;
+            font-size: 16px !important;
 		}
 		.price-slider {
 			display: inline-block;
@@ -230,6 +230,10 @@ by Jacoub Bondre */
     //Adding styles for mobile specific navigation.
         //There are no default styles that coresspond with classes prefixed with .mobile-
     .mobile-results-nav{
+        width: 480px;
+        margin: auto;
+        padding: 0px;
+        position: relative;
         li {
 			display: inline-block;
 			position:relative;
@@ -239,64 +243,113 @@ by Jacoub Bondre */
             
             h3 {
                 color: #002e5f;
-                font-size: 12px;
-                
-                .active {
-                    font-size: 14px;
-                    text-decoration: underline;
-                }
+                font-size: 14px;
             }
             
             img {
                 width: 100%;
                 padding: 10%;
             }
+            .active {
+                    font-size: 16px;
+                    text-decoration: underline;
+                }
         }
     }
+        #mobile-results-holder{
+            position: relative;
+            overflow: hidden;
+            width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            /* For Safari 3.1 to 6.0 */
+                -webkit-transition-property: all;
+                -webkit-transition-duration: .2s;
+                -webkit-transition-timing-function: ease-out;
+                /* For old firefox */
+                -moz-transition-property: all;
+                -moz-transition-duration: .2s;
+                -moz-transition-timing-function:ease-out;
+                /* Standard syntax */
+                transition-property: all;
+                transition-duration: .2s;
+                transition-timing-function:ease-out;
+            
+        }
 	.results-list {
 		list-style: none;
 		clear: both;
 		-webkit-padding-start: 0;
-		padding: 25px 40px;
+		padding: 0px 0px;
 		li.result {
 			display: inline-block;
 			position:absolute;
 			width: 100%;
+            border: none;
+                /* For Safari 3.1 to 6.0 */
+                -webkit-transition-property: all;
+                -webkit-transition-duration: .4s;
+                -webkit-transition-timing-function: ease-out;
+                /* For old firefox */
+                -moz-transition-property: all;
+                -moz-transition-duration: .4s;
+                -moz-transition-timing-function:ease-out;
+                /* Standard syntax */
+                transition-property: all;
+                transition-duration: .4s;
+                transition-timing-function:ease-out;
+            
 			
 			&:nth-child(1), &:nth-child(2), &:nth-child(3) {
-				margin-left: 20px;
-				margin-right: 20px;
+				margin-left: 0px;
+				margin-right: 0px;
+                margin-top: 0px; // this is from the brand specific css file
 				.result-wrap {
-					border-radius: 5px;
+					border-radius: 0px;
 					background-color: rgb(255, 255, 255);
-					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
+					box-shadow: none;
 					width: 100%;
 				}
+                
 				.result-inner {
 
 				}
 				.product-img-wrap {
 					padding-top: 28px;
 				}
+                .product-details-wrap {
+                    margin: 0px;
+                    
+                }
 			}
             
             &:nth-child(1) {
-                position: relative;
-				margin-left: 20px;
-				margin-right: 20px;
-				.result-wrap {
-					border-radius: 5px;
-					background-color: rgb(255, 255, 255);
-					box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.28);
-					width: 100%;
-				}
-				.result-inner {
-
-				}
-				.product-img-wrap {
-					padding-top: 28px;
-				}
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: -480px;
 			}
+            //
+            &:nth-child(2) {
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: 0px;
+			}
+            //
+            &:nth-child(3) {
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: 480px;
+			}
+            
+            .sales-feature-spacer {
+                margin: 30px auto;
+                height: 1px;
+                width: 77%;
+                background-color: #022d58;
+            }
             
 			h2, .product-name {
 				//
@@ -315,8 +368,11 @@ by Jacoub Bondre */
 			}
 		}
 	}
-	.product-price-sku-wrap {
-		//
+	.product-price-sku-wrap {  
+        font-size: 22px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        padding: 0px !important;
 	}
 	.product-features-title {
         //

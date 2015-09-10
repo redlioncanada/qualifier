@@ -3,7 +3,27 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
 
-    $scope.useMobileTemplates = false;
+    if (window.innerWidth < 1125){
+            $scope.useMobileTemplates = true;
+            //console.log("useMobile");
+        }else{
+            $scope.useMobileTemplates = false;
+            //console.log("dontUseMobile");
+        }
+    
+    $rootScope.$on('resize::resize', function() {
+        if (window.innerWidth < 1125){
+            $scope.$apply(function(){
+                $scope.useMobileTemplates = true;
+            });
+            console.log("useMobile = " + $scope.useMobileTemplates);
+        }else{
+            $scope.$apply(function(){
+                $scope.useMobileTemplates = false;
+            });
+             console.log("useMobile = " + $scope.useMobileTemplates);
+        }
+      });
 
     $scope.$on('$locationChangeSuccess', function(event) {
     		console.log(($location.path()).toString());
@@ -54,7 +74,7 @@ angular.module('App')
         } 
 
       }
-
+      
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
        for (var a in $rootScope.appliances) {
@@ -120,10 +140,59 @@ $scope.setPriceRange = function () {
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
             scope.columnHeight = 0;
-            setTimeout(function(){},500);
-            console.log($('#result-column-0').height());
+            setTimeout(function(){
+                scope.columnHeight = $('#result-column-0').height() + 25;
+                console.log("height : " + scope.columnHeight);
+                //
+                if (scope.columnHeight < $('#result-column-1').height())
+                {
+                    scope.columnHeight = $('#result-column-1').height() + 25;
+                    console.log("height : " + scope.columnHeight);
+                };
+                //
+                if (scope.columnHeight < $('#result-column-2').height())
+                {
+                    scope.columnHeight = $('#result-column-2').height()+ 25;
+                    console.log("height : " + scope.columnHeight);
+                }
+                //
+                console.log("height : " + scope.columnHeight);
+                $('#mobile-results-holder').height(scope.columnHeight);
+            },500);
+            
             scope.selectorClicked = function($event) { 
-                    console.log("hi : " + $event.currentTarget.id);
+                var idClicked = $event.currentTarget.id;
+                console.log (idClicked);
+                if(idClicked == 'result-selector-0') {
+                        $('#mobile-results-holder').height($('#result-column-0').height() + 25);
+                        $('#result-column-0').css('left','0px');
+                        //$('#result-header-0').css('font-size','14px');
+                        //$('#result-header-0').css('text-decoration','underline');
+                        $('#result-column-1').css('left','480px');
+                        $('#result-column-2').css('left','960px');
+                    //
+                    $('#result-header-0').addClass('active');
+                    $('#result-header-1').removeClass('active');
+                    $('#result-header-2').removeClass('active');
+                }else if(idClicked == 'result-selector-1') {
+                        $('#mobile-results-holder').height($('#result-column-1').height() + 25);
+                        $('#result-column-0').css('left','-480px');
+                        $('#result-column-1').css('left','0px');
+                        $('#result-column-2').css('left','480px');
+                    //
+                    $('#result-header-0').removeClass('active');
+                    $('#result-header-1').addClass('active');
+                    $('#result-header-2').removeClass('active');
+                }else if(idClicked == 'result-selector-2') {
+                        $('#mobile-results-holder').height($('#result-column-2').height() + 25);
+                        $('#result-column-0').css('left','-960px');
+                        $('#result-column-1').css('left','-480px');
+                        $('#result-column-2').css('left','0px');
+                    //
+                    $('#result-header-0').removeClass('active');
+                    $('#result-header-1').removeClass('active');
+                    $('#result-header-2').addClass('active');
+                }
                     
             };
         }

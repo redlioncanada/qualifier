@@ -1,4 +1,4 @@
-<div id="results" class="main-content" ng-controller="ResultsCtrl"> 
+<div id="results" class="main-content" ng-controller="ResultsCtrl" resize > 
 	<div class="content-inner">
 		<div class="results-top" ng-if="questionsData.currentCount !=0">
 			<h1 bo-text="brandData.apptext.resultsPage"></h1>
@@ -20,7 +20,8 @@
 			</div>
 		</div>
 
-		<mobile-results></mobile-results>
+		<mobile-results ng-show="useMobileTemplates"></mobile-results>
+        <desktop-results ng-show="!useMobileTemplates"></desktop-results>
 
 		<div class="results-top" ng-if="questionsData.currentCount==0">
 			<h1>
