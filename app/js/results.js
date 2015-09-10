@@ -200,19 +200,19 @@ $scope.setPriceRange = function () {
           }
 
           scope.swipeRight = function() {
-            if (scope.canSwipeRight()) scope.swipeDetails(scope.currentId+1);
+            if (scope.canSwipeRight()) scope.swipeDetails(scope.currentId-1);
           }
 
           scope.swipeLeft = function() {
-            if (scope.canSwipeLeft()) scope.swipeDetails(scope.currentId-1);
+            if (scope.canSwipeLeft()) scope.swipeDetails(scope.currentId+1);
           }
 
           scope.canSwipeRight = function() {
-            return scope.currentId < 2;
+            return scope.currentId > 0;
           }
 
           scope.canSwipeLeft = function() {
-            return scope.currentId > 0;
+            return scope.currentId < 2;
           }
         }
    }
