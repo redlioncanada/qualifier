@@ -26,7 +26,7 @@
 							</div>
 						</div> -->
 						
-						<div class="product-details-wrap">
+						<div class="product-details-wrap" ng-swipe-left="swipeLeft()" ng-swipe-Right="swipeRight()">
                            
 							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
 							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>

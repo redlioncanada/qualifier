@@ -16,12 +16,10 @@ angular.module('App')
             $scope.$apply(function(){
                 $scope.useMobileTemplates = true;
             });
-            console.log("useMobile = " + $scope.useMobileTemplates);
         }else{
             $scope.$apply(function(){
                 $scope.useMobileTemplates = false;
             });
-             console.log("useMobile = " + $scope.useMobileTemplates);
         }
       });
 
@@ -139,6 +137,7 @@ $scope.setPriceRange = function () {
         transclude: true,
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
+            scope.currentId = 1;
             scope.columnHeight = 0;
             setTimeout(function(){
                 scope.columnHeight = $('#result-column-0').height() + 25;
@@ -161,9 +160,13 @@ $scope.setPriceRange = function () {
             },500);
             
             scope.selectorClicked = function($event) { 
-                var idClicked = $event.currentTarget.id;
-                console.log (idClicked);
-                if(idClicked == 'result-selector-0') {
+                var idClicked = parseInt($event.currentTarget.id.slice(-1));
+                scope.swipeDetails(idClicked);
+            };
+
+          scope.swipeDetails = function(id) {
+            var idClicked = 'result-selector-'+id.toString();
+            if(idClicked == 'result-selector-0') {
                         $('#mobile-results-holder').height($('#result-column-0').height() + 25);
                         $('#result-column-0').css('left','0px');
                         //$('#result-header-0').css('font-size','14px');
@@ -193,8 +196,24 @@ $scope.setPriceRange = function () {
                     $('#result-header-1').removeClass('active');
                     $('#result-header-2').addClass('active');
                 }
-                    
-            };
+              scope.currentId = id;
+          }
+
+          scope.swipeRight = function() {
+            if (scope.canSwipeRight()) scope.swipeDetails(scope.currentId+1);
+          }
+
+          scope.swipeLeft = function() {
+            if (scope.canSwipeLeft()) scope.swipeDetails(scope.currentId-1);
+          }
+
+          scope.canSwipeRight = function() {
+            return scope.currentId < 2;
+          }
+
+          scope.canSwipeLeft = function() {
+            return scope.currentId > 0;
+          }
         }
    }
 });
