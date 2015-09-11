@@ -28,7 +28,6 @@ angular.module('App')
   	}
 
   	$scope.navToQuestions = function (q) {
-      console.log($scope.path);
   		if (!!$rootScope.questionsData.question) {
   			if ($rootScope.questionsData.question.order < q.order) {
   				$rootScope.controls.controlClicked = 'next';
@@ -69,24 +68,37 @@ angular.module('App')
     restrict: 'E',
     templateUrl: 'views/result-templates/results-menu.html',
     link: function($scope, element) {
-      console.log($scope.questionsData.questions);
-
       $scope.menuState = false;
-      // $scope.menuButtonHeight
+      $scope.menuButtonHeight = $(element).find('.results-menu-heading').height();
+      $scope.menuOffset = parseInt($(element).css('top'));
 
       $scope.menuIsOpen = function() {
         return $scope.menuState;
       }
 
+      $scope.toggleMenu = function() {
+        if ($scope.menuState) {
+          $scope.closeMenu();
+        } else {
+          $scope.openMenu();
+        }
+      }
+
       $scope.openMenu = function() {
-        console.log('open menu');
-        /*$(element).animate({
-          'top': $(element).
-        })*/
+        if ($scope.menuState) return;
+        console.log($(element).find('div').eq(0).height());
+        $(element).animate({
+          'top': ($(element).find('div').eq(0).height() - $scope.menuButtonHeight)*-1 + $scope.menuOffset
+        });
+        $scope.menuState = true;
       }
 
       $scope.closeMenu = function() {
-        console.log('close menu');
+        if (!$scope.menuState) return;
+        $(element).animate({
+          'top': $scope.menuOffset
+        });
+         $scope.menuState = false;
       }
     }
   }
