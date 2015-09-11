@@ -7,6 +7,8 @@ angular.module('App')
     $scope.$on('$locationChangeSuccess', function(event) {
         if ( ($location.path()).toString().indexOf("results") != -1) {
           $scope.atResultsPage = true;
+        } else {
+          $scope.atResultsPage = false;
         }
     });
 
@@ -86,7 +88,6 @@ angular.module('App')
 
       $scope.openMenu = function() {
         if ($scope.menuState) return;
-        console.log($(element).find('div').eq(0).height());
         $(element).animate({
           'top': ($(element).find('div').eq(0).height() - $scope.menuButtonHeight)*-1 + $scope.menuOffset
         });
