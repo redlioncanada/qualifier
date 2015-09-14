@@ -902,6 +902,10 @@ div[ng-class="fr_CA"] {
 
 @media(max-width: 580px) {
 	div.price-slider .jslider {
+		.jslider-bg {
+			margin-left: -16px;
+		}
+
 		div.jslider-pointer { 
 			width: 43px;
 			height: 37px;

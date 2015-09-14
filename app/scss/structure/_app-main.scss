@@ -348,6 +348,9 @@
 		overflow-x: hidden;
 	}
 
+	.popover {
+		display: none !important;
+	}
 
 	.main-content .content-inner {
 		padding-top: 8px;
@@ -390,8 +393,12 @@
     }
     
 	.app-answers .category, .app-answers .sub-category {
-		width: 105px;
-		margin: 10px auto;
+		width: 80px;
+	}
+
+	.app-answers .category img.normal[ng-src="img/start-laundry.png"] {
+		width: 130%;
+		margin-left: -15px;
 	}
 
 	.app-content-main-top-left {
@@ -424,8 +431,8 @@
 		position: absolute;
 
 		.slider-large-label {
-			top: -30px !important;
-			margin-right: 118px !important;
+			top: -20px !important;
+			margin-right: 94px !important;
 		}
 	}
 
@@ -618,6 +625,16 @@
 }
 
 @media(max-width:580px) {
+	.app-answers .category, .app-answers .sub-category {
+		width: 60px;
+		display: block !important;
+		margin: 10px auto !important;
+	}
+
+	.answers-category {
+		margin-top: -111px;
+	}
+
 	.app-content-main-top, .app-content-main-top-left {
 		min-height: 128px;
 	}
@@ -627,8 +644,6 @@
 	}
 
 	a.answer-box.category, a.answer-box.sub-category {
-		width: 80px;
-
 		.category-name {
 			font-size: 14px;
 		}
@@ -654,6 +669,7 @@
 
 	a.answer-box.checkbox-4, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
 		width: 90%;
+		border-right: 4px solid #999999;
 
 		.selected .select-icon {
 			left: 18px;

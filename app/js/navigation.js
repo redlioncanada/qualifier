@@ -75,9 +75,9 @@ angular.module('App')
       $scope.element = $(element).find('div').eq(0);
       $scope.height = 0;
 
-      let iElement = $scope.element.find('.results-menu-body');
-      let i = setInterval(function() {
-        let j = $(iElement).height();
+      var iElement = $scope.element.find('.results-menu-body');
+      var i = setInterval(function() {
+        var j = $(iElement).height();
         if ($(iElement).height() > 50) {
           $scope.height = j;
           $(iElement).css('height', 0);
