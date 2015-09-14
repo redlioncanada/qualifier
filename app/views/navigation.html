@@ -3,7 +3,7 @@
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
-	<div ng-if="isMobile" class="app-nav-arrows">
+	<div ng-if="!isMobile" class="app-nav-arrows">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
@@ -18,14 +18,14 @@
 		
 	</div>
 
-	<resultsmenu ng-if="atResultsPage" class="app-content-main-bottom-results"></resultsmenu>
+	<resultsmenu ng-if="isMobile && atResultsPage" class="app-content-main-bottom-results"></resultsmenu>
 
 	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name.indexOf('results') == -1 && questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
 		<div class="bottom-nav-wrap">
 			<div class="bottom-nav-inner">
 				<div class="bottom-nav-intructions">
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
-                    <span class="mobileInstructions">swipe for next question</span>
+                    <span ng-if="isMobile" class="mobileInstructions">swipe for next question</span>
 				</div>
 				<div class="bottom-nav-inner-inner">
 					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">

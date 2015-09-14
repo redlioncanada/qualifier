@@ -72,7 +72,18 @@ angular.module('App')
     link: function($scope, element) {
       $scope.menuState = false;
       $scope.menuButtonHeight = $(element).find('.results-menu-heading').height();
-      $scope.menuOffset = parseInt($(element).css('top'));
+      $scope.element = $(element).find('div').eq(0);
+      $scope.height = 0;
+
+      let iElement = $scope.element.find('.results-menu-body');
+      let i = setInterval(function() {
+        let j = $(iElement).height();
+        if ($(iElement).height() > 50) {
+          $scope.height = j;
+          $(iElement).css('height', 0);
+          clearInterval(i);
+        }
+      }, 100);
 
       $scope.menuIsOpen = function() {
         return $scope.menuState;
@@ -88,16 +99,22 @@ angular.module('App')
 
       $scope.openMenu = function() {
         if ($scope.menuState) return;
-        $(element).animate({
-          'top': ($(element).find('div').eq(0).height() - $scope.menuButtonHeight)*-1 + $scope.menuOffset
+        $($scope.element).animate({
+          'top': -$scope.height + $scope.menuButtonHeight
+        });
+        $(element).find('.results-menu-body').animate({
+          'height': $scope.height
         });
         $scope.menuState = true;
       }
 
       $scope.closeMenu = function() {
         if (!$scope.menuState) return;
-        $(element).animate({
-          'top': $scope.menuOffset
+        $($scope.element).animate({
+          'top': 0
+        });
+        $(element).find('.results-menu-body').animate({
+          'height': 0
         });
          $scope.menuState = false;
       }

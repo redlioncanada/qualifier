@@ -899,3 +899,34 @@ div[ng-class="fr_CA"] {
 		top: 15px;
 	}
 }
+
+@media(max-width: 580px) {
+	div.price-slider .jslider {
+		div.jslider-pointer { 
+			width: 43px;
+			height: 37px;
+			background: url('../img/slider-pointer-small.png') center center no-repeat !important;
+			background-size: 43px 37px;
+			top: 0px;
+			margin-left: -23px;
+		}
+
+		.jslider-value-to {
+			margin-right: -26px !important;
+		}
+	}
+
+	#results div.price-slider.pointer-labels .jslider {
+		div.jslider-value {
+			width: 54px;
+			height: 48px;
+			margin-top: -36px;
+			margin-left: -28px !important;
+
+			span {
+				font-size: 20px !important;
+			}
+		}
+	}
+
+}

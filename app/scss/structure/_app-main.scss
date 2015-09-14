@@ -171,6 +171,12 @@
 		height: 200px;
 		background-color: #002e5f;
 
+		> div {
+			position: absolute;
+			width: 100%;
+			background-color: #002e5f;
+		}
+
 		.results-menu-tab-wrapper {
 			width: 100%;
 			position: absolute;
@@ -193,6 +199,7 @@
 		.results-menu-body {
 			width: 100%;
 			background: white;
+			overflow: hidden;
 
 			.results-menu-menu {
 				list-style: none;
@@ -219,8 +226,8 @@
 				}
 
 				li > div:first-child img {
-					margin-top: -22px;
-					width: 100%;
+					margin-top: -29px;
+					width: 37px;
 				}
 
 				li > div:last-child {
@@ -330,8 +337,8 @@
 	position: absolute;
 	width: 110%;
 	height: 70px;
-	bottom: -263px;
 	left: -10px;
+	z-index: 2;
 }
 
 

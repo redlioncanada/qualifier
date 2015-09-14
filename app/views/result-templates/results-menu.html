@@ -5,7 +5,7 @@
 	<div class="results-menu-heading" ng-click="toggleMenu()">{{$root.locale == "fr_CA" ? "Tap on an icon to change your answer(FR)" : "Tap on an icon to change your answer"}}</div>
 	<div class="results-menu-body">
 		<ul class="results-menu-menu">
-			<li ng-if="byName(q)" ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" ng-click="navToQuestions(q);closeMenu()">
+			<li ng-if="byName(q)" ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" ng-repeat="q in questionsData.scoringQuestions | orderByOrder" ng-click="navToQuestions(q);closeMenu()">
 				
 				<div class="icon-nav">
                     <div><img ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" /></div>
