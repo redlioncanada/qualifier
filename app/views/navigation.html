@@ -1,9 +1,9 @@
 <div ng-controller="NavigationCtrl" ng-class="{{locale}}" resize style="clear: both;" class="app-content-main-bottom">
- 	<div class="mobile-nav" ng-if="isMobile" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>
+ 	<!--<div class="mobile-nav" ng-if="isTabletWidthOrLess" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>-->
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
-	<div ng-if="!isMobile" class="app-nav-arrows">
+	<div ng-if="!isTabletWidthOrLess" class="app-nav-arrows">
 		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
@@ -18,28 +18,39 @@
 		
 	</div>
 
-	<resultsmenu ng-if="isMobile && atResultsPage" class="app-content-main-bottom-results"></resultsmenu>
+	<resultsmenu ng-if="isTabletWidthOrLess && atResultsPage" class="app-content-main-bottom-results"></resultsmenu>
 
-	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name.indexOf('results') == -1 && questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
+	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
 		<div class="bottom-nav-wrap">
 			<div class="bottom-nav-inner">
-				<div class="bottom-nav-intructions">
+
+				<div class="bottom-nav-intructions" ng-class="{'hidden': atResultsPage}">
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
-                    <span ng-if="isMobile" class="mobileInstructions">swipe for next question</span>
+                    <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">swipe for next question</span>-->
+                    <div ng-if="$root.isTabletWidthOrLess" class="mobile-app-nav-arrows">
+						<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
+							<img class="arrow-prev" ng-src="img/arrow-left.png">
+						</a>
+
+						<a href="#" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
+							<img class="arrow-next" ng-src="img/arrow-right.png">
+						</a>
+
+					</div>
 				</div>
 				<div class="bottom-nav-inner-inner">
 					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
 				    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="navToQuestions(q)" popover-placement="top" popover-append-to-body="true" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
-					      	<img ng-if="useMobileIcons" ng-src="img/mbl/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-                            <img ng-if="!useMobileIcons" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+					      	<img ng-if="isTabletWidthOrLess" ng-src="img/mbl/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+                            <img ng-if="!isTabletWidthOrLess" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 				    	</a>      
 					</div>
 	 
 					<div ng-repeat="q in questionsData.questions | nextQuestions:questionsData.scoringQuestions as nextQs" class="icon-nav-wrap" ng-if="!!q.thumbnail_type">
 				    	<a class="icon-nav">
                             <!-- img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png -->
-					      	<img ng-if="useMobileIcons" ng-src="img/mbl/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
-                            <img ng-if="!useMobileIcons" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+					      	<img ng-if="isTabletWidthOrLess" ng-src="img/mbl/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
+                            <img ng-if="!isTabletWidthOrLess" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 				    	</a>      
 					</div>
 				</div>

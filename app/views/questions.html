@@ -4,7 +4,7 @@
 	<div class="content-inner">
 		<div class="buttons-top">
 				<!-- Save, Share, Print -->
-				<div ng-controller="ShareCtrl" ng-if="!isMobile" class="buttons-top-right-btns">
+				<div ng-controller="ShareCtrl" ng-if="!isTabletWidthOrLess" class="buttons-top-right-btns">
 					<share class="share-wrapper" href=""></share>
 				</div>
 		</div>
@@ -16,13 +16,13 @@
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltop-container="body" tooltip-placement="bottom" tooltip="{{questionsData.question.show.explanation}}">
 						<span class="btn-icon">
 							<span>?</span>
 						</span>
-						<span class="btn-text" ng-if="!isMobile" ng-bind="questionsData.question.show.explanation_title"></span>
+						<span class="btn-text" ng-if="!isTabletWidthOrLess" ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltop-container="body" tooltip-placement="bottom" tooltip="{{questionsData.question.show.info}}">
 						<span class="btn-icon">
 							<span>i</span>
 						</span>

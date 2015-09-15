@@ -233,13 +233,13 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       console.log(log);
     }
 
-    $rootScope.useMobileIcons = window.innerWidth < 1125;
+    $rootScope.isTabletWidthOrLess = window.innerWidth <= 1125;
     $rootScope.$on('resize::resize', function() {
-      $rootScope.useMobileIcons = window.innerWidth < 1125;
+      $rootScope.isTabletWidthOrLess = window.innerWidth <= 1125;
     });
     
     // $rootScope.locale = "en_CA"
-   $rootScope.locale = "fr_CA"
+   $rootScope.locale = "en_CA"
     $rootScope.brand = "maytag"
     $rootScope.isMobile = Modernizr.mobile;
 
