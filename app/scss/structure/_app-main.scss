@@ -405,7 +405,7 @@ div.mobile-app-nav-arrows {
 	}
 
 	.app-content-main-top-left .main-question-more {
-		font-size: 18px !important;
+		font-size: 15px !important;
 	}
 /* More Progress Bar styles.  If anything move styles from _app-main-mt.scss
     As I do not see these as brand specific styles. A Progress Bar file would be optimal.
@@ -466,8 +466,8 @@ div.mobile-app-nav-arrows {
 		position: absolute;
 
 		.slider-large-label {
-			top: -20px !important;
-			margin-right: 94px !important;
+			top: -15px !important;
+			margin-right: 98px !important;
 		}
 	}
 
@@ -725,11 +725,25 @@ div.mobile-app-nav-arrows {
 			.jslider-scale {
 				top: 17px;
 			}
+
+			.jslider-value {
+				left: 35px;
+				height: 35px;
+
+				 span {
+				 	line-height: 14px;
+				 }
+			}
+
 		}
 	}
 
 	.jslider.vertical .jslider-value:not(.jslider-value-to) {
-		margin-top: -14px !important;
+		margin-top: -3px !important;
+	}
+
+	.slider-large-label-wrap .slider-large-label {
+		font-size: 18px !important;
 	}
 
 	.answers-category {
