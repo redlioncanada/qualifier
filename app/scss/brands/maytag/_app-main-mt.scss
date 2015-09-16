@@ -10,6 +10,7 @@ header.header-desktop {
 .app-content-main-top {
 	width: 1160px;
 	margin: 0 auto;
+	height: 154px;
 
 	h2, h3 {
 		font-family: $AG-Bold-Cnd;
@@ -262,6 +263,22 @@ header.header-desktop {
 		float: right;
 		margin-top: 20px;
 	}
+	.backtoresults-mobile {
+	   		width: 100%;
+	   		background-color: #002e5f;
+	   		text-transform: uppercase;
+	   		height: 30px;
+	   		margin: 15px 0;
+
+	   		div {
+	   			color: white;
+	   			margin: 0 auto;
+	   			position: relative;
+	   			top: 5px;
+	   			font-family: $AG-Bold-Cnd;	   		
+	   		}
+	   }
+
 	.backtoresults-btn-wrap {
 		display: inline-block;
 	    border-left: solid 1px #002e58;
@@ -367,7 +384,6 @@ header.header-desktop {
 
 
 .body {
-	min-height: 518px;
 	overflow: hidden;
 	max-width: 100%;
 }
@@ -385,6 +401,10 @@ header.header-desktop {
 	position: absolute;
 	left: -(1160px / 2);
 	width: 1160px;
+
+	div[ng-controller="SliderMultipleCtrl"] {
+		padding-top: 25px;
+	}
 
 	div[ng-controller="SliderMultipleCtrl"] .answers-main-content {
 		&.answer-slider {

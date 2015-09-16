@@ -3,6 +3,12 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
+  	$rootScope.$on('resize::resize', function() {
+	    if (window.innerWidth <= 580){
+	        $scope.resizeElements();
+	    }
+	});
+
     $scope.$on('$locationChangeSuccess', function(event) {
     		var q = ($location.path()).toString().replace("/question/","");
 
@@ -255,7 +261,50 @@ angular.module('App')
 		//} else {
 		//	var ref = 0;
 		//}
-		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	 
+		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	
+
+		if (window.innerWidth <= 580) {
+			$timeout(function(){
+				$(window).scrollTop(0);
+				$scope.resizeElements();
+			},200);
+		}
+	}
+
+	$scope.resizeElements = function(depth) {
+		if (typeof depth == 'undefined') depth = 1;
+
+		var p = $('.app-content-main-top-left');
+		var t1 = $(p).find('h2').eq(0);
+		var t2 = $(p).find('h3');
+		var t3 = $(p).find('h2').eq(1);
+
+		var headerHeight = getTotalHeight(t1) + getTotalHeight(t2) + getTotalHeight(t3);
+		console.log('total header height: '+headerHeight);
+
+		$('.app-content-main-top').stop(true).animate({
+			'height': headerHeight
+		}, 0);
+
+
+		var c = $('.slidey.ng-hide-remove').height();
+		if (c < 100) c = $('.slidey').not('.ng-hide').height();
+		//var contentHeight = getTotalHeight(c);
+		//console.log('content height: '+contentHeight);
+
+		if (c > 100) {
+			$('.slidey-wrap-all').stop(true).animate({
+				'height': c + 10
+			}, 0);
+		} else {
+			setTimeout(function(){$scope.resizeElements(++depth)},100);
+		}
+
+		function getTotalHeight(el) {
+			if (!el || (typeof el === 'object' && el.length == 0)) return 0;
+			console.log('el height: '+$(el).height());
+			return parseInt($(el).height()) + parseInt($(el).css('paddingTop')) + parseInt($(el).css('paddingBottom')) + parseInt($(el).css('marginTop')) + parseInt($(el).css('marginBottom'));
+		}
 	}
 
 	$scope.freshQuestion = function (q) {

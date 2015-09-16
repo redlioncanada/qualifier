@@ -1,5 +1,5 @@
 <div ng-controller="NavigationCtrl" ng-class="{{locale}}" resize style="clear: both;" class="app-content-main-bottom">
- 	<!--<div class="mobile-nav" ng-if="isTabletWidthOrLess" ng-swipe-right="!!questionsData.question.previous || previous()" ng-swipe-left="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>-->
+ 	<!--<div class="mobile-nav" ng-if="isTabletWidthOrLess" hmhm-swipeleftright="!!questionsData.question.previous || previous()" hmhm-swipeleftleft="(!!questionsData.question && questionsData.question.name !='Appliance' && !controls.questionHasAnswer) || next()"></div>-->
 
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
@@ -26,7 +26,7 @@
 
 				<div class="bottom-nav-intructions" ng-class="{'hidden': atResultsPage}">
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
-                    <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">swipe for next question</span>-->
+                    <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">hm-swipeleft for next question</span>-->
                     <div ng-if="$root.isTabletWidthOrLess" class="mobile-app-nav-arrows">
 						<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 							<img class="arrow-prev" ng-src="img/arrow-left.png">
@@ -54,6 +54,12 @@
 				    	</a>      
 					</div>
 				</div>
+
+				<div class="backtoresults-mobile" ng-click="next(true)" ng-if="!!resultsTouched && !!questionsData.question && isTabletWidthOrLess">
+					<a class="banner">
+						<div ng-bind-html="brandData.apptext.backtoresults.replace('<br />',' ')"></div>
+					</a>
+				</div>
 			</div>
 
 			<div class="btn-wrapper">
@@ -62,7 +68,7 @@
 						<span ng-bind-html="brandData.apptext.startover"></span>
 					</a>
 				</div>
-				<div class="backtoresults-btn-wrap" ng-if="!!resultsTouched && !!questionsData.question">
+				<div class="backtoresults-btn-wrap" ng-if="!!resultsTouched && !!questionsData.question && !isTabletWidthOrLess">
 					<a id="backtoresults" class="btn btn-backtoresults" ng-click="next(true)">
 						<span ng-bind-html="brandData.apptext.backtoresults"></span>
 					</a>

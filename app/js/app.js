@@ -6,6 +6,7 @@ var nglibs = [
   'ngSanitize',
   'ngRoute',
   'ui.router',
+  'hmTouchEvents',
   'ngTouch',
   'pasvaz.bindonce',
   'LocalStorageModule',
@@ -181,6 +182,7 @@ App.filter('byPrice', function($rootScope) {
         }
         $rootScope.controls.price = range.join(";")
     }
+    $rootScope.safeApply();
     return inside.concat(outside);
   };
 });

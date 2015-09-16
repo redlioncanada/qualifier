@@ -1,6 +1,9 @@
+html, body {
+	min-width: 320px;
+}
+
 .main-content {
 	// @extend .row;
-	max-width: 1360px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -83,6 +86,7 @@
 }
 
 .main {
+	min-width: 320px;
 	.main-content {
 		min-height: 125px;
 	}
@@ -95,7 +99,7 @@
 
 	.app-content-main-top-left {
 		@include make-md-column(8);
-		min-height: 154px;
+		height: 100%;
 	}
 	.app-content-main-top-right {
 		@include make-md-column(4);
@@ -145,8 +149,8 @@ div.mobile-app-nav-arrows {
 	margin-bottom: 10px;
 
 	.btn-next, .btn-prev {bottom: initial;}
-	.btn-next {right: 0px;}
-	.btn-prev {left: 0px;}
+	.btn-next {right: 35px;}
+	.btn-prev {left: 35px;}
 }
 .bottom-nav-wrap {
 	max-width: 800px;
@@ -372,7 +376,7 @@ div.mobile-app-nav-arrows {
 	}
 
 	.app-content-main-top {
-		width: 77% !important;
+		width: 85% !important;
 		margin: initial !important;
 		padding-top: 0px;
 		padding-bottom: 0px;
@@ -393,7 +397,7 @@ div.mobile-app-nav-arrows {
 	.app-content-main-top .extra-info-wrap {
 		position: absolute;
 		top: 10px;
-		right: -40px;
+		right: -32px;
 
 		.btn-text {
 			display: none;
@@ -418,6 +422,9 @@ div.mobile-app-nav-arrows {
 	   		bottom: 0;
 	   		position: absolute;
 	   }
+
+	   .bottom-nav-wrap {width: 100%;}
+	   .bottom-nav-inner {width: inherit;}
     }
     
 	.app-answers .category, .app-answers .sub-category {
@@ -426,7 +433,7 @@ div.mobile-app-nav-arrows {
 
 	.app-answers .category img.normal[ng-src="img/start-laundry.png"] {
 		width: 130%;
-		margin-left: -15px;
+		margin-left: -9px;
 	}
 
 	.app-content-main-top-left {
@@ -441,8 +448,8 @@ div.mobile-app-nav-arrows {
 		width: 100%;
 	}
 
-	.slidey-wrap-all {
-		height: 600px !important;
+	div.slidey-wrap-all {
+		height: 600px;
 		margin-top: initial !important;
 	}
 
@@ -472,6 +479,8 @@ div.mobile-app-nav-arrows {
 	}
 
 	div[ng-controller="SliderMultipleCtrl"] {
+		padding-top: 25px;
+	
 		.multi-slider-wrap {
 			width: 50%;
 			position: relative;
@@ -516,11 +525,10 @@ div.mobile-app-nav-arrows {
 		}
 	}
 
+
 	.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		width: 100px;
 		height: 500px;
-		margin-top: 15px !important;
-
 
 		.slider-wrap {
 			width: initial;
@@ -586,13 +594,18 @@ div.mobile-app-nav-arrows {
 		width: 82% !important;
 	}
 
+	.answers-main-content {
+		margin-top: 5px !important;
+	}
+
 	.regular-4-container {
+		margin-top: 5px !important;
 		width: 100% !important;
 	}
 
 	.picture-2-container, .picture-3-container {
 		width: 100% !important;
-		margin-top: -30px !important;
+		margin-top: 12px !important;
 	}
 
 	.boxes-icon-2-container {
@@ -687,29 +700,95 @@ div.mobile-app-nav-arrows {
 }
 
 @media(max-width:580px) {
+	div.slidey-wrap-all {
+		height: 710px;
+	}
+
+	div.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
+		height: 375px;
+
+		.jslider {
+			div.jslider-pointer {
+				left: 14px;
+				width: 43px;
+				height: 37px;
+				background: url("../img/slider-pointer-small.png") !important;
+				background-size: 43px 37px !important;
+			}
+
+			.jslider-bg {
+				height: 109%;
+				width: 20px;
+				margin-left: -18px;
+			}
+
+			.jslider-scale {
+				top: 17px;
+			}
+		}
+	}
+
+	.jslider.vertical .jslider-value:not(.jslider-value-to) {
+		margin-top: -14px !important;
+	}
+
+	.answers-category {
+		.answer-box {
+			width: 100% !important;
+			background-color: #f6f6f6;
+
+			.category-image {
+				width: 15%;
+				margin: 0 auto;
+				position: relative;
+
+				.normal, .hover {
+					width: 100%;
+					bottom: 0 !important;
+				}
+
+				.normal {
+					z-index: 2;
+					position: relative;
+				}
+
+				.hover {
+					z-index: 1;
+					position: absolute;
+				}
+			}
+
+			.category-name {
+				color: #969696 !important;
+				text-transform: uppercase;
+			}
+		}
+
+
+	}
+
+	.app-answers {
+		.answer-option {
+			&.category, &.sub-category {
+				min-height: 155px;
+			}
+		}
+	}
 
 	.app-answers .category, .app-answers .sub-category {
 		width: 60px;
 		display: block !important;
 		margin: 10px auto !important;
+		padding: 5px 0;
 	}
 
-	.answers-category {
-		margin-top: -111px;
-	}
 
-	.app-content-main-top, .app-content-main-top-left {
-		min-height: 128px;
+	.app-content-main-top {
+		height: 128px;
 	}
 
 	.app-content-main-top-left {
-		h2 {font-size: 14pt;}
-	}
-
-	a.answer-box.category, a.answer-box.sub-category {
-		.category-name {
-			font-size: 14px;
-		}
+		h2 {font-size: 13pt;}
 	}
 
 	a.answer-box.boxes-icon-5 {
@@ -752,7 +831,7 @@ div.mobile-app-nav-arrows {
 		}
 
 		.label-wrap .label-text {
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 16px;
 		}
 	}
@@ -782,7 +861,7 @@ div.mobile-app-nav-arrows {
 	.results-menu-body {
 		ul.results-menu-menu {
 			li > div:first-child img {
-				margin-top: -19px !important;
+				margin-top: -26px !important;
 			}
 
 			li > div:last-child {
