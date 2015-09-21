@@ -533,7 +533,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			left: -50%;
+			left: -45%;
 			float: none !important;
 			position: relative;
 		}
@@ -571,17 +571,17 @@ div.mobile-app-nav-arrows {
 
 				span {
 					border-left: none !important;
-					left: 50px;
-					width: 20px;
+					left: 30px;
+					width: 10px;
 					display: table;
 				}
 
 				ins {
-					top: -9px;
-					left: 40px;
-					width: 115px;
+					top: -7px;
+					left: 20px;
+					width: 90px;
 					text-align: left;
-					font-size: 12pt;
+					font-size: 10pt;
 					height: 45px;
 					display: table-cell;
 					vertical-align: middle;
@@ -705,11 +705,11 @@ div.mobile-app-nav-arrows {
 	}
 
 	div.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
-		height: 375px;
+		height: 330px;
 
 		.jslider {
 			div.jslider-pointer {
-				left: 14px;
+				left: 13px;
 				width: 43px;
 				height: 37px;
 				background: url("../img/slider-pointer-small.png") !important;
@@ -718,7 +718,7 @@ div.mobile-app-nav-arrows {
 
 			.jslider-bg {
 				height: 109%;
-				width: 20px;
+				width: 18px;
 				margin-left: -18px;
 			}
 
@@ -757,8 +757,9 @@ div.mobile-app-nav-arrows {
 				position: relative;
 
 				.normal, .hover {
-					width: 100%;
+					width: 130%;
 					bottom: 0 !important;
+					margin-left: -9px;
 				}
 
 				.normal {

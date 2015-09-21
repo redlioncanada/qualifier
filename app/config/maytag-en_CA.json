@@ -418,7 +418,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -441,7 +441,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -478,7 +478,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -501,7 +501,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -849,7 +849,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -872,7 +872,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -1413,7 +1413,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -1436,7 +1436,7 @@
 							"value" : 2,
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -2520,7 +2520,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -2543,7 +2543,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},

@@ -12,8 +12,8 @@
 }
 
 div.people1 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-1.png') center center no-repeat !important;
-	background-size: 28px 50px;
+    background: url('../img/family-1.png') !important;
+	background-size: contain !important;
 	width: 28px;
 	height: 50px;
 	display: block;
@@ -21,8 +21,8 @@ div.people1 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people2 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-2.png') center center no-repeat !important;
-	background-size: 36px 50px;
+    background: url('../img/family-2.png') !important;
+	background-size: contain !important;
 	width: 36px;
 	height: 50px;
 	display: block;
@@ -30,8 +30,8 @@ div.people2 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people3 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-3.png') center center no-repeat !important;
-	background-size: 59px 50px;
+    background: url('../img/family-3.png') !important;
+	background-size: contain !important;
 	width: 59px;
 	height: 50px;
 	display: block;
@@ -39,16 +39,16 @@ div.people3 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people4 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-4.png') center center no-repeat !important;
-	background-size: 70px 50px;
+    background: url('../img/family-4.png') !important;
+	background-size: contain !important;
 	width: 70px;
 	height: 50px;
 	display: block;
 	margin-left: -35px !important;
 }
 div.people5 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-5.png') center center no-repeat !important;
-	background-size: 85px 50px;
+    background: url('../img/family-5.png') !important;
+	background-size: contain !important;
 	width: 85px;
 	height: 50px;
 	display: block;
