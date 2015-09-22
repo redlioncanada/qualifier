@@ -235,9 +235,9 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       console.log(log);
     }
 
-    $rootScope.isTabletWidthOrLess = window.innerWidth <= 1125;
+    $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     $rootScope.$on('resize::resize', function() {
-      $rootScope.isTabletWidthOrLess = window.innerWidth <= 1125;
+      $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
     // $rootScope.locale = "en_CA"
