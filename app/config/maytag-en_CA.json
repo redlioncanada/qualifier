@@ -125,6 +125,36 @@
 							},
 							"next" : "Cooking - Wall Ovens - Size",						
 							"order" : 2
+						},
+						{
+							"text" : "Cooktops",
+							"value" : "cooktops",
+							"displayName": "Cooktops",
+							"classes" : "sub-category wallovens",
+							"image" : "img/cooking-walloven.png",
+							"thumbnail" : "img/walloven-single.jpg",
+							"thumbnail_current" : "img/walloven-single.jpg",
+							"thumbnail_text" : "Cooktops",
+							"scoring" : {
+								"type" : "Cooktops"
+							},
+							"next" : "Cooking - Cooktops - Size",						
+							"order" : 3
+						},
+						{
+							"text" : "Vents and Hoods",
+							"value" : "vents",
+							"displayName": "Vents and Hoods",
+							"classes" : "sub-category wallovens",
+							"image" : "img/cooking-walloven.png",
+							"thumbnail" : "img/walloven-single.jpg",
+							"thumbnail_current" : "img/walloven-single.jpg",
+							"thumbnail_text" : "Vents and Hoods",
+							"scoring" : {
+								"type" : "Vents"
+							},
+							"next" : "Cooking - Vents - Size",						
+							"order" : 4
 						}
 					]
 				}
