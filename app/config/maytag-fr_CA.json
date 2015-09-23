@@ -17,7 +17,13 @@
          "model": "Le Modèle",
          "changeYourAnswer": "Cliquez sur une icône pour modifier votre réponse",
          "startover": "Repartir",
-         "backtoresults": "Retour aux<br />Résultats"
+         "backtoresults": "Retour aux<br />Résultats",
+        "emailAddress" : "Email Address",
+        "personalMessage" : "Personal Message",
+        "submit" : "Submit",
+        "close" : "Close",
+        "emailModalTitle" : "Email Your Results",
+        "friendsName" : "Your Friend's Name"
      },
      "questions": {
          "Appliance": {

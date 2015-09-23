@@ -20,13 +20,18 @@ var App = angular.module('App', nglibs);
 App.constant('Modernizr', Modernizr);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
     //$urlRouterProvider.otherwise("/");
     localStorageServiceProvider.setPrefix("MaytagQualifier_");
 
     $stateProvider
       .state('loading', {
         templateUrl: 'views/loading.html'
+      }) 
+      .state('print', {
+        templateUrl: 'views/print.html',
+        url : "/print/:sku",
+        controller: 'PrintCtrl'
       }) 
       .state('main', {
         templateUrl: 'views/main.html'
@@ -189,9 +194,9 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', function ($rootScope, $state, $resource, localStorageService, Modernizr) {
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location) {
 
-  $state.go('loading');
+    $state.go('loading');
     localStorageService.clearAll();
 
     $rootScope.resultsTouched = false;
@@ -367,7 +372,12 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                       }
                     } 
                 })
-                $state.go('main.questions');
+                $rootScope.hasanswers = $location.search()
+                  if ('print' in $rootScope.hasanswers) {
+                    $state.go('print');
+                  } else {
+                    $state.go('main.questions');
+                  }
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });

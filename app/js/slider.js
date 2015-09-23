@@ -30,13 +30,13 @@ angular.module('App')
       qs.text[0].verticalOptions = angular.copy(qs.text[0].options);
       qs.text[0].verticalOptions.vertical = true;
       qs.text[0].options.modelLabels = angular.copy(function (value) {
-        //if (!!$rootScope.questionsData.question) {
+        if (!!$rootScope.questionsData.question) {
           //if (qs.name == $rootScope.questionsData.question.name) {  
               $rootScope.questionsData.question.text[0].roundedAnswer = value.toFixed(0)
               $rootScope.safeApply()
               return value.toFixed(0)
           //}
-        //}
+        }
       })
 
       qs.text[0].options.callback = angular.copy(function(value, released) {  
@@ -61,5 +61,14 @@ angular.module('App')
       for (var i in qs.text[0].answers) {
         qs.text[0].last = qs.text[0].answers[i].value
       }
+
+      for (var i in qs.text[0].answers) {
+        if (qs.text[0].answers[i].value == qs.text[0].answer) {
+          qs.text[0].answers[i].answer = true
+        } else {
+          qs.text[0].answers[i].answer = false
+        }
+      }
+
     }
 });

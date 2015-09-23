@@ -426,6 +426,21 @@ angular.module('App')
 	  	$rootScope.questionsData.currentCount = null;
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 	  	$rootScope.moveToQuestion("Appliance")
+	  	for(var q in $rootScope.hasanswers) {
+	  		if (!!$rootScope.hasanswers[q]) {
+	  			console.log("has ans")
+	  			var ans = $rootScope.hasanswers[q].split(";")
+	  			console.log(ans)
+	  			for (var t in $rootScope.questionsData.questions[q].text) {
+		  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
+		  				console.log(ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value))
+		  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value) != -1 ) {
+		  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true
+		  				}
+		  			}
+		  		}
+	  		}
+	  	}
   	}
 
 });

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal) {
 
     if (window.innerWidth < 1125){
             $scope.useMobileTemplates = true;
@@ -72,7 +72,40 @@ angular.module('App')
         } 
 
       }
-      
+  
+
+  $rootScope.setFirstColour = function (appliance) {
+    for (var c in appliance.colours) {
+      if (appliance.colours[c].colourCode == "CS" || appliance.colours[c].colourCode == "SS") {
+        return appliance.colours[c]
+      }
+    }
+    return appliance.colours[0]
+  }
+
+  $rootScope.emailOpen = function () {
+    //var modalInstance = 
+    //size: size,
+    console.log("ok");
+    var modalInstance = $modal.open({
+      animation: true,
+      templateUrl: 'views/result-templates/email-results.html',
+      controller: 'ModalCtrl',
+
+      resolve: {
+        items: function () {
+          //return $scope.items;
+        }
+      }
+    });
+    modalInstance.result.then(function (selectedItem) {
+      //$scope.selected = selectedItem;
+    }, function () {
+      //$log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
        for (var a in $rootScope.appliances) {
@@ -216,4 +249,7 @@ $scope.setPriceRange = function () {
           }
         }
    }
+
+
+
 });

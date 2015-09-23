@@ -17,7 +17,13 @@
 		"model" : "model",
 		"changeYourAnswer" : "Click on an icon to change your answer",
 		"startover" : "Start<br />&nbsp;Over",
-		"backtoresults" : "Back to<br />Results"
+		"backtoresults" : "Back to<br />Results",
+		"emailAddress" : "Email Address",
+		"personalMessage" : "Personal Message",
+		"submit" : "Submit",
+		"close" : "Close",
+		"emailModalTitle" : "Email Your Results",
+		"friendsName" : "Your Friend's Name"
 	},
 	"questions" : {
 		"Appliance" : {
