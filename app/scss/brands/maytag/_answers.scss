@@ -113,6 +113,20 @@
 	}
 } 
 
+.no-touch {
+	.answer-box {
+		&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split {
+			&:hover {
+				img.normal {
+					visibility: hidden;
+				}
+				img.hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
 
 .answer-box {
 	transition: all 1s ease;
@@ -392,14 +406,7 @@
 			position: absolute;
 			opacity: 0;
 		}
-		&:hover {
-			img.normal {
-				visibility: hidden;
-			}
-			img.hover {
-				opacity: 1;
-			}
-		}
+		
 		// img.normal,  {
 		// 	display: block;
 		// 	// -webkit-transition: opacity 0.3s ease-in-out;
