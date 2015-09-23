@@ -1607,7 +1607,7 @@
 			]
 		},
 		"Dishwashers - Capacity" : {
-			"next" : "Dishwashers - Cycles",
+			"next" : "Dishwashers - Features",
 			"previous" : "Dishwashers - Cleaning Power",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-capacity-current.png",
@@ -1673,62 +1673,145 @@
 				}											
 			]
 		},
-		"Dishwashers - Cycles" : {
-			"next" : "Dishwashers - Noise 2",
+		"Dishwashers - Features" : {
+			"next" : "Dishwashers - Energy",
 			"previous" : "Dishwashers - Capacity",
 			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-cycles-current.png",
-			"thumbnail_text" : "Cycles",
+			"thumbnail_current" : "img/icon-noise-current.png",
+			"thumbnail_text" : "Noise",
 			"text" : [
 				{
-					"question" : "How often do you select custom cycles?",
+					"question" : "WHEN SHOPPING FOR A DISHWASHER, WHAT FEATURES ARE MOST IMPORTANT TO YOUR PURCHASE DECISION? ",
+					"sub_question" : "DRAG TO REORDER. 1 IS MOST IMPORTANT AND 6 IS LEAST",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT PREFERENCE?",
+					"explanation" : "By understanding your dishwashing priorities, we can better recommend a dishwasher with features that suit your lifestyle.",
+					"type" : "rank",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Large Capacity",
+							"value" : "capacity",
+							"scoring" : {
+								 "placeSettings15": 1,
+								 "placeSettings16": 1
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Noise Level",
+							"value" : "noise",
+							"scoring" : {
+								"quiet" : 1,
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Ease of use",
+							"value" : "ease",
+							"scoring" : {
+								"proScrub": 1,
+								"proWash": 1,
+								"cleanWater": 1
+							},
+							"order" : 3
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Features for Organization",
+							"value" : "organization",
+							"scoring" : {
+								"culinaryCaddy": +1,
+								"3rdLevelRack" : 1
+							},
+							"order" : 4
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Custom cycles",
+							"value" : "cycles",
+							"scoring" : {
+							},
+							"order" : 5
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Energy efficiency",
+							"value" : "energy",
+							"scoring" : {
+								"cleanWater": 1
+							},
+							"order" : 6
+						}
+					]
+				}
+			]
+		},
+		"Dishwashers - Energy" : {
+			"next" : "Dishwashers - Noise1",
+			"previous" : "Dishwashers - Features",
+			"thumbnail_type" : "image",
+			"thumbnail_current" : "img/icon-energy-current.png",
+			"thumbnail_text" : "Energy",
+			"text" : [
+				{
+					"question" : "HOW IMPORTANT IS ENERGY EFFICIENCY TO YOUR HOUSEHOLD?",
 					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why are you asking me about cycles?",
-					"explanation" : "Think of custom cycles like a tailored fit for your dishes. This question will help us to determine which additional features will be of use to you.",
+					"explanation_title" : "Why Are You Asking Me About Energy?",
+					"explanation" : "All of our machines use energy differently. By understanding your energy use, it will help us find the machine that best fits your lifestyle.",
+					"answer" : 0,
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
-					"answer" : 0,
 					"options" : {       
 					    "from": 0,
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": [
-							"Never","A couple<br /> times a week","When we<br /> have company","Very<br /> Often"
-					    ]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
-							"thumbnail" : "img/icon-cycles.png",
-							"thumbnail_current" : "img/icon-cycles-current.png",
+							"thumbnail" : "img/icon-energy.png",
+							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 0,
-							"text" : "Never",
+							"text" : "Not a Concern",
 							"scoring" : {
 							}
 						},
 						"1" : {
-							"thumbnail" : "img/icon-cycles.png",
-							"thumbnail_current" : "img/icon-cycles-current.png",
+							"thumbnail" : "img/icon-energy.png",
+							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 1,
-							"text" : "A couple times a week",
+							"text" : "Somewhat a concern",
 							"scoring" : {
+								"cleanWater": 1
 							}
 						},
 						"2" : {
-							"thumbnail" : "img/icon-cycles.png",
-							"thumbnail_current" : "img/icon-cycles-current.png",
+							"thumbnail" : "img/icon-energy.png",
+							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "When we have company",
+							"text" : "Important",
 							"scoring" : {
+								"cleanWater": 2
 							}
 						},
 						"3" : {
-							"thumbnail" : "img/icon-cycles.png",
-							"thumbnail_current" : "img/icon-cycles-current.png",
+							"thumbnail" : "img/icon-energy.png",
+							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 3,
-							"text" : "Very Often",
+							"text" : "Very Important",
 							"scoring" : {
+								"cleanWater": 2
 							}
 						}
 					}
@@ -1736,17 +1819,17 @@
 			]
 		},
 		"Dishwashers - Noise 1" : {
-			"next" : "Dishwashers - Flexibility",
-			"previous" : "Dishwashers - Noise 2",
+			"next" : "Dishwashers - Noise 2",
+			"previous" : "Dishwashers - Energy",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
 			"text" : [
 				{
-					"question" : "When do you usually hit the start button?",
+					"question" : "When do you run your dishwasher?",
 					"sub_question" : "Select one",
 					"explanation_title" : "Why are you asking me about start time?",
-					"explanation" : "Much like people, dishwashers have different sound profiles. By understanding your start time we can determine which machine is best for your family.",
+					"explanation" : "Much like each of your guests, dishwashers have different sound profiles. By understanding your start time we can determine which machine suits you best.",
 					"type" : "radio-4",
 					"oneAnswer" : true,
 					"answers" : [
@@ -1763,7 +1846,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "After I get my kids organized and into bed",
+							"text" : "Before I go to bed",
 							"value" : "night",
 							"scoring" : {
 								"quiet" : 1
@@ -1773,7 +1856,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "Every morning before we all scatter out of the house",
+							"text" : "Before I head out in the morning",
 							"value" : "morning",
 							"scoring" : {
 							},
@@ -1794,8 +1877,8 @@
 			]
 		},
 		"Dishwashers - Noise 2" : {
-			"next" : "Dishwashers - Noise 1",
-			"previous" : "Dishwashers - Cycles",
+			"next" : "Dishwashers - Flexibility",
+			"previous" : "Dishwashers - Noise 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
@@ -1835,7 +1918,7 @@
 		},
 		"Dishwashers - Flexibility" : {
 			"next" : "Dishwashers - Style",
-			"previous" : "Dishwashers - Noise 1",
+			"previous" : "Dishwashers - Noise 2",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-organization-current.png",
 			"thumbnail_text" : "Organization",
@@ -1851,11 +1934,12 @@
 						{
 							"thumbnail" : "img/icon-organization.png",
 							"thumbnail_current" : "img/icon-organization-current.png",
-							"text" : "Full and tidy",
-							"value" : "Full and tidy",
+							"text" : "Full and organized",
+							"value" : "Full and organized",
 							"image" : "img/dishwasher-full-and-tidy.jpg",
 							"scoring" : {
-								"premiumAdjusters" : 1
+								 "Culinary Caddy": 1,
+								 "3rdLevelRack": 1
 							},
 							"order" : 1
 						},
@@ -1865,18 +1949,20 @@
 							"text" : "Full and messy",
 							"value" : "Full and messy",
 							"image" : "img/dishwasher-full-and-messy.jpg",
-							"scoring" : {						
+							"scoring" : {
+								 "Culinary Caddy": 1,
+								 "3rdLevelRack": 1					
 							},
 							"order" : 2
 						},
 						{
 							"thumbnail" : "img/icon-organization.png",
 							"thumbnail_current" : "img/icon-organization-current.png",
-							"text" : "Sparsely filled",
-							"value" : "Sparsely filled",
+							"text" : "Halfway filled",
+							"value" : "Halfway filled",
 							"image" : "img/dishwasher-i-still-see-room.jpg",
 							"scoring" : {
-								"premiumAdjusters" : 1
+								 "Culinary Caddy": 1
 							},
 							"order" : 3
 						},
@@ -1895,7 +1981,7 @@
 			]
 		},
 		"Dishwashers - Style" : {
-			"next" : "Dishwashers - Energy",
+			"next" : null,
 			"previous" : "Dishwashers - Flexibility",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-style-current.png",
@@ -1912,87 +1998,38 @@
 						{ 
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Traditional",
-							"value" : "Traditional",
+							"text" : "Pocket Handle",
+							"value" : "Pocket Handle",
 							"image" : "img/Dishwasher-Q6-traditional.jpg",
 							"scoring" : {
-								"frontConsole" : 1
+								"pocketHandle" : 1
 							},
 							"order" : 1
 						},
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Commercial",
-							"value" : "Commercial",
+							"text" : "Exterior Handle",
+							"value" : "Exterior Handle",
 							"image" : "img/Dishwasher-Q6-commercial.jpg",
 							"scoring" : {	
 								"FID" : 1					
 							},
 							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-style.png",
+							"thumbnail_current" : "img/icon-style-current.png",
+							"text" : "Custom Panel",
+							"value" : "Custom Panel",
+							"image" : "img/Dishwasher-Q6-commercial.jpg",
+							"scoring" : {	
+								"panelReady" : 1					
+							},
+							"order" : 3
 						}
 					]
 				}
-			]
-		},
-		"Dishwashers - Energy" : {
-			"next" : null,
-			"previous" : "Dishwashers - Style",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-energy-current.png",
-			"thumbnail_text" : "Energy",
-			"text" : [
-				{
-					"question" : "Is being energy efficient important to your family?",
-					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why Are You Asking Me About Energy?",
-					"explanation" : "All of our machines are different, just like the families they're for. If we can understand your energy usage, then we can better recommend the perfect dishwasher to fit your needs.",
-					"answer" : 0,
-					"type" : "slider",
-					"oneAnswer" : false,
-					"classes" : "slider-labels four",
-					"options" : {       
-					    "from": 0,
-					    "to": 3,
-					    "step": 0.0001,
-					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
-					},
-					"answers" : {
-						"0" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 0,
-							"text" : "Not a Concern",
-							"scoring" : {
-							}
-						},
-						"1" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 1,
-							"text" : "Somewhat a concern",
-							"scoring" : {
-							}
-						},
-						"2" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 2,
-							"text" : "It's top of mind",
-							"scoring" : {
-							}
-						},
-						"3" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 3,
-							"text" : "Very Important",
-							"scoring" : {
-							}
-						}
-					}
-				}											
 			]
 		}
 	}
