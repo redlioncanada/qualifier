@@ -130,7 +130,7 @@ $scope.setPriceRange = function () {
         }
    }
 })
-.directive('mobileResults', function(){
+.directive('mobileResults', ['$timeout', function($timeout){
     return {
         restrict: "EA",
         scope: false,
@@ -139,32 +139,24 @@ $scope.setPriceRange = function () {
         link: function(scope, element, attrs) {
             scope.currentId = 1;
             scope.columnHeight = 0;
-            setTimeout(function(){
-                scope.columnHeight = $('#result-column-0').height() + 25;
-                console.log("height : " + scope.columnHeight);
-                //
-                if (scope.columnHeight < $('#result-column-1').height())
-                {
-                    scope.columnHeight = $('#result-column-1').height() + 25;
-                    console.log("height : " + scope.columnHeight);
-                };
-                //
-                if (scope.columnHeight < $('#result-column-2').height())
-                {
-                    scope.columnHeight = $('#result-column-2').height()+ 25;
-                    console.log("height : " + scope.columnHeight);
-                }
-                //
-                console.log("height : " + scope.columnHeight);
-                $('#mobile-results-holder').height(scope.columnHeight);
-            },500);
+
+            $timeout(function(){
+                scope.swipeDetails();
+            },0);
             
+            scope.$watch('useMobileTemplates', function() {
+              $timeout(function(){
+                scope.swipeDetails();
+              },0);
+            });
+
             scope.selectorClicked = function($event) { 
                 var idClicked = parseInt($event.currentTarget.id.slice(-1));
                 scope.swipeDetails(idClicked);
             };
 
           scope.swipeDetails = function(id) {
+            if (typeof id === 'undefined') id = scope.currentId;
             var idClicked = 'result-selector-'+id.toString();
             if(idClicked == 'result-selector-0') {
                         $('#mobile-results-holder').height($('#result-column-0').height() + 25);
@@ -216,4 +208,4 @@ $scope.setPriceRange = function () {
           }
         }
    }
-});
+}]);
