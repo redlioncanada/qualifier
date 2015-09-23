@@ -161,6 +161,370 @@
 			],
 			"category" : "aesthetics"
 		},
+		"Cooking - Cooktops - Size" : {
+			"next" : "Cooking - Cooktops - Style",
+			"previous" : "Cooking - Pre-Qualifier 1",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Size",
+			"thumbnail_current" : "img/icon-size-current.png",
+			"text" : [
+				{
+					"question" : "WHAT SIZE OF COOKTOP DO YOU NEED?",
+					"sub_question" : "Slide to answer",
+					"explanation_title" : "Why Are You Asking Me About Size?",
+					"explanation" : "Our cooktops come in different sizes, we want to make sure that we recommend the perfect one for your space.",
+					"type" : "slider",
+					"oneAnswer" : false,
+					"classes" : "pointer-labels no-jslider-scale left-tag label-inches",
+					"answer" : 27,
+					"options" : { 
+						"from" : 1,
+						"to" : 5,      
+					    "step": 0.0001,
+					    "dimension_label" : "WIDTH",
+					    "scale": ["15","30","36","48","Any size"]       
+					},
+					"answers" : {
+						"1" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : 15,
+							"text" : "15\"",
+							"scoring" : {
+								"width15" : 1,
+								"width30" : -30,
+								"width36" : -30,
+								"width48" : -30
+							}
+						},
+						"2" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : 30,
+							"text" : "30\"",
+							"scoring" : {
+								"width15" : -30,
+								"width30" : 1,
+								"width36" : -30,
+								"width48" : -30
+							}
+						},
+						"3" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : 36,
+							"text" : "36\"",
+							"scoring" : {
+								"width15" : -30,
+								"width30" : -30,
+								"width36" : 1,
+								"width48" : -30
+							}
+						},
+						"4" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : 48,
+							"text" : "48\"",
+							"scoring" : {
+								"width15" : -30,
+								"width30" : -30,
+								"width36" : -30,
+								"width48" : 1
+							}
+						},
+						"5" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : "any",
+							"text" : "Any Size",
+							"scoring" : {
+							}
+						}
+					}								
+				}					
+			],
+			"notes" : [
+				{
+					"title" : "Note",
+					"text" : "Industry standard is 30"
+				}
+			]
+		},
+		"Cooking - Cooktops - Style" : {
+			"next" : "Cooking - Cooktops - Features",
+			"previous" : "Cooking - Cooktops - Size",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
+			"thumbnail_current" : "img/icon-features-current.png",
+			"text" : [
+				{
+					"question" : "HOW WOULD YOU DESCRIBE YOUR KITCHEN'S STYLE?",
+					"sub_question" : "Select One",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT STYLE?",
+					"explanation" : "Our cooktops come in different styles. By understanding your preference, we can better recommend the perfect one for you.",
+					"type" : "boxes-picture-3-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Modern",
+							"value" : "modern",
+							"image" : "img/Cooking-Q2-single.png",
+							"scoring" : {
+								"induction" : 1
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Classic",
+							"value" : "classic",
+							"image" : "img/Cooking-Q2-combo.png",
+							"scoring" : {
+								"electric" : 1
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Professional",
+							"value" : "professional",
+							"image" : "img/Cooking-Q2-double.png",
+							"scoring" : {
+								"gas" : 1
+							},
+							"order" : 3
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Cooktops - Features" : {
+			"next" : "Cooking - Cooktops - Performance",
+			"previous" : "Cooking - Cooktops - Style",
+			"thumbnail_type" : "image",
+			"thumbnail_current" : "img/icon-features-current.png",
+			"thumbnail_text" : "Features",
+			"text" : [
+				{
+					"question" : "WHEN SHOPPING FOR A COOKTOP, WHAT FEATURES ARE MOST IMPORTANT TO YOUR PURCHASE DECISION?",
+					"sub_question" : "DRAG TO REORDER. 1 IS MOST IMPORTANT AND 5 IS LEAST",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT PREFERENCE?",
+					"explanation" : "By understanding your cooking priorities, we can better recommend the perfect cooktop for your lifestyle.",
+					"type" : "rank",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Cooking performance",
+							"value" : "performance",
+							"scoring" : {
+								  "gas":1,
+								  "5Elements":1,
+								  "5Burners":1,
+								  "6Burners":1,
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Ease of cleaning",
+							"value" : "clean",
+							"scoring" : {
+								 "induction":1,
+								 "electric":1,
+								 "dishwasherSafeKnobs":1, 
+								 "CookShield":1
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Precise Temperature",
+							"value" : "temp",
+							"scoring" : {
+								"induction":1,
+								"touchActivated":1
+							},
+							"order" : 3
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Ease of use",
+							"value" : "ease",
+							"scoring" : {
+								"electric":1,
+								"induction":1,
+								"touchActivated":1
+							},
+							"order" : 4
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Energy efficiency",
+							"value" : "energy",
+							"scoring" : {
+								"induction": 1
+							},
+							"order" : 5
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Cooktops - Performance" : {
+			"next" : "Cooking - Cooktops - Gas",
+			"previous" : "Cooking - Cooktops - Features",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
+			"thumbnail_current" : "img/icon-features-current.png",
+			"text" : [
+				{
+					"question" : "WHAT COOKING TECHNIQUES DO YOU USE OFTEN?",
+					"sub_question" : "Select all that apply",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT COOKING TECHNIQUES?",
+					"explanation" : "Our cooktops are equipped with heat technology to go from simmer to rolling boil quickly. By understanding how you cook, we can better recommend the perfect cooktop for your lifestyle.",
+					"type" : "checkbox-4",
+					"oneAnswer" : false,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Melting",
+							"value" : "melting",
+							"scoring" : {
+								"5KBTUSimmerBurner":1,
+								"meltAndHold" : 1
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Simmering",
+							"value" : "simmering",
+							"scoring" : {
+							"15KBTU":1,
+							"5KBTUSimmerBurner":1,
+							"inductionSimmer":1,
+							"performanceBoost":1
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Saut&eacute;ing",
+							"value" : "saut&eacute;ing",
+							"scoring" : {
+								"15KBTU":1
+							},
+							"order" : 3
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Flamb&eacute;ing",
+							"value" : "Flamb&eacute;ing",
+							"scoring" : {
+								"20KBTUDuelFlame":1
+							},
+							"order" : 4
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Searing",
+							"value" : "searing",
+							"scoring" : {
+								"20KBTUDuelFlame":1,
+								"performanceBoost":1
+							},
+							"order" : 5
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Boiling",
+							"value" : "boiling",
+							"scoring" : {
+								"20KBTUDuelFlame":1,
+								"electricEvenHeat":1
+							},
+							"order" : 6
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Grilling",
+							"value" : "grilling",
+							"scoring" : {
+								"18KBTUEvenHeatGasGrill":1
+							},
+							"order" : 7
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Steaming",
+							"value" : "steaming",
+							"scoring" : {
+							},
+							"order" : 8
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Cooktops - Gas" : {
+			"next" : null,
+			"previous" : "Cooking - Ranges - Usage",
+			"thumbnail_text" : "Fuel Type",
+			"thumbnail_current" : "img/icon-fueltype-current.png",
+			"thumbnail_type" : "image",
+			"text" : [
+				{
+					"question" : "Is your kitchen equipped for gas or electric?",
+					"sub_question" : "Select one",
+					"explanation_title" : "Why Are You Asking Me About Gas?", 
+					"explanation" : "Some kitchens are equipped for gas and others are not. We need to know this information to recommend the perfect range.",
+					"type" : "boxes-icon-split-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"text" : "Gas",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "yes",
+							"order" : 1
+						},
+						{
+							"text" : "Electric",
+							"image" : "img/icon-thumb-electric.png",
+							"hover" : "img/icon-thumb-electric-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "no",
+							"scoring" : {
+								"gas" : -30
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
 		"Cooking - Wall Ovens - Size" : {
 			"next" : "Cooking - Wall Ovens - Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
