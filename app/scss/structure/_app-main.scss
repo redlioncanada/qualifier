@@ -536,7 +536,7 @@ div.mobile-app-nav-arrows {
         .icon-nav {
             display: inline-block;
             float: left;
-            width: 30px;
+            width: 24px;
             text-align: center;
 	   }
 
@@ -1008,6 +1008,30 @@ div.mobile-app-nav-arrows {
 				width: 82% !important;
 			}
 		}
+	}
+
+	div.bottom-nav-intructions {
+		position: absolute;
+		width: 100%;
+		top: 13px;
+	}
+
+	div.mobile-app-nav-arrows {
+		a.btn-prev img, a.btn-next img {
+			height: 20px;
+		}
+
+		a.btn-prev {
+			left: 35px;
+		}
+
+		a.btn-next {
+			right: 35px;
+		}
+	}
+
+	div.navigation.main-content {
+		min-height: 60px;
 	}
 }
 
