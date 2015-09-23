@@ -1,8 +1,8 @@
  {
-	"brand" : "maytag",
+	"brand" : "kitchenaid",
 	"apptext" :{
-		"apptitle" : "Maytag",
-		"appdescription" : "Welcome to the Maytag Qualifier tool!",
+		"apptitle" : "Kitchaid",
+		"appdescription" : "Welcome to the KitchenAid Qualifier tool!",
 		"previous" : "Previous",
 		"next" : "Next",
 		"results" : "Results",
@@ -32,22 +32,6 @@
 					"oneAnswer" : true,
 					"answers" : [
 						{
-							"text" : "Laundry",
-							"value" : "Laundry",
-							"displayName": "Laundry Pair",
-							"classes" : "category laundry",
-							"image" : "img/start-laundry.png",
-							"hover" : "img/start-laundry-hover.png",							
-							"thumbnail" : "img/cat-laundry.jpg",							
-							"thumbnail_current" : "img/cat-laundry.jpg",							
-							"thumbnail_text" : "Laundry",							
-							"next" : "Laundry - Energy",
-							"scoring" : {
-								"appliance" : "Laundry"
-							},
-							"order" : 1
-						},
-						{
 							"text" : "Cooking",
 							"value" : "Stove",
 							"displayName": "Range",
@@ -64,22 +48,6 @@
 							"order" : 2
 						},
 						{
-							"text" : "Refrigerator",
-							"value" : "Fridge",
-							"displayName": "Refrigerator",
-							"classes" : "category fridge",
-							"image" : "img/start-fridge.png",
-							"hover" : "img/start-fridge-hover.png",
-							"thumbnail" : "img/cat-fridge.jpg",
-							"thumbnail_current" : "img/cat-fridge.jpg",
-							"thumbnail_text" : "Fridge",
-							"scoring" : {
-								"appliance" : "Fridges"
-							},
-							"next" : "Fridges - Energy",
-							"order" : 3
-						},
-						{
 							"text" : "Dishwasher",
 							"value" : "Dishwasher",
 							"displayName": "Dishwasher",
@@ -94,6 +62,22 @@
 							},
 							"next" : "Dishwashers - Cleaning Power",
 							"order" : 4
+						},
+						{
+							"text" : "Refrigerator",
+							"value" : "Fridge",
+							"displayName": "Refrigerator",
+							"classes" : "category fridge",
+							"image" : "img/start-fridge.png",
+							"hover" : "img/start-fridge-hover.png",
+							"thumbnail" : "img/cat-fridge.jpg",
+							"thumbnail_current" : "img/cat-fridge.jpg",
+							"thumbnail_text" : "Fridge",
+							"scoring" : {
+								"appliance" : "Fridges"
+							},
+							"next" : "Fridges - Energy",
+							"order" : 3
 						}
 					]
 				}
@@ -418,7 +402,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -441,7 +425,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "Important",
+							"text" : "It's top of mind",
 							"scoring" : {
 							}
 						},
@@ -478,7 +462,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -501,7 +485,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "Important",
+							"text" : "It's top of mind",
 							"scoring" : {
 							}
 						},
@@ -828,570 +812,6 @@
 				}
 			]
 		},
-		"Laundry - Energy" : {
-			"next" : "Laundry - Capacity 1",
-			"previous" : "Appliance",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-energy-current.png",
-			"thumbnail_text" : "Energy",
-			"text" : [
-				{
-					"question" : "Is being energy efficient important to your family?",
-					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why are you asking me about energy?",
-					"explanation" : "All of our machines are different, if we can understand your energy use we can find a machine that meets your specific lifestyle needs.",
-					"type" : "slider",
-					"oneAnswer" : false,
-					"classes" : "slider-labels four",
-					"answer" : 0,
-					"options" : {       
-					    "from": 0,
-					    "to": 3,
-					    "step": 0.0001,
-					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
-					},
-					"answers" : {
-						"0" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 0,
-							"text" : "Not a Concern",
-							"scoring" : {
-							}
-						},
-						"1" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 1,
-							"text" : "Somewhat a concern",
- 							"scoring" : {
-							}
-						},
-						"2" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 2,
-							"text" : "Important",
-							"scoring" : {
-							}
-						},
-						"3" : {
-							"thumbnail" : "img/icon-energy.png",
-							"thumbnail_current" : "img/icon-energy-current.png",
-							"value" : 3,
-							"text" : "Very Important",
-							"scoring" : {
-							}
-						}
-					}
-				}											
-			]
-		},
-		"Laundry - Capacity 1" : {
-			"next" : "Laundry - Noise",
-			"previous" : "Laundry - Energy",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-capacity-current.png",
-			"thumbnail_text" : "Capacity",
-			"text" : [
-				{
-					"question" : "How many people are in your household?",
-					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why are you asking me about my family size?",
-					"explanation" : "Like your family, all of our machines are unique. If we understand a little more about your family we can recommend a machine that suits the specific needs of your home.",
-					"type" : "slider-people",
-					"oneAnswer" : false,
-					"classes" : "slider-labels family-size",
-					"answer" : 1,
-					"options" : {       
-					    "from": 1,
-					    "to": 6,
-					    "step": 0.0001,
-					    "scale": ["1","","","","","6+"]       
-					},
-					"answers" : {
-						"1" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 1,
-							"text" : "1",
-							"scoring" : {
-							}
-						},
-						"2" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 2,
-							"text" : "2",
-							"scoring" : {
-								"smallCapacity" : 1
-							}
-						},
-						"3" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 3,
-							"text" : "3",
-							"scoring" : {
-								"mediumCapacity" : 1
-							}
-						},
-						"4" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 4,
-							"text" : "4",
-							"scoring" : {
-								"largeCapacity" : 1
-							}
-						},
-						"5" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 5,
-							"text" : "5",
-							"scoring" : {
-								"largerCapacity" : 1
-							}
-						},
-						"6" : {
-							"thumbnail" : "img/icon-capacity.png",
-							"thumbnail_current" : "img/icon-capacity-current.png",
-							"value" : 6,
-							"text" : "6+",
-							"scoring" : {
-								"largestCapacity" : 1
-							}
-						}
-					}
-				}											
-			]
-		},
-		"Laundry - Noise" : {
-			"next" : "Laundry - Orientation",
-			"previous" : "Laundry - Capacity 1",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-noise-current.png",
-			"thumbnail_text" : "Noise",
-			"text" : [
-				{
-					"question" : "Are you concerned about the noise level of your laundry machines?",
-					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about sound?",
-					"explanation" : "Some of our laundry pairs are specifically designed to limit noise. By understanding your needs we can find the perfect machines for your home.",
-					"type" : "radio-4",
-					"oneAnswer" : true,
-					"answers" : [
-						{
-							"text" : "Very much so, my laundry is located near a bedroom",
-							"value" : "sensitive",
-							"thumbnail" : "img/icon-noise.png",
-							"thumbnail_current" : "img/icon-noise-current.png",
-							"scoring" : {
-								"soundGuard" : 3,
-							 	"vibrationControl" : 3
-							},
-							"order" : 1
-						},
-						{
-							"text" : "A little bit, but noise doesn’t bother me for the most part",
-							"value" : "littlebit",
-							"thumbnail" : "img/icon-noise.png",
-							"thumbnail_current" : "img/icon-noise-current.png",
-							"scoring" : {
-								"soundGuard" : 2,
-							 	"vibrationControl" : 2
-							},
-							"order" : 2
-						},
-						{
-							"text" : "Moderately, our laundry room is located near our main living area",
-							"value" : "moderately",
-							"thumbnail" : "img/icon-noise.png",
-							"thumbnail_current" : "img/icon-noise-current.png",
-							"scoring" : {
-								"soundGuard" : 1,
-							 	"vibrationControl" : 1
-							},
-							"order" : 4
-						},
-						{
-							"text" : "Not at all, my laundry is down in the basement",
-							"value" : "unconcerned",
-							"thumbnail" : "img/icon-noise.png",
-							"thumbnail_current" : "img/icon-noise-current.png",
-							"scoring" : {
-							},
-							"order" : 3
-						}
-					]
-				}
-			]
-		},
-		"Laundry - Orientation" : {
-			"next" : "Laundry - Speed",
-			"previous" : "Laundry - Noise",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-orientation-current.png",
-			"thumbnail_text" : "Orientation",
-			"text" : [
-				{
-					"question" : "What is your laundry pair preference?",
-					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about orientation?",
-					"explanation" : "We understand that every laundry space is different. By understanding yours, we are able to find the perfect pairing for your home.",
-					"type" : "boxes-picture-3-radio",
-					"oneAnswer" : true,
-					"answers" : [
-						{
-							"thumbnail" : "img/icon-orientation.png",
-							"thumbnail_current" : "img/icon-orientation-current.png",
-							"image" : "img/Laundry-Q4-stacked.jpg",
-							"text" : "Stacked",
-							"value" : "Stacked",
-							"scoring" : {
-								 "frontLoad" : 1,
-								 "stacked" : 1
-							},
-							"order" : 1
-						},
-						{
-							"thumbnail" : "img/icon-orientation.png",
-							"thumbnail_current" : "img/icon-orientation-current.png",
-							"image" : "img/Laundry-Q4-side-by-side.jpg",
-							"text" : "Side-By-Side",
-							"value" : "Side-By-Side",
-							"scoring" : {
-								"topLoad" : 1
-							},
-							"order" : 2
-						},
-						{
-							"thumbnail" : "img/icon-orientation.png",
-							"thumbnail_current" : "img/icon-orientation-current.png",
-							"image" : "img/Laundry-Q4no-preference.jpg",
-							"text" : "No Preference",
-							"value" : "No Preference",
-							"scoring" : {
-							},
-							"order" : 3
-						}
-					]
-				}
-			]
-		},
-		"Laundry - Speed" : {
-			"next" : "Laundry - Fabrics",
-			"previous" : "Laundry - Orientation",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-speed-current.png",
-			"thumbnail_text" : "Speed",
-			"text" : [
-				{
-					"question" : "Do you often need items washed and dried in under an hour?",
-					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about dry time?",
-					"explanation" : "Some of our laundry machines are specifically designed to get you out the door in record time. By understanding your needs we can find the machine that suits your lifestyle best.",
-					"type" : "radio-4",
-					"oneAnswer" : true,
-					"answers" : [
-						{
-							"thumbnail" : "img/icon-speed.png",
-							"thumbnail_current" : "img/icon-speed-current.png",
-							"text" : "Yes, we are always on the go",
-							"value" : "yes",
-							"scoring" : {
- 								"rapidWash" : 3,
- 								"rapidDry" : 3
-							},
-							"order" : 1
-						},
-						{
-							"thumbnail" : "img/icon-speed.png",
-							"thumbnail_current" : "img/icon-speed-current.png",
-							"text" : "Sometimes between school and practice",
-							"value" : "sometimes",
-							"scoring" : {
- 								"rapidWash" : 2,
- 								"rapidDry" : 2
-							},
-							"order" : 2
-						},
-						{
-							"thumbnail" : "img/icon-speed.png",
-							"thumbnail_current" : "img/icon-speed-current.png",
-							"text" : "Only when there is an unexpected spill",
-							"value" : "not often",
-							"scoring" : {
- 								"rapidWash" : 1,
- 								"rapidDry" : 1
-							},
-							"order" : 3
-						},
-						{
-							"thumbnail" : "img/icon-speed.png",
-							"thumbnail_current" : "img/icon-speed-current.png",
-							"text" : "Rarely",
-							"value" : "rarely",
-							"scoring" : {
-							},
-							"order" : 4
-						}
-					]
-				}
-			]
-		},
-		"Laundry - Fabrics" : {
-			"next" : "Laundry - Sensor",
-			"previous" : "Laundry - Speed",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-fabric-current.png",
-			"thumbnail_text" : "Fabric",
-			"text" : [
-				{
-					"question" : "What kind of fabrics do you wash together?",
-					"sub_question" : "Select all that apply",
-					"explanation_title" : "Why are you asking me about fabrics?",
-					"explanation" : "Everyone does their laundry differently. By understanding how you separate your fabrics, we will be better able to suggest cycle options that fit your specific lifestyle needs.",
-					"type" : "checkbox-4",
-					"oneAnswer" : false,
-					"answers" : [
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Denim",
-							"value" : "denim",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 1
-						},
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Gym clothes",
-							"value" : "gym clothes",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 2
-						},
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Delicates",
-							"value" : "delicates",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 3
-						},
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Ballet tights",
-							"value" : "ballet tights",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 4
-						},
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Towels",
-							"value" : "towels",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 5
-						},
-						{
-							"thumbnail" : "img/icon-fabric.png",
-							"thumbnail_current" : "img/icon-fabric-current.png",
-							"text" : "Everyday wear",
-							"value" : "everyday wear",
-							"scoring" : {
- 								"cycleOptions" : 1
-							},
-							"order" : 6
-						}
-					]
-				}
-			]
-		},
-		"Laundry - Sensor" : {
-			"next" : "Laundry - Wrinkles",
-			"previous" : "Laundry - Fabrics",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-features-current.png",
-			"thumbnail_text" : "Features",
-			"text" : [
-				{
-					"question" : "Do you frequently adjust the drying cycle time?",
-					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why are you asking me about time?",
-					"explanation" : "We would like to save you time by offering you cycles that will minimize your need to continually check your laundry progress.",
-					"type" : "slider",
-					"oneAnswer" : false,
-					"classes" : "slider-labels four",
-					"answer" : 0,
-					"options" : {       
-					    "from": 0,
-					    "to": 3,
-					    "step": 0.0001,
-					    "dimension": "",
-					    "scale": ["Never", "Occasionally", "Very Often", "Always"]       
-					},
-					"answers" : {
-						"0" : {
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"value" : 0,
-							"text" : "Never",
-							"scoring" : {
-							}
-						},
-						"1" : {
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"value" : 1,
-							"text" : "Occasionally",
-							"scoring" : {
-								"minCycles" : 1
-							}
-						},
-						"2" : {
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"value" : 2,
-							"text" : "Very Often",
-							"scoring" : {
-								"maxCycles" : 1							
-							}
-						},
-						"3" : {
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"value" : 3,
-							"text" : "Always",
-							"scoring" : {
-								"maxCycles" : 2
-							}
-						}
-					}
-				}											
-			]
-		},
-		"Laundry - Wrinkles" : {
-			"next" : "Laundry - Fuel Type",
-			"previous" : "Laundry - Sensor",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-wrinkles-current.png",
-			"thumbnail_text" : "Wrinkles",
-			"text" : [
-				{
-					"question" : "How frequently do you use your iron?",
-					"sub_question" : "Slide to answer",
-					"explanation_title" : "Why are you asking me about ironing?",
-					"explanation" : "Some of our machines are designed to minimize wrinkles. By helping us determine your needs, we are better able to provide for them.",
-					"type" : "slider",
-					"oneAnswer" : false,
-					"classes" : "slider-labels four",
-					"answer" : 0,
-					"options" : { 
-					    "from": 0,
-					    "to": 3,
-					    "step": 0.0001,
-					    "dimension": "",
-					    "scale": ["Never","Only before an event","A few times a month","Daily"]       
-					},
-					"answers" : {
-						"0" : {
-							"thumbnail" : "img/icon-wrinkles.png",
-							"thumbnail_current" : "img/icon-wrinkles-current.png",
-							"value" : 0,
-							"text" : "Never",
-							"scoring" : {
-							}
-						},
-						"1" : {
-							"thumbnail" : "img/icon-wrinkles.png",
-							"thumbnail_current" : "img/icon-wrinkles-current.png",
-							"value" : 1,
-							"text" : "Only before an event",
-							"scoring" : {
-								"washerWrinkleControl" : 1,
-								"dryerWrinkleControl" : 1
-							}
-						},
-						"2" : {
-							"thumbnail" : "img/icon-wrinkles.png",
-							"thumbnail_current" : "img/icon-wrinkles-current.png",
-							"value" : 2,
-							"text" : "A few times a month",
-							"scoring" : {
-								"washerWrinkleControl" : 2,
-								"dryerWrinkleControl" : 2
-							}
-						},
-						"3" : {
-							"thumbnail" : "img/icon-wrinkles.png",
-							"thumbnail_current" : "img/icon-wrinkles-current.png",
-							"value" : 3,
-							"text" : "Daily",
-							"scoring" : {
-								"washerWrinkleControl" : 3,
-								"dryerWrinkleControl" : 3
-							}
-						}
-					}
-				}											
-			]
-		},
-		"Laundry - Fuel Type" : {
-			"next" : null,
-			"previous" : "Laundry - Wrinkles",
-			"thumbnail_type" : "image",
-			"thumbnail_current" : "img/icon-fueltype-current.png",
-			"thumbnail_text" : "Fuel Type",
-			"text" : [
-				{
-					"question" : "Is your laundry room equipped for gas or electric?",
-					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about fuel?",
-					"explanation" : "Some laundry rooms are fitted for gas dryers. Selecting your preference will help us filter the search results and provide the option best suited for your home.",
-					"type" : "boxes-icon-2-radio",
-					"oneAnswer" : true,
-					"answers" : [
-						{
-							"text" : "Gas",
-							"value" : "gas",
-							"image" : "img/icon-thumb-gas.png",
-							"hover" : "img/icon-thumb-gas-active.png",
-							"thumbnail" : "img/icon-fueltype.png",
-							"thumbnail_current" : "img/icon-fueltype-current.png",
-							"scoring" : {
-							},
-							"order" : 1
-						},
-						{
-							"text" : "Electric",
-							"value" : "electric",
-							"image" : "img/icon-thumb-electric.png",
-							"hover" : "img/icon-thumb-electric-active.png",
-							"thumbnail" : "img/icon-fueltype.png",
-							"thumbnail_current" : "img/icon-fueltype-current.png",
-							"scoring" : {
-								"gas" : -30
-							},
-							"order" : 2
-						}
-					]
-				}
-			]
-		},
 		"Fridges - Energy" : {
 			"next" : "Fridges - Size",
 			"previous" : "Appliance",
@@ -1413,7 +833,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -1436,7 +856,7 @@
 							"value" : 2,
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
-							"text" : "Important",
+							"text" : "It's top of mind",
 							"scoring" : {
 							}
 						},
@@ -2098,70 +1518,87 @@
 					"question" : "What would we find inside your dishwasher right now?",
 					"sub_question" : "Select all that apply",
 					"explanation_title" : "Why are you asking me what I wash? ",
-					"explanation" : "We want to ensure all of your dishes sparkle, understanding what goes into your dishwasher will allow us to recommend options that best address your washing needs.",
+					"explanation" : "Knowing what goes into your dishwasher will allow us to recommend an option that ensures every dish gets a fresh start.",
 					"type" : "checkbox-4",
 					"oneAnswer" : false,
 					"answers" : [
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Pots and pans",
-							"value" : "pots",
-							"scoring" : {
-							},
-							"order" : 1
-						},
-						{
-							"thumbnail" : "img/icon-cleaning.png",
-							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Wine glasses and tumblers",
+							"text" : "Wine glasses from all my closest friends",
 							"value" : "glasses",
 							"scoring" : {
+								"proScrub" : 1,
+								"bottleWash" : 1, 
+								"proDry" : 1, 
+								"proWash" : 1
 							},
 							"order" : 2
 						},
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Casserole dishes",
-							"value" : "casserole",
+							"text" : "A few hard-to-wash graters",
+							"value" : "graters",
 							"scoring" : {
+								"proScrub" : 1,
+								"proWash" : 1
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-cleaning.png",
+							"thumbnail_current" : "img/icon-cleaning-current.png",
+							"text" : "Mixing bowls and measuring cups",
+							"value" : "mixing bowls",
+							"scoring" : {
+								"proScrub" : 1,
+								"bottleWash" : 1,
+								"proWash" : 1
 							},
 							"order" : 3
 						},
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Cutting boards",
-							"value" : "boards",
+							"text" : "Whisks and wooden spoons",
+							"value" : "whisks",
 							"scoring" : {
+								"proScrub" : 1,
+								"proWash" : 1
 							},
 							"order" : 4
 						},
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Sports bottles",
-							"value" : "bottles",
+							"text" : "Cutting boards of every shape and size",
+							"value" : "cutting boards",
 							"scoring" : {
+								"proScrub" : 1,
+								"proWash" : 1
 							},
 							"order" : 5
 						},
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Baby bottles",
-							"value" : "baby bottles",
+							"text" : "A few sets of chopsticks",
+							"value" : "chopsticks",
 							"scoring" : {
+								"proDry" : 1,
+								"proWash" : 1
 							},
 							"order" : 6
 						},
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Every single utensil known to humankind",
-							"value" : "everything",
+							"text" : "Place settings from our family dinner",
+							"value" : "family",
 							"scoring" : {
+								"proDry" : 1,
+								"proWash" : 1
 							},
 							"order" : 7
 						}
@@ -2177,10 +1614,10 @@
 			"thumbnail_text" : "Capacity",
 			"text" : [
 				{
-					"question" : "How many times a week does your family run the dishwasher?",
+					"question" : "How many times a week do you run the dishwasher?",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Capacity?",
-					"explanation" : "When it comes to washing dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for your family.",
+					"explanation" : "When it comes to washing your dishes there is no job too big or too small. Understanding what goes into your dishwasher will allow us to find the perfect fit for you.",
 					"type" : "slider",
 					"oneAnswer" : false,
 					"classes" : "slider-labels four",
@@ -2201,7 +1638,6 @@
 							"value" : 0,
 							"text" : "0",
 							"scoring" : {
-								"placeSettings13": 1,
 								"placeSettings14": 1
 							}
 						},
@@ -2211,7 +1647,8 @@
 							"value" : 5,
 							"text" : "5",
 							"scoring" : {
-								"placeSettings14": 1
+								"placeSettings14": 1,
+								"placeSettings15": 1
 							}
 						},
 						"10" : {
@@ -2220,7 +1657,6 @@
 							"value" : 10,
 							"text" : "10",
 							"scoring" : {
-								"placeSettings14": 1,
 								"placeSettings15": 1
 							}
 						},
@@ -2230,7 +1666,7 @@
 							"value" : 15,
 							"text" : "15+<br />I've lost count",
 							"scoring" : {
-								"placeSettings15": 1
+								"placeSettings16": 1
 							}
 						}
 					}
@@ -2520,7 +1956,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -2543,7 +1979,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "Important",
+							"text" : "It's top of mind",
 							"scoring" : {
 							}
 						},
