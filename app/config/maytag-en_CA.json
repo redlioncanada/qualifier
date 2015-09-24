@@ -316,7 +316,7 @@
 					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT PREFERENCE?",
 					"explanation" : "By understanding your cooking priorities, we can better recommend the perfect cooktop for your lifestyle.",
 					"type" : "rank",
-					"oneAnswer" : true,
+					"oneAnswer" : false,
 					"answers" : [
 						{
 							"thumbnail" : "img/icon-features.png",
@@ -525,6 +525,331 @@
 				}
 			]
 		},
+		"Cooking - Vents - Size" : {
+			"next" : "Cooking - Vents - Location",
+			"previous" : "Cooking - Pre-Qualifier 1",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Size",
+			"thumbnail_current" : "img/icon-capacity-current.png",
+			"text" : [
+				{
+					"question" : "WHAT IS THE WIDTH OF YOUR COOKTOP OR RANGE?",
+					"sub_question" : "Select One",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT WIDTH?",
+					"explanation" : "When it comes to cooktops, size matters. It is only once we know the width of your cooktop/range we can find the best vent for you.",
+					"type" : "radio-4",
+					"oneAnswer" : true,
+					"classes" : "vents  singleAns",
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-capacity.png",
+							"thumbnail_current" : "img/icon-capacity-current.png",
+							"text" : "30\" or less",
+							"value" : "30",
+							"scoring" : {
+								"size30Less" : 1,
+								"size36More": -30
+							},
+							"order" : 1
+						},
+
+						{
+							"thumbnail" : "img/icon-capacity.png",
+							"thumbnail_current" : "img/icon-capacity-current.png",
+							"text" : "36\" or more",
+							"value" : "36",
+							"scoring" : {
+								"size30Less" : -30,
+								"size36More": 1
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Location" : {
+			"next" : "Cooking - Vents - Type",
+			"previous" : "Cooking - Vents - Size",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Style",
+			"thumbnail_current" : "img/icon-style-current.png",
+			"text" : [
+				{
+					"question" : "WHERE IN YOUR KITCHEN CAN WE FIND YOUR COOKING SURFACE?",
+					"sub_question" : "Select One",
+					"explanation_title" : "WHY ARE YOU ASKING ME WHERE I COOK?",
+					"explanation" : "We know that every kitchen is unique. By understanding where your cooking surface is, we can recommend the perfect vent.",
+					"type" : "radio-4",
+					"oneAnswer" : true,
+					"classes" : "vents  singleAns",
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "Against a wall",
+							"value" : "wall",
+							"scoring" : {
+								"islandMount" : -30,
+								"wallMount":1,
+								"underCabinet":1
+							},
+							"order" : 1
+						},
+
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "On an island",
+							"value" : "island",
+							"scoring" : {
+								"islandMount" : 1,
+								"wallMount":-30,
+								"underCabinet":-30
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Type" : {
+			"next" : "Cooking - Vents - Speed",
+			"previous" : "Cooking - Vents - Location",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Style",
+			"thumbnail_current" : "img/icon-style-current.png",
+			"text" : [
+				{
+					"question" : "ARE THERE CABINETS ABOVE YOUR COOKING SURFACE?",
+					"sub_question" : "Select One",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT MY CABINETS?",
+					"explanation" : "Some of the by-products of cooking (steam, moisture and grease) can be destructive without the right ventilation. By understanding your specific needs we can find the perfect system for your kitchen.",
+					"type" : "radio-4",
+					"oneAnswer" : true,
+					"classes" : "vents  singleAns",
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "Yes",
+							"value" : "under",
+							"scoring" : {
+								"islandMount" : -30,
+								"wallMount":-30,
+								"underCabinet":1
+							},
+							"order" : 1
+						},
+
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "No",
+							"value" : "notUnder",
+							"scoring" : {
+								"islandMount" : 1,
+								"wallMount": 1,
+								"underCabinet":-30
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Speed" : {
+			"next" : "Cooking - Vents - Ventilation",
+			"previous" : "Cooking - Vents - Type",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
+			"thumbnail_current" : "img/icon-features-current.png",
+			"text" : [
+				{
+					"question" : "DO YOU OFTEN FIND YOURSELF PREPARING A HIGH-HEAT SAUCE, SAUTÉ OR STIR-FRY?",
+					"sub_question" : "Select One",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT HEAT?",
+					"explanation" : "We know that everybody has a different cooking style. If you like to turn up the heat, we’ll find you a vent with a stronger fan.",
+					"type" : "radio-4",
+					"oneAnswer" : true,
+					"classes" : "vents  singleAns",
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "Yes",
+							"value" : "high speed",
+							"scoring" : {
+								"3400CFMOrHigher" : 1,
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "No",
+							"value" : "no speed",
+							"scoring" : {
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Ventilation" : {
+			"next" : "Cooking - Ranges - Auto",
+			"previous" : "Cooking - Ranges - Speed",
+			"thumbnail_text" : "Fuel Type",
+			"thumbnail_current" : "img/icon-fueltype-current.png",
+			"thumbnail_type" : "image",
+			"text" : [
+				{
+					"question" : "DOES YOUR VENTILATION LEAD TO YOUR HOME EXTERIOR?",
+					"sub_question" : "Select one",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT VENTILATION?", 
+					"explanation" : "As much as we want to maintain the smell of that simmering pot of soup, proper ventilation is important to keep kitchen air clean.",
+					"type" : "boxes-icon-split-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"text" : "Yes - I need ducted ventilation",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "yes",
+							"scoring" : {
+								 "exteriorVent": 1
+							},
+							"order" : 1
+						},
+						{
+							"text" : "No - I need non-ducted ventilation",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "no",
+							"scoring" : {
+								 "nonVented": 1,
+								 "convertible": 1
+							},
+							"order" : 2
+						},
+						{
+							"text" : "I'm not sure",
+							"image" : "img/icon-thumb-electric.png",
+							"hover" : "img/icon-thumb-electric-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "i am no sure",
+							"scoring" : {
+								"easyConversion": 1,
+								"convertible": 1
+							},
+							"order" : 3
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Auto" : {
+			"next" : "Cooking - Ranges - Warming",
+			"previous" : "Cooking - Ranges - Ventilation",
+			"thumbnail_text" : "Fuel Type",
+			"thumbnail_current" : "img/icon-fueltype-current.png",
+			"thumbnail_type" : "image",
+			"text" : [
+				{
+					"question" : "DO YOU EVER FORGET TO TURN ON YOUR FAN?",
+					"sub_question" : "Select one",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT MY HABITS?", 
+					"explanation" : "Some of our vents are automatic which means if you need us to, we can give you a hand turning it on.",
+					"type" : "boxes-icon-split-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"text" : "Too often",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "often",
+							"scoring" : {
+								 "automaticOn": 1
+							},
+							"order" : 1
+						},
+						{
+							"text" : "Sometimes",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "sometimes",
+							"scoring" : {
+								 "automaticOn": 1
+							},
+							"order" : 2
+						},
+						{
+							"text" : "Never",
+							"image" : "img/icon-thumb-electric.png",
+							"hover" : "img/icon-thumb-electric-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "never",
+							"scoring" : {
+							},
+							"order" : 3
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Vents - Warming" : {
+			"next" : null,
+			"previous" : "Cooking - Ranges - Auto",
+			"thumbnail_text" : "Fuel Type",
+			"thumbnail_current" : "img/icon-fueltype-current.png",
+			"thumbnail_type" : "image",
+			"text" : [
+				{
+					"question" : "WOULD YOU LIKE YOUR HOOD TO HAVE A WARMING LAMP?",
+					"sub_question" : "Select one",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT A WARMING LAMP?", 
+					"explanation" : "Some of our models come equipped with warming lamps. If we have a better idea of your needs, we can better recommend the perfect hood.",
+					"type" : "boxes-icon-split-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"text" : "Yes - I need ducted ventilation",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "yes",
+							"scoring" : {
+								 "warmingLamps": 1
+							},
+							"order" : 1
+						},
+						{
+							"text" : "No - I need non-ducted ventilation",
+							"image" : "img/icon-thumb-gas.png",
+							"hover" : "img/icon-thumb-gas-active.png",
+							"thumbnail" : "img/icon-fueltype.png",
+							"thumbnail_current" : "img/icon-fueltype-current.png",
+							"value" : "no",
+							"scoring" : {
+							},
+							"order" : 2
+						}
+					]
+				}
+			]
+		},
 		"Cooking - Wall Ovens - Size" : {
 			"next" : "Cooking - Wall Ovens - Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
@@ -533,8 +858,7 @@
 			"thumbnail_current" : "img/icon-size-current.png",
 			"text" : [
 				{
-					"question" : "We’ve got the perfect wall oven for your family.",
-					"question_more" : "Just tell us how much space you have to fill.",
+					"question" : "WHAT SIZE OF WALL OVEN DO YOU NEED?",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
@@ -543,46 +867,54 @@
 					"classes" : "pointer-labels no-jslider-scale left-tag label-inches",
 					"answer" : 27,
 					"options" : { 
-						"from" : 27,
-						"to" : 30,      
+						"from" : 1,
+						"to" : 4,      
 					    "step": 0.0001,
 					    "dimension_label" : "WIDTH",
-					    "scale": ["27","28","29","30"]       
+					    "scale": ["24","27","30","No Restrictions"]       
 					},
 					"answers" : {
-						"27" : {
+						"1" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : 24,
+							"text" : "24\"",
+							"scoring" : {
+								"width24" : 1,
+								"width27" : -30,
+								"width30" : -30
+							}
+						},
+						"2" : {
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 27,
 							"text" : "27\"",
 							"scoring" : {
-								"width27" : 1
+								"width24" : -30,
+								"width27" : 1,
+								"width30" : -30
 							}
 						},
-						"28" : {
-							"thumbnail" : "img/icon-size.png",
-							"thumbnail_current" : "img/icon-size-current.png",
-							"value" : 28,
-							"text" : "28\"",
-							"scoring" : {
-								"width28" : 1
-							}
-						},
-						"29" : {
-							"thumbnail" : "img/icon-size.png",
-							"thumbnail_current" : "img/icon-size-current.png",
-							"value" : 29,
-							"text" : "29\"",
-							"scoring" : {
-								"width29" : 1
-							}
-						},
-						"30" : {
+						"3" : {
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 30,
 							"text" : "30\"",
 							"scoring" : {
+								"width24" : -30,
+								"width27" : -30,
+								"width30" : 1
+							}
+						},
+						"4" : {
+							"thumbnail" : "img/icon-size.png",
+							"thumbnail_current" : "img/icon-size-current.png",
+							"value" : "Any",
+							"text" : "No Restrictions",
+							"scoring" : {
+								"width24" : 1,
+								"width27" : 1,
 								"width30" : 1
 							}
 						}
@@ -597,17 +929,17 @@
 			]
 		},
 		"Cooking - Wall Ovens - Style" : {
-			"next" : "Cooking - Wall Ovens - Cooking Style",
+			"next" : "Cooking - Wall Ovens - Features",
 			"previous" : "Cooking - Wall Ovens - Size",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Features",
 			"thumbnail_current" : "img/icon-features-current.png",
 			"text" : [
 				{
-					"question" : "What style of wall oven are you looking for?",
+					"question" : "WHAT PREFERENCE DO YOU HAVE FOR YOUR WALL OVEN?",
 					"sub_question" : "Select One",
 					"explanation_title" : "Why are you asking me about orientation?",
-					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
+					"explanation" : "Our wall ovens come in different orientation options. We want to get a better idea of your preference so that we can recommend the perfect one for your home.",
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
 					"answers" : [
@@ -618,7 +950,9 @@
 							"value" : "single",
 							"image" : "img/Cooking-Q2-single.png",
 							"scoring" : {
-								"single" : 1
+								"single" : 1,
+								"combination" : -30,
+								"double" : -30
 							},
 							"order" : 1
 						},
@@ -629,7 +963,9 @@
 							"value" : "combo",
 							"image" : "img/Cooking-Q2-combo.png",
 							"scoring" : {
-								"combination" : 1
+								"single" : -30,
+								"combination" : 1,
+								"double" : -30
 							},
 							"order" : 2
 						},
@@ -640,6 +976,8 @@
 							"value" : "double",
 							"image" : "img/Cooking-Q2-double.png",
 							"scoring" : {
+								"single" : -30,
+								"combination" : -30,
 								"double" : 1
 							},
 							"order" : 3
@@ -648,18 +986,90 @@
 				}
 			]
 		},
-		"Cooking - Wall Ovens - Cooking Style" : {
-			"next" : "Cooking - Wall Ovens - Usage",
+		"Cooking - Wall Ovens - Features" : {
+			"next" : "Cooking - Wall Ovens - Cooking Style",
 			"previous" : "Cooking - Wall Ovens - Style",
+			"thumbnail_type" : "image",
+			"thumbnail_text" : "Features",
+			"thumbnail_current" : "img/icon-features-current.png",
+			"text" : [
+				{
+					"question" : "I use my oven to...",
+					"sub_question" : "Select all that apply",
+					"explanation_title" : "WHY ARE YOU ASKING ME ABOUT COOKING?",
+					"explanation" : "Our wall ovens all have unique features. We want to get a better idea of how you use yours so we can recommend the perfect one for your needs.",
+					"type" : "checkbox-4",
+					"oneAnswer" : false,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Reheat leftovers and frozen meals",
+							"value" : "reheat",
+							"scoring" : {
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Cook meals for my busy family",
+							"value" : "multiple meals",
+							"scoring" : {
+								"EasyConvection":1,
+								"5CuFt": 1
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Help me host parties and cook multi-course meals",
+							"value" : "host parties",
+							"scoring" : {
+								"EasyConvection":1,
+								"5CuFt": 1
+							},
+							"order" : 3
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Cook a large holiday roast",
+							"value" : "roast",
+							"scoring" : {
+								"EasyConvection":1,
+								"temperatureProbe":1,
+								"5CuFt": 1
+							},
+							"order" : 4
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "Bake, bake, and bake some more",
+							"value" : "perfect",
+							"scoring" : {
+								"trueConvection" : 1
+							},
+							"order" : 5
+						}
+					]
+				}
+			]
+		},
+		"Cooking - Wall Ovens - Cooking Style" : {
+			"next" : "Cooking - Wall Ovens - Energy",
+			"previous" : "Cooking - Wall Ovens - Features",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Style",
 			"thumbnail_current" : "img/icon-style-current.png",
 			"text" : [
 				{
-					"question" : "How would your family describe you?",
+					"question" : "HOW WOULD YOUR FRIENDS DESCRIBE YOU?",
 					"sub_question" : "Select One",
 					"explanation_title" : "Why Are You Asking Me About Cooking?",
-					"explanation" : "Our ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your needs.",
+					"explanation" : "Our wall ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your cooking needs.",
 					"type" : "radio-4",
 					"oneAnswer" : true,
 					"classes" : "family-describe",
@@ -667,7 +1077,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A baker always covered in flour.\"",
+							"text" : "A baker – I’m usually covered in flour",
 							"value" : "baker",
 							"scoring" : {
 								"trueConvection" : 1
@@ -678,96 +1088,30 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Enjoys trying new recipes.\"",
+							"text" : "A home chef – scallop ceviche and naan pizzas, I love trying new recipes",
+							"value" : "chef",
+							"scoring" : {
+								"easyConvection" : 1
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-convection.png",
+							"thumbnail_current" : "img/icon-convection-current.png",
+							"text" : "I’m both – I should probably start my own food blog",
 							"value" : "both",
 							"scoring" : {
-								"trueConvection" : 1
+								"trueConvection" : 1,
+								"easyConvection":1
 							},
-							"order" : 2
+							"order" : 3
 						},
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Someone who cooks because they have to.\"",
+							"text" : " I’m neither – my stack of take-out menus is impressive",
 							"value" : "neither",
 							"scoring" : {
-							},
-							"order" : 3
-						},
-						{
-							"thumbnail" : "img/icon-convection.png",
-							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A home chef.\"",
-							"value" : "home chef",
-							"scoring" : {
-								"trueConvection" : 1
-							},
-							"order" : 4
-						},
-						{
-							"thumbnail" : "img/icon-convection.png",
-							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"The frozen food expert.\"",
-							"value" : "not a home chef",
-							"scoring" : {
-							},
-							"order" : 5
-						}
-					]
-				}
-			]
-		},
-		"Cooking - Wall Ovens - Usage" : {
-			"next" : "Cooking - Wall Ovens - Energy",
-			"previous" : "Cooking - Wall Ovens - Cooking Style",
-			"thumbnail_type" : "image",
-			"thumbnail_text" : "Features",
-			"thumbnail_current" : "img/icon-features-current.png",
-			"text" : [
-				{
-					"question" : "I use my oven to...",
-					"sub_question" : "Select all that apply",
-					"explanation_title" : "Why Are You Asking Me About Usage?",
-					"explanation" : "Our ovens all have unique features. We want to get a better idea of how you use it so we can recommend the perfect wall oven for your cooking needs.",
-					"type" : "checkbox-4",
-					"oneAnswer" : false,
-					"answers" : [
-						{
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"text" : "Reheat leftovers and frozen meals",
-							"value" : "reheat",
-							"scoring" : {
-								"warmingDrawer" : 1
-							},
-							"order" : 1
-						},
-						{
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"text" : "Cook meals for my busy family",
-							"value" : "multiple meals",
-							"scoring" : {
-							},
-							"order" : 2
-						},
-						{
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"text" : "Help me host parties and cook multi-course meals",
-							"value" : "host parties",
-							"scoring" : {
-								"double" : 1
-							},
-							"order" : 3
-						},
-						{
-							"thumbnail" : "img/icon-features.png",
-							"thumbnail_current" : "img/icon-features-current.png",
-							"text" : "Bake, bake, and bake some more",
-							"value" : "perfect",
-							"scoring" : {
-								"gas" : 1
 							},
 							"order" : 4
 						}
@@ -777,7 +1121,7 @@
 		},
 		"Cooking - Wall Ovens - Energy" : {
 			"next" : null,
-			"previous" : "Cooking - Wall Ovens - Usage",
+			"previous" : "Cooking - Wall Ovens - Cooking Style",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Energy",
 			"thumbnail_current" : "img/icon-energy-current.png",
@@ -819,7 +1163,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
