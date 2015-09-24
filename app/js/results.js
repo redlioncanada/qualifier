@@ -188,6 +188,8 @@ $scope.setPriceRange = function () {
                     $('#result-header-1').removeClass('active');
                     $('#result-header-2').addClass('active');
                 }
+                $('.results-list li').css('zIndex',1);
+                $('#result-column-'+id).css('zIndex',2);
               scope.currentId = id;
           }
 
