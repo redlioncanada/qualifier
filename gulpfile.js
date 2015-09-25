@@ -60,13 +60,13 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('components', ['components1'], function(cb) {
-    return gulp.src('app/js/components/*/*/*.js')
-        .pipe(gulp.dest('build/components'));
-});
+// gulp.task('components', ['components1'], function(cb) {
+    // return gulp.src('app/js/components')
+       // .pipe(gulp.dest('app'));
+// });
 
 // process Components JS files and return the stream.
-gulp.task('components1', function () {
+gulp.task('components', function () {
 
     gulp.src('app/components/*/*/*/*.png')
         .pipe(gulp.dest('build/components'));
