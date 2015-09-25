@@ -16,13 +16,13 @@
 				<h3 ng-if="!!questionsData.question.show.sub_question" ng-bind="questionsData.question.show.sub_question"></h3>
 
 				<div class="extra-info-wrap">
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-append-to-body="true" tooltip-trigger="click focus" tooltip-placement="left" tooltip="{{questionsData.question.show.explanation}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.explanation_title" tooltip-append-to-body="true" tooltip-trigger="click focus" tooltip-placement="{{$root.isTabletWidthOrLess ? 'left' : 'bottom'}}" tooltip="{{questionsData.question.show.explanation}}">
 						<span class="btn-icon">
 							<span>?</span>
 						</span>
 						<span class="btn-text" ng-if="!isTabletWidthOrLess" ng-bind="questionsData.question.show.explanation_title"></span>
 					</a>
-					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-append-to-body="true" tooltip-trigger="click focus" tooltip-placement="left" tooltip="{{questionsData.question.show.info}}">
+					<a class="btn-wrap" ng-if="!!questionsData.question.show.info_title" tooltip-append-to-body="true" tooltip-trigger="click focus" tooltip-placement="{{$root.isTabletWidthOrLess ? 'left' : 'bottom'}}" tooltip="{{questionsData.question.show.info}}">
 						<span class="btn-icon">
 							<span>i</span>
 						</span>

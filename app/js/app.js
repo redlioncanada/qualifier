@@ -240,7 +240,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
-    $rootScope.locale = $('html').attr('lang') + '_CA';
+    $rootScope.locale = 'fr_CA';
     $rootScope.brand = "maytag"
     $rootScope.isMobile = Modernizr.mobile;
 

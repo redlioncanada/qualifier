@@ -288,7 +288,14 @@ angular.module('App')
 
 
 		var c = $('.slidey.ng-hide-remove').height();
-		if (c < 100) c = $('.slidey').not('.ng-hide').height();
+		if (c < 150) {
+			c = $('.slidey').not('.ng-hide').height();
+			if (c < 150) {
+				var minHeight = 200;
+				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
+				c = minHeight;
+			}
+		}
 		//var contentHeight = getTotalHeight(c);
 		//console.log('content height: '+contentHeight);
 
