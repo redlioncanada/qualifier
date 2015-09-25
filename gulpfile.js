@@ -16,15 +16,6 @@ var imagemin = require('gulp-imagemin');
 // var notify = require('gulp-notify');
 var cache = require('gulp-cache');
 
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "build"
-        }
-    });
-});
-
 // Jasmine
 gulp.task('test', function () {
   gulp.src('./tests/*.js')
@@ -70,10 +61,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('components', ['components1'], function(cb) {
-    gulp.src('app/js/components/*/*/*.js')
-        .pipe(gulp.dest('build/components'))
-
-    return gulp.src('app/js/components/*/*.js')
+    return gulp.src('app/js/components/*/*/*.js')
         .pipe(gulp.dest('build/components'));
 });
 
@@ -139,15 +127,22 @@ gulp.task('images', function() {
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
-// use default task to launch BrowserSync and watch JS files
-gulp.task('default', ['sass', 'js', 'images', 'components', 'config', 'browser-sync', 'views'], function () {
-	
-    // add browserSync.reload to the tasks array to make
-    // all browsers reload after tasks are complete.
+// Static server
+gulp.task('default', ['frontloaded-tasks'], function() {
+    browserSync({
+        server: {
+            baseDir: "build"
+        }
+    });
 
     gulp.watch('app/scss/**/*.scss', ['sass', browserSync.reload]);
     gulp.watch('app/views/**/*.html', ['views', browserSync.reload]);
     gulp.watch('app/js/*.js', ['js', browserSync.reload]);
+});
+
+gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'components', 'config', 'views'], function () {
+	
+    //complete all these tasks before running browsersync
 
 });
 
