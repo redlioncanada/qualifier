@@ -19,7 +19,6 @@
     "angular-bindonce": "~0.3.3",
     "angular-bootstrap": "~0.12.1",
     "angular-cookies": "~1.3.14",
-    "angular-hammer": "~1.2.4",
     "angular-local-storage": "~0.1.5",
     "angular-resource": "~1.3.14",
     "angular-route": "~1.3.14",

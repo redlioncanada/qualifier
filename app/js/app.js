@@ -6,7 +6,6 @@ var nglibs = [
   'ngSanitize',
   'ngRoute',
   'ui.router',
-  'hmTouchEvents',
   'ngTouch',
   'pasvaz.bindonce',
   'LocalStorageModule',
