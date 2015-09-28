@@ -112,6 +112,7 @@ $scope.setPriceRange = function () {
 
       $scope.constructPageTitle = function() {
         var suffix = typeof $rootScope.applianceType !== 'undefined' ? $rootScope.applianceType : '';
+        if ($rootScope.locale == 'fr_CA') suffix = suffix.toUpperCase();
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 

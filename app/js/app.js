@@ -242,6 +242,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
     $rootScope.locale = 'fr_CA';
     $rootScope.brand = "maytag"
     $rootScope.isMobile = Modernizr.mobile;
+    $rootScope.showTooltip = false;
 
     $resource("config/"+$rootScope.brand+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
           $rootScope.brandData = res

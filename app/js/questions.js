@@ -4,8 +4,12 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
   	$rootScope.$on('resize::resize', function() {
-	    if (window.innerWidth <= 580){
+	    if (window.innerWidth < 1024){
 	        $scope.resizeElements();
+	    } else {
+	    	//reset header height to it's css value
+            $('.app-content-main-top').css('height', '');
+            $('.slidey-wrap-all').css('height', '');
 	    }
 	});
 
@@ -275,12 +279,12 @@ angular.module('App')
 		if (typeof depth == 'undefined') depth = 1;
 
 		var p = $('.app-content-main-top-left');
+		var h = $('.app-content-main-top');
 		var t1 = $(p).find('h2').eq(0);
 		var t2 = $(p).find('h3');
 		var t3 = $(p).find('h2').eq(1);
 
 		var headerHeight = getTotalHeight(t1) + getTotalHeight(t2) + getTotalHeight(t3);
-		console.log('total header height: '+headerHeight);
 
 		$('.app-content-main-top').stop(true).animate({
 			'height': headerHeight

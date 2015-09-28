@@ -7,7 +7,7 @@
          "next": "Next",
          "results": "RÉSULTATS",
          "msrp": "MSRP",
-         "oneLastStep": "RÉVISEZ VOTRE FOURCHETTE DE PRIX AFIN DE PRÉCISER VOS RÉSULTATS...",
+         "oneLastStep": "RÉVISEZ VOTRE FOURCHETTE DE PRIX AFIN DE PRÉCISER VOS RÉSULTATS",
          "moreInfo": "Informations supplémentaires",
          "print": "Impression",
          "email": "Imprimer",
@@ -34,6 +34,7 @@
                  "answers": [{
                      "text": "Appareils de lessive",
                      "value": "Laundry",
+                     "displayName": "Appareils de lessive",
                      "classes": "category laundry",
                      "image": "img/start-laundry.png",
                      "hover": "img/start-laundry-hover.png",
@@ -49,6 +50,7 @@
                  }, {
                      "text": "Appareils de cuisson",
                      "value": "Stove",
+                     "displayName": "Appareils de cuisson",
                      "classes": "category cooking",
                      "image": "img/start-stove.png",
                      "hover": "img/start-stove-hover.png",
@@ -64,6 +66,7 @@
                  }, {
                      "text": "Réfrigérateurs",
                      "value": "Fridge",
+                     "displayName": "Réfrigérateurs",
                      "classes": "category fridge",
                      "image": "img/start-fridge.png",
                      "hover": "img/start-fridge-hover.png",
@@ -79,6 +82,7 @@
                  }, {
                      "text": "Lave-vaisselle",
                      "value": "Dishwasher",
+                     "displayName": "Lave-vaisselle",
                      "classes": "category dishwasher",
                      "image": "img/start-dishwasher.png",
                      "hover": "img/start-dishwasher-hover.png",
@@ -109,6 +113,7 @@
                  "answers": [{
                      "text": "Cuisinières",
                      "value": "free stand range",
+                     "displayName": "Cuisinières",
                      "classes": "sub-category ranges",
                      "image": "img/cooking-range.png",
                      "thumbnail": "img/cat-cooking-sub-free-range-1-electric.jpg",
@@ -123,6 +128,7 @@
                  }, {
                      "text": "Fours encastrés",
                      "value": "wall oven",
+                     "displayName": "Fours encastrés",
                      "classes": "sub-category wallovens",
                      "image": "img/cooking-walloven.png",
                      "thumbnail": "img/walloven-single.jpg",

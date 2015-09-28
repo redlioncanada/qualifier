@@ -29,6 +29,7 @@ angular.module('App')
         }
       }
       $scope.setAppliance = function(appliance) {
+        console.log(appliance);
         $rootScope.applianceType = appliance;
       }		
 });
