@@ -127,6 +127,12 @@ gulp.task('images', function() {
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
+// Fonts
+gulp.task('fonts', function() {
+    return gulp.src('app/fonts/*')
+    .pipe(gulp.dest('build/fonts/'));
+});
+
 // Static server
 gulp.task('default', ['frontloaded-tasks'], function() {
     browserSync({
@@ -140,7 +146,7 @@ gulp.task('default', ['frontloaded-tasks'], function() {
     gulp.watch('app/js/*.js', ['js', browserSync.reload]);
 });
 
-gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'components', 'config', 'views'], function () {
+gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views'], function () {
 	
     //complete all these tasks before running browsersync
 
