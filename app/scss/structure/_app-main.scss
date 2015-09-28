@@ -576,6 +576,12 @@ div.mobile-app-nav-arrows {
 		margin-top: initial !important;
 	}
 
+	div.app-answers .category:hover {
+		img.normal {
+			opacity: 1;
+		}
+	}
+
 	.slider-large-label-wrap {
 		width: 100% !important;
 		float: none !important;
@@ -1038,4 +1044,8 @@ div.mobile-app-nav-arrows {
 
 .hidden {
 	display: none;
+}
+
+.hiddenViaOpacity {
+	opacity: 0 !important;
 }

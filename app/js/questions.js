@@ -378,6 +378,7 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
+  		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
 
