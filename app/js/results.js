@@ -38,7 +38,7 @@ angular.module('App')
 
 
       $rootScope.resultsTouched = true;
-      var d = $rootScope.isFrench ? ',00 $' : '';
+      var d = $rootScope.isFrench ? ' $' : '';
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
