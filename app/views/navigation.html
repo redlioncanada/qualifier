@@ -20,11 +20,11 @@
 
 	<resultsmenu ng-if="isTabletWidthOrLess && atResultsPage" class="app-content-main-bottom-results"></resultsmenu>
 
-	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' ">
+	<div class="app-content-main-bottom-center" ng-if="questionsData.question.name !='Appliance' && questionsData.question.name !='Cooking - Pre-Qualifier 1' && (!$root.isTabletWidthOrLess || (!atResultsPage && $root.isTabletWidthOrLess))">
 		<div class="bottom-nav-wrap">
 			<div class="bottom-nav-inner">
 
-				<div class="bottom-nav-intructions" ng-class="{'hidden': atResultsPage}">
+				<div class="bottom-nav-intructions" ng-class="{'hidden': atResultsPage && $root.isTabletWidthOrLess}">
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
                     <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">hm-swipeleft for next question</span>-->
                     <div ng-if="$root.isTabletWidthOrLess" class="mobile-app-nav-arrows">

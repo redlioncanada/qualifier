@@ -44,7 +44,8 @@ angular.module('App')
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
 	          if (qtype == "rank") {
-	            if (a.answer == 1) {
+	          	console.log(a.answer)
+	            if (a.answer == 0) {
 	              return a
 	              break;
 	            }              
@@ -71,7 +72,8 @@ angular.module('App')
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
 	          if (qtype == "rank") {
-	            if (a.answer == 1) {
+	          	console.log(a.answer)
+	            if (a.answer == 0) {
 	              return true
 	              break;
 	            }              
@@ -348,7 +350,7 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			$scope.show(); 	
-			$rootScope.controls.questionHasAnswer = !!$rootScope.hasAnswer($rootScope.questionsData.question)
+			$rootScope.controls.questionHasAnswer = !!$rootScope.questionHasAnswer($rootScope.questionsData.question)
   			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name] = $rootScope.questionsData.question;
@@ -425,22 +427,39 @@ angular.module('App')
 	  	$rootScope.questionsData.scoringQuestions = {};
 	  	$rootScope.questionsData.currentCount = null;
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
-	  	$rootScope.moveToQuestion("Appliance")
+	  	
+	  	var count = 0
 	  	for(var q in $rootScope.hasanswers) {
 	  		if (!!$rootScope.hasanswers[q]) {
-	  			console.log("has ans")
+	  			
 	  			var ans = $rootScope.hasanswers[q].split(";")
-	  			console.log(ans)
+
 	  			for (var t in $rootScope.questionsData.questions[q].text) {
 		  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
-		  				console.log(ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value))
-		  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value) != -1 ) {
-		  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true
-		  				}
+		  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
+			  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value) != -1 ) {
+			  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true
+			  				}
+			  			} else {
+			  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
+			  			}
 		  			}
 		  		}
-	  		}
+	  		} 
+	  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
+			$rootScope.questionsData.questions[q].order = count
+	  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
+
+	  		count++
 	  	}
+	  	
+	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
+	  		$scope.recalculateResults()
+	  		$state.go("main.results");
+	  	} else {
+	  		$rootScope.moveToQuestion("Appliance")
+	  	}
+	  	
   	}
 
 });

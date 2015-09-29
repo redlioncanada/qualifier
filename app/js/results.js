@@ -3,7 +3,7 @@
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal) {
 
-    if (window.innerWidth < 1125){
+    if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
             //console.log("useMobile");
         }else{
@@ -12,7 +12,7 @@ angular.module('App')
         }
     
     $rootScope.$on('resize::resize', function() {
-        if (window.innerWidth < 1125){
+        if (window.innerWidth < 1024){
             $scope.$apply(function(){
                 $scope.useMobileTemplates = true;
             });
@@ -108,8 +108,10 @@ angular.module('App')
 
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
+       console.log($rootScope.appliances)
        for (var a in $rootScope.appliances) {
           var appliance = $rootScope.appliances[a]
+          
           if (appliance.score !=null) {
             for (var c in appliance.colours) {
               var p = parseFloat(appliance.colours[c].prices.CAD)
@@ -123,6 +125,7 @@ $scope.setPriceRange = function () {
             }
           }
        }
+       console.log(minPrice, maxPrice);
        $rootScope.resultsOptions.from = minPrice
         $rootScope.resultsOptions.to = maxPrice
        $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
@@ -148,9 +151,7 @@ $scope.setPriceRange = function () {
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
-      if ($rootScope.questionsData.currentCount > 0) {
-               $scope.setPriceRange()
-      }
+      $scope.setPriceRange()
 })
 .directive('desktopResults', function(){
     return {
@@ -163,7 +164,7 @@ $scope.setPriceRange = function () {
         }
    }
 })
-.directive('mobileResults', function(){
+.directive('mobileResults', ['$timeout', function($timeout){
     return {
         restrict: "EA",
         scope: false,
@@ -172,32 +173,24 @@ $scope.setPriceRange = function () {
         link: function(scope, element, attrs) {
             scope.currentId = 1;
             scope.columnHeight = 0;
-            setTimeout(function(){
-                scope.columnHeight = $('#result-column-0').height() + 25;
-                console.log("height : " + scope.columnHeight);
-                //
-                if (scope.columnHeight < $('#result-column-1').height())
-                {
-                    scope.columnHeight = $('#result-column-1').height() + 25;
-                    console.log("height : " + scope.columnHeight);
-                };
-                //
-                if (scope.columnHeight < $('#result-column-2').height())
-                {
-                    scope.columnHeight = $('#result-column-2').height()+ 25;
-                    console.log("height : " + scope.columnHeight);
-                }
-                //
-                console.log("height : " + scope.columnHeight);
-                $('#mobile-results-holder').height(scope.columnHeight);
-            },500);
+
+            $timeout(function(){
+                scope.swipeDetails();
+            },0);
             
+            scope.$watch('useMobileTemplates', function() {
+              $timeout(function(){
+                scope.swipeDetails();
+              },0);
+            });
+
             scope.selectorClicked = function($event) { 
                 var idClicked = parseInt($event.currentTarget.id.slice(-1));
                 scope.swipeDetails(idClicked);
             };
 
           scope.swipeDetails = function(id) {
+            if (typeof id === 'undefined') id = scope.currentId;
             var idClicked = 'result-selector-'+id.toString();
             if(idClicked == 'result-selector-0') {
                         $('#mobile-results-holder').height($('#result-column-0').height() + 25);
@@ -249,7 +242,4 @@ $scope.setPriceRange = function () {
           }
         }
    }
-
-
-
-});
+}]);

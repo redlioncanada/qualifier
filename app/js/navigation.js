@@ -13,7 +13,7 @@ angular.module('App')
     });
 
     //On Constructor, check and set icontype
-    if (window.innerWidth < 1125){
+    if (window.innerWidth < 1024){
             $scope.useMobileIcons = true;
         }else{
             $scope.useMobileIcons = false;

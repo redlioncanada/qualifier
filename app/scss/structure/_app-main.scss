@@ -352,8 +352,132 @@ div.mobile-app-nav-arrows {
 	z-index: 2;
 }
 
+@media(max-width:1180px) and (min-width:1024px) {
+	.slidey {
+		width: 927px !important;
+		min-width: 927px !important;
+		left: -462px !important;
+	}
 
-@media(max-width:1125px) {
+	.app-answers {
+		a.answer-box.category:first-child {
+			margin-left: 0px;
+		}
+
+		a.answer-box.category:last-child {
+			margin-right: 0px;
+		}
+
+		a.answer-box.category, a.answer-box.sub-category {
+			margin-left: 20px;
+			margin-right: 20px;
+
+			.category-image img {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.category-image img.hover {
+				left: 20px;
+			}
+		}
+
+		div[ng-controller="SliderCtrl"] {
+			.slider-wrap {
+				margin-left: 50px;
+			}
+		}
+
+		div[ng-controller="SliderMultipleCtrl"] {
+			.multi-slider-wrap:first-child {
+				.answer-slider {
+					margin-top: -10px;
+				}
+			}
+
+			.multi-slider-wrap {
+				margin-left: 83px;
+			}
+
+			.slider-large-label {
+				margin-left: -172px;
+				margin-right: initial;
+				top: 71px;
+			}
+
+			.slider-wrap {
+				.jslider {
+					width: 93%;
+				}
+
+				.jslider-bg {
+					background-size: contain;
+					width: 900px;
+					height: 42px;
+				}
+			}
+		}
+
+		a.answer-box.checkbox-4, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
+			border-right: 4px solid #999999;
+			width: 445px;
+
+			.label-wrap {
+				left: 72px;
+				max-width: 82%;
+			}
+		}
+
+		a.answer-box.boxes-icon-5, a.answer-box.boxes-icon-2, a.answer-box.boxes-icon-split {
+			background-size: cover;
+			width: 135px;
+			height: 160px;
+
+			img.normal, img.hover {
+				top: 0px;
+				left: 0px;
+				width: 85%;
+			}
+
+			img.hover {
+				left: 10px;
+			}
+
+			.select-icon {
+				top: 122px;
+				left: 9px;
+			}
+
+			.label-wrap {
+				bottom: 13px;
+				left: 48px;
+
+				.label-text {
+					font-size: 13px;
+				}
+			}
+		}
+
+		a.answer-box.picture-3, a.answer-box.picture-2 {
+			width: 290px;
+
+			.select-label-wrap {
+				border-right: 4px solid #d7d7d7;
+
+				.select-icon {
+					top: 156px;
+				}
+			}
+		}
+	}
+
+	div#results .results-list li.result:nth-child(2) {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+@media(max-width:1023px) {
 
 	.main {
 		overflow-x: hidden;
@@ -404,9 +528,7 @@ div.mobile-app-nav-arrows {
 	.app-content-main-top-left .main-question-more {
 		font-size: 15px !important;
 	}
-/* More Progress Bar styles.  If anything move styles from _app-main-mt.scss
-    As I do not see these as brand specific styles. A Progress Bar file would be optimal.
-    Added Sept 8th 2015 by Jacoub Bondre */
+
     .app-content-main-bottom{
         .icon-nav {
             display: inline-block;
@@ -448,12 +570,6 @@ div.mobile-app-nav-arrows {
 	div.slidey-wrap-all {
 		height: 600px;
 		margin-top: initial !important;
-	}
-
-	.slidey {
-		width: 80% !important;
-		min-width: 100% !important;
-		left: -50% !important;
 	}
 
 	.slider-large-label-wrap {
@@ -530,7 +646,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			left: -50%;
+			left: -45%;
 			float: none !important;
 			position: relative;
 		}
@@ -568,17 +684,17 @@ div.mobile-app-nav-arrows {
 
 				span {
 					border-left: none !important;
-					left: 50px;
-					width: 20px;
+					left: 30px;
+					width: 10px;
 					display: table;
 				}
 
 				ins {
-					top: -9px;
-					left: 40px;
-					width: 115px;
+					top: -7px;
+					left: 20px;
+					width: 90px;
 					text-align: left;
-					font-size: 12pt;
+					font-size: 10pt;
 					height: 45px;
 					display: table-cell;
 					vertical-align: middle;
@@ -659,10 +775,10 @@ div.mobile-app-nav-arrows {
 		width: 280px;
 	}
 
-	a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4 {
+	a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4 {
 		float: none;
 		margin: 14px auto;
-		display: block;
+		display: block !important;
 	}
 
 	a.answer-box.picture-3, a.answer-box.picture-2 {
@@ -697,16 +813,22 @@ div.mobile-app-nav-arrows {
 }
 
 @media(max-width:580px) {
+	.slidey {
+		width: 80% !important;
+		min-width: 100% !important;
+		left: -50% !important;
+	}
+
 	div.slidey-wrap-all {
 		height: 710px;
 	}
 
 	div.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
-		height: 375px;
+		height: 330px;
 
 		.jslider {
 			div.jslider-pointer {
-				left: 14px;
+				left: 13px;
 				width: 43px;
 				height: 37px;
 				background: url("../img/slider-pointer-small.png") !important;
@@ -715,7 +837,7 @@ div.mobile-app-nav-arrows {
 
 			.jslider-bg {
 				height: 109%;
-				width: 20px;
+				width: 18px;
 				margin-left: -18px;
 			}
 
@@ -754,8 +876,9 @@ div.mobile-app-nav-arrows {
 				position: relative;
 
 				.normal, .hover {
-					width: 100%;
+					width: 130%;
 					bottom: 0 !important;
+					margin-left: -9px;
 				}
 
 				.normal {
@@ -822,7 +945,9 @@ div.mobile-app-nav-arrows {
 
 	a.answer-box.checkbox-4, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
 		width: 90%;
+		height: 60px;
 		border-right: 4px solid #999999;
+		margin: 6px auto;
 
 		.selected .select-icon {
 			left: 18px;
@@ -832,12 +957,13 @@ div.mobile-app-nav-arrows {
 		.select-icon {
 			width: 28px;
 			height: 28px;
-			top: 22px;
+			top: 17px;
 			left: 18px;
 		}
 
 		.label-wrap {
 			left: 62px;
+			height: 60px;
 			max-width: 75%;
 		}
 
