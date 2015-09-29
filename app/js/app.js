@@ -376,7 +376,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                     }
                 })
                 $rootScope.hasanswers = {}
-                var httpparams = ($location.$$absUrl).split("?")
+                var httpparams = (decodeURI($location.$$absUrl)).split("?")
                 if (1 in httpparams) {
                   var loophttpparams = httpparams[1].split("&")
                   for (var l in loophttpparams) {

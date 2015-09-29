@@ -441,7 +441,9 @@ angular.module('App')
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 	  	
 	  	var count = 0
+	  	console.log($rootScope.hasanswers);
 	  	for(var q in $rootScope.hasanswers) {
+
 	  		if (!!$rootScope.hasanswers[q]) {
 	  			
 	  			var ans = $rootScope.hasanswers[q].split(";")
@@ -464,10 +466,10 @@ angular.module('App')
 
 	  		count++
 	  	}
-	  	
+	  	console.log($rootScope.questionsData.scoringQuestions)
 	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
 	  		$scope.recalculateResults()
-	  		$state.go("main.results");
+	  		//$state.go("main.results");
 	  	} else {
 	  		$rootScope.moveToQuestion("Appliance")
 	  	}
