@@ -12,8 +12,8 @@
 }
 
 div.people1 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-1.png') center center no-repeat !important;
-	background-size: 28px 50px;
+    background: url('../img/family-1.png') !important;
+	background-size: contain !important;
 	width: 28px;
 	height: 50px;
 	display: block;
@@ -21,8 +21,8 @@ div.people1 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people2 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-2.png') center center no-repeat !important;
-	background-size: 36px 50px;
+    background: url('../img/family-2.png') !important;
+	background-size: contain !important;
 	width: 36px;
 	height: 50px;
 	display: block;
@@ -30,8 +30,8 @@ div.people2 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people3 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-3.png') center center no-repeat !important;
-	background-size: 59px 50px;
+    background: url('../img/family-3.png') !important;
+	background-size: contain !important;
 	width: 59px;
 	height: 50px;
 	display: block;
@@ -39,29 +39,36 @@ div.people3 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people4 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-4.png') center center no-repeat !important;
-	background-size: 70px 50px;
+    background: url('../img/family-4.png') !important;
+	background-size: contain !important;
 	width: 70px;
 	height: 50px;
 	display: block;
 	margin-left: -35px !important;
 }
 div.people5 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-5.png') center center no-repeat !important;
-	background-size: 85px 50px;
-	width: 85px;
+    background: url('../img/family-5.png') !important;
+	background-size: contain !important;
+	width: 102px;
 	height: 50px;
 	display: block;
 	margin-left: -43.5px !important;
 }
 // Will be dog and cats later
 
-.jslider-pointer, .jslider-value {
-    -webkit-transition:all linear 0.15s;
-    -moz-transition:all linear 0.15s;
-    -o-transition:all linear 0.15s;
-    transition:all linear 0.15s;
-}
+//.jslider-pointer:not(.jslider-pointer-hover), .jslider-pointer:not(.jslider-pointer-hover) ~ .jslider-value {
+//    -webkit-transition:all linear 0.15s;
+//    -moz-transition:all linear 0.15s;
+//    -o-transition:all linear 0.15s;
+//    transition:all linear 0.15s;
+//}
+
+//.jslider-pointer, .jslider-value {
+//    -webkit-transition:all linear 0.15s;
+//    -moz-transition:all linear 0.15s;
+//    -o-transition:all linear 0.15s;
+//    transition:all linear 0.15s;
+//}
 
 div.people6 .jslider .jslider-value:not(.jslider-value-to) {
     background: url('../img/family-6.png') center center no-repeat !important;
@@ -106,12 +113,11 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	.jslider {
 		cursor: pointer; 
 		display: block; 
-		width: 100%; 
+		width: 95%; 
 		height: 1em; 
 		position: relative; 
 		top: 0.6em; 
 		font-family: Arial, sans-serif;
-
 		
 
 		& .jslider-bg i {
@@ -173,10 +179,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 			width: 860px;
 			height: 40px;
 			background: url('../img/slider-bg.png');
+			margin-left: -30px;
 			z-index: 10;
-			// width: 972px;
-			// height: 63px;
-			// background: url('../img/slider-full-bg.png');
 			i { 
 				height: 5px; 
 				position: absolute; 
@@ -363,6 +367,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		}
 		.jslider-pointer-to { 
 			left: 80%; 
+			z-index: 100 !important;
 		}
 		.jslider-pointer-hover { 
 			// background-position: -21px -60px; 
@@ -418,6 +423,8 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 		.jslider-scale { 
 			position: relative; 
 			top: 32px;
+			width: 98%;
+			//margin-left: 20px;
 
 			& > :first-child, & > :last-child {
 				border-left: 1px solid #999 !important;;
@@ -469,9 +476,16 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 
 .left-tag .jslider .jslider-bg {
 	background: url('../img/slider-gradient-bg.png');
-	margin-left: -80px;
+	margin-left: -100px;
 	width: 945px;
 	height: 44px;
+}
+
+.left-tag .jslider {
+	width: 96%;
+	.jslider-scale { 
+		width: 97%;
+	}
 }
 
 // Specific case
@@ -493,7 +507,7 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 
 // Specific case
 div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
-	margin-right: -9.5px !important;
+	margin-right: -50px !important;
 	margin-left: auto;
 }
 
@@ -544,6 +558,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	width: 853px;
 	position: relative;
 	display: inline-block;
+	margin-left: 30px;
 }
 
 .has-dimension-label {
@@ -767,7 +782,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	//top: -7px;
 	.slider-large-label {
 		@include large-square-label;
-		margin-right: -78px;
+		margin-right: -83px;
 		font-size: 24px;
     	z-index: 11;
 	}
@@ -821,6 +836,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 			width: 609px;
 			height: 28px;
 			background: url('../img/slider-results-bg.png');
+			background-size: contain;
 		}
 	}
 	.price-slider.pointer-labels {
@@ -853,4 +869,68 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 			}
 		}
 	}
+}
+
+/*french css start*/
+div[ng-class="fr_CA"] {
+	.price-slider {
+		.jslider-value span:before {
+		    content: "";
+		}
+		.jslider-value span:after {
+		    content: " $";
+		}
+	}
+
+	.price-slider.pointer-labels {
+		.jslider {
+			padding-top: 11px !important;
+
+			.jslider-value {
+				span {
+					font-size: 24px !important;
+				}
+			}
+		}
+	}
+
+	.slider-large-label {
+		font-size: 18px;
+		top: 15px;
+	}
+}
+
+@media(max-width: 580px) {
+	div.price-slider .jslider {
+		.jslider-bg {
+			margin-left: -16px;
+		}
+
+		div.jslider-pointer { 
+			width: 43px;
+			height: 37px;
+			background: url('../img/slider-pointer-small.png') center center no-repeat !important;
+			background-size: 43px 37px;
+			top: -8px;
+			margin-left: -23px;
+		}
+
+		.jslider-value-to {
+			margin-right: -26px !important;
+		}
+	}
+
+	#results div.price-slider.pointer-labels .jslider {
+		div.jslider-value {
+			width: 54px;
+			height: 48px;
+			margin-top: -36px;
+			margin-left: -28px !important;
+
+			span {
+				font-size: 20px !important;
+			}
+		}
+	}
+
 }

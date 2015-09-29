@@ -11,11 +11,12 @@ var nglibs = [
   'LocalStorageModule',
   'ui.bootstrap',
   'ui.sortable',
-  'ngSlider',
+  'angularAwesomeSlider',
   'ngAnimate'
 ];
 
 var App = angular.module('App', nglibs);
+App.constant('Modernizr', Modernizr);
 
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
@@ -41,6 +42,25 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
       });
 
   }]);
+
+// Edited By Jacoub Bondre Sunday Sept 6th 2015
+// Converts JS Events to Angular and Broadcast globally
+// Implimented specifically for Progress bar and Results page functionality shifts but made available for all other needs
+//Example Implimentation
+//  $scope.$on('resize::resize', function() {
+//       console.log("resize");
+//  });
+//
+App.directive('resize', function($rootScope, $window) {
+  return {
+    link: function() {
+      angular.element($window).on('resize', function(e) {
+        // Namespacing events with name of directive + event to avoid collisions
+        $rootScope.$broadcast('resize::resize');
+      });
+    }
+  }
+});
 
 App.filter('orderByOrder', function() {
   return function(items) {
@@ -134,6 +154,7 @@ App.filter('byPrice', function($rootScope) {
     var range = price.split(";")
     range[0] = parseFloat(range[0])
     range[1] = parseFloat(range[1])    
+
     angular.forEach(items, function(appliance) {
         var ins = false
         angular.forEach(appliance.colours, function(colour) {
@@ -154,20 +175,21 @@ App.filter('byPrice', function($rootScope) {
     });
     if (inside.length < 3) {
         if (range[1] + $rootScope.resultsOptions.step <= $rootScope.resultsOptions.to) {
-          range[1] += $rootScope.resultsOptions.step
+          range[1] += $rootScope.resultsOptions.fakestep
         } else {
-          range[0] -= $rootScope.resultsOptions.step
+          range[0] -= $rootScope.resultsOptions.fakestep
         }
         $rootScope.controls.price = range.join(";")
     }
+    $rootScope.safeApply();
     return inside.concat(outside);
   };
 });
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($rootScope, $state, $resource, localStorageService) {
-  console.log("Run");
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', function ($rootScope, $state, $resource, localStorageService, Modernizr) {
+
   $state.go('loading');
     localStorageService.clearAll();
 
@@ -212,9 +234,18 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
       console.log(log);
     }
 
-    $resource("config/brand.json").get({}, function (res, headers) {
-          $rootScope.locale = "en_CA"
-          $rootScope.brandData = res;
+    $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
+    $rootScope.$on('resize::resize', function() {
+      $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
+    });
+    
+    $rootScope.locale = 'fr_CA';
+    $rootScope.brand = "maytag"
+    $rootScope.isMobile = Modernizr.mobile;
+    $rootScope.showTooltip = false;
+
+    $resource("config/"+$rootScope.brand+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
+          $rootScope.brandData = res
 
           angular.forEach( $rootScope.brandData.questions, function (item, key) { 
               $rootScope.brandData.questions[key].name = key
@@ -223,7 +254,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', function ($
             "img/slider-pointer.png"
           ];
 
-          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brandData.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
                 var relcodes = {
                   'M1' : 'DC',

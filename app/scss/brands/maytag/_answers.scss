@@ -56,6 +56,7 @@
 	width: 33px;
 	height: 33px;
 	background: url('../img/icon-select-not-selected.png');
+	background-size: contain;
 	position: absolute;
 	top: 20px;
 	left: 24px;
@@ -64,14 +65,12 @@
 
 
 .selected {
-	// transform: translateY(4px);
-	transform: translate(1px, 3px);
-  	box-shadow: none !important;
   	.img-wrap, .select-label-wrap { // for boxes-picture
 		box-shadow: none !important;
   	}
 	.select-icon {
 		background: url('../img/icon-select-selected.png');
+		background-size: contain;
 	}
 }
 
@@ -81,9 +80,10 @@
 }
 .label-text {
 	font-family: $AG-Bold-Cnd;
-	font-size: 20px;
-	color: #272727;
+	font-size: 17px;
+	color: #444;
 	position: relative;
+	line-height: 17px;
 }
 
 // need to fix this for that really long answer...
@@ -113,9 +113,23 @@
 	}
 } 
 
+.no-touch {
+	.answer-box {
+		&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split {
+			&:hover {
+				img.normal {
+					visibility: hidden;
+				}
+				img.hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
 
 .answer-box {
-	transition: all 0.3s ease;
+	transition: all 1s ease;
 	margin-left: 9px;
 	margin-right: 9px;
 	position: relative;
@@ -130,27 +144,24 @@
 		height: 70px;
 
 		background: url('../img/radio-bg.png');
-		margin-bottom: 20px;
+		background-size: cover;
+		margin-bottom: 10px;
 		@include boxshadow;
 		.label-wrap {
-			// top: 0;
-			// top: 9px; for 4 up
-			// position: relative;
-			// left: 15px;
-			// height: 70px;
-			// padding: 23px 0 0 0;
-			max-width: 415px;
-			text-align: left;
-			// padding: 10px 0 0 0;
-
-			top: 22px;
 			position: absolute;
-			left: 79px;
+			left: 88px;
+			max-width: 83%;
+			display: table;
+			height: 70px;
+
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 	}
@@ -186,14 +197,19 @@
 		float: left;
 		.label-wrap {
 			position: absolute;
-			left: 90px;
-			top: 22px;
+			left: 88px;
+			max-width: 83%;
+			display: table;
+			height: 70px;
 
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 		.label-more-wrap {
@@ -224,6 +240,7 @@
 		height: 70px;
 		// background: url('../img/checkbox-bg.png');
 		background: url('../img/radio-bg.png');
+		background-size: cover;
 		display: block;
 		margin-bottom: 10px;
 		@include boxshadow;
@@ -231,16 +248,22 @@
 		// 	top: 19px;
 		// 	left: 23px;
 		// }
+
 		.label-wrap {
 			position: absolute;
-			top: 22px;
 			left: 88px;
-			max-width: 415px;
+			max-width: 83%;
+			display: table;
+			height: 70px;
+
+			.label-text {
+				line-height: 20px;
+				margin: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.long-answer {
 				top: 15px;
-				.label-text {
-					line-height: 20px;
-				}
 			}
 		}
 	}
@@ -257,6 +280,7 @@
 		width: 532px;
 		height: 70px;
 		background: url('../img/radio-bg.png');
+		background-size: cover;
 		display: block;
 		margin-bottom: 10px;
 		@include boxshadow;
@@ -264,7 +288,11 @@
 			position: absolute;
 			top: 22px;
 			left: 100px;
-			max-width: 415px;
+			max-width: 83%;
+
+			.label-text {
+				height: 70px;
+			}
 			&.long-answer {
 				top: 15px;
 				.label-text {
@@ -282,31 +310,32 @@
 		display: inline-block;
 		.img-wrap {
 			display: block;
-			width: 366px;
-			height: 173px;
-			background: url('../img/boxes-picture-bg-top.png');
+			width: 100%;
 			@include boxshadow;
 			img {
 				margin-top: 4px;
+				width: 100%;
 				// position: relative;
 				// top: 25px;
 			}
 		}
 		.select-label-wrap {
-			margin-top: 8px;
+			margin-top: 0px;
 			display: block;
-			width: 366px;
+			width: 100%;
 			height: 49px;
+			border-right: 3px solid #CCC;
 			background: url('../img/boxes-picture-bg-bottom.png');
+			background-size: cover;
 			@include boxshadow;
 		}
 		.select-icon {
-			top: 188px;
+			top: 180px;
 			left: 19px;
 		}
 		.label-wrap {
 			position: absolute;
-			bottom: 11px;
+			bottom: 15px;
 			left: 66px;
 			text-align: left;
 		}
@@ -329,7 +358,7 @@
 			}
 		}
 		.select-label-wrap {
-			margin-top: 8px;
+			margin-top: 0px;
 			display: block;
 			width: 277px;
 			height: 50px;
@@ -367,7 +396,7 @@
 		}
 		.label-wrap {
 			position: absolute;
-			bottom: 14px;
+			bottom: 18px;
 			left: 60px;
 		}
 
@@ -377,14 +406,7 @@
 			position: absolute;
 			opacity: 0;
 		}
-		&:hover {
-			img.normal {
-				visibility: hidden;
-			}
-			img.hover {
-				opacity: 1;
-			}
-		}
+		
 		// img.normal,  {
 		// 	display: block;
 		// 	// -webkit-transition: opacity 0.3s ease-in-out;
@@ -588,5 +610,29 @@
 	}
 	.carousel-caption {
 		bottom: -50px;
+	}
+}
+
+//french css begin
+div[ng-class="fr_CA"] {
+	.boxes-icon-5-container {
+		.label-wrap {
+			display: inline-block;
+			text-align: left;
+			height: 48px;
+			bottom: 4px;
+			display: table;
+		}
+		.label-text {
+			font-family: $AG-Bold-Cnd;
+			font-size: 17px;
+			color: #272727;
+			position: relative;
+			line-height: 17px;
+			display: table-cell;
+			vertical-align: middle;
+			max-width: 108px;
+			font-size: 12pt;
+		}
 	}
 }

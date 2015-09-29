@@ -32,17 +32,42 @@
 	li.result {
 		//box-shadow: inset 0px 0px 5px 0px #002e5f;
 		border: 2px solid #002e5f;
+		.product-details {
+			padding-top: 1px;
+		}
 		.colourBar {
 			margin-left: auto; 
 			margin-right: auto;
 			margin-top: 10px;
 		    margin-bottom: 20px;
+		    height: 25px;
+		    display: table;
+		}
+		.colourBar ul {
+			margin: 0 auto;
+			height: inherit;
+			padding: 0;
+		}
+		.colourBar ul li {
+			height: 24px;
+			width: 27px;
+			display: block;
+			float: left;
+			margin-right: 2px;
+			cursor: pointer;
+		}
+		.colourBar li.selected::after {
+			content: url(../img/small-active-indicator.jpg);
+			cursor: initial;
+			top: -5px;
+			position: relative;
 		}
 		.product-name {
 			font-family: $AG-Bold-Cnd;
 			font-size: 16px;
 			color: #022d58; 
 			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 		.product-price-sku-wrap {
 			font-family: $AG-Bold-Cnd;
@@ -57,6 +82,13 @@
 			.product-sku {
 				padding-left: 10px
 			}
+		}
+		h2 {
+			margin-top: 2px;
+			margin-bottom: 20px;
+			font-size: 17px;
+			padding-top: 10px;
+			min-height: 46px;
 		}
 		&:nth-child(1), &:nth-child(3) {
 			margin-top: 32px;
@@ -77,7 +109,6 @@
 				}
 			}
 			.product-details {
-				padding-top: 16px;
 				padding-bottom: 22px;
 				padding-left: 25px;
 				padding-right: 25px;
@@ -107,6 +138,7 @@
 				// Bootstrap mixin
 				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
+				margin-top: 4px;
 				.btn-text {
 					font-size: 11px;
 					text-transform: uppercase;
@@ -118,19 +150,18 @@
 					margin-left: 10px;
 					padding-bottom: 3px;
 				}
+				.btn-text-email {
+					margin-top: -2px;
+				}
+				.btn-text-email::after {
+					content: '';
+				}
 			}
 			.btn-text {
 				font-size: 17px;
 			}
 		}
 		&:nth-child(2) { // this is for the middle result
-
-			h2 {
-				margin-top: 2px;
-				margin-bottom: 20px;
-				font-size: 17px;
-				padding-top: 10px;
-			}
 			h3 {	
 				text-align: center;
 				background-color: #002e5f;
@@ -158,6 +189,7 @@
 				// Bootstrap mixin
 				@include button-variant(#ffffff, #b7b7b7, #b7b7b7);
 				padding: 3px 18px;
+				margin-top: 4px;
 				.btn-text {
 					font-size: 11px;
 					text-transform: uppercase;
@@ -168,6 +200,12 @@
 					content: url(../img/cta-arrow.png);
 					margin-left: 10px;
 					padding-bottom: 3px;
+				}
+				.btn-text-email::after {
+					content: '';
+				}
+				.btn-text-email img {
+					margin-top: -2px;
 				}
 			}
 			.result-inner {
@@ -213,20 +251,48 @@
 			padding-left: 43px;
 			padding-right: 43px;
 
-			h4.sales-feature, h4.sales-feature-additional {
+			.sales-feature-wrapper {
+				padding-top: 10px;
+			}
+
+			.sales-feature-spacer {
+				margin: 30px auto;
+				height: 1px;
+				width: 77%;
+				background-color: #022d58;
+			}
+
+			h4.sales-feature {
 				position: relative;
 				overflow: visible; // show all of icon even outside boundaries
 				img:first-child {
 					position: absolute;
 					left: 0px;
-					top: 50%;
+					top: 12%;
+					width: 36px;
 					transform: translateY(-50%);
 					-ms-transform: translateY(-50%);
 					-webkit-transform: translateY(-50%);
 				}
+				img:first-child[src="img/icon-capacity.png"] {
+					padding-bottom: 16px;
+				}
+				img.multiline:first-child {
+					top: 35%;
+				}
+
+			}
+			h4.sales-feature-additional {
+				position: relative;
+				overflow: visible; // show all of icon even outside boundaries
+				img:first-child {
+					position: absolute;
+					left: 0px;
+					top: 18%;
+				}
 			}
 			h4.sales-feature {
-			  margin: 20px 0;
+			  margin: 23px 0 10px 0;
 			}
 		}
 		.product-img-wrap {
@@ -276,10 +342,9 @@
 	  font-size: 14px;
 		padding-left: 50px;
 		text-transform: uppercase;
-		color: #686868;
 	}
 	h4.sales-feature-additional span[ng-bind-html="sf.headline"] {
-		color: #8e8e8e;
+		color: #CCC;
 		font-family: $AG-stack;
 		font-size: 7pt;
 		vertical-align: middle;
@@ -298,11 +363,5 @@
 		font-family: $AG-Bold-Cnd;
 		text-transform: uppercase;
 		color: #7f7f7f;
-	}
-}
-
-span[ng-repeat="colour in a.colours"] {
-	img {
-		cursor: pointer;
 	}
 }

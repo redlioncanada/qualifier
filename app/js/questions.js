@@ -3,13 +3,25 @@
 angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
+  	$rootScope.$on('resize::resize', function() {
+	    if (window.innerWidth < 1024){
+	        $scope.resizeElements();
+	    } else {
+	    	//reset header height to it's css value
+            $('.app-content-main-top').css('height', '');
+            $('.slidey-wrap-all').css('height', '');
+	    }
+	});
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    		console.log('$locationChangeSuccess')
     		var q = ($location.path()).toString().replace("/question/","");
-    		console.log("From ", $rootScope.questionsData.question.name, " To ", q);
+
+    		if (q == 'Appliance') {
+    			$rootScope.resultsTouched = false;
+    		}
+
     		if (!!$rootScope.questionsData.question) {
-	    		if ($rootScope.questionsData.question.name != q && !!q) {
+	    		if ($rootScope.questionsData.question.name != q && !!q && q !== '/questions/') {
 		  			if ($rootScope.questionsData.question.order < $rootScope.questionsData.questions[q].order) {
 		  				$rootScope.controls.controlClicked = 'next';
 		  			} else {
@@ -21,8 +33,6 @@ angular.module('App')
 			  	}
     		}
  			else {
-	  			console.log("back to questions")
-	  			console.log(q);
 	  			$rootScope.controls.controlClicked = 'previous';
 		  		$timeout(function() {
 					$rootScope.moveToQuestion(q)
@@ -84,7 +94,6 @@ angular.module('App')
 	    }
     	return false
   	}
-
 
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
@@ -256,7 +265,57 @@ angular.module('App')
 		//} else {
 		//	var ref = 0;
 		//}
-		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	 
+		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	
+
+		if (window.innerWidth <= 580) {
+			$timeout(function(){
+				$(window).scrollTop(0);
+				$scope.resizeElements();
+			},200);
+		}
+	}
+
+	$scope.resizeElements = function(depth) {
+		if (typeof depth == 'undefined') depth = 1;
+
+		var p = $('.app-content-main-top-left');
+		var h = $('.app-content-main-top');
+		var t1 = $(p).find('h2').eq(0);
+		var t2 = $(p).find('h3');
+		var t3 = $(p).find('h2').eq(1);
+
+		var headerHeight = getTotalHeight(t1) + getTotalHeight(t2) + getTotalHeight(t3);
+
+		$('.app-content-main-top').stop(true).animate({
+			'height': headerHeight
+		}, 0);
+
+
+		var c = $('.slidey.ng-hide-remove').height();
+		if (c < 150) {
+			c = $('.slidey').not('.ng-hide').height();
+			if (c < 150) {
+				var minHeight = 200;
+				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
+				c = minHeight;
+			}
+		}
+		//var contentHeight = getTotalHeight(c);
+		//console.log('content height: '+contentHeight);
+
+		if (c > 100) {
+			$('.slidey-wrap-all').stop(true).animate({
+				'height': c + 10
+			}, 0);
+		} else {
+			setTimeout(function(){$scope.resizeElements(++depth)},100);
+		}
+
+		function getTotalHeight(el) {
+			if (!el || (typeof el === 'object' && el.length == 0)) return 0;
+			console.log('el height: '+$(el).height());
+			return parseInt($(el).height()) + parseInt($(el).css('paddingTop')) + parseInt($(el).css('paddingBottom')) + parseInt($(el).css('marginTop')) + parseInt($(el).css('marginBottom'));
+		}
 	}
 
 	$scope.freshQuestion = function (q) {
@@ -319,7 +378,7 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		console.log("Next");
+  		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
 

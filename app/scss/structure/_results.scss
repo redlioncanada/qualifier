@@ -10,8 +10,6 @@
 			// float: left;
 		}
 		.results-adjust-desc {
-			// display: inline-block;
-			margin-left: 10px;
 			text-align: center;
 			text-transform: uppercase;
 			position: relative;
@@ -32,6 +30,8 @@
 	.results-top-right-btns {
 		display: inline-block;
 		float: right;
+		padding-right: 51px;
+		
 		a {
 			width: 30px;
 			height: 30px;
@@ -106,7 +106,7 @@
 			  	width: 100%;
 				text-align: center;
 				margin-top: 30px;
-				margin-bottom: 30px;
+				margin-bottom: 3px;
 				img {
 					width: 220px;
 					display: block;
@@ -154,5 +154,275 @@
 		// 	    content:"\2713\0020";
 		// 	}
 		// }
+	}
+}
+
+/* Media Queries 
+Add Sept 09, 2015
+by Jacoub Bondre */
+
+@media(max-width:1023px) {
+    #results {
+	padding-top: 25px;
+    .share-wrapper{
+        display: none;
+    }
+
+    .price-slider {
+    	padding-left: 26px;
+		width: 500px !important;
+		// margin-left: 100px;
+
+		.jslider-bg {
+			width: 500px !important;
+			height: 23px !important;
+		}
+	}
+
+	.results-top {
+		h1 {
+			display: none;
+			
+		}
+		.results-adjust-desc {
+			text-align: center;
+			text-transform: uppercase;
+			position: relative;
+			top: 9px;
+            font-size: 16px !important;
+		}
+
+		.price-slider-wrap {
+			display: block;
+			margin-left: 100px;
+			height: 120px;
+			// float: left;
+		}
+	}
+	.results-top-right-btns {
+		display: inline-block;
+		float: right;
+		padding-right: 51px;
+		
+		a {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			display: inline-block;
+			margin-left: 1px;
+			margin-right: 1px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			span {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				position: relative;
+				top: 9px;
+			}
+		}
+		.icon-save {
+			background: url('../img/icon-save.png') center center no-repeat;
+		}	
+		.icon-share {
+			background: url('../img/icon-share.png') center center no-repeat;
+		}
+		.icon-mail {
+			background: url('../img/icon-mail.png') center center no-repeat;
+		}
+		.icon-print {
+			background: url('../img/icon-print.png') center center no-repeat;
+		}
+	}
+    //Adding styles for mobile specific navigation.
+        //There are no default styles that coresspond with classes prefixed with .mobile-
+    .mobile-results-nav{
+        width: 480px;
+        margin: auto;
+        padding: 0px;
+        position: relative;
+        li {
+			display: inline-block;
+			position:relative;
+            float: left;
+			width: 33%;
+            text-align: center;
+            
+            h3 {
+                color: #002e5f;
+                font-size: 14px;
+            }
+            
+            img {
+                width: 100%;
+                padding: 10%;
+            }
+            .active {
+                    text-decoration: underline;
+                }
+        }
+    }
+        #mobile-results-holder{
+            position: relative;
+            overflow: hidden;
+            width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            /* For Safari 3.1 to 6.0 */
+                -webkit-transition-property: all;
+                -webkit-transition-duration: .2s;
+                -webkit-transition-timing-function: ease-out;
+                /* For old firefox */
+                -moz-transition-property: all;
+                -moz-transition-duration: .2s;
+                -moz-transition-timing-function:ease-out;
+                /* Standard syntax */
+                transition-property: all;
+                transition-duration: .2s;
+                transition-timing-function:ease-out;
+            
+        }
+	.results-list {
+		list-style: none;
+		clear: both;
+		-webkit-padding-start: 0;
+		padding: 0px 0px;
+		li.result {
+			display: inline-block;
+			position:absolute;
+			width: 100%;
+            border: none;
+                /* For Safari 3.1 to 6.0 */
+                -webkit-transition-property: all;
+                -webkit-transition-duration: .4s;
+                -webkit-transition-timing-function: ease-out;
+                /* For old firefox */
+                -moz-transition-property: all;
+                -moz-transition-duration: .4s;
+                -moz-transition-timing-function:ease-out;
+                /* Standard syntax */
+                transition-property: all;
+                transition-duration: .4s;
+                transition-timing-function:ease-out;
+            
+			
+			&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+				margin-left: 0px;
+				margin-right: 0px;
+                margin-top: 0px; // this is from the brand specific css file
+				.result-wrap {
+					border-radius: 0px;
+					background-color: rgb(255, 255, 255);
+					box-shadow: none;
+					width: 100%;
+				}
+                
+				.result-inner {
+
+				}
+				.product-img-wrap {
+					padding-top: 28px;
+				}
+                .product-details-wrap {
+                    margin: 0px;
+                    
+                }
+			}
+            
+            &:nth-child(1) {
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: -480px;
+			}
+            //
+            &:nth-child(2) {
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: 0px;
+			}
+            //
+            &:nth-child(3) {
+                //position: relative;
+				margin-left: 0px;
+				margin-right: 0px;
+				left: 480px;
+			}
+            
+            .sales-feature-spacer {
+                margin: 30px auto;
+                height: 1px;
+                width: 77%;
+                background-color: #022d58;
+            }
+            
+			h2, .product-name {
+				//
+			}
+			.product-img-wrap {
+			  	//
+				img {
+					//
+				}
+			}
+			.result-wrap {
+				//
+			}
+			.result-inner {
+					//
+			}
+		}
+	}
+	.product-price-sku-wrap {  
+        font-size: 22px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        padding: 0px !important;
+	}
+	.product-features-title {
+        //
+	}
+	.product-features-list {
+		//
+	}
+	.product-details {
+		//
+	}
+}
+}
+
+@media(max-width: 580px) {
+	#results {
+		.price-slider {
+			width: 272px !important;
+
+			.jslider-bg {
+				width: 255px !important;
+				height: 12px !important;
+				margin-left: -15px;
+			}
+		}
+
+		.mobile-results-nav {
+			width: 95%;
+
+			li h3 {
+				font-size: 12px;
+			}
+		}
+
+		#mobile-results-holder {
+			width: 100%;
+		
+			.product-price-sku-wrap {
+				> span {
+					width: 100%;
+					padding: 0 10px;
+					display: block;
+				}
+			}
+		}
 	}
 }

@@ -7,10 +7,11 @@
 		"next" : "Next",
 		"results" : "Results",
 		"msrp" : "MSRP",
-		"oneLastStep" : "One Last Step: Adjust your price to find your perfect range",
+		"oneLastStep" : "One Last Step: Adjust your price to find your perfect",
 		"moreInfo" : "More Info",
 		"print" : "Print",
-		"colourPreference" : "Adjust your colour preference.",
+		"email" : "Email",
+		"colourPreference" : "Available colour options",
 		"yourBestMatch" : "Your Best Match",
 		"otherSuggestion" : "Other Suggestion",
 		"resultsPage" : "Results Page",
@@ -34,6 +35,7 @@
 						{
 							"text" : "Laundry",
 							"value" : "Laundry",
+							"displayName": "Laundry Pair",
 							"classes" : "category laundry",
 							"image" : "img/start-laundry.png",
 							"hover" : "img/start-laundry-hover.png",							
@@ -49,6 +51,7 @@
 						{
 							"text" : "Cooking",
 							"value" : "Stove",
+							"displayName": "Range",
 							"classes" : "category cooking",
 							"image" : "img/start-stove.png",
 							"hover" : "img/start-stove-hover.png",
@@ -64,6 +67,7 @@
 						{
 							"text" : "Refrigerator",
 							"value" : "Fridge",
+							"displayName": "Refrigerator",
 							"classes" : "category fridge",
 							"image" : "img/start-fridge.png",
 							"hover" : "img/start-fridge-hover.png",
@@ -79,6 +83,7 @@
 						{
 							"text" : "Dishwasher",
 							"value" : "Dishwasher",
+							"displayName": "Dishwasher",
 							"classes" : "category dishwasher",
 							"image" : "img/start-dishwasher.png",
 							"hover" : "img/start-dishwasher-hover.png",
@@ -111,6 +116,7 @@
 						{
 							"text" : "Ranges",
 							"value" : "free stand range",
+							"displayName": "Range",
 							"classes" : "sub-category ranges",
 							"image" : "img/cooking-range.png",
 							"thumbnail" : "img/cat-cooking-sub-free-range-1-electric.jpg",
@@ -125,6 +131,7 @@
 						{
 							"text" : "Wall Ovens",
 							"value" : "wall oven",
+							"displayName": "Wall Oven",
 							"classes" : "sub-category wallovens",
 							"image" : "img/cooking-walloven.png",
 							"thumbnail" : "img/walloven-single.jpg",
@@ -222,8 +229,8 @@
 				{
 					"question" : "What style of wall oven are you looking for?",
 					"sub_question" : "Select One",
-					"explanation_title" : "Why are you asking me about space constraints?",
-					"explanation" : "By understanding your cooking priorities, we can better understand what features you need that will suit your lifestyle.",
+					"explanation_title" : "Why are you asking me about orientation?",
+					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
 					"answers" : [
@@ -412,7 +419,7 @@
 					    "to": 3,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -435,7 +442,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -472,7 +479,7 @@
 					    "to": 3,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -495,7 +502,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -843,7 +850,7 @@
 					    "to": 3,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -866,7 +873,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -898,7 +905,8 @@
 					"oneAnswer" : false,
 					"classes" : "slider-labels family-size",
 					"answer" : 1,
-					"options" : {       
+					"options" : {
+						"realtime": true,  
 					    "from": 1,
 					    "to": 6,
 					    "step": 1,
@@ -1033,7 +1041,7 @@
 				{
 					"question" : "What is your laundry pair preference?",
 					"sub_question" : "Select one",
-					"explanation_title" : "Why are you asking me about space constraints?",
+					"explanation_title" : "Why are you asking me about orientation?",
 					"explanation" : "We understand that every laundry space is different. By understanding yours, we are able to find the perfect pairing for your home.",
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
@@ -1407,7 +1415,7 @@
 					    "to": 3,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -1430,7 +1438,7 @@
 							"value" : 2,
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},
@@ -1623,7 +1631,8 @@
 					"oneAnswer" : false,
 					"classes" : "slider-labels five fridge-capacity",
 					"answer" : 1,
-					"options" : {       
+					"options" : {   
+						"realtime": true,      
 					    "from": 1,
 					    "to": 5,
 					    "step": 1,
@@ -2099,7 +2108,7 @@
 						{
 							"thumbnail" : "img/icon-cleaning.png",
 							"thumbnail_current" : "img/icon-cleaning-current.png",
-							"text" : "Pots and Pans",
+							"text" : "Pots and pans",
 							"value" : "pots",
 							"scoring" : {
 							},
@@ -2369,7 +2378,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "Yes - my kitchen opens on to another room",
+							"text" : "Yes - My kitchen opens on to another room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-yes.png",
 							"value" : "yes",
 							"scoring" : {
@@ -2380,7 +2389,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "No - my kitchen is its own room",
+							"text" : "No - My kitchen is its own room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-no.png",
 							"value" : "no",
 							"scoring" : {
@@ -2514,7 +2523,7 @@
 					    "to": 3,
 					    "step": 1,
 					    "dimension": "",
-					    "scale": ["Not a Concern","Somewhat a concern","It's top of mind","Very Important"]       
+					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
 						"0" : {
@@ -2537,7 +2546,7 @@
 							"thumbnail" : "img/icon-energy.png",
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"value" : 2,
-							"text" : "It's top of mind",
+							"text" : "Important",
 							"scoring" : {
 							}
 						},

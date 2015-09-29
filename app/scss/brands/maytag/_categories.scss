@@ -6,7 +6,8 @@ $opacityTiming: 0.5s;
  	.category {
  		display: inline-block;
 		img.hover {
-			top: 0;
+			width: 100%;
+			bottom: 47px;
 			left: 0;
 			position: absolute;
 			z-index: -1;
@@ -15,6 +16,7 @@ $opacityTiming: 0.5s;
 			opacity: 0;
 		}
 		img.normal {
+			width: 100%;
 			opacity: 1;
 			-webkit-transition: opacity $opacityTiming ease-in-out;
 			-moz-transition: opacity $opacityTiming ease-in-out;
@@ -29,6 +31,14 @@ $opacityTiming: 0.5s;
 	}
 	.sub-category {
 		display: inline-block;
+		img.normal {
+			width: 100%;
+			opacity: 1;
+			-webkit-transition: opacity $opacityTiming ease-in-out;
+			-moz-transition: opacity $opacityTiming ease-in-out;
+			-o-transition: opacity $opacityTiming ease-in-out;
+			transition: opacity $opacityTiming ease-in-out;
+		}
 		&:hover img.normal {
 			opacity: 0.3;
 		}

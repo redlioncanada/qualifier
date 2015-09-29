@@ -1,4 +1,6 @@
-
+header.header-desktop {
+	display: block;
+}
 
 #main {
 	background: white;
@@ -8,6 +10,7 @@
 .app-content-main-top {
 	width: 1160px;
 	margin: 0 auto;
+	height: 154px;
 
 	h2, h3 {
 		font-family: $AG-Bold-Cnd;
@@ -25,7 +28,7 @@
 		letter-spacing: 1px;
 	}
 	.app-content-main-top-left {
-		width: 100%;
+		width: 80%;
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -42,6 +45,9 @@
 		display: block;
 		.btn-wrap {
 			display: inline-block;
+		}
+		.tooltip {
+			opacity: 1;
 		}
 		.btn-icon {
 			background: #002e58;
@@ -96,8 +102,8 @@
 	.tooltip-inner {
 		color: #fff;
 		background: #002e5f;
-		font-size: 10px;
-		line-height: 12px;
+		font-size: 11px;
+		line-height: 13px;
 		padding: 30px 15px;
 		border-radius: 0px;
 		opacity: 1;
@@ -181,7 +187,7 @@
 			color: #000000;
 			font-size: 19px;
 			text-align: center;
-
+			width: 100%;
 			font-family: $AG-Bold-Cnd;
 		}
 	}
@@ -253,6 +259,26 @@
 		@include button-variant(#ffffff, #002e58, #002e58);
 		padding: 3px 18px;
 	}
+	.btn-wrapper {
+		float: right;
+		margin-top: 20px;
+	}
+	.backtoresults-mobile {
+	   		width: 100%;
+	   		background-color: #002e5f;
+	   		text-transform: uppercase;
+	   		height: 30px;
+	   		margin: 40px 0 15px 0;
+
+	   		div {
+	   			color: white;
+	   			margin: 0 auto;
+	   			position: relative;
+	   			top: 5px;
+	   			font-family: $AG-Bold-Cnd;	   		
+	   		}
+	   }
+
 	.backtoresults-btn-wrap {
 		display: inline-block;
 	    border-left: solid 1px #002e58;
@@ -269,6 +295,7 @@
 			width: 44px;
 			height: 40px;
 			font-size: 10px;
+			text-align: center;
 			//padding: 3px 18px;
 			padding-left: 5px;
 		    padding-top: 10px;
@@ -296,6 +323,7 @@
 			//padding: 3px 18px;
 			padding-left: 6px;
 		    padding-top: 8px;
+		    text-align: center;
 		    line-height: 1;
 			line-spacing: 1;
 			text-transform: uppercase;
@@ -304,17 +332,17 @@
 }
 
 //popover styles
-.app-content-main-bottom-center .icon-nav-wrap {
-	.popover-title {
-		text-transform: uppercase;
-		border-bottom: 1px solid #FFF;
-	}
-	.popover {
-		border: 0;
-		border-radius: 0px;
-	}
+.popover-title {
+	text-transform: uppercase;
+	border-bottom: 1px solid #FFF;
+}
+.popover {
+	border: 0;
+	border-radius: 0px;
+	margin-top: -4px !important;
+
 	* {
-		font-size: 9pt;
+		font-size: 9px;
 		color: #FFF;
 	}
 }
@@ -322,16 +350,24 @@
 .bottom-nav-intructions {
 	position: relative;
 	display: block;
-	text-align: left;
-	margin-left: 12px;
+	text-align: center;
+	border-bottom: 1px solid #a7a7a7;
 	// width: 100%;
 
 	.instructions {
 		color: #a7a7a7;
-		font-size: 10px;
+		font-size: 11px;
 		text-align: center;
 		padding-bottom: 3px;
 	}
+    .mobileInstructions{
+            display: none;
+    }
+}
+
+.bottom-nav-inner-inner {
+	display: inline-block;
+	margin: 0 auto;
 }
 
 .bottom-nav-inner {
@@ -340,7 +376,6 @@
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	border-top: 1px solid #a7a7a7;
 	float: left;
 }
 
@@ -349,7 +384,6 @@
 
 
 .body {
-	min-height: 518px;
 	overflow: hidden;
 	max-width: 100%;
 }
@@ -358,12 +392,19 @@
 	position: relative;
 	left: 50%;
 	height: 380px;
-	margin-top: -25px;
+	margin-top: 10px;
 }
+
+
+
 .slidey {
 	position: absolute;
 	left: -(1160px / 2);
 	width: 1160px;
+
+	div[ng-controller="SliderMultipleCtrl"] {
+		padding-top: 25px;
+	}
 
 	div[ng-controller="SliderMultipleCtrl"] .answers-main-content {
 		&.answer-slider {
@@ -411,10 +452,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(200%);
+	    -webkit-transform: translateX(200%);
 	    opacity: 0;
 	}
 	&.ng-hide-remove-active {
 		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
 		opacity: 1;
 	}
 
@@ -422,10 +465,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
+	    -webkit-transform: translateX(0%);
 	    opacity: 1;
 	}
 	&.ng-hide-add-active {
 		transform: translateX(-200%);
+		-webkit-transform: translateX(-200%);
 		opacity: 0;
 	}
 }
@@ -435,10 +480,12 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(-200%);
+	    -webkit-transform: translateX(-200%);
 	    opacity: 0;
 	}
 	&.ng-hide-remove-active {
 		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
 		opacity: 1;
 	}
 
@@ -446,10 +493,63 @@
 		transition: all ease-in-out 1s;
 		-webkit-transition: all ease-in-out 1s;
 	    transform: translateX(0%);
+	    -webkit-transform: translateX(0%);
 	    opacity: 1;
 	}
 	&.ng-hide-add-active {
 		transform: translateX(200%);
+		-webkit-transform: translateX(200%);
 		opacity: 0;
+	}
+}
+
+/*french css start*/
+div[ng-class="fr_CA"] {
+	.btn-backtoresults, .btn-startover {
+		width: 55px !important;
+	}
+
+	.btn-startover {
+		line-height: 22px !important;
+	}
+
+	.app-content-main-bottom-center .icon-nav-wrap {
+		.popover-content {
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* Media Queries Start */
+/* Added by Jacoub Bondre Sept 8th 2015 */
+/* If time allots lets refactor progress bar styles into its own .scss file */
+@media(max-width:1023px) {
+	header.header-desktop {
+		display: none;
+	}
+
+	header.header-mobile {
+		display: block;
+	}
+	
+    .bottom-nav-intructions {
+        border-bottom: none;
+        
+        .instructions{
+	       display: none;
+        }
+        .mobileInstructions {
+            display: inline-block;
+            font-size: 14px;
+            color: #8b8b8b;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+            font-family: $AG-Bold-Cnd;
+            padding-top: 5px;
+        }
+    }
+    
+    .startover-btn-wrap {
+		display: none !important;
 	}
 }

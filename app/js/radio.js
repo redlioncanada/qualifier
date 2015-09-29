@@ -1,8 +1,8 @@
 'use strict';
-console.log("loaded")
 angular.module('App')
   .controller('RadioCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {
+        $rootScope.showTooltip = false;
         if (answer.value == "nothing") {
           $rootScope.controls.questionHasAnswer=false
           for (var a in answers) {
@@ -25,8 +25,12 @@ angular.module('App')
             }
           }
         }
-        if ($rootScope.controls.questionHasAnswer == true) {
+        if ($rootScope.controls.questionHasAnswer == true || $rootScope.questionsData.question.name == 'Appliance') {
             $rootScope.next();
         }
-      }			
+      }
+      $scope.setAppliance = function(appliance) {
+        console.log(appliance);
+        $rootScope.applianceType = appliance;
+      }		
 });

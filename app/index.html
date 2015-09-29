@@ -9,6 +9,9 @@
         <title>Whirlpool Qualifier Consumer App</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=1460, initial-scale=.6">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta content="True" name="HandheldFriendly">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -23,6 +26,7 @@
         
     </head>
     <body ng-app="App">
+    <!--<script src="http://jsconsole.com/remote.js?939F96B9-CED2-4292-9C54-A67CCC0649F8"></script>-->
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -44,9 +48,12 @@
         <div class="main" bindonce ui-view></div> 
 
         <!-- Footer -->
-        <div ng-include src="'views/footer.html'"></div>
+        <div class="footer-wrapper" ng-include src="'views/footer.html'"></div>
+        <script src="components/modernizer/modernizr.js"></script>
+        <script src="components/mobile-detect/mobile-detect.js"></script>
+        <script src="components/mobile-detect/mobile-detect-modernizr.js"></script>
         <script src="components/angular/angular.js"></script>
-          <script src="components/jquery/dist/jquery.min.js"></script>
+        <script src="components/jquery/dist/jquery.min.js"></script>
         <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="components/angular-cookies/angular-cookies.js"></script>
@@ -55,7 +62,6 @@
         <script src="components/angular-route/angular-route.js"></script>
         <script src="components/angular-resource/angular-resource.js"></script>
         <script src="components/angular-bindonce/bindonce.js"></script>
-        <script src="components/modernizer/modernizr.js"></script>
         <script src="components/underscore/underscore.js"></script>
         <script src="components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="components/ng-slider/dist/ng-slider.min.js"></script>
@@ -66,12 +72,11 @@
         <script src="js/main.js"></script>
         <script src="js/questions.js"></script>
         <script src="js/results.js"></script>
-        <script src="js/rank.js"></script>
         <script src="js/radio.js"></script>
         <script src="js/checkbox.js"></script>
+        <script src="js/share.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/slider-multiple.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
