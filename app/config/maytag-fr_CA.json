@@ -13,11 +13,11 @@
          "email": "Imprimer",
          "colourPreference": "Sélectionnez votre couleur",
          "yourBestMatch": "Votre Meilleur Résultat",
-         "otherSuggestion": "Autres Suggestion",
+         "otherSuggestion": "Autres Suggestions",
          "resultsPage": "RÉSULTATS",
-         "model": "Le Modèle",
+         "model": "Modèle",
          "changeYourAnswer": "Cliquez sur une icône pour modifier votre réponse",
-         "startover": "Repartir",
+         "startover": "Recommencer",
          "backtoresults": "Retour aux<br />Résultats"
      },
      "questions": {
@@ -643,7 +643,7 @@
                  }, {
                      "thumbnail": "img/icon-convection.png",
                      "thumbnail_current": "img/icon-convection-current.png",
-                     "text": "\"Un spécialiste des repas congelés\"",
+                     "text": "\"Un spécialiste des aliments congelés\"",
                      "value": "not a home chef",
                      "scoring": {},
                      "order": 5
@@ -658,7 +658,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "J’UTILISE MON FOUR POUR…",
+                 "question": "J’UTILISE MA CUISINIÈRE FOUR POUR…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la cuisine?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient à vos besoins.",
@@ -1007,7 +1007,7 @@
                  "answers": [{
                      "thumbnail": "img/icon-speed.png",
                      "thumbnail_current": "img/icon-speed-current.png",
-                     "text": "Oui, nous sommes TOUJOURS sur la brèche",
+                     "text": "Oui, nous sommes toujours sur la brèche",
                      "value": "yes",
                      "scoring": {
                          "rapidWash": 3,
@@ -1123,7 +1123,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "RÉGLEZ-VOUS FRÉQUEMMENT LA PROGRAMMATION DU TEMPS DE SÉCHAGE",
+                 "question": "RÉ-AJUSTEZ-VOUS FRÉQUEMMENT LA DURÉE DU PROGRAMME DE SÉCHAGE?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du temps DE SÉCHAGE?",
                  "explanation": "Saviez-vous que certains de nos modèles sont équipés de la technologie de détection d’humidité perfectionnée? Cette caractéristique intuitive assure que vos vêtements sont séchés à la perfection, à chaque fois",
@@ -1589,7 +1589,7 @@
                      },
                      "order": 1
                  }, {
-                     "text": "Contenir des repas préparés prêts-à-manger – nous sommes TOUJOURS sur la brèche",
+                     "text": "Contenir des repas préparés prêts-à-manger – nous sommes toujours sur la brèche",
                      "value": "host parties",
                      "thumbnail": "img/icon-organization.png",
                      "thumbnail_current": "img/icon-organization-current.png",
@@ -1632,7 +1632,7 @@
                  "question": "Vous vous réveillez assoiffé au beau milieu de la nuit, alors vous prenez…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’EAU?",
-                 "explanation": "Saviez-vous que votre cuisine a besoin d’une conduite d’eau pour permettre au réfrigérateur d’en distribuer? Certains de nos modèles comportent un distributeur d’eau. En comprenant quelle est votre consommation d’eau, nous pouvons recommander le réfrigérateur qui répondra le mieux à vos besoins.",
+                 "explanation": "Certains de nos modèles comportent un distributeur d’eau. En comprenant quelle est votre consommation d’eau, nous pouvons recommander le réfrigérateur qui répondra le mieux à vos besoins.",
                  "type": "checkbox-4",
                  "oneAnswer": false,
                  "answers": [{
@@ -1692,7 +1692,7 @@
                  "question": "J’AIME AJOUTER DES GLAÇONS À…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DES GLAÇONS?",
-                 "explanation": "Saviez-vous que votre cuisine a besoin d’une conduite d’eau pour permettre au réfrigérateur de distribuer des glaçons? Certains de nos modèles comportent un distributeur de glaçons. En comprenant votre consommation de glaçons, nous pouvons recommander un réfrigérateur adapté à votre style de vie.",
+                 "explanation": "Certains de nos modèles comportent un distributeur de glaçons. En comprenant votre consommation de glaçons, nous pouvons recommander un réfrigérateur adapté à votre style de vie.",
                  "type": "boxes-icon-5-checkbox",
                  "oneAnswer": false,
                  "answers": [{
@@ -1839,7 +1839,7 @@
                  "answers": [{
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
-                     "text": "TOUJOURS – L’esthétique de la maison est très importante pour moi",
+                     "text": "Toujours – L’esthétique de la maison est très importante pour moi",
                      "value": 0,
                      "scoring": {
                          "counterDepth": 2
@@ -1857,7 +1857,7 @@
                  }, {
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
-                     "text": "JAMAIS – La performance est ma priorité",
+                     "text": "Jamais – La performance est ma priorité",
                      "value": 2,
                      "scoring": {},
                      "order": 3
@@ -1892,7 +1892,7 @@
                  }, {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
-                     "text": "Je fais toutes les allées du magasin et je remplis TOUJOURS mon chariot.",
+                     "text": "Je fais toutes les allées du magasin et je remplis toujours mon chariot.",
                      "value": "full grocery store",
                      "scoring": {},
                      "order": 2

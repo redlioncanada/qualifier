@@ -506,7 +506,7 @@ header.header-desktop {
 /*french css start*/
 div[ng-class="fr_CA"] {
 	.btn-backtoresults, .btn-startover {
-		width: 55px !important;
+		width: 79px !important;
 	}
 
 	.btn-startover {
@@ -518,6 +518,16 @@ div[ng-class="fr_CA"] {
 			text-transform: uppercase;
 		}
 	}
+    .answers-main-content {
+    &.label-inches .jslider-value span::after {
+        content: "\po";
+        position: absolute;
+        top: 13px;
+        right: 4px;
+        text-transform: lowercase;
+        font-size: 19px;
+    }
+    }
 }
 
 /* Media Queries Start */
