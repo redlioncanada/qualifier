@@ -2,6 +2,7 @@
 angular.module('App')
   .controller('RadioCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {
+        $rootScope.showTooltip = false;
         if (answer.value == "nothing") {
           $rootScope.controls.questionHasAnswer=false
           for (var a in answers) {
@@ -29,6 +30,7 @@ angular.module('App')
         }
       }
       $scope.setAppliance = function(appliance) {
+        console.log(appliance);
         $rootScope.applianceType = appliance;
       }		
 });

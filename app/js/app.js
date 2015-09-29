@@ -6,7 +6,6 @@ var nglibs = [
   'ngSanitize',
   'ngRoute',
   'ui.router',
-  'hmTouchEvents',
   'ngTouch',
   'pasvaz.bindonce',
   'LocalStorageModule',
@@ -245,12 +244,12 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
-    // $rootScope.locale = "en_CA"
-   $rootScope.locale = "en_CA"
+    $rootScope.locale = 'fr_CA';
     $rootScope.brand = "maytag"
     $rootScope.isMobile = Modernizr.mobile;
-    //$rootScope.brand
-    $resource("config/"+"kitchenaid"+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
+    $rootScope.showTooltip = false;
+
+    $resource("config/"+$rootScope.brand+"-"+$rootScope.locale+".json").get({}, function (res, headers) {
           $rootScope.brandData = res
 
           angular.forEach( $rootScope.brandData.questions, function (item, key) { 

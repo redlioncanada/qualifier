@@ -60,6 +60,7 @@ angular.module('App')
 		//$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
 		//$rootScope.show()
 		//$scope.navToQuestions();
+    $rootScope.showTooltip = false;
 		$location.path('/');
     $rootScope.resultsTouched = false;
     $window.location.reload();

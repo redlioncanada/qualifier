@@ -6,6 +6,7 @@ var jshint      = require('gulp-jshint');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
+var replace     = require('gulp-replace');
 // var sass        = require('gulp-ruby-sass');
 var jasmine     = require('gulp-jasmine');
 // var jshint 		= require('gulp-jshint');
@@ -14,15 +15,6 @@ var jasmine     = require('gulp-jasmine');
 var imagemin = require('gulp-imagemin');
 // var notify = require('gulp-notify');
 var cache = require('gulp-cache');
-
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "build"
-        }
-    });
-});
 
 // Jasmine
 gulp.task('test', function () {
@@ -68,16 +60,13 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('components', ['components1'], function(cb) {
-    gulp.src('app/js/components/*/*/*.js')
-        .pipe(gulp.dest('build/components'))
-
-    return gulp.src('app/js/components/*/*.js')
-        .pipe(gulp.dest('build/components'));
-});
+// gulp.task('components', ['components1'], function(cb) {
+    // return gulp.src('app/js/components')
+       // .pipe(gulp.dest('app'));
+// });
 
 // process Components JS files and return the stream.
-gulp.task('components1', function () {
+gulp.task('components', function () {
 
     gulp.src('app/components/*/*/*/*.png')
         .pipe(gulp.dest('build/components'));
@@ -110,6 +99,12 @@ gulp.task('views', function() {
     // And put it in the build folder
     .pipe(gulp.dest('build/'));
 
+    // Do the same for French
+    // Move /fr/index.html to / to deploy as French
+    gulp.src('app/index.html')
+    .pipe(replace('lang="en"', 'lang="fr"'))
+    .pipe(gulp.dest('build/fr'));
+
     // Any other view files from app/views
     gulp.src('app/views/**/*')
     // Will be put in the build/views folder
@@ -132,15 +127,28 @@ gulp.task('images', function() {
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
-// use default task to launch BrowserSync and watch JS files
-gulp.task('default', ['sass', 'js', 'images', 'components', 'config', 'browser-sync', 'views'], function () {
-	
-    // add browserSync.reload to the tasks array to make
-    // all browsers reload after tasks are complete.
+// Fonts
+gulp.task('fonts', function() {
+    return gulp.src('app/fonts/*')
+    .pipe(gulp.dest('build/fonts/'));
+});
+
+// Static server
+gulp.task('default', ['frontloaded-tasks'], function() {
+    browserSync({
+        server: {
+            baseDir: "build"
+        }
+    });
 
     gulp.watch('app/scss/**/*.scss', ['sass', browserSync.reload]);
     gulp.watch('app/views/**/*.html', ['views', browserSync.reload]);
     gulp.watch('app/js/*.js', ['js', browserSync.reload]);
+});
+
+gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views'], function () {
+	
+    //complete all these tasks before running browsersync
 
 });
 

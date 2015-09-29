@@ -10,6 +10,7 @@
 		"oneLastStep" : "One Last Step: Adjust your price to find your perfect",
 		"moreInfo" : "More Info",
 		"print" : "Print",
+		"email" : "Email",
 		"colourPreference" : "Available colour options",
 		"yourBestMatch" : "Your Best Match",
 		"otherSuggestion" : "Other Suggestion",
@@ -162,7 +163,7 @@
 			"text" : [
 				{
 					"question" : "We’ve got the perfect wall oven for your family.",
-					"question_more" : "Just tell us how much space you have to fill.",
+					"question_more" : "Tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",

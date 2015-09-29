@@ -148,6 +148,7 @@ $scope.setPriceRange = function () {
 
       $scope.constructPageTitle = function() {
         var suffix = typeof $rootScope.applianceType !== 'undefined' ? $rootScope.applianceType : '';
+        if ($rootScope.locale == 'fr_CA') suffix = suffix.toUpperCase();
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
@@ -222,6 +223,8 @@ $scope.setPriceRange = function () {
                     $('#result-header-1').removeClass('active');
                     $('#result-header-2').addClass('active');
                 }
+                $('.results-list li').css('zIndex',1);
+                $('#result-column-'+id).css('zIndex',2);
               scope.currentId = id;
           }
 

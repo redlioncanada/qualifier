@@ -28,7 +28,7 @@
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
                     <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">hm-swipeleft for next question</span>-->
                     <div ng-if="$root.isTabletWidthOrLess" class="mobile-app-nav-arrows">
-						<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
+						<a href="#" class="btn-prev" ng-click="$root.showTooltip = false; previous()" id="previous" ng-if="!!questionsData.question.previous">
 							<img class="arrow-prev" ng-src="img/arrow-left.png">
 						</a>
 
@@ -40,7 +40,7 @@
 				</div>
 				<div class="bottom-nav-inner-inner">
 					<div ng-repeat="q in questionsData.scoringQuestions | orderByOrder" class="icon-nav-wrap" ng-if="byName(q) && q.thumbnail_text != 'Appliance' && q.thumbnail_text != 'Cooking'">
-				    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="navToQuestions(q)" popover-placement="top" popover-append-to-body="true" popover-title="{{q.thumbnail_text}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
+				    	<a ng-init="a=hasAnswer(q);q.a_thumbnail_type=setType(q,a)" class="icon-nav" ng-click="navToQuestions(q)" popover-placement="top" popover-append-to-body="true" popover-title="{{$root.locale == 'en_CA' ? q.thumbnail_text : q.thumbnail_text_fr}}" popover="{{q.show.question}}" popover-trigger="mouseenter">
 					      	<img ng-if="isTabletWidthOrLess" ng-src="img/mbl/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
                             <img ng-if="!isTabletWidthOrLess" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 				    	</a>      
@@ -53,12 +53,12 @@
                             <img ng-if="!isTabletWidthOrLess" ng-src="img/icon-{{q.thumbnail_text.replace(' ','').toLowerCase()}}{{(q.name == questionsData.question.name) && '-current' || '-next' }}.png" ng-class="{ 'icon-img-current' : (q.name == questionsData.question.name), 'icon-img' : (q.name != questionsData.question.name)}" />
 				    	</a>      
 					</div>
-				</div>
 
-				<div class="backtoresults-mobile" ng-click="next(true)" ng-if="!!resultsTouched && !!questionsData.question && isTabletWidthOrLess">
-					<a class="banner">
-						<div ng-bind-html="brandData.apptext.backtoresults.replace('<br />',' ')"></div>
-					</a>
+					<div class="backtoresults-mobile" ng-click="next(true)" ng-if="!!resultsTouched && !!questionsData.question && isTabletWidthOrLess">
+						<a class="banner">
+							<div ng-bind-html="brandData.apptext.backtoresults.replace('<br />',' ')"></div>
+						</a>
+					</div>
 				</div>
 			</div>
 

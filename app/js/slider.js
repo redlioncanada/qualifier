@@ -5,6 +5,7 @@ angular.module('App')
   	// jslider-value
 
   	$scope.setAnswer = function () {
+      $rootScope.showTooltip = false;
   		for (var i in $rootScope.questionsData.question.show.answers) {
   			if ($rootScope.questionsData.question.show.answers[i].value == $rootScope.questionsData.question.show.answer) {
   				$rootScope.questionsData.question.show.answers[i].answer = true
