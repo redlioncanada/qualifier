@@ -1,7 +1,7 @@
 <!-- Spliting results so images and headers become mini navigation. -->
 <ul class="mobile-results-nav" ng-if="questionsData.currentCount !=0">
     <li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="mobile-result-selector" ng-click="selectorClicked($event);" id="result-selector-{{$index}}">
-        <div class="product-img-wrap" ng-init="a.picker=a.colours[0]">
+        <div class="product-img-wrap" ng-init="a.picker=setFirstColour(a)">
             <img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" class="mobile-selector-img">
             <img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.picker.image}}" class="mobile-selector-img">
         </div>
@@ -36,10 +36,10 @@
                              <div class="product-price-sku-wrap">
 							<span class="product-price">
 								<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
-								<span ng-if="a.appliance!='Laundry' && locale=='en_CA'">${{a.picker.prices.CAD}}</span>
-								<span ng-if="a.appliance=='Laundry' && locale=='en_CA'">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
-								<span ng-if="a.appliance!='Laundry' && locale=='fr_CA'">{{a.picker.prices.CAD}} $</span>
-								<span ng-if="a.appliance=='Laundry' && locale=='fr_CA'">{{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}} $</span>
+								<span ng-if="a.appliance!='Laundry' && isEnglish">${{a.picker.prices.CAD}}</span>
+								<span ng-if="a.appliance=='Laundry' && isEnglish">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
+								<span ng-if="a.appliance!='Laundry' && isFrench">{{a.picker.prices.CAD.replace('.',',')}} $</span>
+								<span ng-if="a.appliance=='Laundry' && isFrench">{{a.picker.washerPrices.CAD.replace('.',',')}}/{{a.picker.dryerPrices.CAD}} $</span>
 							</span>
 							<span class="product-sku">
 								<span bo-text="brandData.apptext.model"></span>:&nbsp; 

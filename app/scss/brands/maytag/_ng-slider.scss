@@ -877,19 +877,17 @@ div[ng-class="fr_CA"] {
 		.jslider-value span:before {
 		    content: "";
 		}
-		.jslider-value span:after {
+		/*.jslider-value span:after {
 		    content: " $";
-		}
+		}*/
 	}
 
 	.price-slider.pointer-labels {
 		.jslider {
 			padding-top: 11px !important;
 
-			.jslider-value {
-				span {
-					font-size: 24px !important;
-				}
+			.jslider-value, .jslider-value * {
+				font-size: 24px !important;
 			}
 		}
 	}
