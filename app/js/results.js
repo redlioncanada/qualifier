@@ -38,6 +38,7 @@ angular.module('App')
 
 
       $rootScope.resultsTouched = true;
+      var d = $rootScope.isFrench ? ',00 $' : '';
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
@@ -45,7 +46,7 @@ angular.module('App')
         "smooth" : false,
         "step" : 1,
         "threshold" : 250,
-        "dimension": '',
+        "dimension": d,
         "callback" : function(value, released) {  
 
           if (!!released) {
@@ -126,9 +127,9 @@ $scope.setPriceRange = function () {
           }
        }
        console.log(minPrice, maxPrice);
-       $rootScope.resultsOptions.from = minPrice
-        $rootScope.resultsOptions.to = maxPrice
-       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
+       $rootScope.resultsOptions.from = minPrice;
+        $rootScope.resultsOptions.to = maxPrice;
+       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString();
 }
 
       $scope.expandPriceRange = function (price) {
@@ -148,7 +149,7 @@ $scope.setPriceRange = function () {
 
       $scope.constructPageTitle = function() {
         var suffix = typeof $rootScope.applianceType !== 'undefined' ? $rootScope.applianceType : '';
-        if ($rootScope.locale == 'fr_CA') suffix = suffix.toUpperCase();
+        if ($rootScope.isFrench) suffix = suffix.toUpperCase();
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
