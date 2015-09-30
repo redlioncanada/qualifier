@@ -17,10 +17,6 @@
          "resultsPage": "RÉSULTATS",
          "model": "Modèle",
          "changeYourAnswer": "Cliquez sur une icône pour modifier votre réponse",
-<<<<<<< HEAD
-         "startover": "Recommencer",
-         "backtoresults": "Retour aux<br />Résultats"
-=======
          "startover": "Repartir",
          "backtoresults": "Retour aux<br />Résultats",
         "emailAddress" : "Email Address",
@@ -29,7 +25,6 @@
         "close" : "Close",
         "emailModalTitle" : "Email Your Results",
         "friendsName" : "Your Friend's Name"
->>>>>>> a28f24a30f710d1b39e3986f0b6089b544d247a2
      },
      "questions": {
          "Appliance": {
