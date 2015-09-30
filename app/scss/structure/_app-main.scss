@@ -653,7 +653,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			left: -45%;
+			/*left: -45%;*/
 			float: none !important;
 			position: relative;
 		}
@@ -983,17 +983,17 @@ div.mobile-app-nav-arrows {
 	div[ng-controller="SliderMultipleCtrl"] {
 		.multi-slider-wrap:first-child {
 			> .answer-slider, .slider-large-label-wrap span {
-				padding-right: 50px;
+				padding-right: 0px;
 			}
 
 			.slider-large-label-wrap span {
-				padding-right: 57px;
+				padding-right: 48px;
 			}
 		}
 
 		.multi-slider-wrap:last-child {
 			> .answer-slider, .slider-large-label-wrap span {
-				padding-left: 50px;
+				padding-left: 80px;
 			}
 
 			.slider-large-label-wrap span {

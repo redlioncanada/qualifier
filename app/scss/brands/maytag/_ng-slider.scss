@@ -54,6 +54,32 @@ div.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	display: block;
 	margin-left: -43.5px !important;
 }
+
+
+div.people1 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 34px;
+	margin-left: -14px !important; // half of width to center it
+}
+
+div.people2 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 42px;
+	margin-left: -18px !important;
+}
+
+div.people3 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 68px;
+	margin-left: -29.5px !important;
+}
+
+div.people4 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 80px;
+	margin-left: -35px !important;
+}
+div.people5 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 117px;
+	margin-left: -64.5px !important;
+}
+
 // Will be dog and cats later
 
 //.jslider-pointer:not(.jslider-pointer-hover), .jslider-pointer:not(.jslider-pointer-hover) ~ .jslider-value {
