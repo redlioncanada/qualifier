@@ -4,6 +4,7 @@ angular.module('App')
   .controller('SliderMultipleCtrl', function ($scope, $rootScope) {
   	// jslider-value
   	$scope.setAnswer = function () {
+      $rootScope.showTooltip = false;
       for (var t in $rootScope.questionsData.question.text) {
     		for (var i in $rootScope.questionsData.question.text[t].answers) {
     			if ($rootScope.questionsData.question.text[t].answers[i].value == $rootScope.questionsData.question.text[t].answer) {
@@ -67,6 +68,17 @@ angular.module('App')
         for (var i in qs.text[t].answers) {
           qs.text[t].last = qs.text[t].answers[i].value
         }
+
+        for (var t in qs.text) {        
+          for (var i in qs.text[t].answers) {
+            if (qs.text[t].answers[i].value == qs.text[t].answer) {
+              qs.text[t].answers[i].answer = true
+            } else {
+              qs.text[t].answers[i].answer = false
+            }
+          }
+        }
+
       }
     }
 

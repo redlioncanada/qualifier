@@ -3,6 +3,7 @@ angular.module('App')
   .controller('CheckboxCtrl', function ($scope, $rootScope) {
   		$scope.toggle = function (answers, answer) {
   			answer.answer = !answer.answer
+        $rootScope.showTooltip = false;
         $rootScope.controls.questionHasAnswer=false
         if (answer.value == "nothing" && answer.answer == true) {
           $rootScope.controls.questionHasAnswer=true

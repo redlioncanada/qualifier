@@ -62,9 +62,6 @@ html, body {
 				z-index: 2;
 				height: 100%;
 			}
-			.icon-email {
-				display: none !important;
-			}
 			.icon-share,.icon-email,.icon-share-fb,.icon-share-tw {
 				background: url('../img/icon-share.png') center center no-repeat;
 				cursor: pointer;
@@ -576,6 +573,12 @@ div.mobile-app-nav-arrows {
 		margin-top: initial !important;
 	}
 
+	div.app-answers .category:hover {
+		img.normal {
+			opacity: 1;
+		}
+	}
+
 	.slider-large-label-wrap {
 		width: 100% !important;
 		float: none !important;
@@ -1038,4 +1041,8 @@ div.mobile-app-nav-arrows {
 
 .hidden {
 	display: none;
+}
+
+.hiddenViaOpacity {
+	opacity: 0 !important;
 }

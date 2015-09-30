@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal) {
 
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
@@ -38,6 +38,7 @@ angular.module('App')
 
 
       $rootScope.resultsTouched = true;
+      var d = $rootScope.isFrench ? ' $' : '';
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
@@ -45,7 +46,7 @@ angular.module('App')
         "smooth" : false,
         "step" : 1,
         "threshold" : 250,
-        "dimension": '',
+        "dimension": d,
         "callback" : function(value, released) {  
 
           if (!!released) {
@@ -72,11 +73,46 @@ angular.module('App')
         } 
 
       }
-      
+  
+
+  $rootScope.setFirstColour = function (appliance) {
+    for (var c in appliance.colours) {
+      if (appliance.colours[c].colourCode == "CS" || appliance.colours[c].colourCode == "SS") {
+        return appliance.colours[c]
+      }
+    }
+    return appliance.colours[0]
+  }
+
+  $rootScope.emailOpen = function () {
+    //var modalInstance = 
+    //size: size,
+    console.log("ok");
+    var modalInstance = $modal.open({
+      animation: true,
+      templateUrl: 'views/result-templates/email-results.html',
+      controller: 'ModalCtrl',
+
+      resolve: {
+        items: function () {
+          //return $scope.items;
+        }
+      }
+    });
+    modalInstance.result.then(function (selectedItem) {
+      //$scope.selected = selectedItem;
+    }, function () {
+      //$log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
+       console.log($rootScope.appliances)
        for (var a in $rootScope.appliances) {
           var appliance = $rootScope.appliances[a]
+          
           if (appliance.score !=null) {
             for (var c in appliance.colours) {
               var p = parseFloat(appliance.colours[c].prices.CAD)
@@ -90,9 +126,10 @@ $scope.setPriceRange = function () {
             }
           }
        }
-       $rootScope.resultsOptions.from = minPrice
-        $rootScope.resultsOptions.to = maxPrice
-       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString()
+       console.log(minPrice, maxPrice);
+       $rootScope.resultsOptions.from = minPrice;
+        $rootScope.resultsOptions.to = maxPrice;
+       $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString();
 }
 
       $scope.expandPriceRange = function (price) {
@@ -112,13 +149,11 @@ $scope.setPriceRange = function () {
 
       $scope.constructPageTitle = function() {
         var suffix = typeof $rootScope.applianceType !== 'undefined' ? $rootScope.applianceType : '';
-        if ($rootScope.locale == 'fr_CA') suffix = suffix.toUpperCase();
+        if ($rootScope.isFrench) suffix = suffix.toUpperCase();
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
-      if ($rootScope.questionsData.currentCount > 0) {
-               $scope.setPriceRange()
-      }
+      $scope.setPriceRange()
 })
 .directive('desktopResults', function(){
     return {

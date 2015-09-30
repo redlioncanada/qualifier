@@ -1,10 +1,9 @@
 <ul class="results-list" ng-if="questionsData.currentCount !=0">
-			<li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result">
+			<li class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
 						<h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch"></h3>
-						<h3 ng-if="$index!=1" bo-text="brandData.apptext.otherSuggestion"></h3>
-						<div class="product-img-wrap" ng-init="a.picker=setFirstColour(a)">
+						<div class="product-img-wrap" ng-init="a.picker=a.colours[0]">
 							<img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg" style="width: 220px">
 							<img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.image}}" style="width: 220px; height: 280px">
 						</div>
@@ -26,10 +25,10 @@
 						<div class="product-price-sku-wrap">
 							<span class="product-price">
 								<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
-								<span ng-if="a.appliance!='Laundry' && isEnglish">${{a.picker.prices.CAD}}</span>
-								<span ng-if="a.appliance=='Laundry' && isEnglish">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
-								<span ng-if="a.appliance!='Laundry' && isFrench">{{a.picker.prices.CAD.replace('.',',')}} $</span>
-								<span ng-if="a.appliance=='Laundry' && isFrench">{{a.picker.washerPrices.CAD.replace('.',',')}}/{{a.picker.dryerPrices.CAD}} $</span>
+								<span ng-if="a.appliance!='Laundry' && locale=='en_CA'">${{a.picker.prices.CAD}}</span>
+								<span ng-if="a.appliance=='Laundry' && locale=='en_CA'">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
+								<span ng-if="a.appliance!='Laundry' && locale=='fr_CA'">{{a.picker.prices.CAD}} $</span>
+								<span ng-if="a.appliance=='Laundry' && locale=='fr_CA'">{{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}} $</span>
 							</span>
 							<span class="product-sku">
 								<span bo-text="brandData.apptext.model"></span>:&nbsp; 
@@ -70,7 +69,7 @@
 									</a>
 
 									<a href="#" class="btn btn-default" target="_blank">
-										<a target="blank" href="/?sku={{a.sku}}"><span class="btn-text" bo-text="brandData.apptext.print"></span></a>
+										<span class="btn-text" bo-text="brandData.apptext.print"></span>
 									</a>
 
 								</div>
