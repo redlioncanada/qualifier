@@ -55,6 +55,15 @@ div.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	margin-left: -43.5px !important;
 }
 
+div.people6 .jslider .jslider-value:not(.jslider-value-to) {
+    background: url('../img/family-6.png') center center no-repeat !important;
+	background-size: 126px 50px;
+	width: 126px;
+	height: 50px;
+	display: block;
+	margin-left: -63px !important; //opposite as it's the last one
+}
+
 
 div.people1 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 	width: 34px;
@@ -79,31 +88,11 @@ div.people5 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 	width: 117px;
 	margin-left: -64.5px !important;
 }
-
-// Will be dog and cats later
-
-//.jslider-pointer:not(.jslider-pointer-hover), .jslider-pointer:not(.jslider-pointer-hover) ~ .jslider-value {
-//    -webkit-transition:all linear 0.15s;
-//    -moz-transition:all linear 0.15s;
-//    -o-transition:all linear 0.15s;
-//    transition:all linear 0.15s;
-//}
-
-//.jslider-pointer, .jslider-value {
-//    -webkit-transition:all linear 0.15s;
-//    -moz-transition:all linear 0.15s;
-//    -o-transition:all linear 0.15s;
-//    transition:all linear 0.15s;
-//}
-
-div.people6 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-6.png') center center no-repeat !important;
-	background-size: 126px 50px;
-	width: 126px;
-	height: 50px;
-	display: block;
-	margin-left: -63px !important; //opposite as it's the last one
+div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	margin-left: -71px !important;
 }
+
+
 .people-slider {
 	margin-top: 100px;
 

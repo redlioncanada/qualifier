@@ -293,8 +293,11 @@ $scale2: 1.07;
 	animation-name: toggleButtonDown;
 
 	animation-duration: 0.35s;	
+	animation-delay: 0ms;
 	-moz-animation-duration: 0.25s;
+	-moz-animation-delay: 0ms;
 	-webkit-animation-duration: 0.25s;
+	-webkit-animation-delay: 0ms;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;	
@@ -357,8 +360,11 @@ $scale2: 1.07;
 	-moz-animation-name: toggleButtonUp;
 
 	animation-duration: 0.35s;	
-	-webkit-animation-duration: 0.25s;
+	animation-delay: 0ms;
 	-moz-animation-duration: 0.25s;
+	-moz-animation-delay: 0ms;
+	-webkit-animation-duration: 0.25s;
+	-webkit-animation-delay: 0ms;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;	
@@ -416,8 +422,11 @@ $scale2: 1.07;
 	animation-name: toggleButtonDown;
 
 	animation-duration: 0.35s;	
+	animation-delay: 0ms;
 	-moz-animation-duration: 0.25s;
+	-moz-animation-delay: 0ms;
 	-webkit-animation-duration: 0.25s;
+	-webkit-animation-delay: 0ms;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;	
