@@ -76,7 +76,6 @@ angular.module('App')
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
 	          if (qtype == "rank") {
-	          	console.log(a.answer)
 	            if (a.answer == 0) {
 	              return true
 	              break;
@@ -260,7 +259,7 @@ angular.module('App')
 		$scope.recalculateResults()
 	}
 
-	$rootScope.show = function () {
+ 	$rootScope.show = function () {
 		var ref = 0;
 	  	//if ($rootScope.questionsData.question.text.length > 1 && $rootScope.questionsData.question.text[0].type == "slider-multiple") {
 		//	var ref = Math.floor((Math.random() * $rootScope.questionsData.question.text.length))			
@@ -294,10 +293,10 @@ angular.module('App')
 
 
 		var c = $('.slidey.ng-hide-remove').height();
-		if (c < 150) {
+		if (c < 300) {
 			c = $('.slidey').not('.ng-hide').height();
-			if (c < 150) {
-				var minHeight = 200;
+			if (c < 300) {
+				var minHeight = 300;
 				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
 				c = minHeight;
 			}
@@ -353,14 +352,21 @@ angular.module('App')
 				$rootScope.questionsData.question = hasStoredAnswer
 				$rootScope.controls.questionHasAnswer = true
 			} else {
-				$rootScope.questionsData.question = $rootScope.questionsData.questions[name]						  				
+				$rootScope.questionsData.question = $rootScope.questionsData.questions[name];
 			} 
 		} else {
   			$rootScope.questionsData.question = null;
   		}
 
   		if (!!$rootScope.questionsData.question) {
-			$scope.show(); 	
+			if ($rootScope.questionsData.question.name == 'Appliance') {
+				console.log($rootScope.questionsData.questions)
+  					for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
+  						$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
+  					}
+			}
+
+			$scope.show();
 			$rootScope.controls.questionHasAnswer = !!$rootScope.questionHasAnswer($rootScope.questionsData.question)
   			// Is the question already in the answered questions queue
   			if (!($rootScope.questionsData.question.name in $rootScope.questionsData.scoringQuestions)) {
@@ -368,18 +374,17 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
-  			
-  			//if ($rootScope.questionsData.question.name == 'Appliance') {
-  			//	$location.url("/question/"+name)
-  			//} else {
-  				$location.path("/question/"+name).replace()
-  			//}
+  			$location.replace().path("/question/"+name);
 		} else {
 			$state.go('main.results')
 		}	
+
+		   console.log($location.path().toString());
+    console.log($rootScope);
 	}
 
   	$rootScope.next = function (done) {
+  		console.log($rootScope);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
@@ -396,7 +401,7 @@ angular.module('App')
 		  		else if ("next" in hasAnswer) {
 		  			var name = hasAnswer.next
 		  		}
-		  		$rootScope.moveToQuestion(name, done)
+		  		$rootScope.moveToQuestion(name,done)
 	  		} 
   		}, 100);
 
@@ -418,7 +423,7 @@ angular.module('App')
 			  		name = $rootScope.questionsData.question.previous
 			  	}
 			} else {
-				$state.go("main.questions")
+				//$state.go("main.questions")
 			    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
 			    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
 			      if (item.order == l) {
@@ -426,7 +431,7 @@ angular.module('App')
 			      }
 			    })			
 			}
-			$rootScope.moveToQuestion(name)
+			$rootScope.moveToQuestion(name);
 	  	}, 100);
 
   	}
@@ -441,7 +446,6 @@ angular.module('App')
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 	  	
 	  	var count = 0
-	  	console.log($rootScope.hasanswers);
 	  	for(var q in $rootScope.hasanswers) {
 
 	  		if (!!$rootScope.hasanswers[q]) {

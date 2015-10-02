@@ -5,6 +5,7 @@ angular.module('App')
   			answer.answer = !answer.answer
         $rootScope.showTooltip = false;
         $rootScope.controls.questionHasAnswer=false
+
         if (answer.value == "nothing" && answer.answer == true) {
           $rootScope.controls.questionHasAnswer=true
     			for (var a in answers) {
@@ -14,9 +15,11 @@ angular.module('App')
     			}
         } else {
           for (var a in answers) {
+            if (typeof answers[a].answer == 'undefined') {
+              answers[a].answer = false;
+            }
             if (answers[a].answer == true) {
               $rootScope.controls.questionHasAnswer=true
-              break;
             }
           }
           if ($rootScope.controls.questionHasAnswer==true) {

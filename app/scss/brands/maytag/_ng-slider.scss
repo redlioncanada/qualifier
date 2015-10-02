@@ -54,21 +54,6 @@ div.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	display: block;
 	margin-left: -43.5px !important;
 }
-// Will be dog and cats later
-
-//.jslider-pointer:not(.jslider-pointer-hover), .jslider-pointer:not(.jslider-pointer-hover) ~ .jslider-value {
-//    -webkit-transition:all linear 0.15s;
-//    -moz-transition:all linear 0.15s;
-//    -o-transition:all linear 0.15s;
-//    transition:all linear 0.15s;
-//}
-
-//.jslider-pointer, .jslider-value {
-//    -webkit-transition:all linear 0.15s;
-//    -moz-transition:all linear 0.15s;
-//    -o-transition:all linear 0.15s;
-//    transition:all linear 0.15s;
-//}
 
 div.people6 .jslider .jslider-value:not(.jslider-value-to) {
     background: url('../img/family-6.png') center center no-repeat !important;
@@ -78,6 +63,36 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	display: block;
 	margin-left: -63px !important; //opposite as it's the last one
 }
+
+
+div.people1 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 34px;
+	margin-left: -14px !important; // half of width to center it
+}
+
+div.people2 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 42px;
+	margin-left: -18px !important;
+}
+
+div.people3 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 68px;
+	margin-left: -29.5px !important;
+}
+
+div.people4 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 80px;
+	margin-left: -35px !important;
+}
+div.people5 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	width: 117px;
+	margin-left: -64.5px !important;
+}
+div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
+	margin-left: -71px !important;
+}
+
+
 .people-slider {
 	margin-top: 100px;
 
@@ -558,7 +573,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	width: 853px;
 	position: relative;
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 43px;
 }
 
 .has-dimension-label {
@@ -782,7 +797,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	//top: -7px;
 	.slider-large-label {
 		@include large-square-label;
-		margin-right: -83px;
+		margin-right: -108px;
 		font-size: 24px;
     	z-index: 11;
 	}

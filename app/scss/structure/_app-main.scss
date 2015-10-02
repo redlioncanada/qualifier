@@ -400,9 +400,9 @@ div.mobile-app-nav-arrows {
 			}
 
 			.slider-large-label {
-				margin-left: -172px;
+				margin-left: -148px;
 				margin-right: initial;
-				top: 71px;
+				top: 75px;
 			}
 
 			.slider-wrap {
@@ -653,7 +653,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			left: -45%;
+			/*left: -45%;*/
 			float: none !important;
 			position: relative;
 		}
@@ -691,7 +691,7 @@ div.mobile-app-nav-arrows {
 
 				span {
 					border-left: none !important;
-					left: 30px;
+					left: 20px;
 					width: 10px;
 					display: table;
 				}
@@ -705,6 +705,7 @@ div.mobile-app-nav-arrows {
 					height: 45px;
 					display: table-cell;
 					vertical-align: middle;
+					line-height: 14px;
 				}
 			}
 		}
@@ -865,7 +866,7 @@ div.mobile-app-nav-arrows {
 	}
 
 	.jslider.vertical .jslider-value:not(.jslider-value-to) {
-		margin-top: -3px !important;
+		margin-top: -16px !important;
 	}
 
 	.slider-large-label-wrap .slider-large-label {
@@ -883,7 +884,7 @@ div.mobile-app-nav-arrows {
 				position: relative;
 
 				.normal, .hover {
-					width: 130%;
+					width: 138%;
 					bottom: 0 !important;
 					margin-left: -9px;
 				}
@@ -983,17 +984,17 @@ div.mobile-app-nav-arrows {
 	div[ng-controller="SliderMultipleCtrl"] {
 		.multi-slider-wrap:first-child {
 			> .answer-slider, .slider-large-label-wrap span {
-				padding-right: 50px;
+				padding-right: 0px;
 			}
 
 			.slider-large-label-wrap span {
-				padding-right: 57px;
+				padding-right: 48px;
 			}
 		}
 
 		.multi-slider-wrap:last-child {
 			> .answer-slider, .slider-large-label-wrap span {
-				padding-left: 50px;
+				padding-left: 80px;
 			}
 
 			.slider-large-label-wrap span {

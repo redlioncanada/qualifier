@@ -187,7 +187,7 @@ App.filter('byPrice', function($rootScope) {
         $rootScope.controls.price = range.join(";")
     }
     $rootScope.safeApply();
-    return inside.concat(outside);
+    return inside.concat(outside).reverse();
   };
 });
 

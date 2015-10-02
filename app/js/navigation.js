@@ -42,7 +42,7 @@ angular.module('App')
       $timeout(function() {
     		//$rootScope.questionsData.question=q;
 
-    		$state.go('main.questions')
+    		//$state.go('main.questions')
         $rootScope.moveToQuestion(q.name)
       }, 100) 
   	}
@@ -55,15 +55,22 @@ angular.module('App')
 	};
 
 	$scope.startOver = function () {
-		//$rootScope.scoringQuestions = {}
-		//$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
-		//$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"]
-		//$rootScope.show()
-		//$scope.navToQuestions();
     $rootScope.showTooltip = false;
-		$location.path('/');
     $rootScope.resultsTouched = false;
-    $window.location.reload();
+		$rootScope.scoringQuestions = {};
+
+    var oldQs = $rootScope.questionsData.questions;
+    var newQs = angular.copy($rootScope.brandData.questions);
+
+    for (var i in oldQs) {
+      for (var j in oldQs[i].text) {
+        newQs[i].text[j].options = oldQs[i].text[j].options;
+      }
+    }
+    $rootScope.questionsData.questions = newQs;
+		$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"];
+		$rootScope.show();
+		$rootScope.moveToQuestion("Appliance");
 	}
 })
 .directive('resultsmenu', ['$timeout', '$rootScope', '$location', function($timeout, $rootScope, $location) {

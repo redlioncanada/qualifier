@@ -24,7 +24,6 @@ angular.module('App')
       });
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    		console.log(($location.path()).toString());
     		if ( ($location.path()).toString().search("question") != -1) {
     			var q = ($location.path()).toString().replace("/question/","");
 		  		$rootScope.controls.controlClicked = 'previous';
@@ -50,7 +49,6 @@ angular.module('App')
         "callback" : function(value, released) {  
 
           if (!!released) {
-            console.log("ok")
             var range = value.split(";")
 
             for (var r in range) {
@@ -66,7 +64,6 @@ angular.module('App')
             }
 
             $rootScope.controls.price = range.join(";")
-            console.log($rootScope.controls.price)
             $rootScope.safeApply()
           } 
 
@@ -74,6 +71,7 @@ angular.module('App')
 
       }
   
+
 
   $rootScope.setFirstColour = function (appliance) {
     for (var c in appliance.colours) {
@@ -87,7 +85,6 @@ angular.module('App')
   $rootScope.emailOpen = function () {
     //var modalInstance = 
     //size: size,
-    console.log("ok");
     var modalInstance = $modal.open({
       animation: true,
       templateUrl: 'views/result-templates/email-results.html',
@@ -109,7 +106,7 @@ angular.module('App')
 
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
-       console.log($rootScope.appliances)
+
        for (var a in $rootScope.appliances) {
           var appliance = $rootScope.appliances[a]
           
@@ -126,7 +123,7 @@ $scope.setPriceRange = function () {
             }
           }
        }
-       console.log(minPrice, maxPrice);
+
        $rootScope.resultsOptions.from = minPrice;
         $rootScope.resultsOptions.to = maxPrice;
        $rootScope.controls.price = minPrice.toString() + ";" + maxPrice.toString();

@@ -23,7 +23,7 @@
 
         <link rel="stylesheet" href="./css/qualifier-app.css">
         <link rel="stylesheet" href="./css/maytag.css">
-        <base href="/">
+    
     </head>
     <body ng-app="App">
     <!--<script src="./http://jsconsole.com/remote.js?939F96B9-CED2-4292-9C54-A67CCC0649F8"></script>-->
@@ -80,6 +80,62 @@
         <script src="./js/modal.js"></script>
         <script src="./js/print.js"></script>
         <script src="./js/slider-multiple.js"></script>
+
+        <script>
+            //mobile nav button/menu toggle
+            $(document).on('click', '.navbar-btn-wrapper li', function(e) {
+                var li = $(e.target).parent();
+                if ($(li).hasClass('no-toggle')) return;
+                var t = $(li).attr('data-type');
+                var textElement = $(li).find('.text-wrapper');
+                
+                //mark clicked element as selected
+                if (!$(li).hasClass('selected')) {
+                    $(li).addClass('selected');
+                    $('.navbar-pullout[data-type="'+t+'"]').removeClass('navbar-pullout-hide');
+                    
+                    var curText = $(textElement).text();
+                    if (!$(textElement).attr('data-text')) $(textElement).attr('data-text', curText);
+                    $(textElement).text('CLOSE');
+                } else {
+                    $(li).removeClass('selected');
+                    $('.navbar-pullout,.navbar-menu-submenu').addClass('navbar-pullout-hide');
+                    $(textElement).text($(textElement).attr('data-text'));
+                    return;
+                }
+
+                var curTextAttr = $(textElement).attr('data-text');
+
+                //reset any open menus
+                $('.navbar-btn-wrapper > li').not(li).removeClass('selected');
+                $('.navbar-pullout,.navbar-menu-submenu').not('.navbar-pullout[data-type="'+t+'"]').addClass('navbar-pullout-hide');
+                $.each($('.navbar-btn-wrapper .text-wrapper'), function(i,e){
+                    if ($(e).attr('data-text') && $(e).attr('data-text') != curTextAttr) {
+                        $(e).text($(e).attr('data-text'));
+                    }
+                });
+            });
+
+            //mobile nav search function
+            $(document).on('click', '.navbar-search-pullout .search-btn', function(e) {
+                var search = $('.navbar-search-pullout input').val();
+                if (search.length == 0) return;
+                window.location = "http://www.maytag.ca/webapp/wcs/stores/servlet/WHRORNAjaxCatalogSearchView?storeId=10229&catalogId=10579&langId=-300&beginIndex=0&searchTerm="+search;
+            });
+
+            //mobile nav submenu toggle
+            $(document).on('click', '.navbar-menu-pullout li', function(e) {
+                var t = $(e.target).parent().find('.navbar-menu-submenu');
+                $('.navbar-menu-pullout .navbar-menu-submenu').addClass('navbar-pullout-hide');
+                
+                if (!$(t).hasClass('navbar-pullout-hide')) {
+                    $(t).addClass('navbar-pullout-hide');
+                } else {
+                    $(t).removeClass('navbar-pullout-hide');
+                }
+            });
+        </script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
