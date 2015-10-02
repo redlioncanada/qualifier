@@ -38,7 +38,7 @@ angular.module('App')
                   //$rootScope.questionsData.question.text[t].roundedAnswer = value.toFixed(0)
                   //console.log($rootScope.questionsData.question.text[t].roundedAnswer)
                   //$rootScope.safeApply()
-                  return value.toFixed(0)
+                  return value.toFixed(0);
               //}
             //}
           })
