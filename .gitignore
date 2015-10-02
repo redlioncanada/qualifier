@@ -9,6 +9,7 @@ documents/
 build/*
 *.log
 /build
+.ftppass
 app/config/old
 .DS_Store
 
