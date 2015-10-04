@@ -19,27 +19,24 @@ var basePath = '/home/wpcstage/mymaytag/';
 var versionPath = '/home/wpcstage/mymaytag/latest/';
 var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'}
 
-gulp.task('default', function() {
+gulp.task('default', ['version'], function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views']);
-    updateVersion();
 });
 
-gulp.task('components', function() {
+gulp.task('components', ['version'], function() {
     doUpload(['components', 'img']);
-    updateVersion();
 });
 
-gulp.task('all', function() {
+gulp.task('all', ['version'], function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views', 'components', 'img']);
-    updateVersion();
 });
 
-function updateVersion() {
+gulp.task('version', function() {
     opts.remotePath = versionPath;
     return gulp.src('version.php')
-        .replace('#VERSION', '\''+p.version+'\'')
+        .pipe(replace('#VERSION', '\''+p.version+'\''))
         .pipe(ftp(opts));
-}
+});
 
 function doUpload(src) {
     for (var i in src) {
