@@ -12,18 +12,9 @@ for auth, create a file in the same dir as this one named .ftppass with the stru
 
 var gulp = require('gulp');
 var ftp = require('gulp-sftp');
-var shell = require('gulp-run');
-var gutil = require('gulp-util');
 
 var base = '/home/wpcstage/mymaytag/test/';
 var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'}
-
-gulp.task('test', function() {
-    shell('npm -v').exec()
-        .pipe(gutil.log());
-        
-
-});
 
 gulp.task('default', function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views']);
