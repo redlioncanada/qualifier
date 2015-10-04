@@ -37,7 +37,7 @@ gulp.task('all', function() {
 function updateVersion() {
     opts.remotePath = versionPath;
     return gulp.src('version.php')
-        .replace('#VERSION', '\''+p.version+'\'');
+        .replace('#VERSION', '\''+p.version+'\'')
         .pipe(ftp(opts));
 }
 
