@@ -35,7 +35,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postversion": "git push && cd ./deploy && gulp"
+    "postversion": "git push && cd ./deploy && gulp all"
   },
   "author": "Bianca Sayan, Kyle L. McGregor",
   "license": "ISC"
