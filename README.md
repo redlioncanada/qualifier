@@ -2,23 +2,22 @@
 
 ##Development
 1. Run
-
-```npm install```
-
+```
+npm install
+```
 To install all the development dependencies
 
 2. Run 
-
-```bower install```
-
+```
+bower install
+```
 To install all the app dependencies
 
 3. To build and run the app, simply run 
-
-```gulp```
-
+```
+gulp
+```
 BrowserSync will watch for any changes in the files and will reload your browser to update to the latest changes.
-
 Current errors during install occur due to the NodeJS version and lib-sass installation order. 
 
 ##SCSS Methodology & Brand Theming
@@ -28,4 +27,12 @@ Uses Bootstrap-Sass for clearer integration with AngularJS. The SCSS files have 
 Each brand has it's own palette, fonts, and other individual files to adjust the theme of the app to the specific brand. Each brand theme compiles to it's own CSS file: maytag.css, kitchenaid.css, whirlpool.css, which will be set up to be included in the app based on the app instance in AngularJS. Maytag version will pull the Maytag CSS file, etc.
 
 
-
+##Locale  
+To change app locale, open app.js and change $rootScope.locale to either:  
+```
+$rootScope.locale = "en_CA";  
+```
+or  
+```
+$rootScope.locale = "fr_CA";
+```
