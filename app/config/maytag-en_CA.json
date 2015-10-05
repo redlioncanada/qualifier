@@ -185,7 +185,10 @@
 							"value" : 27,
 							"text" : "27\"",
 							"scoring" : {
-								"width27" : 1
+								"width27" : 1,
+								"width28" : -30,
+								"width29" : -30,
+								"width30" : -30
 							}
 						},
 						"28" : {
@@ -194,7 +197,10 @@
 							"value" : 28,
 							"text" : "28\"",
 							"scoring" : {
-								"width28" : 1
+								"width27" : -30,
+								"width28" : 1,
+								"width29" : -30,
+								"width30" : -30
 							}
 						},
 						"29" : {
@@ -203,7 +209,10 @@
 							"value" : 29,
 							"text" : "29\"",
 							"scoring" : {
-								"width29" : 1
+								"width27" : -30,
+								"width28" : -30,
+								"width29" : 1,
+								"width30" : -30
 							}
 						},
 						"30" : {
@@ -212,6 +221,9 @@
 							"value" : 30,
 							"text" : "30\"",
 							"scoring" : {
+								"width27" : -30,
+								"width28" : -30,
+								"width29" : -30,
 								"width30" : 1
 							}
 						}
@@ -2022,7 +2034,7 @@
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Function - Performance is my main priority",
+							"text" : "Never - Performance is my main priority",
 							"value" : 2,
 							"scoring" : {
 							},

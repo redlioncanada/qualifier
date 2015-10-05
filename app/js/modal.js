@@ -30,13 +30,13 @@ angular.module('App')
   			link += sq + "=" + answer.join(";") + "&"
   		}
   		console.log(link)
-  		$rootScope.email.message += "<br />" + link
+  		/*$rootScope.email.message += "<br />" + link
   		var r = $resource("placeholder/sendEmail")
   		r.save($rootScope.email,function (res, headers) {
 
 
   		});
-  		$modalInstance.close();
+  		$modalInstance.close();*/
 
   	}
 

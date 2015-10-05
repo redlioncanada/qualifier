@@ -85,7 +85,7 @@ angular.module('App')
   $rootScope.emailOpen = function () {
     //var modalInstance = 
     //size: size,
-    var modalInstance = $modal.open({
+    /*var modalInstance = $modal.open({
       animation: true,
       templateUrl: 'views/result-templates/email-results.html',
       controller: 'ModalCtrl',
@@ -100,7 +100,33 @@ angular.module('App')
       //$scope.selected = selectedItem;
     }, function () {
       //$log.info('Modal dismissed at: ' + new Date());
-    });
+    });*/
+
+    var link = "?";
+
+      for (var sq in $rootScope.questionsData.scoringQuestions) {
+        var answer = [];
+        console.log($rootScope.questionsData.scoringQuestions[sq]);
+        for (var t in $rootScope.questionsData.scoringQuestions[sq].text) {
+          if (typeof $rootScope.questionsData.scoringQuestions[sq].text[t].answer !== 'undefined' && $rootScope.questionsData.scoringQuestions[sq].text[t].type == 'slider') {
+            answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answer);
+            continue;
+          }
+          for (var ans in $rootScope.questionsData.scoringQuestions[sq].text[t].answers) {
+
+            console.log($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer, $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true, !isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer));
+            if ($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true) {
+              answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value)
+            }
+            else if (!isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer)) {
+              answer[$rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer] = $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value
+            }
+          }
+        }
+        link += sq + "=" + answer.join(";") + "&"
+      }
+      window.location.href = "mailto:?subject=Yo,%20Qualify&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
+      console.log("mailto:?subject=Yo,%20Qualify&body=<http://maytagqualifier.com"+encodeURIComponent(link)+">");
   };
 
 
