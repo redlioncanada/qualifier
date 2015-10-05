@@ -1,3 +1,0 @@
-<?php
-	$currentVersion = #VERSION;
-?>

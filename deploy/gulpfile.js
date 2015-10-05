@@ -17,7 +17,8 @@ var p = require('../package.json');
 
 var basePath = '/home/wpcstage/mymaytag/';
 var versionPath = '/home/wpcstage/mymaytag/latest/';
-var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'}
+var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'};
+var versionURL = 'http://mymaytag.wpc-stage.com';
 
 gulp.task('default', ['version'], function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views']);
@@ -33,8 +34,10 @@ gulp.task('all', ['version'], function() {
 
 gulp.task('version', function() {
     opts.remotePath = versionPath;
-    return gulp.src('version.php')
+
+    return gulp.src('index.php')
         .pipe(replace('#VERSION', '\''+p.version+'\''))
+        .pipe(replace('#LOCATION', '\''+versionURL+'\''))
         .pipe(ftp(opts));
 });
 
