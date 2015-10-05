@@ -377,13 +377,13 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
                     }
                 })
-                $rootScope.hasanswers = {}
-                var httpparams = (decodeURI($location.$$absUrl)).split("?")
+                $rootScope.hasanswers = {};
+                var httpparams = (decodeURI($location.$$absUrl)).split("?");
                 if (1 in httpparams) {
-                  var loophttpparams = httpparams[1].split("&")
+                  var loophttpparams = httpparams[1].split("&");
                   for (var l in loophttpparams) {
-                    var inst = loophttpparams[l].split("=")
-                    $rootScope.hasanswers[inst[0]] = inst[1]
+                    var inst = loophttpparams[l].split("=");
+                    $rootScope.hasanswers[inst[0]] = inst[1];
                   }
                 }
                   if ('sku' in $rootScope.hasanswers) {

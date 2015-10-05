@@ -379,8 +379,6 @@ angular.module('App')
 			$state.go('main.results')
 		}	
 
-		   console.log($location.path().toString());
-    console.log($rootScope);
 	}
 
   	$rootScope.next = function (done) {
@@ -446,17 +444,36 @@ angular.module('App')
 	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 	  	
 	  	var count = 0
+
 	  	for(var q in $rootScope.hasanswers) {
 
 	  		if (!!$rootScope.hasanswers[q]) {
 	  			
-	  			var ans = $rootScope.hasanswers[q].split(";")
+	  			var ans = $rootScope.hasanswers[q].split(";");
 
 	  			for (var t in $rootScope.questionsData.questions[q].text) {
 		  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
+		  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = false;
 		  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
-			  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value) != -1 ) {
-			  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true
+			  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
+			  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
+			  					switch ($rootScope.questionsData.questions[q].text[t].type) {
+			  						case "slider-multiple":
+			  							if (t > 0) break;
+			  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
+			  							$rootScope.questionsData.questions[q].text[1].answer = parseInt(ans[1]);
+			  							$rootScope.questionsData.questions[q].text[1].answers[parseInt(ans[1])].answer = true;
+			  							break;
+			  						case "slider":
+			  							console.log($rootScope.questionsData.questions[q])
+			  							$rootScope.questionsData.questions[q].text[t].answer = $rootScope.questionsData.questions[q].text[t].answers[a].value;
+			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
+			  							break;
+			  						default:
+			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
+			  							break;
+			  					}
+			  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
 			  				}
 			  			} else {
 			  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
@@ -464,9 +481,11 @@ angular.module('App')
 		  			}
 		  		}
 	  		} 
-	  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
-			$rootScope.questionsData.questions[q].order = count
-	  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
+	  		if ($rootScope.questionsData.questions[q]) {
+		  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
+				$rootScope.questionsData.questions[q].order = count
+		  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
+	  		}
 
 	  		count++
 	  	}
