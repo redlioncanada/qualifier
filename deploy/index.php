@@ -3,14 +3,11 @@
 </head>
 <body>
 	<?php
-		$currentVersion = #VERSION;
-		$location = #LOCATION;
-
 		if (!headers_sent()) {
-			header('Location: '.$location.'/'.$currentVersion);
+			header('Location: #LOCATION');
 	    	die();
 	    } else {
-	    	die('<script type="text/javascript">window.location.href="' . $location.'/'.$currentVersion . '";</script>');
+	    	die('<script type="text/javascript">window.location.href="#LOCATION";</script>');
 	    }
 	?>
 </body>
