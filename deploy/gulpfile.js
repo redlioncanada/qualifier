@@ -45,7 +45,7 @@ function doUpload(src) {
             .pipe(ftp(opts));
     }
     
-    opts.remotePath = basePath+p.version+'/';
+    opts.remotePath = basePath+p.version;
     return gulp.src('../build/*')
         .pipe(ftp(opts));
 }
