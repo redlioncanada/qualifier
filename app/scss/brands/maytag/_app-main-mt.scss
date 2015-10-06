@@ -530,6 +530,43 @@ div[ng-class="fr_CA"] {
     }
 }
 
+.print-page {
+	* {
+		font-family: $AG-Bold-Cnd;
+		color: #002e62;
+	}
+
+	.print-page-header, .print-page-footer {
+		background-color: #002e62;
+	}
+
+	.print-page-callout .print-page-title {
+		.sku {
+			color: #CCC;
+		}
+	}
+
+	.print-page-content-wrapper {
+		.print-page-content {
+			.print-page-content-title {
+				color: white;
+ 				background-color: #CCC;
+			}
+		}
+
+		ul {
+			font-family: $AG-Cnd;
+
+			li {
+				border-bottom: 1px dashed #002e62;
+			}
+ 			.value {
+ 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 			}
+		}
+	}
+}
+
 /* Media Queries Start */
 /* Added by Jacoub Bondre Sept 8th 2015 */
 /* If time allots lets refactor progress bar styles into its own .scss file */

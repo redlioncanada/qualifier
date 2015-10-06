@@ -1,4 +1,74 @@
-<ul class="results-list" ng-if="questionsData.currentCount !=0">
+<div class="print-page" ng-init="a.picker=a.colours[0]">
+	<div class="print-page-header">YOUR BEST MATCH</div>
+	<div class="print-page-callout-wrapper">
+		<div class="print-page-callout print-page-callout-left">
+			<div>
+				<div class="print-page-image">
+					<img ng-if="a.appliance!='Laundry'" ng-src="http://maytag.com/digitalassets/{{a.picker.sku}}/Standalone_1175X1290.jpg">
+					<img ng-if="a.appliance=='Laundry'" ng-src="http://maytag.com/{{a.image}}">
+				</div>
+				<div class="print-page-title">
+					<span class="name">{{a.name}}</span>
+					<span class="sku" ng-if="a.appliance!='Laundry'">{{a.picker.sku}}</span> 
+					<span class="sku" ng-if="a.appliance=='Laundry'">{{a.picker.washerSku}}/{{a.picker.dryerSku}}</span> 
+				</div>
+			</div>
+		</div>
+		<div class="print-page-callout print-page-callout-right">
+			<div class="print-page-price">
+				<span ng-if="a.appliance!='Laundry' && locale=='en_CA'">${{a.picker.prices.CAD}}</span>
+				<span ng-if="a.appliance=='Laundry' && locale=='en_CA'">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
+				<span ng-if="a.appliance!='Laundry' && locale=='fr_CA'">{{a.picker.prices.CAD}} $</span>
+				<span ng-if="a.appliance=='Laundry' && locale=='fr_CA'">{{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}} $</span>
+			</div>
+		</div>
+	</div>
+	<div class="print-page-content-wrapper">
+		<div class="print-page-content print-page-content-left">
+			<div>
+				<div class="print-page-content-title">configuration and overview</div>
+				<ul>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower</div>
+					</li>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower</div>
+					</li>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="print-page-content print-page-content-right">
+			<div>
+				<div class="print-page-content-title">configuration and overview</div>
+				<ul>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower</div>
+					</li>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower</div>
+					</li>
+					<li>
+						<div class="key">Capacity (Cu. Ft.)</div>
+						<div class="value">4.5 Upper/4.2 Lower</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="print-page-footer">
+		<img src="img/img_logo.png"/>
+	</div>
+</div>
+
+<!--<ul class="results-list" ng-if="questionsData.currentCount !=0">
 			<li class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
@@ -53,7 +123,7 @@
 								</div>
 								<div class="sales-feature-spacer"></div>
 								<div class="sales-feature-additional-wrapper">
-									<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
+									<div ng-repeat="sf in a.salesFeatures"> 
 										<h4 class="sales-feature-additional">
 											<img src="img/results-checkmark.png">
 											<span ng-bind-html="sf.headline"></span>
@@ -77,4 +147,4 @@
 					</div>
 				</div>
 			</li>
-		</ul>
+		</ul>-->
