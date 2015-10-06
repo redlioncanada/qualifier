@@ -255,13 +255,23 @@
 						{
 							"thumbnail" : "img/icon-features.png",
 							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "No Preference",
+							"value" : "nopreference",
+							"image" : "img/Cooking-Q2-nopreference.png",
+							"scoring" : {
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-features.png",
+							"thumbnail_current" : "img/icon-features-current.png",
 							"text" : "Single Oven",
 							"value" : "single",
 							"image" : "img/Cooking-Q2-single.png",
 							"scoring" : {
 								"single" : 1
 							},
-							"order" : 1
+							"order" : 2
 						},
 						{
 							"thumbnail" : "img/icon-features.png",
@@ -272,7 +282,7 @@
 							"scoring" : {
 								"combination" : 1
 							},
-							"order" : 2
+							"order" : 3
 						},
 						{
 							"thumbnail" : "img/icon-features.png",
@@ -283,7 +293,7 @@
 							"scoring" : {
 								"double" : 1
 							},
-							"order" : 3
+							"order" : 4
 						}
 					]
 				}
@@ -2492,6 +2502,16 @@
 					"type" : "boxes-picture-2-radio",
 					"oneAnswer" : true,
 					"answers" : [
+						{
+							"thumbnail" : "img/icon-style.png",
+							"thumbnail_current" : "img/icon-features-current.png",
+							"text" : "No Preference",
+							"value" : "nopreference",
+							"image" : "img/Dishwasher-Q6-nopreference.jpg",
+							"scoring" : {
+							},
+							"order" : 1
+						},
 						{ 
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
@@ -2501,7 +2521,7 @@
 							"scoring" : {
 								"frontConsole" : 1
 							},
-							"order" : 1
+							"order" : 2
 						},
 						{
 							"thumbnail" : "img/icon-style.png",
@@ -2512,7 +2532,7 @@
 							"scoring" : {	
 								"FID" : 1					
 							},
-							"order" : 2
+							"order" : 3
 						}
 					]
 				}

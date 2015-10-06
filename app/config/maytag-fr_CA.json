@@ -240,7 +240,18 @@
                  "explanation": "Nos fours encastrés sont offerts en différentes configurations. Nous tenons à connaître votre préférence afin de vous recommander celle qui conviendra à votre maison.",
                  "type": "boxes-picture-3-radio",
                  "oneAnswer": true,
-                 "answers": [{
+                 "answers": [
+                 {
+                     "thumbnail": "img/icon-features.png",
+                     "thumbnail_current": "img/icon-features-current.png",
+                     "text": "No Preference(fr)",
+                     "value": "nopreference",
+                     "image": "img/Cooking-Q2-nopreference.png",
+                     "scoring": {
+                     },
+                     "order": 1
+                 }, 
+                 {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
                      "text": "Simple",
@@ -249,7 +260,7 @@
                      "scoring": {
                          "single": 1
                      },
-                     "order": 1
+                     "order": 2
                  }, {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
@@ -259,7 +270,7 @@
                      "scoring": {
                          "combination": 1
                      },
-                     "order": 2
+                     "order": 3
                  }, {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
@@ -269,7 +280,7 @@
                      "scoring": {
                          "double": 1
                      },
-                     "order": 3
+                     "order": 4
                  }]
              }]
          },
@@ -2279,7 +2290,18 @@
                  "explanation": "Trouver ce qui convient parfaitement au style de votre foyer est aussi important pour nous que pour vous.",
                  "type": "boxes-picture-2-radio",
                  "oneAnswer": true,
-                 "answers": [{
+                 "answers": [
+                 {
+                     "thumbnail": "img/icon-style.png",
+                     "thumbnail_current": "img/icon-style-current.png",
+                     "text": "No Preference(fr)",
+                     "value": "NoPreference",
+                     "image": "img/Dishwasher-Q6-nopreference.jpg",
+                     "scoring": {
+                     },
+                     "order": 1
+                 },
+                 {
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
                      "text": "Traditionnel",
@@ -2288,7 +2310,7 @@
                      "scoring": {
                          "frontConsole": 1
                      },
-                     "order": 1
+                     "order": 2
                  }, {
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
@@ -2298,7 +2320,7 @@
                      "scoring": {
                          "FID": 1
                      },
-                     "order": 2
+                     "order": 3
                  }]
              }]
          },
