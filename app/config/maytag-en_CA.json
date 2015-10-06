@@ -249,7 +249,7 @@
 					"sub_question" : "Select One",
 					"explanation_title" : "Why are you asking me about orientation?",
 					"explanation" : "Our wall ovens come in different sizes, we want to make sure that we recommend the perfect one for your space.",
-					"type" : "boxes-picture-3-radio",
+					"type" : "boxes-picture-4-radio",
 					"oneAnswer" : true,
 					"answers" : [
 						{
@@ -2499,7 +2499,7 @@
 					"sub_question" : "Select One",
 					"explanation_title" : "Why are you asking me about style?",
 					"explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you.",
-					"type" : "boxes-picture-2-radio",
+					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
 					"answers" : [
 						{

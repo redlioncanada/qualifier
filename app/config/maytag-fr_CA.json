@@ -238,7 +238,7 @@
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CONFIGURATION?",
                  "explanation": "Nos fours encastrés sont offerts en différentes configurations. Nous tenons à connaître votre préférence afin de vous recommander celle qui conviendra à votre maison.",
-                 "type": "boxes-picture-3-radio",
+                 "type": "boxes-picture-4-radio",
                  "oneAnswer": true,
                  "answers": [
                  {
@@ -2288,7 +2288,7 @@
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU Style?",
                  "explanation": "Trouver ce qui convient parfaitement au style de votre foyer est aussi important pour nous que pour vous.",
-                 "type": "boxes-picture-2-radio",
+                 "type": "boxes-picture-3-radio",
                  "oneAnswer": true,
                  "answers": [
                  {
