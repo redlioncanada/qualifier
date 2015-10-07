@@ -2502,35 +2502,35 @@
 					"type" : "boxes-picture-3-radio",
 					"oneAnswer" : true,
 					"answers" : [
+						{ 
+							"thumbnail" : "img/icon-style.png",
+							"thumbnail_current" : "img/icon-style-current.png",
+							"text" : "Front Controls",
+							"value" : "Traditional",
+							"image" : "img/Dishwasher-Q6-traditional.jpg",
+							"scoring" : {
+								"frontConsole" : 1
+							},
+							"order" : 1
+						},
 						{
+							"thumbnail" : "img/icon-style.png",
+							"thumbnail_current" : "img/icon-style-current.png",
+							"text" : "Hiddden Controls",
+							"value" : "Commercial",
+							"image" : "img/Dishwasher-Q6-commercial.jpg",
+							"scoring" : {	
+								"FID" : 1					
+							},
+							"order" : 2
+						},
+                        {
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-features-current.png",
 							"text" : "No Preference",
 							"value" : "nopreference",
 							"image" : "img/Dishwasher-Q6-nopreference.jpg",
 							"scoring" : {
-							},
-							"order" : 1
-						},
-						{ 
-							"thumbnail" : "img/icon-style.png",
-							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Traditional",
-							"value" : "Traditional",
-							"image" : "img/Dishwasher-Q6-traditional.jpg",
-							"scoring" : {
-								"frontConsole" : 1
-							},
-							"order" : 2
-						},
-						{
-							"thumbnail" : "img/icon-style.png",
-							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Commercial",
-							"value" : "Commercial",
-							"image" : "img/Dishwasher-Q6-commercial.jpg",
-							"scoring" : {	
-								"FID" : 1					
 							},
 							"order" : 3
 						}

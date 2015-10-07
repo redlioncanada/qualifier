@@ -352,6 +352,12 @@ div.mobile-app-nav-arrows {
 	z-index: 2;
 }
 
+.picture-3-container {
+    .answer-box {
+        float: none !important;   
+    }
+}
+
 @media(max-width:1180px) and (min-width:1024px) {
 	.slidey {
 		width: 927px !important;
@@ -465,7 +471,7 @@ div.mobile-app-nav-arrows {
 				border-right: 4px solid #d7d7d7;
 
 				.select-icon {
-					top: 156px;
+					top: 148px;
 				}
 			}
 		}
@@ -500,6 +506,10 @@ div.mobile-app-nav-arrows {
             }
         }            
     }
+    .picture-3-container {
+        width: 100% !important;
+    }
+    
 }
 
 @media(max-width:1023px) {
