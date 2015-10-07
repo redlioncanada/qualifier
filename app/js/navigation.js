@@ -55,7 +55,7 @@ angular.module('App')
 	};
 
 	$scope.startOver = function () {
-    $rootScope.showTooltip = false;
+    /*$rootScope.showTooltip = false;
     $rootScope.resultsTouched = false;
 
     var oldQs = $rootScope.questionsData.questions;
@@ -76,7 +76,8 @@ angular.module('App')
     $rootScope.controls = {};
     $rootScope.controls.questionHasAnswer = false;
 		$rootScope.show();
-		$rootScope.moveToQuestion("Appliance");
+		$rootScope.moveToQuestion("Appliance");*/
+    $window.location.reload();
 	}
 })
 .directive('resultsmenu', ['$timeout', '$rootScope', '$location', function($timeout, $rootScope, $location) {
