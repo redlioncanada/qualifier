@@ -475,6 +475,31 @@ div.mobile-app-nav-arrows {
 		margin-left: 10px;
 		margin-right: 10px;
 	}
+    
+    .picture-4-container {
+        width: 100% !important;   
+        
+        .answer-box {
+            width: 200px !important;
+                
+            .img-wrap {
+                width: 100% !important;
+                height: 100% !important;
+                
+                img {
+                    width: 96%;
+                    height: 96%;
+                }
+            }
+            .select-label-wrap {
+                width: 100% !important;
+                
+                .select-icon {
+                    top: 132px !important;   
+                }
+            }
+        }            
+    }
 }
 
 @media(max-width:1023px) {
@@ -724,7 +749,7 @@ div.mobile-app-nav-arrows {
 		width: 100% !important;
 	}
 
-	.picture-2-container, .picture-3-container {
+	.picture-2-container, .picture-3-container, .picture-4-container {
 		width: 100% !important;
 		margin-top: 12px !important;
 	}
@@ -756,7 +781,7 @@ div.mobile-app-nav-arrows {
 		height: 174px;
 		background-size: cover;
 
-		.label-wrap {
+        .label-wrap {
 			bottom: 13px;
 			
 			.label-text {
@@ -811,6 +836,37 @@ div.mobile-app-nav-arrows {
 	a.answer-box.radio, a.answer-box.radio-2, a.answer-box.radio-4 {
 		float: initial !important;
 	}
+    .picture-4-container {
+        width: 200px !important;   
+        
+        .answer-box {
+            width: 200px !important;
+            margin: 5px 0 !important;
+                
+            .img-wrap {
+                width: 100% !important;
+                height: 100% !important;
+                
+                img {
+                    width: 96%;
+                    height: 96%;
+                }
+            }
+            .select-label-wrap {
+                width: 100% !important;
+                
+                .select-icon {
+                    top: 132px !important;   
+                }
+            }
+        }
+        .answer-box:first-child {
+            margin-top: 0 !important;
+        }
+        .answer-box:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
 }
 
 @media(max-width:750px) {
