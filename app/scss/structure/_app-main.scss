@@ -1096,6 +1096,132 @@ div.mobile-app-nav-arrows {
 	}
 }
 
+.print-page {
+	width: 670px;
+
+	.print-page-header, .print-page-footer {
+		height: 50px;
+		width: inherit;
+		text-align: center;
+		color: white;
+		font-size: 25pt;
+		line-height: 50px;
+
+		img {
+			margin: 0 auto;
+			height: 50px;
+		}
+	}
+
+	.print-page-callout-wrapper {
+		overflow: auto;
+	}
+	.print-page-callout {
+		width: 50%;
+		margin: 20px 0;
+
+		> div {
+			height: inherit;
+			width: 100%;
+			padding: 0 60px;
+		}
+
+		.print-page-image {
+			height: inherit;
+			float: left;
+			width: 50%;
+
+			img {
+				max-height: 300px;
+				width: 100%;
+				margin-top: 15px;
+			}
+		}
+
+		.print-page-title {
+			height: inherit;
+			float: right;
+			width: 50%;
+			margin-top: 9%;
+
+			.name {
+				font-size: 12pt;
+				text-transform: uppercase;
+				line-height: 22px;
+			}
+
+			.sku {
+				font-size: 12pt;
+				display: block;
+				margin-top: 10px;
+			}
+		}
+
+		.print-page-price {
+			color: initial;
+			font-size: 80pt;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			margin-top: 10px;
+		}
+ 	}
+ 	.print-page-content-wrapper {
+ 		overflow: auto;
+
+ 		.print-page-content {
+ 			width: 50%;
+
+ 			> div {
+ 				width: 100%;
+ 				padding: 0 2.5px 0 10px;
+ 			}
+
+ 			.print-page-content-title {
+ 				height: 40px;
+ 				font-size: 12pt;
+ 				text-align: center;
+ 				text-transform: uppercase;
+ 				line-height: 41px;
+ 				letter-spacing: 1px;
+ 			}
+
+ 			ul {
+	 			padding: 0;
+	 			margin: 0;
+	 			list-style: none;
+	 			margin: 5px 0;
+
+	 			li {
+	 				width: 100%;
+	 				display: inline-block;
+	 			}
+	 			li:not(:first-child) {
+	 				margin-top: -1px;
+	 			}
+
+	 			.key, .value {
+	 				max-width: 50%;
+	 			}
+	 			.key {
+	 				float: left;
+	 			}
+	 			.value {
+	 				float: right;
+	 				font-size: 10pt;
+	 				text-align: right;
+	 			}
+	 		}
+ 		}
+ 	}
+	.print-page-callout-left, .print-page-content-left {
+		float: left;
+	}
+	.print-page-callout-right, .print-page-content-right {
+		float: right;
+	}
+}
+
 .hidden {
 	display: none;
 }
