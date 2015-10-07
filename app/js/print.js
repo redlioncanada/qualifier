@@ -26,4 +26,30 @@ angular.module('App')
       	}
       	if (++cnt*interval >= 2000) $interval.cancel(print);
       },interval);
+
+      $scope.splitFeatures = function(a) {
+      	if (typeof a.compareFeatures === 'undefined') return a;
+      	var features = a.compareFeatures;
+      	var featuresLength = length(a.compareFeatures);
+      	console.log(featuresLength);
+      	var split = Math.floor(featuresLength/2);
+
+      	a.compareFeaturesLeft = slice(features, 0, split);
+      	a.compareFeaturesRight = slice(features, split+1, featuresLength-1);
+      	return a;
+
+      	function slice(obj, start, end) {var sliced = {};var i = 0;for (var k in obj) {if (i >= start && i < end) sliced[k] = obj[k];i++;}return sliced;}
+      	function length(obj) {var c = 0;for (var i in obj) {if (obj.hasOwnProperty(i)) c++;} return c;}
+      }
+})
+.directive('unescape', function() {
+	return {
+		restrict: 'A',
+		link: function(s,e,a) {
+			s.$watch(a.ngBind, function(val) {
+				var t = $(e).text();
+				$(e).text(_.unescape(t).replace(' /', '/'));
+			});
+		}
+	}
 });

@@ -1,4 +1,4 @@
-<div class="print-page" ng-init="a.picker=a.colours[0]">
+<div class="print-page" ng-init="a=splitFeatures(a); a.picker=a.colours[0];">
 	<div class="print-page-header">YOUR BEST MATCH</div>
 	<div class="print-page-callout-wrapper">
 		<div class="print-page-callout print-page-callout-left">
@@ -17,47 +17,49 @@
 		<div class="print-page-callout print-page-callout-right">
 			<div class="print-page-price">
 				<span ng-if="a.appliance!='Laundry' && locale=='en_CA'">${{a.picker.prices.CAD}}</span>
-				<span ng-if="a.appliance=='Laundry' && locale=='en_CA'">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
+				<span ng-if="a.appliance=='Laundry' && locale=='en_CA'">${{a.picker.washerPrices.CAD}}</span>
 				<span ng-if="a.appliance!='Laundry' && locale=='fr_CA'">{{a.picker.prices.CAD}} $</span>
-				<span ng-if="a.appliance=='Laundry' && locale=='fr_CA'">{{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}} $</span>
+				<span ng-if="a.appliance=='Laundry' && locale=='fr_CA'">{{a.picker.washerPrices.CAD}} $</span>
 			</div>
 		</div>
 	</div>
 	<div class="print-page-content-wrapper">
 		<div class="print-page-content print-page-content-left">
-			<div>
-				<div class="print-page-content-title">configuration and overview</div>
+			<div ng-if="a.appliance!='Laundry'" ng-repeat="(outerKey, outerValue) in a.compareFeaturesLeft">
+				<div class="print-page-content-title" bo-text="outerKey"></div>
 				<ul>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower</div>
+					<li ng-repeat="(innerKey, innerValue) in outerValue">
+						<div class="key" bo-text="innerKey"></div>
+						<div class="value" bo-text="innerValue" unescape></div>
 					</li>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower</div>
-					</li>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower 4.5 Upper/4.2 Lower</div>
+				</ul>
+			</div>
+			<div ng-if="a.appliance=='Laundry'" ng-repeat="(outerKey, outerValue) in a.washerCompareFeatures">
+				<div class="print-page-content-title" bo-text="outerKey"></div>
+				<ul>
+					<li ng-repeat="(innerKey, innerValue) in outerValue">
+						<div class="key" bo-text="innerKey"></div>
+						<div class="value" bo-text="innerValue" unescape></div>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="print-page-content print-page-content-right">
-			<div>
-				<div class="print-page-content-title">configuration and overview</div>
+			<div ng-if="a.appliance!='Laundry'" ng-repeat="(outerKey, outerValue) in a.compareFeaturesRight">
+				<div class="print-page-content-title" bo-text="outerKey"></div>
 				<ul>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower</div>
+					<li ng-repeat="(innerKey, innerValue) in outerValue">
+						<div class="key" bo-text="innerKey"></div>
+						<div class="value" bo-text="innerValue" unescape></div>
 					</li>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower</div>
-					</li>
-					<li>
-						<div class="key">Capacity (Cu. Ft.)</div>
-						<div class="value">4.5 Upper/4.2 Lower</div>
+				</ul>
+			</div>
+			<div ng-if="a.appliance=='Laundry'" ng-repeat="(outerKey, outerValue) in a.dryerCompareFeatures">
+				<div class="print-page-content-title" bo-text="outerKey"></div>
+				<ul>
+					<li ng-repeat="(innerKey, innerValue) in outerValue">
+						<div class="key" bo-text="innerKey"></div>
+						<div class="value" bo-text="innerValue" unescape></div>
 					</li>
 				</ul>
 			</div>
