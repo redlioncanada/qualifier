@@ -360,7 +360,6 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			if ($rootScope.questionsData.question.name == 'Appliance') {
-				console.log($rootScope.questionsData.questions)
   					for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
   						$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
   					}
@@ -382,7 +381,8 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		console.log($rootScope);
+  		console.log($rootScope.questionsData);
+  		console.log($rootScope.appliances);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';

@@ -5,10 +5,8 @@ angular.module('App')
 
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
-            //console.log("useMobile");
         }else{
             $scope.useMobileTemplates = false;
-            //console.log("dontUseMobile");
         }
     
     $rootScope.$on('resize::resize', function() {
