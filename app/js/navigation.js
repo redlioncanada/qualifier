@@ -55,9 +55,8 @@ angular.module('App')
 	};
 
 	$scope.startOver = function () {
-    $rootScope.showTooltip = false;
+    /*$rootScope.showTooltip = false;
     $rootScope.resultsTouched = false;
-		$rootScope.scoringQuestions = {};
 
     var oldQs = $rootScope.questionsData.questions;
     var newQs = angular.copy($rootScope.brandData.questions);
@@ -65,12 +64,20 @@ angular.module('App')
     for (var i in oldQs) {
       for (var j in oldQs[i].text) {
         newQs[i].text[j].options = oldQs[i].text[j].options;
+        //if (newQs[i].text[j].answer) delete newQs[i].text[j].answer;
+        for (var k in oldQs[i].text[j].answers) {
+          oldQs[i].text[j].answers[k].answer = false;
+        }
       }
     }
     $rootScope.questionsData.questions = newQs;
-		$rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"];
+    $rootScope.questionsData.question = $rootScope.questionsData.questions["Appliance"];
+
+    $rootScope.controls = {};
+    $rootScope.controls.questionHasAnswer = false;
 		$rootScope.show();
-		$rootScope.moveToQuestion("Appliance");
+		$rootScope.moveToQuestion("Appliance");*/
+    $window.location.reload();
 	}
 })
 .directive('resultsmenu', ['$timeout', '$rootScope', '$location', function($timeout, $rootScope, $location) {

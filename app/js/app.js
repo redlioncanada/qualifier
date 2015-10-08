@@ -79,6 +79,7 @@ App.filter('orderByOrder', function() {
 
 App.filter('rearrange', function() {
   return function(items, num) {
+      if (typeof items === 'undefined') return;
       var temp = items[0];
       items[0] = items[1];
       items[1] = temp;     
@@ -125,6 +126,7 @@ App.filter('nextQuestions', function($rootScope, $filter) {
     }
     var nextQuestions = []
     var t = null
+    if (!$rootScope.questionsData.scoringQuestions) return;
     var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
     angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
       if (item.order == l) {
@@ -156,6 +158,7 @@ App.filter('byPrice', function($rootScope) {
   return function(items, price) {
     var inside = [];
     var outside = [];
+    if (typeof price === 'undefined') return;
     var range = price.split(";")
     range[0] = parseFloat(range[0])
     range[1] = parseFloat(range[1])    
@@ -263,6 +266,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
+
                 var relcodes = {
                   'M1' : 'DC',
                   'WH' : 'DW'

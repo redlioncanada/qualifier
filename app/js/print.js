@@ -21,6 +21,11 @@ angular.module('App')
       	if (parseInt($('.print-page-price span').text().replace('$', '')) > 0) {
       		$interval.cancel(print);
       		$timeout(function() {
+      			var contentHeight = $('.print-page').height();
+      			var pageHeight = 980;
+      			var pad = pageHeight - (((contentHeight / pageHeight) - Math.floor(contentHeight / pageHeight)) * pageHeight);
+      			console.log(contentHeight, pad);
+      			$('.print-page-footer').css('marginTop', pad - $('.print-page-footer').height());
       			window.print();
       		},300);
       	}
@@ -31,14 +36,13 @@ angular.module('App')
       	if (typeof a.compareFeatures === 'undefined') return a;
       	var features = a.compareFeatures;
       	var featuresLength = length(a.compareFeatures);
-      	console.log(featuresLength);
       	var split = Math.floor(featuresLength/2);
 
-      	a.compareFeaturesLeft = slice(features, 0, split);
-      	a.compareFeaturesRight = slice(features, split+1, featuresLength-1);
+      	a.compareFeaturesLeft = slice(features, 0, split-1);
+      	a.compareFeaturesRight = slice(features, split, featuresLength);
       	return a;
 
-      	function slice(obj, start, end) {var sliced = {};var i = 0;for (var k in obj) {if (i >= start && i < end) sliced[k] = obj[k];i++;}return sliced;}
+      	function slice(obj, start, end) {var sliced = {};var i = 0;for (var k in obj) {if (i >= start && i <= end) sliced[k] = obj[k];i++;}return sliced;}
       	function length(obj) {var c = 0;for (var i in obj) {if (obj.hasOwnProperty(i)) c++;} return c;}
       }
 })
