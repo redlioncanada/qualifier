@@ -508,8 +508,7 @@ div.mobile-app-nav-arrows {
     }
     .picture-3-container {
         width: 100% !important;
-    }
-    
+    }    
 }
 
 @media(max-width:1023px) {
@@ -877,12 +876,15 @@ div.mobile-app-nav-arrows {
             margin-bottom: 0 !important;
         }
     }
+    .boxes-icon-5-container {
+        width: 400px;   
+    }
 }
 
 @media(max-width:750px) {
 	.app-content-main-top-left {
 		h2 {font-size: 18pt;}
-		h3 {font-size: 12pt;}
+		h3 {font-size: 11pt;}
 	}
 }
 
@@ -891,6 +893,7 @@ div.mobile-app-nav-arrows {
 		width: 80% !important;
 		min-width: 100% !important;
 		left: -50% !important;
+        /*min-height: 370px !important;*/
 	}
 
 	div.slidey-wrap-all {
@@ -996,7 +999,7 @@ div.mobile-app-nav-arrows {
 	}
 
 	.app-content-main-top-left {
-		h2 {font-size: 13pt;}
+		h2 {font-size: 12pt;}
 	}
 
 	a.answer-box.boxes-icon-5 {
@@ -1104,6 +1107,66 @@ div.mobile-app-nav-arrows {
 	div.navigation.main-content {
 		min-height: 60px;
 	}
+    /* Changes made by Justin Gillis Oct 8 2015 */
+    a.answer-box.checkbox-4, a.answer-box.radio-2, a.answer-box.radio-3, a.answer-box.radio-4 {
+		height: 45px;
+		margin: 8px auto;
+        
+        .select-icon {
+            top: 9px;   
+        }
+        .label-wrap {
+            .label-text {
+                font-size: 11px;   
+            }
+        }
+	}
+    .regular-2-container {
+        width: 90% !important;
+    }
+    a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4, .boxes-icon-split {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .boxes-icon-5-container {
+        width: 320px;
+    }
+        a.answer-box.boxes-icon-5 {
+        width: 105px;
+        height: 125px;
+        background-size: cover;
+        margin-bottom: 0px;
+        
+        .icon-wrap {
+            .normal, .hover {
+                top: -20px;
+                left: -10px;
+                -ms-transform: scale(0.7);
+                -o-transform: scale(0.7);
+                -moz-transform: scale(0.7);
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+            }
+        }
+        
+        .select-icon {
+            top: 90px;
+            left: 7px;
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+        .label-wrap {
+            .label-text {
+                top: 4px;
+                left: -8px;
+                font-size: 10px !important;
+                max-width: 87px !important;
+            }
+        }
+    }
 }
 
 .print-page {
