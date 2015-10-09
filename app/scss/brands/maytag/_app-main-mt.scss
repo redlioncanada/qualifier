@@ -263,21 +263,30 @@ header.header-desktop {
 		float: right;
 		margin-top: 20px;
 	}
-	.backtoresults-mobile {
-	   		width: 100%;
-	   		background-color: #002e5f;
-	   		text-transform: uppercase;
-	   		height: 30px;
-	   		margin: 40px 0 15px 0;
+	.buttonnav-mobile {
+   		width: 100%;
+   		text-transform: uppercase;
+   		margin: 40px 0 15px 0;
 
-	   		div {
-	   			color: white;
-	   			margin: 0 auto;
-	   			position: relative;
-	   			top: 5px;
-	   			font-family: $AG-Bold-Cnd;	   		
-	   		}
-	   }
+   		div {
+   			color: white;
+   			background-color: #002e5f;
+   			height: 30px;
+   			line-height: 30px;
+   			margin: 0 auto;
+   			position: relative;
+   			top: 5px;
+   			font-family: $AG-Bold-Cnd;	   		
+   		}
+
+   		.backtoresults-mobile div {
+   			margin-bottom: 4px;
+   		}
+
+   }
+   div.startover-mobile {
+   		margin: 5px 0 15px 0;
+   }
 
 	.backtoresults-btn-wrap {
 		display: inline-block;
