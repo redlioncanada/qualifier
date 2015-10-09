@@ -345,7 +345,6 @@ angular.module('App')
   		// if this question doesn't set next, then its fine
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
-  		debugger;
   		var hasNext = false
   		if (!!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
