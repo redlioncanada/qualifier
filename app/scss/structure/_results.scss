@@ -127,7 +127,6 @@
 		width: 100%;
 		font-size: 20px;
 		display: block;
-		padding-bottom: 20px;
 	}
 //	.product-price {
 //		@include make-md-column(4);
@@ -355,7 +354,6 @@ by Jacoub Bondre */
                 margin: 30px auto;
                 height: 1px;
                 width: 77%;
-                background-color: #022d58;
             }
             
 			h2, .product-name {
@@ -376,7 +374,6 @@ by Jacoub Bondre */
 		}
 	}
 	.product-price-sku-wrap {  
-        font-size: 22px !important;
         margin-top: 0px !important;
         margin-bottom: 0px !important;
         padding: 0px !important;

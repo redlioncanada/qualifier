@@ -31,7 +31,7 @@
 							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
 							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>
 							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
-                            <div class="sales-feature-spacer"></div>
+                            <div class="sales-feature-spacer smallest"></div>
 							<!-- Product Price Wrap -->
                              <div class="product-price-sku-wrap">
 							<span class="product-price">
@@ -49,7 +49,7 @@
 
 						</div> 
                             <!-- -->
-                            <div class="sales-feature-spacer"></div>
+                            <div class="sales-feature-spacer smallest"></div>
                             <!-- -->
 							<div class="product-details">
 								<div class="sales-feature-wrapper" ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
@@ -82,6 +82,11 @@
 										<img src="img/icon-email.png"/>
 									</a>
 
+								</div>
+
+							<div ng-if="!!a.disclaimers && a.disclaimers.length > 0" class="sales-feature-spacer"></div>
+								<div class="product-disclaimers">
+									<p ng-repeat="(key, value) in a.disclaimers" bo-text="value"></p>
 								</div>
 						</div>
 					<!-- </div> -->

@@ -23,26 +23,30 @@
 								</ul>
 							</div>
 						</div>
-						<div class="product-price-sku-wrap">
-							<span class="product-price">
-								<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
-								<span ng-if="a.appliance!='Laundry' && isEnglish">${{a.picker.prices.CAD}}</span>
-								<span ng-if="a.appliance=='Laundry' && isEnglish">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
-								<span ng-if="a.appliance!='Laundry' && isFrench">{{a.picker.prices.CAD.replace('.',',')}} $</span>
-								<span ng-if="a.appliance=='Laundry' && isFrench">{{a.picker.washerPrices.CAD.replace('.',',')}}/{{a.picker.dryerPrices.CAD.replace('.',',')}} $</span>
-							</span>
-							<span class="product-sku">
-								<span bo-text="brandData.apptext.model"></span>:&nbsp; 
-								<span ng-if="a.appliance!='Laundry'">{{a.picker.sku}}</span> 
-								<span ng-if="a.appliance=='Laundry'">{{a.picker.washerSku}}/{{a.picker.dryerSku}}</span> 
-							</span>
-
-						</div>
+						
 						<div class="product-details-wrap">
 							<h2 ng-if="a.appliance!='Laundry'"><span class="product-name" ng-bind-html="a.name"></span> </h2>
 							<h2 ng-if="a.appliance=='Laundry'" ><span class="product-name" ng-bind-html="a.washerName"></span> </h2>
 							<h2 ng-if="a.appliance=='Laundry'"><span class="product-name" ng-bind-html="a.dryerName"></span> </h2>
 							
+							<div class="sales-feature-spacer smallest"></div>
+							<div class="product-price-sku-wrap">
+								<span class="product-price">
+									<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
+									<span ng-if="a.appliance!='Laundry' && isEnglish">${{a.picker.prices.CAD}}</span>
+									<span ng-if="a.appliance=='Laundry' && isEnglish">${{a.picker.washerPrices.CAD}}/{{a.picker.dryerPrices.CAD}}</span>
+									<span ng-if="a.appliance!='Laundry' && isFrench">{{a.picker.prices.CAD.replace('.',',')}} $</span>
+									<span ng-if="a.appliance=='Laundry' && isFrench">{{a.picker.washerPrices.CAD.replace('.',',')}}/{{a.picker.dryerPrices.CAD.replace('.',',')}} $</span>
+								</span>
+								<span class="product-sku">
+									<span bo-text="brandData.apptext.model"></span>:&nbsp; 
+									<span ng-if="a.appliance!='Laundry'">{{a.picker.sku}}</span> 
+									<span ng-if="a.appliance=='Laundry'">{{a.picker.washerSku}}/{{a.picker.dryerSku}}</span> 
+								</span>
+
+							</div>
+							<div class="sales-feature-spacer smallest"></div>
+
 							<div class="product-details">
 								<div class="sales-feature-wrapper" ng-repeat="sf in a.salesFeatures | assignScore:a | orderBy:'-score' | limitTo:3"> 
 									<h4 class="sales-feature">
@@ -52,7 +56,7 @@
 									</h4>
 									<span ng-bind-html="sf.description"></span>
 								</div>
-								<div class="sales-feature-spacer"></div>
+								<div class="sales-feature-spacer smaller"></div>
 								<div class="sales-feature-additional-wrapper">
 									<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
 										<h4 class="sales-feature-additional">
@@ -61,7 +65,6 @@
 										</h4>
 									</div>
 								</div>
-								
 							</div>
 
 							<div class="btn-wrap">
@@ -73,6 +76,11 @@
 										<span class="btn-text" bo-text="brandData.apptext.print"></span>
 									</a>
 
+								</div>
+
+							<div ng-if="!!a.disclaimers && a.disclaimers.length > 0" class="sales-feature-spacer"></div>
+								<div class="product-disclaimers">
+									<p ng-repeat="(key, value) in a.disclaimers" bo-text="value"></p>
 								</div>
 						</div>
 					</div>
