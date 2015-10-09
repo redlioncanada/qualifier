@@ -4,9 +4,9 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
 
   	$rootScope.$on('resize::resize', function() {
-	    if (window.innerWidth < 1024){
+	    if (window.innerWidth < 1024 && !$scope.isHomePage()){
 	        $scope.resizeElements();
-	    } else {
+	    } else if (window.innerWidth >= 1024) {
 	    	//reset header height to it's css value
             $('.app-content-main-top').css('height', '');
             $('.slidey-wrap-all').css('height', '');
@@ -268,12 +268,27 @@ angular.module('App')
 		//}
 		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	
 
-		if (window.innerWidth <= 580) {
+		if (window.innerWidth <= 580 && !$scope.isHomePage()) {
 			$timeout(function(){
-				$(window).scrollTop(0);
+				//$(window).scrollTop(0);
 				$scope.resizeElements();
 			},200);
 		}
+	}
+
+	$scope.isHomePage = function() {
+		if (!$rootScope.questionsData.question) return false;
+		return $rootScope.questionsData.question.name == "Appliance" || $rootScope.questionsData.question.name.indexOf('Pre-Qualifier') > -1;
+	}
+
+	$scope.truthy = function(key,obj) {
+		if (!obj) return false;
+		return (key in obj) && !!obj[key];
+	}
+
+	$scope.falsey = function(key,obj) {
+		if (!obj) return true;
+		return !$scope.truthy(key,obj);
 	}
 
 	$scope.resizeElements = function(depth) {
@@ -330,6 +345,7 @@ angular.module('App')
   		// if this question doesn't set next, then its fine
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
+  		debugger;
   		var hasNext = false
   		if (!!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
@@ -489,7 +505,7 @@ angular.module('App')
 
 	  		count++
 	  	}
-	  	console.log($rootScope.questionsData.scoringQuestions)
+	  	console.log($rootScope.questionsData)
 	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
 	  		$scope.recalculateResults()
 	  		//$state.go("main.results");

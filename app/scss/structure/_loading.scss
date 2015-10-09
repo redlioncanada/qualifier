@@ -1,6 +1,11 @@
 .loading {
-	height: 500px;
-	width: 100%;
+	width: 10000px;
+	height: 10000px;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	background-color: white;
+	z-index: 5000;
 	.loading-icon {
 		position: absolute;
 		left: 50%;
@@ -8,4 +13,8 @@
 		display: block;
 		top: 235px;
 	}
+}
+
+.loaded {
+	display: none;
 }

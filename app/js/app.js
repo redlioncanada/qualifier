@@ -12,7 +12,8 @@ var nglibs = [
   'ui.bootstrap',
   'ui.sortable',
   'angularAwesomeSlider',
-  'ngAnimate'
+  'ngAnimate',
+  'angular-images-loaded'
 ];
 
 var App = angular.module('App', nglibs);
@@ -25,7 +26,8 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
     $stateProvider
       .state('loading', {
-        templateUrl: 'views/loading.html'
+        templateUrl: 'views/loading.html',
+        controller: 'LoadingCtrl'
       }) 
       .state('print', {
         templateUrl: 'views/print.html',
@@ -48,14 +50,6 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
 
   }]);
 
-// Edited By Jacoub Bondre Sunday Sept 6th 2015
-// Converts JS Events to Angular and Broadcast globally
-// Implimented specifically for Progress bar and Results page functionality shifts but made available for all other needs
-//Example Implimentation
-//  $scope.$on('resize::resize', function() {
-//       console.log("resize");
-//  });
-//
 App.directive('resize', function($rootScope, $window) {
   return {
     link: function() {
@@ -79,10 +73,17 @@ App.filter('orderByOrder', function() {
 
 App.filter('rearrange', function() {
   return function(items, num) {
+    console.log(items);
       if (typeof items === 'undefined') return;
       var temp = items[0];
       items[0] = items[1];
       items[1] = temp;     
+      if (items[0].price > items[2].price) {
+        temp = items[0].price;
+        items[0].price = items[2].price;
+        items[2].price = temp;
+        items[2].price = temp;
+      }
       return items;
   };
 });
@@ -190,7 +191,7 @@ App.filter('byPrice', function($rootScope) {
         $rootScope.controls.price = range.join(";")
     }
     $rootScope.safeApply();
-    return inside.concat(outside).reverse();
+    return inside.concat(outside);
   };
 });
 
