@@ -308,10 +308,10 @@ angular.module('App')
 
 
 		var c = $('.slidey.ng-hide-remove').height();
-		if (c < 300) {
+		if (c < 400) {
 			c = $('.slidey').not('.ng-hide').height();
-			if (c < 300) {
-				var minHeight = 300;
+			if (c < 400) {
+				var minHeight = 400;
 				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
 				c = minHeight;
 			}
