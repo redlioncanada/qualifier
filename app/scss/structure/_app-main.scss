@@ -1159,6 +1159,12 @@ div.mobile-app-nav-arrows {
             }
         }
     }
+    .price-slider {
+        height: 30px !important;
+    }
+    .ng-binding::first-letter {
+        text-transform: capitalize;        
+    }
 }
 
 .print-page {
