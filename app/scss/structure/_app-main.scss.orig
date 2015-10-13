@@ -541,14 +541,6 @@ div.mobile-app-nav-arrows {
 		}
 	}
 
-	.app-answers {
-		.answer-option {
-			&.sub-category:first-child {
-				margin-top: 100px !important;
-			}
-		}
-	}
-
 	.app-content-main-top .extra-info-wrap {
 		position: absolute;
 		top: 10px;
@@ -687,7 +679,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			left: -15%;
+			/*left: -45%;*/
 			float: none !important;
 			position: relative;
 		}
@@ -725,7 +717,7 @@ div.mobile-app-nav-arrows {
 
 				span {
 					border-left: none !important;
-					left: 10px;
+					left: 20px;
 					width: 10px;
 					display: table;
 				}
@@ -845,6 +837,7 @@ div.mobile-app-nav-arrows {
 	a.answer-box.radio, a.answer-box.radio-2, a.answer-box.radio-4 {
 		float: initial !important;
 	}
+<<<<<<< Updated upstream
     .picture-4-container {
         width: 200px !important;   
         
@@ -879,6 +872,12 @@ div.mobile-app-nav-arrows {
     .boxes-icon-5-container {
         width: 400px;   
     }
+=======
+
+	.app-content-main-bottom .app-content-main-bottom-results {
+		top: 98px;
+	}
+>>>>>>> Stashed changes
 }
 
 @media(max-width:750px) {
@@ -948,7 +947,7 @@ div.mobile-app-nav-arrows {
 			background-color: #f6f6f6;
 
 			.category-image {
-				width: 19%;
+				width: 15%;
 				margin: 0 auto;
 				position: relative;
 
@@ -981,7 +980,7 @@ div.mobile-app-nav-arrows {
 	.app-answers {
 		.answer-option {
 			&.category, &.sub-category {
-				min-height: 200px;
+				min-height: 155px;
 			}
 		}
 	}
