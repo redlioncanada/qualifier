@@ -39,18 +39,18 @@
                  "oneAnswer": true,
                  "answers": [{
                      "text": "Appareils de lessive",
-                     "value": "Laundry",
+                     "value": "Washers",
                      "displayName": "Appareils de lessive",
                      "classes": "category laundry",
                      "image": "img/start-laundry.png",
                      "hover": "img/start-laundry-hover.png",
                      "thumbnail": "img/cat-laundry.jpg",
                      "thumbnail_current": "img/cat-laundry.jpg",
-                     "thumbnail_text": "Laundry",
+                     "thumbnail_text": "Washers",
                      "thumbnail_text_fr": "Appareils de lessive",
                      "next": "Laundry - Energy",
                      "scoring": {
-                         "appliance": "Laundry"
+                         "appliance": "Washers"
                      },
                      "order": 1
                  }, {
