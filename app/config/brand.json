@@ -33,18 +33,18 @@
 					"oneAnswer" : true,
 					"answers" : [
 						{
-							"text" : "Laundry",
-							"value" : "Laundry",
+							"text" : "Washers",
+							"value" : "Washers",
 							"displayName": "Laundry Pair",
 							"classes" : "category laundry",
 							"image" : "img/start-laundry.png",
 							"hover" : "img/start-laundry-hover.png",							
 							"thumbnail" : "img/cat-laundry.jpg",							
 							"thumbnail_current" : "img/cat-laundry.jpg",							
-							"thumbnail_text" : "Laundry",							
-							"next" : "Laundry - Energy",
+							"thumbnail_text" : "Washers",							
+							"next" : "Washers - Energy",
 							"scoring" : {
-								"appliance" : "Laundry"
+								"appliance" : "Washers"
 							},
 							"order" : 1
 						},
@@ -829,8 +829,8 @@
 				}
 			]
 		},
-		"Laundry - Energy" : {
-			"next" : "Laundry - Capacity 1",
+		"Washers - Energy" : {
+			"next" : "Washers - Capacity 1",
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-energy-current.png",
@@ -889,9 +889,9 @@
 				}											
 			]
 		},
-		"Laundry - Capacity 1" : {
-			"next" : "Laundry - Noise",
-			"previous" : "Laundry - Energy",
+		"Washers - Capacity 1" : {
+			"next" : "Washers - Noise",
+			"previous" : "Washers - Energy",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-capacity-current.png",
 			"thumbnail_text" : "Capacity",
@@ -970,9 +970,9 @@
 				}											
 			]
 		},
-		"Laundry - Noise" : {
-			"next" : "Laundry - Orientation",
-			"previous" : "Laundry - Capacity 1",
+		"Washers - Noise" : {
+			"next" : "Washers - Orientation",
+			"previous" : "Washers - Capacity 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
@@ -1031,9 +1031,9 @@
 				}
 			]
 		},
-		"Laundry - Orientation" : {
-			"next" : "Laundry - Speed",
-			"previous" : "Laundry - Noise",
+		"Washers - Orientation" : {
+			"next" : "Washers - Speed",
+			"previous" : "Washers - Noise",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-orientation-current.png",
 			"thumbnail_text" : "Orientation",
@@ -1083,9 +1083,9 @@
 				}
 			]
 		},
-		"Laundry - Speed" : {
-			"next" : "Laundry - Fabrics",
-			"previous" : "Laundry - Orientation",
+		"Washers - Speed" : {
+			"next" : "Washers - Fabrics",
+			"previous" : "Washers - Orientation",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-speed-current.png",
 			"thumbnail_text" : "Speed",
@@ -1144,9 +1144,9 @@
 				}
 			]
 		},
-		"Laundry - Fabrics" : {
-			"next" : "Laundry - Sensor",
-			"previous" : "Laundry - Speed",
+		"Washers - Fabrics" : {
+			"next" : "Washers - Sensor",
+			"previous" : "Washers - Speed",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-fabric-current.png",
 			"thumbnail_text" : "Fabric",
@@ -1223,9 +1223,9 @@
 				}
 			]
 		},
-		"Laundry - Sensor" : {
-			"next" : "Laundry - Wrinkles",
-			"previous" : "Laundry - Fabrics",
+		"Washers - Sensor" : {
+			"next" : "Washers - Wrinkles",
+			"previous" : "Washers - Fabrics",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-features-current.png",
 			"thumbnail_text" : "Features",
@@ -1286,9 +1286,9 @@
 				}											
 			]
 		},
-		"Laundry - Wrinkles" : {
-			"next" : "Laundry - Fuel Type",
-			"previous" : "Laundry - Sensor",
+		"Washers - Wrinkles" : {
+			"next" : "Washers - Fuel Type",
+			"previous" : "Washers - Sensor",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-wrinkles-current.png",
 			"thumbnail_text" : "Wrinkles",
@@ -1352,9 +1352,9 @@
 				}											
 			]
 		},
-		"Laundry - Fuel Type" : {
+		"Washers - Fuel Type" : {
 			"next" : null,
-			"previous" : "Laundry - Wrinkles",
+			"previous" : "Washers - Wrinkles",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-fueltype-current.png",
 			"thumbnail_text" : "Fuel Type",

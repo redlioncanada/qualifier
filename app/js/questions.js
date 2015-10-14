@@ -316,8 +316,6 @@ angular.module('App')
 				c = minHeight;
 			}
 		}
-		//var contentHeight = getTotalHeight(c);
-		//console.log('content height: '+contentHeight);
 
 		if (c > 100) {
 			$('.slidey-wrap-all').stop(true).animate({
@@ -329,7 +327,7 @@ angular.module('App')
 
 		function getTotalHeight(el) {
 			if (!el || (typeof el === 'object' && el.length == 0)) return 0;
-			console.log('el height: '+$(el).height());
+			// console.log('el height: '+$(el).height());
 			return parseInt($(el).height()) + parseInt($(el).css('paddingTop')) + parseInt($(el).css('paddingBottom')) + parseInt($(el).css('marginTop')) + parseInt($(el).css('marginBottom'));
 		}
 	}
