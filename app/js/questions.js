@@ -85,7 +85,11 @@ angular.module('App')
 	              return true
 	              break;
 	            }       
-	          } else {
+	          } else if (qtype == "slider-buttons") {
+	          	if (ans == 1 && a.value == q.show.answer) {
+	          		return true;
+	          	}
+	    	  } else {
 	            if (a.answer == true) {
 	              return true
 	              break;
@@ -166,7 +170,7 @@ angular.module('App')
 
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
-			if (q.show.type != "slider-multiple") {
+			if (q.show.type != "slider-multiple" && q.show.type != "slider-buttons") {
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
@@ -395,7 +399,8 @@ angular.module('App')
 
   	$rootScope.next = function (done) {
   		console.log($rootScope.questionsData);
-  		console.log($rootScope.appliances);
+  		// console.log($rootScope.appliances);
+  		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';

@@ -846,6 +846,12 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 
+.answer-slider.no-jslider-value {
+	.jslider .jslider-value {
+		display: none !important;
+	}
+}
+
 // Results Page
 #results {
 	.price-slider {
@@ -899,6 +905,76 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 
 	.jslider-value div {
 		opacity: 1 !important;
+	}
+}
+
+/*slider-buttons*/
+.answers-main-content.answer-buttons {
+	padding-top: 40px;
+	font-family: $AG-Bold-Cnd;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.answer-button {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		background-color: #e2e2e2;
+		border-radius: 4px;
+		opacity: 0.3;
+		color: #7e7e7e;
+		cursor: default;
+
+		-webkit-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+		-moz-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+		box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+	}
+
+	.answer-button:not(:last-child) {
+		margin-right: 70px;
+	}
+
+	.answer-button.selected {
+		background-color: #67839b;
+		cursor: default;
+		color: white;
+	}
+
+	.answer-button.enabled {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.answer-button-content-wrapper {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		.answer-button-answer {
+			font-size: 14pt;
+			height: 21px;
+		}
+
+		.answer-button-label {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.answer-buttons.label-inches {
+	.answer-button-answer::after {
+		content: ' "';
+		position: absolute;
+		top: 1px;
 	}
 }
 
