@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams) {
 
   	$rootScope.$on('resize::resize', function() {
 	    if (window.innerWidth < 1024 && !$scope.isHomePage()){
@@ -12,6 +12,10 @@ angular.module('App')
             $('.slidey-wrap-all').css('height', '');
 	    }
 	});
+
+	$interval(function(){
+		$scope.resizeElements();
+	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
     		var q = ($location.path()).toString().replace("/question/","");
@@ -272,12 +276,12 @@ angular.module('App')
 		//}
 		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	
 
-		if (window.innerWidth <= 580 && !$scope.isHomePage()) {
+		/*if (window.innerWidth <= 580 && !$scope.isHomePage()) {
 			$timeout(function(){
 				//$(window).scrollTop(0);
 				$scope.resizeElements();
 			},200);
-		}
+		}*/
 	}
 
 	$scope.isHomePage = function() {
@@ -312,6 +316,12 @@ angular.module('App')
 
 
 		var c = $('.slidey.ng-hide-remove').height();
+
+		if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
+			return;
+		}
+		$scope.lastHeight = c;
+
 		if (c < 400) {
 			c = $('.slidey').not('.ng-hide').height();
 			if (c < 400) {
@@ -325,8 +335,6 @@ angular.module('App')
 			$('.slidey-wrap-all').stop(true).animate({
 				'height': c + 10
 			}, 0);
-		} else {
-			setTimeout(function(){$scope.resizeElements(++depth)},100);
 		}
 
 		function getTotalHeight(el) {
@@ -419,6 +427,7 @@ angular.module('App')
 		  		}
 		  		$rootScope.moveToQuestion(name,done)
 	  		} 
+	  		$scope.resizeElements();
   		}, 100);
 
   	} 

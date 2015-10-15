@@ -36,8 +36,6 @@ angular.module('App')
             }
           }
           qs.text[0].options.realtime = true;
-          qs.text[0].verticalOptions = angular.copy(qs.text[0].options);
-          qs.text[0].verticalOptions.vertical = true;
           qs.text[0].options.modelLabels = angular.copy(function (value) {
             //if (!!$rootScope.questionsData.question) {
               //if (qs.name == $rootScope.questionsData.question.name) {  
@@ -70,7 +68,9 @@ angular.module('App')
               }
             }
           })
-
+          
+          qs.text[0].verticalOptions = angular.copy(qs.text[0].options);
+          qs.text[0].verticalOptions.vertical = true;
 
 
         for (var i in qs.text[0].answers) {
