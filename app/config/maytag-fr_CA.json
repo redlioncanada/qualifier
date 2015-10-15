@@ -159,6 +159,7 @@
              "thumbnail_current": "img/icon-size-current.png",
              "text": [{
                  "question": "NOUS AVONS LE four encastré PARFAIT POUR VOTRE FAMILLE.",
+                 "questionHideOnMobile": true,
                  "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",

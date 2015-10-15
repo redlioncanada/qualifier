@@ -163,6 +163,7 @@
 			"text" : [
 				{
 					"question" : "We’ve got the perfect wall oven for your family.",
+					"questionHideOnMobile": true,
 					"question_more" : "Tell us how much space you have to fill.",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
