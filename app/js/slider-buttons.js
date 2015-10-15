@@ -19,6 +19,7 @@ angular.module('App')
   	}
 
     $scope.setButtonAnswer = function(answer) {
+        if (!!!answer.enabled) return;
         $rootScope.questionsData.question.text[1].answer = answer.value;
         $scope.setAnswer();
     }
