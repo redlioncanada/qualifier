@@ -170,7 +170,7 @@ angular.module('App')
 
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
-			if (q.show.type != "slider-multiple") {
+			if (q.show.type != "slider-multiple" && q.show.type != "slider-buttons") {
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
@@ -398,9 +398,9 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		// console.log($rootScope.questionsData);
+  		console.log($rootScope.questionsData);
   		// console.log($rootScope.appliances);
-  		console.log($rootScope.questionsData.questions);
+  		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
