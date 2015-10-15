@@ -108,7 +108,7 @@ html, body {
 	// Question
 	h2 {
 		text-transform: uppercase;
-		font-size: 32px;
+		font-size: 31px;
 		margin-top: 0px;
 		margin-bottom: 10px;
 		color: #333333;
@@ -357,6 +357,9 @@ div.mobile-app-nav-arrows {
         float: none !important;   
     }
 }
+.picture-4-container {
+    margin-top: 70px;
+}
 
 @media(max-width:1180px) and (min-width:1024px) {
 	.slidey {
@@ -406,9 +409,9 @@ div.mobile-app-nav-arrows {
 			}
 
 			.slider-large-label {
-				margin-left: -148px;
+				margin-left: -115px;
 				margin-right: initial;
-				top: 75px;
+				top: 72px;
 			}
 
 			.slider-wrap {
@@ -508,7 +511,10 @@ div.mobile-app-nav-arrows {
     }
     .picture-3-container {
         width: 100% !important;
-    }    
+    }
+    .label-text {
+        font-size: 15px !important;
+    }
 }
 
 @media(max-width:1023px) {
@@ -878,6 +884,9 @@ div.mobile-app-nav-arrows {
     }
     .boxes-icon-5-container {
         width: 400px;   
+    }
+    .label-text {
+        font-size: 15px !important;
     }
 }
 
