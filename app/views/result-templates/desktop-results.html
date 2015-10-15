@@ -13,7 +13,7 @@
 							<div class="colourBar">
 								<ul class="color-wrapper">
 									<li ng-repeat="colour in a.colours" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour;selectPicker(a,colour);" ng-class="{selected: a.picker.colourCode==colour.colourCode}">
-										<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png" />
+										<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode.toString()}}-MT.png" />
 									</li>
 								</ul>
 							</div>
@@ -31,8 +31,7 @@
 								</span>
 								<span class="product-sku">
 									<span bo-text="brandData.apptext.model"></span>:&nbsp; 
-									<span ng-if="a.appliance!='Laundry'">{{a.picker.sku}}</span> 
-									<span ng-if="a.appliance=='Laundry'">{{a.picker.washerSku}}/{{a.picker.dryerSku}}</span> 
+									<span>{{a.picker.sku}}</span>  
 								</span>
 
 							</div>

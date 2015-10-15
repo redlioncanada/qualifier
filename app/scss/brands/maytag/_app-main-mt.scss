@@ -421,6 +421,12 @@ header.header-desktop {
 		}
 	}
 
+	div[ng-controller="SliderButtonsCtrl"] .answers-main-content {
+		&.answer-slider {
+			margin-top: 40px;
+		}
+	}
+
 	.answers-main-content {
 		&.label-inches .jslider-value span::after {
 			content: "\"";
