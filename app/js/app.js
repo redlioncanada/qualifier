@@ -73,7 +73,6 @@ App.filter('orderByOrder', function() {
 
 App.filter('rearrange', function() {
   return function(items, num) {
-    console.log(items);
       if (typeof items === 'undefined') return;
       var temp = items[0];
       items[0] = items[1];
@@ -248,7 +247,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
-    $rootScope.locale = 'fr_CA';
+    $rootScope.locale = 'en_CA';
     $rootScope.isEnglish = $rootScope.locale == 'en_CA';
     $rootScope.isFrench = $rootScope.locale == 'fr_CA';
     $rootScope.brand = "maytag";
@@ -278,7 +277,7 @@ console.log(res.products);
                       if ($rootScope.appliances[key].appliance == "Washers") {
 
                         for (var i in item.colours) {
-                          $rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
+                          //$rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
                           if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
                             $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
                           } else {

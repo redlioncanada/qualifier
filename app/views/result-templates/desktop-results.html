@@ -13,7 +13,7 @@
 							<div class="colourBar">
 								<ul class="color-wrapper">
 									<li ng-repeat="colour in a.colours" ng-click="expandPriceRange(colour.prices.CAD);a.picker=colour;selectPicker(a,colour);" ng-class="{selected: a.picker.colourCode==colour.colourCode}">
-										<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode.toString()}}-MT.png" />
+										<img ng-src="http://www.maytag.com/digitalassets/ColorBars/{{colour.colourCode}}-MT.png"  />
 									</li>
 								</ul>
 							</div>
