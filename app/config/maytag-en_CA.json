@@ -177,7 +177,7 @@
 						"to" : 4,      
 					    "step": 0.0001,
 					    "dimension_label" : "WIDTH",
-					    "scale": ["None", "27\"", "28\"", "29\"", "30\""]   
+					    "scale": ["No Preference", "27\"", "28\"", "29\"", "30\""]   
 					},
 					"answers" : {
 						"0" : {
@@ -1508,12 +1508,12 @@
 						"to" : 3,      
 					    "step": 0.0001,
 					    "dimension_label": "WIDTH",
-					    "scale": ["None","30\"","33\"", "36\""]       
+					    "scale": ["No Preference","30\"","33\"", "36\""]       
 					},
 					"answers" : {
 						"0" : {
 							"value" : 0,
-							"text" : "None",
+							"text" : "No Preference",
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {

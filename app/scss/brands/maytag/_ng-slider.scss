@@ -919,8 +919,15 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 		margin: 0;
 	}
 
-	.answer-button {
+	.answer-button-wrapper {
 		display: inline-block;
+	}
+
+	.answer-button-wrapper:not(:last-child) {
+		margin-right: 70px;
+	}
+
+	.answer-button {
 		width: 60px;
 		height: 60px;
 		background-color: #e2e2e2;
@@ -932,10 +939,6 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 		-webkit-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
 		-moz-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
 		box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
-	}
-
-	.answer-button:not(:last-child) {
-		margin-right: 70px;
 	}
 
 	.answer-button.selected {
@@ -1038,4 +1041,21 @@ div[ng-class="fr_CA"] {
 		}
 	}
 
+	.answers-main-content.answer-buttons {
+		li.answer-button-wrapper {
+			margin-right: 0 !important;
+			width: 50%;
+
+		}
+
+		.answer-button-wrapper:nth-child(odd) .answer-button {
+			float: right;
+			margin-right: 10px;
+		}
+
+		.answer-button-wrapper:nth-child(even) .answer-button {
+			float: left;
+			margin-left: 10px;
+		}
+	}
 }
