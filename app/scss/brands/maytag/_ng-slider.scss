@@ -835,6 +835,17 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	display: none;
 }
 
+.scale-left .vertical {
+	.jslider-scale {
+		margin-left: -45px;
+
+		span ins {
+			margin-left: -116px !important;
+			text-align: right !important;
+		}
+	}
+}
+
 .last-answer-active {
 	.jslider-value {
 		right: -32px !important;
@@ -958,6 +969,8 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
 
 		p {
 			margin: 0;
@@ -1010,6 +1023,26 @@ div[ng-class="fr_CA"] {
 	}
 }
 
+@media(max-width:1125px) {
+	.answers-main-content.answer-buttons {
+		position: absolute;
+		top: 5px;
+		width: 50%;
+		left: 50%;
+
+		li.answer-button-wrapper {
+			margin-right: 0 !important;
+			margin-top: 10px;
+			width: 100%;
+		}
+
+		.answer-button {
+			float: left;
+			margin-left: 45px;
+		}
+	}
+}
+
 @media(max-width: 580px) {
 	div.price-slider .jslider {
 		.jslider-bg {
@@ -1040,23 +1073,6 @@ div[ng-class="fr_CA"] {
 			span {
 				font-size: 20px !important;
 			}
-		}
-	}
-
-	.answers-main-content.answer-buttons {
-		position: absolute;
-		top: 5px;
-		width: 50%;
-
-		li.answer-button-wrapper {
-			margin-right: 0 !important;
-			margin-top: 10px;
-			width: 100%;
-		}
-
-		.answer-button {
-			float: right;
-			margin-right: 45px;
 		}
 	}
 }

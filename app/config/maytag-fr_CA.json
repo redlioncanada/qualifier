@@ -1217,7 +1217,7 @@
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos réfrigérateurs sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
                  "type": "slider-buttons",
-                 "classes" : "slider-labels left-tag no-jslider-value four",
+                 "classes" : "slider-labels left-tag no-jslider-value four scale-left",
                 "oneAnswer" : false,
                 "answer" : 0,
                 "options" : { 
@@ -1386,7 +1386,7 @@
              }]
          },
          "Fridges - Organization": {
-             "next": "Fridges - Water",
+             "next": "Fridges - Waterline",
              "previous": "Fridges - Capacity",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-organization-current.png",
@@ -1442,155 +1442,67 @@
                  }]
              }]
          },
-         "Fridges - Water": {
-             "next": "Fridges - Ice",
-             "previous": "Fridges - Organization",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-water-current.png",
-             "thumbnail_text": "Water",
-             "thumbnail_text_fr": "Eau",
-             "text": [{
-                 "question": "Vous vous réveillez assoiffé au beau milieu de la nuit, alors vous prenez…",
-                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’EAU?",
-                 "explanation": "Certains de nos modèles comportent un distributeur d’eau. En comprenant quelle est votre consommation d’eau, nous pouvons recommander le réfrigérateur qui répondra le mieux à vos besoins.",
-                 "type": "checkbox-4",
-                 "oneAnswer": false,
-                 "answers": [{
-                     "text": "Une bonne bouteille d’eau froide",
-                     "value": "bottle of water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 1
-                 }, {
-                     "text": "Une boisson provenant de notre refroidisseur d’eau",
-                     "value": "drink from our water cooler",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 2
-                 }, {
-                     "text": "Un verre d’eau du robinet",
-                     "value": "glass of tap water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 3
-                 }, {
-                     "text": "Un verre de lait ou de jus",
-                     "value": "glass of milk or juice",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {},
-                     "order": 4
-                 }, {
-                     "text": "Un verre d’eau filtrée",
-                     "value": "glass of filtered water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 5
-                 }]
-             }]
-         },
-         "Fridges - Ice": {
-             "next": "Fridges - Orientation",
-             "previous": "Fridges - Water",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-ice-current.png",
-             "thumbnail_text": "Ice",
-             "thumbnail_text_fr": "Glaçons",
-             "text": [{
-                 "question": "J’AIME AJOUTER DES GLAÇONS À…",
-                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DES GLAÇONS?",
-                 "explanation": "Certains de nos modèles comportent un distributeur de glaçons. En comprenant votre consommation de glaçons, nous pouvons recommander un réfrigérateur adapté à votre style de vie.",
-                 "type": "boxes-icon-5-checkbox",
-                 "oneAnswer": false,
-                 "answers": [{
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes boissons gazeuses",
-                     "value": "soft drink",
-                     "image": "img/icon-thumb-softdrinks.png",
-                     "hover": "img/icon-thumb-softdrinks-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 1
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes cocktails",
-                     "value": "cocktails",
-                     "image": "img/icon-thumb-cocktails.png",
-                     "hover": "img/icon-thumb-cocktails-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 2
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mon eau",
-                     "value": "water",
-                     "image": "img/icon-thumb-water.png",
-                     "hover": "img/icon-thumb-water-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 3
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes frappés aux fruits",
-                     "value": "smoothies",
-                     "image": "img/icon-thumb-smoothies.png",
-                     "hover": "img/icon-thumb-smoothies-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 4
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Une glacière pour les réceptions ",
-                     "value": "cooler",
-                     "image": "img/icon-thumb-cooler.png",
-                     "hover": "img/icon-thumb-cooler-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 5
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Rien",
-                     "value": "nothing",
-                     "image": "img/icon-thumb-nothing.png",
-                     "hover": "img/icon-thumb-nothing-active.png",
-                     "scoring": {},
-                     "order": 6
-                 }]
-             }]
-         },
+         "Fridges - Waterline" : {
+            "next" : "Fridges - Orientation",
+            "previous" : "Fridges - Organization",
+            "thumbnail_type" : "image",
+            "thumbnail_current" : "img/icon-water-current.png",
+            "thumbnail_text" : "Waterline (FR)",
+            "text" : [
+                {
+                    "question" : "Does your kitchen have an existing waterline? (FR)",
+                    "sub_question" : "SÉLECTIONNEZ UNE RÉPONSE",
+                    "explanation_title" : "Why are you asking me about a waterline? (FR)",
+                    "explanation" : "(FR) Did you know that your kitchen needs a waterline in order for your fridge to dispense water and ice? We want to make sure that you know about this requirement before we recommend the perfect fridge to fit your lifestyle.",
+                    "type" : "radio-4",
+                    "oneAnswer" : true,
+                    "answers" : [
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "Yes - it's great because we love water and ice dispensed from our fridge (FR)",
+                            "value" : "yes",
+                            "scoring" : {
+                                "indoorDispenser" : 3
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - but we would consider installing one so our fridge could dispense water and ice (FR)",
+                            "value" : "nobutyes",
+                            "scoring" : {
+                                "indoorDispenser" : 1
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - we don't have a waterline and would prefer not to install one (FR)",
+                            "value" : "no",
+                            "scoring" : {
+                                "indoorDispenser" : -30
+                            },
+                            "order" : 3
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "I'm not sure (FR)",
+                            "value" : "notsure",
+                            "scoring" : {
+                            },
+                            "order" : 4
+                        }
+                    ]
+                }
+            ]
+        },
          "Fridges - Orientation": {
              "next": "Fridges - Style",
-             "previous": "Fridges - Organization",
+             "previous": "Fridges - Waterline",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",
