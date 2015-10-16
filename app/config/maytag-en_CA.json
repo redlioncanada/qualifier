@@ -691,7 +691,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A baker always covered in flour\"",
+							"text" : "\"A baker always covered in flour.\"",
 							"value" : "baker",
 							"scoring" : {
 								"trueConvection" : 1
@@ -701,7 +701,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"A home chef\"",
+							"text" : "\"A home chef.\"",
 							"value" : "home chef",
 							"scoring" : {
 								"trueConvection" : 1
@@ -711,7 +711,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Enjoys trying new recipes\"",
+							"text" : "\"Enjoys trying new recipes.\"",
 							"value" : "both",
 							"scoring" : {
 								"trueConvection" : 1
@@ -721,7 +721,7 @@
 						{
 							"thumbnail" : "img/icon-convection.png",
 							"thumbnail_current" : "img/icon-convection-current.png",
-							"text" : "\"Someone that cooks because they have to\"",
+							"text" : "\"Someone that cooks because they have to.\"",
 							"value" : "neither",
 							"scoring" : {
 							},
@@ -2185,7 +2185,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "Yes - My kitchen opens on to another room",
+							"text" : "Yes - my kitchen opens on to another room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-yes.png",
 							"value" : "yes",
 							"scoring" : {
@@ -2196,7 +2196,7 @@
 						{
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
-							"text" : "No - My kitchen is its own room",
+							"text" : "No - my kitchen is its own room",
 							"image" : "/img/Dishwasher_Q5_MT-open-concept-no.png",
 							"value" : "no",
 							"scoring" : {

@@ -453,7 +453,7 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 			ins { 
 				font-family: $AG-Bold-Cnd;
 				text-transform: uppercase;
-				font-size: 19px; 
+				font-size: 17px; 
 				text-decoration: none; 
 				position: absolute; 
 				left: 0px; 
@@ -463,6 +463,7 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 				width: 200px;
 				left: -100px;
 				text-align: center;
+                line-height: 16px;
 			}
 		}
 		.jslider-label, .jslider-value {
