@@ -769,7 +769,7 @@ a.answer-box.picture-4 {
 
 				span {
 					border-left: none !important;
-					left: 30px;
+					left: 35px;
 					width: 10px;
 					display: table;
 				}
@@ -928,6 +928,9 @@ a.answer-box.picture-4 {
     .ng-binding::first-letter {
         text-transform: capitalize;        
     }
+    .regular-3-container {
+        width: 100%;
+    }
 }
 
 @media(max-width:750px) {
@@ -985,6 +988,9 @@ a.answer-box.picture-4 {
     .jslider .jslider-scale span {
         left: 15px!important;
     }
+    .left-tag.no-jslider-value.four.scale-left > div > span > table > tbody > tr > td > div.jslider-scale > span {
+        left: 0 !important;
+    }
 
 	.slider-large-label-wrap {
 
@@ -998,7 +1004,8 @@ a.answer-box.picture-4 {
 	}
 
 	.slider-large-label-wrap .slider-large-label {
-		font-size: 18px !important;
+		font-size: 11pt !important;
+        color: #999C9C !important;
 	}
 
 	.answers-category {
@@ -1269,7 +1276,7 @@ a.answer-box.picture-4 {
         height: 30px !important;
     }
     .slider-large-label-wrap .slider-large-label {
-			top: -20px !important;
+			top: -12px !important;
 			margin-right: -1px !important;
 	}
 }
