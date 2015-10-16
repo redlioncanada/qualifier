@@ -411,7 +411,7 @@ a.answer-box.picture-4 {
 
 		div[ng-controller="SliderCtrl"] {
 			.slider-wrap {
-				margin-left: 50px;
+				/*margin-left: 50px;*/
 			}
 		}
 
@@ -544,7 +544,7 @@ a.answer-box.picture-4 {
 		width: 0px !important;
 
 		.slider-large-label {
-            left: -21px;
+            left: -8px;
 			margin-right: 0px !important;
 		}
 	}
@@ -921,6 +921,9 @@ a.answer-box.picture-4 {
     .label-text {
         font-size: 15px !important;
     }
+    .ng-binding::first-letter {
+        text-transform: capitalize;        
+    }
 }
 
 @media(max-width:750px) {
@@ -1260,9 +1263,6 @@ a.answer-box.picture-4 {
     }
     .price-slider {
         height: 30px !important;
-    }
-    .ng-binding::first-letter {
-        text-transform: capitalize;        
     }
     .slider-large-label-wrap .slider-large-label {
 			top: -20px !important;
