@@ -142,8 +142,7 @@ html, body {
 }
 div.mobile-app-nav-arrows {
 	position: relative;
-	height: 50px;
-	margin-bottom: 10px;
+	height: 25px;
 
 	.btn-next, .btn-prev {bottom: initial;}
 	.btn-next {right: 35px;}
@@ -550,6 +549,17 @@ a.answer-box.picture-4 {
 		.slider-large-label {
             left: -8px;
 			margin-right: 0px !important;
+		}
+	}
+}
+
+@media(min-width:1600px) {
+	.app-nav-arrows {
+		.btn-prev {
+			left: 10%;
+		}
+		.btn-next {
+			right: 10%;
 		}
 	}
 }
@@ -1077,7 +1087,7 @@ a.answer-box.picture-4 {
 	}
 
 	.app-content-main-top-left {
-		min-height: 62px;
+		min-height: 62px !important;
 		h2 {
 			font-size: 12pt;
 		}

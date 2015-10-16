@@ -492,7 +492,7 @@
 			]
 		},
 		"Cooking - Ranges - Energy" : {
-			"next" : "Cooking - Ranges - Capacity",
+			"next" : "Cooking - Ranges - Style",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Energy",
@@ -551,9 +551,58 @@
 				}											
 			]
 		},
+		"Cooking - Ranges - Style" : {
+			"next" : "Cooking - Ranges - Capacity",
+			"previous" : "Cooking - Ranges - Energy",
+			"thumbnail_type" : "image",
+			"thumbnail_current" : "img/icon-style-current.png",
+			"thumbnail_text" : "Style",
+			"text" : [
+				{
+					"question" : "What style of range do you prefer?",
+					"sub_question" : "Select one",
+					"explanation_title" : "Why are you asking me about style?",
+					"explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you.",
+					"type" : "boxes-picture-3-radio",
+					"oneAnswer" : true,
+					"answers" : [
+						{
+							"thumbnail" : "img/icon-orientation.png",
+							"thumbnail_current" : "img/icon-orientation-current.png",
+							"image" : "img/Range-Q2-frontcontrol.jpg",
+							"text" : "Front Control",
+							"value" : "FrontControl",
+							"scoring" : {
+							},
+							"order" : 1
+						},
+						{
+							"thumbnail" : "img/icon-orientation.png",
+							"thumbnail_current" : "img/icon-orientation-current.png",
+							"image" : "img/Range-Q2-rearcontrol.jpg",
+							"text" : "Rear Control",
+							"value" : "RearControl",
+							"scoring" : {
+							},
+							"order" : 2
+						},
+						{
+							"thumbnail" : "img/icon-orientation.png",
+							"thumbnail_current" : "img/icon-orientation-current.png",
+							"image" : "img/Range-Q2-nopreference.jpg",
+							"text" : "No Preference",
+							"value" : "No Preference",
+							"scoring" : {
+							},
+							"order" : 3
+						}
+					]
+				}
+			]
+		},
 		"Cooking - Ranges - Capacity" : {
 			"next" : "Cooking - Ranges - Cooking Style",
-			"previous" : "Cooking - Ranges - Energy",
+			"previous" : "Cooking - Ranges - Style",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Capacity",
 			"thumbnail_current" : "img/icon-capacity-current.png",
