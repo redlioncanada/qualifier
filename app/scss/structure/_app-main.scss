@@ -553,6 +553,17 @@ a.answer-box.picture-4 {
 	}
 }
 
+@media(min-width:1600px) {
+	.app-nav-arrows {
+		.btn-prev {
+			left: 10%;
+		}
+		.btn-next {
+			right: 10%;
+		}
+	}
+}
+
 @media(max-width:1023px) {
 
 	.main {
