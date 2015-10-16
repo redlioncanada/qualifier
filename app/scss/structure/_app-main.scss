@@ -279,9 +279,11 @@ div.mobile-app-nav-arrows {
 	}
 	.btn-prev {
 		left: 25px;
+        z-index: 10;
 	}
 	.btn-next {
 		right: 25px;
+        z-index: 10;
 	}
 	.btn {
 		padding: 3px 18px;
@@ -538,6 +540,14 @@ a.answer-box.picture-4 {
             }
         }
     }
+    .slider-large-label-wrap {
+		width: 0px !important;
+
+		.slider-large-label {
+            left: -21px;
+			margin-right: 0px !important;
+		}
+	}
 }
 
 @media(max-width:1023px) {
@@ -649,8 +659,8 @@ a.answer-box.picture-4 {
 		position: absolute;
 
 		.slider-large-label {
-			top: -15px !important;
-			margin-right: 98px !important;
+			top: -30px !important;
+			margin-right: -13px !important;
 		}
 	}
 
@@ -1240,6 +1250,10 @@ a.answer-box.picture-4 {
     .ng-binding::first-letter {
         text-transform: capitalize;        
     }
+    .slider-large-label-wrap .slider-large-label {
+			top: -20px !important;
+			margin-right: -1px !important;
+	}
 }
 
 .print-page {
