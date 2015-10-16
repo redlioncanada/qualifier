@@ -264,9 +264,9 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
             "img/slider-pointer.png"
           ];
 
-          $resource("http://mymaytag.wpc-stage.com/api_test/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
-console.log(res.products);
+// console.log(res.products);
                 var relcodes = {
                   'M1' : 'DC',
                   'WH' : 'DW'
@@ -282,6 +282,12 @@ console.log(res.products);
                             $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
                           } else {
                             $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
+                          }
+
+                          for (var j in item.dryers[0].colours) {
+                            if (item.dryers[0].colours[j].colourCode == item.colours[i].colourCode) {
+                              item.colours[i].dryersku = item.dryers[0].colours[j].sku;
+                            }
                           }
 
                           /*if (!!!$rootScope.appliances[key].dryerImage && $rootScope.appliances[key].dryers[0].image.indexOf(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
@@ -369,6 +375,8 @@ console.log(res.products);
                       } 
                     }
                 })
+
+console.log($rootScope.appliances);
                 $rootScope.hasanswers = {};
                 var httpparams = (decodeURI($location.$$absUrl)).replace(/\+/g, ' ').split("?");
                 if (1 in httpparams) {
