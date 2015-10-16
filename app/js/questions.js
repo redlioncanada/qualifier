@@ -14,7 +14,13 @@ angular.module('App')
 	});
 
 	$interval(function(){
-		$scope.resizeElements();
+		if (window.innerWidth < 1024) {
+			$scope.resizeElements();
+		} else if (window.innerWidth >= 1024) {
+	    	//reset header height to it's css value
+            $('.app-content-main-top').css('height', '');
+            $('.slidey-wrap-all').css('height', '');
+	    }
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
@@ -22,6 +28,7 @@ angular.module('App')
 
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
+    			$location.replace();
     		}
 
     		if (!!$rootScope.questionsData.question) {
@@ -427,7 +434,6 @@ angular.module('App')
 		  		}
 		  		$rootScope.moveToQuestion(name,done)
 	  		} 
-	  		$scope.resizeElements();
   		}, 100);
 
   	} 

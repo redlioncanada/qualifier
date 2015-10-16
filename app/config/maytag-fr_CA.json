@@ -581,11 +581,11 @@
              "thumbnail_text_fr": "Style",
              "text": [{
                  "question": "POURQUOI CUISINEZ-VOUS?",
-                 "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
+                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Toutes nos cuisinières sont dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre cuisinière afin de pouvoir recommander celle qui convient le mieux à votre style de vie.",
-                 "type": "radio-4",
-                 "oneAnswer": true,
+                 "type": "checkbox-4",
+                 "oneAnswer": false,
                  "answers": [{
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
@@ -1145,168 +1145,6 @@
                          "cycleOptions": 1
                      },
                      "order": 6
-                 }]
-             }]
-         },
-         "Washers - Sensor": {
-             "next": "Washers - Wrinkles",
-             "previous": "Washers - Fabrics",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-features-current.png",
-             "thumbnail_text": "Features",
-             "thumbnail_text_fr": "Caractéristiques",
-             "text": [{
-                 "question": "RÉ-AJUSTEZ-VOUS FRÉQUEMMENT LA DURÉE DU PROGRAMME DE SÉCHAGE?",
-                 "sub_question": "FAITES GLISSER POUR RÉPONDRE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du temps DE SÉCHAGE?",
-                 "explanation": "Saviez-vous que certains de nos modèles sont équipés de la technologie de détection d’humidité perfectionnée? Cette caractéristique intuitive assure que vos vêtements sont séchés à la perfection, à chaque fois",
-                 "type": "slider",
-                 "oneAnswer": false,
-                 "classes": "slider-labels four",
-                 "answer": 0,
-                 "options": {
-                     "from": 0,
-                     "to": 3,
-                     "step": 0.0001,
-                     "dimension": "",
-                     "scale": ["JAMAIS", "PARFOIS", "TRÈS SOUVENT", "TOUJOURS"]
-                 },
-                 "answers": {
-                     "0": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 0,
-                         "text": "JAMAIS",
-                         "scoring": {}
-                     },
-                     "1": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 1,
-                         "text": "Parfois",
-                         "scoring": {
-                             "minCycles": 1
-                         }
-                     },
-                     "2": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 2,
-                         "text": "TRÈS SOUVENT",
-                         "scoring": {
-                             "maxCycles": 1
-                         }
-                     },
-                     "3": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 3,
-                         "text": "TOUJOURS",
-                         "scoring": {
-                             "maxCycles": 2
-                         }
-                     }
-                 }
-             }]
-         },
-         "Washers - Wrinkles": {
-             "next": "Washers - Fuel Type",
-             "previous": "Washers - Sensor",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-wrinkles-current.png",
-             "thumbnail_text": "Wrinkles",
-             "thumbnail_text_fr": "Faux plis",
-             "text": [{
-                 "question": "à quelle fréquence utilisez-vous votre fer à repasser?",
-                 "sub_question": "FAITES GLISSER POUR RÉPONDRE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du repassage?",
-                 "explanation": "Certains de nos appareils sont conçus pour réduire au minimum les faux plis. Si vous nous aidez à déterminer vos besoins, nous pourrons mieux y répondre.",
-                 "type": "slider",
-                 "oneAnswer": false,
-                 "classes": "slider-labels four",
-                 "answer": 0,
-                 "options": {
-                     "from": 0,
-                     "to": 3,
-                     "step": 0.0001,
-                     "dimension": "",
-                     "scale": ["JAMAIS", "UNIQUEMENT AVANT<br/>UN ÉVÉNEMENT IMPORTANT", "PLUSIEURS FOIS PAR MOIS", "TOUS LES JOURS"]
-                 },
-                 "answers": {
-                     "0": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 0,
-                         "text": "JAMAIS",
-                         "scoring": {}
-                     },
-                     "1": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 1,
-                         "text": "UNIQUEMENT AVANT UN ÉVÉNEMENT IMPORTANT",
-                         "scoring": {
-                             "washerWrinkleControl": 1,
-                             "dryerWrinkleControl": 1
-                         }
-                     },
-                     "2": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 2,
-                         "text": "PLUSIEURS FOIS PAR MOIS",
-                         "scoring": {
-                             "washerWrinkleControl": 2,
-                             "dryerWrinkleControl": 2
-                         }
-                     },
-                     "3": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 3,
-                         "text": "TOUS LES JOURS",
-                         "scoring": {
-                             "washerWrinkleControl": 3,
-                             "dryerWrinkleControl": 3
-                         }
-                     }
-                 }
-             }]
-         },
-         "Washers - Fuel Type": {
-             "next": null,
-             "previous": "Washers - Wrinkles",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-fueltype-current.png",
-             "thumbnail_text": "Fuel Type",
-             "thumbnail_text_fr": "Type d’alimentation",
-             "text": [{
-                 "question": "PRÉFÉRERIEZ-VOUS UNE SÉCHEUSE À GAZ OU ÉLECTRIQUE?",
-                 "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET De l’alimentation?",
-                 "explanation": "Certaines salles de lavage sont équipées pour accueillir les sécheuses à gaz. La sélection de votre préférence nous aidera à filtrer les résultats de recherche et à fournir l’option qui convient le mieux à votre foyer.",
-                 "type": "boxes-icon-2-radio",
-                 "oneAnswer": true,
-                 "answers": [{
-                     "text": "À gaz",
-                     "value": "gas",
-                     "image": "img/icon-thumb-gas.png",
-                     "hover": "img/icon-thumb-gas-active.png",
-                     "thumbnail": "img/icon-fueltype.png",
-                     "thumbnail_current": "img/icon-fueltype-current.png",
-                     "scoring": {},
-                     "order": 1
-                 }, {
-                     "text": "Électrique",
-                     "value": "electric",
-                     "image": "img/icon-thumb-electric.png",
-                     "hover": "img/icon-thumb-electric-active.png",
-                     "thumbnail": "img/icon-fueltype.png",
-                     "thumbnail_current": "img/icon-fueltype-current.png",
-                     "scoring": {
-                         "gas": -30
-                     },
-                     "order": 2
                  }]
              }]
          },
