@@ -1023,7 +1023,7 @@ div[ng-class="fr_CA"] {
 	}
 }
 
-@media(max-width:1125px) {
+@media(max-width:1024px) {
 	.answers-main-content.answer-buttons {
 		position: absolute;
 		top: 5px;
@@ -1032,7 +1032,8 @@ div[ng-class="fr_CA"] {
 
 		li.answer-button-wrapper {
 			margin-right: 0 !important;
-			margin-top: 10px;
+			margin-top: 50px;
+            margin-left: 40px;
 			width: 100%;
 		}
 
@@ -1075,4 +1076,8 @@ div[ng-class="fr_CA"] {
 			}
 		}
 	}
+    li.answer-button-wrapper {
+			margin-top: 10px !important;
+            margin-left: 0px !important;
+		}
 }

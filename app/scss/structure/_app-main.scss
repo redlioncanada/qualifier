@@ -555,6 +555,10 @@ a.answer-box.picture-4 {
 }
 
 @media(max-width:1023px) {
+    
+ .left-tag.no-jslider-value.four.scale-left > div > span > table > tbody > tr > td > div.jslider-scale > span {
+        left: -19px !important;
+    }
 
 	.main {
 		overflow: hidden;
@@ -931,6 +935,12 @@ a.answer-box.picture-4 {
     .regular-3-container {
         width: 100%;
     }
+    .slider-large-label-wrap .slider-large-label {
+		font-size: 13pt !important;
+        color: #999C9C !important;
+        top: -23px !important;
+        margin-right: -9px !important;
+	}
 }
 
 @media(max-width:750px) {
@@ -1006,6 +1016,8 @@ a.answer-box.picture-4 {
 	.slider-large-label-wrap .slider-large-label {
 		font-size: 11pt !important;
         color: #999C9C !important;
+        top: -30px !important;
+        margin-right: -13px !important;
 	}
 
 	.answers-category {
