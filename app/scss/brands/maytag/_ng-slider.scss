@@ -1042,20 +1042,19 @@ div[ng-class="fr_CA"] {
 	}
 
 	.answers-main-content.answer-buttons {
+		position: absolute;
+		top: 5px;
+		width: 50%;
+
 		li.answer-button-wrapper {
 			margin-right: 0 !important;
-			width: 50%;
-
+			margin-top: 10px;
+			width: 100%;
 		}
 
-		.answer-button-wrapper:nth-child(odd) .answer-button {
+		.answer-button {
 			float: right;
-			margin-right: 10px;
-		}
-
-		.answer-button-wrapper:nth-child(even) .answer-button {
-			float: left;
-			margin-left: 10px;
+			margin-right: 45px;
 		}
 	}
 }
