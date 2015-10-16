@@ -451,7 +451,7 @@
 					    "to": 3,
 					    "step": 0.0001,
 					    "dimension": "",
-					    "dimension_label": "WIDTH",
+					    "dimension_label": "",
 					    "scale": ["Not a Concern","Somewhat a concern","Important","Very Important"]       
 					},
 					"answers" : {
@@ -1323,8 +1323,8 @@
 			"thumbnail_text" : "Size",
 			"text" : [
 				{
-					"question" : "We&#39;ve got the perfect fridge for your family.",
-					"question_more" : "Just tell us how much space you have to fill.",
+					"question" : "What size fridge do you need?",
+					"question_more" : "",
 					"sub_question" : "Slide to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
