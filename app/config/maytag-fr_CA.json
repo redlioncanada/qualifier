@@ -581,11 +581,11 @@
              "thumbnail_text_fr": "Style",
              "text": [{
                  "question": "POURQUOI CUISINEZ-VOUS?",
-                 "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
+                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Toutes nos cuisinières sont dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre cuisinière afin de pouvoir recommander celle qui convient le mieux à votre style de vie.",
-                 "type": "radio-4",
-                 "oneAnswer": true,
+                 "type": "checkbox-4",
+                 "oneAnswer": false,
                  "answers": [{
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",

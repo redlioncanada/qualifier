@@ -1038,7 +1038,10 @@ a.answer-box.picture-4 {
 	}
 
 	.app-content-main-top-left {
-		h2 {font-size: 12pt;}
+		h2 {
+			font-size: 12pt;
+			min-height: 34px;
+		}
 	}
 
 	a.answer-box.boxes-icon-5 {

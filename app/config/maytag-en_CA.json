@@ -623,11 +623,11 @@
 			"text" : [
 				{
 					"question" : "Why do you cook?",
-					"sub_question" : "Select one",
+					"sub_question" : "Select all that apply",
 					"explanation_title" : "Why Are You Asking Me About Cooking?",
 					"explanation" : "Our ranges all have unique features. We want to get a better idea of how you use it so we can recommend the perfect one for your needs.",
-					"type" : "radio-4",
-					"oneAnswer" : true,
+					"type" : "checkbox-4",
+					"oneAnswer" : false,
 					"answers" : [
 						{
 							"thumbnail" : "img/icon-style.png",

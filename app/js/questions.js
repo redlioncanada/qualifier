@@ -14,7 +14,13 @@ angular.module('App')
 	});
 
 	$interval(function(){
-		$scope.resizeElements();
+		if (window.innerWidth < 1024) {
+			$scope.resizeElements();
+		} else if (window.innerWidth >= 1024) {
+	    	//reset header height to it's css value
+            $('.app-content-main-top').css('height', '');
+            $('.slidey-wrap-all').css('height', '');
+	    }
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
