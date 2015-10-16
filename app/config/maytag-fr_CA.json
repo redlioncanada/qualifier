@@ -1217,7 +1217,7 @@
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos réfrigérateurs sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
                  "type": "slider-buttons",
-                 "classes" : "slider-labels left-tag no-jslider-value four",
+                 "classes" : "slider-labels left-tag no-jslider-value four scale-left",
                 "oneAnswer" : false,
                 "answer" : 0,
                 "options" : { 
