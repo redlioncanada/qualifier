@@ -1386,7 +1386,7 @@
              }]
          },
          "Fridges - Organization": {
-             "next": "Fridges - Water",
+             "next": "Fridges - Waterline",
              "previous": "Fridges - Capacity",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-organization-current.png",
@@ -1442,9 +1442,67 @@
                  }]
              }]
          },
+         "Fridges - Waterline" : {
+            "next" : "Fridges - Water",
+            "previous" : "Fridges - Organization",
+            "thumbnail_type" : "image",
+            "thumbnail_current" : "img/icon-water-current.png",
+            "thumbnail_text" : "Waterline (FR)",
+            "text" : [
+                {
+                    "question" : "Does your kitchen have an existing waterline? (FR)",
+                    "sub_question" : "SÉLECTIONNEZ UNE RÉPONSE",
+                    "explanation_title" : "Why are you asking me about a waterline? (FR)",
+                    "explanation" : "(FR) Did you know that your kitchen needs a waterline in order for your fridge to dispense water and ice? We want to make sure that you know about this requirement before we recommend the perfect fridge to fit your lifestyle.",
+                    "type" : "radio-4",
+                    "oneAnswer" : true,
+                    "answers" : [
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "Yes - it's great because we love water and ice dispensed from our fridge (FR)",
+                            "value" : "yes",
+                            "scoring" : {
+                                "indoorDispenser" : 3
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - but we would consider installing one so our fridge could dispense water and ice (FR)",
+                            "value" : "nobutyes",
+                            "scoring" : {
+                                "indoorDispenser" : 1
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - we don't have a waterline and would prefer not to install one (FR)",
+                            "value" : "no",
+                            "scoring" : {
+                                "indoorDispenser" : -30
+                            },
+                            "order" : 3
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "I'm not sure (FR)",
+                            "value" : "notsure",
+                            "scoring" : {
+                            },
+                            "order" : 4
+                        }
+                    ]
+                }
+            ]
+        },
          "Fridges - Water": {
              "next": "Fridges - Ice",
-             "previous": "Fridges - Organization",
+             "previous": "Fridges - Waterline",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-water-current.png",
              "thumbnail_text": "Water",
