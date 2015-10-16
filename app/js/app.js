@@ -278,11 +278,11 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
                         for (var i in item.colours) {
                           //$rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
-                          if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                          /*if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
                             $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
                           } else {
                             $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
-                          }
+                          }*/
 
                           for (var j in item.dryers[0].colours) {
                             if (item.dryers[0].colours[j].colourCode == item.colours[i].colourCode) {
