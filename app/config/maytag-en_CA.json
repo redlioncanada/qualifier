@@ -39,7 +39,7 @@
 					"oneAnswer" : true,
 					"answers" : [
 						{
-							"text" : "Washers",
+							"text" : "Laundry",
 							"value" : "Washers",
 							"displayName": "Washers",
 							"classes" : "category laundry",

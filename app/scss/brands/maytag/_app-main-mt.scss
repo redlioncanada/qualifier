@@ -1,3 +1,7 @@
+#results > div > desktop-results > ul > li:nth-child(2) > div > div > div.product-img-wrap > img {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
 header.header-desktop {
 	display: block;
 }
