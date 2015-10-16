@@ -972,9 +972,12 @@ a.answer-box.picture-4 {
 				 	line-height: 14px;
 				 }
 			}
-
 		}
 	}
+    
+    .jslider .jslider-scale span {
+        left: 10px!important;
+    }
 
 	.slider-large-label-wrap {
 
@@ -1178,7 +1181,7 @@ a.answer-box.picture-4 {
         margin: 1px auto;   
     }
     .regular-2-container {
-        width: 90% !important;
+        width: 100% !important;
     }
     a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4, .boxes-icon-split {
         margin-top: 8px;
