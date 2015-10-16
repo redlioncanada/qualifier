@@ -22,6 +22,7 @@ angular.module('App')
 
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
+    			$location.replace();
     		}
 
     		if (!!$rootScope.questionsData.question) {
@@ -427,7 +428,6 @@ angular.module('App')
 		  		}
 		  		$rootScope.moveToQuestion(name,done)
 	  		} 
-	  		$scope.resizeElements();
   		}, 100);
 
   	} 
