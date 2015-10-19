@@ -407,7 +407,9 @@ angular.module('App')
   			$rootScope.questionsData.question.disabled=false
   			$location.replace().path("/question/"+name);
 
-  			if ($rootScope.isTabletWidthOrLess) window.scrollTo(0,51);
+  			if ($rootScope.isTabletWidthOrLess) {
+  				$("html, body").animate({scrollTop: "51px"}, 400);
+  			}
 		} else {
 			$state.go('main.results')
 		}	
