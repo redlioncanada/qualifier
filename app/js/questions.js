@@ -324,10 +324,10 @@ angular.module('App')
 
 		var c = $('.slidey.ng-hide-remove').height();
 
-		/*if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
+		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
 			return;
 		}
-		$scope.lastHeight = c;*/
+		$scope.lastHeight = c;
 
 		if (c < 400) {
 			c = $('.slidey').not('.ng-hide').height();

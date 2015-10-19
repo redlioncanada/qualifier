@@ -6,7 +6,7 @@ var jshint      = require('gulp-jshint');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
-//var replace     = require('gulp-replace');
+var replace     = require('gulp-replace');
 // var sass        = require('gulp-ruby-sass');
 var jasmine     = require('gulp-jasmine');
 // var jshint 		= require('gulp-jshint');
@@ -101,8 +101,8 @@ gulp.task('views', function() {
 
     // Do the same for French
     // Move /fr/index.html to / to deploy as French
-    gulp.src('app/index.html')
-    //.pipe(replace('lang="en"', 'lang="fr"'))
+    gulp.src('app/js/app.js')
+    .pipe(replace(".locale = 'en_CA'", ".locale = 'fr_CA'"))
     .pipe(gulp.dest('build/fr'));
 
     // Any other view files from app/views
