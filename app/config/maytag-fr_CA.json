@@ -48,7 +48,7 @@
                      "thumbnail_current": "img/cat-laundry.jpg",
                      "thumbnail_text": "Washers",
                      "thumbnail_text_fr": "Appareils de lessive",
-                     "next": "Laundry - Energy",
+                     "next": "Washers - Energy",
                      "scoring": {
                          "appliance": "Washers"
                      },
@@ -159,70 +159,52 @@
              "thumbnail_current": "img/icon-size-current.png",
              "text": [{
                  "question": "NOUS AVONS LE four encastré PARFAIT POUR VOTRE FAMILLE.",
+                 "questionHideOnMobile": true,
                  "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos fours encastrés sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
                  "type": "slider",
                  "oneAnswer": false,
-                 "classes": "pointer-labels no-jslider-scale left-tag label-inches",
-                 "answer": 27,
-                 "options": {
-                     "from": 27,
-                     "to": 30,
-                     "step": 0.0001,
-                     "dimension_label": "LARGEUR",
-                     "scale": ["27", "28", "29", "30"]
-                 },
+                 "classes" : "slider-labels left-tag no-jslider-value three",
+                 "answer": 0,
+                 "options" : { 
+                    "from" : 0,
+                    "to" : 2,      
+                    "step": 0.0001,
+                    "dimension_label" : "LARGEUR",
+                    "scale": ["Aucun", "27\"", "30\""]   
+                },
                  "answers": {
-                     "27": {
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "value": 27,
-                         "text": "27\"",
-                         "scoring": {
-                             "width27" : 1,
-                             "width28" : -30,
-                             "width29" : -30,
-                             "width30" : -30
-                         }
-                     },
-                     "28": {
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "value": 28,
-                         "text": "28\"",
-                         "scoring": {
-                            "width27" : -30,
-                            "width28" : 1,
+                     "0" : {
+                        "thumbnail" : "img/icon-size.png",
+                        "thumbnail_current" : "img/icon-size-current.png",
+                        "value" : 0,
+                        "scoring" : {
+                        }
+                    },
+                    "1" : {
+                        "thumbnail" : "img/icon-size.png",
+                        "thumbnail_current" : "img/icon-size-current.png",
+                        "value" : 1,
+                        "scoring" : {
+                            "width27" : 1,
+                            "width28" : -30,
                             "width29" : -30,
                             "width30" : -30
-                         }
-                     },
-                     "29": {
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "value": 29,
-                         "text": "29\"",
-                         "scoring": {
-                            "width27" : -30,
-                            "width28" : -30,
-                            "width29" : 1,
-                            "width30" : -30
-                         }
-                     },
-                     "30": {
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "value": 30,
-                         "text": "30\"",
-                         "scoring": {
+                        }
+                    },
+                    "2" : {
+                        "thumbnail" : "img/icon-size.png",
+                        "thumbnail_current" : "img/icon-size-current.png",
+                        "value" : 2,
+                        "scoring" : {
                             "width27" : -30,
                             "width28" : -30,
                             "width29" : -30,
                             "width30" : 1
-                         }
-                     }
+                        }
+                    }
                  }
              }]
          },
@@ -453,7 +435,7 @@
              }]
          },
          "Cooking - Ranges - Energy": {
-             "next": "Cooking - Ranges - Capacity",
+             "next": "Cooking - Ranges - Style",
              "previous": "Cooking - Pre-Qualifier 1",
              "thumbnail_type": "image",
              "thumbnail_text": "Energy",
@@ -507,9 +489,58 @@
                  }
              }]
          },
+         "Cooking - Ranges - Style" : {
+            "next" : "Cooking - Ranges - Capacity",
+            "previous" : "Cooking - Ranges - Energy",
+            "thumbnail_type" : "image",
+            "thumbnail_current" : "img/icon-style-current.png",
+            "thumbnail_text" : "Style (fr)",
+            "text" : [
+                {
+                    "question" : "What style of range do you prefer? (fr)",
+                    "sub_question" : "Select one",
+                    "explanation_title" : "Why are you asking me about style (fr)?",
+                    "explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you. (fr)",
+                    "type" : "boxes-picture-3-radio",
+                    "oneAnswer" : true,
+                    "answers" : [
+                        {
+                            "thumbnail" : "img/icon-orientation.png",
+                            "thumbnail_current" : "img/icon-orientation-current.png",
+                            "image" : "img/Range-Q2-frontcontrol.jpg",
+                            "text" : "Front Control (fr)",
+                            "value" : "FrontControl",
+                            "scoring" : {
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-orientation.png",
+                            "thumbnail_current" : "img/icon-orientation-current.png",
+                            "image" : "img/Range-Q2-rearcontrol.jpg",
+                            "text" : "Rear Control (fr)",
+                            "value" : "BackControl",
+                            "scoring" : {
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-orientation.png",
+                            "thumbnail_current" : "img/icon-orientation-current.png",
+                            "image" : "img/Range-Q2-nopreference.jpg",
+                            "text" : "No Preference (fr)",
+                            "value" : "NoPreference",
+                            "scoring" : {
+                            },
+                            "order" : 3
+                        }
+                    ]
+                }
+            ]
+        },
          "Cooking - Ranges - Capacity": {
              "next": "Cooking - Ranges - Cooking Style",
-             "previous": "Cooking - Ranges - Energy",
+             "previous": "Cooking - Ranges - Style",
              "thumbnail_type": "image",
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
@@ -577,11 +608,11 @@
              "thumbnail_text_fr": "Style",
              "text": [{
                  "question": "POURQUOI CUISINEZ-VOUS?",
-                 "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
+                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Toutes nos cuisinières sont dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre cuisinière afin de pouvoir recommander celle qui convient le mieux à votre style de vie.",
-                 "type": "radio-4",
-                 "oneAnswer": true,
+                 "type": "checkbox-4",
+                 "oneAnswer": false,
                  "answers": [{
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
@@ -786,8 +817,8 @@
                  }]
              }]
          },
-         "Laundry - Energy": {
-             "next": "Laundry - Capacity 1",
+         "Washers - Energy": {
+             "next": "Washers - Capacity 1",
              "previous": "Appliance",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-energy-current.png",
@@ -841,9 +872,9 @@
                  }
              }]
          },
-         "Laundry - Capacity 1": {
-             "next": "Laundry - Noise",
-             "previous": "Laundry - Energy",
+         "Washers - Capacity 1": {
+             "next": "Washers - Noise",
+             "previous": "Washers - Energy",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-capacity-current.png",
              "thumbnail_text": "Capacity",
@@ -919,9 +950,9 @@
                  }
              }]
          },
-         "Laundry - Noise": {
-             "next": "Laundry - Orientation",
-             "previous": "Laundry - Capacity 1",
+         "Washers - Noise": {
+             "next": "Washers - Orientation",
+             "previous": "Washers - Capacity 1",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-noise-current.png",
              "thumbnail_text": "Noise",
@@ -973,9 +1004,9 @@
                  }]
              }]
          },
-         "Laundry - Orientation": {
-             "next": "Laundry - Speed",
-             "previous": "Laundry - Noise",
+         "Washers - Orientation": {
+             "next": "Washers - Speed",
+             "previous": "Washers - Noise",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",
@@ -1019,9 +1050,9 @@
                  }]
              }]
          },
-         "Laundry - Speed": {
-             "next": "Laundry - Fabrics",
-             "previous": "Laundry - Orientation",
+         "Washers - Speed": {
+             "next": "Washers - Fabrics",
+             "previous": "Washers - Orientation",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-speed-current.png",
              "thumbnail_text": "Speed",
@@ -1073,9 +1104,9 @@
                  }]
              }]
          },
-         "Laundry - Fabrics": {
-             "next": "Laundry - Sensor",
-             "previous": "Laundry - Speed",
+         "Washers - Fabrics": {
+             "next": "Washers - Sensor",
+             "previous": "Washers - Speed",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-fabric-current.png",
              "thumbnail_text": "Fabric",
@@ -1141,168 +1172,6 @@
                          "cycleOptions": 1
                      },
                      "order": 6
-                 }]
-             }]
-         },
-         "Laundry - Sensor": {
-             "next": "Laundry - Wrinkles",
-             "previous": "Laundry - Fabrics",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-features-current.png",
-             "thumbnail_text": "Features",
-             "thumbnail_text_fr": "Caractéristiques",
-             "text": [{
-                 "question": "RÉ-AJUSTEZ-VOUS FRÉQUEMMENT LA DURÉE DU PROGRAMME DE SÉCHAGE?",
-                 "sub_question": "FAITES GLISSER POUR RÉPONDRE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du temps DE SÉCHAGE?",
-                 "explanation": "Saviez-vous que certains de nos modèles sont équipés de la technologie de détection d’humidité perfectionnée? Cette caractéristique intuitive assure que vos vêtements sont séchés à la perfection, à chaque fois",
-                 "type": "slider",
-                 "oneAnswer": false,
-                 "classes": "slider-labels four",
-                 "answer": 0,
-                 "options": {
-                     "from": 0,
-                     "to": 3,
-                     "step": 0.0001,
-                     "dimension": "",
-                     "scale": ["JAMAIS", "PARFOIS", "TRÈS SOUVENT", "TOUJOURS"]
-                 },
-                 "answers": {
-                     "0": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 0,
-                         "text": "JAMAIS",
-                         "scoring": {}
-                     },
-                     "1": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 1,
-                         "text": "Parfois",
-                         "scoring": {
-                             "minCycles": 1
-                         }
-                     },
-                     "2": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 2,
-                         "text": "TRÈS SOUVENT",
-                         "scoring": {
-                             "maxCycles": 1
-                         }
-                     },
-                     "3": {
-                         "thumbnail": "img/icon-features.png",
-                         "thumbnail_current": "img/icon-features-current.png",
-                         "value": 3,
-                         "text": "TOUJOURS",
-                         "scoring": {
-                             "maxCycles": 2
-                         }
-                     }
-                 }
-             }]
-         },
-         "Laundry - Wrinkles": {
-             "next": "Laundry - Fuel Type",
-             "previous": "Laundry - Sensor",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-wrinkles-current.png",
-             "thumbnail_text": "Wrinkles",
-             "thumbnail_text_fr": "Faux plis",
-             "text": [{
-                 "question": "à quelle fréquence utilisez-vous votre fer à repasser?",
-                 "sub_question": "FAITES GLISSER POUR RÉPONDRE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du repassage?",
-                 "explanation": "Certains de nos appareils sont conçus pour réduire au minimum les faux plis. Si vous nous aidez à déterminer vos besoins, nous pourrons mieux y répondre.",
-                 "type": "slider",
-                 "oneAnswer": false,
-                 "classes": "slider-labels four",
-                 "answer": 0,
-                 "options": {
-                     "from": 0,
-                     "to": 3,
-                     "step": 0.0001,
-                     "dimension": "",
-                     "scale": ["JAMAIS", "UNIQUEMENT AVANT<br/>UN ÉVÉNEMENT IMPORTANT", "PLUSIEURS FOIS PAR MOIS", "TOUS LES JOURS"]
-                 },
-                 "answers": {
-                     "0": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 0,
-                         "text": "JAMAIS",
-                         "scoring": {}
-                     },
-                     "1": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 1,
-                         "text": "UNIQUEMENT AVANT UN ÉVÉNEMENT IMPORTANT",
-                         "scoring": {
-                             "washerWrinkleControl": 1,
-                             "dryerWrinkleControl": 1
-                         }
-                     },
-                     "2": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 2,
-                         "text": "PLUSIEURS FOIS PAR MOIS",
-                         "scoring": {
-                             "washerWrinkleControl": 2,
-                             "dryerWrinkleControl": 2
-                         }
-                     },
-                     "3": {
-                         "thumbnail": "img/icon-wrinkles.png",
-                         "thumbnail_current": "img/icon-wrinkles-current.png",
-                         "value": 3,
-                         "text": "TOUS LES JOURS",
-                         "scoring": {
-                             "washerWrinkleControl": 3,
-                             "dryerWrinkleControl": 3
-                         }
-                     }
-                 }
-             }]
-         },
-         "Laundry - Fuel Type": {
-             "next": null,
-             "previous": "Laundry - Wrinkles",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-fueltype-current.png",
-             "thumbnail_text": "Fuel Type",
-             "thumbnail_text_fr": "Type d’alimentation",
-             "text": [{
-                 "question": "PRÉFÉRERIEZ-VOUS UNE SÉCHEUSE À GAZ OU ÉLECTRIQUE?",
-                 "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET De l’alimentation?",
-                 "explanation": "Certaines salles de lavage sont équipées pour accueillir les sécheuses à gaz. La sélection de votre préférence nous aidera à filtrer les résultats de recherche et à fournir l’option qui convient le mieux à votre foyer.",
-                 "type": "boxes-icon-2-radio",
-                 "oneAnswer": true,
-                 "answers": [{
-                     "text": "À gaz",
-                     "value": "gas",
-                     "image": "img/icon-thumb-gas.png",
-                     "hover": "img/icon-thumb-gas-active.png",
-                     "thumbnail": "img/icon-fueltype.png",
-                     "thumbnail_current": "img/icon-fueltype-current.png",
-                     "scoring": {},
-                     "order": 1
-                 }, {
-                     "text": "Électrique",
-                     "value": "electric",
-                     "image": "img/icon-thumb-electric.png",
-                     "hover": "img/icon-thumb-electric-active.png",
-                     "thumbnail": "img/icon-fueltype.png",
-                     "thumbnail_current": "img/icon-fueltype-current.png",
-                     "scoring": {
-                         "gas": -30
-                     },
-                     "order": 2
                  }]
              }]
          },
@@ -1374,150 +1243,100 @@
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos réfrigérateurs sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
-                 "type": "slider-multiple",
-                 "classes": "slider-pointer-labels no-jslider-scale left-tag label-inches",
-                 "oneAnswer": false,
-                 "answer": 30,
-                 "options": {
-                     "from": 30,
-                     "to": 36,
-                     "step": 0.0001,
-                     "dimension_label": "LARGEUR",
-                     "scale": ["", "", "", "", "", "", ""]
-                 },
-                 "answers": {
-                     "30": {
-                         "value": 30,
-                         "text": "30",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width30": 1
-                         }
-                     },
-                     "31": {
-                         "value": 31,
-                         "text": "31",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width31": 1
-                         }
-                     },
-                     "32": {
-                         "value": 32,
-                         "text": "32",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width32": 1
-                         }
-                     },
-                     "33": {
-                         "value": 33,
-                         "text": "33",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width33": 1
-                         }
-                     },
-                     "34": {
-                         "value": 34,
-                         "text": "34",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width34": 1
-                         }
-                     },
-                     "35": {
-                         "value": 35,
-                         "text": "35",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width35": 1
-                         }
-                     },
-                     "36": {
-                         "value": 36,
-                         "text": "36",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "width36": 1
-                         }
-                     }
-                 }
-             }, {
-                 "answer": 66,
-                 "classes": "label-inches",
-                 "options": {
-                     "from": 66,
-                     "to": 71,
-                     "step": 0.0001,
-                     "dimension_label": "HAUTEUR",
-                     "scale": ["", "", "", "", "", ""]
-                 },
-                 "classes": "left-tag label-inches",
-                 "answers": {
-                     "66": {
-                         "value": 66,
-                         "text": "66",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height66": 1
-                         }
-                     },
-                     "67": {
-                         "value": 67,
-                         "text": "67",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height67": 1
-                         }
-                     },
-                     "68": {
-                         "value": 68,
-                         "text": "68",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height68": 1
-                         }
-                     },
-                     "69": {
-                         "value": 69,
-                         "text": "69",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height69": 1
-                         }
-                     },
-                     "70": {
-                         "value": 70,
-                         "text": "70",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height70": 1
-                         }
-                     },
-                     "71": {
-                         "value": 71,
-                         "text": "71",
-                         "thumbnail": "img/icon-size.png",
-                         "thumbnail_current": "img/icon-size-current.png",
-                         "scoring": {
-                             "height71": 1
-                         }
-                     }
-                 }
-             }]
+                 "type": "slider-buttons",
+                 "classes" : "slider-labels left-tag no-jslider-value four scale-left",
+                "oneAnswer" : false,
+                "answer" : 0,
+                "options" : { 
+                    "from" : 0,
+                    "to" : 3,      
+                    "step": 0.0001,
+                    "dimension_label": "LARGEUR",
+                    "scale": ["Aucun","30\"","33\"", "36\""]       
+                },
+                 "answers" : {
+                        "0" : {
+                            "value" : 0,
+                            "text" : "Aucun",
+                            "thumbnail" : "img/icon-size.png",
+                            "thumbnail_current" : "img/icon-size-current.png",
+                            "scoring" : {
+                            }
+                        },
+                        "1" : {
+                            "value" : 1,
+                            "text" : "30",
+                            "thumbnail" : "img/icon-size.png",
+                            "thumbnail_current" : "img/icon-size-current.png",
+                            "scoring" : {
+                                "width30" : 1
+                            }
+                        },
+                        "2" : {
+                            "value" : 2,
+                            "text" : "33",
+                            "thumbnail" : "img/icon-size.png",
+                            "thumbnail_current" : "img/icon-size-current.png",
+                            "scoring" : {
+                                "width33" : 1
+                            }
+                        },
+                        "3" : {
+                            "value" : 3,
+                            "text" : "36",
+                            "thumbnail" : "img/icon-size.png",
+                            "thumbnail_current" : "img/icon-size-current.png",
+                            "scoring" : {
+                                "width36" : 1
+                            }
+                        }
+                    }                               
+                },
+                {
+                    "classes": "label-inches",
+                    "dimension_label" : "HAUTEUR",
+                    "answers" : {
+                        "66" : {
+                            "value" : 66,
+                            "text" : "66",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height66" : 1
+                            }
+                        },
+                        "69" : {
+                            "value" : 69,
+                            "text" : "69",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height68" : 1,
+                                 "height69" : 1
+                            }
+                        },
+                        "67" : {
+                            "value" : 67,
+                            "text" : "67",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1,2],
+                            "scoring" : {
+                                 "height67" : 1
+                            }
+                        },
+                        "71" : {
+                            "value" : 71,
+                            "text" : "71",
+                            "enabled" : true,
+                            "enabledWhen" : [0,2,3],
+                            "scoring" : {
+                                 "height70" : 1,
+                                 "height71" : 1
+                            }
+                        }
+                    }                               
+                }   
+             ]
          },
          "Fridges - Capacity": {
              "next": "Fridges - Organization",
@@ -1594,7 +1413,7 @@
              }]
          },
          "Fridges - Organization": {
-             "next": "Fridges - Water",
+             "next": "Fridges - Waterline",
              "previous": "Fridges - Capacity",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-organization-current.png",
@@ -1650,155 +1469,67 @@
                  }]
              }]
          },
-         "Fridges - Water": {
-             "next": "Fridges - Ice",
-             "previous": "Fridges - Organization",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-water-current.png",
-             "thumbnail_text": "Water",
-             "thumbnail_text_fr": "Eau",
-             "text": [{
-                 "question": "Vous vous réveillez assoiffé au beau milieu de la nuit, alors vous prenez…",
-                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’EAU?",
-                 "explanation": "Certains de nos modèles comportent un distributeur d’eau. En comprenant quelle est votre consommation d’eau, nous pouvons recommander le réfrigérateur qui répondra le mieux à vos besoins.",
-                 "type": "checkbox-4",
-                 "oneAnswer": false,
-                 "answers": [{
-                     "text": "Une bonne bouteille d’eau froide",
-                     "value": "bottle of water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 1
-                 }, {
-                     "text": "Une boisson provenant de notre refroidisseur d’eau",
-                     "value": "drink from our water cooler",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 2
-                 }, {
-                     "text": "Un verre d’eau du robinet",
-                     "value": "glass of tap water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 3
-                 }, {
-                     "text": "Un verre de lait ou de jus",
-                     "value": "glass of milk or juice",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {},
-                     "order": 4
-                 }, {
-                     "text": "Un verre d’eau filtrée",
-                     "value": "glass of filtered water",
-                     "thumbnail": "img/icon-water.png",
-                     "thumbnail_current": "img/icon-water-current.png",
-                     "scoring": {
-                         "indoorDispenser": 1
-                     },
-                     "order": 5
-                 }]
-             }]
-         },
-         "Fridges - Ice": {
-             "next": "Fridges - Orientation",
-             "previous": "Fridges - Water",
-             "thumbnail_type": "image",
-             "thumbnail_current": "img/icon-ice-current.png",
-             "thumbnail_text": "Ice",
-             "thumbnail_text_fr": "Glaçons",
-             "text": [{
-                 "question": "J’AIME AJOUTER DES GLAÇONS À…",
-                 "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DES GLAÇONS?",
-                 "explanation": "Certains de nos modèles comportent un distributeur de glaçons. En comprenant votre consommation de glaçons, nous pouvons recommander un réfrigérateur adapté à votre style de vie.",
-                 "type": "boxes-icon-5-checkbox",
-                 "oneAnswer": false,
-                 "answers": [{
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes boissons gazeuses",
-                     "value": "soft drink",
-                     "image": "img/icon-thumb-softdrinks.png",
-                     "hover": "img/icon-thumb-softdrinks-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 1
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes cocktails",
-                     "value": "cocktails",
-                     "image": "img/icon-thumb-cocktails.png",
-                     "hover": "img/icon-thumb-cocktails-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 2
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mon eau",
-                     "value": "water",
-                     "image": "img/icon-thumb-water.png",
-                     "hover": "img/icon-thumb-water-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 3
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Mes frappés aux fruits",
-                     "value": "smoothies",
-                     "image": "img/icon-thumb-smoothies.png",
-                     "hover": "img/icon-thumb-smoothies-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 4
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Une glacière pour les réceptions ",
-                     "value": "cooler",
-                     "image": "img/icon-thumb-cooler.png",
-                     "hover": "img/icon-thumb-cooler-active.png",
-                     "scoring": {
-                         "indoorDispenser": 1,
-                         "factoryInstalledIceMaker": 1
-                     },
-                     "order": 5
-                 }, {
-                     "thumbnail": "img/icon-ice.png",
-                     "thumbnail_current": "img/icon-ice-current.png",
-                     "text": "Rien",
-                     "value": "nothing",
-                     "image": "img/icon-thumb-nothing.png",
-                     "hover": "img/icon-thumb-nothing-active.png",
-                     "scoring": {},
-                     "order": 6
-                 }]
-             }]
-         },
+         "Fridges - Waterline" : {
+            "next" : "Fridges - Orientation",
+            "previous" : "Fridges - Organization",
+            "thumbnail_type" : "image",
+            "thumbnail_current" : "img/icon-water-current.png",
+            "thumbnail_text" : "Waterline (FR)",
+            "text" : [
+                {
+                    "question" : "Does your kitchen have an existing waterline? (FR)",
+                    "sub_question" : "SÉLECTIONNEZ UNE RÉPONSE",
+                    "explanation_title" : "Why are you asking me about a waterline? (FR)",
+                    "explanation" : "(FR) Did you know that your kitchen needs a waterline in order for your fridge to dispense water and ice? We want to make sure that you know about this requirement before we recommend the perfect fridge to fit your lifestyle.",
+                    "type" : "radio-4",
+                    "oneAnswer" : true,
+                    "answers" : [
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "Yes - it's great because we love water and ice dispensed from our fridge (FR)",
+                            "value" : "yes",
+                            "scoring" : {
+                                "indoorDispenser" : 3
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - but we would consider installing one so our fridge could dispense water and ice (FR)",
+                            "value" : "nobutyes",
+                            "scoring" : {
+                                "indoorDispenser" : 1
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "No - we don't have a waterline and would prefer not to install one (FR)",
+                            "value" : "no",
+                            "scoring" : {
+                                "indoorDispenser" : -30
+                            },
+                            "order" : 3
+                        },
+                        {
+                            "thumbnail" : "img/icon-water.png",
+                            "thumbnail_current" : "img/icon-water-current.png",
+                            "text" : "I'm not sure (FR)",
+                            "value" : "notsure",
+                            "scoring" : {
+                            },
+                            "order" : 4
+                        }
+                    ]
+                }
+            ]
+        },
          "Fridges - Orientation": {
              "next": "Fridges - Style",
-             "previous": "Fridges - Organization",
+             "previous": "Fridges - Waterline",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",

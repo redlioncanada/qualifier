@@ -437,12 +437,12 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 		}
 		.jslider-scale { 
 			position: relative; 
-			top: 32px;
+			top: 17px;
 			width: 98%;
 			//margin-left: 20px;
 
 			& > :first-child, & > :last-child {
-				border-left: 1px solid #999 !important;;
+				border-left: 1px solid #999 !important;
 			}
 			span { 
 				position: absolute; 
@@ -453,16 +453,17 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 			ins { 
 				font-family: $AG-Bold-Cnd;
 				text-transform: uppercase;
-				font-size: 20px; 
+				font-size: 17px; 
 				text-decoration: none; 
 				position: absolute; 
 				left: 0px; 
-				top: 47px;
+				top: 30px;
 				color: #999;
-
+                letter-spacing: 0.4px;
 				width: 200px;
 				left: -100px;
 				text-align: center;
+                line-height: 20px;
 			}
 		}
 		.jslider-label, .jslider-value {
@@ -803,9 +804,10 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	//top: -7px;
 	.slider-large-label {
 		@include large-square-label;
-		margin-right: -145px;
-		font-size: 24px;
+		margin-right: -157px;
+		font-size: 18px;
     	z-index: 11;
+        top: 15px;
 	}
 
 	//display: none;
@@ -833,6 +835,17 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	display: none;
 }
 
+.scale-left .vertical {
+	.jslider-scale {
+		margin-left: -45px;
+
+		span ins {
+			margin-left: -116px !important;
+			text-align: right !important;
+		}
+	}
+}
+
 .last-answer-active {
 	.jslider-value {
 		right: -32px !important;
@@ -842,6 +855,12 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 
 .answer-slider.no-jslider-scale {
 	.jslider .jslider-scale {
+		display: none !important;
+	}
+}
+
+.answer-slider.no-jslider-value {
+	.jslider .jslider-value {
 		display: none !important;
 	}
 }
@@ -892,13 +911,88 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 
-[class*="val26"].min26, [class*="val27"].min27, [class*="val28"].min28, [class*="val29"].min29, [class*="val30"].min30, [class*="val31"].min31, [class*="val32"].min32, [class*="val33"].min33, [class*="val34"].min34, [class*="val35"].min35 {
+[class$="val26"].min26, [class$="val27"].min27, [class$="val28"].min28, [class$="val29"].min29, [class$="val30"].min30, [class$="val31"].min31, [class$="val32"].min32, [class$="val33"].min33, [class$="val34"].min34, [class$="val35"].min35 {
 	.jslider-value span {
 		opacity: 0 !important;
 	}
 
 	.jslider-value div {
 		opacity: 1 !important;
+	}
+}
+
+/*slider-buttons*/
+.answers-main-content.answer-buttons {
+	padding-top: 40px;
+	font-family: $AG-Bold-Cnd;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.answer-button-wrapper {
+		display: inline-block;
+	}
+
+	.answer-button-wrapper:not(:last-child) {
+		margin-right: 70px;
+	}
+
+	.answer-button {
+		width: 60px;
+		height: 60px;
+		background-color: #e2e2e2;
+		border-radius: 4px;
+		opacity: 0.3;
+		color: #7e7e7e;
+		cursor: default;
+
+		-webkit-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+		-moz-box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+		box-shadow: inset 0px 0px 18px -2px rgba(0,0,0,0.5);
+	}
+
+	.answer-button.selected {
+		background-color: #67839b;
+		cursor: default;
+		color: white;
+	}
+
+	.answer-button.enabled {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.answer-button-content-wrapper {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		.answer-button-answer {
+			font-size: 14pt;
+			height: 21px;
+		}
+
+		.answer-button-label {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.answer-buttons.label-inches {
+	.answer-button-answer::after {
+		content: ' "';
+		position: absolute;
+		top: 1px;
 	}
 }
 
@@ -926,6 +1020,27 @@ div[ng-class="fr_CA"] {
 	.slider-large-label {
 		font-size: 18px;
 		top: 15px;
+	}
+}
+
+@media(max-width:1024px) {
+	.answers-main-content.answer-buttons {
+		position: absolute;
+		top: 5px;
+		width: 50%;
+		left: 50%;
+
+		li.answer-button-wrapper {
+			margin-right: 0 !important;
+			margin-top: 50px;
+            margin-left: 40px;
+			width: 100%;
+		}
+
+		.answer-button {
+			float: left;
+			margin-left: 45px;
+		}
 	}
 }
 
@@ -961,5 +1076,8 @@ div[ng-class="fr_CA"] {
 			}
 		}
 	}
-
+    li.answer-button-wrapper {
+			margin-top: 10px !important;
+            margin-left: 0px !important;
+		}
 }

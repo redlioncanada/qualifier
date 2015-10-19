@@ -73,7 +73,6 @@ App.filter('orderByOrder', function() {
 
 App.filter('rearrange', function() {
   return function(items, num) {
-    console.log(items);
       if (typeof items === 'undefined') return;
       var temp = items[0];
       items[0] = items[1];
@@ -127,7 +126,7 @@ App.filter('nextQuestions', function($rootScope, $filter) {
     }
     var nextQuestions = []
     var t = null
-    if (!$rootScope.questionsData.scoringQuestions) return;
+    if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) return;
     var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
     angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
       if (item.order == l) {
@@ -267,42 +266,38 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
-
+// console.log(res.products);
                 var relcodes = {
                   'M1' : 'DC',
                   'WH' : 'DW'
                 }
                 angular.forEach( $rootScope.appliances, function (item, key) { 
                   if ($rootScope.brand == "maytag") {
-                      if ($rootScope.appliances[key].appliance == "Laundry") {
 
-                        $rootScope.appliances[key].sku = $rootScope.appliances[key].washerSku + "/" + $rootScope.appliances[key].dryerSku
+                      if ($rootScope.appliances[key].appliance == "Washers") {
+
                         for (var i in item.colours) {
-                          //$rootScope.appliances[key].colours[i].image = setColourURL($rootScope.appliances[key].appliance,$rootScope.appliances[key].image, $rootScope.appliances[key].colours[i].colourCode);
-                          $rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
-                          if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                          //$rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
+                          /*if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
                             $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
                           } else {
                             $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
+                          }*/
+
+                          for (var j in item.dryers[0].colours) {
+                            if (item.dryers[0].colours[j].colourCode == item.colours[i].colourCode) {
+                              item.colours[i].dryersku = item.dryers[0].colours[j].sku;
+                            }
                           }
-                          $rootScope.appliances[key].colours[i].prices = {}
-                          $rootScope.appliances[key].colours[i].prices.CAD = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
-                          $rootScope.appliances[key].colours[i].sku = $rootScope.appliances[key].colours[i].washerSku
-                        }
-                        $rootScope.appliances[key].price = parseFloat(item.colours[0].dryerPrices.CAD) + parseFloat(item.colours[0].washerPrices.CAD)
-                      } else {
-                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD)
-                      }
 
-
-                      if ($rootScope.appliances[key].appliance == "Laundry") {
-                          $rootScope.appliances[key].capacity = Math.min($rootScope.appliances[key].washerCapacity,$rootScope.appliances[key].dryerCapacity)
-
-                          if (parseFloat($rootScope.appliances[key].dryerCycleOptions) <= 10) {
-                            $rootScope.appliances[key].minCycles = true
+                          /*if (!!!$rootScope.appliances[key].dryerImage && $rootScope.appliances[key].dryers[0].image.indexOf(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                              $rootScope.appliances[key].dryerImage = $rootScope.appliances[key].dryers[0].image;
                           } else {
-                            $rootScope.appliances[key].maxCycles = true
-                          }
+                              $rootScope.appliances[key].dryerImage = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png";
+                          }*/
+                        }
+
+                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD);
 
                           if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
                             $rootScope.appliances[key].largestCapacity = true
@@ -378,10 +373,10 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                           }                    
                         }
                       } 
-                    } else if ($rootScope.brand == "kitchenaid") {
-
                     }
                 })
+
+console.log($rootScope.appliances);
                 $rootScope.hasanswers = {};
                 var httpparams = (decodeURI($location.$$absUrl)).replace(/\+/g, ' ').split("?");
                 if (1 in httpparams) {

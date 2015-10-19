@@ -108,7 +108,7 @@ html, body {
 	// Question
 	h2 {
 		text-transform: uppercase;
-		font-size: 36px;
+		font-size: 31px;
 		margin-top: 0px;
 		margin-bottom: 10px;
 		color: #333333;
@@ -142,8 +142,7 @@ html, body {
 }
 div.mobile-app-nav-arrows {
 	position: relative;
-	height: 50px;
-	margin-bottom: 10px;
+	height: 25px;
 
 	.btn-next, .btn-prev {bottom: initial;}
 	.btn-next {right: 35px;}
@@ -279,9 +278,11 @@ div.mobile-app-nav-arrows {
 	}
 	.btn-prev {
 		left: 25px;
+        z-index: 10;
 	}
 	.btn-next {
 		right: 25px;
+        z-index: 10;
 	}
 	.btn {
 		padding: 3px 18px;
@@ -357,6 +358,29 @@ div.mobile-app-nav-arrows {
         float: none !important;   
     }
 }
+.picture-4-container {
+    margin-top: 70px;
+}
+
+a.answer-box.picture-4 {
+    .img-wrap {
+        height: auto;
+        
+        img {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    .select-label-wrap {
+        .select-icon {
+            top: 138px;
+        }
+    }
+}
+
+.regular-3-container {
+    width: 1100px;
+}
 
 @media(max-width:1180px) and (min-width:1024px) {
 	.slidey {
@@ -390,7 +414,7 @@ div.mobile-app-nav-arrows {
 
 		div[ng-controller="SliderCtrl"] {
 			.slider-wrap {
-				margin-left: 50px;
+				/*margin-left: 50px;*/
 			}
 		}
 
@@ -406,9 +430,9 @@ div.mobile-app-nav-arrows {
 			}
 
 			.slider-large-label {
-				margin-left: -148px;
+				margin-left: -115px;
 				margin-right: initial;
-				top: 75px;
+				top: 72px;
 			}
 
 			.slider-wrap {
@@ -464,7 +488,7 @@ div.mobile-app-nav-arrows {
 			}
 		}
 
-		a.answer-box.picture-3, a.answer-box.picture-2 {
+		a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2 {
 			width: 290px;
 
 			.select-label-wrap {
@@ -486,15 +510,15 @@ div.mobile-app-nav-arrows {
         width: 100% !important;   
         
         .answer-box {
-            width: 200px !important;
+            width: 219px !important;
                 
             .img-wrap {
                 width: 100% !important;
                 height: 100% !important;
                 
                 img {
-                    width: 96%;
-                    height: 96%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
             .select-label-wrap {
@@ -508,10 +532,43 @@ div.mobile-app-nav-arrows {
     }
     .picture-3-container {
         width: 100% !important;
-    }    
+    }
+    .label-text {
+        font-size: 15px !important;
+    }
+    a.answer-box.picture-4 {
+        .select-label-wrap {
+            .select-icon {
+                top: 110px !important;
+            }
+        }
+    }
+    .slider-large-label-wrap {
+		width: 0px !important;
+
+		.slider-large-label {
+            left: -8px;
+			margin-right: 0px !important;
+		}
+	}
+}
+
+@media(min-width:1600px) {
+	.app-nav-arrows {
+		.btn-prev {
+			left: 10%;
+		}
+		.btn-next {
+			right: 10%;
+		}
+	}
 }
 
 @media(max-width:1023px) {
+    
+ .left-tag.no-jslider-value.four.scale-left > div > span > table > tbody > tr > td > div.jslider-scale > span {
+        left: -19px !important;
+    }
 
 	.main {
 		overflow: hidden;
@@ -544,7 +601,7 @@ div.mobile-app-nav-arrows {
 	.app-answers {
 		.answer-option {
 			&.sub-category:first-child {
-				margin-top: 100px !important;
+				/*margin-top: 100px !important;*/
 			}
 		}
 	}
@@ -603,6 +660,7 @@ div.mobile-app-nav-arrows {
 	}
 
 	div.slidey-wrap-all {
+
 		height: 600px;
 		margin-top: initial !important;
 	}
@@ -620,8 +678,8 @@ div.mobile-app-nav-arrows {
 		position: absolute;
 
 		.slider-large-label {
-			top: -15px !important;
-			margin-right: 98px !important;
+			top: -30px !important;
+			margin-right: -13px !important;
 		}
 	}
 
@@ -687,7 +745,7 @@ div.mobile-app-nav-arrows {
 		.slider-wrap {
 			width: initial;
 			height: inherit;
-			/*left: -45%;*/
+			left: -15%;
 			float: none !important;
 			position: relative;
 		}
@@ -725,7 +783,7 @@ div.mobile-app-nav-arrows {
 
 				span {
 					border-left: none !important;
-					left: 20px;
+					left: 35px;
 					width: 10px;
 					display: table;
 				}
@@ -813,17 +871,17 @@ div.mobile-app-nav-arrows {
 		}
 	}
 
-	a.answer-box.picture-3, a.answer-box.picture-2 {
+	a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2 {
 		width: 280px;
 	}
 
-	a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4 {
+	a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4 {
 		float: none;
 		margin: 14px auto;
 		display: block !important;
 	}
 
-	a.answer-box.picture-3, a.answer-box.picture-2 {
+	a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2 {
 		.img-wrap {
 			height: initial;
 		}
@@ -846,26 +904,25 @@ div.mobile-app-nav-arrows {
 		float: initial !important;
 	}
     .picture-4-container {
-        width: 200px !important;   
+        width: 280px !important;   
         
         .answer-box {
-            width: 200px !important;
-            margin: 5px 0 !important;
-                
+            width: 100% !important;
+
             .img-wrap {
                 width: 100% !important;
                 height: 100% !important;
                 
                 img {
-                    width: 96%;
-                    height: 96%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
             .select-label-wrap {
                 width: 100% !important;
                 
                 .select-icon {
-                    top: 132px !important;   
+                    top: initial;   
                 }
             }
         }
@@ -879,6 +936,21 @@ div.mobile-app-nav-arrows {
     .boxes-icon-5-container {
         width: 400px;   
     }
+    .label-text {
+        font-size: 15px !important;
+    }
+    .ng-binding::first-letter {
+        text-transform: capitalize;        
+    }
+    .regular-3-container {
+        width: 100%;
+    }
+    .slider-large-label-wrap .slider-large-label {
+		font-size: 13pt !important;
+        color: #999C9C !important;
+        top: -23px !important;
+        margin-right: -9px !important;
+	}
 }
 
 @media(max-width:750px) {
@@ -930,7 +1002,20 @@ div.mobile-app-nav-arrows {
 				 	line-height: 14px;
 				 }
 			}
+		}
+	}
+    
+    .jslider .jslider-scale span {
+        left: 15px!important;
+    }
+    .left-tag.no-jslider-value.four.scale-left > div > span > table > tbody > tr > td > div.jslider-scale > span {
+        left: 0 !important;
+    }
 
+	.slider-large-label-wrap {
+
+		span.slider-large-label {
+			margin-right: 3px !important;
 		}
 	}
 
@@ -939,7 +1024,10 @@ div.mobile-app-nav-arrows {
 	}
 
 	.slider-large-label-wrap .slider-large-label {
-		font-size: 18px !important;
+		font-size: 11pt !important;
+        color: #999C9C !important;
+        top: -30px !important;
+        margin-right: -13px !important;
 	}
 
 	.answers-category {
@@ -948,7 +1036,7 @@ div.mobile-app-nav-arrows {
 			background-color: #f6f6f6;
 
 			.category-image {
-				width: 15%;
+				width: 19%;
 				margin: 0 auto;
 				position: relative;
 
@@ -981,7 +1069,7 @@ div.mobile-app-nav-arrows {
 	.app-answers {
 		.answer-option {
 			&.category, &.sub-category {
-				min-height: 155px;
+				min-height: 200px;
 			}
 		}
 	}
@@ -999,7 +1087,10 @@ div.mobile-app-nav-arrows {
 	}
 
 	.app-content-main-top-left {
-		h2 {font-size: 12pt;}
+		min-height: 62px !important;
+		h2 {
+			font-size: 12pt;
+		}
 	}
 
 	a.answer-box.boxes-icon-5 {
@@ -1121,21 +1212,24 @@ div.mobile-app-nav-arrows {
         }
         .label-wrap {
             .label-text {
-                font-size: 11px;   
+                font-size: 11px !important;   
             }
         }
 	}
-    .regular-2-container {
-        width: 90% !important;
+    a.answer-box.radio-2 {
+        margin: 1px auto;   
     }
-    a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4, .boxes-icon-split {
+    .regular-2-container {
+        width: 100% !important;
+    }
+    a.answer-box.picture-4, a.answer-box.picture-3, a.answer-box.picture-2, a.answer-box.checkbox-4, a.answer-box.radio-4, .boxes-icon-split {
         margin-top: 8px;
         margin-bottom: 8px;
     }
     .boxes-icon-5-container {
         width: 320px;
     }
-        a.answer-box.boxes-icon-5 {
+    a.answer-box.boxes-icon-5 {
         width: 105px;
         height: 125px;
         background-size: cover;
@@ -1145,9 +1239,6 @@ div.mobile-app-nav-arrows {
             .normal, .hover {
                 top: -20px;
                 left: -10px;
-                -ms-transform: scale(0.7);
-                -o-transform: scale(0.7);
-                -moz-transform: scale(0.7);
                 -webkit-transform: scale(0.7);
                 transform: scale(0.7);
             }
@@ -1156,9 +1247,6 @@ div.mobile-app-nav-arrows {
         .select-icon {
             top: 90px;
             left: 7px;
-            -ms-transform: scale(0.8);
-            -o-transform: scale(0.8);
-            -moz-transform: scale(0.8);
             -webkit-transform: scale(0.8);
             transform: scale(0.8);
         }
@@ -1171,12 +1259,48 @@ div.mobile-app-nav-arrows {
             }
         }
     }
+    a.answer-box.picture-4, a.answer-box.picture-3 {
+        width: 195px !important;
+        background-size: cover;
+        margin-bottom: 0px;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        
+        .select-label-wrap {
+            height: 30px;
+        }
+        
+        .select-icon {
+            top: 95px;
+            left: 7px;
+            -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+        }
+        .label-wrap {
+            .label-text {
+                top: 9px;
+                left: -20px;
+                font-size: 10px !important;
+                max-width: 87px !important;
+            }
+        }
+    }
+    a.answer-box.picture-4 {
+        .select-label-wrap {
+            background-size: cover;
+            
+                .select-icon {
+                    top: 90px !important;
+                } 
+        }
+    }
     .price-slider {
         height: 30px !important;
     }
-    .ng-binding::first-letter {
-        text-transform: capitalize;        
-    }
+    .slider-large-label-wrap .slider-large-label {
+			top: -12px !important;
+			margin-right: -1px !important;
+	}
 }
 
 .print-page {

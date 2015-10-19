@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $location, $route, $stateParams) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams) {
 
   	$rootScope.$on('resize::resize', function() {
-	    if (window.innerWidth < 1024 && !$scope.isHomePage()){
+	    if (window.innerWidth < 1024){
 	        $scope.resizeElements();
 	    } else if (window.innerWidth >= 1024) {
 	    	//reset header height to it's css value
@@ -13,11 +13,22 @@ angular.module('App')
 	    }
 	});
 
+	$interval(function(){
+		if (window.innerWidth < 1024) {
+			$scope.resizeElements();
+		} else if (window.innerWidth >= 1024) {
+	    	//reset header height to it's css value
+            $('.app-content-main-top').css('height', '');
+            $('.slidey-wrap-all').css('height', '');
+	    }
+	},500);
+
     $scope.$on('$locationChangeSuccess', function(event) {
     		var q = ($location.path()).toString().replace("/question/","");
 
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
+    			$location.replace();
     		}
 
     		if (!!$rootScope.questionsData.question) {
@@ -85,7 +96,11 @@ angular.module('App')
 	              return true
 	              break;
 	            }       
-	          } else {
+	          } else if (qtype == "slider-buttons") {
+	          	if (ans == 1 && a.value == q.show.answer) {
+	          		return true;
+	          	}
+	    	  } else {
 	            if (a.answer == true) {
 	              return true
 	              break;
@@ -166,7 +181,7 @@ angular.module('App')
 
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
-			if (q.show.type != "slider-multiple") {
+			if (q.show.type != "slider-multiple" && q.show.type != "slider-buttons") {
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
@@ -268,12 +283,12 @@ angular.module('App')
 		//}
 		$rootScope.questionsData.question.show = $rootScope.questionsData.question.text[ref];	
 
-		if (window.innerWidth <= 580 && !$scope.isHomePage()) {
+		/*if (window.innerWidth <= 580 && !$scope.isHomePage()) {
 			$timeout(function(){
 				//$(window).scrollTop(0);
 				$scope.resizeElements();
 			},200);
-		}
+		}*/
 	}
 
 	$scope.isHomePage = function() {
@@ -308,28 +323,30 @@ angular.module('App')
 
 
 		var c = $('.slidey.ng-hide-remove').height();
-		if (c < 300) {
+
+		/*if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
+			return;
+		}
+		$scope.lastHeight = c;*/
+
+		if (c < 400) {
 			c = $('.slidey').not('.ng-hide').height();
-			if (c < 300) {
-				var minHeight = 300;
+			if (c < 400) {
+				var minHeight = 400;
 				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
 				c = minHeight;
 			}
 		}
-		//var contentHeight = getTotalHeight(c);
-		//console.log('content height: '+contentHeight);
 
 		if (c > 100) {
 			$('.slidey-wrap-all').stop(true).animate({
 				'height': c + 10
 			}, 0);
-		} else {
-			setTimeout(function(){$scope.resizeElements(++depth)},100);
 		}
 
 		function getTotalHeight(el) {
 			if (!el || (typeof el === 'object' && el.length == 0)) return 0;
-			console.log('el height: '+$(el).height());
+			// console.log('el height: '+$(el).height());
 			return parseInt($(el).height()) + parseInt($(el).css('paddingTop')) + parseInt($(el).css('paddingBottom')) + parseInt($(el).css('marginTop')) + parseInt($(el).css('marginBottom'));
 		}
 	}
@@ -397,7 +414,8 @@ angular.module('App')
 
   	$rootScope.next = function (done) {
   		console.log($rootScope.questionsData);
-  		console.log($rootScope.appliances);
+  		// console.log($rootScope.appliances);
+  		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
