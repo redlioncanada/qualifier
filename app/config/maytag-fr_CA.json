@@ -39,18 +39,18 @@
                  "oneAnswer": true,
                  "answers": [{
                      "text": "Appareils de lessive",
-                     "value": "Washers",
+                     "value": "Laundry",
                      "displayName": "Appareils de lessive",
                      "classes": "category laundry",
                      "image": "img/start-laundry.png",
                      "hover": "img/start-laundry-hover.png",
                      "thumbnail": "img/cat-laundry.jpg",
                      "thumbnail_current": "img/cat-laundry.jpg",
-                     "thumbnail_text": "Washers",
+                     "thumbnail_text": "Laundry",
                      "thumbnail_text_fr": "Appareils de lessive",
-                     "next": "Washers - Energy",
+                     "next": "Laundry - Energy",
                      "scoring": {
-                         "appliance": "Washers"
+                         "appliance": "Laundry"
                      },
                      "order": 1
                  }, {
@@ -817,8 +817,8 @@
                  }]
              }]
          },
-         "Washers - Energy": {
-             "next": "Washers - Capacity 1",
+         "Laundry - Energy": {
+             "next": "Laundry - Capacity 1",
              "previous": "Appliance",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-energy-current.png",
@@ -872,9 +872,9 @@
                  }
              }]
          },
-         "Washers - Capacity 1": {
-             "next": "Washers - Noise",
-             "previous": "Washers - Energy",
+         "Laundry - Capacity 1": {
+             "next": "Laundry - Noise",
+             "previous": "Laundry - Energy",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-capacity-current.png",
              "thumbnail_text": "Capacity",
@@ -950,9 +950,9 @@
                  }
              }]
          },
-         "Washers - Noise": {
-             "next": "Washers - Orientation",
-             "previous": "Washers - Capacity 1",
+         "Laundry - Noise": {
+             "next": "Laundry - Orientation",
+             "previous": "Laundry - Capacity 1",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-noise-current.png",
              "thumbnail_text": "Noise",
@@ -1004,9 +1004,9 @@
                  }]
              }]
          },
-         "Washers - Orientation": {
-             "next": "Washers - Speed",
-             "previous": "Washers - Noise",
+         "Laundry - Orientation": {
+             "next": "Laundry - Speed",
+             "previous": "Laundry - Noise",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",
@@ -1050,9 +1050,9 @@
                  }]
              }]
          },
-         "Washers - Speed": {
-             "next": "Washers - Fabrics",
-             "previous": "Washers - Orientation",
+         "Laundry - Speed": {
+             "next": "Laundry - Fabrics",
+             "previous": "Laundry - Orientation",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-speed-current.png",
              "thumbnail_text": "Speed",
@@ -1104,9 +1104,9 @@
                  }]
              }]
          },
-         "Washers - Fabrics": {
-             "next": "Washers - Sensor",
-             "previous": "Washers - Speed",
+         "Laundry - Fabrics": {
+             "next": "Laundry - Sensor",
+             "previous": "Laundry - Speed",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-fabric-current.png",
              "thumbnail_text": "Fabric",
