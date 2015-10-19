@@ -96,11 +96,7 @@ angular.module('App')
 	              return true
 	              break;
 	            }       
-	          } else if (qtype == "slider-buttons") {
-	          	if (ans == 1 && a.value == q.show.answer) {
-	          		return true;
-	          	}
-	    	  } else {
+	          } else {
 	            if (a.answer == true) {
 	              return true
 	              break;
@@ -407,7 +403,7 @@ angular.module('App')
   			$rootScope.questionsData.question.disabled=false
   			$location.replace().path("/question/"+name);
 
-  			if ($rootScope.isTabletWidthOrLess) {
+  			if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
   				$("html, body").animate({scrollTop: "51px"}, 400);
   			}
 		} else {

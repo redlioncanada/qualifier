@@ -49,7 +49,7 @@ angular.module('App')
           qs.text[0].options.answers = qs.text[0].answers
           qs.text[0].options.iterator = t
           qs.text[0].options.callback = angular.copy(function(value, released) {  
-            console.log(this)
+            //console.log(this)
             if (!!$rootScope.questionsData.question) {
               if (qs.name == $rootScope.questionsData.question.name) {    
                 if (!!released) {
@@ -79,15 +79,14 @@ angular.module('App')
         }
 
         for (var t in qs.text) {        
-          for (var i in qs.text[0].answers) {
-            if (qs.text[0].answers[i].value == qs.text[0].answer) {
-              qs.text[0].answers[i].answer = true
+          for (var i in qs.text[t].answers) {
+            if (qs.text[t].answers[i].value == qs.text[t].answer) {
+              qs.text[t].answers[i].answer = true
             } else {
-              qs.text[0].answers[i].answer = false
+              qs.text[t].answers[i].answer = false
             }
           }
         }
-
     }
 
     $scope.toggleButtons = function(qs,sliderVal) {
@@ -116,6 +115,6 @@ angular.module('App')
         }
         match = false;
       }
-      console.log(qs.answers);
+      console.log(qs);
     }
 });

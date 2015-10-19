@@ -1297,7 +1297,16 @@
                 {
                     "classes": "label-inches",
                     "dimension_label" : "HAUTEUR",
+                    "answer" : 0,
                     "answers" : {
+                        "0" : {
+                            "value" : 0,
+                            "text" : "Any",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1,2,3],
+                            "scoring" : {
+                            }
+                        },
                         "66" : {
                             "value" : 66,
                             "text" : "66",

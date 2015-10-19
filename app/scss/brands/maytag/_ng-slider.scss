@@ -989,7 +989,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 .answer-buttons.label-inches {
-	.answer-button-answer::after {
+	.answer-button-wrapper:not(:first-child) .answer-button-answer::after {
 		content: ' "';
 		position: absolute;
 		top: 1px;
@@ -1026,9 +1026,10 @@ div[ng-class="fr_CA"] {
 @media(max-width:1024px) {
 	.answers-main-content.answer-buttons {
 		position: absolute;
-		top: 5px;
+		top: -25px;
 		width: 50%;
 		left: 50%;
+		padding-top: 0px;
 
 		li.answer-button-wrapper {
 			margin-right: 0 !important;
@@ -1076,8 +1077,14 @@ div[ng-class="fr_CA"] {
 			}
 		}
 	}
-    li.answer-button-wrapper {
+
+	div.answers-main-content.answer-buttons {
+		top: -9px;
+
+		li.answer-button-wrapper {
 			margin-top: 10px !important;
             margin-left: 0px !important;
 		}
+	}
+    
 }
