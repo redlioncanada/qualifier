@@ -53,18 +53,23 @@ angular.module('App')
             if (!!$rootScope.questionsData.question) {
               if (qs.name == $rootScope.questionsData.question.name) {    
                 if (!!released) {
-                  for (var a in this.answers) {
+                  console.log('released');
+                  console.log(value, Math.round(value));
+                  $rootScope.questionsData.question.text[0].answer = Math.round(value);
+                  /*for (var a in this.answers) {
                         //console.log( $rootScope.questionsData.question.text[0].answer , $rootScope.questionsData.question.text[0].options.halfway,  parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway , parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway   )
                         //console.log($rootScope.questionsData.question.text[0].answer , (parseFloat(this.answers[a].value)- this.halfway), (parseFloat(this.answers[a].value)+this.halfway))
                         if ($rootScope.questionsData.question.text[0].answer > (parseFloat(this.answers[a].value)- this.halfway) &&  $rootScope.questionsData.question.text[0].answer < (parseFloat(this.answers[a].value)+this.halfway)) {
                           $rootScope.questionsData.question.text[0].answer = this.answers[a].value
+                          console.log('value set');
                           break
                         }
-                  }
+                  }*/
                   $rootScope.safeApply();
                 } 
 
                 $scope.toggleButtons(qs.text[1],$rootScope.questionsData.question.show.answer);
+                console.log(qs);
               }
             }
           })
@@ -115,6 +120,6 @@ angular.module('App')
         }
         match = false;
       }
-      console.log(qs);
+      //console.log(qs);
     }
 });
