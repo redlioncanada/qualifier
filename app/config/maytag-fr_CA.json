@@ -1025,7 +1025,7 @@
                      "text": "LAVEUSE ET SÉCHEUSE SUPERPOSÉES",
                      "value": "Stacked",
                      "scoring": {
-                         "frontLoad": 1,
+                         "frontLoad": 3,
                          "stacked": 1
                      },
                      "order": 1
@@ -1036,7 +1036,7 @@
                      "text": "LAVEUSE ET SÉCHEUSE CÔTE À CÔTE",
                      "value": "Side-By-Side",
                      "scoring": {
-                         "topLoad": 1
+                         "topLoad": 3
                      },
                      "order": 2
                  }, {
@@ -1045,7 +1045,9 @@
                      "image": "img/Laundry-Q4no-preference.jpg",
                      "text": "PAS DE PRÉFÉRENCE",
                      "value": "No Preference",
-                     "scoring": {},
+                     "scoring": {
+                        "topLoad" : 3
+                     },
                      "order": 3
                  }]
              }]

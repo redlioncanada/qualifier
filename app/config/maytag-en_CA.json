@@ -1112,7 +1112,7 @@
 							"text" : "Stacked",
 							"value" : "Stacked",
 							"scoring" : {
-								 "frontLoad" : 1,
+								 "frontLoad" : 3,
 								 "stacked" : 1
 							},
 							"order" : 1
@@ -1124,7 +1124,7 @@
 							"text" : "Side-By-Side",
 							"value" : "Side-By-Side",
 							"scoring" : {
-								"topLoad" : 1
+								"topLoad" : 3
 							},
 							"order" : 2
 						},
@@ -1135,6 +1135,7 @@
 							"text" : "No Preference",
 							"value" : "No Preference",
 							"scoring" : {
+								"topLoad" : 3
 							},
 							"order" : 3
 						}
