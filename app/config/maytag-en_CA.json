@@ -50,7 +50,7 @@
 							"thumbnail_text" : "Laundry",							
 							"next" : "Laundry - Energy",
 							"scoring" : {
-								"appliance" : "Laundry"
+								"appliance" : "Washers"
 							},
 							"order" : 1
 						},
