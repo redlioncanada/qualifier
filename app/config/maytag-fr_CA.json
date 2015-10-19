@@ -1254,12 +1254,12 @@
                     "to" : 3,      
                     "step": 0.0001,
                     "dimension_label": "LARGEUR",
-                    "scale": ["Aucun","30\"","33\"", "36\""]       
+                    "scale": ["Toute","30\"","33\"", "36\""]       
                 },
                  "answers" : {
                         "0" : {
                             "value" : 0,
-                            "text" : "Aucun",
+                            "text" : "Toute",
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
@@ -1301,7 +1301,7 @@
                     "answers" : {
                         "0" : {
                             "value" : 0,
-                            "text" : "Any",
+                            "text" : "Toute",
                             "enabled" : true,
                             "enabledWhen" : [0,1,2,3],
                             "scoring" : {
