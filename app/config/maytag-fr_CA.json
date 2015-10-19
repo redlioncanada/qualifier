@@ -256,7 +256,7 @@
                  }, {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
-                     "text": "No Preference(fr)",
+                     "text": "Pas de préférence",
                      "value": "nopreference",
                      "image": "img/Cooking-Q2-nopreference.png",
                      "scoring": {
@@ -528,7 +528,7 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-nopreference.jpg",
-                            "text" : "No Preference (fr)",
+                            "text" : "Pas de préférence",
                             "value" : "NoPreference",
                             "scoring" : {
                             },
@@ -965,7 +965,7 @@
                  "type": "radio-4",
                  "oneAnswer": true,
                  "answers": [{
-                     "text": "Beaucoup – Nos appareils de lessive sont situés près d’une chambre à coucher",
+                     "text": "Beaucoup – nos appareils de lessive sont situés près d’une chambre à coucher",
                      "value": "sensitive",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
@@ -975,7 +975,7 @@
                      },
                      "order": 1
                  }, {
-                     "text": "Modérément – Nos appareils de lessive sont situés près de notre pièce de séjour principale",
+                     "text": "Modérément – nos appareils de lessive sont situés près de notre pièce de séjour principale",
                      "value": "littlebit",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
@@ -985,7 +985,7 @@
                      },
                      "order": 2
                  }, {
-                     "text": "Quelque peu – La plupart du temps, le bruit ne me dérange pas",
+                     "text": "Quelque peu – la plupart du temps, le bruit ne me dérange pas",
                      "value": "moderately",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
@@ -995,7 +995,7 @@
                      },
                      "order": 4
                  }, {
-                     "text": "Pas du tout – Mes appareils de lessive sont au sous-sol",
+                     "text": "Pas du tout – mes appareils de lessive sont au sous-sol",
                      "value": "unconcerned",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
@@ -1022,7 +1022,7 @@
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4-stacked.jpg",
-                     "text": "LAVEUSE ET SÉCHEUSE SUPERPOSÉES",
+                     "text": "Laveuse et sécheuse superposées",
                      "value": "Stacked",
                      "scoring": {
                          "frontLoad": 3,
@@ -1033,7 +1033,7 @@
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4-side-by-side.jpg",
-                     "text": "LAVEUSE ET SÉCHEUSE CÔTE À CÔTE",
+                     "text": "Laveuse et sécheuse côte à côte",
                      "value": "Side-By-Side",
                      "scoring": {
                          "topLoad": 3
@@ -1043,7 +1043,7 @@
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4no-preference.jpg",
-                     "text": "PAS DE PRÉFÉRENCE",
+                     "text": "Pas de préférence",
                      "value": "No Preference",
                      "scoring": {
                         "topLoad" : 3
@@ -1485,20 +1485,21 @@
             "previous" : "Fridges - Organization",
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-water-current.png",
-            "thumbnail_text" : "Waterline (FR)",
+            "thumbnail_text" : "Waterline",
+            "thumbnail_text_fr": "d'une conduite d'eau",
             "text" : [
                 {
-                    "question" : "Does your kitchen have an existing waterline? (FR)",
+                    "question" : "Votre cuisine est-elle actuellement équipée d'une conduite d'eau?",
                     "sub_question" : "SÉLECTIONNEZ UNE RÉPONSE",
-                    "explanation_title" : "Why are you asking me about a waterline? (FR)",
-                    "explanation" : "(FR) Did you know that your kitchen needs a waterline in order for your fridge to dispense water and ice? We want to make sure that you know about this requirement before we recommend the perfect fridge to fit your lifestyle.",
+                    "explanation_title" : "POURQUOI ME POSEZ-VOUS DES QUESTIONS SUR LA CONDUITE D'EAU?",
+                    "explanation" : "Saviez-vous que votre cuisine nécessite une conduite d'eau afin que votre réfrigérateur puisse distribuer de l'eau et des glaçons? Nous voulons nous assurer que vous êtes au courant de cette exigence avant de pouvoir vous recommander le réfrigérateur idéal pour votre style de vie.",
                     "type" : "radio-4",
                     "oneAnswer" : true,
                     "answers" : [
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "Yes - it's great because we love water and ice dispensed from our fridge (FR)",
+                            "text" : "Oui – c'est excellent car on aime beaucoup l’idée d’avoir de l'eau et des glaçons distribués de notre réfrigérateur",
                             "value" : "yes",
                             "scoring" : {
                                 "indoorDispenser" : 3
@@ -1508,7 +1509,7 @@
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "No - but we would consider installing one so our fridge could dispense water and ice (FR)",
+                            "text" : "Non - mais nous sommes prêts à en installer une pour que notre réfrigérateur puisse distribuer de l'eau et des glaçons.",
                             "value" : "nobutyes",
                             "scoring" : {
                                 "indoorDispenser" : 1
@@ -1518,7 +1519,7 @@
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "No - we don't have a waterline and would prefer not to install one (FR)",
+                            "text" : "Non - nous n'avons pas de conduite d'eau et nous préférons ne pas en utiliser une.",
                             "value" : "no",
                             "scoring" : {
                                 "indoorDispenser" : -30
@@ -1528,7 +1529,7 @@
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "I'm not sure (FR)",
+                            "text" : "Je n'en suis pas sûre.",
                             "value" : "notsure",
                             "scoring" : {
                             },
@@ -1947,7 +1948,7 @@
                  "answers": [{
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
-                     "text": "Oui – Ma cuisine donne sur une autre pièce",
+                     "text": "Oui – ma cuisine donne sur une autre pièce",
                      "image": "/img/Dishwasher_Q5_MT-open-concept-yes.png",
                      "value": "yes",
                      "scoring": {
@@ -1957,7 +1958,7 @@
                  }, {
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
-                     "text": "Non – Ma cuisine est une pièce à part",
+                     "text": "Non – ma cuisine est une pièce à part",
                      "image": "/img/Dishwasher_Q5_MT-open-concept-no.png",
                      "value": "no",
                      "scoring": {},
@@ -2056,7 +2057,7 @@
                  }, {
                      "thumbnail": "img/icon-style.png",
                      "thumbnail_current": "img/icon-style-current.png",
-                     "text": "No Preference(fr)",
+                     "text": "Pas de préférence",
                      "value": "NoPreference",
                      "image": "img/Dishwasher-Q6-nopreference.jpg",
                      "scoring": {
