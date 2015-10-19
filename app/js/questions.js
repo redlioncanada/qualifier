@@ -4,7 +4,7 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams) {
 
   	$rootScope.$on('resize::resize', function() {
-	    if (window.innerWidth < 1024 && !$scope.isHomePage()){
+	    if (window.innerWidth < 1024){
 	        $scope.resizeElements();
 	    } else if (window.innerWidth >= 1024) {
 	    	//reset header height to it's css value
@@ -324,10 +324,10 @@ angular.module('App')
 
 		var c = $('.slidey.ng-hide-remove').height();
 
-		if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
+		/*if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
 			return;
 		}
-		$scope.lastHeight = c;
+		$scope.lastHeight = c;*/
 
 		if (c < 400) {
 			c = $('.slidey').not('.ng-hide').height();

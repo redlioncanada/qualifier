@@ -166,14 +166,14 @@
                  "explanation": "Nos fours encastrés sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
                  "type": "slider",
                  "oneAnswer": false,
-                 "classes" : "slider-labels left-tag no-jslider-value five",
-                 "answer": 27,
+                 "classes" : "slider-labels left-tag no-jslider-value three",
+                 "answer": 0,
                  "options" : { 
                     "from" : 0,
-                    "to" : 4,      
+                    "to" : 2,      
                     "step": 0.0001,
                     "dimension_label" : "LARGEUR",
-                    "scale": ["Aucun", "27\"", "28\"", "29\"", "30\""]   
+                    "scale": ["Aucun", "27\"", "30\""]   
                 },
                  "answers": {
                      "0" : {
@@ -198,28 +198,6 @@
                         "thumbnail" : "img/icon-size.png",
                         "thumbnail_current" : "img/icon-size-current.png",
                         "value" : 2,
-                        "scoring" : {
-                            "width27" : -30,
-                            "width28" : 1,
-                            "width29" : -30,
-                            "width30" : -30
-                        }
-                    },
-                    "3" : {
-                        "thumbnail" : "img/icon-size.png",
-                        "thumbnail_current" : "img/icon-size-current.png",
-                        "value" : 3,
-                        "scoring" : {
-                            "width27" : -30,
-                            "width28" : -30,
-                            "width29" : 1,
-                            "width30" : -30
-                        }
-                    },
-                    "4" : {
-                        "thumbnail" : "img/icon-size.png",
-                        "thumbnail_current" : "img/icon-size-current.png",
-                        "value" : 4,
                         "scoring" : {
                             "width27" : -30,
                             "width28" : -30,
