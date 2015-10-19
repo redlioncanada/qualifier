@@ -4,11 +4,11 @@
 	<div bo-text="brandData.appText.changeYourAnswer" ng-if="!questionsData.question"></div>
 
 	<div ng-if="!isTabletWidthOrLess" class="app-nav-arrows">
-		<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
+		<a href="" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 			<img class="arrow-prev" ng-src="img/arrow-left.png">
 		</a>
 
-		<a href="#" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
+		<a href="" class="btn-next" ng-if="!!questionsData.question && questionsData.question.name !='Appliance'" ng-click="!controls.questionHasAnswer || next()" id="next" ng-class="{'disabled' : !controls.questionHasAnswer}">
 			<img class="arrow-next" ng-src="img/arrow-right.png">
 		</a>
 

@@ -406,6 +406,8 @@ angular.module('App')
   			}
   			$rootScope.questionsData.question.disabled=false
   			$location.replace().path("/question/"+name);
+
+  			if ($rootScope.isTabletWidthOrLess) window.scrollTo(0,51);
 		} else {
 			$state.go('main.results')
 		}	
