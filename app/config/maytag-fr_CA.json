@@ -1792,7 +1792,7 @@
                                 "placeSettings14": 1
                             }
                         },
-                        "2.5" : {
+                        "2" : {
                             "thumbnail" : "img/icon-capacity.png",
                             "thumbnail_current" : "img/icon-capacity-current.png",
                             "value" : 2.5,
@@ -1811,7 +1811,7 @@
                                 "placeSettings14": 1
                             }
                         },
-                        "7.5" : {
+                        "7" : {
                             "thumbnail" : "img/icon-capacity.png",
                             "thumbnail_current" : "img/icon-capacity-current.png",
                             "value" : 7.5,
@@ -1830,7 +1830,7 @@
                                 "placeSettings15": 1
                             }
                         },
-                        "12.5" : {
+                        "12" : {
                             "thumbnail" : "img/icon-capacity.png",
                             "thumbnail_current" : "img/icon-capacity-current.png",
                             "value" : 12.5,
