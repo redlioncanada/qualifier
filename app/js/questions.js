@@ -358,6 +358,7 @@ angular.module('App')
   		// if this question doesn't set next, then its fine
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
+
   		var hasNext = false
   		if (!!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
@@ -388,9 +389,12 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			if ($rootScope.questionsData.question.name == 'Appliance') {
-  					for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
-  						$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
-  					}
+				for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
+					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
+				}
+  				$location.replace().path("/question/"+name);
+			} else {
+				$location.path("/question/"+name);
 			}
 
 			$scope.show();
@@ -401,7 +405,6 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
-  			$location.replace().path("/question/"+name);
 
   			if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
   				$("html, body").animate({scrollTop: "51px"}, 400);

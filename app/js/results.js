@@ -123,8 +123,7 @@ angular.module('App')
         }
         link += sq + "=" + answer.join(";") + "&"
       }
-      window.location.href = "mailto:?subject=Yo,%20Qualify&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
-      console.log("mailto:?subject=Yo,%20Qualify&body=<http://maytagqualifier.com"+encodeURIComponent(link)+">");
+      window.location.href = "mailto:?subject=Qualifier&20Email%20Test&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
   };
 
 
