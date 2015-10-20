@@ -60,6 +60,7 @@ header.header-desktop {
 			height: 24px;
 			text-align: center;
 			display: inline-block;
+            cursor: pointer;
 			span {
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				color: #fff;
@@ -347,7 +348,6 @@ header.header-desktop {
 //popover styles
 .popover-title {
 	text-transform: uppercase;
-	border-bottom: 1px solid #FFF;
 }
 .popover {
 	border: 0;

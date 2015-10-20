@@ -1240,8 +1240,8 @@
              "thumbnail_text": "Size",
              "thumbnail_text_fr": "Taille",
              "text": [{
-                 "question": "NOUS AVONS LE RÉFRIGÉRATEUR PARFAIT POUR VOTRE FAMILLE.",
-                 "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
+                 "question": "WHAT SIZE FRIDGE DO YOU NEED (FR)",
+                 "question_more": "",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos réfrigérateurs sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
