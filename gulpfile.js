@@ -55,6 +55,9 @@ gulp.task('sass', function () {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
+    gulp.src('app/js/services/*.js')
+        .pipe(gulp.dest('build/js/services'));
+
     return gulp.src('app/js/*.js')
         // .pipe(uglify())
         .pipe(gulp.dest('build/js'));

@@ -1737,7 +1737,7 @@
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Always - Home aesthetics are very important to me",
+							"text" : "Always - home aesthetics are very important to me",
 							"value" : 0,
 							"scoring" : {
 								"counterDepth" : 2
@@ -1757,7 +1757,7 @@
 						{
 							"thumbnail" : "img/icon-style.png",
 							"thumbnail_current" : "img/icon-style-current.png",
-							"text" : "Never - Performance is my main priority",
+							"text" : "Never - performance is my main priority",
 							"value" : 2,
 							"scoring" : {
 							},
