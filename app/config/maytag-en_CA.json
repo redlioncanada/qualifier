@@ -1353,7 +1353,7 @@
 				{
 					"question" : "What size fridge do you need?",
 					"question_more" : "",
-					"sub_question" : "Slide to answer",
+					"sub_question" : "Please slide and click to answer",
 					"explanation_title" : "Why Are You Asking Me About Size?",
 					"explanation" : "Our fridges come in many sizes, we want to make sure that we recommend the perfect one for your space.",
 					"type" : "slider-buttons",

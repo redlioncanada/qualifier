@@ -380,9 +380,10 @@
 	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
 		width: 172px;
-		height: 205px;
+		height: 204px;
 		background: url('../img/boxes-icon-bg-new.png');
 		display: inline-block;
+        background-repeat: no-repeat;
 		@include boxshadow;
 		.icon-wrap {
 			img {
