@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams) {
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams, $appstate) {
 
   	$rootScope.$on('resize::resize', function() {
 	    if (window.innerWidth < 1024){
@@ -423,6 +423,8 @@ angular.module('App')
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
 
+  		$appstate.store($rootScope.questionsData);
+
         // $timeout is a hacky way to make sure the above assignment propagates before
         // any animation takes place.
   		$timeout(function() {
@@ -435,6 +437,7 @@ angular.module('App')
 		  		else if ("next" in hasAnswer) {
 		  			var name = hasAnswer.next
 		  		}
+
 		  		$rootScope.moveToQuestion(name,done)
 	  		} 
   		}, 100);
@@ -525,7 +528,7 @@ angular.module('App')
 
 	  		count++
 	  	}
-	  	console.log($rootScope.questionsData)
+
 	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
 	  		$scope.recalculateResults()
 	  		//$state.go("main.results");

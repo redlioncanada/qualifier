@@ -13,7 +13,8 @@ var nglibs = [
   'ui.sortable',
   'angularAwesomeSlider',
   'ngAnimate',
-  'angular-images-loaded'
+  'angular-images-loaded',
+  'AppstateService'
 ];
 
 var App = angular.module('App', nglibs);
@@ -77,11 +78,11 @@ App.filter('rearrange', function() {
       var temp = items[0];
       items[0] = items[1];
       items[1] = temp;     
-      if (items[0].price > items[2].price) {
-        temp = items[0].price;
-        items[0].price = items[2].price;
-        items[2].price = temp;
-        items[2].price = temp;
+
+      if (items[0].colours[0].prices.CAD > items[2].colours[0].prices.CAD) {
+        temp = items[0];
+        items[0] = items[2];
+        items[2] = temp;
       }
       return items;
   };
@@ -196,8 +197,7 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location) {
-
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location) {
     $state.go('loading');
     localStorageService.clearAll();
 
@@ -266,7 +266,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = res.products;
-// console.log(res.products);
+
                 var relcodes = {
                   'M1' : 'DC',
                   'WH' : 'DW'
@@ -376,7 +376,6 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                     }
                 })
 
-console.log($rootScope.appliances);
                 $rootScope.hasanswers = {};
                 var httpparams = (decodeURI($location.$$absUrl)).replace(/\+/g, ' ').split("?");
                 if (1 in httpparams) {
