@@ -15,19 +15,25 @@ html, body {
 		// padding-bottom: 25px;
 
 		.buttons-top-right-btns {
-			display: inline-block;
-			float: right;
-			margin-right: 50px;
+			display: block;
+            margin-right: 50px;
+            width: 100%;
+            max-width: 1400px;
+            height: 30px;
+            margin: 0 auto !important;
 
 			.share-wrapper {
-				height: 30px;
-				text-align: center;
-				display: inline-block;
-				margin-left: 1px;
-				-webkit-border-radius: 3px;
-				-moz-border-radius: 3px;
-				border-radius: 3px;
-				position: relative;
+                height: 30px;
+                text-align: center;
+                display: inline-block;
+                margin-left: 1px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                position: relative;
+                float: right;
+                margin-right: 50px;
+            
 
 				> span {
 					z-index: 3;

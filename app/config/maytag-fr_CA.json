@@ -33,7 +33,7 @@
              "thumbnail_text": "Appliance",
              "thumbnail_text_fr": "Éléctroménager",
              "text": [{
-                 "question": "QUE POUVONS-NOUS VOUS AIDER À TROUVER?",
+                 "question": "Que pouvons-nous vous aider à trouver?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "type": "categories-click",
                  "oneAnswer": true,
@@ -112,7 +112,7 @@
              "thumbnail_text_fr": "Cuisiner",
              "thumbnail_current": "img/nav-placeholder-current.png",
              "text": [{
-                 "question": "QUEL PRODUIT AIMERIEZ-VOUS EXPLORER EN PREMIER?",
+                 "question": "Quel produit aimeriez-vous explorer en premier?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "type": "categories",
                  "oneAnswer": true,
@@ -158,7 +158,7 @@
              "thumbnail_text_fr": "Taille",
              "thumbnail_current": "img/icon-size-current.png",
              "text": [{
-                 "question": "NOUS AVONS LE four encastré PARFAIT POUR VOTRE FAMILLE.",
+                 "question": "Nous avons le four encastré parfait pour votre famille.",
                  "questionHideOnMobile": true,
                  "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
@@ -274,7 +274,7 @@
              "thumbnail_text_fr": "Style",
              "thumbnail_current": "img/icon-style-current.png",
              "text": [{
-                 "question": "COMMENT VOTRE FAMILLE VOUS DÉCRIRAIT-ELLE?",
+                 "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CUISINE?",
                  "explanation": "Tous nos fours sont dotés de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre four afin de pouvoir recommander celui qui convient à votre style de vie.",
@@ -336,7 +336,7 @@
              "thumbnail_text_fr": "Caractéristiques",
              "thumbnail_current": "img/icon-features-current.png",
              "text": [{
-                 "question": "J’UTILISE MON FOUR POUR…",
+                 "question": "J’utilise mon four pour…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’UTILISATION?",
                  "explanation": "Nos fours sont tous dotés de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celui qui convient à vos besoins en matière de cuisson.",
@@ -546,7 +546,7 @@
              "thumbnail_text_fr": "Capacité",
              "thumbnail_current": "img/icon-capacity-current.png",
              "text": [{
-                 "question": "à quelle fréquence RÉALISEZ-VOUS QUE VOUS AURIEZ besoin d’espace supplémentaire dans votre four?",
+                 "question": "À quelle fréquence réalisez-vous que vous auriez besoin d’espace supplémentaire dans votre four?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la capacité?",
                  "explanation": "Si vous préparez souvent de grands repas, nous vous recommanderions alors un four d’une plus grande capacité.",
@@ -607,7 +607,7 @@
              "thumbnail_text": "Style",
              "thumbnail_text_fr": "Style",
              "text": [{
-                 "question": "POURQUOI CUISINEZ-VOUS?",
+                 "question": "Pourquoi cuisinez-vous?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Toutes nos cuisinières sont dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre cuisinière afin de pouvoir recommander celle qui convient le mieux à votre style de vie.",
@@ -660,7 +660,7 @@
              "thumbnail_current": "img/icon-convection-current.png",
              "thumbnail_type": "image",
              "text": [{
-                 "question": "COMMENT VOTRE FAMILLE VOUS DÉCRIRAIT-ELLE?",
+                 "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient parfaitement à vos besoins.",
@@ -718,7 +718,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "J’UTILISE MA CUISINIÈRE FOUR POUR…",
+                 "question": "J’utilise ma cuisinière four pour…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la cuisine?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient à vos besoins.",
@@ -789,7 +789,7 @@
              "thumbnail_current": "img/icon-fueltype-current.png",
              "thumbnail_type": "image",
              "text": [{
-                 "question": "VOTRE CUISINE EST-ELLE ÉQUIPÉE POUR l’alimentation au gaz ou ÉLECTRIQUE?",
+                 "question": "Votre cuisine est-elle équipée pour l’alimentation au gaz ou électrique?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU GAZ?",
                  "explanation": "Certaines cuisines sont équipées pour l’alimentation au gaz, d’autres non. Nous avons besoin de connaître cette information pour recommander la cuisinière idéale.",
@@ -880,7 +880,7 @@
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "combien de personnes votre FOYER compte-t-il?",
+                 "question": "Combien de personnes votre foyer compte-t-il?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la taille de ma famille?",
                  "explanation": "Tout comme votre famille, tous nos appareils sont uniques. Si nous comprenons un peu plus la composition de votre famille, nous pouvons recommander l’appareil qui est adapté aux besoins précis de votre foyer.",
@@ -958,7 +958,7 @@
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "LES NIVEAUX DE BRUIT DE VOS APPAREILS DE LESSIVE SONT-ILS IMPORTANTS POUR VOUS?",
+                 "question": "Les niveaux de bruit de vos appareils de lessive sont-ils importants pour vous?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du bruit?",
                  "explanation": "Certains de nos appareils de lessive sont conçus précisément pour limiter le bruit. En comprenant vos besoins, nous pouvons trouver les appareils tout indiqués pour votre foyer.",
@@ -1060,7 +1060,7 @@
              "thumbnail_text": "Speed",
              "thumbnail_text_fr": "Rapidité",
              "text": [{
-                 "question": "deVEZ-VOUS SOUVENT LAVER ET FAIRE SÉCHER DES ARTICLES EN MOINS D’UNE HEURE?",
+                 "question": "Devez-vous souvent laver et faire sécher des articles en moins d’une heure?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU TEMPS DE SÉCHAGE?",
                  "explanation": "Certains de nos appareils de lessive sont conçus précisément pour vous faire franchir la porte en un temps record. En comprenant vos besoins, nous pouvons trouver l’appareil le mieux adapté à votre style de vie.",
@@ -1114,7 +1114,7 @@
              "thumbnail_text": "Fabric",
              "thumbnail_text_fr": "Tissus",
              "text": [{
-                 "question": "QUELLES SORTES DE TISSUS LAVEZ-VOUS ENSEMBLE?",
+                 "question": "Quelles sortes de tissus lavez-vous ensemble?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DEs tissus?",
                  "explanation": "Tout le monde fait sa lessive différemment. En comprenant la façon dont vous triez les tissus, nous serons mieux en mesure de proposer des options de programme adaptées à votre style de vie et vos besoins précis.",
@@ -1357,7 +1357,7 @@
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "RÉGULIÈREMENT, mon réfrigérateur ME PERMET DE nourrir…",
+                 "question": "Régulièrement, mon réfrigérateur me permet de nourrir…",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la capacité?",
                  "explanation": "Nous voulons nous faire une meilleure idée de la façon dont vous utilisez votre frigo et de ce que vous y mettez afin de pouvoir trouver celui qui convient à votre style de vie.",
@@ -1431,7 +1431,7 @@
              "thumbnail_text": "Organization",
              "thumbnail_text_fr": "Organisation",
              "text": [{
-                 "question": "j’ai besoin d’un réfrigérateur pour ma famille qui PEUT…",
+                 "question": "J’ai besoin d’un réfrigérateur pour ma famille qui peut…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’OrganiSation?",
                  "explanation": "Nos réfrigérateurs sont conçus avec soin, sur tous les plans. En sachant ce que vous mettez dans votre frigo, nous pourrons mieux recommander celui qui convient à votre style de vie.",
@@ -1547,7 +1547,7 @@
              "thumbnail_text": "Orientation",
              "thumbnail_text_fr": "Orientation",
              "text": [{
-                 "question": "EN GÉNÉRAL, LE RÉFRIGÉRATEUR DE VOTRE FAMILLE EST…",
+                 "question": "En général, le réfrigérateur de votre famille est…",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’OrganiSation?",
                  "explanation": "La façon dont vous utilisez votre réfrigérateur est tout aussi importante que ce que vous y rangez. En comprenant l’utilisation que vous faites de votre réfrigérateur, nous pouvons recommander celui qui vous convient le mieux.",
@@ -1644,7 +1644,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "COMMENT FAITES-VOUS votre ÉPICERIE?",
+                 "question": "Comment faites-vous votre épicerie?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’ÉPICERIE?",
                  "explanation": "Nos réfrigérateurs sont conçus avec des caractéristiques uniques. En comprenant la façon dont vous magasinez, nous en apprenons davantage sur l’utilisation que vous faites de votre réfrigérateur et pouvons mieux vous recommander celui qui est adapté à votre style de vie.",
@@ -1698,7 +1698,7 @@
              "thumbnail_text": "Cleaning",
              "thumbnail_text_fr": "Nettoyage",
              "text": [{
-                 "question": "QUE TROUVERIONS-NOUS À L’INTÉRIEUR DE VOTRE LAVE-VAISSELLE EN CE MOMENT?",
+                 "question": "Que trouverions-nous à l’intérieur de votre lave-vaisselle en ce moment?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE CE QUE JE LAVE?",
                  "explanation": "Nous voulons nous assurer que toute votre vaisselle est étincelante de propreté – si nous savons ce que vous mettez au lave-vaisselle, nous pourrons recommander des options qui conviennent le mieux à vos besoins en matière de lavage.",
@@ -1764,7 +1764,7 @@
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "COMBIEN DE FOIS PAR SEMAINE EST-CE QUE VOTRE FAMILLE FAIT MARCHER LE LAVE-VAISSELLE?",
+                 "question": "Combien de fois par semaine est-ce que votre famille fait marcher le lave-vaisselle?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CAPACITÉ?",
                  "explanation": "Lorsqu’il s’agit de laver la vaisselle, il n’y a pas de tâche trop grande ou trop petite. En comprenant ce que vous mettez au lave-vaisselle, nous pourrons trouver ce qui convient le mieux à votre famille.",
@@ -1859,7 +1859,7 @@
              "thumbnail_text": "Cycles",
              "thumbnail_text_fr": "Programmes",
              "text": [{
-                 "question": "À QUELLE FRÉQUENCE CHOISISSEZ-VOUS DES PROGRAMMES PERSONNALISÉS?",
+                 "question": "À quelle fréquence choisissez-vous des programmes personnalisés?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DES PROGRAMMES?",
                  "explanation": "Considérez les programmes personnalisés comme une solution adaptée à votre vaisselle. Cette question nous aidera à déterminer quelles caractéristiques supplémentaires vous seront utiles.",
@@ -1916,7 +1916,7 @@
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "QUAND METTEZ-VOUS HABITUELLEMENT LE LAVE-VAISSELLE EN MARCHE?",
+                 "question": "Quand mettez-vous habituellement le lave-vaisselle en marche?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU MOMENT DE LA MISE EN MARCHE?",
                  "explanation": "Nos lave-vaisselle offrent différents profils sonores. En sachant à quel moment vous mettez le vôtre en marche, nous pouvons déterminer quel appareil convient le mieux à votre famille active.",
@@ -1967,7 +1967,7 @@
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "VIVEZ-VOUS DANS UN ESPACE OUVERT?",
+                 "question": "Vivez-vous dans un espace ouvert?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MON Espace?",
                  "explanation": "Si vous vivez dans un espace ouvert, nous voulons en tenir compte afin de recommander l’appareil tout indiqué pour réduire le bruit au minimum.",
@@ -2002,7 +2002,7 @@
              "thumbnail_text": "Organization",
              "thumbnail_text_fr": "Organisation",
              "text": [{
-                 "question": "AVANT DE METTRE EN MARCHE VOTRE LAVE-VAISSELLE, IL est…",
+                 "question": "Avant de mettre en marche votre lave-vaisselle, il est…",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’Organisation?",
                  "explanation": "Après avoir évalué votre technique, nous pouvons proposer des façons d’optimiser l’organisation pour votre foyer.",
@@ -2055,7 +2055,7 @@
              "thumbnail_text": "Style",
              "thumbnail_text_fr": "Style",
              "text": [{
-                 "question": "SÉLECTIONNEZ VOTRE STYLE...",
+                 "question": "Sélectionnez votre style...",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU Style?",
                  "explanation": "Trouver ce qui convient parfaitement au style de votre foyer est aussi important pour nous que pour vous.",
