@@ -877,6 +877,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 			height: 28px;
 			background: url('../img/slider-results-bg.png');
 			background-size: contain;
+            background-repeat: no-repeat;
 		}
 	}
 	.price-slider.pointer-labels {
@@ -1023,7 +1024,7 @@ div[ng-class="fr_CA"] {
 	}
 }
 
-@media(max-width:1024px) {
+@media(max-width:1023px) {
 	.answers-main-content.answer-buttons {
 		position: absolute;
 		top: -25px;
