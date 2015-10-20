@@ -11,6 +11,10 @@ appstateModule.factory('$appstate', ['$cookies', '$log', function($rootScope, $c
 
 	}
 
+	appstate.clear = function() {
+		
+	}
+
 	return appstate;
 
 	// $cookies.put(JSON.stringify($rootScope.questionsData, 'questionsData'));

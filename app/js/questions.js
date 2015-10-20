@@ -450,6 +450,7 @@ angular.module('App')
    	$rootScope.previous = function () {
    		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'previous';
+  		$rootScope.showTooltip = false;
 
         // $timeout is a hacky way to make sure the above assignment propagates before
         // any animation takes place.
@@ -537,5 +538,10 @@ angular.module('App')
 	  	}
 	  	
   	}
+
+  	//disable tooltip when clicking anywhere on the page
+  	$('body').click(function(e) {
+  		if(e.target.id != 'tooltip-glyph') $rootScope.showTooltip = false;
+  	});
 
 });

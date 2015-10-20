@@ -28,7 +28,7 @@
 					<span class="instructions" bo-text="brandData.apptext.changeYourAnswer"></span>
                     <!--<span ng-if="isTabletWidthOrLess" class="mobileInstructions">hm-swipeleft for next question</span>-->
                     <div ng-if="isTabletWidthOrLess" class="mobile-app-nav-arrows">
-						<a href="#" class="btn-prev" ng-click="showTooltip = false; previous()" id="previous" ng-if="!!questionsData.question.previous">
+						<a href="#" class="btn-prev" ng-click="previous()" id="previous" ng-if="!!questionsData.question.previous">
 							<img class="arrow-prev" ng-src="img/arrow-left.png">
 						</a>
 
