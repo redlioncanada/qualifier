@@ -540,7 +540,7 @@ angular.module('App')
   	}
 
   	//disable tooltip when clicking anywhere on the page
-  	$('body').click(function(e) {
+  	$('html,body').click(function(e) {
   		if(e.target.id != 'tooltip-glyph') $rootScope.showTooltip = false;
   	});
 
