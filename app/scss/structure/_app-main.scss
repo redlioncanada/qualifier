@@ -970,10 +970,6 @@ a.answer-box.picture-4 {
         /*min-height: 370px !important;*/
 	}
 
-	div.slidey-wrap-all {
-		height: 770px;
-	}
-
 	div.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		height: 270px;
 
@@ -1278,14 +1274,16 @@ a.answer-box.picture-4 {
         
         .select-icon {
             top: 75px;
-            left: 7px;
+            left: 4px;
             -webkit-transform: scale(0.65);
             transform: scale(0.65);
         }
         .label-wrap {
+            width: 100%;
+            
             .label-text {
-                top: 9px;
-                left: -20px;
+                top: 8px;
+                left: -31px;
                 font-size: 10px !important;
             }
         }
@@ -1321,7 +1319,7 @@ a.answer-box.picture-4 {
 			margin-right: -1px !important;
 	}
     div.app-content-main-top {
-        height: 60px !important;        
+        min-height: 60px !important;        
     }
 }
 
