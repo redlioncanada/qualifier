@@ -50,6 +50,7 @@ angular.module('App')
 				}, 100)	
 	  		}
 
+	  		$appstate.store();
     });
 
 
@@ -389,9 +390,11 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			if ($rootScope.questionsData.question.name == 'Appliance') {
+				//homepage
 				for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
 					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
 				}
+				$appstate.clear();
   				$location.replace().path("/question/"+name);
 			} else {
 				$location.path("/question/"+name);
@@ -422,8 +425,6 @@ angular.module('App')
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'next';
-
-  		$appstate.store($rootScope.questionsData);
 
         // $timeout is a hacky way to make sure the above assignment propagates before
         // any animation takes place.
@@ -474,69 +475,16 @@ angular.module('App')
 
   	}
 
-  	//set questions to head
-  	if (!$rootScope.questionsData) {
-	 	$rootScope.controls = {}
-		$rootScope.controls.questionHasAnswer = false
-	  	$rootScope.questionsData = {}
-	  	$rootScope.questionsData.scoringQuestions = {};
-	  	$rootScope.questionsData.currentCount = null;
-	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
-	  	
-	  	var count = 0
+  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
+  		$scope.recalculateResults()
+  		//$state.go("main.results");
+  	} else {
+  		$rootScope.moveToQuestion("Appliance")
+  	}
 
-	  	for(var q in $rootScope.hasanswers) {
-
-	  		if (!!$rootScope.hasanswers[q]) {
-	  			
-	  			var ans = $rootScope.hasanswers[q].split(";");
-
-	  			for (var t in $rootScope.questionsData.questions[q].text) {
-		  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
-		  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = false;
-		  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
-			  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
-			  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
-			  					switch ($rootScope.questionsData.questions[q].text[t].type) {
-			  						case "slider-multiple":
-			  							if (t > 0) break;
-			  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
-			  							$rootScope.questionsData.questions[q].text[1].answer = parseInt(ans[1]);
-			  							$rootScope.questionsData.questions[q].text[1].answers[parseInt(ans[1])].answer = true;
-			  							break;
-			  						case "slider":
-			  							console.log($rootScope.questionsData.questions[q])
-			  							$rootScope.questionsData.questions[q].text[t].answer = $rootScope.questionsData.questions[q].text[t].answers[a].value;
-			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  							break;
-			  						default:
-			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  							break;
-			  					}
-			  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  				}
-			  			} else {
-			  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
-			  			}
-		  			}
-		  		}
-	  		} 
-	  		if ($rootScope.questionsData.questions[q]) {
-		  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
-				$rootScope.questionsData.questions[q].order = count
-		  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
-	  		}
-
-	  		count++
-	  	}
-
-	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
-	  		$scope.recalculateResults()
-	  		//$state.go("main.results");
-	  	} else {
-	  		$rootScope.moveToQuestion("Appliance")
-	  	}
-	  	
+  	if ($rootScope.restore) {
+  		$scope.moveToQuestion($rootScope.restore);
+  		delete $rootScope.restore;
   	}
 
   	//disable tooltip when clicking anywhere on the page
