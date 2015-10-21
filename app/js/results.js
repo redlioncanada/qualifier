@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $window) {
 
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
