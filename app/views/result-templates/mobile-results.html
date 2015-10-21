@@ -83,6 +83,12 @@
 									<p ng-repeat="(key, value) in a.disclaimers" bo-text="value"></p>
 								</div>
 						</div>
+
+						<div class="buttonnav-mobile">
+							<a class="banner startover-mobile" ng-click="startOver()" ng-if="isTabletWidthOrLess">
+								<div ng-bind-html="brandData.apptext.startover.replace('<br />',' ')"></div>
+							</a>
+						</div>
 					<!-- </div> -->
 				</div>
 			</li>

@@ -268,27 +268,7 @@ header.header-desktop {
 		float: right;
 		margin-top: 20px;
 	}
-	.buttonnav-mobile {
-   		width: 100%;
-   		text-transform: uppercase;
-   		margin: 40px 0 15px 0;
-
-   		div {
-   			color: white;
-   			background-color: #002e5f;
-   			height: 30px;
-   			line-height: 30px;
-   			margin: 0 auto;
-   			position: relative;
-   			top: 5px;
-   			font-family: $AG-Bold-Cnd;	   		
-   		}
-
-   		.backtoresults-mobile div {
-   			margin-bottom: 4px;
-   		}
-
-   }
+	
    div.startover-mobile {
    		margin: 5px 0 15px 0;
    }
@@ -344,6 +324,29 @@ header.header-desktop {
 		}
 	}
 }
+
+.buttonnav-mobile {
+   		width: 100%;
+   		text-transform: uppercase;
+   		margin: 40px 0 15px 0;
+
+   		div {
+   			color: white;
+   			background-color: #002e5f;
+   			height: 30px;
+   			line-height: 30px;
+   			margin: 0 auto;
+   			position: relative;
+   			top: 5px;
+   			font-family: $AG-Bold-Cnd;
+   			text-align: center;
+   		}
+
+   		.backtoresults-mobile div {
+   			margin-bottom: 4px;
+   		}
+
+   }
 
 //popover styles
 .popover-title {
