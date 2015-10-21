@@ -523,8 +523,7 @@
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-frontcontrol.jpg",
                             "image_alt" : "Range Style - Front Control",
-                            "text" : "Front Control (fr)",
-                            "text" : "COMMANDES FRONTALES",
+                            "text" : "Commandes frontales",
                             "value" : "FrontControl",
                             "scoring" : {
                             },
@@ -535,8 +534,7 @@
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-rearcontrol.jpg",
                             "image_alt" : "Range Style - Rear Control",
-                            "text" : "Rear Control (fr)",
-                            "text" : "PANNEAU DE COMMANDES ARRIÈRE",
+                            "text" : "Panneau de commandes arrière",
                             "value" : "BackControl",
                             "scoring" : {
                             },
@@ -548,7 +546,6 @@
                             "image" : "img/Range-Q2-nopreference.jpg",
                             "image_alt" : "Range Style - No Preference",
                             "text" : "Pas de préférence",
-                            "text" : "PAS DE PRÉFÉRENCE",
                             "value" : "NoPreference",
                             "scoring" : {
                             },
