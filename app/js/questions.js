@@ -318,7 +318,7 @@ angular.module('App')
 		}, 0);
 
 
-		var c = $('.slidey.active').height();
+		var c = $('.slidey.ng-hide-remove').height();
 
 		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
 			return;
@@ -326,10 +326,10 @@ angular.module('App')
 		$scope.lastHeight = c;
 
 		if (c < 340) {
-			c = $('.slidey').not('.ng-hide').height();
+			c = $('.slidey.active').height();
 			if (c < 340) {
 				var minHeight = 340;
-				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
+				$('.slidey.active').css('paddingTop', (minHeight-c)/2);
 				c = minHeight;
 			}
 		}
