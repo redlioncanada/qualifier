@@ -644,8 +644,16 @@ a.answer-box.picture-4 {
 	}
 
 	.app-answers .category img.normal[ng-src="img/start-laundry.png"] {
-		width: 160%;
-		margin-left: -17px;
+		width: 190%;
+		margin-left: -25px;
+	}
+    .app-answers .category img.normal[ng-src="img/start-fridge.png"] {
+		width: 125%;
+        padding-top: 10px;
+	}
+    .app-answers .category img.normal[ng-src="img/start-dishwasher.png"] {
+		width: 125%;
+        margin-top: -42px;
 	}
 
 	.app-content-main-top-left {
@@ -953,6 +961,9 @@ a.answer-box.picture-4 {
         top: -23px !important;
         margin-right: -9px !important;
 	}
+    div.category-image > img.hover {
+        opacity: 0 !important;
+    }
 }
 
 @media(max-width:750px) {
@@ -1068,6 +1079,7 @@ a.answer-box.picture-4 {
 		.answer-option {
 			&.category, &.sub-category {
 				min-height: 200px;
+                overflow: hidden;
 			}
 		}
 	}
