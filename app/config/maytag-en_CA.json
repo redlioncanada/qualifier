@@ -24,7 +24,9 @@
 		"submit" : "Submit",
 		"close" : "Close",
 		"emailModalTitle" : "Email Your Results",
-		"friendsName" : "Your Friend's Name"
+		"friendsName" : "Your Friend's Name",
+		"nextQuestionAlt" : "Navigate to next question",
+		"previousQuestionAlt" : "Navigate to previous question"
 	},
 	"questions" : {
 		"Appliance" : {
