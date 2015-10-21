@@ -666,6 +666,17 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	}
 }
 
+.slider-labels.seven {
+
+	.jslider-scale {
+		& > span {border-left: 1px solid #999 !important;}
+
+		& > :nth-child(2), & > :nth-child(4), & > :nth-child(6) {
+			height: 15px;
+		}
+	}
+}
+
 .slider-bottom-labels {
 	display: block;
 	width: 100%;
@@ -1000,6 +1011,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 		text-transform: uppercase;
 		font-size: initial;
 		padding-top: 3px;
+		font-size: 14px;
 	}
 }
 

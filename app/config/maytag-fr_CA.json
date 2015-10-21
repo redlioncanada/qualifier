@@ -1778,7 +1778,7 @@
                      "step": 0.0001,
                      "dimension": "",
                      "scale": [
-                         "0", "2.5", "5", "7.5", "10", "12.5", "15+<br />J’AI PERDU LE COMPTE"
+                         "0", "", "5", "", "10", "", "15+<br />J’AI PERDU LE COMPTE"
                      ]
                  },
                  "answers": {
