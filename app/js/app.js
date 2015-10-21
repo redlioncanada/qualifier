@@ -13,7 +13,6 @@ var nglibs = [
   'ui.sortable',
   'angularAwesomeSlider',
   'ngAnimate',
-  'angular-images-loaded',
   'AppstateService'
 ];
 
