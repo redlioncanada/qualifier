@@ -514,7 +514,7 @@
                     "question" : "Quel style de cuisinière préférez-vous?",
                     "sub_question" : "Sélectionnez",
                     "explanation_title" : "Pourquoi me posez-vous une question sur le style?",
-                    "explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you. (fr)",
+                    "explanation" : "Pourquoi me posez-vous une question au sujet du style?",
                     "type" : "boxes-picture-3-radio",
                     "oneAnswer" : true,
                     "answers" : [
