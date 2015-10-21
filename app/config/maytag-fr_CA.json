@@ -1804,7 +1804,7 @@
                      "step": 0.0001,
                      "dimension": "",
                      "scale": [
-                         "0", "", "5", "", "10", "", "15+<br />J’AI PERDU LE COMPTE"
+                         "0<br />Environ toutes les 2 semaines", "", "5", "", "10", "", "15+<br />J’AI PERDU LE COMPTE"
                      ]
                  },
                  "answers": {
@@ -1812,7 +1812,7 @@
                             "thumbnail" : "img/icon-capacity.png",
                             "thumbnail_current" : "img/icon-capacity-current.png",
                             "value" : 0,
-                            "text" : "0<br />Maybe every other week",
+                            "text" : "0<br />Environ toutes les 2 semaines",
                             "scoring" : {
                                 "placeSettings13": 1,
                                 "placeSettings14": 1

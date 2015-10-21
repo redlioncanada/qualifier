@@ -953,6 +953,9 @@ a.answer-box.picture-4 {
         top: -23px !important;
         margin-right: -9px !important;
 	}
+    div.category-image > img.hover {
+        opacity: 0 !important;
+    }
 }
 
 @media(max-width:750px) {
