@@ -494,12 +494,12 @@
             "previous" : "Cooking - Ranges - Energy",
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-style-current.png",
-            "thumbnail_text" : "Style (fr)",
+            "thumbnail_text" : "Style",
             "text" : [
                 {
-                    "question" : "What style of range do you prefer? (fr)",
-                    "sub_question" : "Select one",
-                    "explanation_title" : "Why are you asking me about style (fr)?",
+                    "question" : "Quel style de cuisinière préférez-vous?",
+                    "sub_question" : "Sélectionnez",
+                    "explanation_title" : "Pourquoi me posez-vous une question sur le style?",
                     "explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you. (fr)",
                     "type" : "boxes-picture-3-radio",
                     "oneAnswer" : true,
@@ -508,7 +508,7 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-frontcontrol.jpg",
-                            "text" : "Front Control (fr)",
+                            "text" : "COMMANDES FRONTALES",
                             "value" : "FrontControl",
                             "scoring" : {
                             },
@@ -518,7 +518,7 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-rearcontrol.jpg",
-                            "text" : "Rear Control (fr)",
+                            "text" : "PANNEAU DE COMMANDES ARRIÈRE",
                             "value" : "BackControl",
                             "scoring" : {
                             },
@@ -528,7 +528,7 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-nopreference.jpg",
-                            "text" : "Pas de préférence",
+                            "text" : "PAS DE PRÉFÉRENCE",
                             "value" : "NoPreference",
                             "scoring" : {
                             },
