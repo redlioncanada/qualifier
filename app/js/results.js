@@ -174,6 +174,11 @@ $scope.setPriceRange = function () {
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
+      $scope.startOver = function () {
+        //$appstate.clear();
+        $window.location.reload();
+      }
+
       $scope.setPriceRange()
 })
 .directive('desktopResults', function(){

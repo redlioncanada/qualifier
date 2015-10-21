@@ -45,7 +45,7 @@ gulp.task('version', function() {
 });
 
 gulp.task('lastupdated', function() {
-    var styles = "position:fixed;color:black;bottom:0;z-index:5000;font-size:12px;";
+    var styles = "position:fixed;color:white;top:0;z-index:5000;font-size:12px;";
     return gulp.src('../build/index.html')
         .pipe(replace('<!-- #LASTUPDATED -->', '<p style="' + styles + '" class="lastupdated">Last updated: ' + new Date() + '</p>'))
         .pipe(gulp.dest('../build'));
