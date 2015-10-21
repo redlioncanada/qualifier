@@ -1194,12 +1194,15 @@ a.answer-box.picture-4 {
 	div.bottom-nav-intructions {
 		position: absolute;
 		width: 100%;
-		top: 13px;
+		top: 9px;
+		height: 1px;
 	}
 
 	div.mobile-app-nav-arrows {
+		height: 0px; 
+		
 		a.btn-prev img, a.btn-next img {
-			height: 20px;
+			height: 25px;
 		}
 
 		a.btn-prev {
