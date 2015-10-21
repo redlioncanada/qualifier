@@ -23,7 +23,7 @@ App.constant('Modernizr', Modernizr);
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
     //$urlRouterProvider.otherwise("/");
-    localStorageServiceProvider.setPrefix("MaytagQualifier");
+    localStorageServiceProvider.setPrefix("MaytagQualifier_");
 
     $stateProvider
       .state('loading', {
@@ -197,8 +197,9 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location, $appstate) {
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location) {
     $state.go('loading');
+    localStorageService.clearAll();
 
     $rootScope.resultsTouched = false;
 
@@ -276,11 +277,24 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                       if ($rootScope.appliances[key].appliance == "Washers") {
 
                         for (var i in item.colours) {
+                          //$rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
+                          /*if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                            $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
+                          } else {
+                            $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
+                          }*/
+
                           for (var j in item.dryers[0].colours) {
                             if (item.dryers[0].colours[j].colourCode == item.colours[i].colourCode) {
                               item.colours[i].dryersku = item.dryers[0].colours[j].sku;
                             }
                           }
+
+                          /*if (!!!$rootScope.appliances[key].dryerImage && $rootScope.appliances[key].dryers[0].image.indexOf(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
+                              $rootScope.appliances[key].dryerImage = $rootScope.appliances[key].dryers[0].image;
+                          } else {
+                              $rootScope.appliances[key].dryerImage = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png";
+                          }*/
                         }
 
                         $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD);
@@ -361,8 +375,21 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                       } 
                     }
                 })
-// $appstate.clear();
-                $appstate.restore();
+
+                $rootScope.hasanswers = {};
+                var httpparams = (decodeURI($location.$$absUrl)).replace(/\+/g, ' ').split("?");
+                if (1 in httpparams) {
+                  var loophttpparams = httpparams[1].split("&");
+                  for (var l in loophttpparams) {
+                    var inst = loophttpparams[l].split("=");
+                    $rootScope.hasanswers[inst[0]] = inst[1];
+                  }
+                }
+                  if ('sku' in $rootScope.hasanswers) {
+                    $state.go('print',{"sku": $rootScope.hasanswers['sku']});
+                  } else {
+                    $state.go('main.questions');
+                  }
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });

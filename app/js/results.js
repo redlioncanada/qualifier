@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal) {
 
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
@@ -100,13 +100,32 @@ angular.module('App')
       //$log.info('Modal dismissed at: ' + new Date());
     });*/
 
-    console.log($appstate.generateURL());
-      // window.location.href = "mailto:?subject=Qualifier&20Email%20Test&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
+    var link = "?";
+
+      for (var sq in $rootScope.questionsData.scoringQuestions) {
+        var answer = [];
+        console.log($rootScope.questionsData.scoringQuestions[sq]);
+        for (var t in $rootScope.questionsData.scoringQuestions[sq].text) {
+          if (typeof $rootScope.questionsData.scoringQuestions[sq].text[t].answer !== 'undefined' && $rootScope.questionsData.scoringQuestions[sq].text[t].type == 'slider') {
+            answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answer);
+            continue;
+          }
+          for (var ans in $rootScope.questionsData.scoringQuestions[sq].text[t].answers) {
+
+            console.log($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer, $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true, !isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer));
+            if ($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true) {
+              answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value)
+            }
+            else if (!isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer)) {
+              answer[$rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer] = $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value
+            }
+          }
+        }
+        link += sq + "=" + answer.join(";") + "&"
+      }
+      window.location.href = "mailto:?subject=Qualifier&20Email%20Test&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
   };
 
-$scope.print = function(sku) {
-  window.open($appstate.generatePrintURL(sku));
-}
 
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
@@ -129,8 +148,8 @@ $scope.setPriceRange = function () {
        }
 
        if (!minPrice || !maxPrice) return;
-       $rootScope.resultsOptions.from = Math.round(minPrice/100)*100;
-        $rootScope.resultsOptions.to = Math.round(maxPrice/100)*100;
+       $rootScope.resultsOptions.from = Math.round(minPrice/10)*10;
+        $rootScope.resultsOptions.to = Math.round(maxPrice/10)*10;
        $rootScope.controls.price = $rootScope.resultsOptions.from.toString() + ";" + $rootScope.resultsOptions.to.toString();
 }
 
@@ -144,7 +163,7 @@ $scope.setPriceRange = function () {
         } else if (price>range[1]) {
           range[1] = price
         }
-        $rootScope.controls.price = (Math.round(range[0]/100)*100).toString() + ";" + (Math.round(range[1]/100)*100).toString()
+        $rootScope.controls.price = range[0].toString() + ";" + range[1].toString()
 
 
       }
