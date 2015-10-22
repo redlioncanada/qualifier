@@ -6,6 +6,10 @@ for auth, create a file in the same dir as this one named .ftppass with the stru
   "keyMain": {
     "user": "username",
     "pass": "password"
+  },
+  "keyProd": {
+    "user": "username",
+    "pass": "password"
   }
 }
 */
@@ -22,22 +26,27 @@ var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'};
 var baseURL = 'http://mymaytag.wpc-stage.com';
 
 gulp.task('default', ['index', 'version'], function() {
+    opts.auth = 'keyMain';
     doUpload(['index', 'last-updated', 'config', 'css', 'fonts', 'js', 'views']);
 });
 
 gulp.task('components', ['index', 'version'], function() {
+    opts.auth = 'keyMain';
     doUpload(['components', 'img']);
 });
 
 gulp.task('all', ['index', 'version'], function() {
+    opts.auth = 'keyMain';
     doUpload(['config', 'css', 'fonts', 'js', 'views', 'components', 'img']);
 });
 
 gulp.task('prod', ['index-prod'], function() {
+    opts.auth = 'keyProd';
     doUpload(['config', 'css', 'fonts', 'js', 'views', 'components', 'img'], true);
 });
 
 gulp.task('version', function() {
+    opts.auth = 'keyMain';
     opts.remotePath = versionPath;
 
     return gulp.src('index.php')
@@ -46,6 +55,7 @@ gulp.task('version', function() {
 });
 
 gulp.task('index', function() {
+    opts.auth = 'keyMain';
     opts.remotePath = basePath+'/'+p.version;
 
     return gulp.src('../build/index.html')
@@ -55,6 +65,7 @@ gulp.task('index', function() {
 });
 
 gulp.task('index-prod', function() {
+    opts.auth = 'keyProd';
     opts.remotePath = basePath;
 
     return gulp.src('../build/index.html')

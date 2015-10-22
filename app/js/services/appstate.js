@@ -5,6 +5,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 
 	appstate.store = function(print) {
 		localStorageService.set('appstate', JSON.stringify(_enumerateAnswers()));
+		console.log('store');
 	}
 
 	appstate.restore = function() {
@@ -18,14 +19,18 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 
         //get session data, and if it exists, apply it to the app state
         var session = _getSession();
+        var state = 'main.questions';	//go to this state based on session data
+        console.log(session);
         if (session) {
-        	console.log(session);
-
         	//change app view based on session.restore
         	switch(session.restore) {
         		case 'print':
         			$state.go('print',session);
         			return;
+        			break;
+        		case 'results':
+        			state = 'main.results';
+        			$rootScope.hasanswers = session.answers;
         			break;
         		default:
         			//restoring a specific question
@@ -35,7 +40,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         	}
         }
 
-        var count = 0
+        var count = 1
         //fill app question data
 	  	if (!$rootScope.questionsData.question) {
 		  	for(var q in $rootScope.hasanswers) {
@@ -82,7 +87,8 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 		  	}
 	  	}
 
-	  	$state.go('main.questions');
+	  	console.log('restore');
+	  	$state.go(state);
     }
 
 	appstate.clear = function() {
@@ -117,18 +123,16 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         	//if there isn't one, check for one in localstorage
         	var session = localStorageService.get('appstate');
 
-        	if (!!session && session.length) {
-        		session = JSON.parse(session);
-
+        	if (!!session && typeof session === 'object') {
         		//backfill empty questions in the stored path
         		var lastQuestion = session.restore;
         		var cnt=0;
-    			while (true) {
+    			/*while (true) {
 					var next = $rootScope.questionsData.questions[lastQuestion].next;
 					if (!next || typeof next !== 'string' || cnt++ > 100) break;
     				session.answers[next] = undefined;
     				lastQuestion = next;
-    			}
+    			}*/
         	} else {
         		console.log('no session storage');
         		return false;
@@ -163,8 +167,11 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         temp[sq] = answer.join(";");
       }
 
-      var lastQuestion = /[^/]*$/.exec($location.path())[0];
-      return {restore:lastQuestion, answers:temp};
+      return {restore:_currentState(), answers:temp};
+	}
+
+	function _currentState() {
+		return /[^/]*$/.exec($location.path())[0];
 	}
 
 	return appstate;

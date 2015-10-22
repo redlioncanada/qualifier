@@ -22,6 +22,7 @@ angular.module('App')
       });
 
     $scope.$on('$locationChangeSuccess', function(event) {
+      $appstate.store();
     		if ( ($location.path()).toString().search("question") != -1) {
     			var q = ($location.path()).toString().replace("/question/","");
 		  		$rootScope.controls.controlClicked = 'previous';
@@ -33,7 +34,7 @@ angular.module('App')
 		  	}
     });
 
-
+      if (!!!$rootScope.questionsData || !!!$rootScope.questionsData.scoringQuestions) $state.go('main.questions');
       $rootScope.resultsTouched = true;
       var d = $rootScope.isFrench ? ' $' : '';
       $rootScope.resultsOptions = {
@@ -46,7 +47,7 @@ angular.module('App')
         "dimension": d,
         "callback" : function(value, released) {  
 
-          if (!!released) {
+          if (!!released && !!value) {
             var range = value.split(";")
 
             for (var r in range) {
@@ -115,6 +116,7 @@ $scope.setPriceRange = function () {
 }
 
       $scope.expandPriceRange = function (price) {
+        if (!!!$rootScope.controls.price) return;
         var range = $rootScope.controls.price.split(";")
         price = parseFloat(price)
         range[0] = parseFloat(range[0])
@@ -137,7 +139,7 @@ $scope.setPriceRange = function () {
 
       $scope.startOver = function() {
         $appstate.clear();
-        $window.location.reload();
+        $window.location.href = ".";
       };
 
       $scope.setPriceRange()

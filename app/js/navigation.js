@@ -21,7 +21,7 @@ angular.module('App')
     //
 
   	$scope.setType = function (q,a) {
-  		if (!!q) {
+  		if (!!q && !!a) {
 	  		if (!a.thumbnail_type) {
 	  			return q.thumbnail_type
 	  		} 
