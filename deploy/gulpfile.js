@@ -58,7 +58,7 @@ gulp.task('index-prod', function() {
     opts.remotePath = basePath;
 
     return gulp.src('../build/index.html')
-        .replace('#DATETIME', new Date())
+        .pipe(gulp.dest('../build'))
         .pipe(ftp(opts));
 });
 
