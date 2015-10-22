@@ -153,6 +153,8 @@ angular.module('App')
 			"electric" : false,
 			"powerBurner" : false,
 			"powerPreheat" : false,
+			"slideIn" : 0,
+			"freestanding" : 0,
 			"mediumCapacity" : 0,
 			"largeCapacity" : 0,
 			"largerCapacity" : 0,
