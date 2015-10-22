@@ -157,8 +157,6 @@ $scope.setPriceRange = function () {
 .directive('mobileResults', ['$timeout', function($timeout){
     return {
         restrict: "EA",
-        scope: false,
-        transclude: true,
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
             scope.currentId = 1;
