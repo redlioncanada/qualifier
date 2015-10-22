@@ -22,7 +22,7 @@ angular.module('App')
       });
 
     $scope.$on('$locationChangeSuccess', function(event) {
-      $appstate.store();
+      // $appstate.store();
     		if ( ($location.path()).toString().search("question") != -1) {
     			var q = ($location.path()).toString().replace("/question/","");
 		  		$rootScope.controls.controlClicked = 'previous';

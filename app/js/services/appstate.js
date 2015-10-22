@@ -20,7 +20,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         //get session data, and if it exists, apply it to the app state
         var session = _getSession();
         var state = 'main.questions';	//go to this state based on session data
-        console.log(session);
+
         if (session) {
         	//change app view based on session.restore
         	switch(session.restore) {
@@ -40,6 +40,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         	}
         }
 
+console.log($rootScope.hasanswers);
         var count = 1
         //fill app question data
 	  	if (!$rootScope.questionsData.question) {
@@ -55,6 +56,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 				  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
 				  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
 				  					switch ($rootScope.questionsData.questions[q].text[t].type) {
+				  						case "slider-buttons":
 				  						case "slider-multiple":
 				  							if (t > 0) break;
 				  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
