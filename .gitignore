@@ -13,4 +13,3 @@ build/*
 app/config/old
 .DS_Store
 credentials.json
-
