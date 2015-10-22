@@ -13,6 +13,7 @@ for auth, create a file in the same dir as this one named .ftppass with the stru
 var gulp = require('gulp');
 var ftp = require('gulp-sftp');
 var replace = require('gulp-replace');
+var preprocess  = require('gulp-preprocess');
 var p = require('../package.json');
 
 var basePath = '/home/wpcstage/mymaytag/';
@@ -20,19 +21,19 @@ var versionPath = '/home/wpcstage/mymaytag/latest/';
 var opts = {host: 'wpc-stage.com', port: 22, auth: 'keyMain'};
 var baseURL = 'http://mymaytag.wpc-stage.com';
 
-gulp.task('default', ['version', 'lastupdated'], function() {
-    doUpload(['config', 'css', 'fonts', 'js', 'views']);
+gulp.task('default', ['index', 'version'], function() {
+    doUpload(['index', 'last-updated', 'config', 'css', 'fonts', 'js', 'views']);
 });
 
-gulp.task('components', ['version', 'lastupdated'], function() {
+gulp.task('components', ['index', 'version'], function() {
     doUpload(['components', 'img']);
 });
 
-gulp.task('all', ['version', 'lastupdated'], function() {
+gulp.task('all', ['index', 'version'], function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views', 'components', 'img']);
 });
 
-gulp.task('production', function() {
+gulp.task('prod', ['index-prod'], function() {
     doUpload(['config', 'css', 'fonts', 'js', 'views', 'components', 'img'], true);
 });
 
@@ -44,11 +45,21 @@ gulp.task('version', function() {
         .pipe(ftp(opts));
 });
 
-gulp.task('lastupdated', function() {
-    var styles = "position:fixed;color:white;top:0;z-index:5000;font-size:12px;";
+gulp.task('index', function() {
+    opts.remotePath = basePath+'/'+p.version;
+
     return gulp.src('../build/index.html')
-        .pipe(replace('<!-- #LASTUPDATED -->', '<p style="' + styles + '" class="lastupdated">Last updated: ' + new Date() + '</p>'))
-        .pipe(gulp.dest('../build'));
+        .pipe(replace('#DATETIME', new Date()))
+        .pipe(gulp.dest('../build'))
+        .pipe(ftp(opts));
+});
+
+gulp.task('index-prod', function() {
+    opts.remotePath = basePath;
+
+    return gulp.src('../build/index.html')
+        .replace('#DATETIME', new Date())
+        .pipe(ftp(opts));
 });
 
 function doUpload(src,prod) {
