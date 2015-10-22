@@ -330,12 +330,18 @@ div.mobile-app-nav-arrows {
 		display: inline-block;
 		float: left;
 		a {
-			cursor: pointer;
+			/*cursor: pointer;*/
 		}
 	}
+    .selected {
+        .icon-img {
+            cursor: pointer;
+        }
+    }
 	.icon-img {
 		max-width: 41px;
 		max-height: 41px;
+        cursor: auto;
 		// &.current {
 		// 	display: none;
 		// }
@@ -344,6 +350,7 @@ div.mobile-app-nav-arrows {
 		// display: none;
 		max-width: 52px;
 		max-height: 53px;
+        cursor: pointer;
 		// &.current {
 		// 	display: inline-block;
 		// }
@@ -748,8 +755,6 @@ a.answer-box.picture-4 {
 			}
 		}
 	}
-
-
 	.slidey .app-answers, .slidey .answers-main-content.answer-slider, .slidey .answers-main-content.price-slider {
 		width: 100px;
 		height: 500px;
@@ -988,7 +993,7 @@ a.answer-box.picture-4 {
 
 		.jslider {
 			div.jslider-pointer {
-				left: 13px;
+				left: 11.5px;
 				width: 43px;
 				height: 37px;
 				background: url("../img/slider-pointer-small.png") !important;

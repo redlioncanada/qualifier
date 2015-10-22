@@ -1271,7 +1271,7 @@
              "thumbnail_text": "Size",
              "thumbnail_text_fr": "Taille",
              "text": [{
-                 "question": "WHAT SIZE FRIDGE DO YOU NEED (FR)",
+                 "question": "De quelle taille de réfrigérateur avez-vous besoin?",
                  "question_more": "",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
