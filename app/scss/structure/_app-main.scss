@@ -652,17 +652,20 @@ a.answer-box.picture-4 {
 
 	.app-answers .category img.normal[ng-src="img/start-laundry.png"] {
 		width: 190%;
-		margin-left: -24px;
+		margin-left: -30px;
 	}
     .app-answers .category img.normal[ng-src="img/start-fridge.png"] {
 		width: 125%;
         padding-top: 10px;
-        margin-left: -9px;
+        margin-left: -6px;
 	}
     .app-answers .category img.normal[ng-src="img/start-dishwasher.png"] {
 		width: 125%;
         margin-top: -42px;
         margin-left: -9px;
+	}
+    .app-answers .category img.normal[ng-src="img/start-stove.png"] {
+        margin-left: -10px;
 	}
 
 	.app-content-main-top-left {
@@ -1059,7 +1062,7 @@ a.answer-box.picture-4 {
 				.normal, .hover {
 					width: 138%;
 					bottom: 0 !important;
-					margin-left: -9px;
+					margin-left: -14px;
 				}
 
 				.normal {
@@ -1343,6 +1346,12 @@ a.answer-box.picture-4 {
     div.app-content-main-top {
         min-height: 60px !important;        
     }
+    a.answer-box.boxes-icon-split, a.answer-box.boxes-icon-2, a.answer-box.boxes-icon-5 {
+        .label-wrap {
+			top: 128px;
+            left: 40px;
+		}
+	}
 }
 
 .print-page {
