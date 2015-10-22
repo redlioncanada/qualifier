@@ -23,7 +23,13 @@ angular.module('App')
 
     $scope.$on('$locationChangeSuccess', function(event) {
       $appstate.store();
+
+      if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('results') != -1) {
+        $("html, body").animate({scrollTop: "125px"}, 400);
+      }
+
     		if ( ($location.path()).toString().search("question") != -1) {
+
     			var q = ($location.path()).toString().replace("/question/","");
 		  		$rootScope.controls.controlClicked = 'previous';
 		  		
@@ -138,9 +144,7 @@ $scope.setPriceRange = function () {
       }
 
       $scope.startOver = function() {
-        $appstate.clear();
-        $window.location.href = '#/question/Appliance';
-        location.reload();
+        $appstate.reload();
       };
 
       $scope.setPriceRange()

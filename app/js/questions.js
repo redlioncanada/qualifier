@@ -362,10 +362,18 @@ angular.module('App')
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
 
+  		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
+			$("html, body").animate({scrollTop: "51px"}, 400);
+		}
+
+		if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('Appliance') != -1) {
+			$("html, body").animate({scrollTop: "125px"}, 400);
+		}
+
   		var hasNext = false
   		if (!!$rootScope.questionsData && !!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
-	  			if ('next' in item) 
+	  			if ('next' in item)
 	  				hasNext = true
 	  		})
 	  		if ( !!hasNext ) {
@@ -373,7 +381,7 @@ angular.module('App')
 		  			if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
 		  				delete $rootScope.questionsData.scoringQuestions[item.name]
 		  			}
-		  		})  					
+		  		})
 	  		}
 	  	}
 		// End - Make sure to delete future questions if this answer has changed the path
@@ -410,10 +418,6 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
-
-  			if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
-  				$("html, body").animate({scrollTop: "51px"}, 400);
-  			}
 		} else {
 			$state.go('main.results')
 		}	

@@ -1,9 +1,12 @@
 var appstateModule = angular.module('AppstateService', ['LocalStorageModule', 'base64']);
 
-appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageService', '$location', '$log', '$base64', function($state, $rootScope, localStorageService, $location, $log, $base64) {
-	var appstate = {};
+appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localStorageService', '$location', '$log', '$base64', function($window, $state, $rootScope, localStorageService, $location, $log, $base64) {
+	var appstate = {
+		freezeSession: false
+	};
 
 	appstate.store = function(print) {
+		if (this.freezeSession) return;
 		localStorageService.set('appstate', JSON.stringify(_enumerateAnswers()));
 		console.log('store');
 		console.log(_enumerateAnswers());
@@ -88,6 +91,13 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 	  	}
 
 	  	if (state) $state.go(state);
+    }
+
+    appstate.reload = function() {
+    	this.clear();
+    	this.freezeSession = true;
+    	$window.location.href = '#/question/Appliance';
+    	location.reload();
     }
 
 	appstate.clear = function() {
