@@ -6,6 +6,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 	appstate.store = function(print) {
 		localStorageService.set('appstate', JSON.stringify(_enumerateAnswers()));
 		console.log('store');
+		console.log(_enumerateAnswers());
 	}
 
 	appstate.restore = function() {
@@ -29,9 +30,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         			return;
         			break;
         		case 'results':
-        			state = 'main.results';
-        			$rootScope.hasanswers = session.answers;
-        			break;
+        			location.href = '#/results';
         		default:
         			//restoring a specific question
         			$rootScope.hasanswers = session.answers;
@@ -88,7 +87,7 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 		  	}
 	  	}
 
-	  	$state.go(state);
+	  	if (state) $state.go(state);
     }
 
 	appstate.clear = function() {
@@ -96,8 +95,8 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
 		localStorageService.remove('appstate');
 	}
 
-	appstate.generateURL = function() {
-	      return _generateURL(JSON.stringify(_enumerateAnswers()));
+	appstate.generateEmailURL = function() {
+	      return '?' + $base64.encode(JSON.stringify(_enumerateAnswers()));
 	}
 
 	appstate.generatePrintURL = function(sku) {
