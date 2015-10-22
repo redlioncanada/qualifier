@@ -149,7 +149,7 @@ $scope.setPriceRange = function () {
        }
 
        if (!minPrice || !maxPrice) return;
-       $rootScope.resultsOptions.from = Math.round(minPrice/10)*10;
+       $rootScope.resultsOptions.from = Math.floor(minPrice/10)*10;
         $rootScope.resultsOptions.to = Math.round(maxPrice/10)*10;
        $rootScope.controls.price = $rootScope.resultsOptions.from.toString() + ";" + $rootScope.resultsOptions.to.toString();
 }
