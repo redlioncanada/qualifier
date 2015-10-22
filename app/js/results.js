@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $window) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate) {
 
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
@@ -52,7 +52,6 @@ angular.module('App')
             for (var r in range) {
               var m = range[r] % $rootScope.resultsOptions.fakestep
               if (m != 0) {
-                  //console.log(m, Math.floor(range[r] / $rootScope.resultsOptions.fakestep), Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1, ((Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1)*$rootScope.resultsOptions.fakestep)-range[r])
                   if (m < ((Math.floor(range[r] / $rootScope.resultsOptions.fakestep)+1)*$rootScope.resultsOptions.fakestep)-range[r]) {
                       range[r] = (Math.floor(range[r] / $rootScope.resultsOptions.fakestep))*$rootScope.resultsOptions.fakestep
                   } else {
@@ -82,51 +81,12 @@ angular.module('App')
   }
 
   $rootScope.emailOpen = function () {
-    //var modalInstance = 
-    //size: size,
-    /*var modalInstance = $modal.open({
-      animation: true,
-      templateUrl: 'views/result-templates/email-results.html',
-      controller: 'ModalCtrl',
-
-      resolve: {
-        items: function () {
-          //return $scope.items;
-        }
-      }
-    });
-    modalInstance.result.then(function (selectedItem) {
-      //$scope.selected = selectedItem;
-    }, function () {
-      //$log.info('Modal dismissed at: ' + new Date());
-    });*/
-
-    var link = "?";
-
-      for (var sq in $rootScope.questionsData.scoringQuestions) {
-        var answer = [];
-        console.log($rootScope.questionsData.scoringQuestions[sq]);
-        for (var t in $rootScope.questionsData.scoringQuestions[sq].text) {
-          if (typeof $rootScope.questionsData.scoringQuestions[sq].text[t].answer !== 'undefined' && $rootScope.questionsData.scoringQuestions[sq].text[t].type == 'slider') {
-            answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answer);
-            continue;
-          }
-          for (var ans in $rootScope.questionsData.scoringQuestions[sq].text[t].answers) {
-
-            console.log($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer, $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true, !isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer));
-            if ($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true) {
-              answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value)
-            }
-            else if (!isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer)) {
-              answer[$rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer] = $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value
-            }
-          }
-        }
-        link += sq + "=" + answer.join(";") + "&"
-      }
-      window.location.href = "mailto:?subject=Qualifier&20Email%20Test&body=http://maytagqualifier.com"+encodeURIComponent(link).replace(/%20/g, '+');
+    console.log($appstate.generateURL());
   };
 
+$scope.print = function(sku) {
+  window.open($appstate.generatePrintURL(sku));
+}
 
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
@@ -164,7 +124,7 @@ $scope.setPriceRange = function () {
         } else if (price>range[1]) {
           range[1] = price
         }
-        $rootScope.controls.price = range[0].toString() + ";" + range[1].toString()
+        $rootScope.controls.price = (Math.floor(range[0]/10)*10).toString() + ";" + (Math.round(range[1]/10)*10).toString()
 
 
       }
@@ -175,18 +135,16 @@ $scope.setPriceRange = function () {
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
-      $scope.startOver = function () {
-        //$appstate.clear();
+      $scope.startOver = function() {
+        $appstate.clear();
         $window.location.reload();
-      }
+      };
 
       $scope.setPriceRange()
 })
 .directive('desktopResults', function(){
     return {
         restrict: "EA",
-        scope: false,
-        transclude: true,
         templateUrl: 'views/result-templates/desktop-results.html',
         link: function(scope, element, attrs) {
             //this.lrgBtn = $( "#large-button" );
@@ -196,6 +154,8 @@ $scope.setPriceRange = function () {
 .directive('mobileResults', ['$timeout', function($timeout){
     return {
         restrict: "EA",
+        scope: false,
+        transclude: true,
         templateUrl: 'views/result-templates/mobile-results.html',
         link: function(scope, element, attrs) {
             scope.currentId = 1;
@@ -222,8 +182,6 @@ $scope.setPriceRange = function () {
             if(idClicked == 'result-selector-0') {
                         $('#mobile-results-holder').height($('#result-column-0').height() + 25);
                         $('#result-column-0').css('left','0px');
-                        //$('#result-header-0').css('font-size','14px');
-                        //$('#result-header-0').css('text-decoration','underline');
                         $('#result-column-1').css('left','480px');
                         $('#result-column-2').css('left','960px');
                     //
