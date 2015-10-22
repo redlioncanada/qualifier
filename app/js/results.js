@@ -139,7 +139,8 @@ $scope.setPriceRange = function () {
 
       $scope.startOver = function() {
         $appstate.clear();
-        $window.location.reload();
+        $window.location.href = '#/question/Appliance';
+        location.reload();
       };
 
       $scope.setPriceRange()

@@ -56,7 +56,8 @@ angular.module('App')
 
 	$scope.startOver = function () {
     $appstate.clear();
-    $window.location.reload();
+    $window.location.href = '#/question/Appliance';
+    location.reload();
 	}
 })
 .directive('resultsmenu', ['$timeout', '$rootScope', '$location', function($timeout, $rootScope, $location) {
