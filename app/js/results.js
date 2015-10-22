@@ -29,7 +29,7 @@ angular.module('App')
 		  		
 		  		$timeout(function() {
 		  			$state.go('main.questions')
-					$rootScope.moveToQuestion(q)
+					 $rootScope.moveToQuestion(q)
 				}, 100)
 		  	}
     });
@@ -139,7 +139,7 @@ $scope.setPriceRange = function () {
 
       $scope.startOver = function() {
         $appstate.clear();
-        $window.location.href = ".";
+        $window.location.reload();
       };
 
       $scope.setPriceRange()

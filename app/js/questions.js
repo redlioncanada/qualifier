@@ -363,7 +363,7 @@ angular.module('App')
   		// this should happen when stuff moves
 
   		var hasNext = false
-  		if (!!$rootScope.questionsData.question) {
+  		if (!!$rootScope.questionsData && !!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
 	  			if ('next' in item) 
 	  				hasNext = true

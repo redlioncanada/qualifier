@@ -40,7 +40,6 @@ appstateModule.factory('$appstate', ['$state', '$rootScope', 'localStorageServic
         	}
         }
 
-console.log($rootScope.hasanswers);
         var count = 1
         //fill app question data
 	  	if (!$rootScope.questionsData.question) {
@@ -89,7 +88,6 @@ console.log($rootScope.hasanswers);
 		  	}
 	  	}
 
-	  	console.log('restore');
 	  	$state.go(state);
     }
 
@@ -115,33 +113,41 @@ console.log($rootScope.hasanswers);
           //if there is one, clear localstorage
           appstate.clear();
 
-          session = JSON.parse($base64.decode(hash[1]));
-          if (!session) {
-          	console.log('couldn\'t parse session from url');
-          	return false;
+          try {
+          	session = JSON.parse($base64.decode(hash[1]));
+          } catch(e) {
+          	//failure
+          	console.log('failed to parse url');
+          	session = false;
           }
         } else {
-        	console.log('no url storage');
-        	//if there isn't one, check for one in localstorage
-        	var session = localStorageService.get('appstate');
+        	console.log('no url session');
+        }
 
-        	if (!!session && typeof session === 'object') {
-        		//backfill empty questions in the stored path
-        		var lastQuestion = session.restore;
-        		var cnt=0;
-    			/*while (true) {
-					var next = $rootScope.questionsData.questions[lastQuestion].next;
-					if (!next || typeof next !== 'string' || cnt++ > 100) break;
-    				session.answers[next] = undefined;
-    				lastQuestion = next;
-    			}*/
-        	} else {
+        if (!session) {
+        	//if there isn't one, check for one in localstorage
+        	
+        	try {
+        		session = localStorageService.get('appstate');
+        	} catch(e) {
+        		//failure
+        		console.log('failed to fetch session from localstorage');
+        		session = false;
+        	}
+
+        	if (_.isObject(session) && _.isEmpty(session)) {
+        		session = false;
+        		console.log('fetched session but it was empty');
+        	}
+
+        	if (!session) {
         		console.log('no session storage');
-        		return false;
+        	} else {
+        		console.log('restored from localstorage')
         	}
         }
 
-        return session;
+        return !!session ? session : false;
 	}
 
 	function _generateURL(str) {
