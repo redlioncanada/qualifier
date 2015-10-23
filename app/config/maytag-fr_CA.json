@@ -224,9 +224,9 @@
              "next": "Cooking - Wall Ovens - Cooking Style",
              "previous": "Cooking - Wall Ovens - Size",
              "thumbnail_type": "image",
-             "thumbnail_text": "Features",
+             "thumbnail_text": "Orientation",
              "thumbnail_text_fr": "Caractéristiques",
-             "thumbnail_current": "img/icon-features-current.png",
+             "thumbnail_current": "img/icon-orientation-current.png",
              "text": [{
                  "question": "Quel style de four encastré recherchez-vous?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
@@ -274,7 +274,7 @@
                      "text": "Pas de préférence",
                      "value": "nopreference",
                      "image": "img/Cooking-Q2-nopreference.png",
-                     "image_alt" : "Wall Oven Style - No Peference",
+                     "image_alt" : "Wall Oven Style - No Preference",
                      "scoring": {
                      },
                      "order": 4
@@ -286,9 +286,9 @@
              "next": "Cooking - Wall Ovens - Usage",
              "previous": "Cooking - Wall Ovens - Style",
              "thumbnail_type": "image",
-             "thumbnail_text": "Style",
-             "thumbnail_text_fr": "Style",
-             "thumbnail_current": "img/icon-style-current.png",
+             "thumbnail_text": "Features",
+             "thumbnail_text_fr": "Caractéristiques",
+             "thumbnail_current": "img/icon-features-current.png",
              "text": [{
                  "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
@@ -1038,7 +1038,7 @@
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",
-             "thumbnail_text_fr": "Configuration",
+             "thumbnail_text_fr": "Orientation",
              "text": [{
                  "question": "Quelle configuration préférez-vous pour vos appareils de lessive?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
