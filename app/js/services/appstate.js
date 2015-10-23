@@ -1,96 +1,100 @@
 var appstateModule = angular.module('AppstateService', ['LocalStorageModule', 'base64']);
 
-appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localStorageService', '$location', '$log', '$base64', function($window, $state, $rootScope, localStorageService, $location, $log, $base64) {
+appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localStorageService', '$location', '$log', '$base64', '$timeout', function($window, $state, $rootScope, localStorageService, $location, $log, $base64, $timeout) {
 	var appstate = {
-		freezeSession: false
+		freezeSession: false,
+		restored: ''
 	};
 
 	appstate.store = function(print) {
 		if (this.freezeSession) return;
-		localStorageService.set('appstate', JSON.stringify(_enumerateAnswers()));
-		// console.log('store');
-		// console.log(_enumerateAnswers());
+		var answers = _enumerateAnswers();
+		localStorageService.set('appstate', JSON.stringify(answers));
 	}
 
 	appstate.restore = function() {
-		$rootScope.hasanswers = {};
-	 	$rootScope.controls = {}
-		$rootScope.controls.questionHasAnswer = false
-	  	$rootScope.questionsData = {}
-	  	$rootScope.questionsData.scoringQuestions = {};
-	  	$rootScope.questionsData.currentCount = null;
-	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
+		var self = this;
+		$timeout(function(){
+			$rootScope.hasanswers = {};
+		 	$rootScope.controls = {}
+			$rootScope.controls.questionHasAnswer = false
+		  	$rootScope.questionsData = {}
+		  	$rootScope.questionsData.scoringQuestions = {};
+		  	$rootScope.questionsData.currentCount = null;
+		  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
 
-        //get session data, and if it exists, apply it to the app state
-        var session = _getSession();
-        var state = 'main.questions';	//go to this state based on session data
+	        //get session data, and if it exists, apply it to the app state
+	        var session = _getSession();
+	        var state = 'main.questions';	//go to this state based on session data
 
-        if (session) {
-        	//change app view based on session.restore
-        	switch(session.restore) {
-        		case 'print':
-        			$state.go('print',session);
-        			return;
-        			break;
-        		case 'results':
-        			location.href = '#/results';
-        		default:
-        			//restoring a specific question
-        			$rootScope.hasanswers = session.answers;
-        			$rootScope.restore = session.restore;
-        			break;
-        	}
-        }
+	        if (session) {
+	        	//change app view based on session.restore
+	        	switch(session.restore) {
+	        		case 'print':
+	        			$state.go('print',session);
+	        			return;
+	        			break;
+	        		case 'results':
+	        			location.href = '#/results';
+	        		default:
+	        			//restoring a specific question
+	        			$rootScope.hasanswers = session.answers;
+	        			$rootScope.restore = session.restore;
+	        			break;
+	        	}
+	        	self.restored = session.restore;
+	        }
 
-        var count = 1
-        //fill app question data
-	  	if (!$rootScope.questionsData.question) {
-		  	for(var q in $rootScope.hasanswers) {
+	        var count = 1
+	        //fill app question data
+		  	if (!$rootScope.questionsData.question) {
+			  	for(var q in $rootScope.hasanswers) {
 
-		  		if (!!$rootScope.hasanswers[q]) {
-		  			var ans = $rootScope.hasanswers[q].split(";");
+			  		if (!!$rootScope.hasanswers[q]) {
+			  			var ans = $rootScope.hasanswers[q].split(";");
 
-		  			for (var t in $rootScope.questionsData.questions[q].text) {
-			  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
-			  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = false;
-			  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
-				  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
-				  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
-				  					switch ($rootScope.questionsData.questions[q].text[t].type) {
-				  						case "slider-buttons":
-				  						case "slider-multiple":
-				  							if (t > 0) break;
-				  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
-				  							$rootScope.questionsData.questions[q].text[1].answer = parseInt(ans[1]);
-				  							$rootScope.questionsData.questions[q].text[1].answers[parseInt(ans[1])].answer = true;
-				  							break;
-				  						case "slider":
-				  							$rootScope.questionsData.questions[q].text[t].answer = $rootScope.questionsData.questions[q].text[t].answers[a].value;
-				  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-				  							break;
-				  						default:
-				  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-				  							break;
-				  					}
-				  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-				  				}
-				  			} else {
-				  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
+			  			for (var t in $rootScope.questionsData.questions[q].text) {
+				  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
+				  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = false;
+				  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
+					  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
+					  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
+					  					switch ($rootScope.questionsData.questions[q].text[t].type) {
+					  						case "slider-buttons":
+					  						case "slider-multiple":
+					  							if (t > 0) break;
+					  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
+					  							$rootScope.questionsData.questions[q].text[1].answer = parseInt(ans[1]);
+					  							$rootScope.questionsData.questions[q].text[1].answers[parseInt(ans[1])].answer = true;
+					  							break;
+					  						case "slider":
+					  							$rootScope.questionsData.questions[q].text[t].answer = $rootScope.questionsData.questions[q].text[t].answers[a].value;
+					  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
+					  							break;
+					  						default:
+					  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
+					  							break;
+					  					}
+					  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
+					  				}
+					  			} else {
+					  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
+					  			}
 				  			}
-			  			}
+				  		}
+			  		} 
+			  		if ($rootScope.questionsData.questions[q]) {
+				  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
+						$rootScope.questionsData.questions[q].order = count
+				  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
 			  		}
-		  		} 
-		  		if ($rootScope.questionsData.questions[q]) {
-			  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
-					$rootScope.questionsData.questions[q].order = count
-			  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
-		  		}
 
-		  		count++
+			  		count++
+			  	}
 		  	}
-	  	}
 
-	  	if (state) $state.go(state);
+		  	if (state) $state.go(state);
+	  	}, 100);
     }
 
     appstate.reload = function() {
@@ -103,6 +107,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 	appstate.clear = function() {
 		// localStorageService.clearAll();
 		localStorageService.remove('appstate');
+		console.log('clear session')
 	}
 
 	appstate.generateEmailURL = function() {

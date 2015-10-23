@@ -24,6 +24,7 @@ angular.module('App')
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
+    	console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
 
     		console.log($rootScope.controls.lastLocation);
@@ -427,7 +428,9 @@ angular.module('App')
 				for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
 					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
 				}
-				$appstate.clear();
+
+				console.log($appstate.restored);
+				if ($appstate.restored !== 'results') $appstate.clear();
   				if (!suppressLocation) $location.replace().path("/question/"+name);
 			} else {
 				if (!suppressLocation) $location.path("/question/"+name);
@@ -441,6 +444,8 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
+  			console.log('k, clearing restored')
+  			$appstate.restored = '';
 		} else {
 			$state.go('main.results')
 		}	

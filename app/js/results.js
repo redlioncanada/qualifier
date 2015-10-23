@@ -26,6 +26,8 @@ angular.module('App')
     });
 
     $scope.$on('$locationChangeSuccess', function(event) {
+      console.log('results location change')
+      if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) console.log('no init');
       $appstate.store();
 
       if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('results') != -1) {
