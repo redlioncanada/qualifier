@@ -327,15 +327,27 @@ angular.module('App')
 			return;
 		}
 		$scope.lastHeight = c;
-
-		if (c < 340) {
-			c = $('.slidey.active').height();
-			if (c < 340) {
-				var minHeight = 340;
-				$('.slidey.active').css('paddingTop', (minHeight-c)/2);
-				c = minHeight;
-			}
-		}
+        
+        if (window.innerWidth > 580) {
+            if (c < 620) {
+                c = $('.slidey.active').height();
+                if (c < 620) {
+                    var minHeight = 620;
+                    $('.slidey.active').css('paddingTop', (minHeight-c)/2);
+                    c = minHeight;
+                }
+            }
+        }
+        else {
+            if (c < 340) {
+                c = $('.slidey.active').height();
+                if (c < 340) {
+                    var minHeight = 340;
+                    $('.slidey.active').css('paddingTop', (minHeight-c)/2);
+                    c = minHeight;
+                }
+            }
+        }
 
 		if (c > 100) {
 			$('.slidey-wrap-all').stop(true).animate({
