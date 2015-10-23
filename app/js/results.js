@@ -46,7 +46,7 @@ angular.module('App')
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
-        "fakestep": 250,
+        "fakestep": 100,
         "smooth" : false,
         "step" : 1,
         "threshold" : 250,
@@ -116,8 +116,8 @@ $scope.setPriceRange = function () {
        }
 
        if (!minPrice || !maxPrice) return;
-       $rootScope.resultsOptions.from = Math.floor(minPrice/10)*10;
-        $rootScope.resultsOptions.to = Math.round(maxPrice/10)*10;
+       $rootScope.resultsOptions.from = Math.floor(minPrice/50)*50;
+        $rootScope.resultsOptions.to = Math.round(maxPrice/50)*50;
        $rootScope.controls.price = $rootScope.resultsOptions.from.toString() + ";" + $rootScope.resultsOptions.to.toString();
 }
 
@@ -132,7 +132,7 @@ $scope.setPriceRange = function () {
         } else if (price>range[1]) {
           range[1] = price
         }
-        $rootScope.controls.price = (Math.floor(range[0]/10)*10).toString() + ";" + (Math.round(range[1]/10)*10).toString()
+        $rootScope.controls.price = (Math.floor(range[0]/50)*50).toString() + ";" + (Math.round(range[1]/50)*50).toString()
 
 
       }
