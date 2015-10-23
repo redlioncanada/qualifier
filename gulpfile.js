@@ -43,7 +43,9 @@ gulp.task('js-prod', function () {
         .pipe(concat('qualifier.js'))
         .pipe(uglify({'mangle':false}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest('build/js'))
+        .pipe(replace('.locale = "en_CA", ".locale = "fr_CA"'))
+        .pipe(gulp.dest('build/fr'));
 });
 
 // process Components JS files and return the stream.
