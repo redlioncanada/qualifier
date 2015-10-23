@@ -301,8 +301,8 @@
 			"next" : "Cooking - Wall Ovens - Usage",
 			"previous" : "Cooking - Wall Ovens - Style",
 			"thumbnail_type" : "image",
-			"thumbnail_text" : "Style",
-			"thumbnail_current" : "img/icon-style-current.png",
+			"thumbnail_text" : "Features",
+			"thumbnail_current" : "img/icon-features-current.png",
 			"text" : [
 				{
 					"question" : "How would your family describe you?",
