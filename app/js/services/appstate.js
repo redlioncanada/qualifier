@@ -8,8 +8,8 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 	appstate.store = function(print) {
 		if (this.freezeSession) return;
 		localStorageService.set('appstate', JSON.stringify(_enumerateAnswers()));
-		console.log('store');
-		console.log(_enumerateAnswers());
+		// console.log('store');
+		// console.log(_enumerateAnswers());
 	}
 
 	appstate.restore = function() {
