@@ -26,7 +26,7 @@ angular.module('App')
     });
 
     $scope.$on('$locationChangeSuccess', function(event) {
-      console.log('results location change')
+      // console.log('results location change')
       if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) console.log('no init');
       $appstate.store();
 
@@ -52,7 +52,7 @@ angular.module('App')
       $rootScope.resultsOptions = {
         "from": 0,
         "to": 3000,
-        "fakestep": 100,
+        "fakestep": 50,
         "smooth" : false,
         "step" : 1,
         "threshold" : 250,
@@ -77,7 +77,6 @@ angular.module('App')
             $rootScope.safeApply()
             $scope.swipeDetails(1);
           } 
-
         } 
 
       }
@@ -139,7 +138,6 @@ $scope.setPriceRange = function () {
           range[1] = price
         }
         $rootScope.controls.price = (Math.floor(range[0]/50)*50).toString() + ";" + (Math.round(range[1]/50)*50).toString()
-
 
       }
 

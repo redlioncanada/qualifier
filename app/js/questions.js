@@ -24,10 +24,10 @@ angular.module('App')
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    	console.log('question location change');
+    	// console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
 
-    		console.log($rootScope.controls.lastLocation);
+    		// console.log($rootScope.controls.lastLocation);
     		if ($rootScope.controls.lastLocation == 'results' && q == 'Appliance') return;
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
@@ -55,8 +55,8 @@ angular.module('App')
 					$rootScope.moveToQuestion(q)
 				}, 100)	
 	  		}
-	  		console.log(q);
-	  		console.log($rootScope.questionsData);
+	  		// console.log(q);
+	  		// console.log($rootScope.questionsData);
 
 	  		$rootScope.controls.lastLocation = q;
     });
@@ -68,7 +68,7 @@ angular.module('App')
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
 	          if (qtype == "rank") {
-	          	console.log(a.answer)
+	          	// console.log(a.answer)
 	            if (a.answer == 0) {
 	              return a
 	              break;
@@ -429,7 +429,6 @@ angular.module('App')
 					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
 				}
 
-				console.log($appstate.restored);
 				if ($appstate.restored !== 'results') $appstate.clear();
   				if (!suppressLocation) $location.replace().path("/question/"+name);
 			} else {
@@ -444,7 +443,6 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
-  			console.log('k, clearing restored')
   			$appstate.restored = '';
 		} else {
 			$state.go('main.results')
@@ -453,7 +451,7 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		console.log($rootScope.questionsData);
+  		// console.log($rootScope.questionsData);
   		// console.log($rootScope.appliances);
   		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
