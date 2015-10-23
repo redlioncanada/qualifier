@@ -168,6 +168,12 @@ by Jacoub Bondre */
 @media(max-width:1023px) {
     #results {
 	padding-top: 25px;
+    .price-slider {
+        margin-bottom: 25px;
+		.jslider {
+			width: 91.5%; 
+		}
+	}
     .share-wrapper{
         display: none;
     }

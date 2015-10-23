@@ -364,7 +364,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 // $appstate.clear();
                 $appstate.restore();
 
-                console.log($rootScope.questionsData);
+                // console.log($rootScope.questionsData);
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
