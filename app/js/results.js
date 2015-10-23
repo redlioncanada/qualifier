@@ -21,6 +21,10 @@ angular.module('App')
         }
       });
 
+    $scope.$on('$locationChangeStart', function(event) {
+
+    });
+
     $scope.$on('$locationChangeSuccess', function(event) {
       $appstate.store();
 
@@ -32,11 +36,11 @@ angular.module('App')
 
     			var q = ($location.path()).toString().replace("/question/","");
 		  		$rootScope.controls.controlClicked = 'previous';
-		  		
+		  		$rootScope.controls.lastLocation = 'results';
 		  		$timeout(function() {
-		  			$state.go('main.questions')
-					 $rootScope.moveToQuestion(q)
-				}, 100)
+  		  			$state.go('main.questions')
+  					 $rootScope.moveToQuestion(q)
+  				}, 100)
 		  	}
     });
 

@@ -26,14 +26,19 @@ angular.module('App')
     $scope.$on('$locationChangeSuccess', function(event) {
     		var q = ($location.path()).toString().replace("/question/","");
 
+    		console.log($rootScope.controls.lastLocation);
+    		if ($rootScope.controls.lastLocation == 'results' && q == 'Appliance') return;
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
     			$location.replace();
+    		} else {
+    			$appstate.store();
     		}
 
     		if (!!$rootScope.questionsData.question) {
-	    		if ($rootScope.questionsData.question.name != q && !!q && q !== '/questions/') {
-		  			if ($rootScope.questionsData.question.order < $rootScope.questionsData.questions[q].order) {
+    			var question = $rootScope.questionsData.question;
+	    		if (question.name != q && !!q && q !== '/questions/' && q !== '/questions') {
+		  			if (question.order < $rootScope.questionsData.questions[q].order) {
 		  				$rootScope.controls.controlClicked = 'next';
 		  			} else {
 		  				$rootScope.controls.controlClicked = 'previous';
@@ -49,8 +54,10 @@ angular.module('App')
 					$rootScope.moveToQuestion(q)
 				}, 100)	
 	  		}
+	  		console.log(q);
+	  		console.log($rootScope.questionsData);
 
-	  		$appstate.store();
+	  		$rootScope.controls.lastLocation = q;
     });
 
 
@@ -356,11 +363,15 @@ angular.module('App')
 		return newq
 	}
 
-	$rootScope.moveToQuestion = function (name, done) {
+	$rootScope.moveToQuestion = function (name, done, suppressLocation) {
+		if (typeof suppressLocation === 'undefined') suppressLocation = false;
 		// Start - Make sure to delete future questions if this answer has changed the path
   		// if this question doesn't set next, then its fine
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
+
+  		var q = ($location.path()).toString().replace("/question/","");
+  		if ($rootScope.controls.lastLocation == 'results' && (q == 'Appliance' || q=='/questions/')) return;
 
   		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
 			$("html, body").animate({scrollTop: "51px"}, 400);
@@ -405,9 +416,9 @@ angular.module('App')
 					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
 				}
 				$appstate.clear();
-  				$location.replace().path("/question/"+name);
+  				if (!suppressLocation) $location.replace().path("/question/"+name);
 			} else {
-				$location.path("/question/"+name);
+				if (!suppressLocation) $location.path("/question/"+name);
 			}
 
 			$scope.show();
