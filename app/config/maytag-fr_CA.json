@@ -2107,7 +2107,8 @@
                      "image": "img/Dishwasher-Q6-traditional.jpg",
                      "image_alt" : "Dishwasher -  Traditional",
                      "scoring": {
-                         "frontConsole": 1
+                        "frontConsole" : 3,
+                        "FID" : -30
                      },
                      "order": 1
                  }, {
@@ -2118,7 +2119,8 @@
                      "image": "img/Dishwasher-Q6-commercial.jpg",
                      "image_alt" : "Dishwasher -  Commercial",
                      "scoring": {
-                         "FID": 1
+                        "frontConsole" : -30,
+                        "FID" : 3
                      },
                      "order": 2
                  }, {
@@ -2129,6 +2131,8 @@
                      "image": "img/Dishwasher-Q6-nopreference.jpg",
                      "image_alt" : "Dishwasher -  No Preference",
                      "scoring": {
+                        "frontConsole" : -1,
+                        "FID" : 1
                      },
                      "order": 3
                  }

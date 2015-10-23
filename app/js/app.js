@@ -126,13 +126,14 @@ App.filter('nextQuestions', function($rootScope, $filter) {
     }
     var nextQuestions = []
     var t = null
-    if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) return;
-    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
-    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-      if (item.order == l) {
-        t = item
-      }
-    })
+    var l = !$rootScope.questionsData ? 0 : $rootScope.objSize($rootScope.questionsData.scoringQuestions);
+    if (l) {
+      angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+        if (item.order == l) {
+          t = item
+        }
+      })
+    }
     while (!!t) {
       var nn = null
       if ('next' in t) {
@@ -362,6 +363,8 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
                 })
 // $appstate.clear();
                 $appstate.restore();
+
+                console.log($rootScope.questionsData);
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
