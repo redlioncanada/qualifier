@@ -12,6 +12,7 @@ var sourcemaps  = require('gulp-sourcemaps')
 var jasmine     = require('gulp-jasmine');
 var imagemin    = require('gulp-imagemin');
 var preprocess  = require('gulp-preprocess');
+var stripDebug  = require('gulp-strip-debug');
 
 // Jasmine
 gulp.task('test', function () {
@@ -37,6 +38,7 @@ gulp.task('js', function () {
 // process JS files and return the stream.
 gulp.task('js-prod', function () {
     return gulp.src('app/js/**/*.js')
+        .pipe(stripDebug())
         .pipe(sourcemaps.init())
         .pipe(concat('qualifier.js'))
         .pipe(uglify({'mangle':false}))
