@@ -10,6 +10,8 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 		if (this.freezeSession) return;
 		var answers = _enumerateAnswers();
 		localStorageService.set('appstate', JSON.stringify(answers));
+		// console.log(localStorageService.get('appstate'));
+		// console.log('store');
 	}
 
 	appstate.restore = function() {
@@ -145,9 +147,9 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 
         if (!session) {
         	//if there isn't one, check for one in localstorage
-        	
+        	console.log(localStorageService.get('appstate'));
         	try {
-        		session = JSON.parse(localStorageService.get('appstate'));
+        		session = localStorageService.get('appstate');
         	} catch(e) {
         		//failure
         		console.log('failed to fetch session from localstorage');
