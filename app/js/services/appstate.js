@@ -25,9 +25,11 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 
 	        //get session data, and if it exists, apply it to the app state
 	        var session = _getSession();
-	        var state = 'main.questions';	//go to this state based on session data
+	        var state = 'main.questions';	//go to this state based on session data, default main.questions
 
 	        if (session) {
+	        	console.log(session);
+	        	console.log(session.answers);
 	        	//change app view based on session.restore
 	        	switch(session.restore) {
 	        		case 'print':
@@ -40,6 +42,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 	        			//restoring a specific question
 	        			$rootScope.hasanswers = session.answers;
 	        			$rootScope.restore = session.restore;
+	        			location.hash = session.restore;
 	        			break;
 	        	}
 	        	self.restored = session.restore;
@@ -100,7 +103,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
     appstate.reload = function() {
     	this.clear();
     	this.freezeSession = true;
-    	$window.location.href = '#/question/Appliance';
+    	$window.location.href = '';
     	location.reload();
     }
 
@@ -142,7 +145,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
         	//if there isn't one, check for one in localstorage
         	
         	try {
-        		session = localStorageService.get('appstate');
+        		session = JSON.parse(localStorageService.get('appstate'));
         	} catch(e) {
         		//failure
         		console.log('failed to fetch session from localstorage');

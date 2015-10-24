@@ -198,6 +198,8 @@ App.filter('byPrice', function($rootScope) {
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
 App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location, $appstate) {
+    $location.path('');
+
     $state.go('loading');
 
     $rootScope.resultsTouched = false;
