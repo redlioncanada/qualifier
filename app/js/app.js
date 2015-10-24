@@ -204,6 +204,11 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
     $rootScope.resultsTouched = false;
 
+    $rootScope.atResultsPage = false;
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $rootScope.atResultsPage = toState.name.indexOf('results') != -1;
+    });
+
     $rootScope.safeApply = function(fn) {
       var phase = this.$root.$$phase;
       if(phase == '$apply' || phase == '$digest') {

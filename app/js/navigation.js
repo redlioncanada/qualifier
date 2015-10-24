@@ -2,13 +2,11 @@
 
 angular.module('App')
   .controller('NavigationCtrl', function ($scope, $state, $rootScope, $filter, $location, $window, $timeout, $appstate) {
-    $scope.atResultsPage = false;
-
-    $scope.$on('$locationChangeSuccess', function(event) {
-        if ( ($location.path()).toString().indexOf("results") != -1) {
-          $scope.atResultsPage = true;
+    $rootScope.$on('$locationChangeSuccess', function(event) {
+        if ( ($location.path()).toString().indexOf("results") != -1 || $rootScope.restore == 'results') {
+          $rootScope.atResultsPage = true;
         } else {
-          $scope.atResultsPage = false;
+          $rootScope.atResultsPage = false;
         }
     });
 

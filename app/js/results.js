@@ -2,7 +2,6 @@
 
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate) {
-
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
         }else{
@@ -13,6 +12,7 @@ angular.module('App')
         if (window.innerWidth < 1024){
             $scope.$apply(function(){
                 $scope.useMobileTemplates = true;
+                console.log('usemobiletemplates');
             });
         }else{
             $scope.$apply(function(){
