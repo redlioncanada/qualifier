@@ -126,12 +126,14 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 
 		//check for a valid state in the URL
         var hash = $location.$$absUrl.split("?");
+
         if (1 in hash) {
+          hash = hash[1].split('#')[0];
           //if there is one, clear localstorage
           appstate.clear();
 
           try {
-          	session = JSON.parse($base64.decode(hash[1]));
+          	session = JSON.parse($base64.decode(hash));
           } catch(e) {
           	//failure
           	console.log('failed to parse url');
