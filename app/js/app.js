@@ -253,7 +253,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
-    $rootScope.locale = 'en_CA';
+    $rootScope.locale = $('html').attr('lang') + '_CA';
     $rootScope.isEnglish = $rootScope.locale == 'en_CA';
     $rootScope.isFrench = $rootScope.locale == 'fr_CA';
     $rootScope.brand = "maytag";
