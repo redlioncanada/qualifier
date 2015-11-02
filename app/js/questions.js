@@ -169,6 +169,8 @@ angular.module('App')
 			"largerCapacity" : 0,
 			"largestCapacity" : 0,
 			"width27" : 0,
+			"width28" : 0,
+			"width29" : 0,
 			"width30" : 0,
 			"width31" : 0,
 			"width32" : 0,
@@ -451,7 +453,7 @@ angular.module('App')
 	}
 
   	$rootScope.next = function (done) {
-  		// console.log($rootScope.questionsData);
+  		console.log($rootScope.questionsData);
   		// console.log($rootScope.appliances);
   		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
