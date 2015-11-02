@@ -205,8 +205,8 @@
 							"value" : 1,
 							"scoring" : {
 								"width27" : 1,
-								"width28" : -30,
-								"width29" : -30,
+								"width28" : 1,
+								"width29" : 1,
 								"width30" : -30
 							}
 						},
@@ -568,7 +568,7 @@
 							"text" : "Front Control",
 							"value" : "FrontControl",
 							"scoring" : {
-								"slideIn": 3,
+								"slideIn": 10,
 								"freestanding": -30
 							},
 							"order" : 1
@@ -581,7 +581,7 @@
 							"text" : "Rear Control",
 							"value" : "RearControl",
 							"scoring" : {
-								"freestanding": 3,
+								"freestanding": 10,
 								"slideIn": -30
 							},
 							"order" : 2
@@ -594,7 +594,7 @@
 							"text" : "No Preference",
 							"value" : "No Preference",
 							"scoring" : {
-								"slideIn": 3
+								"slideIn": 10
 							},
 							"order" : 3
 						}
@@ -1413,7 +1413,13 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
-								"width30" : 1
+								"width30" : 1,
+								"width31" : -30,
+								"width32" : -30,
+								"width33" : -30,
+								"width34" : -30,
+								"width35" : -30,
+								"width36" : -30
 							}
 						},
 						"2" : {
@@ -1422,7 +1428,13 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
-								"width33" : 1
+								"width30" : -30,
+								"width31" : 1,
+								"width32" : 1,
+								"width33" : 1,
+								"width34" : -30,
+								"width35" : -30,
+								"width36" : -30
 							}
 						},
 						"3" : {
@@ -1431,6 +1443,12 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
+								"width30" : -30,
+								"width31" : -30,
+								"width32" : -30,
+								"width33" : -30,
+								"width34" : 1,
+								"width35" : 1,
 								"width36" : 1
 							}
 						}
@@ -1441,7 +1459,7 @@
 					"dimension_label" : "height",
 					"answer" : 0,
 					"answers" : {
-						"0" : {
+                        "0" : {
                             "value" : 0,
                             "text" : "Any",
                             "enabled" : true,
@@ -1449,48 +1467,66 @@
                             "scoring" : {
                             }
                         },
-						"66" : {
-							"value" : 66,
-							"text" : "66",
-							"enabled" : true,
-							"enabledWhen" : [0,1],
-							"scoring" : {
-								 "height66" : 1
-							}
-						},
-						"69" : {
-							"value" : 69,
-							"text" : "69",
-							"enabled" : true,
-							"enabledWhen" : [0,1],
-							"scoring" : {
-								 "height68" : 1,
-								 "height69" : 1
-							}
-						},
-						"67" : {
-							"value" : 67,
-							"text" : "67",
-							"enabled" : true,
-							"enabledWhen" : [0,1,2],
-							"scoring" : {
-								 "height67" : 1
-							}
-						},
-						"71" : {
-							"value" : 71,
-							"text" : "71",
-							"enabled" : true,
-							"enabledWhen" : [0,2,3],
-							"scoring" : {
-								 "height70" : 1,
-								 "height71" : 1
-							}
-						}
-					}								
-				}					
-			]
-		},
+                        "66" : {
+                            "value" : 66,
+                            "text" : "66",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height66" : 1,
+                                 "height67" : -30,
+                                 "height68" : -30,
+                                 "height69" : -30,
+                                 "height70" : -30,
+                                 "height71" : -30
+                            }
+                        },
+                        "67" : {
+                            "value" : 67,
+                            "text" : "67",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1,2],
+                            "scoring" : {
+                                 "height66" : -30,
+                                 "height67" : 1,
+                                 "height68" : -30,
+                                 "height69" : -30,
+                                 "height70" : -30,
+                                 "height71" : -30
+                            }
+                        },
+                        "69" : {
+                            "value" : 69,
+                            "text" : "69",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height66" : -30,
+                                 "height67" : -30,
+                                 "height68" : 1,
+                                 "height69" : 1,
+                                 "height70" : -30,
+                                 "height71" : -30
+                            }
+                        },
+                        "71" : {
+                            "value" : 71,
+                            "text" : "71",
+                            "enabled" : true,
+                            "enabledWhen" : [0,2,3],
+                            "scoring" : {
+                                 "height66" : -30,
+                                 "height67" : -30,
+                                 "height68" : -30,
+                                 "height69" : -30,
+                                 "height70" : 1,
+                                 "height71" : 1
+                            }
+                        }
+                    }                               
+                }   
+             ]
+         },
 		"Fridges - Capacity" : {
 			"next" : "Fridges - Organization",
 			"previous" : "Fridges - Size",
@@ -2288,7 +2324,7 @@
 							"image" : "img/Dishwasher-Q6-traditional.jpg",
                             "image_alt" : "Dishwasher -  Traditional",
 							"scoring" : {
-								"frontConsole" : 3,
+								"frontConsole" : 10,
 								"FID" : -30
 							},
 							"order" : 1
@@ -2302,7 +2338,7 @@
                             "image_alt" : "Dishwasher -  Commercial",
 							"scoring" : {	
 								"frontConsole" : -30,
-								"FID" : 3					
+								"FID" : 10
 							},
 							"order" : 2
 						},
@@ -2314,8 +2350,8 @@
 							"image" : "img/Dishwasher-Q6-nopreference.jpg",
                             "image_alt" : "Dishwasher -  No Preference",
 							"scoring" : {
-								"frontConsole" : -1,
-								"FID" : 1
+								"frontConsole" : -10,
+								"FID" : 10
 							},
 							"order" : 3
 						}

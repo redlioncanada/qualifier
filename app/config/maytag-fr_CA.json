@@ -212,8 +212,8 @@
                         "value" : 2,
                         "scoring" : {
                             "width27" : -30,
-                            "width28" : -30,
-                            "width29" : -30,
+                            "width28" : 1,
+                            "width29" : 1,
                             "width30" : 1
                         }
                     }
@@ -528,7 +528,7 @@
                             "text" : "Commandes frontales",
                             "value" : "FrontControl",
                             "scoring" : {
-                                "slideIn": 3,
+                                "slideIn": 10,
                                 "freestanding": -30
                             },
                             "order" : 1
@@ -541,7 +541,7 @@
                             "text" : "Panneau de commandes arrière",
                             "value" : "BackControl",
                             "scoring" : {
-                                "freestanding": 3,
+                                "freestanding": 10,
                                 "slideIn": -30
                             },
                             "order" : 2
@@ -554,7 +554,7 @@
                             "text" : "Pas de préférence",
                             "value" : "NoPreference",
                             "scoring" : {
-                                "slideIn": 3
+                                "slideIn": 10
                             },
                             "order" : 3
                         }
@@ -1290,7 +1290,7 @@
                  "answers" : {
                         "0" : {
                             "value" : 0,
-                            "text" : "Toute",
+                            "text" : "No Preference",
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
@@ -1302,7 +1302,13 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : 1
+                                "width30" : 1,
+                                "width31" : -30,
+                                "width32" : -30,
+                                "width33" : -30,
+                                "width34" : -30,
+                                "width35" : -30,
+                                "width36" : -30
                             }
                         },
                         "2" : {
@@ -1311,7 +1317,13 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width33" : 1
+                                "width30" : -30,
+                                "width31" : 1,
+                                "width32" : 1,
+                                "width33" : 1,
+                                "width34" : -30,
+                                "width35" : -30,
+                                "width36" : -30
                             }
                         },
                         "3" : {
@@ -1320,6 +1332,12 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
+                                "width30" : -30,
+                                "width31" : -30,
+                                "width32" : -30,
+                                "width33" : -30,
+                                "width34" : 1,
+                                "width35" : 1,
                                 "width36" : 1
                             }
                         }
@@ -1344,17 +1362,12 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : 1
-                            }
-                        },
-                        "69" : {
-                            "value" : 69,
-                            "text" : "69",
-                            "enabled" : true,
-                            "enabledWhen" : [0,1],
-                            "scoring" : {
-                                 "height68" : 1,
-                                 "height69" : 1
+                                 "height66" : 1,
+                                 "height67" : -30,
+                                 "height68" : -30,
+                                 "height69" : -30,
+                                 "height70" : -30,
+                                 "height71" : -30
                             }
                         },
                         "67" : {
@@ -1363,7 +1376,26 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1,2],
                             "scoring" : {
-                                 "height67" : 1
+                                 "height66" : -30,
+                                 "height67" : 1,
+                                 "height68" : -30,
+                                 "height69" : -30,
+                                 "height70" : -30,
+                                 "height71" : -30
+                            }
+                        },
+                        "69" : {
+                            "value" : 69,
+                            "text" : "69",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height66" : -30,
+                                 "height67" : -30,
+                                 "height68" : 1,
+                                 "height69" : 1,
+                                 "height70" : -30,
+                                 "height71" : -30
                             }
                         },
                         "71" : {
@@ -1372,6 +1404,10 @@
                             "enabled" : true,
                             "enabledWhen" : [0,2,3],
                             "scoring" : {
+                                 "height66" : -30,
+                                 "height67" : -30,
+                                 "height68" : -30,
+                                 "height69" : -30,
                                  "height70" : 1,
                                  "height71" : 1
                             }
@@ -2098,47 +2134,50 @@
                  "explanation": "Trouver ce qui convient parfaitement au style de votre foyer est aussi important pour nous que pour vous.",
                  "type": "boxes-picture-3-radio",
                  "oneAnswer": true,
-                 "answers": [
-                 {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "Traditionnel",
-                     "value": "Traditional",
-                     "image": "img/Dishwasher-Q6-traditional.jpg",
-                     "image_alt" : "Dishwasher -  Traditional",
-                     "scoring": {
-                        "frontConsole" : 3,
-                        "FID" : -30
-                     },
-                     "order": 1
-                 }, {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "Commercial",
-                     "value": "Commercial",
-                     "image": "img/Dishwasher-Q6-commercial.jpg",
-                     "image_alt" : "Dishwasher -  Commercial",
-                     "scoring": {
-                        "frontConsole" : -30,
-                        "FID" : 3
-                     },
-                     "order": 2
-                 }, {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "Pas de préférence",
-                     "value": "NoPreference",
-                     "image": "img/Dishwasher-Q6-nopreference.jpg",
-                     "image_alt" : "Dishwasher -  No Preference",
-                     "scoring": {
-                        "frontConsole" : -1,
-                        "FID" : 1
-                     },
-                     "order": 3
-                 }
-                 ]
-             }]
-         },
+                 "answers" : [
+                        { 
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-style-current.png",
+                            "text" : "Front Controls",
+                            "value" : "Traditional",
+                            "image" : "img/Dishwasher-Q6-traditional.jpg",
+                            "image_alt" : "Dishwasher -  Traditional",
+                            "scoring" : {
+                                "frontConsole" : 10,
+                                "FID" : -30
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-style-current.png",
+                            "text" : "Hidden Controls",
+                            "value" : "Commercial",
+                            "image" : "img/Dishwasher-Q6-commercial.jpg",
+                            "image_alt" : "Dishwasher -  Commercial",
+                            "scoring" : {   
+                                "frontConsole" : -30,
+                                "FID" : 10
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-features-current.png",
+                            "text" : "No Preference",
+                            "value" : "nopreference",
+                            "image" : "img/Dishwasher-Q6-nopreference.jpg",
+                            "image_alt" : "Dishwasher -  No Preference",
+                            "scoring" : {
+                                "frontConsole" : -10,
+                                "FID" : 10
+                            },
+                            "order" : 3
+                        }
+                    ]
+                }
+            ]
+        },
          "Dishwashers - Energy": {
              "next": null,
              "previous": "Dishwashers - Style",
