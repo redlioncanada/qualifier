@@ -26,8 +26,10 @@
 							<div class="product-price-sku-wrap">
 								<span class="product-price">
 									<span bo-text="brandData.apptext.msrp"></span>:&nbsp;
-									<span ng-if="isEnglish">${{a.picker.prices.CAD}}</span>
-									<span ng-if="!isEnglish">{{a.picker.prices.CAD.replace('.',',')}} $</span>
+									<span ng-if="isEnglish && a.appliance!='Washers'">${{a.picker.prices.CAD}}</span>
+									<span ng-if="!isEnglish && a.appliance!='Washers'">{{a.picker.prices.CAD.replace('.',',')}} $</span>
+									<span ng-if="isEnglish && a.appliance=='Washers'">${{a.picker.prices.CAD}} / ${{a.dryers[0].colours[0].prices.CAD}}</span>
+									<span ng-if="!isEnglish && a.appliance=='Washers'">{{a.picker.prices.CAD.replace('.',',')}} $ / {{a.dryers[0].colours[0].prices.CAD}} $</span>
 								</span>
 								<span class="product-sku">
 									<span bo-text="brandData.apptext.model"></span>:&nbsp; 
