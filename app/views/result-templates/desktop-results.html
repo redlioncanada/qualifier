@@ -31,7 +31,8 @@
 								</span>
 								<span class="product-sku">
 									<span bo-text="brandData.apptext.model"></span>:&nbsp; 
-									<span>{{a.picker.sku}}</span>  
+									<span ng-if="a.appliance=='Washers'">{{a.picker.sku}} / {{a.picker.dryersku}}</span>  
+									<span ng-if="a.appliance!='Washers'">{{a.picker.sku}}</span>  
 								</span>
 
 							</div>
