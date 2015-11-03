@@ -98,6 +98,17 @@ applianceDataDecorator.factory('$dataDecorator', function() {
                   }                    
                 }
               } 
+
+              if (!!item.salesFeatures && typeof item.salesFeatures == 'object') {
+				for (var a in item.salesFeatures) {
+					var appliance = item.salesFeatures[a];
+					if (!!appliance.featureKey && appliance.featureKey != null || appliance.featureKey != "null") {
+						if (appliance.headline.indexOf('Temperature Refrigerated Drawer') !== -1 || appliance.headline.indexOf('r\u00e9frig\u00e9r\u00e9 \u00e0 temp\u00e9rature r\u00e9glable') !== -1) {
+							appliance.featureKey = "tempReferDrawer";
+						}
+					}
+				}
+			}
         })
 		return data;
 	};
