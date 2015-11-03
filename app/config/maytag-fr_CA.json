@@ -200,7 +200,7 @@
                         "thumbnail_current" : "img/icon-size-current.png",
                         "value" : 1,
                         "scoring" : {
-                            "width27" : 1,
+                            "width27" : 5,
                             "width28" : -30,
                             "width29" : -30,
                             "width30" : -30
@@ -211,10 +211,7 @@
                         "thumbnail_current" : "img/icon-size-current.png",
                         "value" : 2,
                         "scoring" : {
-                            "width27" : -30,
-                            "width28" : 1,
-                            "width29" : 1,
-                            "width30" : 1
+                            "width30" : 5
                         }
                     }
                  }
@@ -1302,7 +1299,7 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : 1,
+                                "width30" : 5,
                                 "width31" : -30,
                                 "width32" : -30,
                                 "width33" : -30,
@@ -1317,10 +1314,7 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : -30,
-                                "width31" : 1,
-                                "width32" : 1,
-                                "width33" : 1,
+                                "width33" : 5,
                                 "width34" : -30,
                                 "width35" : -30,
                                 "width36" : -30
@@ -1332,13 +1326,7 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : -30,
-                                "width31" : -30,
-                                "width32" : -30,
-                                "width33" : -30,
-                                "width34" : 1,
-                                "width35" : 1,
-                                "width36" : 1
+                                "width36" : 5
                             }
                         }
                     }                               
@@ -1362,7 +1350,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : 1,
+                                 "height66" : 5,
                                  "height67" : -30,
                                  "height68" : -30,
                                  "height69" : -30,
@@ -1376,8 +1364,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1,2],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : 1,
+                                 "height67" : 5,
                                  "height68" : -30,
                                  "height69" : -30,
                                  "height70" : -30,
@@ -1390,10 +1377,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : -30,
-                                 "height68" : 1,
-                                 "height69" : 1,
+                                 "height69" : 5,
                                  "height70" : -30,
                                  "height71" : -30
                             }
@@ -1404,12 +1388,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,2,3],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : -30,
-                                 "height68" : -30,
-                                 "height69" : -30,
-                                 "height70" : 1,
-                                 "height71" : 1
+                                 "height71" : 5
                             }
                         }
                     }                               
