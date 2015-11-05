@@ -454,7 +454,7 @@ angular.module('App')
 
   	$rootScope.next = function (done) {
   		console.log($rootScope.questionsData);
-  		// console.log($rootScope.appliances);
+  		console.log($rootScope.appliances);
   		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;

@@ -32,6 +32,7 @@ gulp.task('sass', function () {
 // process JS files and return the stream.
 gulp.task('js', function () {
     return gulp.src('app/js/**/*.js')
+        .pipe(preprocess({context: {ENV: 'development'}}))
         .pipe(gulp.dest('build/js'));
 });
 
@@ -39,6 +40,7 @@ gulp.task('js', function () {
 gulp.task('js-prod', function () {
     return gulp.src('app/js/**/*.js')
         .pipe(stripDebug())
+        .pipe(preprocess({context: {ENV: 'production'}}))
         .pipe(sourcemaps.init())
         .pipe(concat('qualifier.js'))
         .pipe(uglify({'mangle':false}))
@@ -92,6 +94,7 @@ gulp.task('views', function() {
 
     // Any other view files from app/views
     gulp.src('app/views/**/*')
+    .pipe(preprocess({context: {ENV: env}}))
     // Will be put in the build/views folder
     .pipe(gulp.dest('build/views/'));
 });
@@ -118,6 +121,7 @@ gulp.task('views-prod', function() {
 
     // Any other view files from app/views
     gulp.src('app/views/**/*')
+    .pipe(preprocess({context: {ENV: env}}))
     // Will be put in the build/views folder
     .pipe(gulp.dest('build/views/'));
 });
