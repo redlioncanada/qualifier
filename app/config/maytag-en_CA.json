@@ -204,9 +204,9 @@
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 1,
 							"scoring" : {
-								"width27" : 1,
-								"width28" : 1,
-								"width29" : 1,
+								"width27" : 5,
+								"width28" : -30,
+								"width29" : -30,
 								"width30" : -30
 							}
 						},
@@ -215,10 +215,7 @@
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 2,
 							"scoring" : {
-								"width27" : -30,
-								"width28" : -30,
-								"width29" : -30,
-								"width30" : 1
+								"width30" : 5
 							}
 						}
 					}								
