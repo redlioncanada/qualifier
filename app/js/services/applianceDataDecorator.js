@@ -75,6 +75,14 @@ applianceDataDecorator.factory('$dataDecorator', function() {
                 } else if (item.width <= 36) {
                   item["width36"] = true
                 }
+
+                if (item.capacity <= 20) {
+                  item["smallCapacity"] = true
+                } else if (item.capacity <= 22) {
+                  item["mediumCapacity"] = true
+                } else if (item.capacity > 22) {
+                  item["largeCapacity"] = true
+                }
               } else if (item.appliance == "Cooking") {
                 if (item.type == "Ovens") {
                   if (item.width <= 27) {

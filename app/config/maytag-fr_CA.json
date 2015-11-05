@@ -1463,7 +1463,8 @@
                          "value": 3,
                          "text": "MA FAMILLE",
                          "scoring": {
-                             "powerCold": 1
+                             "powerCold": 1,
+                             "smallCapacity" : 1
                          }
                      },
                      "4": {
@@ -1472,7 +1473,9 @@
                          "value": 4,
                          "text": "Ma grande famille",
                          "scoring": {
-                             "powerCold": 2
+                             "powerCold": 2,
+                             "adjustableTempDrawer" : 1,
+                             "mediumCapacity" : 1
                          }
                      },
                      "5": {
@@ -1481,7 +1484,9 @@
                          "value": 5,
                          "text": "Mes invités lorsque je reçois",
                          "scoring": {
-                             "powerCold": 2
+                             "powerCold": 2,
+                             "adjustableTempDrawer" : 2,
+                             "largeCapactiy" : 1
                          }
                      }
                  }
@@ -1623,7 +1628,8 @@
                      "text": "Parfaitement organisé",
                      "value": "perfect",
                      "scoring": {
-                         "frenchDoor": 1
+                         "frenchDoor": 1,
+                         "adjustableTempDrawer" : 1
                      },
                      "order": 1
                  }, {
@@ -1632,7 +1638,8 @@
                      "text": "Organisé et bien rempli",
                      "value": "organized",
                      "scoring": {
-                         "frenchDoor": 1
+                         "frenchDoor": 1,
+                         "adjustableTempDrawer" : 1
                      },
                      "order": 2
                  }, {

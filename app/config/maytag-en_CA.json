@@ -1585,7 +1585,8 @@
 							"value" : 4,
 							"text" : "My large family",
 							"scoring" : {
-								"powerCold" : 2
+								"powerCold" : 2,
+								"adjustableTempDrawer" : 1
 							}
 						},
 						"5" : {
@@ -1594,7 +1595,8 @@
 							"value" : 5,
 							"text" : "My guests when<br>entertaining",
 							"scoring" : {
-								"powerCold" : 2
+								"powerCold" : 2,
+								"adjustableTempDrawer" : 2
 							}
 						}
 					}
@@ -1743,7 +1745,8 @@
 							"text" : "Perfectly organized",
 							"value" : "perfect",
 							"scoring" : {
-								"frenchDoor" : 1
+								"frenchDoor" : 1,
+								"adjustableTempDrawer" : 1
 							},
 							"order" : 1
 						},
@@ -1753,7 +1756,8 @@
 							"text" : "Organized with lots of stuff",
 							"value" : "organized",
 							"scoring" : {
-								"frenchDoor" : 1
+								"frenchDoor" : 1,
+								"adjustableTempDrawer" : 1
 							},
 							"order" : 2
 						},

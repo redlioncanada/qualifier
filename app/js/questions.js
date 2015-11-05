@@ -148,6 +148,7 @@ angular.module('App')
 			"fid" : false,
 			"console" : false,
 			"powerCold" : false,
+			"adjustableTempDrawer" : false,
 			"topMount" : false,
 			"bottomMount" : false,
 			"frenchDoor" : false,
