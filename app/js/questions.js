@@ -165,6 +165,7 @@ angular.module('App')
 			"powerPreheat" : false,
 			"slideIn" : 0,
 			"freestanding" : 0,
+			"smallCapacity" : 0,
 			"mediumCapacity" : 0,
 			"largeCapacity" : 0,
 			"largerCapacity" : 0,

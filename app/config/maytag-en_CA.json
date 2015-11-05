@@ -1576,7 +1576,8 @@
 							"value" : 3,
 							"text" : "My family",
 							"scoring" : {
-								"powerCold" : 1
+								"powerCold" : 1,
+								"smallCapacity" : 1
 							}
 						},
 						"4" : {
@@ -1585,8 +1586,9 @@
 							"value" : 4,
 							"text" : "My large family",
 							"scoring" : {
-								"powerCold" : 2,
-								"adjustableTempDrawer" : 1
+								"powerCold" : 1,
+								"adjustableTempDrawer" : 1,
+								"mediumCapacity" : 1
 							}
 						},
 						"5" : {
@@ -1596,7 +1598,8 @@
 							"text" : "My guests when<br>entertaining",
 							"scoring" : {
 								"powerCold" : 2,
-								"adjustableTempDrawer" : 2
+								"adjustableTempDrawer" : 2,
+								"largeCapactiy" : 1
 							}
 						}
 					}
