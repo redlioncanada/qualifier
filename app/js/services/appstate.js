@@ -123,6 +123,10 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 	      return '?' + $base64.encode(JSON.stringify({restore:'print',sku:sku}));
 	}
 
+	appstate.host = function() {
+		return $location.host() + ":" + $location.port();
+	}
+
 	function _getSession() {
 		var session = false;
 

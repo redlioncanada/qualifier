@@ -637,3 +637,9 @@ div[ng-class="fr_CA"] {
 		}
 	}
 }
+
+@media(max-width:580px) {
+	.as-sortable-dragging {
+		display: none;
+	}
+}
