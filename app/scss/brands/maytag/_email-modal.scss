@@ -50,6 +50,9 @@ $inputBackgroundColor: #EEE;
 			border: 0;
 			border-radius: 5px;
 		}
+		textarea {
+			resize: none;
+		}
 
 		.input-wrapper:not(:first-child) {
 			margin-top: 10px;
@@ -92,7 +95,7 @@ $inputBackgroundColor: #EEE;
 		.message {
 			padding-top: 25px;
 			margin-top: 25px;
-			height: 250px;
+			height: 270px;
 		}
 	}
 
