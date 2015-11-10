@@ -333,7 +333,7 @@ angular.module('App')
 		}, 0);
 
 
-		var c = $('.slidey.ng-hide-remove').height();
+		var c = $('.slidey.active').height();
 
 		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
 			return;
