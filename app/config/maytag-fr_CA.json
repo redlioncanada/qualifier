@@ -520,7 +520,7 @@
                     "question" : "Quel style de cuisinière préférez-vous?",
                     "sub_question" : "Sélectionnez",
                     "explanation_title" : "Pourquoi me posez-vous une question sur le style?",
-                    "explanation" : "Pourquoi me posez-vous une question au sujet du style?",
+                    "explanation" : "Saviez-vous que les cuisines professionnelles comportent habituellement des cuisinières à commandes frontales? Une fois que nous comprenons vos préférences en matière de style, nous pouvons recommander la table de cuisson parfaite pour vous.",
                     "type" : "boxes-picture-3-radio",
                     "oneAnswer" : true,
                     "answers" : [
