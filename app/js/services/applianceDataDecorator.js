@@ -1,6 +1,6 @@
 var applianceDataDecorator = angular.module('ApplianceDataDecoratorService', []);
 
-applianceDataDecorator.factory('$dataDecorator', function() {
+applianceDataDecorator.factory('$dataDecorator', ['$filter', function() {
 	return function(data) {
 		// console.log(data);
 
@@ -9,6 +9,7 @@ applianceDataDecorator.factory('$dataDecorator', function() {
           'WH' : 'DW'
         }
         angular.forEach( data, function (item, key) { 
+            item.price = parseFloat(item.colours[0].prices.CAD);
 
               if (item.appliance == "Washers") {
 
@@ -19,8 +20,6 @@ applianceDataDecorator.factory('$dataDecorator', function() {
                     }
                   }
                 }
-
-                item.price = parseFloat(item.colours[0].prices.CAD);
 
                   if (parseFloat(item.capacity) >= 6.1) {
                     item.largestCapacity = true
@@ -107,6 +106,6 @@ applianceDataDecorator.factory('$dataDecorator', function() {
                 }
               } 
         })
-		return data;
+		  return $filter('orderBy')(data, '-price');
 	};
-});
+}]);
