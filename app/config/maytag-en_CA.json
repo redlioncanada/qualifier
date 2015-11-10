@@ -569,8 +569,8 @@
 							"text" : "Front Control",
 							"value" : "FrontControl",
 							"scoring" : {
-								"slideIn": 10,
-								"freestanding": -30
+								"frontControl": 10,
+								"rearControl": -30
 							},
 							"order" : 1
 						},
@@ -582,8 +582,8 @@
 							"text" : "Rear Control",
 							"value" : "RearControl",
 							"scoring" : {
-								"freestanding": 10,
-								"slideIn": -30
+								"rearControl": 10,
+								"frontControl": -30
 							},
 							"order" : 2
 						},
@@ -595,7 +595,7 @@
 							"text" : "No Preference",
 							"value" : "No Preference",
 							"scoring" : {
-								"slideIn": 10
+								"frontControl": 10
 							},
 							"order" : 3
 						}

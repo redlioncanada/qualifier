@@ -529,8 +529,8 @@
                             "text" : "Commandes frontales",
                             "value" : "FrontControl",
                             "scoring" : {
-                                "slideIn": 10,
-                                "freestanding": -30
+                                "frontControl": 10,
+                                "rearControl": -30
                             },
                             "order" : 1
                         },
@@ -542,8 +542,8 @@
                             "text" : "Panneau de commandes arrière",
                             "value" : "BackControl",
                             "scoring" : {
-                                "freestanding": 10,
-                                "slideIn": -30
+                                "rearControl": 10,
+                                "frontControl": -30
                             },
                             "order" : 2
                         },
@@ -555,7 +555,7 @@
                             "text" : "Pas de préférence",
                             "value" : "NoPreference",
                             "scoring" : {
-                                "slideIn": 10
+                                "frontControl": 10
                             },
                             "order" : 3
                         }
