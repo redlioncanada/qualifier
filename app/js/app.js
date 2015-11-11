@@ -14,6 +14,7 @@ var nglibs = [
   'angularAwesomeSlider',
   'ngAnimate',
   'AppstateService',
+  'djds4rce.angular-socialshare',
   'ApplianceDataDecoratorService'
 ];
 
@@ -198,9 +199,9 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', '$dataDecorator', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location, $appstate, $dataDecorator) {
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', '$dataDecorator', '$FB', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location, $appstate, $dataDecorator, $FB) {
     $location.path('');
-
+    $FB.init('731301837002604');
     $state.go('loading');
 
     $rootScope.resultsTouched = false;
@@ -273,12 +274,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
 
           $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = $dataDecorator(res.products);
-
-               
-// $appstate.clear();
                 $appstate.restore();
-
-                // console.log($rootScope.questionsData);
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
@@ -286,5 +282,3 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.errorMessage = "We're having connectivity issues. Please reload."
     });
   }]);
-
-//angular.bootstrap(document, ["App"]);

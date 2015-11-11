@@ -335,10 +335,6 @@ angular.module('App')
 
 		var c = $('.slidey.active').height();
 
-		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
-			return;
-		}
-		$scope.lastHeight = c;
         
         if (window.innerWidth > 580) {
             if (c < 620) {
@@ -366,6 +362,11 @@ angular.module('App')
 				'height': c + 10
 			}, 0);
 		}
+
+		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
+			return;
+		}
+		$scope.lastHeight = c;
 
 		function getTotalHeight(el) {
 			if (!el || (typeof el === 'object' && el.length == 0)) return 0;

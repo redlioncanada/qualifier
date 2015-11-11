@@ -33,7 +33,13 @@
 		"emailMessageSent" : "Your message has been sent",
 		"emailMessageError" : "There was an error",
 		"nextQuestionAlt" : "Navigate to next question",
-		"previousQuestionAlt" : "Navigate to previous question"
+		"previousQuestionAlt" : "Navigate to previous question",
+		"facebookTitle" : "FIND YOUR PERFECT APPLIANCE",
+		"facebookDesc" : "My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and features you need.",
+		"facebookImage" : "/img/social.jpg",
+		"twitterTitle" : "",
+		"twitterDesc" : "My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and need.",
+		"twitterImage" : "/img/social.jpg"
 	},
 	"questions" : {
 		"Appliance" : {
