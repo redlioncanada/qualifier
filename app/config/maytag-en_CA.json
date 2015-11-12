@@ -74,7 +74,7 @@
 						{
 							"text" : "Cooking",
 							"value" : "Stove",
-							"displayName": "Range",
+							"displayName": "Cooking",
 							"classes" : "category cooking",
 							"image" : "img/start-stove.png",
                             "image_alt" : "Maytag Man - Cooking",

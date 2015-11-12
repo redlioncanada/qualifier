@@ -73,7 +73,7 @@
                  }, {
                      "text": "Appareils de cuisson",
                      "value": "Stove",
-                     "displayName": "Appareils de cuisson",
+                     "displayName": "Cooking",
                      "classes": "category cooking",
                      "image": "img/start-stove.png",
                      "image_alt" : "Maytag Man - Cooking",
