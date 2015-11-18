@@ -391,12 +391,16 @@ angular.module('App')
   		var q = ($location.path()).toString().replace("/question/","");
   		if ($rootScope.controls.lastLocation == 'results' && (q == 'Appliance' || q=='/questions/')) return;
 
-  		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
+  		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile && q !== 'Appliance') {
 			$("html, body").animate({scrollTop: "51px"}, 400);
 		}
 
-		if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('Appliance') != -1) {
-			$("html, body").animate({scrollTop: "125px"}, 400);
+		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
+  			if ($location.path().indexOf('/questions/') == -1) {
+				$("html, body").animate({scrollTop: "51px"}, 400);
+			} else {
+				$("html, body").animate({scrollTop: "0px"}, 400);
+			}
 		}
 
   		var hasNext = false
