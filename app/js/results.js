@@ -108,6 +108,9 @@ angular.module('App')
         },
         link: function() {
           return $appstate.host() + $appstate.generateEmailURL()
+        },
+        fakelink: function() {
+          return $rootScope.brandData.apptext.emailFakeLink;
         }
       }
     });
