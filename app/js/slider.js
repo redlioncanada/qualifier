@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('SliderCtrl', function ($scope, $rootScope) {
+  .controller('SliderCtrl', function ($element, $scope, $rootScope) {
   	// jslider-value
 
   	$scope.setAnswer = function () {
@@ -43,6 +43,8 @@ angular.module('App')
       }
 
       qs.text[0].options.callback = angular.copy(function(value, released) {  
+        $($element).find('.slider-wrap').attr('data-text', $rootScope.questionsData.question.show.answers[Math.round(value)].text);
+
         if (!!$rootScope.questionsData.question) {
           if (qs.name == $rootScope.questionsData.question.name) {    
             if (!!released) {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('App')
-  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate) {
+  .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate, $element) {
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
         }else{
@@ -44,6 +44,8 @@ angular.module('App')
   					 $rootScope.moveToQuestion(q)
   				}, 100)
 		  	}
+
+        gaw.refresh();
     });
 
       if (!!!$rootScope.questionsData || !!!$rootScope.questionsData.scoringQuestions) $state.go('main.questions');
@@ -59,7 +61,11 @@ angular.module('App')
         "dimension": d,
         "callback" : function(value, released) {  
 
+          if (!released) $($element).attr('data-last-value', value);
+          if (!!released) $($element).attr('data-value', value);
+
           if (!!released && !!value) {
+
             var range = value.split(";")
 
             for (var r in range) {
@@ -77,15 +83,14 @@ angular.module('App')
             $rootScope.safeApply()
             $scope.swipeDetails(1);
           } 
-        } 
-
+        }
       }
   
 
 
   $rootScope.setFirstColour = function (appliance) {
     for (var c in appliance.colours) {
-      if (appliance.colours[c].colourCode == "CS" || appliance.colours[c].colourCode == "SS") {
+      if (appliance.colours[c].colourCode == "BS" || appliance.colours[c].colourCode == "CS" || appliance.colours[c].colourCode == "SS") {
         return appliance.colours[c]
       }
     }
@@ -95,6 +100,7 @@ angular.module('App')
   $rootScope.setBestMatch = function(index,appliance) {
     if (index != 1) return;
     $scope.bestMatch = appliance;
+    gaw.refresh();
   }
 
   $rootScope.emailOpen = function () {
@@ -167,7 +173,7 @@ $scope.setPriceRange = function () {
 
       }
 
-      $scope.constructPageTitle = function() {
+      $scope.getAppliance = function() {
         for (var i in $rootScope.questionsData.scoringQuestions.Appliance.text[0].answers) {
           var value = $rootScope.questionsData.scoringQuestions.Appliance.text[0].answers[i];
 
@@ -177,18 +183,20 @@ $scope.setPriceRange = function () {
                 var value = $rootScope.questionsData.scoringQuestions["Cooking - Pre-Qualifier 1"].text[0].answers[i];
 
                 if (!!value.answer) {
-                  var suffix = value.displayName;
-                  if ($rootScope.isFrench) suffix = suffix.toUpperCase();
-                  return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
+                  return value.displayName;
                 }
               }
             } else {
-              var suffix = value.displayName;
-              if ($rootScope.isFrench) suffix = suffix.toUpperCase();
-              return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
+              return value.displayName;
             }
           }
         }
+      }
+
+      $scope.constructPageTitle = function() {
+        var suffix = $scope.getAppliance();
+        if ($rootScope.isFrench) suffix = suffix.toUpperCase();
+        return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
       $scope.startOver = function() {
