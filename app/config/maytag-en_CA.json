@@ -181,7 +181,7 @@
 			"category" : "aesthetics"
 		},
 		"Cooking - Wall Ovens - Size" : {
-			"next" : "Cooking - Wall Ovens - Style",
+			"next" : "Cooking - Wall Ovens - Orientation",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Size",
@@ -242,8 +242,8 @@
 				}
 			]
 		},
-		"Cooking - Wall Ovens - Style" : {
-			"next" : "Cooking - Wall Ovens - Cooking Style",
+		"Cooking - Wall Ovens - Orientation" : {
+			"next" : "Cooking - Wall Ovens - Features 1",
 			"previous" : "Cooking - Wall Ovens - Size",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Orientation",
@@ -308,9 +308,9 @@
 				}
 			]
 		},
-		"Cooking - Wall Ovens - Cooking Style" : {
-			"next" : "Cooking - Wall Ovens - Usage",
-			"previous" : "Cooking - Wall Ovens - Style",
+		"Cooking - Wall Ovens - Features 1" : {
+			"next" : "Cooking - Wall Ovens - Features 2",
+			"previous" : "Cooking - Wall Ovens - Orientation",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Features",
 			"thumbnail_current" : "img/icon-features-current.png",
@@ -377,9 +377,9 @@
 				}
 			]
 		},
-		"Cooking - Wall Ovens - Usage" : {
+		"Cooking - Wall Ovens - Features 2" : {
 			"next" : "Cooking - Wall Ovens - Energy",
-			"previous" : "Cooking - Wall Ovens - Cooking Style",
+			"previous" : "Cooking - Wall Ovens - Features 1",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Features",
 			"thumbnail_current" : "img/icon-features-current.png",
@@ -437,7 +437,7 @@
 		},
 		"Cooking - Wall Ovens - Energy" : {
 			"next" : null,
-			"previous" : "Cooking - Wall Ovens - Usage",
+			"previous" : "Cooking - Wall Ovens - Features 2",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Energy",
 			"thumbnail_current" : "img/icon-energy-current.png",
@@ -497,7 +497,7 @@
 			]
 		},
 		"Cooking - Ranges - Energy" : {
-			"next" : "Cooking - Ranges - Style",
+			"next" : "Cooking - Ranges - Style 1",
 			"previous" : "Cooking - Pre-Qualifier 1",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Energy",
@@ -556,7 +556,7 @@
 				}											
 			]
 		},
-		"Cooking - Ranges - Style" : {
+		"Cooking - Ranges - Style 1" : {
 			"next" : "Cooking - Ranges - Capacity",
 			"previous" : "Cooking - Ranges - Energy",
 			"thumbnail_type" : "image",
@@ -614,8 +614,8 @@
 			]
 		},
 		"Cooking - Ranges - Capacity" : {
-			"next" : "Cooking - Ranges - Cooking Style",
-			"previous" : "Cooking - Ranges - Style",
+			"next" : "Cooking - Ranges - Cooking Style 2",
+			"previous" : "Cooking - Ranges - Style 1",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Capacity",
 			"thumbnail_current" : "img/icon-capacity-current.png",
@@ -676,7 +676,7 @@
 				}											
 			]
 		},
-		"Cooking - Ranges - Cooking Style" : {
+		"Cooking - Ranges - Cooking Style 2" : {
 			"next" : "Cooking - Ranges - Convection",
 			"previous" : "Cooking - Ranges - Capacity",
 			"thumbnail_type" : "image",
@@ -736,8 +736,8 @@
 			]
 		},
 		"Cooking - Ranges - Convection" : {
-			"next" : "Cooking - Ranges - Usage",
-			"previous" : "Cooking - Ranges - Cooking Style",
+			"next" : "Cooking - Ranges - Features",
+			"previous" : "Cooking - Ranges - Cooking Style 2",
 			"thumbnail_text" : "Convection",
 			"thumbnail_current" : "img/icon-convection-current.png",
 			"thumbnail_type" : "image",
@@ -802,7 +802,7 @@
 				}
 			]
 		},
-		"Cooking - Ranges - Usage" : {
+		"Cooking - Ranges - Features" : {
 			"next" : "Cooking - Ranges - Gas",
 			"previous" : "Cooking - Ranges - Convection",
 			"thumbnail_type" : "image",
@@ -884,7 +884,7 @@
 		},
 		"Cooking - Ranges - Gas" : {
 			"next" : null,
-			"previous" : "Cooking - Ranges - Usage",
+			"previous" : "Cooking - Ranges - Features",
 			"thumbnail_text" : "Fuel Type",
 			"thumbnail_current" : "img/icon-fueltype-current.png",
 			"thumbnail_type" : "image",
@@ -1609,7 +1609,7 @@
 							"thumbnail" : "img/icon-capacity.png",
 							"thumbnail_current" : "img/icon-capacity-current.png",
 							"value" : 5,
-							"text" : "My guests when<br>entertaining",
+							"text" : "My guests when entertaining",
 							"scoring" : {
 								"powerCold" : 2,
 								"adjustableTempDrawer" : 2,
@@ -2026,7 +2026,7 @@
 							"thumbnail" : "img/icon-capacity.png",
 							"thumbnail_current" : "img/icon-capacity-current.png",
 							"value" : 0,
-							"text" : "0<br />Maybe every other week",
+							"text" : "0 Maybe every other week",
 							"scoring" : {
 								"placeSettings13": 1,
 								"placeSettings14": 1
@@ -2083,7 +2083,7 @@
 							"thumbnail" : "img/icon-capacity.png",
 							"thumbnail_current" : "img/icon-capacity-current.png",
 							"value" : 15,
-							"text" : "15+<br />I've lost count",
+							"text" : "15+ I've lost count",
 							"scoring" : {
 								"placeSettings15": 1
 							}
@@ -2093,7 +2093,7 @@
 			]
 		},
 		"Dishwashers - Cycles" : {
-			"next" : "Dishwashers - Noise 2",
+			"next" : "Dishwashers - Noise 1",
 			"previous" : "Dishwashers - Capacity",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-cycles-current.png",
@@ -2154,9 +2154,9 @@
 				}											
 			]
 		},
-		"Dishwashers - Noise 1" : {
-			"next" : "Dishwashers - Flexibility",
-			"previous" : "Dishwashers - Noise 2",
+		"Dishwashers - Noise 2" : {
+			"next" : "Dishwashers - Orientation",
+			"previous" : "Dishwashers - Noise 1",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
 			"thumbnail_text" : "Noise",
@@ -2212,8 +2212,8 @@
 				}
 			]
 		},
-		"Dishwashers - Noise 2" : {
-			"next" : "Dishwashers - Noise 1",
+		"Dishwashers - Noise 1" : {
+			"next" : "Dishwashers - Noise 2",
 			"previous" : "Dishwashers - Cycles",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-noise-current.png",
@@ -2254,9 +2254,9 @@
 				}
 			]
 		},
-		"Dishwashers - Flexibility" : {
+		"Dishwashers - Orientation" : {
 			"next" : "Dishwashers - Style",
-			"previous" : "Dishwashers - Noise 1",
+			"previous" : "Dishwashers - Noise 2",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-organization-current.png",
 			"thumbnail_text" : "Organization",
@@ -2321,7 +2321,7 @@
 		},
 		"Dishwashers - Style" : {
 			"next" : "Dishwashers - Energy",
-			"previous" : "Dishwashers - Flexibility",
+			"previous" : "Dishwashers - Orientation",
 			"thumbnail_type" : "image",
 			"thumbnail_current" : "img/icon-style-current.png",
 			"thumbnail_text" : "Style",

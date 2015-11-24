@@ -10,6 +10,13 @@ gaw.bind('slider-text', function(element) {
 	return $(element).closest('.slider-wrap').attr('data-text');
 });
 
+gaw.bind('slider-button', function(element) {
+	var a = $(element).closest('.enabled').find('.answer-button-answer').text().trim();
+    var b = $(element).closest('.enabled').find('.answer-button-label').text().trim();
+    
+    return a + " " + b;
+});
+
 gaw.bind('question-title', function(element) {
 	return $(element).closest('.main-content').find('.app-content-main-top-left h2').text();
 });
@@ -38,6 +45,10 @@ gaw.bind('results-appliance-color', function(element) {
 
 gaw.bind('results-sku', function(element) {
 	return $(element).closest('.result-inner').find('.product-sku span').eq(1).text();
+});
+
+gaw.bind('results-name', function(element) {
+	return $(element).closest('.result-inner').find('.product-name').text();
 });
 
 gaw.bind('mobile-results-appliance-selection', function(element) {
