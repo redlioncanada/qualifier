@@ -37,6 +37,13 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('php', function() {
+    var env = 'development';
+    return gulp.src('app/php/**/*.*')
+        .pipe(preprocess({context: {ENV: env}}))
+        .pipe(gulp.dest('build/php'));
+});
+
 // process JS files and return the stream.
 gulp.task('js-prod', function () {
     var env = 'production';
@@ -169,7 +176,7 @@ gulp.task('default', ['frontloaded-tasks'], function() {
     gulp.watch('app/js/**/*.js', ['js', browserSync.reload]);
 });
 
-gulp.task('prod', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'config', 'views-prod'], function() {
+gulp.task('prod', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'config', 'views-prod', 'php'], function() {
     browserSync({
         server: {
             baseDir: "build"
@@ -181,10 +188,9 @@ gulp.task('prod', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'con
     gulp.watch('app/js/**/*.js', ['js', browserSync.reload]);
 });
 
-gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views'], function () {
+gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views', 'php'], function () {
     
     //complete all these tasks before running browsersync
-
 });
 
 
