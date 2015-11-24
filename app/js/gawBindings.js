@@ -12,9 +12,7 @@ gaw.bind('slider-text', function(element) {
 
 gaw.bind('slider-button', function(element) {
 	var a = $(element).closest('.enabled').find('.answer-button-answer').text().trim();
-    var b = $(element).closest('.enabled').find('.answer-button-label').text().trim();
-    
-    return a + " " + b;
+    return a + " Height";
 });
 
 gaw.bind('question-title', function(element) {
