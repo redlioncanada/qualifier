@@ -7,7 +7,18 @@ gaw.bind('device', function(element){
 });
 
 gaw.bind('slider-text', function(element) {
-	return $(element).closest('.slider-wrap').attr('data-text');
+	var p = $(element).closest('.slider-wrap');
+	var indLeft = parseInt($(p).find('.jslider-pointer').eq(0).css('left'));
+	var ret = '';
+
+	$(p).find('.jslider-scale span').each(function(i,v) {
+		var leftVal = parseInt($(v).css('left'));
+		if (indLeft-2 < leftVal && indLeft+2 > leftVal) {
+			ret = $(v).text();
+			return;
+		}
+	});
+	return ret;
 });
 
 gaw.bind('slider-button', function(element) {
@@ -34,7 +45,8 @@ gaw.bind('button-text', function(element) {
 });
 
 gaw.bind('appliance', function(element) {
-	return $(element).closest('.main').find('.main-content').attr('data-appliance');
+	var url = decodeURIComponent(window.location.hash.replace('#/question/', '')).split(' - ');
+	return url.length == 3 ? url[1].trim() : url[0].trim();
 });
 
 gaw.bind('results-appliance-color', function(element) {

@@ -31,10 +31,8 @@ angular.module('App')
     		if ($rootScope.controls.lastLocation == 'results' && q == 'Appliance') return;
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
-    			$rootScope.appliance = 'Landing Page';
     			$location.replace();
     		} else {
-    			$rootScope.appliance = $rootScope.questionsData.question.name.split(' - ')[0];
     			$appstate.store();
     		}
     		gaw.refresh();

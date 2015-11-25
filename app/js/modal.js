@@ -34,7 +34,7 @@ angular.module('App')
       }).error(function(data, status, headers, config) {
           console.log('email post error: '+data);
         });
-      // $modalInstance.close();
+      $modalInstance.close();
     }
 
     $scope.close = function() {
