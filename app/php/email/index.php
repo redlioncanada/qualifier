@@ -25,8 +25,8 @@
             try {
                 $mandrill = new Mandrill($api_key);
                 $message = array(
-                    'html' => null,
-                    'text' => $_POST["message"],
+                    'html' => $_POST["message"],
+                    'text' => null,
                     'subject' => $_POST["subject"],
                     'from_email' => 'qualifier@maytag.ca',
                     'from_name' => $_POST["name"],

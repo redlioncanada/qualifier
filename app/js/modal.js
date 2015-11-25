@@ -4,7 +4,7 @@ angular.module('App')
   .controller('ModalCtrl', ['$http','$modalInstance', 'appliance', 'link', 'fakelink', '$scope', '$rootScope', '$timeout', function ($http, $modalInstance, appliance, link, fakelink, $scope, $rootScope, $timeout) {
 
     var apptext = $rootScope.brandData.apptext;
-    var applianceType = appliance.appliance.slice(-1) == 's' ? appliance.appliance.slice(0, -1) : appliance.appliance;
+    var applianceType = appliance;
     applianceType = applianceType.toLowerCase();
 
     $timeout(function() {
@@ -13,7 +13,7 @@ angular.module('App')
     });
 
     $scope.submit = function () {
-      $scope.email.message = $scope.email.message.replace(fakelink, link);
+      $scope.email.message = $scope.email.message.replace(fakelink, "<a href='"+link+"'>"+fakelink+"</a>");
       var message = $.param({address: $scope.email.address, message: $scope.email.message, name: $scope.email.name, subject: $scope.email.subject});
 
       $http({

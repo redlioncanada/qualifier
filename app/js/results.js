@@ -110,7 +110,7 @@ angular.module('App')
       controller: 'ModalCtrl',
       resolve: {
         appliance: function () {
-          return $scope.bestMatch;
+          return $scope.getAppliance();
         },
         link: function() {
           return $appstate.host() + $appstate.generateEmailURL()
