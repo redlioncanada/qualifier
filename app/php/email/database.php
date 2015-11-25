@@ -18,10 +18,10 @@
 
     if (gettype($requests) == 'object') {
       if (property_exists($requests, 'requests_this_hour') && property_exists($requests, 'requests_this_minute')) {
-        $this->SetRequests($ip,$requests->requests_this_hour+1,$requests->requests_this_minute+1);
         
         if ($requests->requests_this_hour < $this->max_requests_per_hour && $requests->requests_this_minute < $this->max_requests_per_minute) {
           //success
+          $this->SetRequests($ip,$requests->requests_this_hour+1,$requests->requests_this_minute+1);
           return false;
         } else {
           //limit reached
@@ -54,6 +54,7 @@
       $stmt->setFetchMode(PDO::FETCH_OBJ);
       $stmt->execute(array(':ip'=>$ip));
       $ret = false;
+
       while($row = $stmt->fetch()) {
         $ret = $row;
         break;
