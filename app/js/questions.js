@@ -4,9 +4,9 @@ angular.module('App')
   .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams, $appstate) {
 
   	$rootScope.$on('resize::resize', function() {
-	    if (window.innerWidth < 1024){
+	    if (window.innerWidth <= 1024){
 	        $scope.resizeElements();
-	    } else if (window.innerWidth >= 1024) {
+	    } else if (window.innerWidth > 1024) {
 	    	//reset header height to it's css value
             $('.app-content-main-top').css('height', '');
             $('.slidey-wrap-all').css('height', '');
@@ -14,9 +14,9 @@ angular.module('App')
 	});
 
 	$interval(function(){
-		if (window.innerWidth < 1024) {
+		if (window.innerWidth <= 1024) {
 			$scope.resizeElements();
-		} else if (window.innerWidth >= 1024) {
+		} else if (window.innerWidth > 1024) {
 	    	//reset header height to it's css value
             $('.app-content-main-top').css('height', '');
             $('.slidey-wrap-all').css('height', '');
@@ -349,7 +349,7 @@ angular.module('App')
                 c = $('.slidey.active').height();
                 if (c < 620) {
                     var minHeight = 620;
-                    $('.slidey.active').css('paddingTop', (minHeight-c)/2);
+                    $('.slidey.active').css('paddingTop', parseInt((minHeight-c)/2));
                     c = minHeight;
                 }
             }
@@ -359,7 +359,7 @@ angular.module('App')
                 c = $('.slidey.active').height();
                 if (c < 340) {
                     var minHeight = 340;
-                    $('.slidey.active').css('paddingTop', (minHeight-c)/2);
+                    $('.slidey.active').css('paddingTop', parseInt((minHeight-c)/2));
                     c = minHeight;
                 }
             }
