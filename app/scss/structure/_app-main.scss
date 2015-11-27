@@ -175,8 +175,8 @@ div.mobile-app-nav-arrows {
 	height: 25px;
 
 	.btn-next, .btn-prev {bottom: initial;}
-	.btn-next {right: 35px;}
-	.btn-prev {left: 35px;}
+	.btn-next {right: 35px; height: 80px; width: 80px;}
+	.btn-prev {left: 35px; height: 80px; width: 80px;}
 }
 .bottom-nav-wrap {
 	max-width: 800px;
@@ -803,7 +803,7 @@ a.answer-box.picture-4 {
 			height: 100%;
 
 			.jslider-pointer {
-				left: -40%;
+				left: -20%;
 			}
 
 			.jslider-value {
@@ -1398,6 +1398,8 @@ a.answer-box.picture-4 {
             left: 40px;
 		}
 	}
+    .btn-next {height: 40px !important; width: 40px !important;}
+	.btn-prev {height: 40px !important; width: 40px !important;}
 }
 
 .print-page {
