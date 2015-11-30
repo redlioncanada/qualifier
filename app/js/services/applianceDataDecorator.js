@@ -11,6 +11,14 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
         angular.forEach( data, function (item, key) { 
             item.price = parseFloat(item.colours[0].prices.CAD);
 
+            if (item.width) {
+              item["width"+Math.round(item.width)] = true;
+            }
+
+            if (item.height) {
+              item["height"+Math.round(item.height)] = true;
+            }
+
               if (item.appliance == "Washers") {
 
                 for (var i in item.colours) {
@@ -44,37 +52,6 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                   item.quiet = true
                 }
               } else if (item.appliance == "Fridges") {
-                if (item.height <= 66) {
-                  item["height66"] = true
-                } else if (item.height <= 67) {
-                  item["height67"] = true
-                } else if (item.height <= 68) {
-                  item["height68"] = true
-                } else if (item.height <= 69) {
-                  item["height69"] = true
-                } else if (item.height <= 70) {
-                  item["height70"] = true
-                } else if (item.height <= 71) {
-                  item["height71"] = true
-                }
-
-                
-                if (item.width <= 30) {
-                  item["width30"] = true
-                } else if (item.width <= 31) {
-                  item["width31"] = true
-                } else if (item.width <= 32) {
-                  item["width32"] = true
-                } else if (item.width <= 33) {
-                  item["width33"] = true
-                } else if (item.width <= 34) {
-                  item["width34"] = true
-                } else if (item.width <= 35) {
-                  item["width35"] = true
-                } else if (item.width <= 36) {
-                  item["width36"] = true
-                }
-
                 if (item.capacity <= 20) {
                   item["smallCapacity"] = true
                 } else if (item.capacity <= 22) {
@@ -83,12 +60,7 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                   item["largeCapacity"] = true
                 }
               } else if (item.appliance == "Cooking") {
-                if (item.type == "Ovens") {
-                  if (item.width <= 27) {
-                    item["width27"] = true
-                  } else if (item.width <= 30) {
-                    item["width30"] = true
-                  } 
+                  //no custom props
                 } 
                 else if (item.type == "Ranges") {
                   if (parseFloat(item.capacity) >= 6.7) {
