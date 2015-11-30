@@ -76,7 +76,6 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                     item.mediumCapacity = true
                   }                    
                 }
-              } 
         })
 		  return $filter('orderBy')(data, '-price');
 	};
