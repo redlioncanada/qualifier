@@ -119,77 +119,7 @@ angular.module('App')
 
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
-		$rootScope.questionsData.currentScore = {	
-  			"type" : false,
-			"width" : 0,
-			"height" : 0,
-			"capacity" : 0,
-			"single" : false,
-			"double" : false,
-			"combination" : false,
-			"trueConvection" : false,
-			"soundGuard" : false,
-			"vibrationControl" : false,
-			"audioLevel" : false,
-			"frontLoad" : false,
-			"topLoad" : false,
-			"stacked" : false,
-			"rapidWash" : false,
-			"rapidDry" : false,
-			"cycleOptions" : false,
-			"sensorDry" : false,
-			"wrinkleControl" : false,
-			"steamEnhanced" : false,
-			"placeSettings13" : 0,
-			"placeSettings14" : 0,
-			"placeSettings15" : 0,
-			"decibels" : 0,
-			"quiet" : 0,
-			"premiumAdjusters" : false,
-			"fid" : false,
-			"console" : false,
-			"powerCold" : false,
-			"adjustableTempDrawer" : false,
-			"topMount" : false,
-			"bottomMount" : false,
-			"frenchDoor" : false,
-			"indoorDispenser" : false,
-			"counterDepth" : false,
-			"freshFlow" : false,
-			"tempControlPantry" : false,
-			"dualCool" : false,
-			"gas" : false,
-			"maxCapacity" : false,
-			"warmingDrawer" : false,
-			"electric" : false,
-			"powerBurner" : false,
-			"powerPreheat" : false,
-			"frontControl" : 0,
-			"rearControl" : 0,
-			"smallCapacity" : 0,
-			"mediumCapacity" : 0,
-			"largeCapacity" : 0,
-			"largerCapacity" : 0,
-			"largestCapacity" : 0,
-			"width27" : 0,
-			"width28" : 0,
-			"width29" : 0,
-			"width30" : 0,
-			"width31" : 0,
-			"width32" : 0,
-			"width33" : 0,
-			"width34" : 0,			
-			"width35" : 0,
-			"width36" : 0,
-			"height66" : 0,
-			"height67" : 0,
-			"height68" : 0,
-			"height69" : 0,
-			"height70" : 0,
-			"height71" : 0
-
-		}
-
+		$rootScope.questionsData.currentScore = {};
 
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
@@ -207,8 +137,12 @@ angular.module('App')
 									$rootScope.questionsData.currentScore[scores] = null
 								} else if (typeof s == "string") {
 									$rootScope.questionsData.currentScore[scores] = s
-								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+								} else if (!isNaN(s)) {
+									if (scores in $rootScope.questionsData.currentScore) {
+										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+									} else {
+										$rootScope.questionsData.currentScore[scores] = s
+									}
 								}
 							}
 						} else if (isNaN(parseInt(a.answer)) == false) {
@@ -230,8 +164,12 @@ angular.module('App')
 									$rootScope.questionsData.currentScore[scores] = null
 								} else if (typeof s == "string") {
 									$rootScope.questionsData.currentScore[scores] = s * t
-								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * t)
+								} else if (!isNaN(s)) {
+									if (scores in $rootScope.questionsData.currentScore) {
+										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s*t
+									} else {
+										$rootScope.questionsData.currentScore[scores] = s*t
+									}
 								}
 							}									
 						}
@@ -253,8 +191,12 @@ angular.module('App')
 										$rootScope.questionsData.currentScore[scores] = null
 									} else if (typeof s == "string") {
 										$rootScope.questionsData.currentScore[scores] = s
-									} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+									} else if (!isNaN(s)) {
+										if (scores in $rootScope.questionsData.currentScore) {
+											$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+										} else {
+											$rootScope.questionsData.currentScore[scores] = s
+										}
 									}
 								}
 							}

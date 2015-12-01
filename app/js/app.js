@@ -287,6 +287,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
           $resource(host+"/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = $dataDecorator(res.products);
                 $appstate.restore();
+                $tests.init($rootScope.appliances,$rootScope.brandData.questions);
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
