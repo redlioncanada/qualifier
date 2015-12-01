@@ -26,7 +26,7 @@
 		"emailNameTitle" : "To:",
 		"emailNamePlaceholder" : "Your name",
 		"emailAddressTitle" : "From:",
-		"emailAddressPlaceholder" : "yourfriend@gmail.com",
+		"emailAddressPlaceholder" : "yourfriend@email.com",
 		"emailSubject" : "I found the perfect {{appliance}} and wanted to share with you",
 		"emailMessage" : "Finding the right appliance is hard. But I used {{brand}}'s new tool to answer a few simple questions and found the perfect {{appliance}} to fit my lifestyle. I wanted to share my results with you and also the link so you can explore, too!\r\n\r\nTry it for yourself here: {{fakelink}}",
 		"emailMessagePlaceholder" : "Enter a message",
@@ -218,7 +218,7 @@
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 1,
 							"scoring" : {
-								"width27" : 5,
+								"width27" : 10,
 								"width28" : -30,
 								"width29" : -30,
 								"width30" : -30
@@ -229,7 +229,10 @@
 							"thumbnail_current" : "img/icon-size-current.png",
 							"value" : 2,
 							"scoring" : {
-								"width30" : 5
+                                "width27" : -30,
+								"width28" : -30,
+								"width29" : -30,
+								"width30" : 10
 							}
 						}
 					}								
@@ -265,7 +268,7 @@
 							"image" : "img/Cooking-Q2-single.png",
                             "image_alt" : "Wall Oven Style - Single Oven",
 							"scoring" : {
-								"single" : 1
+								"single" : 5
 							},
 							"order" : 1
 						},
@@ -277,7 +280,7 @@
 							"image" : "img/Cooking-Q2-combo.png",
                             "image_alt" : "Wall Oven Style - Combo Oven",
 							"scoring" : {
-								"combination" : 1
+								"combination" : 5
 							},
 							"order" : 2
 						},
@@ -289,7 +292,7 @@
 							"image" : "img/Cooking-Q2-double.png",
                             "image_alt" : "Wall Oven Style - Double Oven",
 							"scoring" : {
-								"double" : 1
+								"double" : 5
 							},
 							"order" : 3
 						},
@@ -398,7 +401,7 @@
 							"text" : "Reheat leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
-								"warmingDrawer" : 1
+								"powerPreheat" : 1
 							},
 							"order" : 1
 						},
@@ -408,6 +411,8 @@
 							"text" : "Cook meals for my busy family",
 							"value" : "multiple meals",
 							"scoring" : {
+                                "double": 1,
+                                "powerPreheat": 1
 							},
 							"order" : 2
 						},
@@ -417,7 +422,7 @@
 							"text" : "Help me host parties and cook multi-course meals",
 							"value" : "host parties",
 							"scoring" : {
-								"double" : 1
+								"combination" : 1
 							},
 							"order" : 3
 						},
@@ -427,7 +432,7 @@
 							"text" : "Bake, bake, and bake some more",
 							"value" : "perfect",
 							"scoring" : {
-								"gas" : 1
+								"trueConvection" : 1
 							},
 							"order" : 4
 						}
@@ -579,8 +584,7 @@
 							"text" : "Front Control",
 							"value" : "FrontControl",
 							"scoring" : {
-								"frontControl": 10,
-								"rearControl": -30
+								"frontControl": 15
 							},
 							"order" : 1
 						},
@@ -592,8 +596,7 @@
 							"text" : "Rear Control",
 							"value" : "RearControl",
 							"scoring" : {
-								"rearControl": 10,
-								"frontControl": -30
+								"rearControl": 15
 							},
 							"order" : 2
 						},
@@ -605,7 +608,7 @@
 							"text" : "No Preference",
 							"value" : "No Preference",
 							"scoring" : {
-								"frontControl": 10
+								"frontControl": 5
 							},
 							"order" : 3
 						}
@@ -660,7 +663,8 @@
 							"value" : 2,
 							"text" : "Few times a year",
 							"scoring" : {
-								"largeCapacity" : 1
+								"largeCapacity" : 1,
+                                "double": 1
 							}
 						},
 						"3" : {
@@ -669,7 +673,8 @@
 							"value" : 3,
 							"text" : "Very Often",
 							"scoring" : {
-								"largestCapacity" : 1
+								"largestCapacity" : 1,
+                                "double": 1
 							}
 						}
 					}
@@ -697,7 +702,7 @@
 							"text" : "From Sunday roasts to pasta night, my family depends on me to make dinner",
 							"value" : "family",
 							"scoring" : {
-								"maxCapacity" : 1
+								"powerPreheat" : 1
 							},
 							"order" : 1
 						},
@@ -707,7 +712,10 @@
 							"text" : "From birthday parties to family holidays, I need a range that can handle cakes and feasts for a crowd",
 							"value" : "crowd",
 							"scoring" : {
-								"gas" : 1
+								"gas" : 1,
+                                "double": 1,
+                                "warmingDrawer": 1,
+                                "maxCapacity": 1
 							},
 							"order" : 2
 						},
@@ -717,7 +725,8 @@
 							"text" : "Because I’m always trying new dishes for my family, I need a range that can handle variety",
 							"value" : "variety",
 							"scoring" : {
-								"maxCapacity" : 1
+								"powerPreheat" : 1,
+                                "double": 1
 							},
 							"order" : 3
 						},
@@ -823,7 +832,6 @@
 							"text" : "Reheat leftovers and frozen meals",
 							"value" : "reheat",
 							"scoring" : {
-								"warmingDrawer" : 1,
 								"powerPreheat" : 1
 							},
 							"order" : 1
@@ -907,6 +915,10 @@
 							"thumbnail" : "img/icon-fueltype.png",
 							"thumbnail_current" : "img/icon-fueltype-current.png",
 							"value" : "yes",
+                            "scoring": {
+                                "gas": 3,
+                                "electric": -10                         
+                            },
 							"order" : 1
 						},
 						{
@@ -1025,7 +1037,7 @@
 							"value" : 2,
 							"text" : "2",
 							"scoring" : {
-								"smallCapacity" : 1
+								"smallCapacity" : 5
 							}
 						},
 						"3" : {
@@ -1034,7 +1046,7 @@
 							"value" : 3,
 							"text" : "3",
 							"scoring" : {
-								"mediumCapacity" : 1
+								"mediumCapacity" : 5
 							}
 						},
 						"4" : {
@@ -1043,7 +1055,7 @@
 							"value" : 4,
 							"text" : "4",
 							"scoring" : {
-								"largeCapacity" : 1
+								"largeCapacity" : 5
 							}
 						},
 						"5" : {
@@ -1052,7 +1064,7 @@
 							"value" : 5,
 							"text" : "5",
 							"scoring" : {
-								"largerCapacity" : 1
+								"largerCapacity" : 5
 							}
 						},
 						"6" : {
@@ -1061,7 +1073,7 @@
 							"value" : 6,
 							"text" : "6+",
 							"scoring" : {
-								"largestCapacity" : 1
+								"largestCapacity" : 5
 							}
 						}
 					}
@@ -1089,8 +1101,7 @@
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
 							"scoring" : {
-								"soundGuard" : 3,
-							 	"vibrationControl" : 3
+							 	"vibrationControl" : 5
 							},
 							"order" : 1
 						},
@@ -1100,8 +1111,7 @@
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
 							"scoring" : {
-								"soundGuard" : 2,
-							 	"vibrationControl" : 2
+							 	"vibrationControl" : 3
 							},
 							"order" : 2
 						},
@@ -1111,7 +1121,6 @@
 							"thumbnail" : "img/icon-noise.png",
 							"thumbnail_current" : "img/icon-noise-current.png",
 							"scoring" : {
-								"soundGuard" : 1,
 							 	"vibrationControl" : 1
 							},
 							"order" : 4
@@ -1152,8 +1161,8 @@
 							"text" : "Stacked",
 							"value" : "Stacked",
 							"scoring" : {
-								 "frontLoad" : 3,
-								 "stacked" : 1
+								 "frontLoad" : 10,
+								 "stacked" : 5
 							},
 							"order" : 1
 						},
@@ -1165,7 +1174,7 @@
 							"text" : "Side-By-Side",
 							"value" : "Side-By-Side",
 							"scoring" : {
-								"topLoad" : 3
+								"topLoad" : 10
 							},
 							"order" : 2
 						},
@@ -1177,7 +1186,7 @@
 							"text" : "No Preference",
 							"value" : "No Preference",
 							"scoring" : {
-								"topLoad" : 3
+								"topLoad" : 5
 							},
 							"order" : 3
 						}
@@ -1206,8 +1215,7 @@
 							"text" : "Yes, we are always on the go",
 							"value" : "yes",
 							"scoring" : {
- 								"rapidWash" : 3,
- 								"rapidDry" : 3
+ 								"rapidWash" : 3
 							},
 							"order" : 1
 						},
@@ -1217,8 +1225,7 @@
 							"text" : "Sometimes between school and practice",
 							"value" : "sometimes",
 							"scoring" : {
- 								"rapidWash" : 2,
- 								"rapidDry" : 2
+ 								"rapidWash" : 2
 							},
 							"order" : 2
 						},
@@ -1228,8 +1235,7 @@
 							"text" : "Only when there is an unexpected spill",
 							"value" : "not often",
 							"scoring" : {
- 								"rapidWash" : 1,
- 								"rapidDry" : 1
+ 								"rapidWash" : 1
 							},
 							"order" : 3
 						},
@@ -1363,6 +1369,7 @@
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"text" : "Somewhat a concern",
 							"scoring" : {
+                                "energyStar": 1
 							}
 						},
 						"2" : {
@@ -1371,6 +1378,7 @@
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"text" : "Important",
 							"scoring" : {
+                                "energyStar": 2
 							}
 						},
 						"3" : {
@@ -1379,6 +1387,7 @@
 							"thumbnail_current" : "img/icon-energy-current.png",
 							"text" : "Very Important",
 							"scoring" : {
+                                "energyStar": 3
 							}
 						}
 					}
@@ -1424,13 +1433,13 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
-								"width30" : 1,
-								"width31" : -30,
-								"width32" : -30,
-								"width33" : -30,
-								"width34" : -30,
-								"width35" : -30,
-								"width36" : -30
+								"width30" : 10,
+								"width31" : -50,
+								"width32" : -50,
+								"width33" : -50,
+								"width34" : -50,
+								"width35" : -50,
+								"width36" : -50
 							}
 						},
 						"2" : {
@@ -1439,13 +1448,13 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
-								"width30" : -30,
-								"width31" : 1,
-								"width32" : 1,
-								"width33" : 1,
-								"width34" : -30,
-								"width35" : -30,
-								"width36" : -30
+								"width30" : -50,
+								"width31" : 10,
+								"width32" : 10,
+								"width33" : 10,
+								"width34" : -50,
+								"width35" : -50,
+								"width36" : -50
 							}
 						},
 						"3" : {
@@ -1454,13 +1463,13 @@
 							"thumbnail" : "img/icon-size.png",
 							"thumbnail_current" : "img/icon-size-current.png",
 							"scoring" : {
-								"width30" : -30,
-								"width31" : -30,
-								"width32" : -30,
-								"width33" : -30,
-								"width34" : 1,
-								"width35" : 1,
-								"width36" : 1
+								"width30" : -50,
+								"width31" : -50,
+								"width32" : -50,
+								"width33" : -50,
+								"width34" : 10,
+								"width35" : 10,
+								"width36" : 10
 							}
 						}
 					}								
@@ -1484,7 +1493,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : 1,
+                                 "height66" : 5,
                                  "height67" : -30,
                                  "height68" : -30,
                                  "height69" : -30,
@@ -1499,7 +1508,7 @@
                             "enabledWhen" : [0,1,2],
                             "scoring" : {
                                  "height66" : -30,
-                                 "height67" : 1,
+                                 "height67" : 5,
                                  "height68" : -30,
                                  "height69" : -30,
                                  "height70" : -30,
@@ -1514,8 +1523,8 @@
                             "scoring" : {
                                  "height66" : -30,
                                  "height67" : -30,
-                                 "height68" : 1,
-                                 "height69" : 1,
+                                 "height68" : 5,
+                                 "height69" : 5,
                                  "height70" : -30,
                                  "height71" : -30
                             }
@@ -1530,8 +1539,8 @@
                                  "height67" : -30,
                                  "height68" : -30,
                                  "height69" : -30,
-                                 "height70" : 1,
-                                 "height71" : 1
+                                 "height70" : 5,
+                                 "height71" : 5
                             }
                         }
                     }                               
@@ -1574,6 +1583,7 @@
 							"value" : 1,
 							"text" : "Myself",
 							"scoring" : {
+                                "smallCapacity" : 5
 							}
 						},
 						"2" : {
@@ -1582,6 +1592,7 @@
 							"value" : 2,
 							"text" : "Me and my better half",
 							"scoring" : {
+                                "smallCapacity" : 5
 							}
 						},
 						"3" : {
@@ -1591,7 +1602,7 @@
 							"text" : "My family",
 							"scoring" : {
 								"powerCold" : 1,
-								"smallCapacity" : 1
+								"smallCapacity" : 5
 							}
 						},
 						"4" : {
@@ -1600,9 +1611,9 @@
 							"value" : 4,
 							"text" : "My large family",
 							"scoring" : {
-								"powerCold" : 1,
+								"powerCold" : 2,
 								"adjustableTempDrawer" : 1,
-								"mediumCapacity" : 1
+								"mediumCapacity" : 5
 							}
 						},
 						"5" : {
@@ -1611,9 +1622,9 @@
 							"value" : 5,
 							"text" : "My guests when entertaining",
 							"scoring" : {
-								"powerCold" : 2,
+								"powerCold" : 3,
 								"adjustableTempDrawer" : 2,
-								"largeCapactiy" : 1
+								"largeCapactiy" : 5
 							}
 						}
 					}
@@ -1664,6 +1675,7 @@
 							"value" : "multiple meals",
 							"scoring" : {
 								"frenchDoor" : 1,
+                                "adjustableTempDrawer" : 1,
 								"powerCold" : 1
 							},
 							"order" : 3
@@ -1675,6 +1687,7 @@
 							"thumbnail_current" : "img/icon-organization-current.png",
 							"scoring" : {
 								"frenchDoor" : 1,
+                                "adjustableTempDrawer" : 1,
 								"powerCold" : 1
 							},
 							"order" : 4
@@ -1704,7 +1717,7 @@
 							"text" : "Yes - it's great because we love water and ice dispensed from our fridge",
 							"value" : "yes",
 							"scoring" : {
- 								"indoorDispenser" : 3
+ 								"indoorDispenser" : 10
 							},
 							"order" : 1
 						},
@@ -1714,7 +1727,7 @@
 							"text" : "No - but we would consider installing one so our fridge could dispense water and ice",
 							"value" : "nobutyes",
 							"scoring" : {
- 								"indoorDispenser" : 1
+ 								"indoorDispenser" : 5
 							},
 							"order" : 2
 						},
@@ -1825,7 +1838,7 @@
 							"text" : "Always - home aesthetics are very important to me",
 							"value" : 0,
 							"scoring" : {
-								"counterDepth" : 2
+								"counterDepth" : 10
 							},
 							"order" : 1
 						},
@@ -1835,7 +1848,7 @@
 							"text" : "Sometimes - I like to balance form and function",
 							"value" : 1,
 							"scoring" : {
-								"counterDepth" : 1
+								"counterDepth" : 5
 							},
 							"order" : 2
 						},
@@ -1874,7 +1887,7 @@
 							"value" : "farmers market",
 							"scoring" : {
  								"freshFlowProducePreserver" : 2,
- 								"tempControlPantry" : 1,
+ 								"tempControlPantry" : 2,
  								"dualCool" : 2
 							},
 							"order" : 1
@@ -1885,6 +1898,7 @@
 							"text" : "I go aisle-to-aisle at the grocery store and always fill my cart",
 							"value" : "full grocery store",
 							"scoring" : {
+                                "dualCool": 1
 							},
 							"order" : 2
 						},
@@ -1894,7 +1908,6 @@
 							"text" : "I visit the grocery store but stick to the perimeter to get the basics",
 							"value" : "basics",
 							"scoring" : {
-
 								"freshFlowProducePreserver" : 1,
 								"tempControlPantry" : 1, 
 								"dualCool" : 1
@@ -2028,7 +2041,7 @@
 							"value" : 0,
 							"text" : "0 Maybe every other week",
 							"scoring" : {
-								"placeSettings13": 1,
+								"placeSettings13": 3,
 								"placeSettings14": 1
 							}
 						},
@@ -2038,7 +2051,7 @@
 							"value" : 2.5,
 							"text" : "2.5",
 							"scoring" : {
-								"placeSettings13": 1,
+								"placeSettings13": 3,
 								"placeSettings14": 1
 							}
 						},
@@ -2048,7 +2061,8 @@
 							"value" : 5,
 							"text" : "5",
 							"scoring" : {
-								"placeSettings14": 1
+								"placeSettings13": 1,
+								"placeSettings14": 3
 							}
 						},
 						"7" : {
@@ -2057,7 +2071,8 @@
 							"value" : 7.5,
 							"text" : "7.5",
 							"scoring" : {
-								"placeSettings14": 1
+								"placeSettings14": 1,
+								"placeSettings14": 3
 							}
 						},
 						"10" : {
@@ -2067,7 +2082,7 @@
 							"text" : "10",
 							"scoring" : {
 								"placeSettings14": 1,
-								"placeSettings15": 1
+								"placeSettings15": 3
 							}
 						},
 						"12" : {
@@ -2076,7 +2091,8 @@
 							"value" : 12.5,
 							"text" : "12.5",
 							"scoring" : {
-								"placeSettings15": 1
+								"placeSettings15": 1,
+								"placeSettings15": 3
 							}
 						},
 						"15" : {
@@ -2085,7 +2101,7 @@
 							"value" : 15,
 							"text" : "15+ I've lost count",
 							"scoring" : {
-								"placeSettings15": 1
+								"placeSettings15": 3
 							}
 						}
 					}
@@ -2185,7 +2201,7 @@
 							"text" : "After I get my kids organized and into bed",
 							"value" : "night",
 							"scoring" : {
-								"quiet" : 1
+								"quiet" : 3
 							},
 							"order" : 2
 						},
@@ -2204,7 +2220,7 @@
 							"text" : "Only during off-peak hours",
 							"value" : "offpeak",
 							"scoring" : {
-								"quiet" : 1
+								"quiet" : 3
 							},
 							"order" : 4
 						}
@@ -2235,7 +2251,7 @@
                             "image_alt" : "Dishwasher -  Yes Open Concept",
 							"value" : "yes",
 							"scoring" : {
-								 "quiet" : 1
+								 "quiet" : 2
 							},
 							"order" : 1
 						},
@@ -2342,8 +2358,8 @@
 							"image" : "img/Dishwasher-Q6-traditional.jpg",
                             "image_alt" : "Dishwasher -  Traditional",
 							"scoring" : {
-								"frontConsole" : 10,
-								"FID" : -30
+								"frontConsole" : 5,
+								"FID" : -5
 							},
 							"order" : 1
 						},
@@ -2355,8 +2371,8 @@
 							"image" : "img/Dishwasher-Q6-commercial.jpg",
                             "image_alt" : "Dishwasher -  Commercial",
 							"scoring" : {	
-								"frontConsole" : -30,
-								"FID" : 10
+								"frontConsole" : -5,
+								"FID" : 15
 							},
 							"order" : 2
 						},
@@ -2368,8 +2384,6 @@
 							"image" : "img/Dishwasher-Q6-nopreference.jpg",
                             "image_alt" : "Dishwasher -  No Preference",
 							"scoring" : {
-								"frontConsole" : -10,
-								"FID" : 10
 							},
 							"order" : 3
 						}
