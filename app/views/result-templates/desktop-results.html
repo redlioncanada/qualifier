@@ -53,8 +53,9 @@
 								<div class="sales-feature-additional-wrapper">
 									<div ng-repeat="sf in a.salesFeatures | orderBy:'-score' | after:3 | limitTo:6"> 
 										<h4 class="sales-feature-additional">
-											<img src="img/results-checkmark.png">
-											<span ng-bind-html="sf.headline"></span>
+											<img ng-if="!isExtraFeature(index,sf,a)" src="img/results-checkmark.png">
+											<img ng-if="isExtraFeature(index,sf,a)" src="img/results-plus.png">
+											<span ng-bind-html="sf.headline" ng-class="{bold: isExtraFeature(index,sf,a)}"></span>
 										</h4>
 									</div>
 								</div>
