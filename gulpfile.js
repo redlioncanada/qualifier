@@ -96,9 +96,12 @@ gulp.task('views', function() {
 
     // Get our index.html
     gulp.src('app/index.html')
-    .pipe(preprocess({context: {ENV: env}}))
+    .pipe(preprocess({context: {ENV: env, lang: 'en'}}))
     // And put it in the build folder
     .pipe(gulp.dest('build/'))
+
+    gulp.src('app/index.html')
+    .pipe(preprocess({context: {ENV: env, lang: 'fr'}}))
     .pipe(replace('footer.html', 'footer_fr.html'))
     .pipe(replace('header.html', 'header_fr.html'))
     .pipe(replace('"en"', '"fr"'))
@@ -121,9 +124,12 @@ gulp.task('views-prod', function() {
 
     // Get our index.html
     gulp.src('app/index.html')
-    .pipe(preprocess({context: {ENV: env}}))
+    .pipe(preprocess({context: {ENV: env, lang: 'en'}}))
     // And put it in the build folder
     .pipe(gulp.dest('build/'))
+
+    gulp.src('app/index.html')
+    .pipe(preprocess({context: {ENV: env, lang: 'fr'}}))
     .pipe(replace('footer.html', 'footer_fr.html'))
     .pipe(replace('header.html', 'header_fr.html'))
     .pipe(replace('"en"', '"fr"'))

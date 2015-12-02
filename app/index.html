@@ -23,19 +23,35 @@
         <link rel="stylesheet" href="./css/qualifier-app.css">
         <link rel="stylesheet" href="./css/maytag.css">
         
+        <!-- @if lang="en" -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="FIND YOUR PERFECT APPLIANCE">
         <meta name="twitter:description" content="My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and need.">
-        <meta name="twitter:url" content="http://mymaytag.wpc-stage.com">
-        <meta name="twitter:image" content="http://mymaytag.wpc-stage.com/social/img/social.jpg">
+        <meta name="twitter:url" content="http://findmy.maytag.ca">
+        <meta name="twitter:image" content="http://findmy.maytag.ca/social/img/social.jpg">
 
-        <!--
+        <meta property="og:image" content="http://findmy.maytag.ca/social/img/social.jpg"/>
+        <meta property="og:image:width" content="526"/>
+        <meta property="og:image:height" content="274"/>
+        <meta property="og:title" content="FIND YOUR PERFECT APPLIANCE"/>
+        <meta property="og:url" content="http://findmy.maytag.ca"/>
+        <meta property="og:description" content="My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and features you need."/>
+        <!-- @endif -->
+
+        <!-- @if lang="fr" -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="FIND YOUR PERFECT APPLIANCE(fr)">
-        <meta name="twitter:description" content="(fr)My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and need.">
-        <meta name="twitter:url" content="http://mymaytag.wpc-stage.com">
-        <meta name="twitter:image" content="http://mymaytag.wpc-stage.com/social/img/social-fr.jpg">
-        -->
+        <meta name="twitter:title" content="TROUVEZ VOTRE ÉLECTROMÉNAGER IDÉAL">
+        <meta name="twitter:description" content="Mon Whirlpool simplifie le magasinage d’électroménagers. Cliquez pour découvrir les fonctions que vous voulez et dont vous avez besoin.">
+        <meta name="twitter:url" content="http://findmy.maytag.ca/fr">
+        <meta name="twitter:image" content="http://findmy.maytag.ca/social/img/social-fr.jpg">
+
+        <meta property="og:image" content="http://findmy.maytag.ca/social/img/social-fr.jpg"/>
+        <meta property="og:image:width" content="526"/>
+        <meta property="og:image:height" content="274"/>
+        <meta property="og:title" content="TROUVEZ VOTRE ÉLECTROMÉNAGER IDÉAL"/>
+        <meta property="og:url" content="http://findmy.maytag.ca/fr"/>
+        <meta property="og:description" content="Mon Whirlpool élimine les approximations liées magasinage d'électroménagers. Cliquez pour découvrir les produits que vous voulez avec les fonctions dont vous avez besoin."/>
+        <!-- @endif -->
 
         <!-- @if ENV='development' -->
         <link rel="stylesheet" href="./css/development.css">
@@ -66,7 +82,6 @@
         <script src="./components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="./components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="./components/angular-cookies/angular-cookies.js"></script>
-        <script src="./components/angular-socialshare/angular-socialshare.js"></script>
         <script src="./components/angular-sanitize/angular-sanitize.js"></script>
         <script src="./components/angular-touch/angular-touch.js"></script>
         <script src="./components/angular-route/angular-route.js"></script>
@@ -79,8 +94,16 @@
         <script src="./components/ng-sortable/dist/ng-sortable.js"></script>
         <script src="./components/angular-animate/angular-animate.min.js"></script>
         <script src="http://platform.twitter.com/widgets.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          window.fbAsyncInit = function() {FB.init({appId : '900832603286910', xfbml : true, version : 'v2.5'});};
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
