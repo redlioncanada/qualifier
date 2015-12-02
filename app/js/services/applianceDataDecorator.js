@@ -31,17 +31,13 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
 
                   if (parseFloat(item.capacity) >= 6.1) {
                     item.largestCapacity = true
-                  } 
-                  if (parseFloat(item.capacity) >= 5.2) {
+                  } else if (parseFloat(item.capacity) >= 5.2) {
                     item.largerCapacity = true
-                  }
-                  if (parseFloat(item.capacity) >= 5) {
+                  } else if (parseFloat(item.capacity) >= 5) {
                     item.largeCapacity = true
-                  }
-                  if (parseFloat(item.capacity) >= 4.8) {
+                  } else if (parseFloat(item.capacity) >= 4.8) {
                     item.mediumCapacity = true
-                  }                    
-                  if (parseFloat(item.capacity) >= 4.2) {
+                  } else if (parseFloat(item.capacity) < 4.8) {
                     item.smallCapacity = true
                   }
 
@@ -65,16 +61,13 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                 if (item.type == "Ranges") {
                   if (parseFloat(item.capacity) >= 6.7) {
                     item.largestCapacity = true
-                  } 
-                  if (parseFloat(item.capacity) >= 6.4) {
+                  } else if (parseFloat(item.capacity) >= 6.4) {
                     item.largerCapacity = true
-                  }
-                  if (parseFloat(item.capacity) >= 6.2) {
+                  } else if (parseFloat(item.capacity) >= 6.2) {
                     item.largeCapacity = true
-                  }
-                  if (parseFloat(item.capacity) >= 5.8) {
+                  } else if (parseFloat(item.capacity) >= 5.8) {
                     item.mediumCapacity = true
-                  }                    
+                  }
                 }
               }
         })
