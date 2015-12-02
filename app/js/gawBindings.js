@@ -40,6 +40,10 @@ gaw.bind('navbar-popover-title', function(element) {
 	return $(element).parent().attr('popover-title');
 });
 
+gaw.bind('navbar-popover-desc', function(element) {
+    return $(element).closest("body").find('.popover-content').text();
+});
+
 gaw.bind('button-text', function(element) {
 	return $(element).closest('.answer').find('.label-text').text();
 });
@@ -94,4 +98,8 @@ gaw.bind('results-slider-last-value', function(element) {
 
 gaw.bind('results-slider-value', function(element) {
 	return $(element).closest('#results').attr('data-value');
+});
+
+gaw.bind('clicked-text', function(element) {
+	return $(element).text();
 });
