@@ -7,7 +7,7 @@ $inputBackgroundColor: #EEE;
 
 	.modal-header {
 		border-bottom: none;
-		font-family: $AG-Bold-Cnd;
+		font-family: "Lucida Grande", Helvetica, sans-serif;
 
 		h3 {
 			display: inline-block;
@@ -42,7 +42,7 @@ $inputBackgroundColor: #EEE;
 		padding-top: 0;
 
 		input,textarea,.input-title {
-			font-family: $AG-Bold-Cnd;
+			font-family: "Lucida Grande", Helvetica, sans-serif;;
 		}
 		input,textarea {
 			background-color: $inputBackgroundColor;
@@ -74,11 +74,11 @@ $inputBackgroundColor: #EEE;
 			}
 
 			.email {
-				padding-left: 28px;
+				padding-left: 35px;
 			}
 
 			.name {
-				padding-left: 41px;
+				padding-left: 52px;
 			}
 		}
 
@@ -148,7 +148,7 @@ $inputBackgroundColor: #EEE;
 			vertical-align: middle;
 
 			.message {
-				font-family: $AG-Bold-Cnd;
+				font-family: "Lucida Grande", Helvetica, sans-serif;
 				text-transform: uppercase;
 			}
 
@@ -174,7 +174,7 @@ $inputBackgroundColor: #EEE;
 	}
 
 	button.btn {
-		font-family: $AG-Bold-Cnd;
+		font-family: "Lucida Grande", Helvetica, sans-serif;
 		background-color: $textColor;
 	}
 
