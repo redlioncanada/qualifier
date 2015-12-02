@@ -61,8 +61,8 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                 }
               } else if (item.appliance == "Cooking") {
                   //no custom props
-                } 
-                else if (item.type == "Ranges") {
+                 
+                if (item.type == "Ranges") {
                   if (parseFloat(item.capacity) >= 6.7) {
                     item.largestCapacity = true
                   } 
@@ -76,6 +76,7 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                     item.mediumCapacity = true
                   }                    
                 }
+              }
         })
 		  return $filter('orderBy')(data, '-price');
 	};
