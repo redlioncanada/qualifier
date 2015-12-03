@@ -363,6 +363,14 @@ angular.module('App')
 			}
 		}
 
+		
+	  	var from = $location.path().split("/");
+	  	from = from[from.length-1];
+	  	if (from.length) $rootScope.navigateFrom = from;
+	  	$rootScope.navigateTo = name;
+
+
+
   		var hasNext = false
   		if (!!$rootScope.questionsData && !!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
