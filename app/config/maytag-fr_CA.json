@@ -612,7 +612,7 @@
                          "value": 1,
                          "text": "UNIQUEMENT PENDANT LES FÊTES",
                          "scoring": {
-                             "mediumCapacity": 1
+                             "mediumCapacity": 5
                          }
                      },
                      "2": {
@@ -621,8 +621,7 @@
                          "value": 2,
                          "text": "plusieurs fois par an",
                          "scoring": {
-                             "largeCapacity": 1,
-                             "double": 1
+                             "largeCapacity": 5
                          }
                      },
                      "3": {
@@ -631,8 +630,7 @@
                          "value": 3,
                          "text": "très souvent",
                          "scoring": {
-                             "largestCapacity": 1,
-                             "double": 1
+                             "largerCapacity": 5
                          }
                      }
                  }
@@ -847,8 +845,8 @@
                      "thumbnail_current": "img/icon-fueltype-current.png",
                      "value": "yes",
                      "scoring": {
-                         "gas": 3,
-                         "electric": -10                         
+                         "gas": 5,
+                         "electric": -15                         
                      },
                      "order": 1
                  }, {
@@ -1324,13 +1322,14 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
+                                "width29" : 10,
                                 "width30" : 10,
-                                "width31" : -50,
-                                "width32" : -50,
-                                "width33" : -50,
-                                "width34" : -50,
-                                "width35" : -50,
-                                "width36" : -50
+                                "width31" : 10,
+                                "width32" : -100,
+                                "width33" : -100,
+                                "width34" : -100,
+                                "width35" : -100,
+                                "width36" : -100
                             }
                         },
                         "2" : {
@@ -1339,13 +1338,13 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : -50,
-                                "width31" : 10,
+                                "width30" : -100,
+                                "width31" : -100,
                                 "width32" : 10,
                                 "width33" : 10,
-                                "width34" : -50,
-                                "width35" : -50,
-                                "width36" : -50
+                                "width34" : 10,
+                                "width35" : -100,
+                                "width36" : -100
                             }
                         },
                         "3" : {
@@ -1354,13 +1353,14 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : -50,
-                                "width31" : -50,
-                                "width32" : -50,
-                                "width33" : -50,
-                                "width34" : 10,
+                                "width30" : -100,
+                                "width31" : -100,
+                                "width32" : -100,
+                                "width33" : -100,
+                                "width34" : -100,
                                 "width35" : 10,
-                                "width36" : 10
+                                "width36" : 10,
+                                "width37" : 10
                             }
                         }
                     }                               
@@ -1384,12 +1384,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : 5,
-                                 "height67" : -30,
-                                 "height68" : -30,
-                                 "height69" : -30,
-                                 "height70" : -30,
-                                 "height71" : -30
+                                 "height66" : 10
                             }
                         },
                         "67" : {
@@ -1398,12 +1393,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1,2],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : 5,
-                                 "height68" : -30,
-                                 "height69" : -30,
-                                 "height70" : -30,
-                                 "height71" : -30
+                                 "height67" : 10
                             }
                         },
                         "69" : {
@@ -1412,12 +1402,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : -30,
-                                 "height68" : 5,
-                                 "height69" : 5,
-                                 "height70" : -30,
-                                 "height71" : -30
+                                 "height69" : 10
                             }
                         },
                         "71" : {
@@ -1426,12 +1411,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,2,3],
                             "scoring" : {
-                                 "height66" : -30,
-                                 "height67" : -30,
-                                 "height68" : -30,
-                                 "height69" : -30,
-                                 "height70" : 5,
-                                 "height71" : 5
+                                 "height71" : 10
                             }
                         }
                     }                               
@@ -1493,7 +1473,7 @@
                          "text": "MA FAMILLE",
                          "scoring": {
                             "powerCold" : 1,
-                            "smallCapacity" : 5
+                            "mediumCapacity" : 5
                          }
                      },
                      "4": {
@@ -1602,7 +1582,8 @@
                             "text" : "Oui – c'est excellent car on aime beaucoup l’idée d’avoir de l'eau et des glaçons distribués de notre réfrigérateur",
                             "value" : "yes",
                             "scoring" : {
-                                "indoorDispenser" : 10
+                                "indoorDispenser" : 10,
+                                "factoryInstalledIceMaker" : 10
                             },
                             "order" : 1
                         },
@@ -1612,7 +1593,8 @@
                             "text" : "Non - mais nous sommes prêts à en installer une pour que notre réfrigérateur puisse distribuer de l'eau et des glaçons.",
                             "value" : "nobutyes",
                             "scoring" : {
-                                "indoorDispenser" : 5
+                                "indoorDispenser" : 5,
+                                "factoryInstalledIceMaker" : 5
                             },
                             "order" : 2
                         },
@@ -1622,7 +1604,8 @@
                             "text" : "Non - nous n'avons pas de conduite d'eau et nous préférons ne pas en utiliser une.",
                             "value" : "no",
                             "scoring" : {
-                                "indoorDispenser" : -30
+                                "indoorDispenser" : -30,
+                                "factoryInstalledIceMaker" : -30
                             },
                             "order" : 3
                         },
@@ -1891,8 +1874,7 @@
                             "value" : 0,
                             "text" : "0 Maybe every other week",
                             "scoring" : {
-                                "placeSettings13": 3,
-                                "placeSettings14": 1
+                                "placeSettings12": 1
                             }
                         },
                         "1" : {
@@ -1901,8 +1883,7 @@
                             "value" : 1,
                             "text" : "1",
                             "scoring" : {
-                                "placeSettings13": 3,
-                                "placeSettings14": 1
+                                "placeSettings12": 1
                             }
                         },
                         "2" : {
@@ -1911,8 +1892,7 @@
                             "value" : 2,
                             "text" : "2",
                             "scoring" : {
-                                "placeSettings13": 1,
-                                "placeSettings14": 3
+                                "placeSettings14": 1
                             }
                         },
                         "3" : {
@@ -1921,8 +1901,7 @@
                             "value" : 3,
                             "text" : "3",
                             "scoring" : {
-                                "placeSettings14": 1,
-                                "placeSettings14": 3
+                                "placeSettings14": 1
                             }
                         },
                         "4" : {
@@ -1931,8 +1910,8 @@
                             "value" : 4,
                             "text" : "4",
                             "scoring" : {
-                                "placeSettings14": 1,
-                                "placeSettings15": 3
+                                "placeSettings14": 2,
+                                "placeSettings16": 1
                             }
                         },
                         "5" : {
@@ -1941,8 +1920,8 @@
                             "value" : 5,
                             "text" : "5",
                             "scoring" : {
-                                "placeSettings15": 1,
-                                "placeSettings15": 3
+                                "placeSettings14": 1,
+                                "placeSettings16": 2
                             }
                         },
                         "6" : {
@@ -1951,7 +1930,7 @@
                             "value" : 6,
                             "text" : "15+ I've lost count",
                             "scoring" : {
-                                "placeSettings15": 3
+                                "placeSettings16": 3
                             }
                         }
                  }
@@ -2145,7 +2124,6 @@
                      "image": "img/dishwasher-i-still-see-room.jpg",
                      "image_alt" : "Dishwasher -  I Still See Room",
                      "scoring": {
-                         "premiumAdjusters": 1
                      },
                      "order": 3
                  }, {
@@ -2209,6 +2187,8 @@
                             "image" : "img/Dishwasher-Q6-nopreference.jpg",
                             "image_alt" : "Dishwasher -  No Preference",
                             "scoring" : {
+                                "frontConsole" : -2,
+								"FID" : 2
                             },
                             "order" : 3
                         }

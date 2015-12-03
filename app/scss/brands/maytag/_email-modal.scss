@@ -186,3 +186,14 @@ $inputBackgroundColor: #EEE;
 		background-color: #DDD;
 	}
 }
+
+.modal-body:lang(fr) {
+    .input-wrapper {
+        .email {
+            padding-left: 45px !important;
+        }
+        .name {
+            padding-left: 85px !important;
+        }
+    }
+}
