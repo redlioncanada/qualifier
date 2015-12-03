@@ -63,7 +63,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 
 			  			for (var t in $rootScope.questionsData.questions[q].text) {
 				  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
-				  				if (!$rootScope.questionsData.questions[q].text[t].answers[a].toString().length) {
+				  				if (!$rootScope.questionsData.questions[q].text[t].answers[a].toString().length || !a.toString().length) {
 				  					self.reload();
 				  				}
 				  				
