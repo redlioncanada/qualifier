@@ -68,9 +68,9 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                 if (item.type == "Ranges") {
                   if (parseFloat(item.capacity) >= 6.7) {
                     item.largestCapacity = true
-                  } else if (parseFloat(item.capacity) >= 6.4) {
-                    item.largerCapacity = true
                   } else if (parseFloat(item.capacity) >= 6.2) {
+                    item.largerCapacity = true
+                  } else if (parseFloat(item.capacity) >= 6.0) {
                     item.largeCapacity = true
                   } else if (parseFloat(item.capacity) >= 5.8) {
                     item.mediumCapacity = true
