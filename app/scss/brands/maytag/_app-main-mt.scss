@@ -526,6 +526,12 @@ header.header-desktop {
 div[ng-class="fr_CA"] {
 	.btn-backtoresults, .btn-startover {
 		width: 79px !important;
+        padding: 0 !important;
+        
+        span {
+            position: relative;
+            top: 25%;
+        }
 	}
 
 	.btn-startover {
