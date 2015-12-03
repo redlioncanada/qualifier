@@ -1173,7 +1173,7 @@
                      "text": "Denim",
                      "value": "denim",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 1
                  }, {
@@ -1182,7 +1182,7 @@
                      "text": "Vêtements de gymnastique",
                      "value": "gym clothes",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 2
                  }, {
@@ -1191,7 +1191,7 @@
                      "text": "Tissus légers",
                      "value": "delicates",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 3
                  }, {
@@ -1200,7 +1200,7 @@
                      "text": "Collants de ballet",
                      "value": "ballet tights",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 4
                  }, {
@@ -1209,7 +1209,7 @@
                      "text": "Serviettes",
                      "value": "towels",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 5
                  }, {
@@ -1218,7 +1218,7 @@
                      "text": "Vêtements de tous les jours",
                      "value": "everyday wear",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 6
                  }]
@@ -1515,7 +1515,7 @@
                          "scoring": {
                              "powerCold": 3,
                              "adjustableTempDrawer" : 2,
-                             "largeCapactiy" : 5
+                             "largeCapacity" : 5
                          }
                      }
                  }

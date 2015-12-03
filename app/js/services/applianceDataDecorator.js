@@ -20,6 +20,9 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
             }
 
               if (item.appliance == "Washers") {
+                if (item.cycleOptions) {
+                  item["cycleOptions"+Math.round(item.cycleOptions)] = true;
+                }
 
                 for (var i in item.colours) {
                   for (var j in item.dryers[0].colours) {
@@ -42,7 +45,11 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
                   }
 
               } else if (item.appliance == "Dishwashers") {
-                item["placeSettings"+item.placeSettings.toString()] = true
+                if (item.placeSettings) {
+                  item["placeSettings"+Math.round(item.placeSettings).toString()] = true;
+                  console.log("placeSettings"+Math.round(item.placeSettings).toString())
+                }
+
                 item.quiet = false
                 if (parseFloat(item.decibels) <= 47) {
                   item.quiet = true

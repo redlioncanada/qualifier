@@ -1,5 +1,5 @@
 <ul class="results-list" ng-if="questionsData.currentCount !=0">
-			<li ng-repeat="a in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result">
+			<li ng-repeat="(index,a) in appliances | filter:{score : '!!'} | orderBy:'-score' | byPrice:controls.price | limitTo:3 | rearrange" class="result">
 				<div class="result-wrap">
 					<div class="result-inner">
 						<h3 ng-if="$index==1" bo-text="brandData.apptext.yourBestMatch"></h3>

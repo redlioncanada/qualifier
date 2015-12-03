@@ -1273,7 +1273,7 @@
 							"text" : "Denim",
 							"value" : "denim",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 1
 						},
@@ -1283,7 +1283,7 @@
 							"text" : "Gym clothes",
 							"value" : "gym clothes",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 2
 						},
@@ -1293,7 +1293,7 @@
 							"text" : "Delicates",
 							"value" : "delicates",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 3
 						},
@@ -1303,7 +1303,7 @@
 							"text" : "Ballet tights",
 							"value" : "ballet tights",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 4
 						},
@@ -1313,7 +1313,7 @@
 							"text" : "Towels",
 							"value" : "towels",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 5
 						},
@@ -1323,7 +1323,7 @@
 							"text" : "Everyday wear",
 							"value" : "everyday wear",
 							"scoring" : {
- 								"cycleOptions" : 1
+ 								"cycleOptions11" : 1
 							},
 							"order" : 6
 						}
@@ -1624,7 +1624,7 @@
 							"scoring" : {
 								"powerCold" : 3,
 								"adjustableTempDrawer" : 2,
-								"largeCapactiy" : 5
+								"largeCapacity" : 5
 							}
 						}
 					}
