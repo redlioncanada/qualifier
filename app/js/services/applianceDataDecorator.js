@@ -47,7 +47,6 @@ applianceDataDecorator.factory('$dataDecorator', ['$filter', function($filter) {
               } else if (item.appliance == "Dishwashers") {
                 if (item.placeSettings) {
                   item["placeSettings"+Math.round(item.placeSettings).toString()] = true;
-                  console.log("placeSettings"+Math.round(item.placeSettings).toString())
                 }
 
                 item.quiet = false
