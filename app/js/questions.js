@@ -363,6 +363,10 @@ angular.module('App')
 			}
 		}
 
+		if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('Appliance') != -1) {
+			$("html, body").animate({scrollTop: "125px"}, 400);
+		}
+
 		
 	  	var from = $location.path().split("/");
 	  	from = from[from.length-1];
