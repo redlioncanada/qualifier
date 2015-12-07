@@ -23,7 +23,7 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cd $GITDIR/temp
 
 	echo "- Updating Dependencies" >> $LOGFILE
-	bower install
+	bower --allow-root install
 	echo "-- Finished bower install" >> $LOGFILE
 	npm install
 	echo "-- Finished npm install" >> $LOGFILE
@@ -37,6 +37,8 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cp -a $GITDIR/temp/build/. $DEPLOYDIR$ENGLISHDIR/
 	cp -a $GITDIR/temp/build/. $DEPLOYDIR$FRENCHDIR/
 	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR$FRENCHDIR/
+	chmod -R 755 $DEPLOYDIR$FRENCHDIR/
+	chown -R root $DEPLOYDIR$ENGLISHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
