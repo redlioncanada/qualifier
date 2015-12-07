@@ -3,7 +3,7 @@
 read oldrev newrev refname
 
 DEPLOYDIR=/home/maytabsubs/qualifier
-TESTDIR=/home/maytagsubs/qualifier/test
+TESTDIR=/test
 ENGLISHDIR=/en
 FRENCHDIR=/fr
 
@@ -35,12 +35,11 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
 	echo "- Copying to test directory" >> $LOGFILE
-	mkdir $TESTDIR
-	mkdir $TESTDIR$ENGLISHDIR
-	mkdir $TESTDIR$FRENCHDIR
-	cp -a ./build/. $TESTDIR$ENGLISHDIR/
-	cp -a ./build/. $TESTDIR$FRENCHDIR/
-	cp ./build/fr/. $TESTDIR$FRENCHDIR/
+	mkdir $DEPLOYDIR$ENGLISHDIR$TESTDIR
+	mkdir $DEPLOYDIR$FRENCHDIR$TESTDIR
+	cp -a ./build/. $DEPLOYDIR$ENGLISHDIR$TESTDIR/
+	cp -a ./build/. $DEPLOYDIR$FRENCHDIR$TESTDIR/
+	cp ./build/fr/. $DEPLOYDIR$FRENCHDIR$TESTDIR/
 	echo "- Finished copying" >> $LOGFILE
 
 	echo "Please verify the build at $TESTDIR. Continue?"
