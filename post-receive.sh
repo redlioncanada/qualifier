@@ -1,8 +1,10 @@
 #!/bin/sh
 # Qualifier deploy script, requires git, npm, bower, and gulp to be installed globally
+# Executed by a bare repo at /home/maytagsubs/qualifier/git/qualifier.git/hooks
+# Compiles to /home/maytagsubs/qualifier/en & /home/maytagsubs/qualifier/fr
 read oldrev newrev refname
 
-DEPLOYDIR=/home/maytabsubs/qualifier
+DEPLOYDIR=/home/maytagsubs/qualifier
 ENGLISHDIR=/en
 FRENCHDIR=/fr
 
@@ -37,6 +39,9 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cp -a /build/. $DEPLOYDIR$ENGLISHDIR/
 	cp -a /build/. $DEPLOYDIR$FRENCHDIR/
 	cp -a /build/fr/. $DEPLOYDIR$FRENCHDIR/
+
+	#No temp file cleanup for convenience, installing deps from scratch takes like 10 minutes
+
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
