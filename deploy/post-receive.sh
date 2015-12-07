@@ -10,6 +10,7 @@ GITDIR=$(pwd)
 LOGFILE=$GITDIR/post-receive.log
 VERSION="$(git describe --abbrev=0 --tags)"
 
+
 echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
 echo "Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
 echo "Starting Deploy on $VERSION" >> $LOGFILE
