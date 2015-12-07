@@ -7,7 +7,6 @@ TESTDIR=/home/maytagsubs/qualifier/test
 ENGLISHDIR=/en
 FRENCHDIR=/fr
 
-
 GITDIR=$(pwd)
 LOGFILE=$GITDIR/post-receive.log
 VERSION="$(git describe --abbrev=0 --tags)"
