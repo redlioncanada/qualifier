@@ -16,7 +16,7 @@ echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
 echo "Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
 echo "Starting Deploy on $VERSION" >> $LOGFILE
 
-if [[$VERSION =~ $VERSIONREGEX]]; then
+if [$VERSION =~ $VERSIONREGEX]; then
 	#is a valid version number
 	echo "- Starting Code Update & Compilation" >> $LOGFILE
 	mkdir temp
@@ -47,7 +47,7 @@ if [[$VERSION =~ $VERSIONREGEX]]; then
 	echo "Please verify the build at $TESTDIR. Continue?"
 	read cont
 
-	if [[ "$cont" == "y" || "$cont" == "yes"]]; then
+	if ["$cont" = "y" || "$cont" = "yes"]; then
 		#cp -a /build/. $DEPLOYDIR$ENGLISHDIR/
 		#cp -a /build/. $DEPLOYDIR$FRENCHDIR/
 		#cp -a /build/fr/. $DEPLOYDIR$FRENCHDIR/
