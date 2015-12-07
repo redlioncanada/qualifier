@@ -1,43 +1,68 @@
 'use strict';
 
 angular.module('App')
-  .controller('ModalCtrl', function ($scope, $rootScope, $state, $modalInstance, $resource, $location) {
+  .controller('ModalCtrl', ['$http','$modalInstance', 'appliance', 'link', 'fakelink', '$scope', '$rootScope', '$timeout', function ($http, $modalInstance, appliance, link, fakelink, $scope, $rootScope, $timeout) {
 
-  	$rootScope.email = {}
-  	$scope.submit = function () {
+    var apptext = $rootScope.brandData.apptext;
+    var applianceType = appliance;
+    applianceType = applianceType.toLowerCase();
 
-  		var link = $location.host() + "?"
+    $timeout(function() {
+      $scope.setMessage();
+      $scope.setSubject();
+    });
 
-  		for (var sq in $rootScope.questionsData.scoringQuestions) {
-  			var answer = [];
-        console.log($rootScope.questionsData.scoringQuestions[sq]);
-  			for (var t in $rootScope.questionsData.scoringQuestions[sq].text) {
-          if (typeof $rootScope.questionsData.scoringQuestions[sq].text[t].answer !== 'undefined' && $rootScope.questionsData.scoringQuestions[sq].text[t].type == 'slider') {
-            answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answer);
-            continue;
-          }
-  				for (var ans in $rootScope.questionsData.scoringQuestions[sq].text[t].answers) {
+    $scope.submit = function () {
+      $scope.email.message = $scope.email.message.replace(fakelink, "<a href='"+link+"'>"+fakelink+"</a>");
+      var message = $.param({address: $scope.email.address, message: $scope.email.message, name: $scope.email.name, subject: $scope.email.subject});
 
-            console.log($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer, $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true, !isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer));
-	  				if ($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer == true) {
-	  					answer.push($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value)
-	  				}
-            else if (!isNaN($rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer)) {
-              answer[$rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].answer] = $rootScope.questionsData.scoringQuestions[sq].text[t].answers[ans].value
+      $http({
+        method:'POST',
+        url: 'php/email/', 
+        data: message,
+        headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+      }).success(function(data, status, headers, config) {
+          if (status == 200) {
+            if (data.status !== 'error') {
+              console.log('email post success: '+data.status);
+              $scope.showModalMessage("sent");
+            } else {
+              console.log('email post error: '+data.message);
+              $scope.showModalMessage("error");
             }
-	  			}
-  			}
-  			link += sq + "=" + answer.join(";") + "&"
-  		}
-  		console.log(link)
-  		/*$rootScope.email.message += "<br />" + link
-  		var r = $resource("placeholder/sendEmail")
-  		r.save($rootScope.email,function (res, headers) {
+          } else {
+            console.log('email post error: status '+status);
+            $scope.showModalMessage("error");
+          }
+      }).error(function(data, status, headers, config) {
+          console.log('email post error: '+data);
+          $scope.showModalMessage("error");
+        });
+    }
 
+    $scope.showModalMessage = function(type) {
+      $('html,body').find('.modal-message.modal-'+type).show();
+    }
 
-  		});
-  		$modalInstance.close();*/
+    $scope.close = function() {
+      $modalInstance.dismiss('cancel');
+    }
 
-  	}
+    $scope.setMessage = function() {
+      $scope.email.message = apptext.emailMessage.replace('{{brand}}', apptext.apptitle.toLowerCase()).replace('{{appliance}}', applianceType).replace('{{fakelink}}', fakelink);
+    }
 
-});
+    $scope.setSubject = function() {
+      $scope.email.subject = apptext.emailSubject.replace('{{brand}}', apptext.apptitle.toLowerCase()).replace('{{appliance}}', applianceType);
+    }
+
+}]).directive('stopEvent', function () {
+    return {
+      restrict: 'A',
+      link: function (scope, element, attr) {
+        element.on(attr.stopEvent, function (e) {
+          e.stopPropagation();
+        });
+      }
+    };
+  });

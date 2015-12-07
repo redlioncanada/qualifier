@@ -12,7 +12,7 @@
 }
 
 div.people1 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-1.png') !important;
+    background: url('../img/family-1.png') no-repeat !important;
 	background-size: contain !important;
 	width: 28px;
 	height: 50px;
@@ -21,7 +21,7 @@ div.people1 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people2 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-2.png') !important;
+    background: url('../img/family-2.png') no-repeat !important;
 	background-size: contain !important;
 	width: 36px;
 	height: 50px;
@@ -30,7 +30,7 @@ div.people2 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people3 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-3.png') !important;
+    background: url('../img/family-3.png') no-repeat !important;
 	background-size: contain !important;
 	width: 59px;
 	height: 50px;
@@ -39,20 +39,20 @@ div.people3 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 div.people4 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-4.png') !important;
+    background: url('../img/family-4.png') no-repeat !important;
 	background-size: contain !important;
-	width: 70px;
+	width: 85px;
 	height: 50px;
 	display: block;
-	margin-left: -35px !important;
+	margin-left: -40px !important;
 }
 div.people5 .jslider .jslider-value:not(.jslider-value-to) {
-    background: url('../img/family-5.png') !important;
+    background: url('../img/family-5.png') no-repeat !important;
 	background-size: contain !important;
-	width: 102px;
+	width: 85px;
 	height: 50px;
 	display: block;
-	margin-left: -43.5px !important;
+	margin-left: -46px !important;
 }
 
 div.people6 .jslider .jslider-value:not(.jslider-value-to) {
@@ -62,34 +62,35 @@ div.people6 .jslider .jslider-value:not(.jslider-value-to) {
 	height: 50px;
 	display: block;
 	margin-left: -63px !important; //opposite as it's the last one
+    margin-right: -55px;
 }
 
 
 div.people1 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	width: 34px;
+	width: 28px;
 	margin-left: -14px !important; // half of width to center it
 }
 
 div.people2 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	width: 42px;
+	width: 36px;
 	margin-left: -18px !important;
 }
 
 div.people3 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	width: 68px;
+	width: 59px;
 	margin-left: -29.5px !important;
 }
 
 div.people4 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	width: 80px;
+	width: 70px;
 	margin-left: -35px !important;
 }
 div.people5 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	width: 117px;
-	margin-left: -64.5px !important;
+	width: 85px;
+	margin-left: -40px !important;
 }
 div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
-	margin-left: -71px !important;
+	margin-left: -75px !important;
 }
 
 
@@ -128,7 +129,7 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 	.jslider {
 		cursor: pointer; 
 		display: block; 
-		width: 95%; 
+		width: 94.5%; 
 		height: 1em; 
 		position: relative; 
 		top: 0.6em; 
@@ -438,7 +439,7 @@ div.people6 .jslider.vertical .jslider-value:not(.jslider-value-to) {
 		.jslider-scale { 
 			position: relative; 
 			top: 17px;
-			width: 98%;
+			width: 97%;
 			//margin-left: 20px;
 
 			& > :first-child, & > :last-child {
@@ -538,7 +539,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 			width: 63px;
 			height: 61px;
 			margin-top: -48px;
-			margin-left: -30px !important;
+			margin-left: -32px !important;
 			display: block;
 			padding-top: 10px;
 			text-align: center;
@@ -661,6 +662,17 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	.jslider-scale {
 		& > :nth-child(2), & > :nth-child(3), & > :nth-child(4) {
 			border-left: 1px solid #999 !important;
+		}
+	}
+}
+
+.slider-labels.seven {
+
+	.jslider-scale {
+		& > span {border-left: 1px solid #999 !important;}
+
+		& > :nth-child(2), & > :nth-child(4), & > :nth-child(6) {
+			height: 15px;
 		}
 	}
 }
@@ -870,13 +882,14 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 	.price-slider {
 		margin-top: 60px;
 		margin-bottom: 20px;
-			width: 609px;
+        width: 609px;
 		.jslider-bg {
 			position: relative; 
-			width: 609px;
+			width: 670px;
 			height: 28px;
 			background: url('../img/slider-results-bg.png');
-			background-size: contain;
+			background-size: 100% 100%;
+            background-repeat: no-repeat;
 		}
 	}
 	.price-slider.pointer-labels {
@@ -890,7 +903,7 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 				width: 63px;
 				height: 61px;
 				margin-top: -48px;
-				margin-left: -30px !important;
+				margin-left: -32px !important;
 				display: block;
 				padding-top: 10px;
 				text-align: center;
@@ -989,10 +1002,16 @@ div.fridge-capacity.people5 .jslider .jslider-value:not(.jslider-value-to) {
 }
 
 .answer-buttons.label-inches {
-	.answer-button-answer::after {
+	.answer-button-wrapper:not(:first-child) .answer-button-answer::after {
 		content: ' "';
 		position: absolute;
 		top: 1px;
+	}
+	.answer-button-wrapper:first-child .answer-button-answer {
+		text-transform: uppercase;
+		font-size: initial;
+		padding-top: 3px;
+		font-size: 14px;
 	}
 }
 
@@ -1023,12 +1042,13 @@ div[ng-class="fr_CA"] {
 	}
 }
 
-@media(max-width:1024px) {
+@media(max-width:1023px) {
 	.answers-main-content.answer-buttons {
 		position: absolute;
-		top: 5px;
+		top: -25px;
 		width: 50%;
 		left: 50%;
+		padding-top: 0px;
 
 		li.answer-button-wrapper {
 			margin-right: 0 !important;
@@ -1067,7 +1087,7 @@ div[ng-class="fr_CA"] {
 	#results div.price-slider.pointer-labels .jslider {
 		div.jslider-value {
 			width: 54px;
-			height: 48px;
+			height: 45px;
 			margin-top: -36px;
 			margin-left: -28px !important;
 
@@ -1076,8 +1096,16 @@ div[ng-class="fr_CA"] {
 			}
 		}
 	}
-    li.answer-button-wrapper {
-			margin-top: 10px !important;
+
+	div.answers-main-content.answer-buttons {
+		top: -9px;
+
+		li.answer-button-wrapper {
+			margin-top: 1.2px !important;
             margin-left: 0px !important;
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
 		}
+	}
+    
 }

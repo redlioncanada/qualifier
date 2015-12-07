@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('App')
-  .controller('SliderMultipleCtrl', function ($scope, $rootScope) {
+  .controller('SliderMultipleCtrl', function ($element, $scope, $rootScope) {
   	// jslider-value
   	$scope.setAnswer = function () {
       $rootScope.showTooltip = false;
       for (var t in $rootScope.questionsData.question.text) {
     		for (var i in $rootScope.questionsData.question.text[t].answers) {
-    			if ($rootScope.questionsData.question.text[t].answers[i].value == $rootScope.questionsData.question.text[t].answer) {
+    			if ($rootScope.questionsData.question.text[t].answers[i].value == Math.round($rootScope.questionsData.question.show.answer)) {
     				$rootScope.questionsData.question.text[t].answers[i].answer = true
             $rootScope.controls.questionHasAnswer = true
     			} else {
@@ -45,13 +45,14 @@ angular.module('App')
           qs.text[t].options.answers = qs.text[t].answers
           qs.text[t].options.iterator = t
           qs.text[t].options.callback = angular.copy(function(value, released) {  
-            console.log(this)
+            //$($element).find('.slider-wrap').attr('data-text', $rootScope.questionsData.question.show.answers[Math.round(value)].text);
+
             if (!!$rootScope.questionsData.question) {
               if (qs.name == $rootScope.questionsData.question.name) {    
                 if (!!released) {
                   for (var a in this.answers) {
                         //console.log( $rootScope.questionsData.question.text[0].answer , $rootScope.questionsData.question.text[0].options.halfway,  parseFloat($rootScope.questionsData.question.text[0].answers[a].value)- $rootScope.questionsData.question.text[0].options.halfway , parseFloat($rootScope.questionsData.question.text[0].answers[a].value)+$rootScope.questionsData.question.text[0].options.halfway   )
-                        console.log($rootScope.questionsData.question.text[this.iterator].answer , (parseFloat(this.answers[a].value)- this.halfway), (parseFloat(this.answers[a].value)+this.halfway))
+                        //console.log($rootScope.questionsData.question.text[this.iterator].answer , (parseFloat(this.answers[a].value)- this.halfway), (parseFloat(this.answers[a].value)+this.halfway))
                         if ($rootScope.questionsData.question.text[this.iterator].answer > (parseFloat(this.answers[a].value)- this.halfway) &&  $rootScope.questionsData.question.text[this.iterator].answer < (parseFloat(this.answers[a].value)+this.halfway)) {
                           $rootScope.questionsData.question.text[this.iterator].answer = this.answers[a].value
                           break

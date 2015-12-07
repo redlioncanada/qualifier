@@ -60,6 +60,7 @@ header.header-desktop {
 			height: 24px;
 			text-align: center;
 			display: inline-block;
+            cursor: pointer;
 			span {
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				color: #fff;
@@ -113,7 +114,6 @@ header.header-desktop {
 		opacity: 1;
 	}
 }
-
 
 
 .app-answers {
@@ -267,27 +267,7 @@ header.header-desktop {
 		float: right;
 		margin-top: 20px;
 	}
-	.buttonnav-mobile {
-   		width: 100%;
-   		text-transform: uppercase;
-   		margin: 40px 0 15px 0;
-
-   		div {
-   			color: white;
-   			background-color: #002e5f;
-   			height: 30px;
-   			line-height: 30px;
-   			margin: 0 auto;
-   			position: relative;
-   			top: 5px;
-   			font-family: $AG-Bold-Cnd;	   		
-   		}
-
-   		.backtoresults-mobile div {
-   			margin-bottom: 4px;
-   		}
-
-   }
+	
    div.startover-mobile {
    		margin: 5px 0 15px 0;
    }
@@ -344,10 +324,32 @@ header.header-desktop {
 	}
 }
 
+.buttonnav-mobile {
+   		width: 100%;
+   		text-transform: uppercase;
+   		margin: 40px 0 15px 0;
+
+   		div {
+   			color: white;
+   			background-color: #002e5f;
+   			height: 30px;
+   			line-height: 30px;
+   			margin: 0 auto;
+   			position: relative;
+   			top: 5px;
+   			font-family: $AG-Bold-Cnd;
+   			text-align: center;
+   		}
+
+   		.backtoresults-mobile div {
+   			margin-bottom: 4px;
+   		}
+
+   }
+
 //popover styles
 .popover-title {
 	text-transform: uppercase;
-	border-bottom: 1px solid #FFF;
 }
 .popover {
 	border: 0;
@@ -355,7 +357,7 @@ header.header-desktop {
 	margin-top: -4px !important;
 
 	* {
-		font-size: 9px;
+		font-size: 11px;
 		color: #FFF;
 	}
 }
@@ -524,6 +526,12 @@ header.header-desktop {
 div[ng-class="fr_CA"] {
 	.btn-backtoresults, .btn-startover {
 		width: 79px !important;
+        padding: 0 !important;
+        
+        span {
+            position: relative;
+            top: 25%;
+        }
 	}
 
 	.btn-startover {
@@ -559,7 +567,7 @@ div[ng-class="fr_CA"] {
 
 	.print-page-callout .print-page-title {
 		.sku {
-			color: #CCC;
+			color: #AAA;
 		}
 	}
 

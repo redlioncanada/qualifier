@@ -150,7 +150,7 @@
 		.label-wrap {
 			position: absolute;
 			left: 88px;
-			max-width: 82%;
+			max-width: 80%;
 			display: table;
 			height: 70px;
 
@@ -198,7 +198,7 @@
 		.label-wrap {
 			position: absolute;
 			left: 88px;
-			max-width: 82%;
+			max-width: 80%;
 			display: table;
 			height: 70px;
 
@@ -252,7 +252,7 @@
 		.label-wrap {
 			position: absolute;
 			left: 88px;
-			max-width: 82%;
+			max-width: 80%;
 			display: table;
 			height: 70px;
 
@@ -288,7 +288,7 @@
 			position: absolute;
 			top: 22px;
 			left: 100px;
-			max-width: 83%;
+			max-width: 80%;
 
 			.label-text {
 				height: 70px;
@@ -380,9 +380,10 @@
 	&.boxes-icon-2, &.boxes-icon-5, &.boxes-icon-split { // + Multiselect with icons - 5 answers
 		// @include make-md-column(6);
 		width: 172px;
-		height: 205px;
+		height: 204px;
 		background: url('../img/boxes-icon-bg-new.png');
 		display: inline-block;
+        background-repeat: no-repeat;
 		@include boxshadow;
 		.icon-wrap {
 			img {
@@ -429,8 +430,8 @@
 		}
 		.label-wrap {
 			position: absolute;
-			bottom: 15px;
-			left: 57px;
+			bottom: 15px !important;
+			left: 55px;
 		}
 		.label-more-wrap {
 			display: inline-block;
@@ -634,5 +635,11 @@ div[ng-class="fr_CA"] {
 			max-width: 108px;
 			font-size: 12pt;
 		}
+	}
+}
+
+@media(max-width:580px) {
+	.as-sortable-dragging {
+		display: none;
 	}
 }

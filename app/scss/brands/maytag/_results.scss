@@ -73,6 +73,9 @@
 			color: #022d58;
 			text-align: center;
 			font-size: 16px;
+            font-family: "Arial Narrow", Helvetica, Arial, sans-serif;
+            font-weight: 100;
+            letter-spacing: 0.5px;
 			.product-price, .product-sku {
 				display: block;
 				margin: 0 auto;
@@ -155,6 +158,9 @@
 				.btn-text-email::after {
 					content: '';
 				}
+				.btn-text-startover::after {
+					content: initial !important;
+				}
 			}
 			.btn-text {
 				font-size: 17px;
@@ -206,6 +212,9 @@
 				.btn-text-email img {
 					margin-top: -2px;
 				}
+				.btn-text-startover::after {
+					content: initial !important;
+				}
 			}
 			.result-inner {
 				//padding-top: 31px;
@@ -250,7 +259,7 @@
 			margin: 30px auto;
 			height: 1px;
 			width: 77%;
-			background-color: #AAA;
+			border-top: thin #AAA solid;
 		}
 		.sales-feature-spacer.small {
 			margin: 15px auto;
@@ -377,5 +386,13 @@
 		font-family: $AG-Bold-Cnd;
 		text-transform: uppercase;
 		color: #7f7f7f;
+	}
+}
+
+@media(max-width:580px) {
+	li.result {
+		.btn {
+			padding: 3px 8px !important;
+		}
 	}
 }

@@ -1,0 +1,199 @@
+$textColor: #082e55;
+$inputBackgroundColor: #EEE;
+
+.modal-content {
+	background-color: #f4f4f4;
+	color: $textColor;
+
+	.modal-header {
+		border-bottom: none;
+		font-family: "Lucida Grande", Helvetica, sans-serif;
+
+		h3 {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+		}
+
+		.modal-title {
+			text-transform: uppercase;
+			font-size: 12pt;
+			margin-top: 8px;
+			margin-left: 10px;
+		}
+
+		.modal-close {
+			font-family: 'Arial';
+			float: right;
+			transform: rotate(45deg) ;
+			-webkit-transform: rotate(45deg) ;
+			-moz-transform: rotate(45deg) ;
+			-o-transform: rotate(45deg) ;
+			-ms-transform: rotate(45deg) ;
+			font-weight: 400;
+			font-size: 25pt;
+			margin-top: -5px;
+			cursor: pointer;
+		}
+	}
+
+	.modal-body {
+		margin-top: 0;
+		padding-top: 0;
+
+		input,textarea,.input-title {
+			font-family: "Lucida Grande", Helvetica, sans-serif;;
+		}
+		input,textarea {
+			background-color: $inputBackgroundColor;
+			outline: none;
+			border: 0;
+			border-radius: 5px;
+		}
+		textarea {
+			resize: none;
+		}
+
+		.input-wrapper:not(:first-child) {
+			margin-top: 10px;
+		}
+
+		.input-wrapper {
+			position: relative;
+			height: 30px;
+
+			.input-title {
+				position: absolute;
+				top: 6px;
+				margin-left: 7px;
+			}
+
+			input {
+				width: 100%;
+				height: 100%;
+			}
+
+			.email {
+				padding-left: 35px;
+			}
+
+			.name {
+				padding-left: 52px;
+			}
+		}
+
+		.subject {
+			height: 30px;
+		}
+
+		.subject, .message {
+			width: 100%;
+			padding-left: 7px;
+			margin-top: 10px;
+		}
+
+		.message {
+			padding-top: 25px;
+			margin-top: 25px;
+			height: 270px;
+		}
+	}
+
+	.modal-message {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		color: white;
+		display: none;
+
+
+		h1,h2,h3,h4,h5 {
+			padding: 0;
+			margin:0;
+			margin-bottom: 10px;
+		}
+
+		* {
+			position: relative;
+			text-align: center;
+			z-index: 2;
+		}
+
+		.btn {
+			
+		}
+
+		.content {
+			display: table-cell;
+			vertical-align: middle
+		}
+
+		.background,.content-wrapper{
+			top: 0;
+			width: inherit;
+			position: absolute;
+		}
+
+		.background,.content-wrapper {
+			height: inherit;
+		}
+
+		.content-wrapper {
+			display: table;
+		}
+
+		.content {
+			display: table-cell;
+			vertical-align: middle;
+
+			.message {
+				font-family: "Lucida Grande", Helvetica, sans-serif;
+				text-transform: uppercase;
+			}
+
+			button.btn {
+				font-size: 22px;
+			}
+			button.btn:hover {
+				color: white;
+			}
+		}
+
+		.background {
+			z-index: 1;
+			background-color: $textColor;
+			opacity: 0.92;
+		}
+	}
+
+	.modal-footer {
+		padding-top: 0;
+		margin-top: 0;
+		border-top: none;
+	}
+
+	button.btn {
+		font-family: "Lucida Grande", Helvetica, sans-serif;
+		background-color: $textColor;
+	}
+
+	input.ng-invalid.ng-touched {
+		background-color: #ea7f7f;
+	}
+
+	input[disabled="disabled"] {
+		background-color: #DDD;
+	}
+}
+
+.modal-body:lang(fr) {
+    .input-wrapper {
+        .email {
+            padding-left: 45px !important;
+        }
+        .name {
+            padding-left: 85px !important;
+        }
+    }
+}

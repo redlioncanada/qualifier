@@ -1,22 +1,28 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams) {
-
+  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams, $appstate) {
+  	$scope.lastWidth = window.innerWidth;
   	$rootScope.$on('resize::resize', function() {
 	    if (window.innerWidth < 1024){
+	    	//temp fix - reload the page if going desktop to tablet and vice-versa
+	    	//reflow on tablet when changing orientation currently breaks the app
+	    	//no time to fix it before launch
+	        if ($scope.lastWidth >= 1024) location.reload();
 	        $scope.resizeElements();
 	    } else if (window.innerWidth >= 1024) {
+	    	if ($scope.lastWidth < 1024) location.reload();
 	    	//reset header height to it's css value
             $('.app-content-main-top').css('height', '');
             $('.slidey-wrap-all').css('height', '');
 	    }
+	    $scope.lastWidth = window.innerWidth;
 	});
 
 	$interval(function(){
-		if (window.innerWidth < 1024) {
+		if (window.innerWidth <= 1024) {
 			$scope.resizeElements();
-		} else if (window.innerWidth >= 1024) {
+		} else if (window.innerWidth > 1024) {
 	    	//reset header height to it's css value
             $('.app-content-main-top').css('height', '');
             $('.slidey-wrap-all').css('height', '');
@@ -24,16 +30,23 @@ angular.module('App')
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
+    	// console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
 
+    		// console.log($rootScope.controls.lastLocation);
+    		if ($rootScope.controls.lastLocation == 'results' && q == 'Appliance') return;
     		if (q == 'Appliance') {
     			$rootScope.resultsTouched = false;
     			$location.replace();
+    		} else {
+    			$appstate.store();
     		}
+    		gaw.refresh();
 
     		if (!!$rootScope.questionsData.question) {
-	    		if ($rootScope.questionsData.question.name != q && !!q && q !== '/questions/') {
-		  			if ($rootScope.questionsData.question.order < $rootScope.questionsData.questions[q].order) {
+    			var question = $rootScope.questionsData.question;
+	    		if (question.name != q && !!q && q !== '/questions/' && q !== '/questions') {
+		  			if (question.order < $rootScope.questionsData.questions[q].order) {
 		  				$rootScope.controls.controlClicked = 'next';
 		  			} else {
 		  				$rootScope.controls.controlClicked = 'previous';
@@ -49,7 +62,10 @@ angular.module('App')
 					$rootScope.moveToQuestion(q)
 				}, 100)	
 	  		}
+	  		// console.log(q);
+	  		// console.log($rootScope.questionsData);
 
+	  		$rootScope.controls.lastLocation = q;
     });
 
 
@@ -59,7 +75,7 @@ angular.module('App')
 	        for (var ans in q.show.answers ) {
 	          var a = q.show.answers[ans]
 	          if (qtype == "rank") {
-	          	console.log(a.answer)
+	          	// console.log(a.answer)
 	            if (a.answer == 0) {
 	              return a
 	              break;
@@ -96,11 +112,7 @@ angular.module('App')
 	              return true
 	              break;
 	            }       
-	          } else if (qtype == "slider-buttons") {
-	          	if (ans == 1 && a.value == q.show.answer) {
-	          		return true;
-	          	}
-	    	  } else {
+	          } else {
 	            if (a.answer == true) {
 	              return true
 	              break;
@@ -113,71 +125,7 @@ angular.module('App')
 
 	$scope.recalculateResults = function () {
 		$rootScope.questionsData.currentCount = 0;
-		$rootScope.questionsData.currentScore = {	
-  			"type" : false,
-			"width" : 0,
-			"height" : 0,
-			"capacity" : 0,
-			"single" : false,
-			"double" : false,
-			"combination" : false,
-			"trueConvection" : false,
-			"soundGuard" : false,
-			"vibrationControl" : false,
-			"audioLevel" : false,
-			"frontLoad" : false,
-			"topLoad" : false,
-			"stacked" : false,
-			"rapidWash" : false,
-			"rapidDry" : false,
-			"cycleOptions" : false,
-			"sensorDry" : false,
-			"wrinkleControl" : false,
-			"steamEnhanced" : false,
-			"placeSettings13" : 0,
-			"placeSettings14" : 0,
-			"placeSettings15" : 0,
-			"decibels" : 0,
-			"quiet" : 0,
-			"premiumAdjusters" : false,
-			"fid" : false,
-			"console" : false,
-			"powerCold" : false,
-			"topMount" : false,
-			"bottomMount" : false,
-			"frenchDoor" : false,
-			"indoorDispenser" : false,
-			"counterDepth" : false,
-			"freshFlow" : false,
-			"tempControlPantry" : false,
-			"dualCool" : false,
-			"gas" : false,
-			"maxCapacity" : false,
-			"warmingDrawer" : false,
-			"electric" : false,
-			"powerBurner" : false,
-			"powerPreheat" : false,
-			"mediumCapacity" : 0,
-			"largeCapacity" : 0,
-			"largerCapacity" : 0,
-			"largestCapacity" : 0,
-			"width27" : 0,
-			"width30" : 0,
-			"width31" : 0,
-			"width32" : 0,
-			"width33" : 0,
-			"width34" : 0,			
-			"width35" : 0,
-			"width36" : 0,
-			"height66" : 0,
-			"height67" : 0,
-			"height68" : 0,
-			"height69" : 0,
-			"height70" : 0,
-			"height71" : 0
-
-		}
-
+		$rootScope.questionsData.currentScore = {};
 
 		for (var question in $rootScope.questionsData.scoringQuestions) {
 			var q = $rootScope.questionsData.scoringQuestions[question]
@@ -185,7 +133,7 @@ angular.module('App')
 				for (var answers in q.show.answers) {
 					var a = q.show.answers[answers]
 					// If answer isn't null, use it for scoring
-					if (a.answer !== false) {
+					if (!!a.answer) {
 						// If it is true, simply apply scoring
 						if (a.answer === true) {
 							for (var scores in a.scoring) {
@@ -195,35 +143,47 @@ angular.module('App')
 									$rootScope.questionsData.currentScore[scores] = null
 								} else if (typeof s == "string") {
 									$rootScope.questionsData.currentScore[scores] = s
-								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+								} else if (!isNaN(s)) {
+									if (scores in $rootScope.questionsData.currentScore) {
+										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+									} else {
+										$rootScope.questionsData.currentScore[scores] = s
+									}
 								}
 							}
-						} else if (isNaN(parseInt(a.answer)) == false) {
+						}
+					} else {
+						if (q.show.type == "rank") {
 							var rankscoring = {
-								"0" : 3,
-								"1" : 2,
-								"2" : 1
+								"1" : 3,
+								"2" : 2,
+								"3" : 1
 							}
+
 							var getScore = function (ranking) {
 								if (ranking.toString() in rankscoring) {
 									return rankscoring[ranking.toString()]
 								}
 								return 0
 							}
+
 							for (var scores in a.scoring) {
 								var s = a.scoring[scores]
-								var t = getScore(a.answer)
+								var t = getScore(a.answer || a.order.toString());
+
 								if (s == null) {
 									$rootScope.questionsData.currentScore[scores] = null
 								} else if (typeof s == "string") {
 									$rootScope.questionsData.currentScore[scores] = s * t
-								} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-									$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + (s * t)
+								} else if (!isNaN(s)) {
+									if (scores in $rootScope.questionsData.currentScore) {
+										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s*t
+									} else {
+										$rootScope.questionsData.currentScore[scores] = s*t
+									}
 								}
-							}									
+							}
 						}
-					} else {
 					}
 				}
 			} else {
@@ -241,8 +201,12 @@ angular.module('App')
 										$rootScope.questionsData.currentScore[scores] = null
 									} else if (typeof s == "string") {
 										$rootScope.questionsData.currentScore[scores] = s
-									} else if (!isNaN(s) && $rootScope.questionsData.currentScore[scores] != null) {
-										$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+									} else if (!isNaN(s)) {
+										if (scores in $rootScope.questionsData.currentScore) {
+											$rootScope.questionsData.currentScore[scores] = $rootScope.questionsData.currentScore[scores] + s
+										} else {
+											$rootScope.questionsData.currentScore[scores] = s
+										}
 									}
 								}
 							}
@@ -322,27 +286,47 @@ angular.module('App')
 		}, 0);
 
 
-		var c = $('.slidey.ng-hide-remove').height();
+		var c = $('.slidey.active').height();
+		var animating = $('.slidey.active-add').length;
 
-		/*if ($scope.lastHeight == c && typeof $scope.lastHeight !== 'undefined') {
+		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined' && !animating) {
+
 			return;
 		}
-		$scope.lastHeight = c;*/
+		$scope.lastHeight = c;
 
-		if (c < 400) {
-			c = $('.slidey').not('.ng-hide').height();
-			if (c < 400) {
-				var minHeight = 400;
-				$('.slidey').not('.ng-hide').css('paddingTop', (minHeight-c)/2);
-				c = minHeight;
-			}
-		}
+        
+        if (window.innerWidth > 580) {
+            if (c < 620) {
+                c = $('.slidey.active').height();
+                if (c < 620) {
+                    var minHeight = 620;
+                    $('.slidey.active').css('paddingTop', parseInt((minHeight-c)/2));
+                    c = minHeight;
+                }
+            }
+        }
+        else {
+            if (c < 340) {
+                c = $('.slidey.active').height();
+                if (c < 340) {
+                    var minHeight = 340;
+                    $('.slidey.active').css('paddingTop', parseInt((minHeight-c)/2));
+                    c = minHeight;
+                }
+            }
+        }
 
 		if (c > 100) {
 			$('.slidey-wrap-all').stop(true).animate({
 				'height': c + 10
 			}, 0);
 		}
+
+		if ($scope.lastHeight > c-2 && $scope.lastHeight < c+2 && typeof $scope.lastHeight !== 'undefined') {
+			return;
+		}
+		$scope.lastHeight = c;
 
 		function getTotalHeight(el) {
 			if (!el || (typeof el === 'object' && el.length == 0)) return 0;
@@ -357,15 +341,44 @@ angular.module('App')
 		return newq
 	}
 
-	$rootScope.moveToQuestion = function (name, done) {
+	$rootScope.moveToQuestion = function (name, done, suppressLocation) {
+		if (typeof suppressLocation === 'undefined') suppressLocation = false;
 		// Start - Make sure to delete future questions if this answer has changed the path
   		// if this question doesn't set next, then its fine
   		// if this question does, then delete everything after
   		// this should happen when stuff moves
+
+  		var q = ($location.path()).toString().replace("/question/","");
+  		if ($rootScope.controls.lastLocation == 'results' && (q == 'Appliance' || q=='/questions/')) return;
+
+  		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile && q !== 'Appliance') {
+			$("html, body").animate({scrollTop: "51px"}, 400);
+		}
+
+		if ($rootScope.isTabletWidthOrLess && $rootScope.isMobile) {
+  			if ($location.path().indexOf('/questions/') == -1) {
+				$("html, body").animate({scrollTop: "51px"}, 400);
+			} else {
+				$("html, body").animate({scrollTop: "0px"}, 400);
+			}
+		}
+
+		if (!$rootScope.isTabletWidthOrLess && !$rootScope.isMobile && $location.path().indexOf('Appliance') != -1) {
+			$("html, body").animate({scrollTop: "125px"}, 400);
+		}
+
+		
+	  	var from = $location.path().split("/");
+	  	from = from[from.length-1];
+	  	if (from.length) $rootScope.navigateFrom = from;
+	  	$rootScope.navigateTo = name;
+
+
+
   		var hasNext = false
-  		if (!!$rootScope.questionsData.question) {
+  		if (!!$rootScope.questionsData && !!$rootScope.questionsData.question) {
 	  		angular.forEach($rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].show.answers, function (item, k) {
-	  			if ('next' in item) 
+	  			if ('next' in item)
 	  				hasNext = true
 	  		})
 	  		if ( !!hasNext ) {
@@ -373,7 +386,7 @@ angular.module('App')
 		  			if (item.order > $rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order) {
 		  				delete $rootScope.questionsData.scoringQuestions[item.name]
 		  			}
-		  		})  					
+		  		})
 	  		}
 	  	}
 		// End - Make sure to delete future questions if this answer has changed the path
@@ -392,9 +405,15 @@ angular.module('App')
 
   		if (!!$rootScope.questionsData.question) {
 			if ($rootScope.questionsData.question.name == 'Appliance') {
-  					for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
-  						$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
-  					}
+				//homepage
+				for (var j in $rootScope.questionsData.questions["Appliance"].text[0].answers) {
+					$rootScope.questionsData.questions["Appliance"].text[0].answers[j].answer = false;
+				}
+
+				if ($appstate.restored !== 'results') $appstate.clear();
+  				if (!suppressLocation) $location.replace().path("/question/"+name);
+			} else {
+				if (!suppressLocation) $location.path("/question/"+name);
 			}
 
 			$scope.show();
@@ -405,7 +424,7 @@ angular.module('App')
 	  			$rootScope.questionsData.scoringQuestions[$rootScope.questionsData.question.name].order = $rootScope.objSize($rootScope.questionsData.scoringQuestions);  				
   			}
   			$rootScope.questionsData.question.disabled=false
-  			$location.replace().path("/question/"+name);
+  			$appstate.restored = '';
 		} else {
 			$state.go('main.results')
 		}	
@@ -414,7 +433,7 @@ angular.module('App')
 
   	$rootScope.next = function (done) {
   		console.log($rootScope.questionsData);
-  		// console.log($rootScope.appliances);
+  		console.log($rootScope.appliances);
   		// console.log($rootScope.questionsData.questions);
   		$rootScope.showTooltip = false;
   		$rootScope.questionsData.question.disabled = true;
@@ -432,6 +451,7 @@ angular.module('App')
 		  		else if ("next" in hasAnswer) {
 		  			var name = hasAnswer.next
 		  		}
+
 		  		$rootScope.moveToQuestion(name,done)
 	  		} 
   		}, 100);
@@ -444,6 +464,7 @@ angular.module('App')
    	$rootScope.previous = function () {
    		$rootScope.questionsData.question.disabled = true;
   		$rootScope.controls.controlClicked = 'previous';
+  		$rootScope.showTooltip = false;
 
         // $timeout is a hacky way to make sure the above assignment propagates before
         // any animation takes place.
@@ -467,69 +488,21 @@ angular.module('App')
 
   	}
 
-  	//set questions to head
-  	if (!$rootScope.questionsData) {
-	 	$rootScope.controls = {}
-		$rootScope.controls.questionHasAnswer = false
-	  	$rootScope.questionsData = {}
-	  	$rootScope.questionsData.scoringQuestions = {};
-	  	$rootScope.questionsData.currentCount = null;
-	  	$rootScope.questionsData.questions = angular.copy($rootScope.brandData.questions)
-	  	
-	  	var count = 0
-
-	  	for(var q in $rootScope.hasanswers) {
-
-	  		if (!!$rootScope.hasanswers[q]) {
-	  			
-	  			var ans = $rootScope.hasanswers[q].split(";");
-
-	  			for (var t in $rootScope.questionsData.questions[q].text) {
-		  			for (var a in $rootScope.questionsData.questions[q].text[t].answers) {
-		  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = false;
-		  				if ($rootScope.questionsData.questions[q].text[t].type != "rank") {
-			  				if (ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value.toString()) != -1 ) {
-			  					// console.log($rootScope.questionsData.questions[q].text[t].answers[a]);
-			  					switch ($rootScope.questionsData.questions[q].text[t].type) {
-			  						case "slider-multiple":
-			  							if (t > 0) break;
-			  							$rootScope.questionsData.questions[q].text[0].answer = $rootScope.questionsData.questions[q].text[0].answers[a].value;
-			  							$rootScope.questionsData.questions[q].text[1].answer = parseInt(ans[1]);
-			  							$rootScope.questionsData.questions[q].text[1].answers[parseInt(ans[1])].answer = true;
-			  							break;
-			  						case "slider":
-			  							console.log($rootScope.questionsData.questions[q])
-			  							$rootScope.questionsData.questions[q].text[t].answer = $rootScope.questionsData.questions[q].text[t].answers[a].value;
-			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  							break;
-			  						default:
-			  							$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  							break;
-			  					}
-			  					$rootScope.questionsData.questions[q].text[t].answers[a].answer = true;
-			  				}
-			  			} else {
-			  				$rootScope.questionsData.questions[q].text[t].answers[a].answer = ans.indexOf($rootScope.questionsData.questions[q].text[t].answers[a].value)
-			  			}
-		  			}
-		  		}
-	  		} 
-	  		if ($rootScope.questionsData.questions[q]) {
-		  		$rootScope.questionsData.questions[q].show =  $rootScope.questionsData.questions[q].text[0]
-				$rootScope.questionsData.questions[q].order = count
-		  		$rootScope.questionsData.scoringQuestions[q] = $rootScope.questionsData.questions[q]
-	  		}
-
-	  		count++
-	  	}
-	  	console.log($rootScope.questionsData)
-	  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
-	  		$scope.recalculateResults()
-	  		//$state.go("main.results");
-	  	} else {
-	  		$rootScope.moveToQuestion("Appliance")
-	  	}
-	  	
+  	if ($rootScope.objSize($rootScope.hasanswers) > 0) {
+  		$scope.recalculateResults()
+  		//$state.go("main.results");
+  	} else {
+  		$rootScope.moveToQuestion("Appliance")
   	}
+
+  	if ($rootScope.restore) {
+  		$scope.moveToQuestion($rootScope.restore);
+  		delete $rootScope.restore;
+  	}
+
+  	//disable tooltip when clicking anywhere on the page
+  	$('html,body').click(function(e) {
+  		if(e.target.id != 'tooltip-glyph') $rootScope.showTooltip = false;
+  	});
 
 });

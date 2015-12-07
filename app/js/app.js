@@ -13,7 +13,9 @@ var nglibs = [
   'ui.sortable',
   'angularAwesomeSlider',
   'ngAnimate',
-  'angular-images-loaded'
+  'AppstateService',
+  'ApplianceDataDecoratorService',
+  'TestsService'
 ];
 
 var App = angular.module('App', nglibs);
@@ -22,7 +24,7 @@ App.constant('Modernizr', Modernizr);
 App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpProvider', 'localStorageServiceProvider', function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
     $locationProvider.html5Mode(false);
     //$urlRouterProvider.otherwise("/");
-    localStorageServiceProvider.setPrefix("MaytagQualifier_");
+    localStorageServiceProvider.setPrefix("MaytagQualifier");
 
     $stateProvider
       .state('loading', {
@@ -31,7 +33,7 @@ App.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$httpP
       }) 
       .state('print', {
         templateUrl: 'views/print.html',
-        url : "/print/:sku",
+        url : "/print/:sku&:color",
         controller: 'PrintCtrl'
       }) 
       .state('main', {
@@ -77,11 +79,11 @@ App.filter('rearrange', function() {
       var temp = items[0];
       items[0] = items[1];
       items[1] = temp;     
-      if (items[0].price > items[2].price) {
-        temp = items[0].price;
-        items[0].price = items[2].price;
-        items[2].price = temp;
-        items[2].price = temp;
+
+      if (parseFloat(items[0].colours[items[0].colours.length-1].prices.CAD) > parseFloat(items[2].colours[items[2].colours.length-1].prices.CAD)) {
+        temp = items[0];
+        items[0] = items[2];
+        items[2] = temp;
       }
       return items;
   };
@@ -94,12 +96,16 @@ App.filter('after', function() {
   };
 });
 
-App.filter('assignScore', function() {
+App.filter('assignScore', function($rootScope) {
   return function(items, appliance) {
       angular.forEach(items, function(item) {
         if (item.featureKey in appliance) {
           if (!!appliance[item.featureKey]) {
-            item.score = 2;
+            if (item.featureKey in $rootScope.questionsData.currentScore && !!$rootScope.questionsData.currentScore[item.featureKey]) {
+              item.score = $rootScope.questionsData.currentScore[item.featureKey] + 3;
+            } else {
+              item.score = 2;
+            }
           } else if (!!item.top3) {
             item.score = 1;
           }
@@ -109,6 +115,7 @@ App.filter('assignScore', function() {
           item.score = 0;
         }
       });          
+
       return items;
   };
 });
@@ -126,13 +133,14 @@ App.filter('nextQuestions', function($rootScope, $filter) {
     }
     var nextQuestions = []
     var t = null
-    if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) return;
-    var l = $rootScope.objSize($rootScope.questionsData.scoringQuestions)
-    angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
-      if (item.order == l) {
-        t = item
-      }
-    })
+    var l = !$rootScope.questionsData ? 0 : $rootScope.objSize($rootScope.questionsData.scoringQuestions);
+    if (l) {
+      angular.forEach($rootScope.questionsData.scoringQuestions, function (item, k) {
+        if (item.order == l) {
+          t = item
+        }
+      })
+    }
     while (!!t) {
       var nn = null
       if ('next' in t) {
@@ -196,12 +204,16 @@ App.filter('byPrice', function($rootScope) {
 
 // New byPrice works by re-ranking the results, prices within the range are ranked, then prices without
 
-App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location) {
-
+App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr', '$location', '$appstate', '$dataDecorator', '$tests', function ($rootScope, $state, $resource, localStorageService, Modernizr, $location, $appstate, $dataDecorator, $tests) {
+    $location.path('');
     $state.go('loading');
-    localStorageService.clearAll();
 
     $rootScope.resultsTouched = false;
+
+    $rootScope.atResultsPage = false;
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $rootScope.atResultsPage = toState.name.indexOf('results') != -1;
+    });
 
     $rootScope.safeApply = function(fn) {
       var phase = this.$root.$$phase;
@@ -247,7 +259,7 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
     
-    $rootScope.locale = 'en_CA';
+    $rootScope.locale = $('html').attr('lang') + '_CA';
     $rootScope.isEnglish = $rootScope.locale == 'en_CA';
     $rootScope.isFrench = $rootScope.locale == 'fr_CA';
     $rootScope.brand = "maytag";
@@ -264,133 +276,16 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
             "img/slider-pointer.png"
           ];
 
-          $resource("http://mymaytag.wpc-stage.com/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
-                $rootScope.appliances = res.products;
-// console.log(res.products);
-                var relcodes = {
-                  'M1' : 'DC',
-                  'WH' : 'DW'
-                }
-                angular.forEach( $rootScope.appliances, function (item, key) { 
-                  if ($rootScope.brand == "maytag") {
-
-                      if ($rootScope.appliances[key].appliance == "Washers") {
-
-                        for (var i in item.colours) {
-                          //$rootScope.appliances[key].colours[i].colourCode = $rootScope.appliances[key].colours[i].code;
-                          /*if ($rootScope.appliances[key].image.search(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
-                            $rootScope.appliances[key].colours[i].image = $rootScope.appliances[key].image
-                          } else {
-                            $rootScope.appliances[key].colours[i].image = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png"
-                          }*/
-
-                          for (var j in item.dryers[0].colours) {
-                            if (item.dryers[0].colours[j].colourCode == item.colours[i].colourCode) {
-                              item.colours[i].dryersku = item.dryers[0].colours[j].sku;
-                            }
-                          }
-
-                          /*if (!!!$rootScope.appliances[key].dryerImage && $rootScope.appliances[key].dryers[0].image.indexOf(relcodes[$rootScope.appliances[key].colours[i].colourCode]) != -1) {
-                              $rootScope.appliances[key].dryerImage = $rootScope.appliances[key].dryers[0].image;
-                          } else {
-                              $rootScope.appliances[key].dryerImage = "digitalassets/No%20Image%20Available/Standalone_1100X1275.png";
-                          }*/
-                        }
-
-                        $rootScope.appliances[key].price = parseFloat(item.colours[0].prices.CAD);
-
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 6.1) {
-                            $rootScope.appliances[key].largestCapacity = true
-                          } 
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 5.2) {
-                            $rootScope.appliances[key].largerCapacity = true
-                          }
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 5) {
-                            $rootScope.appliances[key].largeCapacity = true
-                          }
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 4.8) {
-                            $rootScope.appliances[key].mediumCapacity = true
-                          }                    
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 4.2) {
-                            $rootScope.appliances[key].smallCapacity = true
-                          }
-
-                      } else if ($rootScope.appliances[key].appliance == "Dishwashers") {
-                        $rootScope.appliances[key]["placeSettings"+$rootScope.appliances[key].placeSettings.toString()] = true
-                        $rootScope.appliances[key].quiet = false
-                        if (parseFloat($rootScope.appliances[key].decibels) <= 47) {
-                          $rootScope.appliances[key].quiet = true
-                        }
-                      } else if ($rootScope.appliances[key].appliance == "Fridges") {
-                        if ($rootScope.appliances[key].height <= 66) {
-                          $rootScope.appliances[key]["height66"] = true
-                        } else if ($rootScope.appliances[key].height <= 67) {
-                          $rootScope.appliances[key]["height67"] = true
-                        } else if ($rootScope.appliances[key].height <= 68) {
-                          $rootScope.appliances[key]["height68"] = true
-                        } else if ($rootScope.appliances[key].height <= 69) {
-                          $rootScope.appliances[key]["height69"] = true
-                        } else if ($rootScope.appliances[key].height <= 70) {
-                          $rootScope.appliances[key]["height70"] = true
-                        } else if ($rootScope.appliances[key].height <= 71) {
-                          $rootScope.appliances[key]["height71"] = true
-                        }
-                        if ($rootScope.appliances[key].width <= 30) {
-                          $rootScope.appliances[key]["width30"] = true
-                        } else if ($rootScope.appliances[key].width <= 31) {
-                          $rootScope.appliances[key]["width31"] = true
-                        } else if ($rootScope.appliances[key].width <= 32) {
-                          $rootScope.appliances[key]["width32"] = true
-                        } else if ($rootScope.appliances[key].width <= 33) {
-                          $rootScope.appliances[key]["width33"] = true
-                        } else if ($rootScope.appliances[key].width <= 34) {
-                          $rootScope.appliances[key]["width34"] = true
-                        } else if ($rootScope.appliances[key].width <= 35) {
-                          $rootScope.appliances[key]["width35"] = true
-                        } else if ($rootScope.appliances[key].width <= 36) {
-                          $rootScope.appliances[key]["width36"] = true
-                        }
-                      } else if ($rootScope.appliances[key].appliance == "Cooking") {
-                        if ($rootScope.appliances[key].type == "Ovens") {
-                          if ($rootScope.appliances[key].width <= 27) {
-                            $rootScope.appliances[key]["width27"] = true
-                          } else if ($rootScope.appliances[key].width <= 30) {
-                            $rootScope.appliances[key]["width30"] = true
-                          } 
-                        } 
-                        else if ($rootScope.appliances[key].type == "Ranges") {
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 6.7) {
-                            $rootScope.appliances[key].largestCapacity = true
-                          } 
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 6.4) {
-                            $rootScope.appliances[key].largerCapacity = true
-                          }
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 6.2) {
-                            $rootScope.appliances[key].largeCapacity = true
-                          }
-                          if (parseFloat($rootScope.appliances[key].capacity) >= 5.8) {
-                            $rootScope.appliances[key].mediumCapacity = true
-                          }                    
-                        }
-                      } 
-                    }
-                })
-
-console.log($rootScope.appliances);
-                $rootScope.hasanswers = {};
-                var httpparams = (decodeURI($location.$$absUrl)).replace(/\+/g, ' ').split("?");
-                if (1 in httpparams) {
-                  var loophttpparams = httpparams[1].split("&");
-                  for (var l in loophttpparams) {
-                    var inst = loophttpparams[l].split("=");
-                    $rootScope.hasanswers[inst[0]] = inst[1];
-                  }
-                }
-                  if ('sku' in $rootScope.hasanswers) {
-                    $state.go('print',{"sku": $rootScope.hasanswers['sku']});
-                  } else {
-                    $state.go('main.questions');
-                  }
+          // @if ENV='development'
+          var host = "http://mymaytag.wpc-stage.com";
+          // @endif
+          // @if ENV='production'
+          var host = $appstate.host();
+          // @endif
+          $resource(host+"/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
+                $rootScope.appliances = $dataDecorator(res.products);
+                $appstate.restore();
+                $tests.init($rootScope.appliances,$rootScope.brandData.questions);
           }, function () {
               $rootScope.errorMessage = "We're having connectivity issues. Please reload."
           });
@@ -398,5 +293,3 @@ console.log($rootScope.appliances);
       $rootScope.errorMessage = "We're having connectivity issues. Please reload."
     });
   }]);
-
-//angular.bootstrap(document, ["App"]);

@@ -1,11 +1,31 @@
 'use strict';
 angular.module('App')
-  .controller('ShareCtrl', function ($scope, $rootScope) {		
-  }).directive('share', function() {
+  .controller('ShareCtrl', ['$scope', '$rootScope', '$appstate', '$interval', function ($scope, $rootScope, $appstate, $interval) {		
+    $scope.appURL = $appstate.host();
+
+    $scope.openTwitterWindow = function() {
+      var width  = 575,
+          height = 400,
+          left   = ($(window).width()  - width)  / 2,
+          top    = ($(window).height() - height) / 2,
+          url    = 'http://twitter.com/share?' + 'text=' + $rootScope.brandData.apptext.twitterDesc + '&url=' + $scope.appURL,
+          opts   = 'status=1' +
+                   ',width='  + width  +
+                   ',height=' + height +
+                   ',top='    + top    +
+                   ',left='   + left;
+      window.open(url, 'twitter', opts);
+    }
+
+    $scope.openFacebookWindow = function() {
+      FB.ui({method: 'share', href: $scope.appURL}, function(response){});
+    }
+
+  }]).directive('share', function() {
     return {
       restrict: 'E',
       templateUrl: 'views/social.html',
-      link: function(scope, element, attrs) {
+      link: function($scope, element, attrs) {
         var shareIcon = $(element).find('.icon-share');
         //on main icon click, show menu
         $(shareIcon).on('click', function(e) {

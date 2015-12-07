@@ -6,7 +6,7 @@
          "previous": "Previous",
          "next": "Next",
          "results": "RÉSULTATS",
-         "msrp": "MSRP",
+         "msrp": "PDSF",
          "oneLastStep": "RÉVISEZ VOTRE FOURCHETTE DE PRIX AFIN DE PRÉCISER VOS RÉSULTATS",
          "moreInfo": "Informations supplémentaires",
          "print": "Impression",
@@ -19,12 +19,28 @@
          "changeYourAnswer": "Cliquez sur une icône pour modifier votre réponse",
          "startover": "Recommencer",
          "backtoresults": "Retour aux<br />Résultats",
-        "emailAddress" : "Email Address",
-        "personalMessage" : "Personal Message",
-        "submit" : "Submit",
-        "close" : "Close",
-        "emailModalTitle" : "Email Your Results",
-        "friendsName" : "Your Friend's Name"
+        "submit" : "Envoyer",
+        "close" : "Fermer",
+        "goBack" : "Retourner",
+        "emailModalTitle" : "Envoyez vos résultats par courriel",
+        "emailNameTitle" : "Pour :",
+        "emailNamePlaceholder" : "Nom",
+        "emailAddressTitle" : "À partir de :",
+        "emailAddressPlaceholder" : "ami@email.com",
+        "emailSubject" : "J'ai trouvé le(a) parfait(e) {{appliance}} et souhaiterais partager cela avec toi.",
+        "emailMessage" : "C'est difficile de trouver l'électroménager idéal. Mais en utilisant le nouvel outil de sélection de Maytag, j'ai simplement répondu à quelques questions et j'ai trouvé le(a) {{appliance}} idéal(e) pour mon style de vie. J’aimerais partager mes résultats ainsi que le lien pour que tu puisses l'explorer toi aussi.\r\n\r\nEssaie par toi-même ici : {{fakelink}}",
+        "emailMessagePlaceholder" : "Saisir un message",
+        "emailMessageSent" : "Votre message a bien été envoyé",
+        "emailMessageError" : "There was an error(fr)",
+        "emailFakeLink" : "TrouverMon.Maytag.ca/Results",
+        "nextQuestionAlt" : "Navigate to next question",
+        "previousQuestionAlt" : "Navigate to previous question",
+        "facebookTitle" : "FIND YOUR PERFECT APPLIANCE(fr)",
+        "facebookDesc" : "(fr)My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and features you need.",
+        "facebookImage" : "/img/social.jpg",
+        "twitterTitle" : "",
+        "twitterDesc" : "(fr)My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and need.",
+        "twitterImage" : "/img/social-fr.jpg"
      },
      "questions": {
          "Appliance": {
@@ -33,22 +49,24 @@
              "thumbnail_text": "Appliance",
              "thumbnail_text_fr": "Éléctroménager",
              "text": [{
-                 "question": "QUE POUVONS-NOUS VOUS AIDER À TROUVER?",
+                 "question": "Que pouvons-nous vous aider à trouver?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "type": "categories-click",
                  "oneAnswer": true,
                  "answers": [{
                      "text": "Appareils de lessive",
-                     "value": "Washers",
+                     "value": "Laundry",
                      "displayName": "Appareils de lessive",
                      "classes": "category laundry",
                      "image": "img/start-laundry.png",
+                     "image_alt" : "Maytag Man - Washer and Dryer",
                      "hover": "img/start-laundry-hover.png",
+                     "image_hover_alt" : "Maytag Washer and Dryer",
                      "thumbnail": "img/cat-laundry.jpg",
                      "thumbnail_current": "img/cat-laundry.jpg",
-                     "thumbnail_text": "Washers",
+                     "thumbnail_text": "Laundry",
                      "thumbnail_text_fr": "Appareils de lessive",
-                     "next": "Washers - Energy",
+                     "next": "Laundry - Energy",
                      "scoring": {
                          "appliance": "Washers"
                      },
@@ -56,10 +74,12 @@
                  }, {
                      "text": "Appareils de cuisson",
                      "value": "Stove",
-                     "displayName": "Appareils de cuisson",
+                     "displayName": "Cooking",
                      "classes": "category cooking",
                      "image": "img/start-stove.png",
+                     "image_alt" : "Maytag Man - Cooking",
                      "hover": "img/start-stove-hover.png",
+                     "image_hover_alt" : "Maytag Man - Cooking",
                      "thumbnail": "img/walloven-double.jpg",
                      "thumbnail_current": "img/walloven-double.jpg",
                      "thumbnail_text": "Cooking",
@@ -75,7 +95,9 @@
                      "displayName": "Réfrigérateurs",
                      "classes": "category fridge",
                      "image": "img/start-fridge.png",
+                     "image_alt" : "Maytag Man - Refrigerator",
                      "hover": "img/start-fridge-hover.png",
+                     "image_hover_alt" : "Maytag Man - Refrigerator",
                      "thumbnail": "img/cat-fridge.jpg",
                      "thumbnail_current": "img/cat-fridge.jpg",
                      "thumbnail_text": "Fridge",
@@ -91,7 +113,9 @@
                      "displayName": "Lave-vaisselle",
                      "classes": "category dishwasher",
                      "image": "img/start-dishwasher.png",
+                     "image_alt" : "Maytag Man - Dishwasher",
                      "hover": "img/start-dishwasher-hover.png",
+                     "image_hover_alt" : "Maytag Man - Dishwasher",
                      "thumbnail": "img/cat-dishwasher.jpg",
                      "thumbnail_current": "img/cat-dishwasher.jpg",
                      "thumbnail_text": "Dishwasher",
@@ -112,7 +136,7 @@
              "thumbnail_text_fr": "Cuisiner",
              "thumbnail_current": "img/nav-placeholder-current.png",
              "text": [{
-                 "question": "QUEL PRODUIT AIMERIEZ-VOUS EXPLORER EN PREMIER?",
+                 "question": "Quel produit aimeriez-vous explorer en premier?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "type": "categories",
                  "oneAnswer": true,
@@ -122,6 +146,7 @@
                      "displayName": "Cuisinières",
                      "classes": "sub-category ranges",
                      "image": "img/cooking-range.png",
+                     "image_alt" : "Maytag - Ranges",
                      "thumbnail": "img/cat-cooking-sub-free-range-1-electric.jpg",
                      "thumbnail_current": "img/cat-cooking-sub-free-range-1-electric.jpg",
                      "thumbnail_text": "Range",
@@ -137,6 +162,7 @@
                      "displayName": "Fours encastrés",
                      "classes": "sub-category wallovens",
                      "image": "img/cooking-walloven.png",
+                     "image_alt" : "Maytag - Wall Ovens",
                      "thumbnail": "img/walloven-single.jpg",
                      "thumbnail_current": "img/walloven-single.jpg",
                      "thumbnail_text": "Wall Oven",
@@ -151,14 +177,14 @@
              "category": "aesthetics"
          },
          "Cooking - Wall Ovens - Size": {
-             "next": "Cooking - Wall Ovens - Style",
+             "next": "Cooking - Wall Ovens - Orientation",
              "previous": "Cooking - Pre-Qualifier 1",
              "thumbnail_type": "image",
              "thumbnail_text": "Size",
              "thumbnail_text_fr": "Taille",
              "thumbnail_current": "img/icon-size-current.png",
              "text": [{
-                 "question": "NOUS AVONS LE four encastré PARFAIT POUR VOTRE FAMILLE.",
+                 "question": "Nous avons le four encastré parfait pour votre famille.",
                  "questionHideOnMobile": true,
                  "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
@@ -188,7 +214,7 @@
                         "thumbnail_current" : "img/icon-size-current.png",
                         "value" : 1,
                         "scoring" : {
-                            "width27" : 1,
+                            "width27" : 10,
                             "width28" : -30,
                             "width29" : -30,
                             "width30" : -30
@@ -202,19 +228,19 @@
                             "width27" : -30,
                             "width28" : -30,
                             "width29" : -30,
-                            "width30" : 1
+                            "width30" : 10
                         }
                     }
                  }
              }]
          },
-         "Cooking - Wall Ovens - Style": {
-             "next": "Cooking - Wall Ovens - Cooking Style",
+         "Cooking - Wall Ovens - Orientation": {
+             "next": "Cooking - Wall Ovens - Features 1",
              "previous": "Cooking - Wall Ovens - Size",
              "thumbnail_type": "image",
-             "thumbnail_text": "Features",
+             "thumbnail_text": "Orientation",
              "thumbnail_text_fr": "Caractéristiques",
-             "thumbnail_current": "img/icon-features-current.png",
+             "thumbnail_current": "img/icon-orientation-current.png",
              "text": [{
                  "question": "Quel style de four encastré recherchez-vous?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
@@ -229,8 +255,9 @@
                      "text": "Simple",
                      "value": "single",
                      "image": "img/Cooking-Q2-single.png",
+                     "image_alt" : "Wall Oven Style - Single Oven",
                      "scoring": {
-                         "single": 1
+                         "single": 5
                      },
                      "order": 1
                  }, {
@@ -239,8 +266,9 @@
                      "text": "Combiné avec four à micro-ondes",
                      "value": "combo",
                      "image": "img/Cooking-Q2-combo.png",
+                     "image_alt" : "Wall Oven Style - Combo Oven",
                      "scoring": {
-                         "combination": 1
+                         "combination": 5
                      },
                      "order": 2
                  }, {
@@ -249,32 +277,34 @@
                      "text": "Double",
                      "value": "double",
                      "image": "img/Cooking-Q2-double.png",
+                     "image_alt" : "Wall Oven Style - Double Oven",
                      "scoring": {
-                         "double": 1
+                         "double": 5
                      },
                      "order": 3
                  }, {
                      "thumbnail": "img/icon-features.png",
                      "thumbnail_current": "img/icon-features-current.png",
-                     "text": "No Preference(fr)",
+                     "text": "Pas de préférence",
                      "value": "nopreference",
                      "image": "img/Cooking-Q2-nopreference.png",
+                     "image_alt" : "Wall Oven Style - No Preference",
                      "scoring": {
                      },
                      "order": 4
                  }
-                 ]
+                ]
              }]
          },
-         "Cooking - Wall Ovens - Cooking Style": {
-             "next": "Cooking - Wall Ovens - Usage",
-             "previous": "Cooking - Wall Ovens - Style",
+         "Cooking - Wall Ovens - Features 1": {
+             "next": "Cooking - Wall Ovens - Features 2",
+             "previous": "Cooking - Wall Ovens - Orientation",
              "thumbnail_type": "image",
-             "thumbnail_text": "Style",
-             "thumbnail_text_fr": "Style",
-             "thumbnail_current": "img/icon-style-current.png",
+             "thumbnail_text": "Features",
+             "thumbnail_text_fr": "Caractéristiques",
+             "thumbnail_current": "img/icon-features-current.png",
              "text": [{
-                 "question": "COMMENT VOTRE FAMILLE VOUS DÉCRIRAIT-ELLE?",
+                 "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CUISINE?",
                  "explanation": "Tous nos fours sont dotés de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre four afin de pouvoir recommander celui qui convient à votre style de vie.",
@@ -290,9 +320,7 @@
                              "trueConvection": 1
                          },
                          "order": 1
-                     },
-
-                     {
+                     }, {
                          "thumbnail": "img/icon-convection.png",
                          "thumbnail_current": "img/icon-convection-current.png",
                          "text": "\"Quelqu’un qui adore essayer de nouvelles recettes.\"",
@@ -328,15 +356,15 @@
                  ]
              }]
          },
-         "Cooking - Wall Ovens - Usage": {
+         "Cooking - Wall Ovens - Features 2": {
              "next": "Cooking - Wall Ovens - Energy",
-             "previous": "Cooking - Wall Ovens - Cooking Style",
+             "previous": "Cooking - Wall Ovens - Features 1",
              "thumbnail_type": "image",
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "thumbnail_current": "img/icon-features-current.png",
              "text": [{
-                 "question": "J’UTILISE MON FOUR POUR…",
+                 "question": "J’utilise mon four pour…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’UTILISATION?",
                  "explanation": "Nos fours sont tous dotés de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celui qui convient à vos besoins en matière de cuisson.",
@@ -348,7 +376,7 @@
                      "text": "Réchauffer des restes et des repas congelés",
                      "value": "reheat",
                      "scoring": {
-                         "warmingDrawer": 1
+                         "powerPreheat" : 1
                      },
                      "order": 1
                  }, {
@@ -356,7 +384,10 @@
                      "thumbnail_current": "img/icon-features-current.png",
                      "text": "Faire cuire des repas pour ma famille active",
                      "value": "multiple meals",
-                     "scoring": {},
+                     "scoring": {
+                        "double": 1,
+                        "powerPreheat": 1
+                     },
                      "order": 2
                  }, {
                      "thumbnail": "img/icon-features.png",
@@ -364,7 +395,7 @@
                      "text": "M’aider à recevoir et à faire cuire des repas à plusieurs services",
                      "value": "host parties",
                      "scoring": {
-                         "double": 1
+                         "combination" : 1
                      },
                      "order": 3
                  }, {
@@ -373,7 +404,7 @@
                      "text": "Réaliser à répétition des œuvres de boulangerie/pâtisserie",
                      "value": "perfect",
                      "scoring": {
-                         "gas": 1
+                         "trueConvection" : 1
                      },
                      "order": 4
                  }]
@@ -381,7 +412,7 @@
          },
          "Cooking - Wall Ovens - Energy": {
              "next": null,
-             "previous": "Cooking - Wall Ovens - Usage",
+             "previous": "Cooking - Wall Ovens - Features 2",
              "thumbnail_type": "image",
              "thumbnail_text": "Energy",
              "thumbnail_text_fr": "Énergie",
@@ -435,7 +466,7 @@
              }]
          },
          "Cooking - Ranges - Energy": {
-             "next": "Cooking - Ranges - Style",
+             "next": "Cooking - Ranges - Style 1",
              "previous": "Cooking - Pre-Qualifier 1",
              "thumbnail_type": "image",
              "thumbnail_text": "Energy",
@@ -489,18 +520,18 @@
                  }
              }]
          },
-         "Cooking - Ranges - Style" : {
+         "Cooking - Ranges - Style 1" : {
             "next" : "Cooking - Ranges - Capacity",
             "previous" : "Cooking - Ranges - Energy",
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-style-current.png",
-            "thumbnail_text" : "Style (fr)",
+            "thumbnail_text" : "Style",
             "text" : [
                 {
-                    "question" : "What style of range do you prefer? (fr)",
-                    "sub_question" : "Select one",
-                    "explanation_title" : "Why are you asking me about style (fr)?",
-                    "explanation" : "Finding the perfect fit for your home's style is as important for us as it is for you. (fr)",
+                    "question" : "Quel style de cuisinière préférez-vous?",
+                    "sub_question" : "Sélectionnez",
+                    "explanation_title" : "Pourquoi me posez-vous une question sur le style?",
+                    "explanation" : "Saviez-vous que les cuisines professionnelles comportent habituellement des cuisinières à commandes frontales? Une fois que nous comprenons vos préférences en matière de style, nous pouvons recommander la table de cuisson parfaite pour vous.",
                     "type" : "boxes-picture-3-radio",
                     "oneAnswer" : true,
                     "answers" : [
@@ -508,9 +539,11 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-frontcontrol.jpg",
-                            "text" : "Front Control (fr)",
+                            "image_alt" : "Range Style - Front Control",
+                            "text" : "Commandes frontales",
                             "value" : "FrontControl",
                             "scoring" : {
+                                "frontControl": 15
                             },
                             "order" : 1
                         },
@@ -518,9 +551,11 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-rearcontrol.jpg",
-                            "text" : "Rear Control (fr)",
+                            "image_alt" : "Range Style - Rear Control",
+                            "text" : "Panneau de commandes arrière",
                             "value" : "BackControl",
                             "scoring" : {
+                                "rearControl": 15
                             },
                             "order" : 2
                         },
@@ -528,9 +563,11 @@
                             "thumbnail" : "img/icon-orientation.png",
                             "thumbnail_current" : "img/icon-orientation-current.png",
                             "image" : "img/Range-Q2-nopreference.jpg",
-                            "text" : "No Preference (fr)",
+                            "image_alt" : "Range Style - No Preference",
+                            "text" : "Pas de préférence",
                             "value" : "NoPreference",
                             "scoring" : {
+                                "frontControl": 5
                             },
                             "order" : 3
                         }
@@ -539,14 +576,14 @@
             ]
         },
          "Cooking - Ranges - Capacity": {
-             "next": "Cooking - Ranges - Cooking Style",
-             "previous": "Cooking - Ranges - Style",
+             "next": "Cooking - Ranges - Cooking Style 2",
+             "previous": "Cooking - Ranges - Style 1",
              "thumbnail_type": "image",
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "thumbnail_current": "img/icon-capacity-current.png",
              "text": [{
-                 "question": "à quelle fréquence RÉALISEZ-VOUS QUE VOUS AURIEZ besoin d’espace supplémentaire dans votre four?",
+                 "question": "À quelle fréquence réalisez-vous que vous auriez besoin d’espace supplémentaire dans votre four?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la capacité?",
                  "explanation": "Si vous préparez souvent de grands repas, nous vous recommanderions alors un four d’une plus grande capacité.",
@@ -575,7 +612,7 @@
                          "value": 1,
                          "text": "UNIQUEMENT PENDANT LES FÊTES",
                          "scoring": {
-                             "mediumCapacity": 1
+                             "mediumCapacity": 5
                          }
                      },
                      "2": {
@@ -584,7 +621,7 @@
                          "value": 2,
                          "text": "plusieurs fois par an",
                          "scoring": {
-                             "largeCapacity": 1
+                             "largeCapacity": 5
                          }
                      },
                      "3": {
@@ -593,13 +630,13 @@
                          "value": 3,
                          "text": "très souvent",
                          "scoring": {
-                             "largestCapacity": 1
+                             "largerCapacity": 5
                          }
                      }
                  }
              }]
          },
-         "Cooking - Ranges - Cooking Style": {
+         "Cooking - Ranges - Cooking Style 2": {
              "next": "Cooking - Ranges - Convection",
              "previous": "Cooking - Ranges - Capacity",
              "thumbnail_type": "image",
@@ -607,7 +644,7 @@
              "thumbnail_text": "Style",
              "thumbnail_text_fr": "Style",
              "text": [{
-                 "question": "POURQUOI CUISINEZ-VOUS?",
+                 "question": "Pourquoi cuisinez-vous?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Toutes nos cuisinières sont dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre cuisinière afin de pouvoir recommander celle qui convient le mieux à votre style de vie.",
@@ -619,7 +656,7 @@
                      "text": "Des rôtis du dimanche à la soirée des pâtes, ma famille compte sur moi pour la préparation du souper.",
                      "value": "family",
                      "scoring": {
-                         "maxCapacity": 1
+                         "powerPreheat" : 1
                      },
                      "order": 1
                  }, {
@@ -628,7 +665,10 @@
                      "text": "Fête d’anniversaire ou vacances familiales, je cuis dans ma cuisinière des gâteaux et festins en grand nombre.",
                      "value": "crowd",
                      "scoring": {
-                         "gas": 1
+                        "gas" : 1,
+                        "double": 1,
+                        "warmingDrawer": 1,
+                        "maxCapacity": 1
                      },
                      "order": 2
                  }, {
@@ -637,7 +677,8 @@
                      "text": "J’aime essayer des nouvelles recettes pour ma famille, j’ai donc besoin d’une cuisinière polyvalente.",
                      "value": "variety",
                      "scoring": {
-                         "maxCapacity": 1
+                        "powerPreheat" : 1,
+                        "double": 1
                      },
                      "order": 3
                  }, {
@@ -653,14 +694,14 @@
              }]
          },
          "Cooking - Ranges - Convection": {
-             "next": "Cooking - Ranges - Usage",
-             "previous": "Cooking - Ranges - Cooking Style",
+             "next": "Cooking - Ranges - Features",
+             "previous": "Cooking - Ranges - Cooking Style 2",
              "thumbnail_text": "Convection",
              "thumbnail_text_fr": "Convection",
              "thumbnail_current": "img/icon-convection-current.png",
              "thumbnail_type": "image",
              "text": [{
-                 "question": "COMMENT VOTRE FAMILLE VOUS DÉCRIRAIT-ELLE?",
+                 "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient parfaitement à vos besoins.",
@@ -710,7 +751,7 @@
                  }]
              }]
          },
-         "Cooking - Ranges - Usage": {
+         "Cooking - Ranges - Features": {
              "next": "Cooking - Ranges - Gas",
              "previous": "Cooking - Ranges - Convection",
              "thumbnail_type": "image",
@@ -718,7 +759,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "J’UTILISE MA CUISINIÈRE FOUR POUR…",
+                 "question": "J’utilise ma cuisinière four pour…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la cuisine?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient à vos besoins.",
@@ -730,7 +771,6 @@
                      "text": "Réchauffer des restes et des repas congelés",
                      "value": "reheat",
                      "scoring": {
-                         "warmingDrawer": 1,
                          "powerPreheat": 1
                      },
                      "order": 1
@@ -783,13 +823,13 @@
          },
          "Cooking - Ranges - Gas": {
              "next": null,
-             "previous": "Cooking - Ranges - Usage",
+             "previous": "Cooking - Ranges - Features",
              "thumbnail_text": "Fuel Type",
              "thumbnail_text_fr": "Type d’alimentation",
              "thumbnail_current": "img/icon-fueltype-current.png",
              "thumbnail_type": "image",
              "text": [{
-                 "question": "VOTRE CUISINE EST-ELLE ÉQUIPÉE POUR l’alimentation au gaz ou ÉLECTRIQUE?",
+                 "question": "Votre cuisine est-elle équipée pour l’alimentation au gaz ou électrique?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU GAZ?",
                  "explanation": "Certaines cuisines sont équipées pour l’alimentation au gaz, d’autres non. Nous avons besoin de connaître cette information pour recommander la cuisinière idéale.",
@@ -798,15 +838,23 @@
                  "answers": [{
                      "text": "Gaz",
                      "image": "img/icon-thumb-gas.png",
+                     "image_alt" : "Ranges - Gas",
                      "hover": "img/icon-thumb-gas-active.png",
+                     "image_hover_alt" : "Ranges - Gas Active",
                      "thumbnail": "img/icon-fueltype.png",
                      "thumbnail_current": "img/icon-fueltype-current.png",
                      "value": "yes",
+                     "scoring": {
+                         "gas": 5,
+                         "electric": -15                         
+                     },
                      "order": 1
                  }, {
                      "text": "Électrique",
                      "image": "img/icon-thumb-electric.png",
+                     "image_alt" : "Ranges - Electric",
                      "hover": "img/icon-thumb-electric-active.png",
+                     "image_hover_alt" : "Ranges - Electric Active",
                      "thumbnail": "img/icon-fueltype.png",
                      "thumbnail_current": "img/icon-fueltype-current.png",
                      "value": "no",
@@ -817,8 +865,8 @@
                  }]
              }]
          },
-         "Washers - Energy": {
-             "next": "Washers - Capacity 1",
+         "Laundry - Energy": {
+             "next": "Laundry - Capacity 1",
              "previous": "Appliance",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-energy-current.png",
@@ -872,15 +920,15 @@
                  }
              }]
          },
-         "Washers - Capacity 1": {
-             "next": "Washers - Noise",
-             "previous": "Washers - Energy",
+         "Laundry - Capacity 1": {
+             "next": "Laundry - Noise",
+             "previous": "Laundry - Energy",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-capacity-current.png",
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "combien de personnes votre FOYER compte-t-il?",
+                 "question": "Combien de personnes votre foyer compte-t-il?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la taille de ma famille?",
                  "explanation": "Tout comme votre famille, tous nos appareils sont uniques. Si nous comprenons un peu plus la composition de votre famille, nous pouvons recommander l’appareil qui est adapté aux besoins précis de votre foyer.",
@@ -908,7 +956,7 @@
                          "value": 2,
                          "text": "2",
                          "scoring": {
-                             "smallCapacity": 1
+                             "smallCapacity": 5
                          }
                      },
                      "3": {
@@ -917,7 +965,7 @@
                          "value": 3,
                          "text": "3",
                          "scoring": {
-                             "mediumCapacity": 1
+                             "mediumCapacity": 5
                          }
                      },
                      "4": {
@@ -926,7 +974,7 @@
                          "value": 4,
                          "text": "4",
                          "scoring": {
-                             "largeCapacity": 1
+                             "largeCapacity": 5
                          }
                      },
                      "5": {
@@ -935,7 +983,7 @@
                          "value": 5,
                          "text": "5",
                          "scoring": {
-                             "largerCapacity": 1
+                             "largerCapacity": 5
                          }
                      },
                      "6": {
@@ -944,58 +992,55 @@
                          "value": 6,
                          "text": "6+",
                          "scoring": {
-                             "largestCapacity": 1
+                             "largestCapacity": 5
                          }
                      }
                  }
              }]
          },
-         "Washers - Noise": {
-             "next": "Washers - Orientation",
-             "previous": "Washers - Capacity 1",
+         "Laundry - Noise": {
+             "next": "Laundry - Orientation",
+             "previous": "Laundry - Capacity 1",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-noise-current.png",
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "LES NIVEAUX DE BRUIT DE VOS APPAREILS DE LESSIVE SONT-ILS IMPORTANTS POUR VOUS?",
+                 "question": "Les niveaux de bruit de vos appareils de lessive sont-ils importants pour vous?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET Du bruit?",
                  "explanation": "Certains de nos appareils de lessive sont conçus précisément pour limiter le bruit. En comprenant vos besoins, nous pouvons trouver les appareils tout indiqués pour votre foyer.",
                  "type": "radio-4",
                  "oneAnswer": true,
                  "answers": [{
-                     "text": "Beaucoup – Nos appareils de lessive sont situés près d’une chambre à coucher",
+                     "text": "Beaucoup – nos appareils de lessive sont situés près d’une chambre à coucher",
                      "value": "sensitive",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
                      "scoring": {
-                         "soundGuard": 3,
-                         "vibrationControl": 3
+                         "vibrationControl": 5
                      },
                      "order": 1
                  }, {
-                     "text": "Modérément – Nos appareils de lessive sont situés près de notre pièce de séjour principale",
+                     "text": "Modérément – nos appareils de lessive sont situés près de notre pièce de séjour principale",
                      "value": "littlebit",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
                      "scoring": {
-                         "soundGuard": 2,
-                         "vibrationControl": 2
+                         "vibrationControl": 3
                      },
                      "order": 2
                  }, {
-                     "text": "Quelque peu – La plupart du temps, le bruit ne me dérange pas",
+                     "text": "Quelque peu – la plupart du temps, le bruit ne me dérange pas",
                      "value": "moderately",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
                      "scoring": {
-                         "soundGuard": 1,
                          "vibrationControl": 1
                      },
                      "order": 4
                  }, {
-                     "text": "Pas du tout – Mes appareils de lessive sont au sous-sol",
+                     "text": "Pas du tout – mes appareils de lessive sont au sous-sol",
                      "value": "unconcerned",
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
@@ -1004,13 +1049,13 @@
                  }]
              }]
          },
-         "Washers - Orientation": {
-             "next": "Washers - Speed",
-             "previous": "Washers - Noise",
+         "Laundry - Orientation": {
+             "next": "Laundry - Speed",
+             "previous": "Laundry - Noise",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-orientation-current.png",
              "thumbnail_text": "Orientation",
-             "thumbnail_text_fr": "Configuration",
+             "thumbnail_text_fr": "Orientation",
              "text": [{
                  "question": "Quelle configuration préférez-vous pour vos appareils de lessive?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
@@ -1022,43 +1067,48 @@
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4-stacked.jpg",
-                     "text": "LAVEUSE ET SÉCHEUSE SUPERPOSÉES",
+                     "image_alt" : "Laundry - Stacked",
+                     "text": "Laveuse et sécheuse superposées",
                      "value": "Stacked",
                      "scoring": {
-                         "frontLoad": 1,
-                         "stacked": 1
+                         "frontLoad": 10,
+                         "stacked": 5
                      },
                      "order": 1
                  }, {
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4-side-by-side.jpg",
-                     "text": "LAVEUSE ET SÉCHEUSE CÔTE À CÔTE",
+                     "image_alt" : "Laundry - Side-by-Side",
+                     "text": "Laveuse et sécheuse côte à côte",
                      "value": "Side-By-Side",
                      "scoring": {
-                         "topLoad": 1
+                         "topLoad": 10
                      },
                      "order": 2
                  }, {
                      "thumbnail": "img/icon-orientation.png",
                      "thumbnail_current": "img/icon-orientation-current.png",
                      "image": "img/Laundry-Q4no-preference.jpg",
-                     "text": "PAS DE PRÉFÉRENCE",
+                     "image_alt" : "Laundry - No Preference",
+                     "text": "Pas de préférence",
                      "value": "No Preference",
-                     "scoring": {},
+                     "scoring": {
+                        "topLoad" : 5
+                     },
                      "order": 3
                  }]
              }]
          },
-         "Washers - Speed": {
-             "next": "Washers - Fabrics",
-             "previous": "Washers - Orientation",
+         "Laundry - Speed": {
+             "next": "Laundry - Fabrics",
+             "previous": "Laundry - Orientation",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-speed-current.png",
              "thumbnail_text": "Speed",
              "thumbnail_text_fr": "Rapidité",
              "text": [{
-                 "question": "deVEZ-VOUS SOUVENT LAVER ET FAIRE SÉCHER DES ARTICLES EN MOINS D’UNE HEURE?",
+                 "question": "Devez-vous souvent laver et faire sécher des articles en moins d’une heure?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU TEMPS DE SÉCHAGE?",
                  "explanation": "Certains de nos appareils de lessive sont conçus précisément pour vous faire franchir la porte en un temps record. En comprenant vos besoins, nous pouvons trouver l’appareil le mieux adapté à votre style de vie.",
@@ -1070,8 +1120,7 @@
                      "text": "Oui, nous sommes toujours sur la brèche",
                      "value": "yes",
                      "scoring": {
-                         "rapidWash": 3,
-                         "rapidDry": 3
+                         "rapidWash": 3
                      },
                      "order": 1
                  }, {
@@ -1080,8 +1129,7 @@
                      "text": "Parfois, entre l’école et l’entraînement",
                      "value": "sometimes",
                      "scoring": {
-                         "rapidWash": 2,
-                         "rapidDry": 2
+                         "rapidWash": 2
                      },
                      "order": 2
                  }, {
@@ -1090,8 +1138,7 @@
                      "text": "Seulement lorsqu’un liquide est accidentellement renversé",
                      "value": "not often",
                      "scoring": {
-                         "rapidWash": 1,
-                         "rapidDry": 1
+                         "rapidWash": 1
                      },
                      "order": 3
                  }, {
@@ -1104,15 +1151,15 @@
                  }]
              }]
          },
-         "Washers - Fabrics": {
-             "next": "Washers - Sensor",
-             "previous": "Washers - Speed",
+         "Laundry - Fabrics": {
+             "next": "Laundry - Sensor",
+             "previous": "Laundry - Speed",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-fabric-current.png",
              "thumbnail_text": "Fabric",
              "thumbnail_text_fr": "Tissus",
              "text": [{
-                 "question": "QUELLES SORTES DE TISSUS LAVEZ-VOUS ENSEMBLE?",
+                 "question": "Quelles sortes de tissus lavez-vous ensemble?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DEs tissus?",
                  "explanation": "Tout le monde fait sa lessive différemment. En comprenant la façon dont vous triez les tissus, nous serons mieux en mesure de proposer des options de programme adaptées à votre style de vie et vos besoins précis.",
@@ -1124,7 +1171,7 @@
                      "text": "Denim",
                      "value": "denim",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 1
                  }, {
@@ -1133,7 +1180,7 @@
                      "text": "Vêtements de gymnastique",
                      "value": "gym clothes",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 2
                  }, {
@@ -1142,7 +1189,7 @@
                      "text": "Tissus légers",
                      "value": "delicates",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 3
                  }, {
@@ -1151,7 +1198,7 @@
                      "text": "Collants de ballet",
                      "value": "ballet tights",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 4
                  }, {
@@ -1160,7 +1207,7 @@
                      "text": "Serviettes",
                      "value": "towels",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 5
                  }, {
@@ -1169,7 +1216,7 @@
                      "text": "Vêtements de tous les jours",
                      "value": "everyday wear",
                      "scoring": {
-                         "cycleOptions": 1
+                         "cycleOptions11": 1
                      },
                      "order": 6
                  }]
@@ -1211,21 +1258,27 @@
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "text": "RELATIVEMENT IMPORTANTE",
-                         "scoring": {}
+                         "scoring": {
+                             "energyStar": 1
+                         }
                      },
                      "2": {
                          "value": 2,
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "text": "FONDAMENTALE",
-                         "scoring": {}
+                         "scoring": {
+                             "energyStar": 2
+                         }
                      },
                      "3": {
                          "value": 3,
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "text": "TRÈS IMPORTANTE",
-                         "scoring": {}
+                         "scoring": {
+                             "energyStar": 3
+                         }
                      }
                  }
              }]
@@ -1238,9 +1291,9 @@
              "thumbnail_text": "Size",
              "thumbnail_text_fr": "Taille",
              "text": [{
-                 "question": "NOUS AVONS LE RÉFRIGÉRATEUR PARFAIT POUR VOTRE FAMILLE.",
-                 "question_more": "IL SUFFIT DE NOUS INDIQUER L’ESPACE QUE VOUS AVEZ À COMBLER.",
-                 "sub_question": "FAITES GLISSER POUR RÉPONDRE",
+                 "question": "De quelle taille de réfrigérateur avez-vous besoin?",
+                 "question_more": "",
+                 "sub_question": "Faites glisser et cliquez pour répondre",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA TAILLE?",
                  "explanation": "Nos réfrigérateurs sont offerts en de nombreuses tailles; nous voulons nous assurer de recommander celui qui convient le mieux à votre espace.",
                  "type": "slider-buttons",
@@ -1252,12 +1305,12 @@
                     "to" : 3,      
                     "step": 0.0001,
                     "dimension_label": "LARGEUR",
-                    "scale": ["Aucun","30\"","33\"", "36\""]       
+                    "scale": ["Toute","30\"","33\"", "36\""]       
                 },
                  "answers" : {
                         "0" : {
                             "value" : 0,
-                            "text" : "Aucun",
+                            "text" : "No Preference",
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
@@ -1269,7 +1322,14 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width30" : 1
+                                "width29" : 10,
+                                "width30" : 10,
+                                "width31" : 10,
+                                "width32" : -100,
+                                "width33" : -100,
+                                "width34" : -100,
+                                "width35" : -100,
+                                "width36" : -100
                             }
                         },
                         "2" : {
@@ -1278,7 +1338,13 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width33" : 1
+                                "width30" : -100,
+                                "width31" : -100,
+                                "width32" : 10,
+                                "width33" : 10,
+                                "width34" : 10,
+                                "width35" : -100,
+                                "width36" : -100
                             }
                         },
                         "3" : {
@@ -1287,7 +1353,14 @@
                             "thumbnail" : "img/icon-size.png",
                             "thumbnail_current" : "img/icon-size-current.png",
                             "scoring" : {
-                                "width36" : 1
+                                "width30" : -100,
+                                "width31" : -100,
+                                "width32" : -100,
+                                "width33" : -100,
+                                "width34" : -100,
+                                "width35" : 10,
+                                "width36" : 10,
+                                "width37" : 10
                             }
                         }
                     }                               
@@ -1295,24 +1368,24 @@
                 {
                     "classes": "label-inches",
                     "dimension_label" : "HAUTEUR",
+                    "answer" : 0,
                     "answers" : {
+                        "0" : {
+                            "value" : 0,
+                            "text" : "Toute",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1,2,3],
+                            "scoring" : {
+                            }
+                        },
                         "66" : {
                             "value" : 66,
                             "text" : "66",
                             "enabled" : true,
                             "enabledWhen" : [0,1],
                             "scoring" : {
-                                 "height66" : 1
-                            }
-                        },
-                        "69" : {
-                            "value" : 69,
-                            "text" : "69",
-                            "enabled" : true,
-                            "enabledWhen" : [0,1],
-                            "scoring" : {
-                                 "height68" : 1,
-                                 "height69" : 1
+                                 "height65" : 5,
+                                 "height66" : 10
                             }
                         },
                         "67" : {
@@ -1321,7 +1394,16 @@
                             "enabled" : true,
                             "enabledWhen" : [0,1,2],
                             "scoring" : {
-                                 "height67" : 1
+                                 "height67" : 10
+                            }
+                        },
+                        "69" : {
+                            "value" : 69,
+                            "text" : "69",
+                            "enabled" : true,
+                            "enabledWhen" : [0,1],
+                            "scoring" : {
+                                 "height69" : 10
                             }
                         },
                         "71" : {
@@ -1330,8 +1412,7 @@
                             "enabled" : true,
                             "enabledWhen" : [0,2,3],
                             "scoring" : {
-                                 "height70" : 1,
-                                 "height71" : 1
+                                 "height71" : 10
                             }
                         }
                     }                               
@@ -1346,7 +1427,7 @@
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "RÉGULIÈREMENT, mon réfrigérateur ME PERMET DE nourrir…",
+                 "question": "Régulièrement, mon réfrigérateur me permet de nourrir…",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la capacité?",
                  "explanation": "Nous voulons nous faire une meilleure idée de la façon dont vous utilisez votre frigo et de ce que vous y mettez afin de pouvoir trouver celui qui convient à votre style de vie.",
@@ -1373,14 +1454,18 @@
                          "thumbnail_current": "img/icon-capacity-current.png",
                          "value": 1,
                          "text": "Ma propre personne",
-                         "scoring": {}
+                         "scoring": {
+                             "smallCapacity" : 5
+                         }
                      },
                      "2": {
                          "thumbnail": "img/icon-capacity.png",
                          "thumbnail_current": "img/icon-capacity-current.png",
                          "value": 2,
                          "text": "Moi-même et ma douce moitié",
-                         "scoring": {}
+                         "scoring": {
+                             "smallCapacity" : 5
+                         }
                      },
                      "3": {
                          "thumbnail": "img/icon-capacity.png",
@@ -1388,7 +1473,8 @@
                          "value": 3,
                          "text": "MA FAMILLE",
                          "scoring": {
-                             "powerCold": 1
+                            "powerCold" : 1,
+                            "mediumCapacity" : 5
                          }
                      },
                      "4": {
@@ -1397,7 +1483,9 @@
                          "value": 4,
                          "text": "Ma grande famille",
                          "scoring": {
-                             "powerCold": 2
+                            "powerCold" : 2,
+                            "adjustableTempDrawer" : 1,
+                            "mediumCapacity" : 5
                          }
                      },
                      "5": {
@@ -1406,7 +1494,9 @@
                          "value": 5,
                          "text": "Mes invités lorsque je reçois",
                          "scoring": {
-                             "powerCold": 2
+                             "powerCold": 3,
+                             "adjustableTempDrawer" : 2,
+                             "largeCapacity" : 5
                          }
                      }
                  }
@@ -1420,7 +1510,7 @@
              "thumbnail_text": "Organization",
              "thumbnail_text_fr": "Organisation",
              "text": [{
-                 "question": "j’ai besoin d’un réfrigérateur pour ma famille qui PEUT…",
+                 "question": "J’ai besoin d’un réfrigérateur pour ma famille qui peut…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’OrganiSation?",
                  "explanation": "Nos réfrigérateurs sont conçus avec soin, sur tous les plans. En sachant ce que vous mettez dans votre frigo, nous pourrons mieux recommander celui qui convient à votre style de vie.",
@@ -1453,6 +1543,7 @@
                      "value": "multiple meals",
                      "scoring": {
                          "frenchDoor": 1,
+                         "adjustableTempDrawer" : 2,
                          "powerCold": 1
                      },
                      "order": 3
@@ -1463,6 +1554,7 @@
                      "thumbnail_current": "img/icon-organization-current.png",
                      "scoring": {
                          "frenchDoor": 1,
+                         "adjustableTempDrawer" : 2,
                          "powerCold": 1
                      },
                      "order": 4
@@ -1474,50 +1566,54 @@
             "previous" : "Fridges - Organization",
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-water-current.png",
-            "thumbnail_text" : "Waterline (FR)",
+            "thumbnail_text" : "Waterline",
+            "thumbnail_text_fr": "d'une conduite d'eau",
             "text" : [
                 {
-                    "question" : "Does your kitchen have an existing waterline? (FR)",
+                    "question" : "Votre cuisine est-elle actuellement équipée d'une conduite d'eau?",
                     "sub_question" : "SÉLECTIONNEZ UNE RÉPONSE",
-                    "explanation_title" : "Why are you asking me about a waterline? (FR)",
-                    "explanation" : "(FR) Did you know that your kitchen needs a waterline in order for your fridge to dispense water and ice? We want to make sure that you know about this requirement before we recommend the perfect fridge to fit your lifestyle.",
+                    "explanation_title" : "POURQUOI ME POSEZ-VOUS DES QUESTIONS SUR LA CONDUITE D'EAU?",
+                    "explanation" : "Saviez-vous que votre cuisine nécessite une conduite d'eau afin que votre réfrigérateur puisse distribuer de l'eau et des glaçons? Nous voulons nous assurer que vous êtes au courant de cette exigence avant de pouvoir vous recommander le réfrigérateur idéal pour votre style de vie.",
                     "type" : "radio-4",
                     "oneAnswer" : true,
                     "answers" : [
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "Yes - it's great because we love water and ice dispensed from our fridge (FR)",
+                            "text" : "Oui – c'est excellent car on aime beaucoup l’idée d’avoir de l'eau et des glaçons distribués de notre réfrigérateur",
                             "value" : "yes",
                             "scoring" : {
-                                "indoorDispenser" : 3
+                                "indoorDispenser" : 10,
+                                "factoryInstalledIceMaker" : 10
                             },
                             "order" : 1
                         },
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "No - but we would consider installing one so our fridge could dispense water and ice (FR)",
+                            "text" : "Non - mais nous sommes prêts à en installer une pour que notre réfrigérateur puisse distribuer de l'eau et des glaçons.",
                             "value" : "nobutyes",
                             "scoring" : {
-                                "indoorDispenser" : 1
+                                "indoorDispenser" : 5,
+                                "factoryInstalledIceMaker" : 5
                             },
                             "order" : 2
                         },
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "No - we don't have a waterline and would prefer not to install one (FR)",
+                            "text" : "Non - nous n'avons pas de conduite d'eau et nous préférons ne pas en utiliser une.",
                             "value" : "no",
                             "scoring" : {
-                                "indoorDispenser" : -30
+                                "indoorDispenser" : -30,
+                                "factoryInstalledIceMaker" : -30
                             },
                             "order" : 3
                         },
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "I'm not sure (FR)",
+                            "text" : "Je n'en suis pas sûre.",
                             "value" : "notsure",
                             "scoring" : {
                             },
@@ -1535,7 +1631,7 @@
              "thumbnail_text": "Orientation",
              "thumbnail_text_fr": "Orientation",
              "text": [{
-                 "question": "EN GÉNÉRAL, LE RÉFRIGÉRATEUR DE VOTRE FAMILLE EST…",
+                 "question": "En général, le réfrigérateur de votre famille est…",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’OrganiSation?",
                  "explanation": "La façon dont vous utilisez votre réfrigérateur est tout aussi importante que ce que vous y rangez. En comprenant l’utilisation que vous faites de votre réfrigérateur, nous pouvons recommander celui qui vous convient le mieux.",
@@ -1547,7 +1643,8 @@
                      "text": "Parfaitement organisé",
                      "value": "perfect",
                      "scoring": {
-                         "frenchDoor": 1
+                         "frenchDoor": 1,
+                         "adjustableTempDrawer" : 1
                      },
                      "order": 1
                  }, {
@@ -1556,7 +1653,8 @@
                      "text": "Organisé et bien rempli",
                      "value": "organized",
                      "scoring": {
-                         "frenchDoor": 1
+                         "frenchDoor": 1,
+                         "adjustableTempDrawer" : 1
                      },
                      "order": 2
                  }, {
@@ -1602,7 +1700,7 @@
                      "text": "Toujours – L’esthétique de la maison est très importante pour moi",
                      "value": 0,
                      "scoring": {
-                         "counterDepth": 2
+                         "counterDepth": 10
                      },
                      "order": 1
                  }, {
@@ -1611,7 +1709,7 @@
                      "text": "Parfois – J’aime équilibrer la forme et la fonction",
                      "value": 1,
                      "scoring": {
-                         "counterDepth": 1
+                         "counterDepth": 5
                      },
                      "order": 2
                  }, {
@@ -1632,7 +1730,7 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "COMMENT FAITES-VOUS votre ÉPICERIE?",
+                 "question": "Comment faites-vous votre épicerie?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’ÉPICERIE?",
                  "explanation": "Nos réfrigérateurs sont conçus avec des caractéristiques uniques. En comprenant la façon dont vous magasinez, nous en apprenons davantage sur l’utilisation que vous faites de votre réfrigérateur et pouvons mieux vous recommander celui qui est adapté à votre style de vie.",
@@ -1645,7 +1743,7 @@
                      "value": "farmers market",
                      "scoring": {
                          "freshFlowProducePreserver": 2,
-                         "tempControlPantry": 1,
+                         "tempControlPantry": 2,
                          "dualCool": 2
                      },
                      "order": 1
@@ -1654,7 +1752,9 @@
                      "thumbnail_current": "img/icon-features-current.png",
                      "text": "Je fais toutes les allées du magasin et je remplis toujours mon chariot.",
                      "value": "full grocery store",
-                     "scoring": {},
+                     "scoring": {
+                         "dualCool": 1
+                     },
                      "order": 2
                  }, {
                      "thumbnail": "img/icon-features.png",
@@ -1662,7 +1762,6 @@
                      "text": "Je passe à l’épicerie, mais je reste dans le périmètre des articles essentiels.",
                      "value": "basics",
                      "scoring": {
-
                          "freshFlowProducePreserver": 1,
                          "tempControlPantry": 1,
                          "dualCool": 1
@@ -1686,7 +1785,7 @@
              "thumbnail_text": "Cleaning",
              "thumbnail_text_fr": "Nettoyage",
              "text": [{
-                 "question": "QUE TROUVERIONS-NOUS À L’INTÉRIEUR DE VOTRE LAVE-VAISSELLE EN CE MOMENT?",
+                 "question": "Que trouverions-nous à l’intérieur de votre lave-vaisselle en ce moment?",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE CE QUE JE LAVE?",
                  "explanation": "Nous voulons nous assurer que toute votre vaisselle est étincelante de propreté – si nous savons ce que vous mettez au lave-vaisselle, nous pourrons recommander des options qui conviennent le mieux à vos besoins en matière de lavage.",
@@ -1752,7 +1851,7 @@
              "thumbnail_text": "Capacity",
              "thumbnail_text_fr": "Capacité",
              "text": [{
-                 "question": "COMBIEN DE FOIS PAR SEMAINE EST-CE QUE VOTRE FAMILLE FAIT MARCHER LE LAVE-VAISSELLE?",
+                 "question": "Combien de fois par semaine est-ce que votre famille fait marcher le lave-vaisselle?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CAPACITÉ?",
                  "explanation": "Lorsqu’il s’agit de laver la vaisselle, il n’y a pas de tâche trop grande ou trop petite. En comprenant ce que vous mettez au lave-vaisselle, nous pourrons trouver ce qui convient le mieux à votre famille.",
@@ -1762,64 +1861,91 @@
                  "answer": 0,
                  "options": {
                      "from": 0,
-                     "to": 15,
+                     "to": 6,
                      "step": 0.0001,
                      "dimension": "",
                      "scale": [
-                         "0", "5", "10", "15+<br />J’AI PERDU LE COMPTE"
+                         "0<br />Environ toutes les 2 semaines", "", "5", "", "10", "", "15+<br />J’AI PERDU LE COMPTE"
                      ]
                  },
                  "answers": {
-                     "0": {
-                         "thumbnail": "img/icon-capacity.png",
-                         "thumbnail_current": "img/icon-capacity-current.png",
-                         "value": 0,
-                         "text": "0",
-                         "scoring": {
-                             "placeSettings13": 1,
-                             "placeSettings14": 1
-                         }
-                     },
-                     "5": {
-                         "thumbnail": "img/icon-capacity.png",
-                         "thumbnail_current": "img/icon-capacity-current.png",
-                         "value": 5,
-                         "text": "5",
-                         "scoring": {
-                             "placeSettings14": 1
-                         }
-                     },
-                     "10": {
-                         "thumbnail": "img/icon-capacity.png",
-                         "thumbnail_current": "img/icon-capacity-current.png",
-                         "value": 10,
-                         "text": "10",
-                         "scoring": {
-                             "placeSettings14": 1,
-                             "placeSettings15": 1
-                         }
-                     },
-                     "15": {
-                         "thumbnail": "img/icon-capacity.png",
-                         "thumbnail_current": "img/icon-capacity-current.png",
-                         "value": 15,
-                         "text": "15+<br />J’AI PERDU LE COMPTE",
-                         "scoring": {
-                             "placeSettings15": 1
-                         }
-                     }
+                     "0" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 0,
+                            "text" : "0 Maybe every other week",
+                            "scoring" : {
+                                "placeSettings12": 1
+                            }
+                        },
+                        "1" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 1,
+                            "text" : "1",
+                            "scoring" : {
+                                "placeSettings12": 1
+                            }
+                        },
+                        "2" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 2,
+                            "text" : "2",
+                            "scoring" : {
+                                "placeSettings14": 1
+                            }
+                        },
+                        "3" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 3,
+                            "text" : "3",
+                            "scoring" : {
+                                "placeSettings14": 1
+                            }
+                        },
+                        "4" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 4,
+                            "text" : "4",
+                            "scoring" : {
+                                "placeSettings14": 2,
+                                "placeSettings16": 1
+                            }
+                        },
+                        "5" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 5,
+                            "text" : "5",
+                            "scoring" : {
+                                "placeSettings14": 1,
+                                "placeSettings16": 2
+                            }
+                        },
+                        "6" : {
+                            "thumbnail" : "img/icon-capacity.png",
+                            "thumbnail_current" : "img/icon-capacity-current.png",
+                            "value" : 6,
+                            "text" : "15+ I've lost count",
+                            "scoring" : {
+                                "placeSettings16": 3
+                            }
+                        }
                  }
              }]
          },
          "Dishwashers - Cycles": {
-             "next": "Dishwashers - Noise 2",
+             "next": "Dishwashers - Noise 1",
              "previous": "Dishwashers - Capacity",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-cycles-current.png",
              "thumbnail_text": "Cycles",
              "thumbnail_text_fr": "Programmes",
              "text": [{
-                 "question": "À QUELLE FRÉQUENCE CHOISISSEZ-VOUS DES PROGRAMMES PERSONNALISÉS?",
+                 "question": "À quelle fréquence choisissez-vous des programmes personnalisés?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DES PROGRAMMES?",
                  "explanation": "Considérez les programmes personnalisés comme une solution adaptée à votre vaisselle. Cette question nous aidera à déterminer quelles caractéristiques supplémentaires vous seront utiles.",
@@ -1868,15 +1994,15 @@
                  }
              }]
          },
-         "Dishwashers - Noise 1": {
-             "next": "Dishwashers - Flexibility",
-             "previous": "Dishwashers - Noise 2",
+         "Dishwashers - Noise 2": {
+             "next": "Dishwashers - Orientation",
+             "previous": "Dishwashers - Noise 1",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-noise-current.png",
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "QUAND METTEZ-VOUS HABITUELLEMENT LE LAVE-VAISSELLE EN MARCHE?",
+                 "question": "Quand mettez-vous habituellement le lave-vaisselle en marche?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU MOMENT DE LA MISE EN MARCHE?",
                  "explanation": "Nos lave-vaisselle offrent différents profils sonores. En sachant à quel moment vous mettez le vôtre en marche, nous pouvons déterminer quel appareil convient le mieux à votre famille active.",
@@ -1897,7 +2023,7 @@
                      "text": "Après m’être occupé des enfants et les avoir mis au lit ",
                      "value": "night",
                      "scoring": {
-                         "quiet": 1
+                         "quiet": 3
                      },
                      "order": 2
                  }, {
@@ -1905,7 +2031,8 @@
                      "thumbnail_current": "img/icon-noise-current.png",
                      "text": "Chaque matin avant que tout le monde quitte la maison",
                      "value": "morning",
-                     "scoring": {},
+                     "scoring": {
+                     },
                      "order": 3
                  }, {
                      "thumbnail": "img/icon-noise.png",
@@ -1913,21 +2040,21 @@
                      "text": "Seulement durant les heures creuses",
                      "value": "offpeak",
                      "scoring": {
-                         "quiet": 1
+                         "quiet": 3
                      },
                      "order": 4
                  }]
              }]
          },
-         "Dishwashers - Noise 2": {
-             "next": "Dishwashers - Noise 1",
+         "Dishwashers - Noise 1": {
+             "next": "Dishwashers - Noise 2",
              "previous": "Dishwashers - Cycles",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-noise-current.png",
              "thumbnail_text": "Noise",
              "thumbnail_text_fr": "Bruit",
              "text": [{
-                 "question": "VIVEZ-VOUS DANS UN ESPACE OUVERT?",
+                 "question": "Vivez-vous dans un espace ouvert?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MON Espace?",
                  "explanation": "Si vous vivez dans un espace ouvert, nous voulons en tenir compte afin de recommander l’appareil tout indiqué pour réduire le bruit au minimum.",
@@ -1936,33 +2063,35 @@
                  "answers": [{
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
-                     "text": "Oui – Ma cuisine donne sur une autre pièce",
+                     "text": "Oui – ma cuisine donne sur une autre pièce",
                      "image": "/img/Dishwasher_Q5_MT-open-concept-yes.png",
+                     "image_alt" : "Dishwasher -  Yes Open Concept",
                      "value": "yes",
                      "scoring": {
-                         "quiet": 1
+                         "quiet": 2
                      },
                      "order": 1
                  }, {
                      "thumbnail": "img/icon-noise.png",
                      "thumbnail_current": "img/icon-noise-current.png",
-                     "text": "Non – Ma cuisine est une pièce à part",
+                     "text": "Non – ma cuisine est une pièce à part",
                      "image": "/img/Dishwasher_Q5_MT-open-concept-no.png",
+                     "image_alt" : "Dishwasher -  Not Open Concept",
                      "value": "no",
                      "scoring": {},
                      "order": 2
                  }]
              }]
          },
-         "Dishwashers - Flexibility": {
+         "Dishwashers - Orientation": {
              "next": "Dishwashers - Style",
-             "previous": "Dishwashers - Noise 1",
+             "previous": "Dishwashers - Noise 2",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-organization-current.png",
              "thumbnail_text": "Organization",
              "thumbnail_text_fr": "Organisation",
              "text": [{
-                 "question": "AVANT DE METTRE EN MARCHE VOTRE LAVE-VAISSELLE, IL est…",
+                 "question": "Avant de mettre en marche votre lave-vaisselle, il est…",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’Organisation?",
                  "explanation": "Après avoir évalué votre technique, nous pouvons proposer des façons d’optimiser l’organisation pour votre foyer.",
@@ -1974,6 +2103,7 @@
                      "text": " Plein et bien organisé",
                      "value": "Full and tidy",
                      "image": "img/dishwasher-full-and-tidy.jpg",
+                     "image_alt" : "Dishwasher -  Full and Tidy",
                      "scoring": {
                          "premiumAdjusters": 1
                      },
@@ -1984,6 +2114,7 @@
                      "text": "Plein et mal organisé",
                      "value": "Full and messy",
                      "image": "img/dishwasher-full-and-messy.jpg",
+                     "image_alt" : "Dishwasher -  Full and Messy",
                      "scoring": {},
                      "order": 2
                  }, {
@@ -1992,8 +2123,8 @@
                      "text": "Peu rempli",
                      "value": "Sparsely filled",
                      "image": "img/dishwasher-i-still-see-room.jpg",
+                     "image_alt" : "Dishwasher -  I Still See Room",
                      "scoring": {
-                         "premiumAdjusters": 1
                      },
                      "order": 3
                  }, {
@@ -2002,6 +2133,7 @@
                      "text": "Presque vide",
                      "value": "Almost empty",
                      "image": "img/dishwasher-almost-empty.jpg",
+                     "image_alt" : "Dishwasher -  Almost Empty",
                      "scoring": {},
                      "order": 4
                  }]
@@ -2009,52 +2141,62 @@
          },
          "Dishwashers - Style": {
              "next": "Dishwashers - Energy",
-             "previous": "Dishwashers - Flexibility",
+             "previous": "Dishwashers - Orientation",
              "thumbnail_type": "image",
              "thumbnail_current": "img/icon-style-current.png",
              "thumbnail_text": "Style",
              "thumbnail_text_fr": "Style",
              "text": [{
-                 "question": "SÉLECTIONNEZ VOTRE STYLE...",
+                 "question": "Sélectionnez votre style...",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DU Style?",
                  "explanation": "Trouver ce qui convient parfaitement au style de votre foyer est aussi important pour nous que pour vous.",
                  "type": "boxes-picture-3-radio",
                  "oneAnswer": true,
-                 "answers": [
-                 {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "Traditionnel",
-                     "value": "Traditional",
-                     "image": "img/Dishwasher-Q6-traditional.jpg",
-                     "scoring": {
-                         "frontConsole": 1
-                     },
-                     "order": 1
-                 }, {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "Commercial",
-                     "value": "Commercial",
-                     "image": "img/Dishwasher-Q6-commercial.jpg",
-                     "scoring": {
-                         "FID": 1
-                     },
-                     "order": 2
-                 }, {
-                     "thumbnail": "img/icon-style.png",
-                     "thumbnail_current": "img/icon-style-current.png",
-                     "text": "No Preference(fr)",
-                     "value": "NoPreference",
-                     "image": "img/Dishwasher-Q6-nopreference.jpg",
-                     "scoring": {
-                     },
-                     "order": 3
-                 }
-                 ]
-             }]
-         },
+                 "answers" : [
+                        { 
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-style-current.png",
+                            "text" : "Front Controls",
+                            "value" : "Traditional",
+                            "image" : "img/Dishwasher-Q6-traditional.jpg",
+                            "image_alt" : "Dishwasher -  Traditional",
+                            "scoring" : {
+                                "frontConsole" : 5,
+                                "FID" : -5
+                            },
+                            "order" : 1
+                        },
+                        {
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-style-current.png",
+                            "text" : "Hidden Controls",
+                            "value" : "Commercial",
+                            "image" : "img/Dishwasher-Q6-commercial.jpg",
+                            "image_alt" : "Dishwasher -  Commercial",
+                            "scoring" : {   
+                                "frontConsole" : -5,
+                                "FID" : 5
+                            },
+                            "order" : 2
+                        },
+                        {
+                            "thumbnail" : "img/icon-style.png",
+                            "thumbnail_current" : "img/icon-features-current.png",
+                            "text" : "No Preference",
+                            "value" : "nopreference",
+                            "image" : "img/Dishwasher-Q6-nopreference.jpg",
+                            "image_alt" : "Dishwasher -  No Preference",
+                            "scoring" : {
+                                "frontConsole" : -2,
+								"FID" : 2
+                            },
+                            "order" : 3
+                        }
+                    ]
+                }
+            ]
+        },
          "Dishwashers - Energy": {
              "next": null,
              "previous": "Dishwashers - Style",
