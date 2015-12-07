@@ -34,9 +34,9 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
 	echo "- Copying files" >> $LOGFILE
-	cp -a /build/. $DEPLOYDIR$ENGLISHDIR/
-	cp -a /build/. $DEPLOYDIR$FRENCHDIR/
-	cp -a /build/fr/. $DEPLOYDIR$FRENCHDIR/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR$ENGLISHDIR/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR$FRENCHDIR/
+	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR$FRENCHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
