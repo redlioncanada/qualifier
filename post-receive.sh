@@ -10,13 +10,12 @@ FRENCHDIR=/fr
 GITDIR=$(pwd)
 LOGFILE=$GITDIR/post-receive.log
 VERSION="$(git describe --abbrev=0 --tags)"
-VERSIONREGEX = "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"
 
 echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
 echo "Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
 echo "Starting Deploy on $VERSION" >> $LOGFILE
 
-if [$VERSION =~ $VERSIONREGEX]; then
+if [[$VERSION =~ "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"]]; then
 	#is a valid version number
 	echo "- Starting Code Update & Compilation" >> $LOGFILE
 	mkdir temp
