@@ -8,7 +8,7 @@ ENGLISHDIR=/en
 FRENCHDIR=/fr
 
 GITDIR=$(pwd)
-LOGFILE=./post-receive.log
+LOGFILE=$GITDIR/post-receive.log
 VERSION="$(git describe --abbrev=0 --tags)"
 VERSIONREGEX = "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"
 
@@ -20,7 +20,7 @@ if [[$VERSION =~ $VERSIONREGEX]]; then
 	#is a valid version number
 	echo "- Starting Code Update & Compilation" >> $LOGFILE
 	mkdir temp
-	GIT_WORK_TREE="./temp" git checkout -f
+	GIT_WORK_TREE="$GITDIR/temp" git checkout -f
 	echo "- Finished Git Checkout" >> $LOGFILE
 	cd temp
 
