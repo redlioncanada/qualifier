@@ -15,7 +15,7 @@ echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
 echo "Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
 echo "Starting Deploy on $VERSION" >> $LOGFILE
 
-if [[$VERSION =~ "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"]]; then
+#if [[$VERSION =~ "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"]]; then
 	#is a valid version number
 	echo "- Starting Code Update & Compilation" >> $LOGFILE
 	mkdir temp
@@ -60,6 +60,6 @@ if [[$VERSION =~ "^v?(\d+\.)?(\d+\.)?(\*|\d+)$"]]; then
 	rm -rf $TESTDIR
 	rm -rf $GITDIR/temp
 	echo "- Complete" >> $LOGFILE
-else
-	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
-fi
+#else
+#	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
+#fi
