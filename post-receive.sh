@@ -31,7 +31,7 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Finished updating Dependencies" >> $LOGFILE
 
 	echo "- Compiling" >> $LOGFILE
-	gulp
+	gulp deploy
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
 	echo "- Copying to test directory" >> $LOGFILE
