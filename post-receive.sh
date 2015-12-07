@@ -22,7 +22,7 @@ if [[$VERSION =~ $VERSIONREGEX]]; then
 	mkdir temp
 	GIT_WORK_TREE="$GITDIR/temp" git checkout -f
 	echo "- Finished Git Checkout" >> $LOGFILE
-	cd temp
+	cd $GITDIR/temp
 
 	echo "- Updating Dependencies" >> $LOGFILE
 	bower install
@@ -39,9 +39,9 @@ if [[$VERSION =~ $VERSIONREGEX]]; then
 	mkdir $TESTDIR
 	mkdir $TESTDIR$ENGLISHDIR
 	mkdir $TESTDIR$FRENCHDIR
-	cp -a /build/. $TESTDIR$ENGLISHDIR/
-	cp -a /build/. $TESTDIR$FRENCHDIR/
-	cp /build/fr/. $TESTDIR$FRENCHDIR/
+	cp -a ./build/. $TESTDIR$ENGLISHDIR/
+	cp -a ./build/. $TESTDIR$FRENCHDIR/
+	cp ./build/fr/. $TESTDIR$FRENCHDIR/
 	echo "- Finished copying" >> $LOGFILE
 
 	echo "Please verify the build at $TESTDIR. Continue?"
