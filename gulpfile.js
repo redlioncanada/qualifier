@@ -194,8 +194,12 @@ gulp.task('prod', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'con
     gulp.watch('app/js/**/*.js', ['js', browserSync.reload]);
 });
 
+gulp.task('deploy', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'config', 'views-prod', 'php'], function() {
+    //don't put any gulp.watch or async tasks here
+    //is used on the our prod/staging server
+});
+
 gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views', 'php'], function () {
-    
     //complete all these tasks before running browsersync
 });
 
