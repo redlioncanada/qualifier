@@ -8,7 +8,7 @@
 			</div>
 		</li>
 	</ul>
-
+ 
 	<ul class="rank-answers-list" data-as-sortable="sortable.dragControlListeners" data-ng-model="qs.text[0].answers" style="height:{{(rankCount * 63) + 63}}px;">
 		<li data-ng-repeat="item in qs.text[0].answers | orderBy:'answer'" data-as-sortable-item ng-class="{noanswer : !controls.questionHasAnswer}" class="answer">
 			<div class="label-wrap" data-as-sortable-item-handle>
