@@ -39,6 +39,8 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cp -a $GITDIR/temp/build/. $DEPLOYDIR$FRENCHDIR/
 	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR$FRENCHDIR/
 	chmod -R 755 $DEPLOYDIR$FRENCHDIR/
+	chmod -R 755 $DEPLOYDIR$ENGLISHDIR/
+	chown -R root $DEPLOYDIR$FRENCHDIR/
 	chown -R root $DEPLOYDIR$ENGLISHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
