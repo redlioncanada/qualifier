@@ -3,7 +3,6 @@
 read oldrev newrev refname
 
 DEPLOYDIR=/home/maytabsubs/qualifier
-TESTDIR=/test
 ENGLISHDIR=/en
 FRENCHDIR=/fr
 
@@ -34,30 +33,10 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	gulp deploy
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
-	echo "- Copying to test directory" >> $LOGFILE
-	mkdir $DEPLOYDIR$ENGLISHDIR$TESTDIR
-	mkdir $DEPLOYDIR$FRENCHDIR$TESTDIR
-	cp -a ./build/. $DEPLOYDIR$ENGLISHDIR$TESTDIR/
-	cp -a ./build/. $DEPLOYDIR$FRENCHDIR$TESTDIR/
-	cp ./build/fr/. $DEPLOYDIR$FRENCHDIR$TESTDIR/
-	echo "- Finished copying" >> $LOGFILE
-
-	echo "Please verify the build at $TESTDIR. Continue?"
-	read cont
-
-	if ["$cont" = "y" || "$cont" = "yes"]; then
-		#cp -a /build/. $DEPLOYDIR$ENGLISHDIR/
-		#cp -a /build/. $DEPLOYDIR$FRENCHDIR/
-		#cp -a /build/fr/. $DEPLOYDIR$FRENCHDIR/
-		echo "- Finished deploy" >> $LOGFILE
-	else
-		GIT_WORK_TREE=$GITDIR git checkout $oldrev
-		echo "- Abandoned deploy due to user input" >> $LOGFILE
-	fi
-
-	echo "- Cleaning up" >> $LOGFILE
-	rm -rf $TESTDIR
-	rm -rf $GITDIR/temp
+	echo "- Copying files" >> $LOGFILE
+	cp -a /build/. $DEPLOYDIR$ENGLISHDIR/
+	cp -a /build/. $DEPLOYDIR$FRENCHDIR/
+	cp -a /build/fr/. $DEPLOYDIR$FRENCHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
