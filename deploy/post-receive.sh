@@ -38,10 +38,6 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cp -a $GITDIR/temp/build/. $DEPLOYDIR$ENGLISHDIR/
 	cp -a $GITDIR/temp/build/. $DEPLOYDIR$FRENCHDIR/
 	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR$FRENCHDIR/
-	chmod -R 755 $DEPLOYDIR$FRENCHDIR/
-	chmod -R 755 $DEPLOYDIR$ENGLISHDIR/
-	chown -R root:root $DEPLOYDIR$FRENCHDIR/
-	chown -R root:root $DEPLOYDIR$ENGLISHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
