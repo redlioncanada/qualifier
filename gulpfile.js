@@ -201,7 +201,7 @@ gulp.task('deploy', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'c
 
     return gulp.src('deploy/staging/redirect.php')
         .pipe(replace("#URL", '../'+packageJSON.version))
-        .pipe(gulp.dest('deploy/staging/redirect.php'));
+        .pipe(gulp.dest('deploy/staging/'));
 });
 
 gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views', 'php'], function () {
