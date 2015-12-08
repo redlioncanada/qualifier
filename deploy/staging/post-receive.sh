@@ -1,5 +1,9 @@
 #!/bin/sh
 # Qualifier deploy script, requires git, npm, bower, and gulp to be installed globally
+
+# to set the default branch on a bare repo
+# git symbolic-ref HEAD refs/heads/mybranch
+
 read oldrev newrev refname
 
 DEPLOYDIR=/home/wpcstage/mymaytag
