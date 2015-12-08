@@ -43,6 +43,9 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	mkdir $DEPLOYDIR/latest
 	cp $GITDIR/temp/deploy/staging/redirect.php $DEPLOYDIR/latest/index.php
 	chown -R wpcstage:wpcstage $DEPLOYDIR/latest
+
+	echo "- Cleaning up"
+	rm -rf $GITDIR/temp
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
