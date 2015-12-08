@@ -3,8 +3,8 @@
 read oldrev newrev refname
 
 DEPLOYDIR=/home/maytagsubs/qualifier
-ENGLISHDIR=/en
-FRENCHDIR=/fr
+ENGLISHDIR=en
+FRENCHDIR=fr
 
 GITDIR=$(pwd)
 LOGFILE=$GITDIR/post-receive.log
@@ -26,7 +26,10 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Updating Dependencies" >> $LOGFILE
 	bower --allow-root install
 	echo "-- Finished bower install" >> $LOGFILE
-	npm install
+	if npm install | grep -q "ECONFLICT"; then
+		echo "-- Error: ECONFLICT detected when fetching npm dependencies"
+		exit 1;
+	fi
 	echo "-- Finished npm install" >> $LOGFILE
 	echo "- Finished updating Dependencies" >> $LOGFILE
 
@@ -35,11 +38,11 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
 	echo "- Copying files" >> $LOGFILE
-	cp -a $GITDIR/temp/build/. $DEPLOYDIR$ENGLISHDIR/
-	cp -a $GITDIR/temp/build/. $DEPLOYDIR$FRENCHDIR/
-	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR$FRENCHDIR/
-	chown -R maytagsubs:maytagsubs $DEPLOYDIR$FRENCHDIR/
-	chown -R maytagsubs:maytagsubs $DEPLOYDIR$ENGLISHDIR/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$ENGLISHDIR/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$FRENCHDIR/
+	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR/$FRENCHDIR/
+	chown -R maytagsubs:maytagsubs $DEPLOYDIR/$FRENCHDIR/
+	chown -R maytagsubs:maytagsubs $DEPLOYDIR/$ENGLISHDIR/
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE
