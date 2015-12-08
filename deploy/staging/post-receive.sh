@@ -27,15 +27,18 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	cd $GITDIR/temp
 
 	echo "- Updating Dependencies" >> $LOGFILE
-	bower --allow-root install
+	if bower --allow-root install | grep -q "ECONFLICT"; then
+		echo "-- Error: ECONFLICT detected when fetching bower dependencies"
+		exit 1;
+	fi
 	echo "-- Finished bower install" >> $LOGFILE
 	
 	if npm install | grep -q "ECONFLICT"; then
 		echo "-- Error: ECONFLICT detected when fetching npm dependencies"
 		exit 1;
 	fi
-
 	echo "-- Finished npm install" >> $LOGFILE
+
 	echo "- Finished updating Dependencies" >> $LOGFILE
 
 	echo "- Compiling" >> $LOGFILE
