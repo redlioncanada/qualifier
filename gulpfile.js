@@ -200,7 +200,7 @@ gulp.task('deploy', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'c
     //is used on the our prod/staging server
 
     return gulp.src('deploy/staging/redirect.php')
-        .pipe(replace("#URL", '../'+packageJSON.version))
+        .pipe(replace("#URL", '../v'+packageJSON.version))
         .pipe(gulp.dest('deploy/staging/'));
 });
 
