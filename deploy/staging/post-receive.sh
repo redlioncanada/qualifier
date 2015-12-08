@@ -3,8 +3,7 @@
 read oldrev newrev refname
 
 DEPLOYDIR=/home/wpcstage/mymaytag
-ENGLISHDIR=/en
-FRENCHDIR=/fr
+FRENCHDIR=fr
 
 GITDIR=$(pwd)
 LOGFILE=$GITDIR/post-receive.log
@@ -35,11 +34,15 @@ echo "Starting Deploy on $VERSION" >> $LOGFILE
 	echo "- Finished Update & Compilation" >> $LOGFILE
 
 	echo "- Copying files" >> $LOGFILE
-	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$VERSION$ENGLISHDIR/
-	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$VERSION$FRENCHDIR/
-	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR/$VERSION$FRENCHDIR/
-	chown -R wpcstage:wpcstage $DEPLOYDIR/$VERSION$FRENCHDIR/
-	chown -R wpcstage:wpcstage $DEPLOYDIR/$VERSION$ENGLISHDIR/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$VERSION/
+	cp -a $GITDIR/temp/build/. $DEPLOYDIR/$VERSION/$FRENCHDIR/
+	cp -a $GITDIR/temp/build/fr/. $DEPLOYDIR/$VERSION/$FRENCHDIR/
+	chown -R wpcstage:wpcstage $DEPLOYDIR/$VERSION
+
+	echo "- Creating latest redirect" >> $LOGFILE
+	mkdir $DEPLOYDIR/latest
+	cp $GITDIR/temp/deploy/staging/redirect.php $DEPLOYDIR/latest/index.php
+	chown -R wpcstage:wpcstage $DEPLOYDIR/latest
 	echo "- Complete" >> $LOGFILE
 #else
 #	echo "- Abandoned deploy, $VERSION is not a valid version tag" >> $LOGFILE

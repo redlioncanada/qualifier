@@ -13,6 +13,7 @@ var jasmine     = require('gulp-jasmine');
 var imagemin    = require('gulp-imagemin');
 var preprocess  = require('gulp-preprocess');
 var stripDebug  = require('gulp-strip-debug');
+var packageJSON = require('./package.json');
 
 // Jasmine
 gulp.task('test', function () {
@@ -197,6 +198,10 @@ gulp.task('prod', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'con
 gulp.task('deploy', ['sass', 'js-prod', 'images-prod', 'fonts', 'components', 'config', 'views-prod', 'php'], function() {
     //don't put any gulp.watch or async tasks here
     //is used on the our prod/staging server
+
+    return gulp.src('deploy/staging/redirect.php')
+        .pipe(replace("#URL", '../'+packageJSON.version))
+        .pipe(gulp.dest('deploy/staging/redirect.php'));
 });
 
 gulp.task('frontloaded-tasks', ['sass', 'js', 'images', 'fonts', 'components', 'config', 'views', 'php'], function () {

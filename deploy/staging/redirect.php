@@ -1,0 +1,1 @@
+<html><head></head><body><?php if (!headers_sent()) {header('#URL');die();}else{die('<script type="text/javascript">window.location.href="#URL";</script>');}?></body></html>
