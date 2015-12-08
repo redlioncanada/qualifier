@@ -150,13 +150,13 @@ gulp.task('views-prod', function() {
 
 // Images
 gulp.task('images', function() {
-  return gulp.src('app/img/*/*')
+  return gulp.src('app/img/**/*')
     .pipe(gulp.dest('build/img/'));
 });
 
 // Images
 gulp.task('images-prod', function() {
-  return gulp.src('app/img/*/*')
+  return gulp.src('app/img/**/*')
     .pipe(imagemin({
         progressive: true
     }))
