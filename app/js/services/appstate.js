@@ -162,7 +162,7 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
         	//if there isn't one, check for one in localstorage
         	console.log(localStorageService.get('appstate'));
         	try {
-        		session = localStorageService.get('appstate');
+        		session = JSON.parse(localStorageService.get('appstate'));
         	} catch(e) {
         		//failure
         		console.log('failed to fetch session from localstorage');
