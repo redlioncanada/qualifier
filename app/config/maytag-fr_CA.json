@@ -2157,7 +2157,7 @@
                         { 
                             "thumbnail" : "img/icon-style.png",
                             "thumbnail_current" : "img/icon-style-current.png",
-                            "text" : "Front Controls",
+                            "text" : "Entièrement intégrée",
                             "value" : "Traditional",
                             "image" : "img/Dishwasher-Q6-traditional.jpg",
                             "image_alt" : "Dishwasher -  Traditional",
@@ -2171,7 +2171,7 @@
                             "thumbnail" : "img/icon-style.png",
                             "thumbnail_current" : "img/icon-style-current.png",
                             "text" : "Hidden Controls",
-                            "value" : "Commercial",
+                            "value" : "Commandes frontales",
                             "image" : "img/Dishwasher-Q6-commercial.jpg",
                             "image_alt" : "Dishwasher -  Commercial",
                             "scoring" : {   
@@ -2183,7 +2183,7 @@
                         {
                             "thumbnail" : "img/icon-style.png",
                             "thumbnail_current" : "img/icon-features-current.png",
-                            "text" : "No Preference",
+                            "text" : "Aucune restriction",
                             "value" : "nopreference",
                             "image" : "img/Dishwasher-Q6-nopreference.jpg",
                             "image_alt" : "Dishwasher -  No Preference",

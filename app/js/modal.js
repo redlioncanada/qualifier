@@ -48,7 +48,7 @@ angular.module('App')
     }
 
     $scope.setMessage = function() {
-      $scope.email.message = apptext.emailMessage.replace('{{brand}}', apptext.apptitle.toLowerCase()).replace('{{appliance}}', applianceType).replace('{{fakelink}}', fakelink);
+      $scope.email.message = apptext.emailMessage.replace('{{brand}}', apptext.apptitle).replace('{{appliance}}', applianceType).replace('{{fakelink}}', fakelink);
     }
 
     $scope.setSubject = function() {
