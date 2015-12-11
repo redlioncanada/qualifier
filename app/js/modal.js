@@ -4,8 +4,7 @@ angular.module('App')
   .controller('ModalCtrl', ['$http','$modalInstance', 'appliance', 'link', 'fakelink', '$scope', '$rootScope', '$timeout', function ($http, $modalInstance, appliance, link, fakelink, $scope, $rootScope, $timeout) {
 
     var apptext = $rootScope.brandData.apptext;
-    var applianceType = appliance;
-    applianceType = applianceType.toLowerCase();
+    var applianceType = appliance.displayName.toLowerCase();
 
     $timeout(function() {
       $scope.setMessage();

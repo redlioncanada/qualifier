@@ -103,6 +103,7 @@ angular.module('App')
 
   $rootScope.setMatches = function(arr) {
     $scope.matches = arr;
+    arr[1].displayName = $scope.getAppliance();
     $scope.bestMatch = arr[1];
   }
 
@@ -131,7 +132,7 @@ angular.module('App')
       controller: 'ModalCtrl',
       resolve: {
         appliance: function () {
-          return $scope.getAppliance();
+          return $scope.bestMatch;
         },
         link: function() {
           return $appstate.host() + $appstate.generateEmailURL()
@@ -199,7 +200,7 @@ $scope.setPriceRange = function () {
           var value = $rootScope.questionsData.scoringQuestions.Appliance.text[0].answers[i];
 
           if (!!value.answer) {
-            if (value.displayName == 'Cooking') {
+            if (value.text == 'Cooking') {
               for (var i in $rootScope.questionsData.scoringQuestions["Cooking - Pre-Qualifier 1"].text[0].answers) {
                 var value = $rootScope.questionsData.scoringQuestions["Cooking - Pre-Qualifier 1"].text[0].answers[i];
 
@@ -215,8 +216,8 @@ $scope.setPriceRange = function () {
       }
 
       $scope.constructPageTitle = function() {
+        if ($rootScope.isFrench) return $rootScope.brandData.apptext.oneLastStep;
         var suffix = $scope.getAppliance();
-        if ($rootScope.isFrench) suffix = suffix.toUpperCase();
         return ($rootScope.brandData.apptext.oneLastStep + " " + suffix).trim();
       }
 
