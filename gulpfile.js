@@ -24,6 +24,9 @@ gulp.task('test', function () {
 // Gulp Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
+    gulp.src('app/css/**/*.css')
+        .pipe(gulp.dest('build/css'))
+        
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css'))
