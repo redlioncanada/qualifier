@@ -9,7 +9,7 @@
          "msrp": "PDSF",
          "oneLastStep": "RÉVISEZ VOTRE FOURCHETTE DE PRIX AFIN DE PRÉCISER VOS RÉSULTATS",
          "moreInfo": "Informations supplémentaires",
-         "print": "Impression",
+         "print": "Imprimer",
          "email": "Imprimer",
          "colourPreference": "Sélectionnez votre couleur",
          "yourBestMatch": "Votre Meilleur Résultat",
@@ -25,7 +25,7 @@
         "emailModalTitle" : "Envoyez vos résultats par courriel",
         "emailNameTitle" : "Pour :",
         "emailNamePlaceholder" : "Nom",
-        "emailAddressTitle" : "À partir de :",
+        "emailAddressTitle" : "De :",
         "emailAddressPlaceholder" : "ami@email.com",
         "emailSubject" : "J'ai trouvé le(a) parfait(e) {{appliance}} et souhaiterais partager cela avec toi.",
         "emailMessage" : "C'est difficile de trouver l'électroménager idéal. Mais en utilisant le nouvel outil de sélection de Maytag, j'ai simplement répondu à quelques questions et j'ai trouvé le(a) {{appliance}} idéal(e) pour mon style de vie. J’aimerais partager mes résultats ainsi que le lien pour que tu puisses l'explorer toi aussi.\r\n\r\nEssaie par toi-même ici : {{fakelink}}",
@@ -49,14 +49,14 @@
              "thumbnail_text": "Appliance",
              "thumbnail_text_fr": "Éléctroménager",
              "text": [{
-                 "question": "Que pouvons-nous vous aider à trouver?",
+                 "question": "Que recherchez-vous?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "type": "categories-click",
                  "oneAnswer": true,
                  "answers": [{
                      "text": "Appareils de lessive",
                      "value": "Laundry",
-                     "displayName": "Appareils de lessive",
+                     "displayName": "laveuse/sécheuse",
                      "classes": "category laundry",
                      "image": "img/start-laundry.png",
                      "image_alt" : "Maytag Man - Washer and Dryer",
@@ -74,7 +74,6 @@
                  }, {
                      "text": "Appareils de cuisson",
                      "value": "Stove",
-                     "displayName": "Cooking",
                      "classes": "category cooking",
                      "image": "img/start-stove.png",
                      "image_alt" : "Maytag Man - Cooking",
@@ -92,7 +91,7 @@
                  }, {
                      "text": "Réfrigérateurs",
                      "value": "Fridge",
-                     "displayName": "Réfrigérateurs",
+                     "displayName": "Réfrigérateur",
                      "classes": "category fridge",
                      "image": "img/start-fridge.png",
                      "image_alt" : "Maytag Man - Refrigerator",
@@ -199,7 +198,7 @@
                     "to" : 2,      
                     "step": 0.0001,
                     "dimension_label" : "LARGEUR",
-                    "scale": ["Aucun", "27\"", "30\""]   
+                    "scale": ["AUCUNE PRÉFÉRENCE", "27 po", "30 po"]   
                 },
                  "answers": {
                      "0" : {
@@ -239,7 +238,7 @@
              "previous": "Cooking - Wall Ovens - Size",
              "thumbnail_type": "image",
              "thumbnail_text": "Orientation",
-             "thumbnail_text_fr": "Caractéristiques",
+             "thumbnail_text_fr": "Orientation",
              "thumbnail_current": "img/icon-orientation-current.png",
              "text": [{
                  "question": "Quel style de four encastré recherchez-vous?",
@@ -306,7 +305,7 @@
              "text": [{
                  "question": "Comment votre famille vous décrirait-elle?",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE LA CUISINE?",
+                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Tous nos fours sont dotés de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous faites de votre four afin de pouvoir recommander celui qui convient à votre style de vie.",
                  "type": "radio-4",
                  "oneAnswer": true,
@@ -431,7 +430,7 @@
                      "to": 3,
                      "step": 0.0001,
                      "dimension": "",
-                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "FONDAMENTALE", "TRÈS IMPORTANTE"]
+                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "IMPORTANTE", "TRÈS IMPORTANTE"]
                  },
                  "answers": {
                      "0": {
@@ -452,7 +451,7 @@
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "value": 2,
-                         "text": "FONDAMENTALE",
+                         "text": "IMPORTANTE",
                          "scoring": {}
                      },
                      "3": {
@@ -486,7 +485,7 @@
                      "to": 3,
                      "step": 0.0001,
                      "dimension": "",
-                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "FONDAMENTALE", "TRÈS IMPORTANTE"]
+                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "IMPORTANTE", "TRÈS IMPORTANTE"]
                  },
                  "answers": {
                      "0": {
@@ -507,7 +506,7 @@
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "value": 2,
-                         "text": "FONDAMENTALE",
+                         "text": "IMPORTANTE",
                          "scoring": {}
                      },
                      "3": {
@@ -526,12 +525,13 @@
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-style-current.png",
             "thumbnail_text" : "Style",
+            "thumbnail_text_fr" : "Style",
             "text" : [
                 {
                     "question" : "Quel style de cuisinière préférez-vous?",
-                    "sub_question" : "Sélectionnez",
+                    "sub_question" : "Sélectionnez une réponse",
                     "explanation_title" : "Pourquoi me posez-vous une question sur le style?",
-                    "explanation" : "Saviez-vous que les cuisines professionnelles comportent habituellement des cuisinières à commandes frontales? Une fois que nous comprenons vos préférences en matière de style, nous pouvons recommander la table de cuisson parfaite pour vous.",
+                    "explanation" : "Trouver le style qui correspond à vos goûts est tout aussi important pour nous que pour vous.",
                     "type" : "boxes-picture-3-radio",
                     "oneAnswer" : true,
                     "answers" : [
@@ -759,9 +759,9 @@
              "thumbnail_text": "Features",
              "thumbnail_text_fr": "Caractéristiques",
              "text": [{
-                 "question": "J’utilise ma cuisinière four pour…",
+                 "question": "J’utilise ma cuisinière pour…",
                  "sub_question": "SÉLECTIONNEZ TOUTES LES RÉPONSES PERTINENTES",
-                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE la cuisine?",
+                 "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE MA FAÇON DE CUISINER?",
                  "explanation": "Nos cuisinières sont toutes dotées de caractéristiques uniques. Nous voulons nous faire une meilleure idée de l’utilisation que vous en faites afin de pouvoir recommander celle qui convient à vos besoins.",
                  "type": "checkbox-4",
                  "oneAnswer": false,
@@ -873,7 +873,7 @@
              "thumbnail_text": "Energy",
              "thumbnail_text_fr": "Énergie",
              "text": [{
-                 "question": "l’efficacité énergétique est-elle importante pour votre famille?",
+                 "question": "L’efficacité énergétique est-elle importante pour votre famille?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE l’énergie?",
                  "explanation": "Tous nos appareils sont différents. Si nous pouvons comprendre votre consommation d’énergie, nous pouvons trouver un appareil qui répond aux spécificités de votre mode de vie.",
@@ -886,7 +886,7 @@
                      "to": 3,
                      "step": 0.0001,
                      "dimension": "",
-                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "FONDAMENTALE", "TRÈS IMPORTANTE"]
+                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "IMPORTANTE", "TRÈS IMPORTANTE"]
                  },
                  "answers": {
                      "0": {
@@ -907,7 +907,7 @@
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "value": 2,
-                         "text": "FONDAMENTALE",
+                         "text": "IMPORTANTE",
                          "scoring": {}
                      },
                      "3": {
@@ -1243,7 +1243,7 @@
                      "to": 3,
                      "step": 0.0001,
                      "dimension": "",
-                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "FONDAMENTALE", "TRÈS IMPORTANTE"]
+                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "IMPORTANTE", "TRÈS IMPORTANTE"]
                  },
                  "answers": {
                      "0": {
@@ -1266,7 +1266,7 @@
                          "value": 2,
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
-                         "text": "FONDAMENTALE",
+                         "text": "IMPORTANTE",
                          "scoring": {
                              "energyStar": 2
                          }
@@ -1305,7 +1305,7 @@
                     "to" : 3,      
                     "step": 0.0001,
                     "dimension_label": "LARGEUR",
-                    "scale": ["Toute","30\"","33\"", "36\""]       
+                    "scale": ["Toute","30 po","33 po", "36 po"]       
                 },
                  "answers" : {
                         "0" : {
@@ -1374,7 +1374,7 @@
                     "answers" : {
                         "0" : {
                             "value" : 0,
-                            "text" : "Toute",
+                            "text" : "TOUTE",
                             "enabled" : true,
                             "enabledWhen" : [0,1,2,3],
                             "scoring" : {
@@ -1572,7 +1572,7 @@
             "thumbnail_type" : "image",
             "thumbnail_current" : "img/icon-water-current.png",
             "thumbnail_text" : "Waterline",
-            "thumbnail_text_fr": "d'une conduite d'eau",
+            "thumbnail_text_fr": "Eau",
             "text" : [
                 {
                     "question" : "Votre cuisine est-elle actuellement équipée d'une conduite d'eau?",
@@ -1618,7 +1618,7 @@
                         {
                             "thumbnail" : "img/icon-water.png",
                             "thumbnail_current" : "img/icon-water-current.png",
-                            "text" : "Je n'en suis pas sûre.",
+                            "text" : "Je n'en suis pas sûr.",
                             "value" : "notsure",
                             "scoring" : {
                             },
@@ -1639,7 +1639,7 @@
                  "question": "En général, le réfrigérateur de votre famille est…",
                  "sub_question": "SÉLECTIONNEZ UNE RÉPONSE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE L’OrganiSation?",
-                 "explanation": "La façon dont vous utilisez votre réfrigérateur est tout aussi importante que ce que vous y rangez. En comprenant l’utilisation que vous faites de votre réfrigérateur, nous pouvons recommander celui qui vous convient le mieux.",
+                 "explanation": "Après avoir évalué votre technique, nous pouvons proposer des façons d’optimiser l’organisation de votre réfrigérateur.",
                  "type": "radio-4",
                  "oneAnswer": true,
                  "answers": [{
@@ -2162,7 +2162,7 @@
                         { 
                             "thumbnail" : "img/icon-style.png",
                             "thumbnail_current" : "img/icon-style-current.png",
-                            "text" : "Entièrement intégrée",
+                            "text" : "Commandes frontales",
                             "value" : "Traditional",
                             "image" : "img/Dishwasher-Q6-traditional.jpg",
                             "image_alt" : "Dishwasher -  Traditional",
@@ -2175,8 +2175,8 @@
                         {
                             "thumbnail" : "img/icon-style.png",
                             "thumbnail_current" : "img/icon-style-current.png",
-                            "text" : "Hidden Controls",
-                            "value" : "Commandes frontales",
+                            "text" : "Commandes dissimulées",
+                            "value" : "hiddenControl",
                             "image" : "img/Dishwasher-Q6-commercial.jpg",
                             "image_alt" : "Dishwasher -  Commercial",
                             "scoring" : {   
@@ -2223,7 +2223,7 @@
                      "to": 3,
                      "step": 0.0001,
                      "dimension": "",
-                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "FONDAMENTALE", "TRÈS IMPORTANTE"]
+                     "scale": ["PAS IMPORTANTE", "RELATIVEMENT IMPORTANTE", "IMPORTANTE", "TRÈS IMPORTANTE"]
                  },
                  "answers": {
                      "0": {
@@ -2244,7 +2244,7 @@
                          "thumbnail": "img/icon-energy.png",
                          "thumbnail_current": "img/icon-energy-current.png",
                          "value": 2,
-                         "text": "FONDAMENTALE",
+                         "text": "IMPORTANTE",
                          "scoring": {}
                      },
                      "3": {
