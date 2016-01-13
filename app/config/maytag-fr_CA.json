@@ -142,7 +142,7 @@
                  "answers": [{
                      "text": "Cuisinières",
                      "value": "free stand range",
-                     "displayName": "Cuisinières",
+                     "displayName": "Cuisinière",
                      "classes": "sub-category ranges",
                      "image": "img/cooking-range.png",
                      "image_alt" : "Maytag - Ranges",
@@ -158,7 +158,7 @@
                  }, {
                      "text": "Fours encastrés",
                      "value": "wall oven",
-                     "displayName": "Fours encastrés",
+                     "displayName": "Fours encastré",
                      "classes": "sub-category wallovens",
                      "image": "img/cooking-walloven.png",
                      "image_alt" : "Maytag - Wall Ovens",
@@ -1305,7 +1305,7 @@
                     "to" : 3,      
                     "step": 0.0001,
                     "dimension_label": "LARGEUR",
-                    "scale": ["Toute","30 po","33 po", "36 po"]       
+                    "scale": ["Aucune Préférence","30 po","33 po", "36 po"]       
                 },
                  "answers" : {
                         "0" : {
@@ -2210,7 +2210,7 @@
              "thumbnail_text": "Energy",
              "thumbnail_text_fr": "Énergie",
              "text": [{
-                 "question": "l’efficacité énergétique est-elle importante pour votre famille?",
+                 "question": "L’efficacité énergétique est-elle importante pour votre famille?",
                  "sub_question": "FAITES GLISSER POUR RÉPONDRE",
                  "explanation_title": "POURQUOI ME POSEZ-VOUS UNE QUESTION AU SUJET DE l’énergie?",
                  "explanation": "Tous nos appareils sont différents, tout comme les familles auxquelles ils sont destinés. Si nous comprenons votre consommation d’énergie, nous pouvons mieux recommander le lave-vaisselle qui répond à vos besoins.",

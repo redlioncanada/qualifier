@@ -749,6 +749,17 @@ div[ng-class="fr_CA"] {
 		}
 	}
 
+	.answer-buttons.label-inches {
+		.answer-button-wrapper:not(:first-child) .answer-button-answer{
+			margin-left: -16px;
+		}
+		.answer-button-wrapper:not(:first-child) .answer-button-answer::after {
+			content: 'po';
+			top: 20px;
+			margin-left: 2px
+		}
+	}
+
 	.slider-large-label {
 		font-size: 18px;
 		top: 15px;
