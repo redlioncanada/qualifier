@@ -39,8 +39,8 @@
             #header_main_nav ul.top li.accessories {width:208px;/*background:transparent url(http://www.maytag.ca/images/btn_mainnav_accessories.png) no-repeat 0 -44px*/}
             #header_main_nav ul.top li.solution {width:170px;/*background:transparent url(http://www.maytag.ca/images/btn_mainnav_solution.png) no-repeat 0 -44px*/}
             #header_main_nav ul.top li.ownercenter {width:175px;/*background:transparent url(http://www.maytag.ca/images/btn_mainnav_support.png) no-repeat 0 -44px*/}
-            #header_main_nav ul.top li.laundry:hover,#header_main_nav ul.top li.laundry:focus,#header_main_nav ul.top li.laundry:active {background:transparent url(http://www.maytag.ca/images/btn_mainnav_laundry.png) no-repeat 0 0;color:#002e5f!important}
-            html[lang=fr] #header_main_nav ul.top li.laundry:hover, html[lang=fr] #header_main_nav ul.top li.laundry:focus, html[lang=fr] #header_main_nav ul.top li.laundry:active {background:transparent url(http://www.maytag.ca/images/btn_mainnav_laundry_FR.png) no-repeat 0 0;color:#002e5f!important}
+            #header_main_nav ul.top li.laundry:hover,#header_main_nav ul.top li.laundry:focus,#header_main_nav ul.top li.laundry:active {background:transparent; color:#002e5f!important}
+            html[lang=fr] #header_main_nav ul.top li.laundry:hover, html[lang=fr] #header_main_nav ul.top li.laundry:focus, html[lang=fr] #header_main_nav ul.top li.laundry:active {background:transparent;color:#002e5f!important}
             #header_main_nav ul.top li.kitchen:hover,#header_main_nav ul.top li.kitchen:focus,#header_main_nav ul.top li.kitchen:active {background:transparent url(http://www.maytag.ca/images/btn_mainnav_kitchen.png) no-repeat 0 0}
             #header_main_nav ul.top li.solution:hover,#header_main_nav ul.top li.solution:focus,#header_main_nav ul.top li.solution:active {background:transparent url(http://www.maytag.ca/images/btn_mainnav_solution.png) no-repeat 0 0}
             #header_main_nav ul.top li.accessories:hover,#header_main_nav ul.top li.accessories:focus,#header_main_nav ul.top li.accessories:active {background:transparent url(http://www.maytag.ca/images/btn_mainnav_accessories.png) no-repeat 0 0}
@@ -53,7 +53,7 @@
             #header_main_nav ul.top li.top {display:block;float:left;margin:0;padding:0;list-style:none;height:43px;line-height:43px;text-align:center}
             #header_main_nav a{display:block}
             #header_main_nav li {float:left}
-            #header_main_nav li ul {position:absolute;left:-999em;height:274px;text-align:left;float:none;padding-top:15px}
+            #header_main_nav li ul {position:absolute;left:-999em;height:250px;text-align:left;float:none;padding-top:15px}
             #header_main_nav li.laundry ul {background:transparent url(http://www.maytag.ca/images/bg_mainnav_laundry.png) repeat-x 0 0}
             #header_main_nav li.kitchen ul {background:transparent url(http://www.maytag.ca/images/bg_mainnav_kitchen.png) repeat-x 0 0}
             #header_main_nav li.accessories ul {background:transparent url(http://www.maytag.ca/images/bg_mainnav_kitchen.png) repeat-x 0 0}
@@ -71,7 +71,7 @@
             #frToTall a {width:170px !important;}
             #header_main_nav li li a:hover,#header_main_nav li li a:focus {background:#002e5f url('http://www.maytag.ca/images/img_mainnav_arrow.png') no-repeat 5px 7px;text-decoration:none}
             #header_main_nav li.laundry ul {position:absolute;width:190px;left:-999em;margin-left:0}
-            #header_main_nav li.kitchen ul {position:absolute;width:570px;left:-999em;margin-left:-115px}
+            #header_main_nav li.kitchen ul {position:absolute;width:770px;left:-999em;margin-left:-115px}
             #header_main_nav li.accessories ul {position:absolute;width:570px;left:-999em;margin-left:-230px}
             #header_main_nav li.ownercenter ul {position:absolute;width:384px;left:-999em;margin-left:0}
             #header_main_nav li.ownercenter ul.image_links {margin-left:184px;background:transparent url();padding:20px 0 0 23px}
@@ -88,7 +88,7 @@
             #header_main_nav li.kitchen ul li ul li,#header_main_nav li.accessories ul li ul li,#header_main_nav li.ownercenter ul li {margin:0 15px}
             #header_main_nav li.accessories ul li ul li.filter_finder a {width:160px;height:113px;background:transparent url(http://www.maytag.ca/images/btn_filter_finder_nav.png) no-repeat 0 0;text-indent:-9999em;position:absolute;top:86px;right:-3px}
             #header_main_nav li:hover ul,#header_main_nav li.sfhover ul {left:auto;}
-            #header_main_nav ul.top li.laundry:hover ul {left:-110px;}
+            /*#header_main_nav ul.top li.laundry:hover ul {left:-110px;}*/
             #content-wrap {clear:left}
             #header_sub_nav_1 li {position:relative;margin:0;padding:0}
             #header_sub_nav_1 li ul.popup {position:absolute;width:286px;left:-999em;top:8px;padding:0;text-align:left;z-index:9999;display:block}
@@ -121,3 +121,97 @@
             #MiniShoppingCart {display:inline}
             #header_sub_nav_1 div.item.first.general {color:#000;display:none;border-bottom:0}
             #header_sub_nav_1 div.item.first.error {color:red;display:none}
+#header_main_nav ul.top li.top ul, html[lang=fr] #header_main_nav ul.top li.top ul{
+      background: #313131;/* Old browsers *//* IE9 SVG, needs conditional override of 'filter' to 'none' */
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMxMzEzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYjBiMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: 
+      -moz-linear-gradient(top,  #313131 0%, #0b0b0b 100%);/* FF3.6+ */
+      background: 
+      -webkit-gradient(linear, left top, left bottom, color-stop(0%,#313131), color-stop(100%,#0b0b0b));/* Chrome,Safari4+ */
+      background: 
+      -webkit-linear-gradient(top,  #313131 0%,#0b0b0b 100%);/* Chrome10+,Safari5.1+ */
+      background: 
+      -o-linear-gradient(top,  #313131 0%,#0b0b0b 100%);/* Opera 11.10+ */
+      background: 
+      -ms-linear-gradient(top,  #313131 0%,#0b0b0b 100%);/* IE10+ */
+      /* background: linear-gradient(to bottom,  #313131 0%,#0b0b0b 100%); *//* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#0b0b0b',GradientType=0 );/* IE6-8 */
+      border:1px solid #7b7b7b;
+      }
+html[lang=fr] #header_main_nav li.laundry ul {
+    height: 274px;
+    overflow: hidden;
+}
+
+.laundry-wrapper {
+      width: 413px !important;
+}
+html[lang=fr] .laundry-wrapper{ 
+    height: 259px !important;
+    width:  399px !important
+}
+
+html[lang=fr] .laundry-wrapper-2{ 
+    width: 100% !important;
+}
+    
+ #header_main_nav ul.top li.laundry:hover ul {
+    float: left;
+    position: relative;
+}
+            #header_main_nav li.kitchen .qualifier, #header_main_nav li.laundry .qualifier{
+    border-left: 1px solid #535353 !important;
+    width: 191px;
+    height: 249px;
+    margin-top: -15px;
+    padding: 0;
+    overflow: hidden;
+}
+#header_main_nav li.kitchen .qualifier .header, #header_main_nav li.laundry .qualifier .header{
+    text-align: center;
+    height: 65px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#header_main_nav li.kitchen .qualifier .header a, #header_main_nav li.laundry .qualifier .header a{
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height: 20px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+ #header_main_nav li.kitchen .qualifier .body,  #header_main_nav li.laundry .qualifier .body{
+    text-align: center;
+    height: 10px;
+    border: none;
+    margin: 0;
+    padding: 20px 0 40px 0;
+}
+#header_main_nav li.kitchen .qualifier .body a, #header_main_nav li.laundry .qualifier .body a{
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+#header_main_nav li.kitchen .qualifier .body a:hover, #header_main_nav li.laundry .qualifier .body a:hover {
+    background: none;
+}
+#header_main_nav li.kitchen .qualifier img, #header_main_nav li.laundry .qualifier img{
+    margin: 0 auto;
+    display: block;
+}

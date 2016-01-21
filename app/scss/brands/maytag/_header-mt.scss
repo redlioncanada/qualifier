@@ -122,9 +122,11 @@
     margin-left:0;
     position:absolute;
     width:384px;
-    right:-219px;
+    right:-129px;
     top:43px;
+    height:286px;
     }
+
 
     #header_main_nav ul.top li.last ul li{
     margin-left:5px;
@@ -404,6 +406,12 @@
     a:last-child {
       border-bottom: initial;
     }
+  }
+}
+
+html[lang="en"] .header-desktop {
+  #header_main_nav li.ownercenter ul{
+    right:-39px
   }
 }
 
