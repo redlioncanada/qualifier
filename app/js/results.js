@@ -2,6 +2,7 @@
 
 angular.module('App')
   .controller('ResultsCtrl', function ($scope, $rootScope, $state, $location, $timeout, $modal, $appstate, $element) {
+
     if (window.innerWidth < 1024){
             $scope.useMobileTemplates = true;
         }else{
@@ -26,7 +27,7 @@ angular.module('App')
     });
 
     $scope.$on('$locationChangeSuccess', function(event) {
-      // console.log('results location change')
+
       if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) console.log('no init');
       $appstate.store();
 
@@ -87,6 +88,14 @@ angular.module('App')
       }
   
 
+  $scope.sessionModalOpen = function () {
+    $modal.open({
+      animation: true,
+      templateUrl: 'views/session-modal.html',
+      controller: 'SessionModalCtrl',
+      backdrop : 'static'
+    });
+  };
 
   $rootScope.setFirstColour = function (appliance) {
     var highestPrice = appliance.colours[0];
@@ -226,6 +235,10 @@ $scope.setPriceRange = function () {
       };
 
       $scope.setPriceRange()
+
+      if ($appstate.shouldPromptForSessionRestore()) {
+        $scope.sessionModalOpen();
+      }
 })
 .directive('desktopResults', function(){
     return {

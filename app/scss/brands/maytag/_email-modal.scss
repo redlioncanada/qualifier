@@ -37,9 +37,19 @@ $inputBackgroundColor: #EEE;
 		}
 	}
 
+	div.modal-session {
+		display: block;
+
+		.message {
+			padding: 75px 40px 0 40px;
+			margin: 0;
+		}
+	}
+
 	.modal-body {
 		margin-top: 0;
 		padding-top: 0;
+		height: 500px;
 
 		input,textarea,.input-title {
 			font-family: "Lucida Grande", Helvetica, sans-serif;;
@@ -102,6 +112,7 @@ $inputBackgroundColor: #EEE;
 	.modal-message {
 		position: absolute;
 		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		color: white;

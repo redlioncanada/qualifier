@@ -40,7 +40,10 @@
 		"facebookImage" : "/img/social.jpg",
 		"twitterTitle" : "",
 		"twitterDesc" : "My Maytag takes the guesswork out of appliance shopping. Click to discover products with features you want and need.",
-		"twitterImage" : "/img/social.jpg"
+		"twitterImage" : "/img/social.jpg",
+		"yes" : "Yes",
+		"no" : "No",
+		"restoreSession" : "We've detected that you've used our tool before. Would you like to use your previous session?"
 	},
 	"questions" : {
 		"Appliance" : {

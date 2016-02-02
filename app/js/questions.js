@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('App')
-  .controller('QuestionsCtrl', function ($scope, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams, $appstate) {
+  .controller('QuestionsCtrl', function ($scope, $modal, $rootScope, $filter, $state, localStorageService, $timeout, $interval, $location, $route, $stateParams, $appstate) {
   	$scope.lastWidth = window.innerWidth;
+
   	$rootScope.$on('resize::resize', function() {
 	    if (window.innerWidth < 1024){
 	    	//temp fix - reload the page if going desktop to tablet and vice-versa
@@ -30,6 +31,10 @@ angular.module('App')
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
+    	if ($appstate.shouldPromptForSessionRestore()) {
+	      $scope.sessionModalOpen();
+	    }
+
     	// console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
 
@@ -96,6 +101,14 @@ angular.module('App')
     	return false
   	}
 
+  	$scope.sessionModalOpen = function () {
+	    $modal.open({
+	      animation: true,
+	      templateUrl: 'views/session-modal.html',
+	      controller: 'SessionModalCtrl',
+	      backdrop : 'static'
+	    });
+	  };
 
   	$rootScope.questionHasAnswer = function (q) {
   		if (!!q) {

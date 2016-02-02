@@ -5,13 +5,33 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 		freezeSession: false,
 		restored: ''
 	};
+	var didPromptForSessionRestore = false;
+
+	appstate.storeLastSessionPrompt = function() {
+		localStorageService.set('lastSessionPrompt', (new Date).getTime());
+	}
+
+	appstate.shouldPromptForSessionRestore = function() {
+		var hours = this.hoursSinceLastSessionPrompt();
+		return ((hours && hours >= 1) || !hours) && !!_getSession();
+	}
+
+	appstate.hoursSinceLastSessionPrompt = function() {
+		var lastSessionPrompt = localStorageService.get('lastSessionPrompt');
+
+		if (lastSessionPrompt && parseInt(lastSessionPrompt) > 1000000000) {
+			var now = (new Date()).getTime();
+			var diff = now - lastSessionPrompt;
+			return diff/1000/60/60;
+		} else {
+			return false;
+		}
+	}
 
 	appstate.store = function(print) {
 		if (this.freezeSession) return;
 		var answers = _enumerateAnswers();
 		localStorageService.set('appstate', JSON.stringify(answers));
-		// console.log(localStorageService.get('appstate'));
-		// console.log('store');
 	}
 
 	appstate.restore = function() {
@@ -134,6 +154,10 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 
 	appstate.generatePrintURL = function(sku,color) {
 	      return '?' + $base64.encode(JSON.stringify({restore:'print',sku:sku,color:color}));
+	}
+
+	appstate.hasSession = function() {
+		return !!_getSession();
 	}
 
 	function _getSession() {
