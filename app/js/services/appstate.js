@@ -5,7 +5,6 @@ appstateModule.factory('$appstate', ['$window', '$state', '$rootScope', 'localSt
 		freezeSession: false,
 		restored: ''
 	};
-	var didPromptForSessionRestore = false;
 
 	appstate.storeLastSessionPrompt = function() {
 		localStorageService.set('lastSessionPrompt', (new Date).getTime());
