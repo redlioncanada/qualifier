@@ -35,6 +35,10 @@ angular.module('App')
 	      $scope.sessionModalOpen();
 	    }
 
+	    ga('set', 'page', $location.path())
+	    console.log($location.path())
+	    ga('send', 'pageview')
+
     	// console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
 
