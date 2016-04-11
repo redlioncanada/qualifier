@@ -31,13 +31,16 @@ angular.module('App')
 	},500);
 
     $scope.$on('$locationChangeSuccess', function(event) {
-    	if ($appstate.shouldPromptForSessionRestore()) {
-	      $scope.sessionModalOpen();
-	    }
+    	// if ($appstate.shouldPromptForSessionRestore()) {
+	    //   $scope.sessionModalOpen();
+	    // }
 
 	    ga('set', 'page', $location.path())
 	    console.log($location.path())
-	    ga('send', 'pageview')
+	    // ga('send', 'pageview', $location.path())
+	    ga('send', {'hitType':'pageview','page':$location.path(),'title':'Qualifier: '+$location.path()})
+
+	    document.title = $scope.getTitle()+" | Maytag Qualifier Consumer App"
 
     	// console.log('question location change');
     		var q = ($location.path()).toString().replace("/question/","");
@@ -103,6 +106,13 @@ angular.module('App')
 	        }
 	    }
     	return false
+  	}
+
+  	$scope.getTitle = function() {
+  		var title = $location.path().replace(/\/question\//g, '')
+  		title = title.replace(/ - .*/g, '')
+  		if (title == "Appliance") title = "Appliances";
+		return title.charAt(0).toUpperCase() + title.slice(1)
   	}
 
   	$scope.sessionModalOpen = function () {
