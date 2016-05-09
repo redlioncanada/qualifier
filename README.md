@@ -1,4 +1,4 @@
-#WP Qualifier Tool
+#MAYTAG Qualifier Tool
 
 ##Development
 1. Run
