@@ -26,10 +26,16 @@ angular.module('App')
 
     });
 
+    $rootScope.didSendResultsPageView = false
     $scope.$on('$locationChangeSuccess', function(event) {
-      ga('set', 'page', $location.path())
-      console.log($location.path())
-      ga('send', 'pageview')
+      if (!$rootScope.didSendResultsPageView) {
+          ga('set', 'page', $location.path())
+          console.log($location.path())
+          ga('send', 'pageview')
+          $rootScope.didSendResultsPageView = true
+      }
+      document.title = "Results | Maytag Qualifier Consumer App"
+
 
       if (!$rootScope.questionsData && !$rootScope.questionsData.scoringQuestions) console.log('no init');
       $appstate.store();
@@ -166,6 +172,13 @@ $scope.print = function(sku,colorsku) {
   window.open($appstate.generatePrintURL(sku,colorsku));
 }
 
+$scope.getTitle = function() {
+  var title = $location.path().replace(/\/question\//g, '')
+  title = title.replace(/ - .*/g, '')
+  if (title == "Appliance") title = "Appliances";
+  return title.charAt(0).toUpperCase() + title.slice(1)
+}
+
 $scope.setPriceRange = function () {
        var minPrice = null, maxPrice = null
 
@@ -239,9 +252,9 @@ $scope.setPriceRange = function () {
 
       $scope.setPriceRange()
 
-      if ($appstate.shouldPromptForSessionRestore()) {
-        $scope.sessionModalOpen();
-      }
+      // if ($appstate.shouldPromptForSessionRestore()) {
+      //   $scope.sessionModalOpen();
+      // }
 })
 .directive('desktopResults', function(){
     return {
