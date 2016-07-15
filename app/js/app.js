@@ -253,12 +253,33 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
     $rootScope.log = function (log) {
       console.log(log);
     }
+    $rootScope.parseHomeQuestions = function() {
+      var questions = {}
+      for (var index in $rootScope.brandData.questions) {
+        var question = $rootScope.brandData.questions[index]
+        var category = getCategoryFromName(question.name)
+
+        if ("isFirstQuestion" in question && question["isFirstQuestion"] && !(category in questions)) {
+          questions[category] = question.name
+        }
+      }
+      $rootScope.homeQuestions = questions
+
+      function getCategoryFromName(name) {
+        var cnt = name.match(/-/g) ? name.match(/-/g).length : false
+
+        if (cnt) {
+          return (name.split('-')[cnt-1]).trim()
+        }
+        return false
+      }
+    }
 
     $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     $rootScope.$on('resize::resize', function() {
       $rootScope.isTabletWidthOrLess = window.innerWidth < 1024;
     });
-    
+
     $rootScope.locale = $('html').attr('lang') + '_CA';
     $rootScope.isEnglish = $rootScope.locale == 'en_CA';
     $rootScope.isFrench = $rootScope.locale == 'fr_CA';
@@ -284,6 +305,14 @@ App.run(['$rootScope', '$state', "$resource", 'localStorageService', 'Modernizr'
           // @endif
           $resource(host+"/api/public/wpq/product-list/index/brand/"+$rootScope.brand+"/locale/"+$rootScope.locale).get({}, function (res, headers) {
                 $rootScope.appliances = $dataDecorator(res.products);
+
+                for (var i in res.products) {
+                  if (res.products[i].colours.length == 0) {
+                    console.log(res.products[i])
+                  }
+                }
+                
+                $rootScope.parseHomeQuestions()
                 $appstate.restore();
                 $tests.init($rootScope.appliances,$rootScope.brandData.questions);
           }, function () {

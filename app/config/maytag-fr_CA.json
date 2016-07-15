@@ -179,6 +179,7 @@
              "category": "aesthetics"
          },
          "Cooking - Wall Ovens - Size": {
+            "isFirstQuestion": true,
              "next": "Cooking - Wall Ovens - Orientation",
              "previous": "Cooking - Pre-Qualifier 1",
              "thumbnail_type": "image",
@@ -468,6 +469,7 @@
              }]
          },
          "Cooking - Ranges - Energy": {
+            "isFirstQuestion": true,
              "next": "Cooking - Ranges - Style 1",
              "previous": "Cooking - Pre-Qualifier 1",
              "thumbnail_type": "image",
@@ -869,6 +871,7 @@
              }]
          },
          "Laundry - Energy": {
+            "isFirstQuestion": true,
              "next": "Laundry - Capacity 1",
              "previous": "Appliance",
              "thumbnail_type": "image",
@@ -1226,6 +1229,7 @@
              }]
          },
          "Fridges - Energy": {
+            "isFirstQuestion": true,
              "next": "Fridges - Size",
              "previous": "Appliance",
              "thumbnail_type": "image",
@@ -1786,6 +1790,7 @@
              }]
          },
          "Dishwashers - Cleaning Power": {
+            "isFirstQuestion": true,
              "next": "Dishwashers - Capacity",
              "previous": "Appliance",
              "thumbnail_type": "image",
