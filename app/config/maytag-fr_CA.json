@@ -134,6 +134,7 @@
          "Cooking - Pre-Qualifier 1": {
              "previous": "Appliance",
              "thumbnail_type": "image",
+            "isFirstQuestion": true,
              "thumbnail_text": "Cooking",
              "thumbnail_text_fr": "Cuisiner",
              "thumbnail_current": "img/nav-placeholder-current.png",

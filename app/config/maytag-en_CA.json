@@ -138,6 +138,7 @@
 			"previous" : "Appliance",
 			"thumbnail_type" : "image",
 			"thumbnail_text" : "Cooking",
+			"isFirstQuestion": true,
 			"thumbnail_current" : "img/nav-placeholder-current.png",
 			"text" : [
 				{
